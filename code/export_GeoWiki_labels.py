@@ -4,6 +4,21 @@ from typing import Any, Dict
 import urllib.request
 import zipfile
 
+from src.exporters import (
+    GeoWikiExporter,
+    GeoWikiSentinelExporter,
+    KenyaPVSentinelExporter,
+    KenyaNonCropSentinelExporter,
+    RegionalExporter,
+    cancel_all_tasks,
+)
+from src_exporters_geowiki import *
+from src_exporters_sentinel_geowiki import *
+from src_exporters_sentinel_pv_kenya import *
+from src_exporters_sentinel_kenya_non_crop import *
+from src_exporters_sentinel_region import *
+from src_exporters_sentinel_utils import *
+
 class BaseExporter:
     r"""Base for all exporter classes. It creates the appropriate
     directory in the data dir (``data_dir/raw/{dataset}``).
