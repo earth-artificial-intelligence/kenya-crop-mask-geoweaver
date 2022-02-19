@@ -1,0 +1,81 @@
+[{
+  "history_id" : "xqsh58g47s7",
+  "history_input" : "",
+  "history_output" : "",
+  "history_begin_time" : 1645232742151,
+  "history_end_time" : 1645232742264,
+  "history_notes" : null,
+  "history_process" : "veym8r",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "ukidx8q6rel",
+  "history_input" : "",
+  "history_output" : "",
+  "history_begin_time" : 1645232742397,
+  "history_end_time" : 1645232742466,
+  "history_notes" : null,
+  "history_process" : "vxuhdr",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "65m1p81octt",
+  "history_input" : "",
+  "history_output" : "",
+  "history_begin_time" : 1645232743356,
+  "history_end_time" : 1645232743438,
+  "history_notes" : null,
+  "history_process" : "bmgaz5",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "0fev3ivj93w",
+  "history_input" : "",
+  "history_output" : "",
+  "history_begin_time" : 1645232744407,
+  "history_end_time" : 1645232744569,
+  "history_notes" : null,
+  "history_process" : "q31oxu",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "m2mxeogtt2r",
+  "history_input" : "import sys\nfrom pathlib import Path\nfrom datetime import date\n\nsys.path.append(\"..\")\n\nfrom src_exporters_geowiki import *\nfrom src_exporters_sentinel_geowiki import *\nfrom src_exporters_sentinel_pv_kenya import *\nfrom src_exporters_sentinel_kenya_non_crop import *\nfrom src_exporters_sentinel_region import *\nfrom src_exporters_sentinel_utils import *\n\nfrom scripts_process import *\n\ndef export_geowiki():\n    exporter = GeoWikiExporter(Path(\"../data\"))\n    exporter.export()\n\n\ndef export_geowiki_sentinel_ee():\n    exporter = GeoWikiSentinelExporter(Path(\"../data\"))\n    exporter.export_for_labels(\n        num_labelled_points=None, monitor=False, checkpoint=True)\n\n\ndef export_plant_village_sentinel_ee():\n    exporter = KenyaPVSentinelExporter(Path(\"../data\"))\n    exporter.export_for_labels(\n        num_labelled_points=None, monitor=False, checkpoint=True)\n\n\ndef export_kenya_non_crop():\n    exporter = KenyaNonCropSentinelExporter(Path(\"../data\"))\n    exporter.export_for_labels(\n        num_labelled_points=None, monitor=False, checkpoint=True)\n\n\ndef export_region():\n    exporter = RegionalExporter(Path(\"../data\"))\n    exporter.export_for_region(\n        region_name=\"Busia\",\n        end_date=date(2020, 9, 13),\n        num_timesteps=5,\n        monitor=False,\n        checkpoint=True,\n        metres_per_polygon=None,\n        fast=False,\n    )\n\n\nif __name__ == \"__main__\":\n\texport_geowiki()\n\tprocess_geowiki()\n\texport_geowiki_sentinel_ee()\n\t#export_plant_village_sentinel_ee()\n\t#export_kenya_non_crop()\n\t#export_region()\n",
+  "history_output" : "0it [00:00, ?it/s]\n1205it [00:00, 12042.89it/s]\n2890it [00:00, 14866.86it/s]\n4525it [00:00, 15543.44it/s]\n6214it [00:00, 16074.26it/s]\n7941it [00:00, 16501.04it/s]\n9593it [00:00, 16505.69it/s]\n11337it [00:00, 16807.71it/s]\n13040it [00:00, 16877.05it/s]\n14807it [00:00, 17123.26it/s]\n16520it [00:01, 16646.10it/s]\n18274it [00:01, 16913.00it/s]\n20093it [00:01, 17294.32it/s]\n21838it [00:01, 17337.43it/s]\n23602it [00:01, 17426.50it/s]\n25404it [00:01, 17602.97it/s]\n27225it [00:01, 17782.53it/s]\n29089it [00:01, 18037.27it/s]\n30894it [00:01, 17918.67it/s]\n32687it [00:01, 17433.08it/s]\n34519it [00:02, 17691.92it/s]\n35866it [00:02, 17138.76it/s]\n\nStream closed",
+  "history_begin_time" : 1645232699596,
+  "history_end_time" : 1645232741383,
+  "history_notes" : null,
+  "history_process" : "gpetwx",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "w9gedfbawdv",
+  "history_input" : "import sys\nfrom pathlib import Path\n\nsys.path.append(\"..\")\n\nfrom src_processors_geowiki import *\nfrom src_processors_kenya_non_crop import *\nfrom src_processors_pv_kenya import *\n\ndef process_geowiki():\n    processor = GeoWikiProcessor(Path(\"../data\"))\n    processor.process()\n\n\ndef process_plantvillage():\n    processor = KenyaPVProcessor(Path(\"../data\"))\n    processor.process()\n\n\ndef process_kenya_noncrop():\n    processor = KenyaNonCropProcessor(Path(\"../data\"))\n    processor.process()\n\n\nif __name__ == \"__main__\":\n    process_geowiki()\n    process_plantvillage()\n    process_kenya_noncrop()\n",
+  "history_output" : "Traceback (most recent call last):\n  File \"scripts_process.py\", line 27, in <module>\n    process_plantvillage()\n  File \"scripts_process.py\", line 16, in process_plantvillage\n    processor = KenyaPVProcessor(Path(\"../data\"))\n  File \"/Users/uhhmed/gw-workspace/Idr2tRTeblDLVRZN403HG3rdCB/src_processors_base.py\", line 20, in __init__\n    assert self.raw_folder.exists(), f\"{self.raw_folder} does not exist!\"\nAssertionError: ../data/raw/plant_village_kenya does not exist!\n",
+  "history_begin_time" : 1645232742120,
+  "history_end_time" : 1645232745956,
+  "history_notes" : null,
+  "history_process" : "iticjd",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "zm8baegayh5",
+  "history_input" : "from pathlib import Path\n\nfrom typing import Any, Dict\n\n\nclass BaseExporter:\n    r\"\"\"Base for all exporter classes. It creates the appropriate\n    directory in the data dir (``data_dir/raw/{dataset}``).\n\n    All classes which extend this should implement an export function.\n\n    :param data_folder (pathlib.Path, optional)``: The location of the data folder.\n            Default: ``pathlib.Path(\"data\")``\n    \"\"\"\n\n    dataset: str\n    default_args_dict: Dict[str, Any] = {}\n\n    def __init__(self, data_folder: Path = Path(\"data\")) -> None:\n\n        self.data_folder = data_folder\n\n        self.raw_folder = self.data_folder / \"raw\"\n        self.output_folder = self.raw_folder / self.dataset\n        self.output_folder.mkdir(parents=True, exist_ok=True)\n",
+  "history_output" : "",
+  "history_begin_time" : 1645232748573,
+  "history_end_time" : 1645232748660,
+  "history_notes" : null,
+  "history_process" : "4q2yxd",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "jgviex1lowr",
+  "history_input" : "from pathlib import Path\nimport urllib.request\nimport zipfile\n\nfrom src_exporters_base import BaseExporter\n\n\nclass GeoWikiExporter(BaseExporter):\n    r\"\"\"\n    Download the GeoWiki labels\n    \"\"\"\n\n    dataset = \"geowiki_landcover_2017\"\n\n    download_urls = [\n        \"http://store.pangaea.de/Publications/See_2017/crop_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_exp.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all_2.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_exp.zip\",\n    ]\n\n    @staticmethod\n    def download_file(url: str, output_folder: Path, remove_zip: bool = True) -> None:\n\n        filename = url.split(\"/\")[-1]\n        output_path = output_folder / filename\n\n        if output_path.exists():\n            print(f\"{filename} already exists! Skipping\")\n            return None\n\n        print(f\"Downloading {url}\")\n        urllib.request.urlretrieve(url, output_path)\n\n        if filename.endswith(\"zip\"):\n\n            print(f\"Downloaded! Unzipping to {output_folder}\")\n            with zipfile.ZipFile(output_path, \"r\") as zip_file:\n                zip_file.extractall(output_folder)\n\n            if remove_zip:\n                print(\"Deleting zip file\")\n                (output_path).unlink()\n\n    def export(self, remove_zip: bool = False) -> None:\n        r\"\"\"\n        Download the GeoWiki labels\n        :param remove_zip: Whether to remove the zip file once it has been expanded\n        \"\"\"\n        for file_url in self.download_urls:\n            self.download_file(file_url, self.output_folder, remove_zip)\n",
+  "history_output" : "",
+  "history_begin_time" : 1645232742122,
+  "history_end_time" : 1645232742384,
+  "history_notes" : null,
+  "history_process" : "jonz77",
+  "host_id" : "100001",
+  "indicator" : "Done"
+}]

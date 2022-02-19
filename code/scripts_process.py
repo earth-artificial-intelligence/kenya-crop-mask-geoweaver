@@ -3,12 +3,9 @@ from pathlib import Path
 
 sys.path.append("..")
 
-from src.processors import (
-    GeoWikiProcessor,
-    KenyaPVProcessor,
-    KenyaNonCropProcessor,
-)
-
+from src_processors_geowiki import *
+from src_processors_kenya_non_crop import *
+from src_processors_pv_kenya import *
 
 def process_geowiki():
     processor = GeoWikiProcessor(Path("../data"))

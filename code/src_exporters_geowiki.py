@@ -1,45 +1,8 @@
-
 from pathlib import Path
-from typing import Any, Dict
 import urllib.request
 import zipfile
 
-from src.exporters import (
-    GeoWikiExporter,
-    GeoWikiSentinelExporter,
-    KenyaPVSentinelExporter,
-    KenyaNonCropSentinelExporter,
-    RegionalExporter,
-    cancel_all_tasks,
-)
-from src_exporters_geowiki import *
-from src_exporters_sentinel_geowiki import *
-from src_exporters_sentinel_pv_kenya import *
-from src_exporters_sentinel_kenya_non_crop import *
-from src_exporters_sentinel_region import *
-from src_exporters_sentinel_utils import *
-
-class BaseExporter:
-    r"""Base for all exporter classes. It creates the appropriate
-    directory in the data dir (``data_dir/raw/{dataset}``).
-
-    All classes which extend this should implement an export function.
-
-    :param data_folder (pathlib.Path, optional)``: The location of the data folder.
-            Default: ``pathlib.Path("data")``
-    """
-
-    dataset: str
-    default_args_dict: Dict[str, Any] = {}
-
-    def __init__(self, data_folder: Path = Path("data")) -> None:
-
-        self.data_folder = data_folder
-
-        self.raw_folder = self.data_folder / "raw"
-        self.output_folder = self.raw_folder / self.dataset
-        self.output_folder.mkdir(parents=True, exist_ok=True)
-
+from src_exporters_base import BaseExporter
 
 
 class GeoWikiExporter(BaseExporter):
@@ -90,10 +53,3 @@ class GeoWikiExporter(BaseExporter):
         for file_url in self.download_urls:
             self.download_file(file_url, self.output_folder, remove_zip)
 
-            
-def export_geowiki():
-    print("export_geowiki() will be executed now")
-    exporter = GeoWikiExporter(Path("../data"))
-    exporter.export()
-    
-export_geowiki()

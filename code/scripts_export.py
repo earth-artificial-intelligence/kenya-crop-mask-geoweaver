@@ -11,6 +11,8 @@ from src_exporters_sentinel_kenya_non_crop import *
 from src_exporters_sentinel_region import *
 from src_exporters_sentinel_utils import *
 
+from scripts_process import *
+
 def export_geowiki():
     exporter = GeoWikiExporter(Path("../data"))
     exporter.export()
@@ -19,19 +21,19 @@ def export_geowiki():
 def export_geowiki_sentinel_ee():
     exporter = GeoWikiSentinelExporter(Path("../data"))
     exporter.export_for_labels(
-        num_labelled_points=10, monitor=False, checkpoint=True)
+        num_labelled_points=None, monitor=False, checkpoint=True)
 
 
 def export_plant_village_sentinel_ee():
     exporter = KenyaPVSentinelExporter(Path("../data"))
     exporter.export_for_labels(
-        num_labelled_points=10, monitor=False, checkpoint=True)
+        num_labelled_points=None, monitor=False, checkpoint=True)
 
 
 def export_kenya_non_crop():
     exporter = KenyaNonCropSentinelExporter(Path("../data"))
     exporter.export_for_labels(
-        num_labelled_points=10, monitor=False, checkpoint=True)
+        num_labelled_points=None, monitor=False, checkpoint=True)
 
 
 def export_region():
@@ -48,8 +50,10 @@ def export_region():
 
 
 if __name__ == "__main__":
-    export_geowiki_sentinel_ee()
-    export_plant_village_sentinel_ee()
-    export_kenya_non_crop()
-    export_region()
+	export_geowiki()
+	process_geowiki()
+	export_geowiki_sentinel_ee()
+	#export_plant_village_sentinel_ee()
+	#export_kenya_non_crop()
+	#export_region()
 

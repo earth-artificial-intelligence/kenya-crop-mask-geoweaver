@@ -1,0 +1,51 @@
+[{
+  "history_id" : "pkl3us18ggp",
+  "history_input" : "",
+  "history_output" : "",
+  "history_begin_time" : 1645232383267,
+  "history_end_time" : 1645232383362,
+  "history_notes" : null,
+  "history_process" : "veym8r",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "4aun83mel8p",
+  "history_input" : "",
+  "history_output" : "",
+  "history_begin_time" : 1645232384640,
+  "history_end_time" : 1645232384721,
+  "history_notes" : null,
+  "history_process" : "vxuhdr",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "r1zxg8v1350",
+  "history_input" : "",
+  "history_output" : "",
+  "history_begin_time" : 1645232386375,
+  "history_end_time" : 1645232386501,
+  "history_notes" : null,
+  "history_process" : "bmgaz5",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "8biltfa3j4e",
+  "history_input" : "",
+  "history_output" : "",
+  "history_begin_time" : 1645232387747,
+  "history_end_time" : 1645232387831,
+  "history_notes" : null,
+  "history_process" : "q31oxu",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "8e55io4n1ds",
+  "history_input" : "import sys\nfrom pathlib import Path\nfrom datetime import date\n\nsys.path.append(\"..\")\n\nfrom src_exporters_geowiki import *\nfrom src_exporters_sentinel_geowiki import *\nfrom src_exporters_sentinel_pv_kenya import *\nfrom src_exporters_sentinel_kenya_non_crop import *\nfrom src_exporters_sentinel_region import *\nfrom src_exporters_sentinel_utils import *\n\nfrom scripts_process import *\n\ndef export_geowiki():\n    exporter = GeoWikiExporter(Path(\"../data\"))\n    exporter.export()\n\n\ndef export_geowiki_sentinel_ee():\n    exporter = GeoWikiSentinelExporter(Path(\"../data\"))\n    exporter.export_for_labels(\n        num_labelled_points=None, monitor=False, checkpoint=True)\n\n\ndef export_plant_village_sentinel_ee():\n    exporter = KenyaPVSentinelExporter(Path(\"../data\"))\n    exporter.export_for_labels(\n        num_labelled_points=None, monitor=False, checkpoint=True)\n\n\ndef export_kenya_non_crop():\n    exporter = KenyaNonCropSentinelExporter(Path(\"../data\"))\n    exporter.export_for_labels(\n        num_labelled_points=None, monitor=False, checkpoint=True)\n\n\ndef export_region():\n    exporter = RegionalExporter(Path(\"../data\"))\n    exporter.export_for_region(\n        region_name=\"Busia\",\n        end_date=date(2020, 9, 13),\n        num_timesteps=5,\n        monitor=False,\n        checkpoint=True,\n        metres_per_polygon=None,\n        fast=False,\n    )\n\n\nif __name__ == \"__main__\":\n\texport_geowiki()\n\tprocess_geowiki()\n\texport_geowiki_sentinel_ee()\n\t#export_plant_village_sentinel_ee()\n\t#export_kenya_non_crop()\n\t#export_region()\n",
+  "history_output" : "0it [00:00, ?it/s]\n1599it [00:00, 15984.53it/s]\n3362it [00:00, 16950.23it/s]\n5122it [00:00, 17245.24it/s]\n6874it [00:00, 17351.71it/s]\n8637it [00:00, 17450.60it/s]\n10444it [00:00, 17660.51it/s]\n12211it [00:00, 17468.78it/s]\n14002it [00:00, 17607.01it/s]\n15808it [00:00, 17745.39it/s]\n17598it [00:01, 17791.73it/s]\n19378it [00:01, 17380.23it/s]\n21119it [00:01, 16760.10it/s]\n22801it [00:01, 16481.06it/s]\n24545it [00:01, 16758.71it/s]\n26344it [00:01, 17118.00it/s]\n28151it [00:01, 17398.38it/s]\n29944it [00:01, 17554.02it/s]\n31745it [00:01, 17686.97it/s]\n33561it [00:01, 17824.85it/s]\n35345it [00:02, 17696.68it/s]\n35866it [00:02, 17371.31it/s]\n\nStream closed",
+  "history_begin_time" : 1645232345264,
+  "history_end_time" : 1645232382630,
+  "history_notes" : null,
+  "history_process" : "gpetwx",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+}]
