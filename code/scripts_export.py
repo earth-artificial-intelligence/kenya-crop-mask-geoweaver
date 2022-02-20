@@ -50,9 +50,15 @@ def export_region():
 
 
 if __name__ == "__main__":
+	print("starting export_geowiki()...")
 	export_geowiki()
+	print("Done export_geowiki()!")
+	print("starting process_geowiki()...")
 	process_geowiki()
+	print("Done process_geowiki()!")
+	print("starting export_geowiki_sentinel_ee()...this could take a while")
 	export_geowiki_sentinel_ee()
+	print("Done export_geowiki_sentinel_ee()!")
 	#export_plant_village_sentinel_ee()
 	#export_kenya_non_crop()
 	#export_region()
