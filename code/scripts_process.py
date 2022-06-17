@@ -23,7 +23,8 @@ def process_kenya_noncrop():
 
 
 if __name__ == "__main__":
+    print("Starting...process.py")
     process_geowiki()
     process_plantvillage()
-    process_kenya_noncrop()
+    #process_kenya_noncrop()
 
