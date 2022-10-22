@@ -1,0 +1,641 @@
+[{
+  "history_id" : "0ilmf99xdlk",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666167825335,
+  "history_end_time" : 1666167825335,
+  "history_notes" : null,
+  "history_process" : "nt17bz",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "ovtb7bz6t3z",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666167772291,
+  "history_end_time" : 1666167772291,
+  "history_notes" : null,
+  "history_process" : "nt17bz",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "82vttgrc1yy",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666166465570,
+  "history_end_time" : 1666166465570,
+  "history_notes" : null,
+  "history_process" : "nt17bz",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "decnqu0e7np",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666166410231,
+  "history_end_time" : 1666166419926,
+  "history_notes" : null,
+  "history_process" : "nt17bz",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "o7ntleil290",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666164233044,
+  "history_end_time" : 1666164233044,
+  "history_notes" : null,
+  "history_process" : "nt17bz",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "tebcwgvwwch",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666163607245,
+  "history_end_time" : 1666163607245,
+  "history_notes" : null,
+  "history_process" : "nt17bz",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "ph8jw56o5vf",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666137012925,
+  "history_end_time" : 1666137012925,
+  "history_notes" : null,
+  "history_process" : "nt17bz",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "wy0n5neg9wo",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666136593454,
+  "history_end_time" : 1666136593454,
+  "history_notes" : null,
+  "history_process" : "nt17bz",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "jrk7zknje6m",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666136435740,
+  "history_end_time" : 1666136435740,
+  "history_notes" : null,
+  "history_process" : "nt17bz",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "r2o3pzfh6d1",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666134110718,
+  "history_end_time" : 1666134110718,
+  "history_notes" : null,
+  "history_process" : "nt17bz",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "6xm1rx6762x",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666134036870,
+  "history_end_time" : 1666134036870,
+  "history_notes" : null,
+  "history_process" : "nt17bz",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "z1erotkm4xq",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666134008922,
+  "history_end_time" : 1666134008922,
+  "history_notes" : null,
+  "history_process" : "nt17bz",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "o1oq5qp91c3",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666131993112,
+  "history_end_time" : 1666131993112,
+  "history_notes" : null,
+  "history_process" : "nt17bz",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "ld3xb5bc2gc",
+  "history_input" : "# The probability threshold to use to label GeoWiki\n# instances as crop / not_crop (since the GeoWiki labels are a mean crop probability, as\n# assigned by several labellers). In addition, this is the threshold used when calculating\n# metrics which require binary predictions, such as accuracy score\nPROBABILITY_THRESHOLD = 0.5\n",
+  "history_output" : "",
+  "history_begin_time" : 1666118269740,
+  "history_end_time" : 1666118269906,
+  "history_notes" : null,
+  "history_process" : "nt17bz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "xangmrge9te",
+  "history_input" : "# The probability threshold to use to label GeoWiki\n# instances as crop / not_crop (since the GeoWiki labels are a mean crop probability, as\n# assigned by several labellers). In addition, this is the threshold used when calculating\n# metrics which require binary predictions, such as accuracy score\nPROBABILITY_THRESHOLD = 0.5\n",
+  "history_output" : "",
+  "history_begin_time" : 1655909866560,
+  "history_end_time" : 1655909866788,
+  "history_notes" : null,
+  "history_process" : "nt17bz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "qbxscfek53t",
+  "history_input" : "# The probability threshold to use to label GeoWiki\n# instances as crop / not_crop (since the GeoWiki labels are a mean crop probability, as\n# assigned by several labellers). In addition, this is the threshold used when calculating\n# metrics which require binary predictions, such as accuracy score\nPROBABILITY_THRESHOLD = 0.5\n",
+  "history_output" : "",
+  "history_begin_time" : 1655908824123,
+  "history_end_time" : 1655908824268,
+  "history_notes" : null,
+  "history_process" : "nt17bz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "b3q6p7bp2dk",
+  "history_input" : "# The probability threshold to use to label GeoWiki\n# instances as crop / not_crop (since the GeoWiki labels are a mean crop probability, as\n# assigned by several labellers). In addition, this is the threshold used when calculating\n# metrics which require binary predictions, such as accuracy score\nPROBABILITY_THRESHOLD = 0.5\n",
+  "history_output" : "",
+  "history_begin_time" : 1655907426766,
+  "history_end_time" : 1655907426911,
+  "history_notes" : null,
+  "history_process" : "nt17bz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "mwacy6lods0",
+  "history_input" : "# The probability threshold to use to label GeoWiki\n# instances as crop / not_crop (since the GeoWiki labels are a mean crop probability, as\n# assigned by several labellers). In addition, this is the threshold used when calculating\n# metrics which require binary predictions, such as accuracy score\nPROBABILITY_THRESHOLD = 0.5\n",
+  "history_output" : "",
+  "history_begin_time" : 1655907393979,
+  "history_end_time" : 1655907403067,
+  "history_notes" : null,
+  "history_process" : "nt17bz",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "lhxk8pxf292",
+  "history_input" : "# The probability threshold to use to label GeoWiki\n# instances as crop / not_crop (since the GeoWiki labels are a mean crop probability, as\n# assigned by several labellers). In addition, this is the threshold used when calculating\n# metrics which require binary predictions, such as accuracy score\nPROBABILITY_THRESHOLD = 0.5\n",
+  "history_output" : "",
+  "history_begin_time" : 1655865859645,
+  "history_end_time" : 1655865859804,
+  "history_notes" : null,
+  "history_process" : "nt17bz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "raf36md2lu9",
+  "history_input" : "# The probability threshold to use to label GeoWiki\n# instances as crop / not_crop (since the GeoWiki labels are a mean crop probability, as\n# assigned by several labellers). In addition, this is the threshold used when calculating\n# metrics which require binary predictions, such as accuracy score\nPROBABILITY_THRESHOLD = 0.5\n",
+  "history_output" : "",
+  "history_begin_time" : 1655865076347,
+  "history_end_time" : 1655865076519,
+  "history_notes" : null,
+  "history_process" : "nt17bz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "y1xgrche2ny",
+  "history_input" : "# The probability threshold to use to label GeoWiki\n# instances as crop / not_crop (since the GeoWiki labels are a mean crop probability, as\n# assigned by several labellers). In addition, this is the threshold used when calculating\n# metrics which require binary predictions, such as accuracy score\nPROBABILITY_THRESHOLD = 0.5\n",
+  "history_output" : "",
+  "history_begin_time" : 1647347427514,
+  "history_end_time" : 1647347427602,
+  "history_notes" : null,
+  "history_process" : "nt17bz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "3714say1ztu",
+  "history_input" : "# The probability threshold to use to label GeoWiki\n# instances as crop / not_crop (since the GeoWiki labels are a mean crop probability, as\n# assigned by several labellers). In addition, this is the threshold used when calculating\n# metrics which require binary predictions, such as accuracy score\nPROBABILITY_THRESHOLD = 0.5\n",
+  "history_output" : "",
+  "history_begin_time" : 1647347335835,
+  "history_end_time" : 1647347335910,
+  "history_notes" : null,
+  "history_process" : "nt17bz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "i6abg70wehg",
+  "history_input" : "# The probability threshold to use to label GeoWiki\n# instances as crop / not_crop (since the GeoWiki labels are a mean crop probability, as\n# assigned by several labellers). In addition, this is the threshold used when calculating\n# metrics which require binary predictions, such as accuracy score\nPROBABILITY_THRESHOLD = 0.5\n",
+  "history_output" : "",
+  "history_begin_time" : 1647347265911,
+  "history_end_time" : 1647347266029,
+  "history_notes" : null,
+  "history_process" : "nt17bz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "5tgygp7pnlh",
+  "history_input" : "# The probability threshold to use to label GeoWiki\n# instances as crop / not_crop (since the GeoWiki labels are a mean crop probability, as\n# assigned by several labellers). In addition, this is the threshold used when calculating\n# metrics which require binary predictions, such as accuracy score\nPROBABILITY_THRESHOLD = 0.5\n",
+  "history_output" : "",
+  "history_begin_time" : 1647347132935,
+  "history_end_time" : 1647347133024,
+  "history_notes" : null,
+  "history_process" : "nt17bz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "hq446ll05fb",
+  "history_input" : "# The probability threshold to use to label GeoWiki\n# instances as crop / not_crop (since the GeoWiki labels are a mean crop probability, as\n# assigned by several labellers). In addition, this is the threshold used when calculating\n# metrics which require binary predictions, such as accuracy score\nPROBABILITY_THRESHOLD = 0.5\n",
+  "history_output" : "",
+  "history_begin_time" : 1647346806854,
+  "history_end_time" : 1647346806964,
+  "history_notes" : null,
+  "history_process" : "nt17bz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "lrbude6ln7z",
+  "history_input" : "# The probability threshold to use to label GeoWiki\n# instances as crop / not_crop (since the GeoWiki labels are a mean crop probability, as\n# assigned by several labellers). In addition, this is the threshold used when calculating\n# metrics which require binary predictions, such as accuracy score\nPROBABILITY_THRESHOLD = 0.5\n",
+  "history_output" : "",
+  "history_begin_time" : 1647346644188,
+  "history_end_time" : 1647346644312,
+  "history_notes" : null,
+  "history_process" : "nt17bz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "ov8hidrg0fq",
+  "history_input" : "# The probability threshold to use to label GeoWiki\n# instances as crop / not_crop (since the GeoWiki labels are a mean crop probability, as\n# assigned by several labellers). In addition, this is the threshold used when calculating\n# metrics which require binary predictions, such as accuracy score\nPROBABILITY_THRESHOLD = 0.5\n",
+  "history_output" : "",
+  "history_begin_time" : 1647345840821,
+  "history_end_time" : 1647345840928,
+  "history_notes" : null,
+  "history_process" : "nt17bz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "67hab3st9ij",
+  "history_input" : "# The probability threshold to use to label GeoWiki\n# instances as crop / not_crop (since the GeoWiki labels are a mean crop probability, as\n# assigned by several labellers). In addition, this is the threshold used when calculating\n# metrics which require binary predictions, such as accuracy score\nPROBABILITY_THRESHOLD = 0.5\n",
+  "history_output" : "",
+  "history_begin_time" : 1647345654766,
+  "history_end_time" : 1647345654873,
+  "history_notes" : null,
+  "history_process" : "nt17bz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "laro4t1jbt1",
+  "history_input" : "# The probability threshold to use to label GeoWiki\n# instances as crop / not_crop (since the GeoWiki labels are a mean crop probability, as\n# assigned by several labellers). In addition, this is the threshold used when calculating\n# metrics which require binary predictions, such as accuracy score\nPROBABILITY_THRESHOLD = 0.5\n",
+  "history_output" : "",
+  "history_begin_time" : 1647340110668,
+  "history_end_time" : 1647340110822,
+  "history_notes" : null,
+  "history_process" : "nt17bz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "5rjszqhbqac",
+  "history_input" : "# The probability threshold to use to label GeoWiki\n# instances as crop / not_crop (since the GeoWiki labels are a mean crop probability, as\n# assigned by several labellers). In addition, this is the threshold used when calculating\n# metrics which require binary predictions, such as accuracy score\nPROBABILITY_THRESHOLD = 0.5\n",
+  "history_output" : "",
+  "history_begin_time" : 1646147714701,
+  "history_end_time" : 1646147714846,
+  "history_notes" : null,
+  "history_process" : "nt17bz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "hsqbxtsyu5c",
+  "history_input" : "# The probability threshold to use to label GeoWiki\n# instances as crop / not_crop (since the GeoWiki labels are a mean crop probability, as\n# assigned by several labellers). In addition, this is the threshold used when calculating\n# metrics which require binary predictions, such as accuracy score\nPROBABILITY_THRESHOLD = 0.5\n",
+  "history_output" : "",
+  "history_begin_time" : 1646145423296,
+  "history_end_time" : 1646145423386,
+  "history_notes" : null,
+  "history_process" : "nt17bz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "vuca28y6n7o",
+  "history_input" : "# The probability threshold to use to label GeoWiki\n# instances as crop / not_crop (since the GeoWiki labels are a mean crop probability, as\n# assigned by several labellers). In addition, this is the threshold used when calculating\n# metrics which require binary predictions, such as accuracy score\nPROBABILITY_THRESHOLD = 0.5\n",
+  "history_output" : "",
+  "history_begin_time" : 1646145208505,
+  "history_end_time" : 1646145208603,
+  "history_notes" : null,
+  "history_process" : "nt17bz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "odm22nm4sqj",
+  "history_input" : "# The probability threshold to use to label GeoWiki\n# instances as crop / not_crop (since the GeoWiki labels are a mean crop probability, as\n# assigned by several labellers). In addition, this is the threshold used when calculating\n# metrics which require binary predictions, such as accuracy score\nPROBABILITY_THRESHOLD = 0.5\n",
+  "history_output" : "",
+  "history_begin_time" : 1646144597899,
+  "history_end_time" : 1646144598026,
+  "history_notes" : null,
+  "history_process" : "nt17bz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "3y1ank2495z",
+  "history_input" : "# The probability threshold to use to label GeoWiki\n# instances as crop / not_crop (since the GeoWiki labels are a mean crop probability, as\n# assigned by several labellers). In addition, this is the threshold used when calculating\n# metrics which require binary predictions, such as accuracy score\nPROBABILITY_THRESHOLD = 0.5\n",
+  "history_output" : "",
+  "history_begin_time" : 1646144380879,
+  "history_end_time" : 1646144380954,
+  "history_notes" : null,
+  "history_process" : "nt17bz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "a65t6xt5byj",
+  "history_input" : "# The probability threshold to use to label GeoWiki\n# instances as crop / not_crop (since the GeoWiki labels are a mean crop probability, as\n# assigned by several labellers). In addition, this is the threshold used when calculating\n# metrics which require binary predictions, such as accuracy score\nPROBABILITY_THRESHOLD = 0.5\n",
+  "history_output" : "",
+  "history_begin_time" : 1646144307945,
+  "history_end_time" : 1646144308083,
+  "history_notes" : null,
+  "history_process" : "nt17bz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "fvmnl3jo5pu",
+  "history_input" : "# The probability threshold to use to label GeoWiki\n# instances as crop / not_crop (since the GeoWiki labels are a mean crop probability, as\n# assigned by several labellers). In addition, this is the threshold used when calculating\n# metrics which require binary predictions, such as accuracy score\nPROBABILITY_THRESHOLD = 0.5\n",
+  "history_output" : "",
+  "history_begin_time" : 1646143402338,
+  "history_end_time" : 1646143402456,
+  "history_notes" : null,
+  "history_process" : "nt17bz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "ms104kk6ei2",
+  "history_input" : "# The probability threshold to use to label GeoWiki\n# instances as crop / not_crop (since the GeoWiki labels are a mean crop probability, as\n# assigned by several labellers). In addition, this is the threshold used when calculating\n# metrics which require binary predictions, such as accuracy score\nPROBABILITY_THRESHOLD = 0.5\n",
+  "history_output" : "",
+  "history_begin_time" : 1646143252551,
+  "history_end_time" : 1646143252646,
+  "history_notes" : null,
+  "history_process" : "nt17bz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "by8hemvdbuc",
+  "history_input" : "# The probability threshold to use to label GeoWiki\n# instances as crop / not_crop (since the GeoWiki labels are a mean crop probability, as\n# assigned by several labellers). In addition, this is the threshold used when calculating\n# metrics which require binary predictions, such as accuracy score\nPROBABILITY_THRESHOLD = 0.5\n",
+  "history_output" : "",
+  "history_begin_time" : 1646143173806,
+  "history_end_time" : 1646143173924,
+  "history_notes" : null,
+  "history_process" : "nt17bz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "eyci74roz68",
+  "history_input" : "# The probability threshold to use to label GeoWiki\n# instances as crop / not_crop (since the GeoWiki labels are a mean crop probability, as\n# assigned by several labellers). In addition, this is the threshold used when calculating\n# metrics which require binary predictions, such as accuracy score\nPROBABILITY_THRESHOLD = 0.5\n",
+  "history_output" : "",
+  "history_begin_time" : 1646143136538,
+  "history_end_time" : 1646143136657,
+  "history_notes" : null,
+  "history_process" : "nt17bz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "07i65vo71p9",
+  "history_input" : "# The probability threshold to use to label GeoWiki\n# instances as crop / not_crop (since the GeoWiki labels are a mean crop probability, as\n# assigned by several labellers). In addition, this is the threshold used when calculating\n# metrics which require binary predictions, such as accuracy score\nPROBABILITY_THRESHOLD = 0.5\n",
+  "history_output" : "",
+  "history_begin_time" : 1646143113059,
+  "history_end_time" : 1646143113140,
+  "history_notes" : null,
+  "history_process" : "nt17bz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "6nzatfvqpai",
+  "history_input" : "# The probability threshold to use to label GeoWiki\n# instances as crop / not_crop (since the GeoWiki labels are a mean crop probability, as\n# assigned by several labellers). In addition, this is the threshold used when calculating\n# metrics which require binary predictions, such as accuracy score\nPROBABILITY_THRESHOLD = 0.5\n",
+  "history_output" : "",
+  "history_begin_time" : 1646139373557,
+  "history_end_time" : 1646139373638,
+  "history_notes" : null,
+  "history_process" : "nt17bz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "xutirtcvx7e",
+  "history_input" : "# The probability threshold to use to label GeoWiki\n# instances as crop / not_crop (since the GeoWiki labels are a mean crop probability, as\n# assigned by several labellers). In addition, this is the threshold used when calculating\n# metrics which require binary predictions, such as accuracy score\nPROBABILITY_THRESHOLD = 0.5\n",
+  "history_output" : "",
+  "history_begin_time" : 1646139281358,
+  "history_end_time" : 1646139281466,
+  "history_notes" : null,
+  "history_process" : "nt17bz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "48os32d1utb",
+  "history_input" : "# The probability threshold to use to label GeoWiki\n# instances as crop / not_crop (since the GeoWiki labels are a mean crop probability, as\n# assigned by several labellers). In addition, this is the threshold used when calculating\n# metrics which require binary predictions, such as accuracy score\nPROBABILITY_THRESHOLD = 0.5\n",
+  "history_output" : "",
+  "history_begin_time" : 1646139239903,
+  "history_end_time" : 1646139240009,
+  "history_notes" : null,
+  "history_process" : "nt17bz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "83h463cmzsx",
+  "history_input" : "# The probability threshold to use to label GeoWiki\n# instances as crop / not_crop (since the GeoWiki labels are a mean crop probability, as\n# assigned by several labellers). In addition, this is the threshold used when calculating\n# metrics which require binary predictions, such as accuracy score\nPROBABILITY_THRESHOLD = 0.5\n",
+  "history_output" : "",
+  "history_begin_time" : 1646139189218,
+  "history_end_time" : 1646139189294,
+  "history_notes" : null,
+  "history_process" : "nt17bz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "8v34qkn8kyf",
+  "history_input" : "# The probability threshold to use to label GeoWiki\n# instances as crop / not_crop (since the GeoWiki labels are a mean crop probability, as\n# assigned by several labellers). In addition, this is the threshold used when calculating\n# metrics which require binary predictions, such as accuracy score\nPROBABILITY_THRESHOLD = 0.5\n",
+  "history_output" : "",
+  "history_begin_time" : 1646139151291,
+  "history_end_time" : 1646139151395,
+  "history_notes" : null,
+  "history_process" : "nt17bz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "n7isoq2m8f3",
+  "history_input" : "# The probability threshold to use to label GeoWiki\n# instances as crop / not_crop (since the GeoWiki labels are a mean crop probability, as\n# assigned by several labellers). In addition, this is the threshold used when calculating\n# metrics which require binary predictions, such as accuracy score\nPROBABILITY_THRESHOLD = 0.5\n",
+  "history_output" : "",
+  "history_begin_time" : 1646138494411,
+  "history_end_time" : 1646138494498,
+  "history_notes" : null,
+  "history_process" : "nt17bz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "pqzzgtwuxlm",
+  "history_input" : "# The probability threshold to use to label GeoWiki\n# instances as crop / not_crop (since the GeoWiki labels are a mean crop probability, as\n# assigned by several labellers). In addition, this is the threshold used when calculating\n# metrics which require binary predictions, such as accuracy score\nPROBABILITY_THRESHOLD = 0.5\n",
+  "history_output" : "",
+  "history_begin_time" : 1646138442553,
+  "history_end_time" : 1646138442625,
+  "history_notes" : null,
+  "history_process" : "nt17bz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "vz6c5h9qvcl",
+  "history_input" : "# The probability threshold to use to label GeoWiki\n# instances as crop / not_crop (since the GeoWiki labels are a mean crop probability, as\n# assigned by several labellers). In addition, this is the threshold used when calculating\n# metrics which require binary predictions, such as accuracy score\nPROBABILITY_THRESHOLD = 0.5\n",
+  "history_output" : "",
+  "history_begin_time" : 1646138390806,
+  "history_end_time" : 1646138390905,
+  "history_notes" : null,
+  "history_process" : "nt17bz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "pbjqjhfabgw",
+  "history_input" : "# The probability threshold to use to label GeoWiki\n# instances as crop / not_crop (since the GeoWiki labels are a mean crop probability, as\n# assigned by several labellers). In addition, this is the threshold used when calculating\n# metrics which require binary predictions, such as accuracy score\nPROBABILITY_THRESHOLD = 0.5\n",
+  "history_output" : "",
+  "history_begin_time" : 1646138268442,
+  "history_end_time" : 1646138268549,
+  "history_notes" : null,
+  "history_process" : "nt17bz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "qmu2hgsmfyw",
+  "history_input" : "# The probability threshold to use to label GeoWiki\n# instances as crop / not_crop (since the GeoWiki labels are a mean crop probability, as\n# assigned by several labellers). In addition, this is the threshold used when calculating\n# metrics which require binary predictions, such as accuracy score\nPROBABILITY_THRESHOLD = 0.5\n",
+  "history_output" : "",
+  "history_begin_time" : 1646138172058,
+  "history_end_time" : 1646138172130,
+  "history_notes" : null,
+  "history_process" : "nt17bz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "7xwfzv5v9ft",
+  "history_input" : "# The probability threshold to use to label GeoWiki\n# instances as crop / not_crop (since the GeoWiki labels are a mean crop probability, as\n# assigned by several labellers). In addition, this is the threshold used when calculating\n# metrics which require binary predictions, such as accuracy score\nPROBABILITY_THRESHOLD = 0.5\n",
+  "history_output" : "",
+  "history_begin_time" : 1646138091290,
+  "history_end_time" : 1646138091371,
+  "history_notes" : null,
+  "history_process" : "nt17bz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "fzze4wrk4d0",
+  "history_input" : "# The probability threshold to use to label GeoWiki\n# instances as crop / not_crop (since the GeoWiki labels are a mean crop probability, as\n# assigned by several labellers). In addition, this is the threshold used when calculating\n# metrics which require binary predictions, such as accuracy score\nPROBABILITY_THRESHOLD = 0.5\n",
+  "history_output" : "",
+  "history_begin_time" : 1646137775083,
+  "history_end_time" : 1646137775192,
+  "history_notes" : null,
+  "history_process" : "nt17bz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "zn9gcvokwxc",
+  "history_input" : "# The probability threshold to use to label GeoWiki\n# instances as crop / not_crop (since the GeoWiki labels are a mean crop probability, as\n# assigned by several labellers). In addition, this is the threshold used when calculating\n# metrics which require binary predictions, such as accuracy score\nPROBABILITY_THRESHOLD = 0.5\n",
+  "history_output" : "",
+  "history_begin_time" : 1646137680571,
+  "history_end_time" : 1646137680671,
+  "history_notes" : null,
+  "history_process" : "nt17bz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "mkkxhuyr1u8",
+  "history_input" : "# The probability threshold to use to label GeoWiki\n# instances as crop / not_crop (since the GeoWiki labels are a mean crop probability, as\n# assigned by several labellers). In addition, this is the threshold used when calculating\n# metrics which require binary predictions, such as accuracy score\nPROBABILITY_THRESHOLD = 0.5\n",
+  "history_output" : "",
+  "history_begin_time" : 1646137568635,
+  "history_end_time" : 1646137568738,
+  "history_notes" : null,
+  "history_process" : "nt17bz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "joyi0zqmxdy",
+  "history_input" : "# The probability threshold to use to label GeoWiki\n# instances as crop / not_crop (since the GeoWiki labels are a mean crop probability, as\n# assigned by several labellers). In addition, this is the threshold used when calculating\n# metrics which require binary predictions, such as accuracy score\nPROBABILITY_THRESHOLD = 0.5\n",
+  "history_output" : "",
+  "history_begin_time" : 1646112827464,
+  "history_end_time" : 1646112827539,
+  "history_notes" : null,
+  "history_process" : "nt17bz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "vvch7upn2bq",
+  "history_input" : "# The probability threshold to use to label GeoWiki\n# instances as crop / not_crop (since the GeoWiki labels are a mean crop probability, as\n# assigned by several labellers). In addition, this is the threshold used when calculating\n# metrics which require binary predictions, such as accuracy score\nPROBABILITY_THRESHOLD = 0.5\n",
+  "history_output" : "",
+  "history_begin_time" : 1646112725538,
+  "history_end_time" : 1646112725653,
+  "history_notes" : null,
+  "history_process" : "nt17bz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "ekmkbss7y6l",
+  "history_input" : "# The probability threshold to use to label GeoWiki\n# instances as crop / not_crop (since the GeoWiki labels are a mean crop probability, as\n# assigned by several labellers). In addition, this is the threshold used when calculating\n# metrics which require binary predictions, such as accuracy score\nPROBABILITY_THRESHOLD = 0.5\n",
+  "history_output" : "",
+  "history_begin_time" : 1646112272731,
+  "history_end_time" : 1646112272831,
+  "history_notes" : null,
+  "history_process" : "nt17bz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "5wmiogjmokj",
+  "history_input" : "# The probability threshold to use to label GeoWiki\n# instances as crop / not_crop (since the GeoWiki labels are a mean crop probability, as\n# assigned by several labellers). In addition, this is the threshold used when calculating\n# metrics which require binary predictions, such as accuracy score\nPROBABILITY_THRESHOLD = 0.5\n",
+  "history_output" : "",
+  "history_begin_time" : 1646112234762,
+  "history_end_time" : 1646112234844,
+  "history_notes" : null,
+  "history_process" : "nt17bz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "8ouruqh30u6",
+  "history_input" : "# The probability threshold to use to label GeoWiki\n# instances as crop / not_crop (since the GeoWiki labels are a mean crop probability, as\n# assigned by several labellers). In addition, this is the threshold used when calculating\n# metrics which require binary predictions, such as accuracy score\nPROBABILITY_THRESHOLD = 0.5\n",
+  "history_output" : "",
+  "history_begin_time" : 1646112130676,
+  "history_end_time" : 1646112130772,
+  "history_notes" : null,
+  "history_process" : "nt17bz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "6b99mwbjrn2",
+  "history_input" : "# The probability threshold to use to label GeoWiki\n# instances as crop / not_crop (since the GeoWiki labels are a mean crop probability, as\n# assigned by several labellers). In addition, this is the threshold used when calculating\n# metrics which require binary predictions, such as accuracy score\nPROBABILITY_THRESHOLD = 0.5\n",
+  "history_output" : "",
+  "history_begin_time" : 1645393373273,
+  "history_end_time" : 1645393373361,
+  "history_notes" : null,
+  "history_process" : "nt17bz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "gpe1myuawe8",
+  "history_input" : "# The probability threshold to use to label GeoWiki\n# instances as crop / not_crop (since the GeoWiki labels are a mean crop probability, as\n# assigned by several labellers). In addition, this is the threshold used when calculating\n# metrics which require binary predictions, such as accuracy score\nPROBABILITY_THRESHOLD = 0.5\n",
+  "history_output" : "",
+  "history_begin_time" : 1645389122936,
+  "history_end_time" : 1645389122998,
+  "history_notes" : null,
+  "history_process" : "nt17bz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "clbwngj8taw",
+  "history_input" : "# The probability threshold to use to label GeoWiki\n# instances as crop / not_crop (since the GeoWiki labels are a mean crop probability, as\n# assigned by several labellers). In addition, this is the threshold used when calculating\n# metrics which require binary predictions, such as accuracy score\nPROBABILITY_THRESHOLD = 0.5\n",
+  "history_output" : "",
+  "history_begin_time" : 1645389112353,
+  "history_end_time" : 1645389112437,
+  "history_notes" : null,
+  "history_process" : "nt17bz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "xaycyfdolwf",
+  "history_input" : "# The probability threshold to use to label GeoWiki\n# instances as crop / not_crop (since the GeoWiki labels are a mean crop probability, as\n# assigned by several labellers). In addition, this is the threshold used when calculating\n# metrics which require binary predictions, such as accuracy score\nPROBABILITY_THRESHOLD = 0.5\n",
+  "history_output" : "",
+  "history_begin_time" : 1645388791554,
+  "history_end_time" : 1645388791668,
+  "history_notes" : null,
+  "history_process" : "nt17bz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "cwc3zclpqfv",
+  "history_input" : "# The probability threshold to use to label GeoWiki\n# instances as crop / not_crop (since the GeoWiki labels are a mean crop probability, as\n# assigned by several labellers). In addition, this is the threshold used when calculating\n# metrics which require binary predictions, such as accuracy score\nPROBABILITY_THRESHOLD = 0.5\n",
+  "history_output" : "",
+  "history_begin_time" : 1645232746582,
+  "history_end_time" : 1645232746654,
+  "history_notes" : null,
+  "history_process" : "nt17bz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},]

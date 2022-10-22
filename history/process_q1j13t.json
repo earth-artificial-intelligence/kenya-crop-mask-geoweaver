@@ -1,0 +1,551 @@
+[{
+  "history_id" : "iy9fpy3ey31",
+  "history_input" : "import pytorch_lightning as pl\nfrom pathlib import Path\nfrom argparse import ArgumentParser\nimport os\n\nimport sys\n\nsys.path.append(\"..\")\nfrom src_models_model import Model\n\n\ndef get_checkpoint(data_folder: Path) -> str:\n\n    log_folder = data_folder / \"lightning_logs/\" \n    list_of_checkpoints = list(log_folder.glob('version*/checkpoints/*.ckpt'))\n    print(log_folder.absolute())\n    return str(max(list_of_checkpoints, key=os.path.getctime))\n\n\ndef test_model():\n    parser = ArgumentParser()\n\n    parser.add_argument(\"--version\", type=int, default=0)\n\n    args = parser.parse_args()\n\n    model_path = get_checkpoint(Path(\"../data\"))\n\n    print(f\"Using model {model_path}\")\n\t\n    model = Model.load_from_checkpoint(model_path)\n\n    trainer = pl.Trainer()\n    trainer.test(model)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...test.py\")\n    test_model()\n",
+  "history_output" : "Starting...test.py\n/Users/jensen/gw-workspace/iy9fpy3ey31/../data/lightning_logs\nUsing model ../data/lightning_logs/version_8/checkpoints/epoch=165.ckpt\nGot hyper parameters:  Namespace(alpha=10, batch_size=64, cache=True, classifier_base_layers=1, classifier_dropout=0.2, classifier_vector_size=128, data_folder='../data', forecast=True, forecasting_dropout=0.2, forecasting_vector_size=256, include_geowiki=True, input_months=5, learning_rate=0.001, max_epochs=1000, multi_headed=True, noise_factor=0.1, num_global_layers=1, num_local_layers=2, patience=10, remove_b1_b10=True, upsample=True)\nPredicting 7 timesteps in the forecaster\nUsing 1 layers for the global classifier\nUsing 2 layers for the local classifier\nLoading data into memory\n  0%|          | 0/2 [00:00<?, ?it/s]\n100%|██████████| 2/2 [00:00<00:00, 1881.28it/s]\nTesting:   0%|          | 0/1 [00:00<?, ?it/s]----------------------------------------------------------------------------------------------------\nTEST RESULTS\n{'val_loss': 0.01501853670924902, 'test_encoder_mae': 0.07155222, 'unencoded_test_kenya_precision_score': 1.0, 'unencoded_test_kenya_recall_score': 1.0, 'unencoded_test_kenya_f1_score': 1.0, 'unencoded_test_kenya_accuracy': 1.0, 'encoded_test_kenya_precision_score': 1.0, 'encoded_test_kenya_recall_score': 1.0, 'encoded_test_kenya_f1_score': 1.0, 'encoded_test_kenya_accuracy': 1.0}\n----------------------------------------------------------------------------------------------------\nTesting: 50it [00:00, 1982.69it/s]            \n",
+  "history_begin_time" : 1666167897864,
+  "history_end_time" : 1666167900866,
+  "history_notes" : null,
+  "history_process" : "q1j13t",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "oi687z2lxdm",
+  "history_input" : "import pytorch_lightning as pl\nfrom pathlib import Path\nfrom argparse import ArgumentParser\nimport os\n\nimport sys\n\nsys.path.append(\"..\")\nfrom src_models_model import Model\n\n\ndef get_checkpoint(data_folder: Path) -> str:\n\n    log_folder = data_folder / \"lightning_logs/\" \n    list_of_checkpoints = list(log_folder.glob('version*/checkpoints/*.ckpt'))\n    print(log_folder.absolute())\n    return str(max(list_of_checkpoints, key=os.path.getctime))\n\n\ndef test_model():\n    parser = ArgumentParser()\n\n    parser.add_argument(\"--version\", type=int, default=0)\n\n    args = parser.parse_args()\n\n    model_path = get_checkpoint(Path(\"../data\"))\n\n    print(f\"Using model {model_path}\")\n\t\n    model = Model.load_from_checkpoint(model_path)\n\n    trainer = pl.Trainer()\n    trainer.test(model)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...test.py\")\n    test_model()\n",
+  "history_output" : "Traceback (most recent call last):\n  File \"scripts_test.py\", line 1, in <module>\n    import pytorch_lightning as pl\nModuleNotFoundError: No module named 'pytorch_lightning'\n",
+  "history_begin_time" : 1666167782261,
+  "history_end_time" : 1666167782381,
+  "history_notes" : null,
+  "history_process" : "q1j13t",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "rrvy3kmwz8m",
+  "history_input" : "import pytorch_lightning as pl\nfrom pathlib import Path\nfrom argparse import ArgumentParser\nimport os\n\nimport sys\n\nsys.path.append(\"..\")\nfrom src_models_model import Model\n\n\ndef get_checkpoint(data_folder: Path) -> str:\n\n    log_folder = data_folder / \"lightning_logs/\" \n    list_of_checkpoints = list(log_folder.glob('version*/checkpoints/*.ckpt'))\n    print(log_folder.absolute())\n    return str(max(list_of_checkpoints, key=os.path.getctime))\n\n\ndef test_model():\n    parser = ArgumentParser()\n\n    parser.add_argument(\"--version\", type=int, default=0)\n\n    args = parser.parse_args()\n\n    model_path = get_checkpoint(Path(\"../data\"))\n\n    print(f\"Using model {model_path}\")\n\t\n    model = Model.load_from_checkpoint(model_path)\n\n    trainer = pl.Trainer()\n    trainer.test(model)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...test.py\")\n    test_model()\n",
+  "history_output" : "Starting...test.py\n/Users/jensen/gw-workspace/rrvy3kmwz8m/../data/lightning_logs\nUsing model ../data/lightning_logs/version_7/checkpoints/epoch=165.ckpt\nGot hyper parameters:  Namespace(alpha=10, batch_size=64, cache=True, classifier_base_layers=1, classifier_dropout=0.2, classifier_vector_size=128, data_folder='../data', forecast=True, forecasting_dropout=0.2, forecasting_vector_size=256, include_geowiki=True, input_months=5, learning_rate=0.001, max_epochs=1000, multi_headed=True, noise_factor=0.1, num_global_layers=1, num_local_layers=2, patience=10, remove_b1_b10=True, upsample=True)\nPredicting 7 timesteps in the forecaster\nUsing 1 layers for the global classifier\nUsing 2 layers for the local classifier\nLoading data into memory\n  0%|          | 0/2 [00:00<?, ?it/s]\n100%|██████████| 2/2 [00:00<00:00, 1853.43it/s]\nTesting:   0%|          | 0/1 [00:00<?, ?it/s]----------------------------------------------------------------------------------------------------\nTEST RESULTS\n{'val_loss': 0.01501853670924902, 'test_encoder_mae': 0.07155222, 'unencoded_test_kenya_precision_score': 1.0, 'unencoded_test_kenya_recall_score': 1.0, 'unencoded_test_kenya_f1_score': 1.0, 'unencoded_test_kenya_accuracy': 1.0, 'encoded_test_kenya_precision_score': 1.0, 'encoded_test_kenya_recall_score': 1.0, 'encoded_test_kenya_f1_score': 1.0, 'encoded_test_kenya_accuracy': 1.0}\n----------------------------------------------------------------------------------------------------\nTesting: 50it [00:00, 1663.44it/s]            \n",
+  "history_begin_time" : 1666166536863,
+  "history_end_time" : 1666166539971,
+  "history_notes" : null,
+  "history_process" : "q1j13t",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "3g1vf7qzq7v",
+  "history_input" : "import pytorch_lightning as pl\nfrom pathlib import Path\nfrom argparse import ArgumentParser\nimport os\n\nimport sys\n\nsys.path.append(\"..\")\nfrom src_models_model import Model\n\n\ndef get_checkpoint(data_folder: Path) -> str:\n\n    log_folder = data_folder / \"lightning_logs/\" \n    list_of_checkpoints = list(log_folder.glob('version*/checkpoints/*.ckpt'))\n    print(log_folder.absolute())\n    return str(max(list_of_checkpoints, key=os.path.getctime))\n\n\ndef test_model():\n    parser = ArgumentParser()\n\n    parser.add_argument(\"--version\", type=int, default=0)\n\n    args = parser.parse_args()\n\n    model_path = get_checkpoint(Path(\"../data\"))\n\n    print(f\"Using model {model_path}\")\n\t\n    model = Model.load_from_checkpoint(model_path)\n\n    trainer = pl.Trainer()\n    trainer.test(model)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...test.py\")\n    test_model()\n",
+  "history_output" : "Starting...test.py\n/Users/jensen/gw-workspace/3g1vf7qzq7v/../data/lightning_logs\nUsing model ../data/lightning_logs/version_6/checkpoints/epoch=165.ckpt\nGot hyper parameters:  Namespace(alpha=10, batch_size=64, cache=True, classifier_base_layers=1, classifier_dropout=0.2, classifier_vector_size=128, data_folder='../data', forecast=True, forecasting_dropout=0.2, forecasting_vector_size=256, include_geowiki=True, input_months=5, learning_rate=0.001, max_epochs=1000, multi_headed=True, noise_factor=0.1, num_global_layers=1, num_local_layers=2, patience=10, remove_b1_b10=True, upsample=True)\nPredicting 7 timesteps in the forecaster\nUsing 1 layers for the global classifier\nUsing 2 layers for the local classifier\nLoading data into memory\n  0%|          | 0/2 [00:00<?, ?it/s]\n100%|██████████| 2/2 [00:00<00:00, 744.93it/s]\nTesting:   0%|          | 0/1 [00:00<?, ?it/s]----------------------------------------------------------------------------------------------------\nTEST RESULTS\n{'val_loss': 0.01501853670924902, 'test_encoder_mae': 0.07155222, 'unencoded_test_kenya_precision_score': 1.0, 'unencoded_test_kenya_recall_score': 1.0, 'unencoded_test_kenya_f1_score': 1.0, 'unencoded_test_kenya_accuracy': 1.0, 'encoded_test_kenya_precision_score': 1.0, 'encoded_test_kenya_recall_score': 1.0, 'encoded_test_kenya_f1_score': 1.0, 'encoded_test_kenya_accuracy': 1.0}\n----------------------------------------------------------------------------------------------------\nTesting: 50it [00:00, 2381.07it/s]            \n",
+  "history_begin_time" : 1666164292993,
+  "history_end_time" : 1666164295411,
+  "history_notes" : null,
+  "history_process" : "q1j13t",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "ltqdhd9pzde",
+  "history_input" : "import pytorch_lightning as pl\nfrom pathlib import Path\nfrom argparse import ArgumentParser\nimport os\n\nimport sys\n\nsys.path.append(\"..\")\nfrom src_models_model import Model\n\n\ndef get_checkpoint(data_folder: Path) -> str:\n\n    log_folder = data_folder / \"lightning_logs/\" \n    list_of_checkpoints = list(log_folder.glob('version*/checkpoints/*.ckpt'))\n    print(log_folder.absolute())\n    return str(max(list_of_checkpoints, key=os.path.getctime))\n\n\ndef test_model():\n    parser = ArgumentParser()\n\n    parser.add_argument(\"--version\", type=int, default=0)\n\n    args = parser.parse_args()\n\n    model_path = get_checkpoint(Path(\"../data\"))\n\n    print(f\"Using model {model_path}\")\n\t\n    model = Model.load_from_checkpoint(model_path)\n\n    trainer = pl.Trainer()\n    trainer.test(model)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...test.py\")\n    test_model()\n",
+  "history_output" : "Starting...test.py\n/Users/jensen/gw-workspace/ltqdhd9pzde/../data/lightning_logs\nUsing model ../data/lightning_logs/version_5/checkpoints/epoch=165.ckpt\nGot hyper parameters:  Namespace(alpha=10, batch_size=64, cache=True, classifier_base_layers=1, classifier_dropout=0.2, classifier_vector_size=128, data_folder='../data', forecast=True, forecasting_dropout=0.2, forecasting_vector_size=256, include_geowiki=True, input_months=5, learning_rate=0.001, max_epochs=1000, multi_headed=True, noise_factor=0.1, num_global_layers=1, num_local_layers=2, patience=10, remove_b1_b10=True, upsample=True)\nPredicting 7 timesteps in the forecaster\nUsing 1 layers for the global classifier\nUsing 2 layers for the local classifier\nLoading data into memory\n  0%|          | 0/2 [00:00<?, ?it/s]\n100%|██████████| 2/2 [00:00<00:00, 879.49it/s]\nTesting:   0%|          | 0/1 [00:00<?, ?it/s]----------------------------------------------------------------------------------------------------\nTEST RESULTS\n{'val_loss': 0.01501853670924902, 'test_encoder_mae': 0.07155222, 'unencoded_test_kenya_precision_score': 1.0, 'unencoded_test_kenya_recall_score': 1.0, 'unencoded_test_kenya_f1_score': 1.0, 'unencoded_test_kenya_accuracy': 1.0, 'encoded_test_kenya_precision_score': 1.0, 'encoded_test_kenya_recall_score': 1.0, 'encoded_test_kenya_f1_score': 1.0, 'encoded_test_kenya_accuracy': 1.0}\n----------------------------------------------------------------------------------------------------\nTesting: 50it [00:00, 2343.13it/s]            \n",
+  "history_begin_time" : 1666163668921,
+  "history_end_time" : 1666163671478,
+  "history_notes" : null,
+  "history_process" : "q1j13t",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "t8ayq67n3w2",
+  "history_input" : "import pytorch_lightning as pl\nfrom pathlib import Path\nfrom argparse import ArgumentParser\nimport os\n\nimport sys\n\nsys.path.append(\"..\")\nfrom src_models_model import Model\n\n\ndef get_checkpoint(data_folder: Path) -> str:\n\n    log_folder = data_folder / \"lightning_logs/\" \n    list_of_checkpoints = list(log_folder.glob('version*/checkpoints/*.ckpt'))\n    print(log_folder.absolute())\n    return str(max(list_of_checkpoints, key=os.path.getctime))\n\n\ndef test_model():\n    parser = ArgumentParser()\n\n    parser.add_argument(\"--version\", type=int, default=0)\n\n    args = parser.parse_args()\n\n    model_path = get_checkpoint(Path(\"../data\"))\n\n    print(f\"Using model {model_path}\")\n\t\n    model = Model.load_from_checkpoint(model_path)\n\n    trainer = pl.Trainer()\n    trainer.test(model)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...test.py\")\n    test_model()\n",
+  "history_output" : "Starting...test.py\n/Users/jensen/gw-workspace/t8ayq67n3w2/../data/lightning_logs\nUsing model ../data/lightning_logs/version_4/checkpoints/epoch=165.ckpt\nGot hyper parameters:  Namespace(alpha=10, batch_size=64, cache=True, classifier_base_layers=1, classifier_dropout=0.2, classifier_vector_size=128, data_folder='../data', forecast=True, forecasting_dropout=0.2, forecasting_vector_size=256, include_geowiki=True, input_months=5, learning_rate=0.001, max_epochs=1000, multi_headed=True, noise_factor=0.1, num_global_layers=1, num_local_layers=2, patience=10, remove_b1_b10=True, upsample=True)\nPredicting 7 timesteps in the forecaster\nUsing 1 layers for the global classifier\nUsing 2 layers for the local classifier\nLoading data into memory\n  0%|          | 0/2 [00:00<?, ?it/s]\n100%|██████████| 2/2 [00:00<00:00, 1675.04it/s]\nTesting:   0%|          | 0/1 [00:00<?, ?it/s]----------------------------------------------------------------------------------------------------\nTEST RESULTS\n{'val_loss': 0.01501853670924902, 'test_encoder_mae': 0.07155222, 'unencoded_test_kenya_precision_score': 1.0, 'unencoded_test_kenya_recall_score': 1.0, 'unencoded_test_kenya_f1_score': 1.0, 'unencoded_test_kenya_accuracy': 1.0, 'encoded_test_kenya_precision_score': 1.0, 'encoded_test_kenya_recall_score': 1.0, 'encoded_test_kenya_f1_score': 1.0, 'encoded_test_kenya_accuracy': 1.0}\n----------------------------------------------------------------------------------------------------\nTesting: 50it [00:00, 2460.87it/s]            \n",
+  "history_begin_time" : 1666137072876,
+  "history_end_time" : 1666137075478,
+  "history_notes" : null,
+  "history_process" : "q1j13t",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "k32bhsc7bjd",
+  "history_input" : "import pytorch_lightning as pl\nfrom pathlib import Path\nfrom argparse import ArgumentParser\nimport os\n\nimport sys\n\nsys.path.append(\"..\")\nfrom src_models_model import Model\n\n\ndef get_checkpoint(data_folder: Path) -> str:\n\n    log_folder = data_folder / \"lightning_logs/\" \n    list_of_checkpoints = list(log_folder.glob('version*/checkpoints/*.ckpt'))\n    print(log_folder.absolute())\n    return str(max(list_of_checkpoints, key=os.path.getctime))\n\n\ndef test_model():\n    parser = ArgumentParser()\n\n    parser.add_argument(\"--version\", type=int, default=0)\n\n    args = parser.parse_args()\n\n    model_path = get_checkpoint(Path(\"../data\"))\n\n    print(f\"Using model {model_path}\")\n\t\n    model = Model.load_from_checkpoint(model_path)\n\n    trainer = pl.Trainer()\n    trainer.test(model)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...test.py\")\n    test_model()\n",
+  "history_output" : "Starting...test.py\n/Users/jensen/gw-workspace/k32bhsc7bjd/../data/lightning_logs\nUsing model ../data/lightning_logs/version_3/checkpoints/epoch=165.ckpt\nGot hyper parameters:  Namespace(alpha=10, batch_size=64, cache=True, classifier_base_layers=1, classifier_dropout=0.2, classifier_vector_size=128, data_folder='../data', forecast=True, forecasting_dropout=0.2, forecasting_vector_size=256, include_geowiki=True, input_months=5, learning_rate=0.001, max_epochs=1000, multi_headed=True, noise_factor=0.1, num_global_layers=1, num_local_layers=2, patience=10, remove_b1_b10=True, upsample=True)\nPredicting 7 timesteps in the forecaster\nUsing 1 layers for the global classifier\nUsing 2 layers for the local classifier\nLoading data into memory\n  0%|          | 0/2 [00:00<?, ?it/s]\n100%|██████████| 2/2 [00:00<00:00, 1442.83it/s]\nTesting:   0%|          | 0/1 [00:00<?, ?it/s]----------------------------------------------------------------------------------------------------\nTEST RESULTS\n{'val_loss': 0.01501853670924902, 'test_encoder_mae': 0.07155222, 'unencoded_test_kenya_precision_score': 1.0, 'unencoded_test_kenya_recall_score': 1.0, 'unencoded_test_kenya_f1_score': 1.0, 'unencoded_test_kenya_accuracy': 1.0, 'encoded_test_kenya_precision_score': 1.0, 'encoded_test_kenya_recall_score': 1.0, 'encoded_test_kenya_f1_score': 1.0, 'encoded_test_kenya_accuracy': 1.0}\n----------------------------------------------------------------------------------------------------\nTesting: 50it [00:00, 2738.19it/s]            \n",
+  "history_begin_time" : 1666136650278,
+  "history_end_time" : 1666136652805,
+  "history_notes" : null,
+  "history_process" : "q1j13t",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "esjmk6q1aig",
+  "history_input" : "import pytorch_lightning as pl\nfrom pathlib import Path\nfrom argparse import ArgumentParser\nimport os\n\nimport sys\n\nsys.path.append(\"..\")\nfrom src_models_model import Model\n\n\ndef get_checkpoint(data_folder: Path) -> str:\n\n    log_folder = data_folder / \"lightning_logs/\" \n    list_of_checkpoints = list(log_folder.glob('version*/checkpoints/*.ckpt'))\n    print(log_folder.absolute())\n    return str(max(list_of_checkpoints, key=os.path.getctime))\n\n\ndef test_model():\n    parser = ArgumentParser()\n\n    parser.add_argument(\"--version\", type=int, default=0)\n\n    args = parser.parse_args()\n\n    model_path = get_checkpoint(Path(\"../data\"))\n\n    print(f\"Using model {model_path}\")\n\t\n    model = Model.load_from_checkpoint(model_path)\n\n    trainer = pl.Trainer()\n    trainer.test(model)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...test.py\")\n    test_model()\n",
+  "history_output" : "Starting...test.py\n/Users/jensen/gw-workspace/esjmk6q1aig/../data/lightning_logs\nUsing model ../data/lightning_logs/version_2/checkpoints/epoch=165.ckpt\nGot hyper parameters:  Namespace(alpha=10, batch_size=64, cache=True, classifier_base_layers=1, classifier_dropout=0.2, classifier_vector_size=128, data_folder='../data', forecast=True, forecasting_dropout=0.2, forecasting_vector_size=256, include_geowiki=True, input_months=5, learning_rate=0.001, max_epochs=1000, multi_headed=True, noise_factor=0.1, num_global_layers=1, num_local_layers=2, patience=10, remove_b1_b10=True, upsample=True)\nPredicting 7 timesteps in the forecaster\nUsing 1 layers for the global classifier\nUsing 2 layers for the local classifier\nLoading data into memory\n  0%|          | 0/2 [00:00<?, ?it/s]\n100%|██████████| 2/2 [00:00<00:00, 1697.41it/s]\nTesting:   0%|          | 0/1 [00:00<?, ?it/s]----------------------------------------------------------------------------------------------------\nTEST RESULTS\n{'val_loss': 0.01501853670924902, 'test_encoder_mae': 0.07155222, 'unencoded_test_kenya_precision_score': 1.0, 'unencoded_test_kenya_recall_score': 1.0, 'unencoded_test_kenya_f1_score': 1.0, 'unencoded_test_kenya_accuracy': 1.0, 'encoded_test_kenya_precision_score': 1.0, 'encoded_test_kenya_recall_score': 1.0, 'encoded_test_kenya_f1_score': 1.0, 'encoded_test_kenya_accuracy': 1.0}\n----------------------------------------------------------------------------------------------------\nTesting: 50it [00:00, 2495.99it/s]            \n",
+  "history_begin_time" : 1666136464615,
+  "history_end_time" : 1666136466210,
+  "history_notes" : null,
+  "history_process" : "q1j13t",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "nd0u3rpa4e5",
+  "history_input" : "import pytorch_lightning as pl\nfrom pathlib import Path\nfrom argparse import ArgumentParser\nimport os\n\nimport sys\n\nsys.path.append(\"..\")\nfrom src_models_model import Model\n\n\ndef get_checkpoint(data_folder: Path) -> str:\n\n    log_folder = data_folder / \"lightning_logs/\" \n    list_of_checkpoints = list(log_folder.glob('version*/checkpoints/*.ckpt'))\n    print(log_folder.absolute())\n    return str(max(list_of_checkpoints, key=os.path.getctime))\n\n\ndef test_model():\n    parser = ArgumentParser()\n\n    parser.add_argument(\"--version\", type=int, default=0)\n\n    args = parser.parse_args()\n\n    model_path = get_checkpoint(Path(\"../data\"))\n\n    print(f\"Using model {model_path}\")\n\t\n    model = Model.load_from_checkpoint(model_path)\n\n    trainer = pl.Trainer()\n    trainer.test(model)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...test.py\")\n    test_model()\n",
+  "history_output" : "Starting...test.py\n/Users/jensen/gw-workspace/nd0u3rpa4e5/../data/lightning_logs\nUsing model ../data/lightning_logs/version_0/checkpoints/epoch=165.ckpt\nTraceback (most recent call last):\n  File \"scripts_test.py\", line 39, in <module>\n    test_model()\n  File \"scripts_test.py\", line 31, in test_model\n    model = Model.load_from_checkpoint(model_path)\n  File \"/Users/jensen/virtualenvs/pythonProject/lib/python3.8/site-packages/pytorch_lightning/core/saving.py\", line 137, in load_from_checkpoint\n    return _load_from_checkpoint(\n  File \"/Users/jensen/virtualenvs/pythonProject/lib/python3.8/site-packages/pytorch_lightning/core/saving.py\", line 205, in _load_from_checkpoint\n    return _load_state(cls, checkpoint, strict=strict, **kwargs)\n  File \"/Users/jensen/virtualenvs/pythonProject/lib/python3.8/site-packages/pytorch_lightning/core/saving.py\", line 250, in _load_state\n    obj = cls(**_cls_kwargs)\nTypeError: __init__() missing 1 required positional argument: 'hparams'\n",
+  "history_begin_time" : 1666134143199,
+  "history_end_time" : 1666134145479,
+  "history_notes" : null,
+  "history_process" : "q1j13t",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "zowxagjqkaa",
+  "history_input" : "import pytorch_lightning as pl\nfrom pathlib import Path\nfrom argparse import ArgumentParser\nimport os\n\nimport sys\n\nsys.path.append(\"..\")\nfrom src_models_model import Model\n\n\ndef get_checkpoint(data_folder: Path) -> str:\n\n    log_folder = data_folder / \"lightning_logs/\" \n    list_of_checkpoints = list(log_folder.glob('version*/checkpoints/*.ckpt'))\n    print(log_folder.absolute())\n    return str(max(list_of_checkpoints, key=os.path.getctime))\n\n\ndef test_model():\n    parser = ArgumentParser()\n\n    parser.add_argument(\"--version\", type=int, default=0)\n\n    args = parser.parse_args()\n\n    model_path = get_checkpoint(Path(\"../data\"))\n\n    print(f\"Using model {model_path}\")\n\t\n    model = Model.load_from_checkpoint(model_path)\n\n    trainer = pl.Trainer()\n    trainer.test(model)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...test.py\")\n    test_model()\n",
+  "history_output" : "Traceback (most recent call last):\n  File \"scripts_test.py\", line 1, in <module>\n    import pytorch_lightning as pl\nModuleNotFoundError: No module named 'pytorch_lightning'\n",
+  "history_begin_time" : 1666134055005,
+  "history_end_time" : 1666134055134,
+  "history_notes" : null,
+  "history_process" : "q1j13t",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "42lpe7v7g8z",
+  "history_input" : "import pytorch_lightning as pl\nfrom pathlib import Path\nfrom argparse import ArgumentParser\nimport os\n\nimport sys\n\nsys.path.append(\"..\")\nfrom src_models_model import Model\n\n\ndef get_checkpoint(data_folder: Path) -> str:\n\n    log_folder = data_folder / \"lightning_logs/\" \n    list_of_checkpoints = list(log_folder.glob('version*/checkpoints/*.ckpt'))\n    print(log_folder.absolute())\n    return str(max(list_of_checkpoints, key=os.path.getctime))\n\n\ndef test_model():\n    parser = ArgumentParser()\n\n    parser.add_argument(\"--version\", type=int, default=0)\n\n    args = parser.parse_args()\n\n    model_path = get_checkpoint(Path(\"../data\"))\n\n    print(f\"Using model {model_path}\")\n\t\n    model = Model.load_from_checkpoint(model_path)\n\n    trainer = pl.Trainer()\n    trainer.test(model)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...test.py\")\n    test_model()\n",
+  "history_output" : "Traceback (most recent call last):\n  File \"scripts_test.py\", line 1, in <module>\n    import pytorch_lightning as pl\nModuleNotFoundError: No module named 'pytorch_lightning'\n",
+  "history_begin_time" : 1666134019462,
+  "history_end_time" : 1666134019575,
+  "history_notes" : null,
+  "history_process" : "q1j13t",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "o26gyuzlwm5",
+  "history_input" : "import pytorch_lightning as pl\nfrom pathlib import Path\nfrom argparse import ArgumentParser\nimport os\n\nimport sys\n\nsys.path.append(\"..\")\nfrom src_models_model import Model\n\n\ndef get_checkpoint(data_folder: Path) -> str:\n\n    log_folder = data_folder / \"lightning_logs/\" \n    list_of_checkpoints = list(log_folder.glob('version*/checkpoints/*.ckpt'))\n    print(log_folder.absolute())\n    return str(max(list_of_checkpoints, key=os.path.getctime))\n\n\ndef test_model():\n    parser = ArgumentParser()\n\n    parser.add_argument(\"--version\", type=int, default=0)\n\n    args = parser.parse_args()\n\n    model_path = get_checkpoint(Path(\"../data\"))\n\n    print(f\"Using model {model_path}\")\n\t\n    model = Model.load_from_checkpoint(model_path)\n\n    trainer = pl.Trainer()\n    trainer.test(model)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...test.py\")\n    test_model()\n",
+  "history_output" : "Traceback (most recent call last):\n  File \"scripts_test.py\", line 1, in <module>\n    import pytorch_lightning as pl\nModuleNotFoundError: No module named 'pytorch_lightning'\n",
+  "history_begin_time" : 1666132002220,
+  "history_end_time" : 1666132002409,
+  "history_notes" : null,
+  "history_process" : "q1j13t",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "7n0ebpggnjg",
+  "history_input" : "import pytorch_lightning as pl\nfrom pathlib import Path\nfrom argparse import ArgumentParser\nimport os\n\nimport sys\n\nsys.path.append(\"..\")\nfrom src_models_model import Model\n\n\ndef get_checkpoint(data_folder: Path) -> str:\n\n    log_folder = data_folder / \"lightning_logs/\" \n    list_of_checkpoints = list(log_folder.glob('version*/checkpoints/*.ckpt'))\n    print(log_folder.absolute())\n    return str(max(list_of_checkpoints, key=os.path.getctime))\n\n\ndef test_model():\n    parser = ArgumentParser()\n\n    parser.add_argument(\"--version\", type=int, default=0)\n\n    args = parser.parse_args()\n\n    model_path = get_checkpoint(Path(\"../data\"))\n\n    print(f\"Using model {model_path}\")\n\t\n    model = Model.load_from_checkpoint(model_path)\n\n    trainer = pl.Trainer()\n    trainer.test(model)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...test.py\")\n    test_model()\n",
+  "history_output" : "  0%|          | 0/2 [00:00<?, ?it/s]\n100%|██████████| 2/2 [00:00<00:00, 541.41it/s]Starting...test.py\n/Users/uhhmed/gw-workspace/7n0ebpggnjg/../data/lightning_logs\nUsing model ../data/lightning_logs/version_2/checkpoints/epoch=165.ckpt\nPredicting 7 timesteps in the forecaster\nUsing 1 layers for the global classifier\nUsing 2 layers for the local classifier\nLoading data into memory\nTesting:   0%|          | 0/1 [00:00<?, ?it/s]----------------------------------------------------------------------------------------------------\nTEST RESULTS\n{'val_loss': 0.015019005164504051, 'test_encoder_mae': 0.07153846, 'unencoded_test_kenya_precision_score': 1.0, 'unencoded_test_kenya_recall_score': 1.0, 'unencoded_test_kenya_f1_score': 1.0, 'unencoded_test_kenya_accuracy': 1.0, 'encoded_test_kenya_precision_score': 1.0, 'encoded_test_kenya_recall_score': 1.0, 'encoded_test_kenya_f1_score': 1.0, 'encoded_test_kenya_accuracy': 1.0}\n----------------------------------------------------------------------------------------------------\nTesting: 50it [00:00, 774.46it/s]             \n",
+  "history_begin_time" : 1666118344190,
+  "history_end_time" : 1666118354990,
+  "history_notes" : null,
+  "history_process" : "q1j13t",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "1dnf6brhlwv",
+  "history_input" : "import pytorch_lightning as pl\nfrom pathlib import Path\nfrom argparse import ArgumentParser\nimport os\n\nimport sys\n\nsys.path.append(\"..\")\nfrom src_models_model import Model\n\n\ndef get_checkpoint(data_folder: Path) -> str:\n\n    log_folder = data_folder / \"lightning_logs/\" \n    list_of_checkpoints = list(log_folder.glob('version*/checkpoints/*.ckpt'))\n    print(log_folder.absolute())\n    return str(max(list_of_checkpoints, key=os.path.getctime))\n\n\ndef test_model():\n    parser = ArgumentParser()\n\n    parser.add_argument(\"--version\", type=int, default=0)\n\n    args = parser.parse_args()\n\n    model_path = get_checkpoint(Path(\"../data\"))\n\n    print(f\"Using model {model_path}\")\n\t\n    model = Model.load_from_checkpoint(model_path)\n\n    trainer = pl.Trainer()\n    trainer.test(model)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...test.py\")\n    test_model()\n",
+  "history_output" : "  0%|          | 0/2 [00:00<?, ?it/s]\n100%|██████████| 2/2 [00:00<00:00, 630.86it/s]Starting...test.py\n/Users/uhhmed/gw-workspace/1dnf6brhlwv/../data/lightning_logs\nUsing model ../data/lightning_logs/version_1/checkpoints/epoch=165.ckpt\nPredicting 7 timesteps in the forecaster\nUsing 1 layers for the global classifier\nUsing 2 layers for the local classifier\nLoading data into memory\nTesting:   0%|          | 0/1 [00:00<?, ?it/s]----------------------------------------------------------------------------------------------------\nTEST RESULTS\n{'val_loss': 0.015019005164504051, 'test_encoder_mae': 0.07153846, 'unencoded_test_kenya_precision_score': 1.0, 'unencoded_test_kenya_recall_score': 1.0, 'unencoded_test_kenya_f1_score': 1.0, 'unencoded_test_kenya_accuracy': 1.0, 'encoded_test_kenya_precision_score': 1.0, 'encoded_test_kenya_recall_score': 1.0, 'encoded_test_kenya_f1_score': 1.0, 'encoded_test_kenya_accuracy': 1.0}\n----------------------------------------------------------------------------------------------------\nTesting: 50it [00:00, 1496.20it/s]            \n",
+  "history_begin_time" : 1655909967043,
+  "history_end_time" : 1655909978554,
+  "history_notes" : null,
+  "history_process" : "q1j13t",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "j76nkm121vd",
+  "history_input" : "import pytorch_lightning as pl\nfrom pathlib import Path\nfrom argparse import ArgumentParser\nimport os\n\nimport sys\n\nsys.path.append(\"..\")\nfrom src_models_model import Model\n\n\ndef get_checkpoint(data_folder: Path) -> str:\n\n    log_folder = data_folder / \"lightning_logs/\" \n    list_of_checkpoints = list(log_folder.glob('version*/checkpoints/*.ckpt'))\n    print(log_folder.absolute())\n    return str(max(list_of_checkpoints, key=os.path.getctime))\n\n\ndef test_model():\n    parser = ArgumentParser()\n\n    parser.add_argument(\"--version\", type=int, default=0)\n\n    args = parser.parse_args()\n\n    model_path = get_checkpoint(Path(\"../data\"))\n\n    print(f\"Using model {model_path}\")\n\t\n    model = Model.load_from_checkpoint(model_path)\n\n    trainer = pl.Trainer()\n    trainer.test(model)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...test.py\")\n    test_model()\n",
+  "history_output" : "Traceback (most recent call last):\n  File \"scripts_test.py\", line 9, in <module>\n    from src_models_model import Model\n  File \"/Users/uhhmed/gw-workspace/j76nkm121vd/src_models_model.py\", line 22, in <module>\n    from src_models_data import CropDataset\n  File \"/Users/uhhmed/gw-workspace/j76nkm121vd/src_models_data.py\", line 4, in <module>\n    import geopandas\n  File \"/opt/anaconda3/lib/python3.8/site-packages/geopandas/__init__.py\", line 1, in <module>\n    from geopandas._config import options  # noqa\n  File \"/opt/anaconda3/lib/python3.8/site-packages/geopandas/_config.py\", line 109, in <module>\n    default_value=_default_use_pygeos(),\n  File \"/opt/anaconda3/lib/python3.8/site-packages/geopandas/_config.py\", line 95, in _default_use_pygeos\n    import geopandas._compat as compat\n  File \"/opt/anaconda3/lib/python3.8/site-packages/geopandas/_compat.py\", line 227, in <module>\n    PYPROJ_LT_3 = LooseVersion(pyproj.__version__) < LooseVersion(\"3\")\nAttributeError: module 'pyproj' has no attribute '__version__'\n",
+  "history_begin_time" : 1655908836433,
+  "history_end_time" : 1655908840915,
+  "history_notes" : null,
+  "history_process" : "q1j13t",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "p1zcuh3jczv",
+  "history_input" : "import pytorch_lightning as pl\nfrom pathlib import Path\nfrom argparse import ArgumentParser\nimport os\n\nimport sys\n\nsys.path.append(\"..\")\nfrom src_models_model import Model\n\n\ndef get_checkpoint(data_folder: Path) -> str:\n\n    log_folder = data_folder / \"lightning_logs/\" \n    list_of_checkpoints = list(log_folder.glob('version*/checkpoints/*.ckpt'))\n    print(log_folder.absolute())\n    return str(max(list_of_checkpoints, key=os.path.getctime))\n\n\ndef test_model():\n    parser = ArgumentParser()\n\n    parser.add_argument(\"--version\", type=int, default=0)\n\n    args = parser.parse_args()\n\n    model_path = get_checkpoint(Path(\"../data\"))\n\n    print(f\"Using model {model_path}\")\n\t\n    model = Model.load_from_checkpoint(model_path)\n\n    trainer = pl.Trainer()\n    trainer.test(model)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...test.py\")\n    test_model()\n",
+  "history_output" : "Traceback (most recent call last):\n  File \"scripts_test.py\", line 9, in <module>\n    from src_models_model import Model\n  File \"/Users/uhhmed/gw-workspace/p1zcuh3jczv/src_models_model.py\", line 22, in <module>\n    from src_models_data import CropDataset\n  File \"/Users/uhhmed/gw-workspace/p1zcuh3jczv/src_models_data.py\", line 4, in <module>\n    import geopandas\n  File \"/opt/anaconda3/lib/python3.8/site-packages/geopandas/__init__.py\", line 1, in <module>\n    from geopandas._config import options  # noqa\n  File \"/opt/anaconda3/lib/python3.8/site-packages/geopandas/_config.py\", line 109, in <module>\n    default_value=_default_use_pygeos(),\n  File \"/opt/anaconda3/lib/python3.8/site-packages/geopandas/_config.py\", line 95, in _default_use_pygeos\n    import geopandas._compat as compat\n  File \"/opt/anaconda3/lib/python3.8/site-packages/geopandas/_compat.py\", line 9, in <module>\n    import pyproj\n  File \"/opt/anaconda3/lib/python3.8/site-packages/pyproj/__init__.py\", line 81, in <module>\n    from pyproj.crs import CRS  # noqa: F401\n  File \"/opt/anaconda3/lib/python3.8/site-packages/pyproj/crs/__init__.py\", line 16, in <module>\n    from pyproj.crs.crs import (  # noqa: F401  pylint: disable=unused-import\n  File \"/opt/anaconda3/lib/python3.8/site-packages/pyproj/crs/crs.py\", line 13, in <module>\n    from pyproj._crs import (\nImportError: cannot import name 'AuthorityMatchInfo' from 'pyproj._crs' (/opt/anaconda3/lib/python3.8/site-packages/pyproj/_crs.cpython-38-darwin.so)\n",
+  "history_begin_time" : 1655907453189,
+  "history_end_time" : 1655907456776,
+  "history_notes" : null,
+  "history_process" : "q1j13t",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "km98o4udkwo",
+  "history_input" : "import pytorch_lightning as pl\nfrom pathlib import Path\nfrom argparse import ArgumentParser\nimport os\n\nimport sys\n\nsys.path.append(\"..\")\nfrom src_models_model import Model\n\n\ndef get_checkpoint(data_folder: Path) -> str:\n\n    log_folder = data_folder / \"lightning_logs/\" \n    list_of_checkpoints = list(log_folder.glob('version*/checkpoints/*.ckpt'))\n    print(log_folder.absolute())\n    return str(max(list_of_checkpoints, key=os.path.getctime))\n\n\ndef test_model():\n    parser = ArgumentParser()\n\n    parser.add_argument(\"--version\", type=int, default=0)\n\n    args = parser.parse_args()\n\n    model_path = get_checkpoint(Path(\"../data\"))\n\n    print(f\"Using model {model_path}\")\n\t\n    model = Model.load_from_checkpoint(model_path)\n\n    trainer = pl.Trainer()\n    trainer.test(model)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...test.py\")\n    test_model()\n",
+  "history_output" : "Traceback (most recent call last):\n  File \"scripts_test.py\", line 1, in <module>\n    import pytorch_lightning as pl\nModuleNotFoundError: No module named 'pytorch_lightning'\n",
+  "history_begin_time" : 1655907402019,
+  "history_end_time" : 1655907403110,
+  "history_notes" : null,
+  "history_process" : "q1j13t",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "qpzm66p57oa",
+  "history_input" : "import pytorch_lightning as pl\nfrom pathlib import Path\nfrom argparse import ArgumentParser\nimport os\n\nimport sys\n\nsys.path.append(\"..\")\nfrom src_models_model import Model\n\n\ndef get_checkpoint(data_folder: Path) -> str:\n\n    log_folder = data_folder / \"lightning_logs/\" \n    list_of_checkpoints = list(log_folder.glob('version*/checkpoints/*.ckpt'))\n    print(log_folder.absolute())\n    return str(max(list_of_checkpoints, key=os.path.getctime))\n\n\ndef test_model():\n    parser = ArgumentParser()\n\n    parser.add_argument(\"--version\", type=int, default=0)\n\n    args = parser.parse_args()\n\n    model_path = get_checkpoint(Path(\"../data\"))\n\n    print(f\"Using model {model_path}\")\n\t\n    model = Model.load_from_checkpoint(model_path)\n\n    trainer = pl.Trainer()\n    trainer.test(model)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...test.py\")\n    test_model()\n",
+  "history_output" : "Traceback (most recent call last):\n  File \"scripts_test.py\", line 1, in <module>\n    import pytorch_lightning as pl\nModuleNotFoundError: No module named 'pytorch_lightning'\n",
+  "history_begin_time" : 1655865867460,
+  "history_end_time" : 1655865867615,
+  "history_notes" : null,
+  "history_process" : "q1j13t",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "6v8n4fc9al6",
+  "history_input" : "import pytorch_lightning as pl\nfrom pathlib import Path\nfrom argparse import ArgumentParser\nimport os\n\nimport sys\n\nsys.path.append(\"..\")\nfrom src_models_model import Model\n\n\ndef get_checkpoint(data_folder: Path) -> str:\n\n    log_folder = data_folder / \"lightning_logs/\" \n    list_of_checkpoints = list(log_folder.glob('version*/checkpoints/*.ckpt'))\n    print(log_folder.absolute())\n    return str(max(list_of_checkpoints, key=os.path.getctime))\n\n\ndef test_model():\n    parser = ArgumentParser()\n\n    parser.add_argument(\"--version\", type=int, default=0)\n\n    args = parser.parse_args()\n\n    model_path = get_checkpoint(Path(\"../data\"))\n\n    print(f\"Using model {model_path}\")\n\t\n    model = Model.load_from_checkpoint(model_path)\n\n    trainer = pl.Trainer()\n    trainer.test(model)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...test.py\")\n    test_model()\n",
+  "history_output" : "Traceback (most recent call last):\n  File \"scripts_test.py\", line 9, in <module>\n    from src_models_model import Model\n  File \"/Users/uhhmed/gw-workspace/6v8n4fc9al6/src_models_model.py\", line 22, in <module>\n    from src_models_data import CropDataset\n  File \"/Users/uhhmed/gw-workspace/6v8n4fc9al6/src_models_data.py\", line 4, in <module>\n    import geopandas\n  File \"/opt/anaconda3/lib/python3.8/site-packages/geopandas/__init__.py\", line 1, in <module>\n    from geopandas._config import options  # noqa\n  File \"/opt/anaconda3/lib/python3.8/site-packages/geopandas/_config.py\", line 109, in <module>\n    default_value=_default_use_pygeos(),\n  File \"/opt/anaconda3/lib/python3.8/site-packages/geopandas/_config.py\", line 95, in _default_use_pygeos\n    import geopandas._compat as compat\n  File \"/opt/anaconda3/lib/python3.8/site-packages/geopandas/_compat.py\", line 9, in <module>\n    import pyproj\n  File \"/opt/anaconda3/lib/python3.8/site-packages/pyproj/__init__.py\", line 81, in <module>\n    from pyproj.crs import CRS  # noqa: F401\n  File \"/opt/anaconda3/lib/python3.8/site-packages/pyproj/crs/__init__.py\", line 16, in <module>\n    from pyproj.crs.crs import (  # noqa: F401  pylint: disable=unused-import\n  File \"/opt/anaconda3/lib/python3.8/site-packages/pyproj/crs/crs.py\", line 13, in <module>\n    from pyproj._crs import (\nImportError: cannot import name 'AuthorityMatchInfo' from 'pyproj._crs' (/opt/anaconda3/lib/python3.8/site-packages/pyproj/_crs.cpython-38-darwin.so)\n",
+  "history_begin_time" : 1655865106626,
+  "history_end_time" : 1655865110330,
+  "history_notes" : null,
+  "history_process" : "q1j13t",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "lvjvw0ftwca",
+  "history_input" : "import pytorch_lightning as pl\nfrom pathlib import Path\nfrom argparse import ArgumentParser\nimport os\n\nimport sys\n\nsys.path.append(\"..\")\nfrom src_models_model import Model\n\n\ndef get_checkpoint(data_folder: Path) -> str:\n\n    log_folder = data_folder / \"lightning_logs/\" \n    list_of_checkpoints = list(log_folder.glob('version*/checkpoints/*.ckpt'))\n    print(log_folder.absolute())\n    return str(max(list_of_checkpoints, key=os.path.getctime))\n\n\ndef test_model():\n    parser = ArgumentParser()\n\n    parser.add_argument(\"--version\", type=int, default=0)\n\n    args = parser.parse_args()\n\n    model_path = get_checkpoint(Path(\"../data\"))\n\n    print(f\"Using model {model_path}\")\n\t\n    model = Model.load_from_checkpoint(model_path)\n\n    trainer = pl.Trainer()\n    trainer.test(model)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...test.py\")\n    test_model()\n",
+  "history_output" : "  0%|          | 0/2 [00:00<?, ?it/s]\n100%|██████████| 2/2 [00:00<00:00, 1233.07it/s]Starting...test.py\n/Users/uhhmed/gw-workspace/Z6CfJoPMvhm2lCseSXQxrmgU21/../data/lightning_logs\nUsing model ../data/lightning_logs/version_0/checkpoints/epoch=165.ckpt\nPredicting 7 timesteps in the forecaster\nUsing 1 layers for the global classifier\nUsing 2 layers for the local classifier\nLoading data into memory\nTesting:   0%|          | 0/1 [00:00<?, ?it/s]----------------------------------------------------------------------------------------------------\nTEST RESULTS\n{'val_loss': 0.015019005164504051, 'test_encoder_mae': 0.07153846, 'unencoded_test_kenya_precision_score': 1.0, 'unencoded_test_kenya_recall_score': 1.0, 'unencoded_test_kenya_f1_score': 1.0, 'unencoded_test_kenya_accuracy': 1.0, 'encoded_test_kenya_precision_score': 1.0, 'encoded_test_kenya_recall_score': 1.0, 'encoded_test_kenya_f1_score': 1.0, 'encoded_test_kenya_accuracy': 1.0}\n----------------------------------------------------------------------------------------------------\nTesting: 50it [00:00, 1726.88it/s]            \n",
+  "history_begin_time" : 1647347438339,
+  "history_end_time" : 1647347446181,
+  "history_notes" : null,
+  "history_process" : "q1j13t",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "yn9yg0gpps7",
+  "history_input" : "import pytorch_lightning as pl\nfrom pathlib import Path\nfrom argparse import ArgumentParser\nimport os\n\nimport sys\n\nsys.path.append(\"..\")\nfrom src_models_model import Model\n\n\ndef get_checkpoint(data_folder: Path) -> str:\n\n    log_folder = data_folder / \"lightning_logs/\" \n    list_of_checkpoints = list(log_folder.glob('version*/checkpoints/*.ckpt'))\n    print(log_folder.absolute())\n    return str(max(list_of_checkpoints, key=os.path.getctime))\n\n\ndef test_model():\n    parser = ArgumentParser()\n\n    parser.add_argument(\"--version\", type=int, default=0)\n\n    args = parser.parse_args()\n\n    model_path = get_checkpoint(Path(\"../data\"))\n\n    print(f\"Using model {model_path}\")\n\t\n    model = Model.load_from_checkpoint(model_path)\n\n    trainer = pl.Trainer()\n    trainer.test(model)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...test.py\")\n    test_model()\n",
+  "history_output" : "  0%|          | 0/2 [00:00<?, ?it/s]\n100%|██████████| 2/2 [00:00<00:00, 1163.47it/s]Starting...test.py\n/Users/uhhmed/gw-workspace/Z6CfJoPMvhm2lCseSXQxrmgU21/../data/lightning_logs\nUsing model ../data/lightning_logs/version_0/checkpoints/epoch=165.ckpt\nPredicting 7 timesteps in the forecaster\nUsing 1 layers for the global classifier\nUsing 2 layers for the local classifier\nLoading data into memory\nTesting:   0%|          | 0/1 [00:00<?, ?it/s]----------------------------------------------------------------------------------------------------\nTEST RESULTS\n{'val_loss': 0.015019005164504051, 'test_encoder_mae': 0.07153846, 'unencoded_test_kenya_precision_score': 1.0, 'unencoded_test_kenya_recall_score': 1.0, 'unencoded_test_kenya_f1_score': 1.0, 'unencoded_test_kenya_accuracy': 1.0, 'encoded_test_kenya_precision_score': 1.0, 'encoded_test_kenya_recall_score': 1.0, 'encoded_test_kenya_f1_score': 1.0, 'encoded_test_kenya_accuracy': 1.0}\n----------------------------------------------------------------------------------------------------\nTesting: 50it [00:00, 2355.82it/s]            \n",
+  "history_begin_time" : 1647347401336,
+  "history_end_time" : 1647347411842,
+  "history_notes" : null,
+  "history_process" : "q1j13t",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "dq7wg8fy7en",
+  "history_input" : "import pytorch_lightning as pl\nfrom pathlib import Path\nfrom argparse import ArgumentParser\nimport os\n\nimport sys\n\nsys.path.append(\"..\")\nfrom src_models_model import Model\n\n\ndef get_checkpoint(data_folder: Path) -> str:\n\n    log_folder = data_folder / \"lightning_logs/\" \n    list_of_checkpoints = list(log_folder.glob('version*/checkpoints/*.ckpt'))\n    print(log_folder.absolute())\n    return str(max(list_of_checkpoints, key=os.path.getctime))\n\n\ndef test_model():\n    parser = ArgumentParser()\n\n    parser.add_argument(\"--version\", type=int, default=0)\n\n    args = parser.parse_args()\n\n    model_path = get_checkpoint(Path(\"../data\"))\n\n    print(f\"Using model {model_path}\")\n\t\n    model = Model.load_from_checkpoint(model_path)\n\n    trainer = pl.Trainer()\n    trainer.test(model)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...test.py\")\n    test_model()\n",
+  "history_output" : "Starting...test.py\n/Users/uhhmed/gw-workspace/Z6CfJoPMvhm2lCseSXQxrmgU21/../data/lightning_logs\nTraceback (most recent call last):\n  File \"scripts_test.py\", line 39, in <module>\n    test_model()\n  File \"scripts_test.py\", line 27, in test_model\n    model_path = get_checkpoint(Path(\"../data\"))\n  File \"scripts_test.py\", line 17, in get_checkpoint\n    return str(max(list_of_checkpoints, key=os.path.getctime))\nValueError: max() arg is an empty sequence\n",
+  "history_begin_time" : 1647347284442,
+  "history_end_time" : 1647347287889,
+  "history_notes" : null,
+  "history_process" : "q1j13t",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "5fj57p1gtjk",
+  "history_input" : "import pytorch_lightning as pl\nfrom pathlib import Path\nfrom argparse import ArgumentParser\nimport os\n\nimport sys\n\nsys.path.append(\"..\")\nfrom src_models_model import Model\n\n\ndef get_checkpoint(data_folder: Path) -> str:\n\n    log_folder = data_folder / \"lightning_logs/\" \n    list_of_checkpoints = list(log_folder.glob('version*/checkpoints/*.ckpt'))\n    print(log_folder.absolute())\n    return str(max(list_of_checkpoints, key=os.path.getctime))\n\n\ndef test_model():\n    parser = ArgumentParser()\n\n    parser.add_argument(\"--version\", type=int, default=0)\n\n    args = parser.parse_args()\n\n    model_path = get_checkpoint(Path(\"../data\"))\n\n    print(f\"Using model {model_path}\")\n\t\n    model = Model.load_from_checkpoint(model_path)\n\n    trainer = pl.Trainer()\n    trainer.test(model)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...test.py\")\n    test_model()\n",
+  "history_output" : "Starting...test.py\n/Users/uhhmed/gw-workspace/Z6CfJoPMvhm2lCseSXQxrmgU21/../data/lightning_logs\nTraceback (most recent call last):\n  File \"scripts_test.py\", line 39, in <module>\n    test_model()\n  File \"scripts_test.py\", line 27, in test_model\n    model_path = get_checkpoint(Path(\"../data\"))\n  File \"scripts_test.py\", line 17, in get_checkpoint\n    return str(max(list_of_checkpoints, key=os.path.getctime))\nValueError: max() arg is an empty sequence\n",
+  "history_begin_time" : 1647347145357,
+  "history_end_time" : 1647347148688,
+  "history_notes" : null,
+  "history_process" : "q1j13t",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "ao1u6ack02t",
+  "history_input" : "import pytorch_lightning as pl\nfrom pathlib import Path\nfrom argparse import ArgumentParser\nimport os\n\nimport sys\n\nsys.path.append(\"..\")\nfrom src_models_model import Model\n\n\ndef get_checkpoint(data_folder: Path) -> str:\n\n    log_folder = data_folder / \"lightning_logs/\" \n    list_of_checkpoints = list(log_folder.glob('version*/checkpoints/*.ckpt'))\n    print(log_folder.absolute())\n    return str(max(list_of_checkpoints, key=os.path.getctime))\n\n\ndef test_model():\n    parser = ArgumentParser()\n\n    parser.add_argument(\"--version\", type=int, default=0)\n\n    args = parser.parse_args()\n\n    model_path = get_checkpoint(Path(\"../data\"))\n\n    print(f\"Using model {model_path}\")\n\t\n    model = Model.load_from_checkpoint(model_path)\n\n    trainer = pl.Trainer()\n    trainer.test(model)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...test.py\")\n    test_model()\n",
+  "history_output" : "  0%|          | 0/2 [00:00<?, ?it/s]\n100%|██████████| 2/2 [00:00<00:00, 994.50it/s]Starting...test.py\n/Users/uhhmed/gw-workspace/Z6CfJoPMvhm2lCseSXQxrmgU21/../data/lightning_logs\nUsing model ../data/lightning_logs/version_15/checkpoints/epoch=165.ckpt\nPredicting 7 timesteps in the forecaster\nUsing 1 layers for the global classifier\nUsing 2 layers for the local classifier\nLoading data into memory\nTesting:   0%|          | 0/1 [00:00<?, ?it/s]----------------------------------------------------------------------------------------------------\nTEST RESULTS\n{'val_loss': 0.015019005164504051, 'test_encoder_mae': 0.07153846, 'unencoded_test_kenya_precision_score': 1.0, 'unencoded_test_kenya_recall_score': 1.0, 'unencoded_test_kenya_f1_score': 1.0, 'unencoded_test_kenya_accuracy': 1.0, 'encoded_test_kenya_precision_score': 1.0, 'encoded_test_kenya_recall_score': 1.0, 'encoded_test_kenya_f1_score': 1.0, 'encoded_test_kenya_accuracy': 1.0}\n----------------------------------------------------------------------------------------------------\nTesting: 50it [00:00, 814.74it/s]             \n",
+  "history_begin_time" : 1647346841236,
+  "history_end_time" : 1647346848383,
+  "history_notes" : null,
+  "history_process" : "q1j13t",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "x3pj64z0zcv",
+  "history_input" : "import pytorch_lightning as pl\nfrom pathlib import Path\nfrom argparse import ArgumentParser\nimport os\n\nimport sys\n\nsys.path.append(\"..\")\nfrom src_models_model import Model\n\n\ndef get_checkpoint(data_folder: Path) -> str:\n\n    log_folder = data_folder / \"lightning_logs/\" \n    list_of_checkpoints = list(log_folder.glob('version*/checkpoints/*.ckpt'))\n    print(log_folder.absolute())\n    return str(max(list_of_checkpoints, key=os.path.getctime))\n\n\ndef test_model():\n    parser = ArgumentParser()\n\n    parser.add_argument(\"--version\", type=int, default=0)\n\n    args = parser.parse_args()\n\n    model_path = get_checkpoint(Path(\"../data\"))\n\n    print(f\"Using model {model_path}\")\n\t\n    model = Model.load_from_checkpoint(model_path)\n\n    trainer = pl.Trainer()\n    trainer.test(model)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...test.py\")\n    test_model()\n",
+  "history_output" : "  0%|          | 0/2 [00:00<?, ?it/s]\n100%|██████████| 2/2 [00:00<00:00, 1220.34it/s]Starting...test.py\n/Users/uhhmed/gw-workspace/Z6CfJoPMvhm2lCseSXQxrmgU21/../data/lightning_logs\nUsing model ../data/lightning_logs/version_14/checkpoints/epoch=165.ckpt\nPredicting 7 timesteps in the forecaster\nUsing 1 layers for the global classifier\nUsing 2 layers for the local classifier\nLoading data into memory\nTesting:   0%|          | 0/1 [00:00<?, ?it/s]----------------------------------------------------------------------------------------------------\nTEST RESULTS\n{'val_loss': 0.015019005164504051, 'test_encoder_mae': 0.07153846, 'unencoded_test_kenya_precision_score': 1.0, 'unencoded_test_kenya_recall_score': 1.0, 'unencoded_test_kenya_f1_score': 1.0, 'unencoded_test_kenya_accuracy': 1.0, 'encoded_test_kenya_precision_score': 1.0, 'encoded_test_kenya_recall_score': 1.0, 'encoded_test_kenya_f1_score': 1.0, 'encoded_test_kenya_accuracy': 1.0}\n----------------------------------------------------------------------------------------------------\nTesting: 50it [00:00, 1991.03it/s]            \n",
+  "history_begin_time" : 1647346714456,
+  "history_end_time" : 1647346724567,
+  "history_notes" : null,
+  "history_process" : "q1j13t",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "grcohby622c",
+  "history_input" : "import pytorch_lightning as pl\nfrom pathlib import Path\nfrom argparse import ArgumentParser\nimport os\n\nimport sys\n\nsys.path.append(\"..\")\nfrom src_models_model import Model\n\n\ndef get_checkpoint(data_folder: Path) -> str:\n\n    log_folder = data_folder / \"lightning_logs/\" \n    list_of_checkpoints = list(log_folder.glob('version*/checkpoints/*.ckpt'))\n    print(log_folder.absolute())\n    return str(max(list_of_checkpoints, key=os.path.getctime))\n\n\ndef test_model():\n    parser = ArgumentParser()\n\n    parser.add_argument(\"--version\", type=int, default=0)\n\n    args = parser.parse_args()\n\n    model_path = get_checkpoint(Path(\"../data\"))\n\n    print(f\"Using model {model_path}\")\n\t\n    model = Model.load_from_checkpoint(model_path)\n\n    trainer = pl.Trainer()\n    trainer.test(model)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...test.py\")\n    test_model()\n",
+  "history_output" : "  0%|          | 0/2 [00:00<?, ?it/s]\n100%|██████████| 2/2 [00:00<00:00, 1000.43it/s]Starting...test.py\n/Users/uhhmed/gw-workspace/Z6CfJoPMvhm2lCseSXQxrmgU21/../data/lightning_logs\nUsing model ../data/lightning_logs/version_13/checkpoints/epoch=165.ckpt\nPredicting 7 timesteps in the forecaster\nUsing 1 layers for the global classifier\nUsing 2 layers for the local classifier\nLoading data into memory\nTesting:   0%|          | 0/1 [00:00<?, ?it/s]----------------------------------------------------------------------------------------------------\nTEST RESULTS\n{'val_loss': 0.015019005164504051, 'test_encoder_mae': 0.07153846, 'unencoded_test_kenya_precision_score': 1.0, 'unencoded_test_kenya_recall_score': 1.0, 'unencoded_test_kenya_f1_score': 1.0, 'unencoded_test_kenya_accuracy': 1.0, 'encoded_test_kenya_precision_score': 1.0, 'encoded_test_kenya_recall_score': 1.0, 'encoded_test_kenya_f1_score': 1.0, 'encoded_test_kenya_accuracy': 1.0}\n----------------------------------------------------------------------------------------------------\nTesting: 50it [00:00, 2197.79it/s]            \n",
+  "history_begin_time" : 1647345856956,
+  "history_end_time" : 1647345865631,
+  "history_notes" : null,
+  "history_process" : "q1j13t",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "3hnfaf2g90q",
+  "history_input" : "import pytorch_lightning as pl\nfrom pathlib import Path\nfrom argparse import ArgumentParser\nimport os\n\nimport sys\n\nsys.path.append(\"..\")\nfrom src_models_model import Model\n\n\ndef get_checkpoint(data_folder: Path) -> str:\n\n    log_folder = data_folder / \"lightning_logs/\" \n    list_of_checkpoints = list(log_folder.glob('version*/checkpoints/*.ckpt'))\n    print(log_folder.absolute())\n    return str(max(list_of_checkpoints, key=os.path.getctime))\n\n\ndef test_model():\n    parser = ArgumentParser()\n\n    parser.add_argument(\"--version\", type=int, default=0)\n\n    args = parser.parse_args()\n\n    model_path = get_checkpoint(Path(\"../data\"))\n\n    print(f\"Using model {model_path}\")\n\t\n    model = Model.load_from_checkpoint(model_path)\n\n    trainer = pl.Trainer()\n    trainer.test(model)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...test.py\")\n    test_model()\n",
+  "history_output" : "  0%|          | 0/2 [00:00<?, ?it/s]\n100%|██████████| 2/2 [00:00<00:00, 1156.57it/s]Starting...test.py\n/Users/uhhmed/gw-workspace/Z6CfJoPMvhm2lCseSXQxrmgU21/../data/lightning_logs\nUsing model ../data/lightning_logs/version_13/checkpoints/epoch=165.ckpt\nPredicting 7 timesteps in the forecaster\nUsing 1 layers for the global classifier\nUsing 2 layers for the local classifier\nLoading data into memory\nTesting:   0%|          | 0/1 [00:00<?, ?it/s]----------------------------------------------------------------------------------------------------\nTEST RESULTS\n{'val_loss': 0.015019005164504051, 'test_encoder_mae': 0.07153846, 'unencoded_test_kenya_precision_score': 1.0, 'unencoded_test_kenya_recall_score': 1.0, 'unencoded_test_kenya_f1_score': 1.0, 'unencoded_test_kenya_accuracy': 1.0, 'encoded_test_kenya_precision_score': 1.0, 'encoded_test_kenya_recall_score': 1.0, 'encoded_test_kenya_f1_score': 1.0, 'encoded_test_kenya_accuracy': 1.0}\n----------------------------------------------------------------------------------------------------\nTesting: 50it [00:00, 2035.65it/s]            \n",
+  "history_begin_time" : 1647345696931,
+  "history_end_time" : 1647345705324,
+  "history_notes" : null,
+  "history_process" : "q1j13t",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "VqTqQngaVv9A",
+  "history_input" : "import pytorch_lightning as pl\nfrom pathlib import Path\nfrom argparse import ArgumentParser\nimport os\n\nimport sys\n\nsys.path.append(\"..\")\nfrom src_models_model import Model\n\n\ndef get_checkpoint(data_folder: Path) -> str:\n\n    log_folder = data_folder / \"lightning_logs/\" \n    list_of_checkpoints = list(log_folder.glob('version*/checkpoints/*.ckpt'))\n    print(log_folder.absolute())\n    return str(max(list_of_checkpoints, key=os.path.getctime))\n\n\ndef test_model():\n    parser = ArgumentParser()\n\n    parser.add_argument(\"--version\", type=int, default=0)\n\n    args = parser.parse_args()\n\n    model_path = get_checkpoint(Path(\"../data\"))\n\n    print(f\"Using model {model_path}\")\n\t\n    model = Model.load_from_checkpoint(model_path)\n\n    trainer = pl.Trainer()\n    trainer.test(model)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...test.py\")\n    test_model()\n",
+  "history_output" : "  0%|          | 0/2 [00:00<?, ?it/s]\n100%|██████████| 2/2 [00:00<00:00, 887.21it/s]Starting...test.py\n/Users/uhhmed/gw-workspace/Z6CfJoPMvhm2lCseSXQxrmgU21/../data/lightning_logs\nUsing model ../data/lightning_logs/version_13/checkpoints/epoch=165.ckpt\nPredicting 7 timesteps in the forecaster\nUsing 1 layers for the global classifier\nUsing 2 layers for the local classifier\nLoading data into memory\nTesting:   0%|          | 0/1 [00:00<?, ?it/s]----------------------------------------------------------------------------------------------------\nTEST RESULTS\n{'val_loss': 0.015019005164504051, 'test_encoder_mae': 0.07153846, 'unencoded_test_kenya_precision_score': 1.0, 'unencoded_test_kenya_recall_score': 1.0, 'unencoded_test_kenya_f1_score': 1.0, 'unencoded_test_kenya_accuracy': 1.0, 'encoded_test_kenya_precision_score': 1.0, 'encoded_test_kenya_recall_score': 1.0, 'encoded_test_kenya_f1_score': 1.0, 'encoded_test_kenya_accuracy': 1.0}\n----------------------------------------------------------------------------------------------------\nTesting: 50it [00:00, 1113.09it/s]            \n",
+  "history_begin_time" : 1647345257953,
+  "history_end_time" : 1647345273508,
+  "history_notes" : null,
+  "history_process" : "q1j13t",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "c0zVSg3aPPbq",
+  "history_input" : "import pytorch_lightning as pl\nfrom pathlib import Path\nfrom argparse import ArgumentParser\nimport os\n\nimport sys\n\nsys.path.append(\"..\")\nfrom src_models_model import Model\n\n\ndef get_checkpoint(data_folder: Path) -> str:\n\n    log_folder = data_folder / \"lightning_logs/\" \n    list_of_checkpoints = list(test.glob('version*/checkpoints/*.ckpt'))\n    print(log_folder.absolute())\n    return str(max(list_of_checkpoints, key=os.path.getctime))\n\n\ndef test_model():\n    parser = ArgumentParser()\n\n    parser.add_argument(\"--version\", type=int, default=0)\n\n    args = parser.parse_args()\n\n    model_path = get_checkpoint(Path(\"../data\"))\n\n    print(f\"Using model {model_path}\")\n\t\n    model = Model.load_from_checkpoint(model_path)\n\n    trainer = pl.Trainer()\n    trainer.test(model)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...test.py\")\n    test_model()\n",
+  "history_output" : "Starting...test.py\nTraceback (most recent call last):\n  File \"scripts_test.py\", line 39, in <module>\n    test_model()\n  File \"scripts_test.py\", line 27, in test_model\n    model_path = get_checkpoint(Path(\"../data\"))\n  File \"scripts_test.py\", line 15, in get_checkpoint\n    list_of_checkpoints = list(test.glob('version*/checkpoints/*.ckpt'))\nNameError: name 'test' is not defined\n",
+  "history_begin_time" : 1647345227020,
+  "history_end_time" : 1647345237141,
+  "history_notes" : null,
+  "history_process" : "q1j13t",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "b0vzqqdix2l",
+  "history_input" : "import pytorch_lightning as pl\nfrom pathlib import Path\nfrom argparse import ArgumentParser\nimport os\n\nimport sys\n\nsys.path.append(\"..\")\nfrom src_models_model import Model\n\n\ndef get_checkpoint(data_folder: Path, version: int) -> str:\n\n    log_folder = data_folder / \"lightning_logs\" / f\"version_{version}\" / \"checkpoints\"\n    checkpoint = list(log_folder.glob(\"*.ckpt\"))\n    print(log_folder.absolute())\n    return str(checkpoint[0])\n\n\ndef test_model():\n    parser = ArgumentParser()\n\n    parser.add_argument(\"--version\", type=int, default=0)\n\n    args = parser.parse_args()\n\n    model_path = get_checkpoint(Path(\"../data\"), 8)\n\n    print(f\"Using model {model_path}\")\n\t\n    model = Model.load_from_checkpoint(model_path)\n\n    trainer = pl.Trainer()\n    trainer.test(model)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...test.py\")\n    test_model()\n",
+  "history_output" : "  0%|          | 0/2 [00:00<?, ?it/s]\n100%|██████████| 2/2 [00:00<00:00, 1232.35it/s]Starting...test.py\n/Users/uhhmed/gw-workspace/Z6CfJoPMvhm2lCseSXQxrmgU21/../data/lightning_logs/version_8/checkpoints\nUsing model ../data/lightning_logs/version_8/checkpoints/epoch=165.ckpt\nPredicting 7 timesteps in the forecaster\nUsing 1 layers for the global classifier\nUsing 2 layers for the local classifier\nLoading data into memory\nTesting:   0%|          | 0/1 [00:00<?, ?it/s]----------------------------------------------------------------------------------------------------\nTEST RESULTS\n{'val_loss': 0.015019005164504051, 'test_encoder_mae': 0.07153846, 'unencoded_test_kenya_precision_score': 1.0, 'unencoded_test_kenya_recall_score': 1.0, 'unencoded_test_kenya_f1_score': 1.0, 'unencoded_test_kenya_accuracy': 1.0, 'encoded_test_kenya_precision_score': 1.0, 'encoded_test_kenya_recall_score': 1.0, 'encoded_test_kenya_f1_score': 1.0, 'encoded_test_kenya_accuracy': 1.0}\n----------------------------------------------------------------------------------------------------\nTesting: 50it [00:00, 2177.23it/s]            \n",
+  "history_begin_time" : 1647340174660,
+  "history_end_time" : 1647340182904,
+  "history_notes" : null,
+  "history_process" : "q1j13t",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "ylRb3xVqHTQg",
+  "history_input" : "import pytorch_lightning as pl\nfrom pathlib import Path\nfrom argparse import ArgumentParser\nimport os\n\nimport sys\n\nsys.path.append(\"..\")\nfrom src_models_model import Model\n\n\ndef get_checkpoint(data_folder: Path, version: int) -> str:\n\n    log_folder = data_folder / \"lightning_logs\" / f\"version_{version}\" / \"checkpoints\"\n    checkpoint = list(log_folder.glob(\"*.ckpt\"))\n    print(log_folder.absolute())\n    return str(checkpoint[0])\n\n\ndef test_model():\n    parser = ArgumentParser()\n\n    parser.add_argument(\"--version\", type=int, default=0)\n\n    args = parser.parse_args()\n\n    model_path = get_checkpoint(Path(\"../data\"), 8)\n\n    print(f\"Using model {model_path}\")\n\t\n    model = Model.load_from_checkpoint(model_path)\n\n    trainer = pl.Trainer()\n    trainer.test(model)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...test.py\")\n    test_model()\n",
+  "history_output" : "  0%|          | 0/2 [00:00<?, ?it/s]\n100%|██████████| 2/2 [00:00<00:00, 639.03it/s]Starting...test.py\n/Users/uhhmed/gw-workspace/yOxPUDcCRarlnoCog00omDG05F/../data/lightning_logs/version_8/checkpoints\nUsing model ../data/lightning_logs/version_8/checkpoints/epoch=165.ckpt\nPredicting 7 timesteps in the forecaster\nUsing 1 layers for the global classifier\nUsing 2 layers for the local classifier\nLoading data into memory\nTesting:   0%|          | 0/1 [00:00<?, ?it/s]----------------------------------------------------------------------------------------------------\nTEST RESULTS\n{'val_loss': 0.015019005164504051, 'test_encoder_mae': 0.07153846, 'unencoded_test_kenya_precision_score': 1.0, 'unencoded_test_kenya_recall_score': 1.0, 'unencoded_test_kenya_f1_score': 1.0, 'unencoded_test_kenya_accuracy': 1.0, 'encoded_test_kenya_precision_score': 1.0, 'encoded_test_kenya_recall_score': 1.0, 'encoded_test_kenya_f1_score': 1.0, 'encoded_test_kenya_accuracy': 1.0}\n----------------------------------------------------------------------------------------------------\nTesting: 50it [00:00, 1769.15it/s]            \n",
+  "history_begin_time" : 1646148803903,
+  "history_end_time" : 1646148816239,
+  "history_notes" : null,
+  "history_process" : "q1j13t",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "MrGQ7sf0MihS",
+  "history_input" : "import pytorch_lightning as pl\nfrom pathlib import Path\nfrom argparse import ArgumentParser\nimport os\n\nimport sys\n\nsys.path.append(\"..\")\nfrom src_models_model import Model\n\n\ndef get_checkpoint(data_folder: Path, version: int) -> str:\n\n    log_folder = data_folder / \"lightning_logs\" / f\"version_{version}\" / \"checkpoints\"\n    checkpoint = list(log_folder.glob(\"*.ckpt\"))\n    print(log_folder.absolute())\n    return str(checkpoint[0])\n\n\ndef test_model():\n    parser = ArgumentParser()\n\n    parser.add_argument(\"--version\", type=int, default=0)\n\n    args = parser.parse_args()\n\n    model_path = get_checkpoint(Path(\"../data\"), 8)\n    model_path = os.path.abspath(model_path)\n    print(f\"Using model {model_path}\")\n\t\n    model = Model.load_from_checkpoint(model_path)\n\n    trainer = pl.Trainer()\n    trainer.test(model)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...test.py\")\n    test_model()\n",
+  "history_output" : "  0%|          | 0/2 [00:00<?, ?it/s]\n100%|██████████| 2/2 [00:00<00:00, 780.26it/s]Starting...test.py\n/Users/uhhmed/gw-workspace/yOxPUDcCRarlnoCog00omDG05F/../data/lightning_logs/version_8/checkpoints\nUsing model /Users/uhhmed/gw-workspace/data/lightning_logs/version_8/checkpoints/epoch=165.ckpt\nPredicting 7 timesteps in the forecaster\nUsing 1 layers for the global classifier\nUsing 2 layers for the local classifier\nLoading data into memory\nTesting:   0%|          | 0/1 [00:00<?, ?it/s]----------------------------------------------------------------------------------------------------\nTEST RESULTS\n{'val_loss': 0.015019005164504051, 'test_encoder_mae': 0.07153846, 'unencoded_test_kenya_precision_score': 1.0, 'unencoded_test_kenya_recall_score': 1.0, 'unencoded_test_kenya_f1_score': 1.0, 'unencoded_test_kenya_accuracy': 1.0, 'encoded_test_kenya_precision_score': 1.0, 'encoded_test_kenya_recall_score': 1.0, 'encoded_test_kenya_f1_score': 1.0, 'encoded_test_kenya_accuracy': 1.0}\n----------------------------------------------------------------------------------------------------\nTesting: 50it [00:00, 499.61it/s]             \n",
+  "history_begin_time" : 1646148719832,
+  "history_end_time" : 1646148732843,
+  "history_notes" : null,
+  "history_process" : "q1j13t",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "C63OtNdFQc0o",
+  "history_input" : "import pytorch_lightning as pl\nfrom pathlib import Path\nfrom argparse import ArgumentParser\nimport os\n\nimport sys\n\nsys.path.append(\"..\")\nfrom src_models_model import Model\n\n\ndef get_checkpoint(data_folder: Path, version: int) -> str:\n\n    log_folder = data_folder / \"lightning_logs\" / f\"version_{version}\" / \"checkpoints\"\n    checkpoint = list(log_folder.glob(\"*.ckpt\"))\n    print(log_folder.absolute())\n    return str(checkpoint)\n\n\ndef test_model():\n    parser = ArgumentParser()\n\n    parser.add_argument(\"--version\", type=int, default=0)\n\n    args = parser.parse_args()\n\n    model_path = get_checkpoint(Path(\"../data\"), 8)\n    model_path = os.path.abspath(model_path)\n    print(f\"Using model {model_path}\")\n\t\n    model = Model.load_from_checkpoint(model_path)\n\n    trainer = pl.Trainer()\n    trainer.test(model)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...test.py\")\n    test_model()\n",
+  "history_output" : "Starting...test.py\n/Users/uhhmed/gw-workspace/yOxPUDcCRarlnoCog00omDG05F/../data/lightning_logs/version_8/checkpoints\nUsing model /Users/uhhmed/gw-workspace/yOxPUDcCRarlnoCog00omDG05F/[PosixPath('../data/lightning_logs/version_8/checkpoints/epoch=165.ckpt')]\nTraceback (most recent call last):\n  File \"scripts_test.py\", line 39, in <module>\n    test_model()\n  File \"scripts_test.py\", line 31, in test_model\n    model = Model.load_from_checkpoint(model_path)\n  File \"/opt/anaconda3/lib/python3.8/site-packages/pytorch_lightning/core/lightning.py\", line 1352, in load_from_checkpoint\n    checkpoint = torch.load(checkpoint_path, map_location=lambda storage, loc: storage)\n  File \"/opt/anaconda3/lib/python3.8/site-packages/torch/serialization.py\", line 571, in load\n    with _open_file_like(f, 'rb') as opened_file:\n  File \"/opt/anaconda3/lib/python3.8/site-packages/torch/serialization.py\", line 229, in _open_file_like\n    return _open_file(name_or_buffer, mode)\n  File \"/opt/anaconda3/lib/python3.8/site-packages/torch/serialization.py\", line 210, in __init__\n    super(_open_file, self).__init__(open(name, mode))\nFileNotFoundError: [Errno 2] No such file or directory: \"/Users/uhhmed/gw-workspace/yOxPUDcCRarlnoCog00omDG05F/[PosixPath('../data/lightning_logs/version_8/checkpoints/epoch=165.ckpt')]\"\n",
+  "history_begin_time" : 1646148580240,
+  "history_end_time" : 1646148585853,
+  "history_notes" : null,
+  "history_process" : "q1j13t",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "bUpI1RbsTg55",
+  "history_input" : "import pytorch_lightning as pl\nfrom pathlib import Path\nfrom argparse import ArgumentParser\n\nimport sys\n\nsys.path.append(\"..\")\nfrom src_models_model import Model\n\n\ndef get_checkpoint(data_folder: Path, version: int) -> str:\n\n    log_folder = data_folder / \"lightning_logs\" / f\"version_{version}\" / \"checkpoints\"\n    checkpoint = list(log_folder.glob(\"*.ckpt\"))\n    print(log_folder.absolute())\n    return str(checkpoint)\n\n\ndef test_model():\n    parser = ArgumentParser()\n\n    parser.add_argument(\"--version\", type=int, default=0)\n\n    args = parser.parse_args()\n\n    model_path = get_checkpoint(Path(\"../data\"), 8)\n    model_path = \"/Users/uhhmed/gw-workspace/data/lightning_logs/version_8/checkpoints/epoch=165.ckpt\"\n    print(f\"Using model {model_path}\")\n\t\n    model = Model.load_from_checkpoint(model_path)\n\n    trainer = pl.Trainer()\n    trainer.test(model)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...test.py\")\n    test_model()\n",
+  "history_output" : "  0%|          | 0/2 [00:00<?, ?it/s]\n100%|██████████| 2/2 [00:00<00:00, 1078.09it/s]Starting...test.py\n/Users/uhhmed/gw-workspace/yOxPUDcCRarlnoCog00omDG05F/../data/lightning_logs/version_8/checkpoints\nUsing model /Users/uhhmed/gw-workspace/data/lightning_logs/version_8/checkpoints/epoch=165.ckpt\nPredicting 7 timesteps in the forecaster\nUsing 1 layers for the global classifier\nUsing 2 layers for the local classifier\nLoading data into memory\nTesting:   0%|          | 0/1 [00:00<?, ?it/s]----------------------------------------------------------------------------------------------------\nTEST RESULTS\n{'val_loss': 0.015019005164504051, 'test_encoder_mae': 0.07153846, 'unencoded_test_kenya_precision_score': 1.0, 'unencoded_test_kenya_recall_score': 1.0, 'unencoded_test_kenya_f1_score': 1.0, 'unencoded_test_kenya_accuracy': 1.0, 'encoded_test_kenya_precision_score': 1.0, 'encoded_test_kenya_recall_score': 1.0, 'encoded_test_kenya_f1_score': 1.0, 'encoded_test_kenya_accuracy': 1.0}\n----------------------------------------------------------------------------------------------------\nTesting: 50it [00:00, 469.53it/s]             \n",
+  "history_begin_time" : 1646148365484,
+  "history_end_time" : 1646148377662,
+  "history_notes" : null,
+  "history_process" : "q1j13t",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "VhyejATlHFEN",
+  "history_input" : "import pytorch_lightning as pl\nfrom pathlib import Path\nfrom argparse import ArgumentParser\n\nimport sys\n\nsys.path.append(\"..\")\nfrom src_models_model import Model\n\n\ndef get_checkpoint(data_folder: Path, version: int) -> str:\n\n    log_folder = data_folder / \"lightning_logs\" / f\"version_{version}\" / \"checkpoints\"\n    checkpoint = list(log_folder.glob(\"*.ckpt\"))\n    print(log_folder.absolute())\n    return str(checkpoint)\n\n\ndef test_model():\n    parser = ArgumentParser()\n\n    parser.add_argument(\"--version\", type=int, default=0)\n\n    args = parser.parse_args()\n\n    model_path = get_checkpoint(Path(\"../data\"), 8)\n\tmodel_path = \"/Users/uhhmed/gw-workspace/data/lightning_logs/version_8/checkpoints/epoch=165.ckpt\"\n    print(f\"Using model {model_path}\")\n\t\n    model = Model.load_from_checkpoint(model_path)\n\n    trainer = pl.Trainer()\n    trainer.test(model)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...test.py\")\n    test_model()\n",
+  "history_output" : "  File \"scripts_test.py\", line 27\n    model_path = \"/Users/uhhmed/gw-workspace/data/lightning_logs/version_8/checkpoints/epoch=165.ckpt\"\n                                                                                                     ^\nTabError: inconsistent use of tabs and spaces in indentation\n",
+  "history_begin_time" : 1646148351083,
+  "history_end_time" : 1646148351193,
+  "history_notes" : null,
+  "history_process" : "q1j13t",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "29Ajy7sRERjj",
+  "history_input" : "import pytorch_lightning as pl\nfrom pathlib import Path\nfrom argparse import ArgumentParser\n\nimport sys\n\nsys.path.append(\"..\")\nfrom src_models_model import Model\n\n\ndef get_checkpoint(data_folder: Path, version: int) -> str:\n\n    log_folder = data_folder / \"lightning_logs\" / f\"version_{version}\" / \"checkpoints\"\n    checkpoint = list(log_folder.glob(\"*.ckpt\"))\n    print(log_folder.absolute())\n    return str(checkpoint)\n\n\ndef test_model():\n    parser = ArgumentParser()\n\n    parser.add_argument(\"--version\", type=int, default=0)\n\n    args = parser.parse_args()\n\n    model_path = get_checkpoint(Path(\"../data\"), 8)\n\n    print(f\"Using model {model_path}\")\n\t\n    model = Model.load_from_checkpoint(model_path)\n\n    trainer = pl.Trainer()\n    trainer.test(model)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...test.py\")\n    test_model()\n",
+  "history_output" : "Starting...test.py\n/Users/uhhmed/gw-workspace/yOxPUDcCRarlnoCog00omDG05F/../data/lightning_logs/version_8/checkpoints\nUsing model [PosixPath('../data/lightning_logs/version_8/checkpoints/epoch=165.ckpt')]\nTraceback (most recent call last):\n  File \"scripts_test.py\", line 38, in <module>\n    test_model()\n  File \"scripts_test.py\", line 30, in test_model\n    model = Model.load_from_checkpoint(model_path)\n  File \"/opt/anaconda3/lib/python3.8/site-packages/pytorch_lightning/core/lightning.py\", line 1352, in load_from_checkpoint\n    checkpoint = torch.load(checkpoint_path, map_location=lambda storage, loc: storage)\n  File \"/opt/anaconda3/lib/python3.8/site-packages/torch/serialization.py\", line 571, in load\n    with _open_file_like(f, 'rb') as opened_file:\n  File \"/opt/anaconda3/lib/python3.8/site-packages/torch/serialization.py\", line 229, in _open_file_like\n    return _open_file(name_or_buffer, mode)\n  File \"/opt/anaconda3/lib/python3.8/site-packages/torch/serialization.py\", line 210, in __init__\n    super(_open_file, self).__init__(open(name, mode))\nFileNotFoundError: [Errno 2] No such file or directory: \"[PosixPath('../data/lightning_logs/version_8/checkpoints/epoch=165.ckpt')]\"\n",
+  "history_begin_time" : 1646148194518,
+  "history_end_time" : 1646148200650,
+  "history_notes" : null,
+  "history_process" : "q1j13t",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "9MwmLQfmeafY",
+  "history_input" : "import pytorch_lightning as pl\nfrom pathlib import Path\nfrom argparse import ArgumentParser\n\nimport sys\n\nsys.path.append(\"..\")\nfrom src_models_model import Model\n\n\ndef get_checkpoint(data_folder: Path, version: int) -> str:\n\n    log_folder = data_folder / \"lightning_logs\" / f\"version_{version}\" / \"checkpoints\"\n    checkpoint = list(log_folder.glob(\"*.ckpt\"))\n    print(\"CHECKPOINT FILE: \",log_folder.abspath())\n    return str(checkpoint)\n\n\ndef test_model():\n    parser = ArgumentParser()\n\n    parser.add_argument(\"--version\", type=int, default=0)\n\n    args = parser.parse_args()\n\n    model_path = get_checkpoint(Path(\"../data\"), 8)\n\n    print(f\"Using model {model_path}\")\n\t\n    model = Model.load_from_checkpoint(model_path)\n\n    trainer = pl.Trainer()\n    trainer.test(model)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...test.py\")\n    test_model()\n",
+  "history_output" : "Starting...test.py\nTraceback (most recent call last):\n  File \"scripts_test.py\", line 38, in <module>\n    test_model()\n  File \"scripts_test.py\", line 26, in test_model\n    model_path = get_checkpoint(Path(\"../data\"), 8)\n  File \"scripts_test.py\", line 15, in get_checkpoint\n    print(\"CHECKPOINT FILE: \",log_folder.abspath())\nAttributeError: 'PosixPath' object has no attribute 'abspath'\n",
+  "history_begin_time" : 1646148119342,
+  "history_end_time" : 1646148123933,
+  "history_notes" : null,
+  "history_process" : "q1j13t",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "WD5otezb0nZk",
+  "history_input" : "import pytorch_lightning as pl\nfrom pathlib import Path\nfrom argparse import ArgumentParser\n\nimport sys\n\nsys.path.append(\"..\")\nfrom src_models_model import Model\n\n\ndef get_checkpoint(data_folder: Path, version: int) -> str:\n\n    log_folder = data_folder / \"lightning_logs\" / f\"version_{version}\" / \"checkpoints\"\n    checkpoint = list(log_folder.glob(\"*.ckpt\"))\n    print(\"CHECKPOINT FILE: \"+checkpoint.abspath())\n    return str(checkpoint)\n\n\ndef test_model():\n    parser = ArgumentParser()\n\n    parser.add_argument(\"--version\", type=int, default=0)\n\n    args = parser.parse_args()\n\n    model_path = get_checkpoint(Path(\"../data\"), 8)\n\n    print(f\"Using model {model_path}\")\n\t\n    model = Model.load_from_checkpoint(model_path)\n\n    trainer = pl.Trainer()\n    trainer.test(model)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...test.py\")\n    test_model()\n",
+  "history_output" : "Starting...test.py\nTraceback (most recent call last):\n  File \"scripts_test.py\", line 38, in <module>\n    test_model()\n  File \"scripts_test.py\", line 26, in test_model\n    model_path = get_checkpoint(Path(\"../data\"), 8)\n  File \"scripts_test.py\", line 15, in get_checkpoint\n    print(\"CHECKPOINT FILE: \"+checkpoint.abspath())\nAttributeError: 'list' object has no attribute 'abspath'\n",
+  "history_begin_time" : 1646148073707,
+  "history_end_time" : 1646148079675,
+  "history_notes" : null,
+  "history_process" : "q1j13t",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "8g7SIliCduQ5",
+  "history_input" : "import pytorch_lightning as pl\nfrom pathlib import Path\nfrom argparse import ArgumentParser\n\nimport sys\n\nsys.path.append(\"..\")\nfrom src_models_model import Model\n\n\ndef get_checkpoint(data_folder: Path, version: int) -> str:\n\n    log_folder = data_folder / \"lightning_logs\" / f\"version_{version}\" / \"checkpoints\"\n    checkpoint = list(log_folder.glob(\"*.ckpt\"))\n    return str(checkpoint)\n\n\ndef test_model():\n    parser = ArgumentParser()\n\n    parser.add_argument(\"--version\", type=int, default=0)\n\n    args = parser.parse_args()\n\n    model_path = get_checkpoint(Path(\"../data\"), 8)\n\n    print(f\"Using model {model_path.abspath()}\")\n\t\n    model = Model.load_from_checkpoint(model_path)\n\n    trainer = pl.Trainer()\n    trainer.test(model)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...test.py\")\n    test_model()\n",
+  "history_output" : "Starting...test.py\nTraceback (most recent call last):\n  File \"scripts_test.py\", line 37, in <module>\n    test_model()\n  File \"scripts_test.py\", line 27, in test_model\n    print(f\"Using model {model_path.abspath()}\")\nAttributeError: 'str' object has no attribute 'abspath'\n",
+  "history_begin_time" : 1646148006490,
+  "history_end_time" : 1646148012378,
+  "history_notes" : null,
+  "history_process" : "q1j13t",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "RFz4WhuKo66W",
+  "history_input" : "import pytorch_lightning as pl\nfrom pathlib import Path\nfrom argparse import ArgumentParser\n\nimport sys\n\nsys.path.append(\"..\")\nfrom src_models_model import Model\n\n\ndef get_checkpoint(data_folder: Path, version: int) -> str:\n\n    log_folder = data_folder / \"lightning_logs\" / f\"version_{version}\" / \"checkpoints\"\n    checkpoint = list(log_folder.glob(\"*.ckpt\"))\n    return str(checkpoint)\n\n\ndef test_model():\n    parser = ArgumentParser()\n\n    parser.add_argument(\"--version\", type=int, default=0)\n\n    args = parser.parse_args()\n\n    model_path = get_checkpoint(Path(\"../data\"), 8)\n\n    print(f\"Using model {model_path}\")\n\n    model = Model.load_from_checkpoint(model_path)\n\n    trainer = pl.Trainer()\n    trainer.test(model)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...test.py\")\n    test_model()\n",
+  "history_output" : "Starting...test.py\nUsing model [PosixPath('../data/lightning_logs/version_8/checkpoints/epoch=165.ckpt')]\nTraceback (most recent call last):\n  File \"scripts_test.py\", line 37, in <module>\n    test_model()\n  File \"scripts_test.py\", line 29, in test_model\n    model = Model.load_from_checkpoint(model_path)\n  File \"/opt/anaconda3/lib/python3.8/site-packages/pytorch_lightning/core/lightning.py\", line 1352, in load_from_checkpoint\n    checkpoint = torch.load(checkpoint_path, map_location=lambda storage, loc: storage)\n  File \"/opt/anaconda3/lib/python3.8/site-packages/torch/serialization.py\", line 571, in load\n    with _open_file_like(f, 'rb') as opened_file:\n  File \"/opt/anaconda3/lib/python3.8/site-packages/torch/serialization.py\", line 229, in _open_file_like\n    return _open_file(name_or_buffer, mode)\n  File \"/opt/anaconda3/lib/python3.8/site-packages/torch/serialization.py\", line 210, in __init__\n    super(_open_file, self).__init__(open(name, mode))\nFileNotFoundError: [Errno 2] No such file or directory: \"[PosixPath('../data/lightning_logs/version_8/checkpoints/epoch=165.ckpt')]\"\n",
+  "history_begin_time" : 1646147816769,
+  "history_end_time" : 1646147823047,
+  "history_notes" : null,
+  "history_process" : "q1j13t",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "kn4qolm7wsd",
+  "history_input" : "import pytorch_lightning as pl\nfrom pathlib import Path\nfrom argparse import ArgumentParser\n\nimport sys\n\nsys.path.append(\"..\")\nfrom src_models_model import Model\n\n\ndef get_checkpoint(data_folder: Path, version: int) -> str:\n\n    log_folder = data_folder / \"lightning_logs\" / f\"version_{version}\" / \"checkpoints\"\n    checkpoint = list(log_folder.glob(\"*.ckpt\"))\n    return str(checkpoint)\n\n\ndef test_model():\n    parser = ArgumentParser()\n\n    parser.add_argument(\"--version\", type=int, default=0)\n\n    args = parser.parse_args()\n\n    model_path = get_checkpoint(Path(\"../data\"), 8)\n\n    print(f\"Using model {model_path}\")\n\n    model = Model.load_from_checkpoint(model_path)\n\n    trainer = pl.Trainer()\n    trainer.test(model)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...test.py\")\n    test_model()\n",
+  "history_output" : "Starting...test.py\nUsing model [PosixPath('../data/lightning_logs/version_8/checkpoints/epoch=165.ckpt')]\nTraceback (most recent call last):\n  File \"scripts_test.py\", line 37, in <module>\n    test_model()\n  File \"scripts_test.py\", line 29, in test_model\n    model = Model.load_from_checkpoint(model_path)\n  File \"/opt/anaconda3/lib/python3.8/site-packages/pytorch_lightning/core/lightning.py\", line 1352, in load_from_checkpoint\n    checkpoint = torch.load(checkpoint_path, map_location=lambda storage, loc: storage)\n  File \"/opt/anaconda3/lib/python3.8/site-packages/torch/serialization.py\", line 571, in load\n    with _open_file_like(f, 'rb') as opened_file:\n  File \"/opt/anaconda3/lib/python3.8/site-packages/torch/serialization.py\", line 229, in _open_file_like\n    return _open_file(name_or_buffer, mode)\n  File \"/opt/anaconda3/lib/python3.8/site-packages/torch/serialization.py\", line 210, in __init__\n    super(_open_file, self).__init__(open(name, mode))\nFileNotFoundError: [Errno 2] No such file or directory: \"[PosixPath('../data/lightning_logs/version_8/checkpoints/epoch=165.ckpt')]\"\n",
+  "history_begin_time" : 1646147757028,
+  "history_end_time" : 1646147762363,
+  "history_notes" : null,
+  "history_process" : "q1j13t",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "ppsnl1peepm",
+  "history_input" : "import pytorch_lightning as pl\nfrom pathlib import Path\nfrom argparse import ArgumentParser\n\nimport sys\n\nsys.path.append(\"..\")\nfrom src_models_model import Model\n\n\ndef get_checkpoint(data_folder: Path, version: int) -> str:\n\n    log_folder = data_folder / \"lightning_logs\" / f\"version_{version}\" / \"checkpoints\"\n    checkpoint = list(log_folder.glob(\"*.ckpt\"))\n    return str(checkpoint)\n\n\ndef test_model():\n    parser = ArgumentParser()\n\n    parser.add_argument(\"--version\", type=int, default=0)\n\n    args = parser.parse_args()\n\n    model_path = get_checkpoint(Path(\"../data\"), 8)\n\n    print(f\"Using model {model_path}\")\n\n    model = Model.load_from_checkpoint(model_path)\n\n    trainer = pl.Trainer()\n    trainer.test(model)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...test.py\")\n    test_model()\n",
+  "history_output" : "Starting...test.py\nUsing model [PosixPath('../data/lightning_logs/version_8/checkpoints/epoch=165.ckpt')]\nTraceback (most recent call last):\n  File \"scripts_test.py\", line 37, in <module>\n    test_model()\n  File \"scripts_test.py\", line 29, in test_model\n    model = Model.load_from_checkpoint(model_path)\n  File \"/opt/anaconda3/lib/python3.8/site-packages/pytorch_lightning/core/lightning.py\", line 1352, in load_from_checkpoint\n    checkpoint = torch.load(checkpoint_path, map_location=lambda storage, loc: storage)\n  File \"/opt/anaconda3/lib/python3.8/site-packages/torch/serialization.py\", line 571, in load\n    with _open_file_like(f, 'rb') as opened_file:\n  File \"/opt/anaconda3/lib/python3.8/site-packages/torch/serialization.py\", line 229, in _open_file_like\n    return _open_file(name_or_buffer, mode)\n  File \"/opt/anaconda3/lib/python3.8/site-packages/torch/serialization.py\", line 210, in __init__\n    super(_open_file, self).__init__(open(name, mode))\nFileNotFoundError: [Errno 2] No such file or directory: \"[PosixPath('../data/lightning_logs/version_8/checkpoints/epoch=165.ckpt')]\"\n",
+  "history_begin_time" : 1646145484550,
+  "history_end_time" : 1646145489369,
+  "history_notes" : null,
+  "history_process" : "q1j13t",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "zcvyuq2nlam",
+  "history_input" : "import pytorch_lightning as pl\nfrom pathlib import Path\nfrom argparse import ArgumentParser\n\nimport sys\n\nsys.path.append(\"..\")\nfrom src_models_model import Model\n\n\ndef get_checkpoint(data_folder: Path, version: int) -> str:\n\n    log_folder = data_folder / \"lightning_logs\" / f\"version_{version}\" / \"checkpoints\"\n    checkpoint = list(log_folder.glob(\"*.ckpt\"))\n    return str(checkpoint)\n\n\ndef test_model():\n    parser = ArgumentParser()\n\n    parser.add_argument(\"--version\", type=int, default=0)\n\n    args = parser.parse_args()\n\n    model_path = get_checkpoint(Path(\"../data\"), args.version)\n\n    print(f\"Using model {model_path}\")\n\n    model = Model.load_from_checkpoint(model_path)\n\n    trainer = pl.Trainer()\n    trainer.test(model)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...test.py\")\n    test_model()\n",
+  "history_output" : "Starting...test.py\nUsing model []\nTraceback (most recent call last):\n  File \"scripts_test.py\", line 37, in <module>\n    test_model()\n  File \"scripts_test.py\", line 29, in test_model\n    model = Model.load_from_checkpoint(model_path)\n  File \"/opt/anaconda3/lib/python3.8/site-packages/pytorch_lightning/core/lightning.py\", line 1352, in load_from_checkpoint\n    checkpoint = torch.load(checkpoint_path, map_location=lambda storage, loc: storage)\n  File \"/opt/anaconda3/lib/python3.8/site-packages/torch/serialization.py\", line 571, in load\n    with _open_file_like(f, 'rb') as opened_file:\n  File \"/opt/anaconda3/lib/python3.8/site-packages/torch/serialization.py\", line 229, in _open_file_like\n    return _open_file(name_or_buffer, mode)\n  File \"/opt/anaconda3/lib/python3.8/site-packages/torch/serialization.py\", line 210, in __init__\n    super(_open_file, self).__init__(open(name, mode))\nFileNotFoundError: [Errno 2] No such file or directory: '[]'\n",
+  "history_begin_time" : 1646145271561,
+  "history_end_time" : 1646145276633,
+  "history_notes" : null,
+  "history_process" : "q1j13t",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "i8i0r78rl6w",
+  "history_input" : "import pytorch_lightning as pl\nfrom pathlib import Path\nfrom argparse import ArgumentParser\n\nimport sys\n\nsys.path.append(\"..\")\nfrom src_models_model import Model\n\n\ndef get_checkpoint(data_folder: Path, version: int) -> str:\n\n    log_folder = data_folder / \"lightning_logs\" / f\"version_{version}\" / \"checkpoints\"\n    checkpoint = list(log_folder.glob(\"*.ckpt\"))\n    return str(checkpoint[0])\n\n\ndef test_model():\n    parser = ArgumentParser()\n\n    parser.add_argument(\"--version\", type=int, default=0)\n\n    args = parser.parse_args()\n\n    model_path = get_checkpoint(Path(\"../data\"), args.version)\n\n    print(f\"Using model {model_path}\")\n\n    model = Model.load_from_checkpoint(model_path)\n\n    trainer = pl.Trainer()\n    trainer.test(model)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...test.py\")\n    test_model()\n",
+  "history_output" : "Starting...test.py\nTraceback (most recent call last):\n  File \"scripts_test.py\", line 37, in <module>\n    test_model()\n  File \"scripts_test.py\", line 25, in test_model\n    model_path = get_checkpoint(Path(\"../data\"), args.version)\n  File \"scripts_test.py\", line 15, in get_checkpoint\n    return str(checkpoint[0])\nIndexError: list index out of range\n",
+  "history_begin_time" : 1646144663936,
+  "history_end_time" : 1646144669292,
+  "history_notes" : null,
+  "history_process" : "q1j13t",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "mwe8dmvfmo2",
+  "history_input" : "import pytorch_lightning as pl\nfrom pathlib import Path\nfrom argparse import ArgumentParser\n\nimport sys\n\nsys.path.append(\"..\")\nfrom src_models_model import Model\n\n\ndef get_checkpoint(data_folder: Path, version: int) -> str:\n\n    log_folder = data_folder / \"lightning_logs\" / f\"version_{version}\" / \"checkpoints\"\n    checkpoint = list(log_folder.glob(\"*.ckpt\"))\n    return str(checkpoint[0])\n\n\ndef test_model():\n    parser = ArgumentParser()\n\n    parser.add_argument(\"--version\", type=int, default=0)\n\n    args = parser.parse_args()\n\n    model_path = get_checkpoint(Path(\"../data\"), args.version)\n\n    print(f\"Using model {model_path}\")\n\n    model = Model.load_from_checkpoint(model_path)\n\n    trainer = pl.Trainer()\n    trainer.test(model)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...test.py\")\n    test_model()\n",
+  "history_output" : "Starting...test.py\nTraceback (most recent call last):\n  File \"scripts_test.py\", line 37, in <module>\n    test_model()\n  File \"scripts_test.py\", line 25, in test_model\n    model_path = get_checkpoint(Path(\"../data\"), args.version)\n  File \"scripts_test.py\", line 15, in get_checkpoint\n    return str(checkpoint[0])\nIndexError: list index out of range\n",
+  "history_begin_time" : 1646144414549,
+  "history_end_time" : 1646144417614,
+  "history_notes" : null,
+  "history_process" : "q1j13t",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "qhk0dkrwho9",
+  "history_input" : "import pytorch_lightning as pl\nfrom pathlib import Path\nfrom argparse import ArgumentParser\n\nimport sys\n\nsys.path.append(\"..\")\nfrom src_models_model import Model\n\n\ndef get_checkpoint(data_folder: Path, version: int) -> str:\n\n    log_folder = data_folder / \"lightning_logs\" / f\"version_{version}\" / \"checkpoints\"\n    checkpoint = list(log_folder.glob(\"*.ckpt\"))\n    return str(checkpoint[0])\n\n\ndef test_model():\n    parser = ArgumentParser()\n\n    parser.add_argument(\"--version\", type=int, default=0)\n\n    args = parser.parse_args()\n\n    model_path = get_checkpoint(Path(\"../data\"), args.version)\n\n    print(f\"Using model {model_path}\")\n\n    model = Model.load_from_checkpoint(model_path)\n\n    trainer = pl.Trainer()\n    trainer.test(model)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...test.py\")\n    test_model()\n",
+  "history_output" : "Starting...test.py\nTraceback (most recent call last):\n  File \"scripts_test.py\", line 37, in <module>\n    test_model()\n  File \"scripts_test.py\", line 25, in test_model\n    model_path = get_checkpoint(Path(\"../data\"), args.version)\n  File \"scripts_test.py\", line 15, in get_checkpoint\n    return str(checkpoint[0])\nIndexError: list index out of range\n",
+  "history_begin_time" : 1646144343543,
+  "history_end_time" : 1646144346566,
+  "history_notes" : null,
+  "history_process" : "q1j13t",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "5auird17ggz",
+  "history_input" : "import pytorch_lightning as pl\nfrom pathlib import Path\nfrom argparse import ArgumentParser\n\nimport sys\n\nsys.path.append(\"..\")\nfrom src_models_model import Model\n\n\ndef get_checkpoint(data_folder: Path, version: int) -> str:\n\n    log_folder = data_folder / \"lightning_logs\" / f\"version_{version}\" / \"checkpoints\"\n    checkpoint = list(log_folder.glob(\"*.ckpt\"))\n    return str(checkpoint[0])\n\n\ndef test_model():\n    parser = ArgumentParser()\n\n    parser.add_argument(\"--version\", type=int, default=0)\n\n    args = parser.parse_args()\n\n    model_path = get_checkpoint(Path(\"../data\"), args.version)\n\n    print(f\"Using model {model_path}\")\n\n    model = Model.load_from_checkpoint(model_path)\n\n    trainer = pl.Trainer()\n    trainer.test(model)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...test.py\")\n    test_model()\n",
+  "history_output" : "Starting...test.py\nTraceback (most recent call last):\n  File \"scripts_test.py\", line 37, in <module>\n    test_model()\n  File \"scripts_test.py\", line 25, in test_model\n    model_path = get_checkpoint(Path(\"../data\"), args.version)\n  File \"scripts_test.py\", line 15, in get_checkpoint\n    return str(checkpoint[0])\nIndexError: list index out of range\n",
+  "history_begin_time" : 1646143444973,
+  "history_end_time" : 1646143448133,
+  "history_notes" : null,
+  "history_process" : "q1j13t",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "nwqxi9ceo10",
+  "history_input" : "import pytorch_lightning as pl\nfrom pathlib import Path\nfrom argparse import ArgumentParser\n\nimport sys\n\nsys.path.append(\"..\")\nfrom src_models_model import Model\n\n\ndef get_checkpoint(data_folder: Path, version: int) -> str:\n\n    log_folder = data_folder / \"lightning_logs\" / f\"version_{version}\" / \"checkpoints\"\n    checkpoint = list(log_folder.glob(\"*.ckpt\"))\n    return str(checkpoint[0])\n\n\ndef test_model():\n    parser = ArgumentParser()\n\n    parser.add_argument(\"--version\", type=int, default=0)\n\n    args = parser.parse_args()\n\n    model_path = get_checkpoint(Path(\"../data\"), args.version)\n\n    print(f\"Using model {model_path}\")\n\n    model = Model.load_from_checkpoint(model_path)\n\n    trainer = pl.Trainer()\n    trainer.test(model)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...test.py\")\n    test_model()\n",
+  "history_output" : "Starting...test.py\nTraceback (most recent call last):\n  File \"scripts_test.py\", line 37, in <module>\n    test_model()\n  File \"scripts_test.py\", line 25, in test_model\n    model_path = get_checkpoint(Path(\"../data\"), args.version)\n  File \"scripts_test.py\", line 15, in get_checkpoint\n    return str(checkpoint[0])\nIndexError: list index out of range\n",
+  "history_begin_time" : 1646143296255,
+  "history_end_time" : 1646143299442,
+  "history_notes" : null,
+  "history_process" : "q1j13t",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "mgwqn9sfys7",
+  "history_input" : "import pytorch_lightning as pl\nfrom pathlib import Path\nfrom argparse import ArgumentParser\n\nimport sys\n\nsys.path.append(\"..\")\nfrom src_models_model import Model\n\n\ndef get_checkpoint(data_folder: Path, version: int) -> str:\n\n    log_folder = data_folder / \"lightning_logs\" / f\"version_{version}\" / \"checkpoints\"\n    checkpoint = list(log_folder.glob(\"*.ckpt\"))\n    return str(checkpoint[0])\n\n\ndef test_model():\n    parser = ArgumentParser()\n\n    parser.add_argument(\"--version\", type=int, default=0)\n\n    args = parser.parse_args()\n\n    model_path = get_checkpoint(Path(\"../data\"), args.version)\n\n    print(f\"Using model {model_path}\")\n\n    model = Model.load_from_checkpoint(model_path)\n\n    trainer = pl.Trainer()\n    trainer.test(model)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...test.py\")\n    test_model()\n",
+  "history_output" : "Starting...test.py\nTraceback (most recent call last):\n  File \"scripts_test.py\", line 37, in <module>\n    test_model()\n  File \"scripts_test.py\", line 25, in test_model\n    model_path = get_checkpoint(Path(\"../data\"), args.version)\n  File \"scripts_test.py\", line 15, in get_checkpoint\n    return str(checkpoint[0])\nIndexError: list index out of range\n",
+  "history_begin_time" : 1646138302654,
+  "history_end_time" : 1646138306281,
+  "history_notes" : null,
+  "history_process" : "q1j13t",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "adtbb2cm4ok",
+  "history_input" : "import pytorch_lightning as pl\nfrom pathlib import Path\nfrom argparse import ArgumentParser\n\nimport sys\n\nsys.path.append(\"..\")\nfrom src_models_model import Model\n\n\ndef get_checkpoint(data_folder: Path, version: int) -> str:\n\n    log_folder = data_folder / \"lightning_logs\" / f\"version_{version}\" / \"checkpoints\"\n    checkpoint = list(log_folder.glob(\"*.ckpt\"))\n    return str(checkpoint[0])\n\n\ndef test_model():\n    parser = ArgumentParser()\n\n    parser.add_argument(\"--version\", type=int, default=0)\n\n    args = parser.parse_args()\n\n    model_path = get_checkpoint(Path(\"../data\"), args.version)\n\n    print(f\"Using model {model_path}\")\n\n    model = Model.load_from_checkpoint(model_path)\n\n    trainer = pl.Trainer()\n    trainer.test(model)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...test.py\")\n    test_model()\n",
+  "history_output" : "",
+  "history_begin_time" : 1646138202680,
+  "history_end_time" : 1646138203388,
+  "history_notes" : null,
+  "history_process" : "q1j13t",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "nkqwwgtm2jt",
+  "history_input" : "import pytorch_lightning as pl\nfrom pathlib import Path\nfrom argparse import ArgumentParser\n\nimport sys\n\nsys.path.append(\"..\")\nfrom src_models_model import Model\n\n\ndef get_checkpoint(data_folder: Path, version: int) -> str:\n\n    log_folder = data_folder / \"lightning_logs\" / f\"version_{version}\" / \"checkpoints\"\n    checkpoint = list(log_folder.glob(\"*.ckpt\"))\n    return str(checkpoint[0])\n\n\ndef test_model():\n    parser = ArgumentParser()\n\n    parser.add_argument(\"--version\", type=int, default=0)\n\n    args = parser.parse_args()\n\n    model_path = get_checkpoint(Path(\"../data\"), args.version)\n\n    print(f\"Using model {model_path}\")\n\n    model = Model.load_from_checkpoint(model_path)\n\n    trainer = pl.Trainer()\n    trainer.test(model)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...test.py\")\n    test_model()\n",
+  "history_output" : "",
+  "history_begin_time" : 1646138115928,
+  "history_end_time" : 1646138116783,
+  "history_notes" : null,
+  "history_process" : "q1j13t",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "2edwgl9suij",
+  "history_input" : "import pytorch_lightning as pl\nfrom pathlib import Path\nfrom argparse import ArgumentParser\n\nimport sys\n\nsys.path.append(\"..\")\nfrom src_models_model import Model\n\n\ndef get_checkpoint(data_folder: Path, version: int) -> str:\n\n    log_folder = data_folder / \"lightning_logs\" / f\"version_{version}\" / \"checkpoints\"\n    checkpoint = list(log_folder.glob(\"*.ckpt\"))\n    return str(checkpoint[0])\n\n\ndef test_model():\n    parser = ArgumentParser()\n\n    parser.add_argument(\"--version\", type=int, default=0)\n\n    args = parser.parse_args()\n\n    model_path = get_checkpoint(Path(\"../data\"), args.version)\n\n    print(f\"Using model {model_path}\")\n\n    model = Model.load_from_checkpoint(model_path)\n\n    trainer = pl.Trainer()\n    trainer.test(model)\n\n\nif __name__ == \"__main__\":\n    test_model()\n",
+  "history_output" : "",
+  "history_begin_time" : 1646137800741,
+  "history_end_time" : 1646137801627,
+  "history_notes" : null,
+  "history_process" : "q1j13t",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "53gwjydknc9",
+  "history_input" : "import pytorch_lightning as pl\nfrom pathlib import Path\nfrom argparse import ArgumentParser\n\nimport sys\n\nsys.path.append(\"..\")\nfrom src_models_model import Model\n\n\ndef get_checkpoint(data_folder: Path, version: int) -> str:\n\n    log_folder = data_folder / \"lightning_logs\" / f\"version_{version}\" / \"checkpoints\"\n    checkpoint = list(log_folder.glob(\"*.ckpt\"))\n    return str(checkpoint[0])\n\n\ndef test_model():\n    parser = ArgumentParser()\n\n    parser.add_argument(\"--version\", type=int, default=0)\n\n    args = parser.parse_args()\n\n    model_path = get_checkpoint(Path(\"../data\"), args.version)\n\n    print(f\"Using model {model_path}\")\n\n    model = Model.load_from_checkpoint(model_path)\n\n    trainer = pl.Trainer()\n    trainer.test(model)\n\n\nif __name__ == \"__main__\":\n    test_model()\n",
+  "history_output" : "",
+  "history_begin_time" : 1646137710226,
+  "history_end_time" : 1646137711891,
+  "history_notes" : null,
+  "history_process" : "q1j13t",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "l5c9oab6yek",
+  "history_input" : "import pytorch_lightning as pl\nfrom pathlib import Path\nfrom argparse import ArgumentParser\n\nimport sys\n\nsys.path.append(\"..\")\nfrom src_models_model import Model\n\n\ndef get_checkpoint(data_folder: Path, version: int) -> str:\n\n    log_folder = data_folder / \"lightning_logs\" / f\"version_{version}\" / \"checkpoints\"\n    checkpoint = list(log_folder.glob(\"*.ckpt\"))\n    return str(checkpoint[0])\n\n\ndef test_model():\n    parser = ArgumentParser()\n\n    parser.add_argument(\"--version\", type=int, default=0)\n\n    args = parser.parse_args()\n\n    model_path = get_checkpoint(Path(\"../data\"), args.version)\n\n    print(f\"Using model {model_path}\")\n\n    model = Model.load_from_checkpoint(model_path)\n\n    trainer = pl.Trainer()\n    trainer.test(model)\n\n\nif __name__ == \"__main__\":\n    test_model()\n",
+  "history_output" : "Traceback (most recent call last):\n  File \"scripts_test.py\", line 36, in <module>\n    test_model()\n  File \"scripts_test.py\", line 25, in test_model\n    model_path = get_checkpoint(Path(\"../data\"), args.version)\n  File \"scripts_test.py\", line 15, in get_checkpoint\n    return str(checkpoint[0])\nIndexError: list index out of range\n",
+  "history_begin_time" : 1646137598668,
+  "history_end_time" : 1646137602339,
+  "history_notes" : null,
+  "history_process" : "q1j13t",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "u839qa6cmwq",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1666166419942,
+  "history_notes" : null,
+  "history_process" : "q1j13t",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},]

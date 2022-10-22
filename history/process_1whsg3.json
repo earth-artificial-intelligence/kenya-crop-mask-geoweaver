@@ -1,0 +1,321 @@
+[{
+  "history_id" : "jwyvplak3ao",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666167825384,
+  "history_end_time" : 1666167825384,
+  "history_notes" : null,
+  "history_process" : "1whsg3",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "z48gmuo3zj7",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666167772371,
+  "history_end_time" : 1666167772371,
+  "history_notes" : null,
+  "history_process" : "1whsg3",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "esqn8rcmjw5",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666166465611,
+  "history_end_time" : 1666166465611,
+  "history_notes" : null,
+  "history_process" : "1whsg3",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "rhxr83yqpem",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666166410292,
+  "history_end_time" : 1666166419946,
+  "history_notes" : null,
+  "history_process" : "1whsg3",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "daa39y8wnwi",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666164233099,
+  "history_end_time" : 1666164233099,
+  "history_notes" : null,
+  "history_process" : "1whsg3",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "6t4ckfu6otl",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666163607316,
+  "history_end_time" : 1666163607316,
+  "history_notes" : null,
+  "history_process" : "1whsg3",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "5mmqbh8cvte",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666137012959,
+  "history_end_time" : 1666137012959,
+  "history_notes" : null,
+  "history_process" : "1whsg3",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "r12bfc59qq9",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666136593515,
+  "history_end_time" : 1666136593515,
+  "history_notes" : null,
+  "history_process" : "1whsg3",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "80gtuz4lt2z",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666136435853,
+  "history_end_time" : 1666136435853,
+  "history_notes" : null,
+  "history_process" : "1whsg3",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "4gvj8nckloi",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666134110799,
+  "history_end_time" : 1666134110799,
+  "history_notes" : null,
+  "history_process" : "1whsg3",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "k9d9gfs5c22",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666134036949,
+  "history_end_time" : 1666134036949,
+  "history_notes" : null,
+  "history_process" : "1whsg3",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "f41e0pxd8u3",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666134008999,
+  "history_end_time" : 1666134008999,
+  "history_notes" : null,
+  "history_process" : "1whsg3",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "d1x2uay3lk2",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666131993227,
+  "history_end_time" : 1666131993227,
+  "history_notes" : null,
+  "history_process" : "1whsg3",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "vpv6w5z2koa",
+  "history_input" : "from argparse import ArgumentParser, Namespace\n\nimport pytorch_lightning as pl\nimport torch\nfrom torch import nn\n\nfrom typing import Dict, Tuple, Type, Any, List, Optional\nfrom src_models_lstm import UnrolledLSTM\n\n\nclass Forecaster(pl.LightningModule):\n    r\"\"\"\n    An LSTM based model to predict a multispectral sequence.\n\n    :param input_size: The number of input bands passed to the model. The\n        input vector is expected to be of shape [batch_size, timesteps, bands]\n    :param output_timesteps: The number of timesteps to predict\n\n    hparams\n    --------\n    The default values for these parameters are set in add_model_specific_args\n\n    :param hparams.forecasting_vector_size: The size of the hidden vector in the LSTM\n        Default = 128\n    :param hparams.forecasting_dropout: Variational dropout ratio to apply between timesteps in\n        the LSTM base. Default = 0.2\n    \"\"\"\n\n    def __init__(self, num_bands: int, output_timesteps: int, hparams: Namespace,) -> None:\n        super().__init__()\n        self.output_timesteps = output_timesteps\n        self.lstm = UnrolledLSTM(\n            input_size=num_bands,\n            hidden_size=hparams.forecasting_vector_size,\n            dropout=hparams.forecasting_dropout,\n            batch_first=True,\n        )\n\n        self.to_bands = nn.Linear(\n            in_features=hparams.forecasting_vector_size, out_features=num_bands\n        )\n\n    def forward(self, x: torch.Tensor) -> torch.Tensor:\n\n        hidden_tuple: Optional[Tuple[torch.Tensor, torch.Tensor]] = None\n\n        input_timesteps = x.shape[1]\n        assert input_timesteps >= 1\n\n        predicted_output: List[torch.Tensor] = []\n        for i in range(input_timesteps):\n            input = x[:, i : i + 1, :]\n            output, hidden_tuple = self.lstm(input, hidden_tuple)\n            output = self.to_bands(torch.transpose(output[0, :, :, :], 0, 1))\n            predicted_output.append(output)\n\n        # we have already predicted the first output timestep (the last\n        # output of the loop above)\n        for i in range(self.output_timesteps - 1):\n            output, hidden_tuple = self.lstm(output, hidden_tuple)\n            output = self.to_bands(torch.transpose(output[0, :, :, :], 0, 1))\n            predicted_output.append(output)\n        return torch.cat(predicted_output, dim=1)\n\n    @staticmethod\n    def add_model_specific_args(parent_parser: ArgumentParser) -> ArgumentParser:\n        parser = ArgumentParser(parents=[parent_parser], add_help=False)\n\n        parser_args: Dict[str, Tuple[Type, Any]] = {\n            \"--forecasting_vector_size\": (int, 256),\n            \"--forecasting_dropout\": (float, 0.2),\n        }\n\n        for key, vals in parser_args.items():\n            parser.add_argument(key, type=vals[0], default=vals[1])\n\n        return parser\n",
+  "history_output" : "",
+  "history_begin_time" : 1666118339996,
+  "history_end_time" : 1666118344037,
+  "history_notes" : null,
+  "history_process" : "1whsg3",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "ne76cpwlzgl",
+  "history_input" : "from argparse import ArgumentParser, Namespace\n\nimport pytorch_lightning as pl\nimport torch\nfrom torch import nn\n\nfrom typing import Dict, Tuple, Type, Any, List, Optional\nfrom src_models_lstm import UnrolledLSTM\n\n\nclass Forecaster(pl.LightningModule):\n    r\"\"\"\n    An LSTM based model to predict a multispectral sequence.\n\n    :param input_size: The number of input bands passed to the model. The\n        input vector is expected to be of shape [batch_size, timesteps, bands]\n    :param output_timesteps: The number of timesteps to predict\n\n    hparams\n    --------\n    The default values for these parameters are set in add_model_specific_args\n\n    :param hparams.forecasting_vector_size: The size of the hidden vector in the LSTM\n        Default = 128\n    :param hparams.forecasting_dropout: Variational dropout ratio to apply between timesteps in\n        the LSTM base. Default = 0.2\n    \"\"\"\n\n    def __init__(self, num_bands: int, output_timesteps: int, hparams: Namespace,) -> None:\n        super().__init__()\n        self.output_timesteps = output_timesteps\n        self.lstm = UnrolledLSTM(\n            input_size=num_bands,\n            hidden_size=hparams.forecasting_vector_size,\n            dropout=hparams.forecasting_dropout,\n            batch_first=True,\n        )\n\n        self.to_bands = nn.Linear(\n            in_features=hparams.forecasting_vector_size, out_features=num_bands\n        )\n\n    def forward(self, x: torch.Tensor) -> torch.Tensor:\n\n        hidden_tuple: Optional[Tuple[torch.Tensor, torch.Tensor]] = None\n\n        input_timesteps = x.shape[1]\n        assert input_timesteps >= 1\n\n        predicted_output: List[torch.Tensor] = []\n        for i in range(input_timesteps):\n            input = x[:, i : i + 1, :]\n            output, hidden_tuple = self.lstm(input, hidden_tuple)\n            output = self.to_bands(torch.transpose(output[0, :, :, :], 0, 1))\n            predicted_output.append(output)\n\n        # we have already predicted the first output timestep (the last\n        # output of the loop above)\n        for i in range(self.output_timesteps - 1):\n            output, hidden_tuple = self.lstm(output, hidden_tuple)\n            output = self.to_bands(torch.transpose(output[0, :, :, :], 0, 1))\n            predicted_output.append(output)\n        return torch.cat(predicted_output, dim=1)\n\n    @staticmethod\n    def add_model_specific_args(parent_parser: ArgumentParser) -> ArgumentParser:\n        parser = ArgumentParser(parents=[parent_parser], add_help=False)\n\n        parser_args: Dict[str, Tuple[Type, Any]] = {\n            \"--forecasting_vector_size\": (int, 256),\n            \"--forecasting_dropout\": (float, 0.2),\n        }\n\n        for key, vals in parser_args.items():\n            parser.add_argument(key, type=vals[0], default=vals[1])\n\n        return parser\n",
+  "history_output" : "",
+  "history_begin_time" : 1655909920819,
+  "history_end_time" : 1655909924644,
+  "history_notes" : null,
+  "history_process" : "1whsg3",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "w3yvsylbhbd",
+  "history_input" : "from argparse import ArgumentParser, Namespace\n\nimport pytorch_lightning as pl\nimport torch\nfrom torch import nn\n\nfrom typing import Dict, Tuple, Type, Any, List, Optional\nfrom src_models_lstm import UnrolledLSTM\n\n\nclass Forecaster(pl.LightningModule):\n    r\"\"\"\n    An LSTM based model to predict a multispectral sequence.\n\n    :param input_size: The number of input bands passed to the model. The\n        input vector is expected to be of shape [batch_size, timesteps, bands]\n    :param output_timesteps: The number of timesteps to predict\n\n    hparams\n    --------\n    The default values for these parameters are set in add_model_specific_args\n\n    :param hparams.forecasting_vector_size: The size of the hidden vector in the LSTM\n        Default = 128\n    :param hparams.forecasting_dropout: Variational dropout ratio to apply between timesteps in\n        the LSTM base. Default = 0.2\n    \"\"\"\n\n    def __init__(self, num_bands: int, output_timesteps: int, hparams: Namespace,) -> None:\n        super().__init__()\n        self.output_timesteps = output_timesteps\n        self.lstm = UnrolledLSTM(\n            input_size=num_bands,\n            hidden_size=hparams.forecasting_vector_size,\n            dropout=hparams.forecasting_dropout,\n            batch_first=True,\n        )\n\n        self.to_bands = nn.Linear(\n            in_features=hparams.forecasting_vector_size, out_features=num_bands\n        )\n\n    def forward(self, x: torch.Tensor) -> torch.Tensor:\n\n        hidden_tuple: Optional[Tuple[torch.Tensor, torch.Tensor]] = None\n\n        input_timesteps = x.shape[1]\n        assert input_timesteps >= 1\n\n        predicted_output: List[torch.Tensor] = []\n        for i in range(input_timesteps):\n            input = x[:, i : i + 1, :]\n            output, hidden_tuple = self.lstm(input, hidden_tuple)\n            output = self.to_bands(torch.transpose(output[0, :, :, :], 0, 1))\n            predicted_output.append(output)\n\n        # we have already predicted the first output timestep (the last\n        # output of the loop above)\n        for i in range(self.output_timesteps - 1):\n            output, hidden_tuple = self.lstm(output, hidden_tuple)\n            output = self.to_bands(torch.transpose(output[0, :, :, :], 0, 1))\n            predicted_output.append(output)\n        return torch.cat(predicted_output, dim=1)\n\n    @staticmethod\n    def add_model_specific_args(parent_parser: ArgumentParser) -> ArgumentParser:\n        parser = ArgumentParser(parents=[parent_parser], add_help=False)\n\n        parser_args: Dict[str, Tuple[Type, Any]] = {\n            \"--forecasting_vector_size\": (int, 256),\n            \"--forecasting_dropout\": (float, 0.2),\n        }\n\n        for key, vals in parser_args.items():\n            parser.add_argument(key, type=vals[0], default=vals[1])\n\n        return parser\n",
+  "history_output" : "",
+  "history_begin_time" : 1655908837967,
+  "history_end_time" : 1655908838846,
+  "history_notes" : null,
+  "history_process" : "1whsg3",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "i7ctpqfum8w",
+  "history_input" : "from argparse import ArgumentParser, Namespace\n\nimport pytorch_lightning as pl\nimport torch\nfrom torch import nn\n\nfrom typing import Dict, Tuple, Type, Any, List, Optional\nfrom src_models_lstm import UnrolledLSTM\n\n\nclass Forecaster(pl.LightningModule):\n    r\"\"\"\n    An LSTM based model to predict a multispectral sequence.\n\n    :param input_size: The number of input bands passed to the model. The\n        input vector is expected to be of shape [batch_size, timesteps, bands]\n    :param output_timesteps: The number of timesteps to predict\n\n    hparams\n    --------\n    The default values for these parameters are set in add_model_specific_args\n\n    :param hparams.forecasting_vector_size: The size of the hidden vector in the LSTM\n        Default = 128\n    :param hparams.forecasting_dropout: Variational dropout ratio to apply between timesteps in\n        the LSTM base. Default = 0.2\n    \"\"\"\n\n    def __init__(self, num_bands: int, output_timesteps: int, hparams: Namespace,) -> None:\n        super().__init__()\n        self.output_timesteps = output_timesteps\n        self.lstm = UnrolledLSTM(\n            input_size=num_bands,\n            hidden_size=hparams.forecasting_vector_size,\n            dropout=hparams.forecasting_dropout,\n            batch_first=True,\n        )\n\n        self.to_bands = nn.Linear(\n            in_features=hparams.forecasting_vector_size, out_features=num_bands\n        )\n\n    def forward(self, x: torch.Tensor) -> torch.Tensor:\n\n        hidden_tuple: Optional[Tuple[torch.Tensor, torch.Tensor]] = None\n\n        input_timesteps = x.shape[1]\n        assert input_timesteps >= 1\n\n        predicted_output: List[torch.Tensor] = []\n        for i in range(input_timesteps):\n            input = x[:, i : i + 1, :]\n            output, hidden_tuple = self.lstm(input, hidden_tuple)\n            output = self.to_bands(torch.transpose(output[0, :, :, :], 0, 1))\n            predicted_output.append(output)\n\n        # we have already predicted the first output timestep (the last\n        # output of the loop above)\n        for i in range(self.output_timesteps - 1):\n            output, hidden_tuple = self.lstm(output, hidden_tuple)\n            output = self.to_bands(torch.transpose(output[0, :, :, :], 0, 1))\n            predicted_output.append(output)\n        return torch.cat(predicted_output, dim=1)\n\n    @staticmethod\n    def add_model_specific_args(parent_parser: ArgumentParser) -> ArgumentParser:\n        parser = ArgumentParser(parents=[parent_parser], add_help=False)\n\n        parser_args: Dict[str, Tuple[Type, Any]] = {\n            \"--forecasting_vector_size\": (int, 256),\n            \"--forecasting_dropout\": (float, 0.2),\n        }\n\n        for key, vals in parser_args.items():\n            parser.add_argument(key, type=vals[0], default=vals[1])\n\n        return parser\n",
+  "history_output" : "",
+  "history_begin_time" : 1655907448879,
+  "history_end_time" : 1655907451198,
+  "history_notes" : null,
+  "history_process" : "1whsg3",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "sxvy4i7zvvi",
+  "history_input" : "from argparse import ArgumentParser, Namespace\n\nimport pytorch_lightning as pl\nimport torch\nfrom torch import nn\n\nfrom typing import Dict, Tuple, Type, Any, List, Optional\nfrom src_models_lstm import UnrolledLSTM\n\n\nclass Forecaster(pl.LightningModule):\n    r\"\"\"\n    An LSTM based model to predict a multispectral sequence.\n\n    :param input_size: The number of input bands passed to the model. The\n        input vector is expected to be of shape [batch_size, timesteps, bands]\n    :param output_timesteps: The number of timesteps to predict\n\n    hparams\n    --------\n    The default values for these parameters are set in add_model_specific_args\n\n    :param hparams.forecasting_vector_size: The size of the hidden vector in the LSTM\n        Default = 128\n    :param hparams.forecasting_dropout: Variational dropout ratio to apply between timesteps in\n        the LSTM base. Default = 0.2\n    \"\"\"\n\n    def __init__(self, num_bands: int, output_timesteps: int, hparams: Namespace,) -> None:\n        super().__init__()\n        self.output_timesteps = output_timesteps\n        self.lstm = UnrolledLSTM(\n            input_size=num_bands,\n            hidden_size=hparams.forecasting_vector_size,\n            dropout=hparams.forecasting_dropout,\n            batch_first=True,\n        )\n\n        self.to_bands = nn.Linear(\n            in_features=hparams.forecasting_vector_size, out_features=num_bands\n        )\n\n    def forward(self, x: torch.Tensor) -> torch.Tensor:\n\n        hidden_tuple: Optional[Tuple[torch.Tensor, torch.Tensor]] = None\n\n        input_timesteps = x.shape[1]\n        assert input_timesteps >= 1\n\n        predicted_output: List[torch.Tensor] = []\n        for i in range(input_timesteps):\n            input = x[:, i : i + 1, :]\n            output, hidden_tuple = self.lstm(input, hidden_tuple)\n            output = self.to_bands(torch.transpose(output[0, :, :, :], 0, 1))\n            predicted_output.append(output)\n\n        # we have already predicted the first output timestep (the last\n        # output of the loop above)\n        for i in range(self.output_timesteps - 1):\n            output, hidden_tuple = self.lstm(output, hidden_tuple)\n            output = self.to_bands(torch.transpose(output[0, :, :, :], 0, 1))\n            predicted_output.append(output)\n        return torch.cat(predicted_output, dim=1)\n\n    @staticmethod\n    def add_model_specific_args(parent_parser: ArgumentParser) -> ArgumentParser:\n        parser = ArgumentParser(parents=[parent_parser], add_help=False)\n\n        parser_args: Dict[str, Tuple[Type, Any]] = {\n            \"--forecasting_vector_size\": (int, 256),\n            \"--forecasting_dropout\": (float, 0.2),\n        }\n\n        for key, vals in parser_args.items():\n            parser.add_argument(key, type=vals[0], default=vals[1])\n\n        return parser\n",
+  "history_output" : "Traceback (most recent call last):\n  File \"src_models_forecaster.py\", line 3, in <module>\n    import pytorch_lightning as pl\nModuleNotFoundError: No module named 'pytorch_lightning'\n",
+  "history_begin_time" : 1655865868477,
+  "history_end_time" : 1655865868657,
+  "history_notes" : null,
+  "history_process" : "1whsg3",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "rpsea53dpsg",
+  "history_input" : "from argparse import ArgumentParser, Namespace\n\nimport pytorch_lightning as pl\nimport torch\nfrom torch import nn\n\nfrom typing import Dict, Tuple, Type, Any, List, Optional\nfrom src_models_lstm import UnrolledLSTM\n\n\nclass Forecaster(pl.LightningModule):\n    r\"\"\"\n    An LSTM based model to predict a multispectral sequence.\n\n    :param input_size: The number of input bands passed to the model. The\n        input vector is expected to be of shape [batch_size, timesteps, bands]\n    :param output_timesteps: The number of timesteps to predict\n\n    hparams\n    --------\n    The default values for these parameters are set in add_model_specific_args\n\n    :param hparams.forecasting_vector_size: The size of the hidden vector in the LSTM\n        Default = 128\n    :param hparams.forecasting_dropout: Variational dropout ratio to apply between timesteps in\n        the LSTM base. Default = 0.2\n    \"\"\"\n\n    def __init__(self, num_bands: int, output_timesteps: int, hparams: Namespace,) -> None:\n        super().__init__()\n        self.output_timesteps = output_timesteps\n        self.lstm = UnrolledLSTM(\n            input_size=num_bands,\n            hidden_size=hparams.forecasting_vector_size,\n            dropout=hparams.forecasting_dropout,\n            batch_first=True,\n        )\n\n        self.to_bands = nn.Linear(\n            in_features=hparams.forecasting_vector_size, out_features=num_bands\n        )\n\n    def forward(self, x: torch.Tensor) -> torch.Tensor:\n\n        hidden_tuple: Optional[Tuple[torch.Tensor, torch.Tensor]] = None\n\n        input_timesteps = x.shape[1]\n        assert input_timesteps >= 1\n\n        predicted_output: List[torch.Tensor] = []\n        for i in range(input_timesteps):\n            input = x[:, i : i + 1, :]\n            output, hidden_tuple = self.lstm(input, hidden_tuple)\n            output = self.to_bands(torch.transpose(output[0, :, :, :], 0, 1))\n            predicted_output.append(output)\n\n        # we have already predicted the first output timestep (the last\n        # output of the loop above)\n        for i in range(self.output_timesteps - 1):\n            output, hidden_tuple = self.lstm(output, hidden_tuple)\n            output = self.to_bands(torch.transpose(output[0, :, :, :], 0, 1))\n            predicted_output.append(output)\n        return torch.cat(predicted_output, dim=1)\n\n    @staticmethod\n    def add_model_specific_args(parent_parser: ArgumentParser) -> ArgumentParser:\n        parser = ArgumentParser(parents=[parent_parser], add_help=False)\n\n        parser_args: Dict[str, Tuple[Type, Any]] = {\n            \"--forecasting_vector_size\": (int, 256),\n            \"--forecasting_dropout\": (float, 0.2),\n        }\n\n        for key, vals in parser_args.items():\n            parser.add_argument(key, type=vals[0], default=vals[1])\n\n        return parser\n",
+  "history_output" : "",
+  "history_begin_time" : 1655865104068,
+  "history_end_time" : 1655865106432,
+  "history_notes" : null,
+  "history_process" : "1whsg3",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "o11dcomtetf",
+  "history_input" : "from argparse import ArgumentParser, Namespace\n\nimport pytorch_lightning as pl\nimport torch\nfrom torch import nn\n\nfrom typing import Dict, Tuple, Type, Any, List, Optional\nfrom src_models_lstm import UnrolledLSTM\n\n\nclass Forecaster(pl.LightningModule):\n    r\"\"\"\n    An LSTM based model to predict a multispectral sequence.\n\n    :param input_size: The number of input bands passed to the model. The\n        input vector is expected to be of shape [batch_size, timesteps, bands]\n    :param output_timesteps: The number of timesteps to predict\n\n    hparams\n    --------\n    The default values for these parameters are set in add_model_specific_args\n\n    :param hparams.forecasting_vector_size: The size of the hidden vector in the LSTM\n        Default = 128\n    :param hparams.forecasting_dropout: Variational dropout ratio to apply between timesteps in\n        the LSTM base. Default = 0.2\n    \"\"\"\n\n    def __init__(self, num_bands: int, output_timesteps: int, hparams: Namespace,) -> None:\n        super().__init__()\n        self.output_timesteps = output_timesteps\n        self.lstm = UnrolledLSTM(\n            input_size=num_bands,\n            hidden_size=hparams.forecasting_vector_size,\n            dropout=hparams.forecasting_dropout,\n            batch_first=True,\n        )\n\n        self.to_bands = nn.Linear(\n            in_features=hparams.forecasting_vector_size, out_features=num_bands\n        )\n\n    def forward(self, x: torch.Tensor) -> torch.Tensor:\n\n        hidden_tuple: Optional[Tuple[torch.Tensor, torch.Tensor]] = None\n\n        input_timesteps = x.shape[1]\n        assert input_timesteps >= 1\n\n        predicted_output: List[torch.Tensor] = []\n        for i in range(input_timesteps):\n            input = x[:, i : i + 1, :]\n            output, hidden_tuple = self.lstm(input, hidden_tuple)\n            output = self.to_bands(torch.transpose(output[0, :, :, :], 0, 1))\n            predicted_output.append(output)\n\n        # we have already predicted the first output timestep (the last\n        # output of the loop above)\n        for i in range(self.output_timesteps - 1):\n            output, hidden_tuple = self.lstm(output, hidden_tuple)\n            output = self.to_bands(torch.transpose(output[0, :, :, :], 0, 1))\n            predicted_output.append(output)\n        return torch.cat(predicted_output, dim=1)\n\n    @staticmethod\n    def add_model_specific_args(parent_parser: ArgumentParser) -> ArgumentParser:\n        parser = ArgumentParser(parents=[parent_parser], add_help=False)\n\n        parser_args: Dict[str, Tuple[Type, Any]] = {\n            \"--forecasting_vector_size\": (int, 256),\n            \"--forecasting_dropout\": (float, 0.2),\n        }\n\n        for key, vals in parser_args.items():\n            parser.add_argument(key, type=vals[0], default=vals[1])\n\n        return parser\n",
+  "history_output" : "",
+  "history_begin_time" : 1647347438811,
+  "history_end_time" : 1647347440857,
+  "history_notes" : null,
+  "history_process" : "1whsg3",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "enxphu0gfzv",
+  "history_input" : "from argparse import ArgumentParser, Namespace\n\nimport pytorch_lightning as pl\nimport torch\nfrom torch import nn\n\nfrom typing import Dict, Tuple, Type, Any, List, Optional\nfrom src_models_lstm import UnrolledLSTM\n\n\nclass Forecaster(pl.LightningModule):\n    r\"\"\"\n    An LSTM based model to predict a multispectral sequence.\n\n    :param input_size: The number of input bands passed to the model. The\n        input vector is expected to be of shape [batch_size, timesteps, bands]\n    :param output_timesteps: The number of timesteps to predict\n\n    hparams\n    --------\n    The default values for these parameters are set in add_model_specific_args\n\n    :param hparams.forecasting_vector_size: The size of the hidden vector in the LSTM\n        Default = 128\n    :param hparams.forecasting_dropout: Variational dropout ratio to apply between timesteps in\n        the LSTM base. Default = 0.2\n    \"\"\"\n\n    def __init__(self, num_bands: int, output_timesteps: int, hparams: Namespace,) -> None:\n        super().__init__()\n        self.output_timesteps = output_timesteps\n        self.lstm = UnrolledLSTM(\n            input_size=num_bands,\n            hidden_size=hparams.forecasting_vector_size,\n            dropout=hparams.forecasting_dropout,\n            batch_first=True,\n        )\n\n        self.to_bands = nn.Linear(\n            in_features=hparams.forecasting_vector_size, out_features=num_bands\n        )\n\n    def forward(self, x: torch.Tensor) -> torch.Tensor:\n\n        hidden_tuple: Optional[Tuple[torch.Tensor, torch.Tensor]] = None\n\n        input_timesteps = x.shape[1]\n        assert input_timesteps >= 1\n\n        predicted_output: List[torch.Tensor] = []\n        for i in range(input_timesteps):\n            input = x[:, i : i + 1, :]\n            output, hidden_tuple = self.lstm(input, hidden_tuple)\n            output = self.to_bands(torch.transpose(output[0, :, :, :], 0, 1))\n            predicted_output.append(output)\n\n        # we have already predicted the first output timestep (the last\n        # output of the loop above)\n        for i in range(self.output_timesteps - 1):\n            output, hidden_tuple = self.lstm(output, hidden_tuple)\n            output = self.to_bands(torch.transpose(output[0, :, :, :], 0, 1))\n            predicted_output.append(output)\n        return torch.cat(predicted_output, dim=1)\n\n    @staticmethod\n    def add_model_specific_args(parent_parser: ArgumentParser) -> ArgumentParser:\n        parser = ArgumentParser(parents=[parent_parser], add_help=False)\n\n        parser_args: Dict[str, Tuple[Type, Any]] = {\n            \"--forecasting_vector_size\": (int, 256),\n            \"--forecasting_dropout\": (float, 0.2),\n        }\n\n        for key, vals in parser_args.items():\n            parser.add_argument(key, type=vals[0], default=vals[1])\n\n        return parser\n",
+  "history_output" : "",
+  "history_begin_time" : 1647347368392,
+  "history_end_time" : 1647347370835,
+  "history_notes" : null,
+  "history_process" : "1whsg3",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "yca2xv0nqa4",
+  "history_input" : "from argparse import ArgumentParser, Namespace\n\nimport pytorch_lightning as pl\nimport torch\nfrom torch import nn\n\nfrom typing import Dict, Tuple, Type, Any, List, Optional\nfrom src_models_lstm import UnrolledLSTM\n\n\nclass Forecaster(pl.LightningModule):\n    r\"\"\"\n    An LSTM based model to predict a multispectral sequence.\n\n    :param input_size: The number of input bands passed to the model. The\n        input vector is expected to be of shape [batch_size, timesteps, bands]\n    :param output_timesteps: The number of timesteps to predict\n\n    hparams\n    --------\n    The default values for these parameters are set in add_model_specific_args\n\n    :param hparams.forecasting_vector_size: The size of the hidden vector in the LSTM\n        Default = 128\n    :param hparams.forecasting_dropout: Variational dropout ratio to apply between timesteps in\n        the LSTM base. Default = 0.2\n    \"\"\"\n\n    def __init__(self, num_bands: int, output_timesteps: int, hparams: Namespace,) -> None:\n        super().__init__()\n        self.output_timesteps = output_timesteps\n        self.lstm = UnrolledLSTM(\n            input_size=num_bands,\n            hidden_size=hparams.forecasting_vector_size,\n            dropout=hparams.forecasting_dropout,\n            batch_first=True,\n        )\n\n        self.to_bands = nn.Linear(\n            in_features=hparams.forecasting_vector_size, out_features=num_bands\n        )\n\n    def forward(self, x: torch.Tensor) -> torch.Tensor:\n\n        hidden_tuple: Optional[Tuple[torch.Tensor, torch.Tensor]] = None\n\n        input_timesteps = x.shape[1]\n        assert input_timesteps >= 1\n\n        predicted_output: List[torch.Tensor] = []\n        for i in range(input_timesteps):\n            input = x[:, i : i + 1, :]\n            output, hidden_tuple = self.lstm(input, hidden_tuple)\n            output = self.to_bands(torch.transpose(output[0, :, :, :], 0, 1))\n            predicted_output.append(output)\n\n        # we have already predicted the first output timestep (the last\n        # output of the loop above)\n        for i in range(self.output_timesteps - 1):\n            output, hidden_tuple = self.lstm(output, hidden_tuple)\n            output = self.to_bands(torch.transpose(output[0, :, :, :], 0, 1))\n            predicted_output.append(output)\n        return torch.cat(predicted_output, dim=1)\n\n    @staticmethod\n    def add_model_specific_args(parent_parser: ArgumentParser) -> ArgumentParser:\n        parser = ArgumentParser(parents=[parent_parser], add_help=False)\n\n        parser_args: Dict[str, Tuple[Type, Any]] = {\n            \"--forecasting_vector_size\": (int, 256),\n            \"--forecasting_dropout\": (float, 0.2),\n        }\n\n        for key, vals in parser_args.items():\n            parser.add_argument(key, type=vals[0], default=vals[1])\n\n        return parser\n",
+  "history_output" : "",
+  "history_begin_time" : 1647347281246,
+  "history_end_time" : 1647347283829,
+  "history_notes" : null,
+  "history_process" : "1whsg3",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "ql2gd6kbbkn",
+  "history_input" : "from argparse import ArgumentParser, Namespace\n\nimport pytorch_lightning as pl\nimport torch\nfrom torch import nn\n\nfrom typing import Dict, Tuple, Type, Any, List, Optional\nfrom src_models_lstm import UnrolledLSTM\n\n\nclass Forecaster(pl.LightningModule):\n    r\"\"\"\n    An LSTM based model to predict a multispectral sequence.\n\n    :param input_size: The number of input bands passed to the model. The\n        input vector is expected to be of shape [batch_size, timesteps, bands]\n    :param output_timesteps: The number of timesteps to predict\n\n    hparams\n    --------\n    The default values for these parameters are set in add_model_specific_args\n\n    :param hparams.forecasting_vector_size: The size of the hidden vector in the LSTM\n        Default = 128\n    :param hparams.forecasting_dropout: Variational dropout ratio to apply between timesteps in\n        the LSTM base. Default = 0.2\n    \"\"\"\n\n    def __init__(self, num_bands: int, output_timesteps: int, hparams: Namespace,) -> None:\n        super().__init__()\n        self.output_timesteps = output_timesteps\n        self.lstm = UnrolledLSTM(\n            input_size=num_bands,\n            hidden_size=hparams.forecasting_vector_size,\n            dropout=hparams.forecasting_dropout,\n            batch_first=True,\n        )\n\n        self.to_bands = nn.Linear(\n            in_features=hparams.forecasting_vector_size, out_features=num_bands\n        )\n\n    def forward(self, x: torch.Tensor) -> torch.Tensor:\n\n        hidden_tuple: Optional[Tuple[torch.Tensor, torch.Tensor]] = None\n\n        input_timesteps = x.shape[1]\n        assert input_timesteps >= 1\n\n        predicted_output: List[torch.Tensor] = []\n        for i in range(input_timesteps):\n            input = x[:, i : i + 1, :]\n            output, hidden_tuple = self.lstm(input, hidden_tuple)\n            output = self.to_bands(torch.transpose(output[0, :, :, :], 0, 1))\n            predicted_output.append(output)\n\n        # we have already predicted the first output timestep (the last\n        # output of the loop above)\n        for i in range(self.output_timesteps - 1):\n            output, hidden_tuple = self.lstm(output, hidden_tuple)\n            output = self.to_bands(torch.transpose(output[0, :, :, :], 0, 1))\n            predicted_output.append(output)\n        return torch.cat(predicted_output, dim=1)\n\n    @staticmethod\n    def add_model_specific_args(parent_parser: ArgumentParser) -> ArgumentParser:\n        parser = ArgumentParser(parents=[parent_parser], add_help=False)\n\n        parser_args: Dict[str, Tuple[Type, Any]] = {\n            \"--forecasting_vector_size\": (int, 256),\n            \"--forecasting_dropout\": (float, 0.2),\n        }\n\n        for key, vals in parser_args.items():\n            parser.add_argument(key, type=vals[0], default=vals[1])\n\n        return parser\n",
+  "history_output" : "",
+  "history_begin_time" : 1647347144440,
+  "history_end_time" : 1647347146644,
+  "history_notes" : null,
+  "history_process" : "1whsg3",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "cjbptr3z1i9",
+  "history_input" : "from argparse import ArgumentParser, Namespace\n\nimport pytorch_lightning as pl\nimport torch\nfrom torch import nn\n\nfrom typing import Dict, Tuple, Type, Any, List, Optional\nfrom src_models_lstm import UnrolledLSTM\n\n\nclass Forecaster(pl.LightningModule):\n    r\"\"\"\n    An LSTM based model to predict a multispectral sequence.\n\n    :param input_size: The number of input bands passed to the model. The\n        input vector is expected to be of shape [batch_size, timesteps, bands]\n    :param output_timesteps: The number of timesteps to predict\n\n    hparams\n    --------\n    The default values for these parameters are set in add_model_specific_args\n\n    :param hparams.forecasting_vector_size: The size of the hidden vector in the LSTM\n        Default = 128\n    :param hparams.forecasting_dropout: Variational dropout ratio to apply between timesteps in\n        the LSTM base. Default = 0.2\n    \"\"\"\n\n    def __init__(self, num_bands: int, output_timesteps: int, hparams: Namespace,) -> None:\n        super().__init__()\n        self.output_timesteps = output_timesteps\n        self.lstm = UnrolledLSTM(\n            input_size=num_bands,\n            hidden_size=hparams.forecasting_vector_size,\n            dropout=hparams.forecasting_dropout,\n            batch_first=True,\n        )\n\n        self.to_bands = nn.Linear(\n            in_features=hparams.forecasting_vector_size, out_features=num_bands\n        )\n\n    def forward(self, x: torch.Tensor) -> torch.Tensor:\n\n        hidden_tuple: Optional[Tuple[torch.Tensor, torch.Tensor]] = None\n\n        input_timesteps = x.shape[1]\n        assert input_timesteps >= 1\n\n        predicted_output: List[torch.Tensor] = []\n        for i in range(input_timesteps):\n            input = x[:, i : i + 1, :]\n            output, hidden_tuple = self.lstm(input, hidden_tuple)\n            output = self.to_bands(torch.transpose(output[0, :, :, :], 0, 1))\n            predicted_output.append(output)\n\n        # we have already predicted the first output timestep (the last\n        # output of the loop above)\n        for i in range(self.output_timesteps - 1):\n            output, hidden_tuple = self.lstm(output, hidden_tuple)\n            output = self.to_bands(torch.transpose(output[0, :, :, :], 0, 1))\n            predicted_output.append(output)\n        return torch.cat(predicted_output, dim=1)\n\n    @staticmethod\n    def add_model_specific_args(parent_parser: ArgumentParser) -> ArgumentParser:\n        parser = ArgumentParser(parents=[parent_parser], add_help=False)\n\n        parser_args: Dict[str, Tuple[Type, Any]] = {\n            \"--forecasting_vector_size\": (int, 256),\n            \"--forecasting_dropout\": (float, 0.2),\n        }\n\n        for key, vals in parser_args.items():\n            parser.add_argument(key, type=vals[0], default=vals[1])\n\n        return parser\n",
+  "history_output" : "",
+  "history_begin_time" : 1647346838898,
+  "history_end_time" : 1647346841121,
+  "history_notes" : null,
+  "history_process" : "1whsg3",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "7tza8tgm2hw",
+  "history_input" : "from argparse import ArgumentParser, Namespace\n\nimport pytorch_lightning as pl\nimport torch\nfrom torch import nn\n\nfrom typing import Dict, Tuple, Type, Any, List, Optional\nfrom src_models_lstm import UnrolledLSTM\n\n\nclass Forecaster(pl.LightningModule):\n    r\"\"\"\n    An LSTM based model to predict a multispectral sequence.\n\n    :param input_size: The number of input bands passed to the model. The\n        input vector is expected to be of shape [batch_size, timesteps, bands]\n    :param output_timesteps: The number of timesteps to predict\n\n    hparams\n    --------\n    The default values for these parameters are set in add_model_specific_args\n\n    :param hparams.forecasting_vector_size: The size of the hidden vector in the LSTM\n        Default = 128\n    :param hparams.forecasting_dropout: Variational dropout ratio to apply between timesteps in\n        the LSTM base. Default = 0.2\n    \"\"\"\n\n    def __init__(self, num_bands: int, output_timesteps: int, hparams: Namespace,) -> None:\n        super().__init__()\n        self.output_timesteps = output_timesteps\n        self.lstm = UnrolledLSTM(\n            input_size=num_bands,\n            hidden_size=hparams.forecasting_vector_size,\n            dropout=hparams.forecasting_dropout,\n            batch_first=True,\n        )\n\n        self.to_bands = nn.Linear(\n            in_features=hparams.forecasting_vector_size, out_features=num_bands\n        )\n\n    def forward(self, x: torch.Tensor) -> torch.Tensor:\n\n        hidden_tuple: Optional[Tuple[torch.Tensor, torch.Tensor]] = None\n\n        input_timesteps = x.shape[1]\n        assert input_timesteps >= 1\n\n        predicted_output: List[torch.Tensor] = []\n        for i in range(input_timesteps):\n            input = x[:, i : i + 1, :]\n            output, hidden_tuple = self.lstm(input, hidden_tuple)\n            output = self.to_bands(torch.transpose(output[0, :, :, :], 0, 1))\n            predicted_output.append(output)\n\n        # we have already predicted the first output timestep (the last\n        # output of the loop above)\n        for i in range(self.output_timesteps - 1):\n            output, hidden_tuple = self.lstm(output, hidden_tuple)\n            output = self.to_bands(torch.transpose(output[0, :, :, :], 0, 1))\n            predicted_output.append(output)\n        return torch.cat(predicted_output, dim=1)\n\n    @staticmethod\n    def add_model_specific_args(parent_parser: ArgumentParser) -> ArgumentParser:\n        parser = ArgumentParser(parents=[parent_parser], add_help=False)\n\n        parser_args: Dict[str, Tuple[Type, Any]] = {\n            \"--forecasting_vector_size\": (int, 256),\n            \"--forecasting_dropout\": (float, 0.2),\n        }\n\n        for key, vals in parser_args.items():\n            parser.add_argument(key, type=vals[0], default=vals[1])\n\n        return parser\n",
+  "history_output" : "",
+  "history_begin_time" : 1647346680373,
+  "history_end_time" : 1647346682754,
+  "history_notes" : null,
+  "history_process" : "1whsg3",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "2jiveyu1c6y",
+  "history_input" : "from argparse import ArgumentParser, Namespace\n\nimport pytorch_lightning as pl\nimport torch\nfrom torch import nn\n\nfrom typing import Dict, Tuple, Type, Any, List, Optional\nfrom src_models_lstm import UnrolledLSTM\n\n\nclass Forecaster(pl.LightningModule):\n    r\"\"\"\n    An LSTM based model to predict a multispectral sequence.\n\n    :param input_size: The number of input bands passed to the model. The\n        input vector is expected to be of shape [batch_size, timesteps, bands]\n    :param output_timesteps: The number of timesteps to predict\n\n    hparams\n    --------\n    The default values for these parameters are set in add_model_specific_args\n\n    :param hparams.forecasting_vector_size: The size of the hidden vector in the LSTM\n        Default = 128\n    :param hparams.forecasting_dropout: Variational dropout ratio to apply between timesteps in\n        the LSTM base. Default = 0.2\n    \"\"\"\n\n    def __init__(self, num_bands: int, output_timesteps: int, hparams: Namespace,) -> None:\n        super().__init__()\n        self.output_timesteps = output_timesteps\n        self.lstm = UnrolledLSTM(\n            input_size=num_bands,\n            hidden_size=hparams.forecasting_vector_size,\n            dropout=hparams.forecasting_dropout,\n            batch_first=True,\n        )\n\n        self.to_bands = nn.Linear(\n            in_features=hparams.forecasting_vector_size, out_features=num_bands\n        )\n\n    def forward(self, x: torch.Tensor) -> torch.Tensor:\n\n        hidden_tuple: Optional[Tuple[torch.Tensor, torch.Tensor]] = None\n\n        input_timesteps = x.shape[1]\n        assert input_timesteps >= 1\n\n        predicted_output: List[torch.Tensor] = []\n        for i in range(input_timesteps):\n            input = x[:, i : i + 1, :]\n            output, hidden_tuple = self.lstm(input, hidden_tuple)\n            output = self.to_bands(torch.transpose(output[0, :, :, :], 0, 1))\n            predicted_output.append(output)\n\n        # we have already predicted the first output timestep (the last\n        # output of the loop above)\n        for i in range(self.output_timesteps - 1):\n            output, hidden_tuple = self.lstm(output, hidden_tuple)\n            output = self.to_bands(torch.transpose(output[0, :, :, :], 0, 1))\n            predicted_output.append(output)\n        return torch.cat(predicted_output, dim=1)\n\n    @staticmethod\n    def add_model_specific_args(parent_parser: ArgumentParser) -> ArgumentParser:\n        parser = ArgumentParser(parents=[parent_parser], add_help=False)\n\n        parser_args: Dict[str, Tuple[Type, Any]] = {\n            \"--forecasting_vector_size\": (int, 256),\n            \"--forecasting_dropout\": (float, 0.2),\n        }\n\n        for key, vals in parser_args.items():\n            parser.add_argument(key, type=vals[0], default=vals[1])\n\n        return parser\n",
+  "history_output" : "",
+  "history_begin_time" : 1646138297853,
+  "history_end_time" : 1646138300642,
+  "history_notes" : null,
+  "history_process" : "1whsg3",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "6w27swjijdt",
+  "history_input" : "from argparse import ArgumentParser, Namespace\n\nimport pytorch_lightning as pl\nimport torch\nfrom torch import nn\n\nfrom typing import Dict, Tuple, Type, Any, List, Optional\nfrom src_models_lstm import UnrolledLSTM\n\n\nclass Forecaster(pl.LightningModule):\n    r\"\"\"\n    An LSTM based model to predict a multispectral sequence.\n\n    :param input_size: The number of input bands passed to the model. The\n        input vector is expected to be of shape [batch_size, timesteps, bands]\n    :param output_timesteps: The number of timesteps to predict\n\n    hparams\n    --------\n    The default values for these parameters are set in add_model_specific_args\n\n    :param hparams.forecasting_vector_size: The size of the hidden vector in the LSTM\n        Default = 128\n    :param hparams.forecasting_dropout: Variational dropout ratio to apply between timesteps in\n        the LSTM base. Default = 0.2\n    \"\"\"\n\n    def __init__(self, num_bands: int, output_timesteps: int, hparams: Namespace,) -> None:\n        super().__init__()\n        self.output_timesteps = output_timesteps\n        self.lstm = UnrolledLSTM(\n            input_size=num_bands,\n            hidden_size=hparams.forecasting_vector_size,\n            dropout=hparams.forecasting_dropout,\n            batch_first=True,\n        )\n\n        self.to_bands = nn.Linear(\n            in_features=hparams.forecasting_vector_size, out_features=num_bands\n        )\n\n    def forward(self, x: torch.Tensor) -> torch.Tensor:\n\n        hidden_tuple: Optional[Tuple[torch.Tensor, torch.Tensor]] = None\n\n        input_timesteps = x.shape[1]\n        assert input_timesteps >= 1\n\n        predicted_output: List[torch.Tensor] = []\n        for i in range(input_timesteps):\n            input = x[:, i : i + 1, :]\n            output, hidden_tuple = self.lstm(input, hidden_tuple)\n            output = self.to_bands(torch.transpose(output[0, :, :, :], 0, 1))\n            predicted_output.append(output)\n\n        # we have already predicted the first output timestep (the last\n        # output of the loop above)\n        for i in range(self.output_timesteps - 1):\n            output, hidden_tuple = self.lstm(output, hidden_tuple)\n            output = self.to_bands(torch.transpose(output[0, :, :, :], 0, 1))\n            predicted_output.append(output)\n        return torch.cat(predicted_output, dim=1)\n\n    @staticmethod\n    def add_model_specific_args(parent_parser: ArgumentParser) -> ArgumentParser:\n        parser = ArgumentParser(parents=[parent_parser], add_help=False)\n\n        parser_args: Dict[str, Tuple[Type, Any]] = {\n            \"--forecasting_vector_size\": (int, 256),\n            \"--forecasting_dropout\": (float, 0.2),\n        }\n\n        for key, vals in parser_args.items():\n            parser.add_argument(key, type=vals[0], default=vals[1])\n\n        return parser\n",
+  "history_output" : "",
+  "history_begin_time" : 1646138200205,
+  "history_end_time" : 1646138202544,
+  "history_notes" : null,
+  "history_process" : "1whsg3",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "lgt1279u6ln",
+  "history_input" : "from argparse import ArgumentParser, Namespace\n\nimport pytorch_lightning as pl\nimport torch\nfrom torch import nn\n\nfrom typing import Dict, Tuple, Type, Any, List, Optional\nfrom src_models_lstm import UnrolledLSTM\n\n\nclass Forecaster(pl.LightningModule):\n    r\"\"\"\n    An LSTM based model to predict a multispectral sequence.\n\n    :param input_size: The number of input bands passed to the model. The\n        input vector is expected to be of shape [batch_size, timesteps, bands]\n    :param output_timesteps: The number of timesteps to predict\n\n    hparams\n    --------\n    The default values for these parameters are set in add_model_specific_args\n\n    :param hparams.forecasting_vector_size: The size of the hidden vector in the LSTM\n        Default = 128\n    :param hparams.forecasting_dropout: Variational dropout ratio to apply between timesteps in\n        the LSTM base. Default = 0.2\n    \"\"\"\n\n    def __init__(self, num_bands: int, output_timesteps: int, hparams: Namespace,) -> None:\n        super().__init__()\n        self.output_timesteps = output_timesteps\n        self.lstm = UnrolledLSTM(\n            input_size=num_bands,\n            hidden_size=hparams.forecasting_vector_size,\n            dropout=hparams.forecasting_dropout,\n            batch_first=True,\n        )\n\n        self.to_bands = nn.Linear(\n            in_features=hparams.forecasting_vector_size, out_features=num_bands\n        )\n\n    def forward(self, x: torch.Tensor) -> torch.Tensor:\n\n        hidden_tuple: Optional[Tuple[torch.Tensor, torch.Tensor]] = None\n\n        input_timesteps = x.shape[1]\n        assert input_timesteps >= 1\n\n        predicted_output: List[torch.Tensor] = []\n        for i in range(input_timesteps):\n            input = x[:, i : i + 1, :]\n            output, hidden_tuple = self.lstm(input, hidden_tuple)\n            output = self.to_bands(torch.transpose(output[0, :, :, :], 0, 1))\n            predicted_output.append(output)\n\n        # we have already predicted the first output timestep (the last\n        # output of the loop above)\n        for i in range(self.output_timesteps - 1):\n            output, hidden_tuple = self.lstm(output, hidden_tuple)\n            output = self.to_bands(torch.transpose(output[0, :, :, :], 0, 1))\n            predicted_output.append(output)\n        return torch.cat(predicted_output, dim=1)\n\n    @staticmethod\n    def add_model_specific_args(parent_parser: ArgumentParser) -> ArgumentParser:\n        parser = ArgumentParser(parents=[parent_parser], add_help=False)\n\n        parser_args: Dict[str, Tuple[Type, Any]] = {\n            \"--forecasting_vector_size\": (int, 256),\n            \"--forecasting_dropout\": (float, 0.2),\n        }\n\n        for key, vals in parser_args.items():\n            parser.add_argument(key, type=vals[0], default=vals[1])\n\n        return parser\n",
+  "history_output" : "",
+  "history_begin_time" : 1646138113089,
+  "history_end_time" : 1646138115344,
+  "history_notes" : null,
+  "history_process" : "1whsg3",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "wfiqrfk32hw",
+  "history_input" : "from argparse import ArgumentParser, Namespace\n\nimport pytorch_lightning as pl\nimport torch\nfrom torch import nn\n\nfrom typing import Dict, Tuple, Type, Any, List, Optional\nfrom src_models_lstm import UnrolledLSTM\n\n\nclass Forecaster(pl.LightningModule):\n    r\"\"\"\n    An LSTM based model to predict a multispectral sequence.\n\n    :param input_size: The number of input bands passed to the model. The\n        input vector is expected to be of shape [batch_size, timesteps, bands]\n    :param output_timesteps: The number of timesteps to predict\n\n    hparams\n    --------\n    The default values for these parameters are set in add_model_specific_args\n\n    :param hparams.forecasting_vector_size: The size of the hidden vector in the LSTM\n        Default = 128\n    :param hparams.forecasting_dropout: Variational dropout ratio to apply between timesteps in\n        the LSTM base. Default = 0.2\n    \"\"\"\n\n    def __init__(self, num_bands: int, output_timesteps: int, hparams: Namespace,) -> None:\n        super().__init__()\n        self.output_timesteps = output_timesteps\n        self.lstm = UnrolledLSTM(\n            input_size=num_bands,\n            hidden_size=hparams.forecasting_vector_size,\n            dropout=hparams.forecasting_dropout,\n            batch_first=True,\n        )\n\n        self.to_bands = nn.Linear(\n            in_features=hparams.forecasting_vector_size, out_features=num_bands\n        )\n\n    def forward(self, x: torch.Tensor) -> torch.Tensor:\n\n        hidden_tuple: Optional[Tuple[torch.Tensor, torch.Tensor]] = None\n\n        input_timesteps = x.shape[1]\n        assert input_timesteps >= 1\n\n        predicted_output: List[torch.Tensor] = []\n        for i in range(input_timesteps):\n            input = x[:, i : i + 1, :]\n            output, hidden_tuple = self.lstm(input, hidden_tuple)\n            output = self.to_bands(torch.transpose(output[0, :, :, :], 0, 1))\n            predicted_output.append(output)\n\n        # we have already predicted the first output timestep (the last\n        # output of the loop above)\n        for i in range(self.output_timesteps - 1):\n            output, hidden_tuple = self.lstm(output, hidden_tuple)\n            output = self.to_bands(torch.transpose(output[0, :, :, :], 0, 1))\n            predicted_output.append(output)\n        return torch.cat(predicted_output, dim=1)\n\n    @staticmethod\n    def add_model_specific_args(parent_parser: ArgumentParser) -> ArgumentParser:\n        parser = ArgumentParser(parents=[parent_parser], add_help=False)\n\n        parser_args: Dict[str, Tuple[Type, Any]] = {\n            \"--forecasting_vector_size\": (int, 256),\n            \"--forecasting_dropout\": (float, 0.2),\n        }\n\n        for key, vals in parser_args.items():\n            parser.add_argument(key, type=vals[0], default=vals[1])\n\n        return parser\n",
+  "history_output" : "",
+  "history_begin_time" : 1646137797836,
+  "history_end_time" : 1646137800303,
+  "history_notes" : null,
+  "history_process" : "1whsg3",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "x5mr754zhd9",
+  "history_input" : "from argparse import ArgumentParser, Namespace\n\nimport pytorch_lightning as pl\nimport torch\nfrom torch import nn\n\nfrom typing import Dict, Tuple, Type, Any, List, Optional\nfrom src_models_lstm import UnrolledLSTM\n\n\nclass Forecaster(pl.LightningModule):\n    r\"\"\"\n    An LSTM based model to predict a multispectral sequence.\n\n    :param input_size: The number of input bands passed to the model. The\n        input vector is expected to be of shape [batch_size, timesteps, bands]\n    :param output_timesteps: The number of timesteps to predict\n\n    hparams\n    --------\n    The default values for these parameters are set in add_model_specific_args\n\n    :param hparams.forecasting_vector_size: The size of the hidden vector in the LSTM\n        Default = 128\n    :param hparams.forecasting_dropout: Variational dropout ratio to apply between timesteps in\n        the LSTM base. Default = 0.2\n    \"\"\"\n\n    def __init__(self, num_bands: int, output_timesteps: int, hparams: Namespace,) -> None:\n        super().__init__()\n        self.output_timesteps = output_timesteps\n        self.lstm = UnrolledLSTM(\n            input_size=num_bands,\n            hidden_size=hparams.forecasting_vector_size,\n            dropout=hparams.forecasting_dropout,\n            batch_first=True,\n        )\n\n        self.to_bands = nn.Linear(\n            in_features=hparams.forecasting_vector_size, out_features=num_bands\n        )\n\n    def forward(self, x: torch.Tensor) -> torch.Tensor:\n\n        hidden_tuple: Optional[Tuple[torch.Tensor, torch.Tensor]] = None\n\n        input_timesteps = x.shape[1]\n        assert input_timesteps >= 1\n\n        predicted_output: List[torch.Tensor] = []\n        for i in range(input_timesteps):\n            input = x[:, i : i + 1, :]\n            output, hidden_tuple = self.lstm(input, hidden_tuple)\n            output = self.to_bands(torch.transpose(output[0, :, :, :], 0, 1))\n            predicted_output.append(output)\n\n        # we have already predicted the first output timestep (the last\n        # output of the loop above)\n        for i in range(self.output_timesteps - 1):\n            output, hidden_tuple = self.lstm(output, hidden_tuple)\n            output = self.to_bands(torch.transpose(output[0, :, :, :], 0, 1))\n            predicted_output.append(output)\n        return torch.cat(predicted_output, dim=1)\n\n    @staticmethod\n    def add_model_specific_args(parent_parser: ArgumentParser) -> ArgumentParser:\n        parser = ArgumentParser(parents=[parent_parser], add_help=False)\n\n        parser_args: Dict[str, Tuple[Type, Any]] = {\n            \"--forecasting_vector_size\": (int, 256),\n            \"--forecasting_dropout\": (float, 0.2),\n        }\n\n        for key, vals in parser_args.items():\n            parser.add_argument(key, type=vals[0], default=vals[1])\n\n        return parser\n",
+  "history_output" : "",
+  "history_begin_time" : 1646137705019,
+  "history_end_time" : 1646137707855,
+  "history_notes" : null,
+  "history_process" : "1whsg3",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "x4lzmyd1o9q",
+  "history_input" : "from argparse import ArgumentParser, Namespace\n\nimport pytorch_lightning as pl\nimport torch\nfrom torch import nn\n\nfrom typing import Dict, Tuple, Type, Any, List, Optional\nfrom src_models_lstm import UnrolledLSTM\n\n\nclass Forecaster(pl.LightningModule):\n    r\"\"\"\n    An LSTM based model to predict a multispectral sequence.\n\n    :param input_size: The number of input bands passed to the model. The\n        input vector is expected to be of shape [batch_size, timesteps, bands]\n    :param output_timesteps: The number of timesteps to predict\n\n    hparams\n    --------\n    The default values for these parameters are set in add_model_specific_args\n\n    :param hparams.forecasting_vector_size: The size of the hidden vector in the LSTM\n        Default = 128\n    :param hparams.forecasting_dropout: Variational dropout ratio to apply between timesteps in\n        the LSTM base. Default = 0.2\n    \"\"\"\n\n    def __init__(self, num_bands: int, output_timesteps: int, hparams: Namespace,) -> None:\n        super().__init__()\n        self.output_timesteps = output_timesteps\n        self.lstm = UnrolledLSTM(\n            input_size=num_bands,\n            hidden_size=hparams.forecasting_vector_size,\n            dropout=hparams.forecasting_dropout,\n            batch_first=True,\n        )\n\n        self.to_bands = nn.Linear(\n            in_features=hparams.forecasting_vector_size, out_features=num_bands\n        )\n\n    def forward(self, x: torch.Tensor) -> torch.Tensor:\n\n        hidden_tuple: Optional[Tuple[torch.Tensor, torch.Tensor]] = None\n\n        input_timesteps = x.shape[1]\n        assert input_timesteps >= 1\n\n        predicted_output: List[torch.Tensor] = []\n        for i in range(input_timesteps):\n            input = x[:, i : i + 1, :]\n            output, hidden_tuple = self.lstm(input, hidden_tuple)\n            output = self.to_bands(torch.transpose(output[0, :, :, :], 0, 1))\n            predicted_output.append(output)\n\n        # we have already predicted the first output timestep (the last\n        # output of the loop above)\n        for i in range(self.output_timesteps - 1):\n            output, hidden_tuple = self.lstm(output, hidden_tuple)\n            output = self.to_bands(torch.transpose(output[0, :, :, :], 0, 1))\n            predicted_output.append(output)\n        return torch.cat(predicted_output, dim=1)\n\n    @staticmethod\n    def add_model_specific_args(parent_parser: ArgumentParser) -> ArgumentParser:\n        parser = ArgumentParser(parents=[parent_parser], add_help=False)\n\n        parser_args: Dict[str, Tuple[Type, Any]] = {\n            \"--forecasting_vector_size\": (int, 256),\n            \"--forecasting_dropout\": (float, 0.2),\n        }\n\n        for key, vals in parser_args.items():\n            parser.add_argument(key, type=vals[0], default=vals[1])\n\n        return parser\n",
+  "history_output" : "\nStream closed",
+  "history_begin_time" : 1646137596612,
+  "history_end_time" : 1646137596660,
+  "history_notes" : null,
+  "history_process" : "1whsg3",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "vdlcofwac4b",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1655907403257,
+  "history_notes" : null,
+  "history_process" : "1whsg3",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},]

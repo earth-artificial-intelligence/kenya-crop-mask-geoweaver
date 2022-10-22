@@ -1,0 +1,641 @@
+[{
+  "history_id" : "70yyyfi204t",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666167825331,
+  "history_end_time" : 1666167825331,
+  "history_notes" : null,
+  "history_process" : "jsnayl",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "06xt5jd453w",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666167772285,
+  "history_end_time" : 1666167772285,
+  "history_notes" : null,
+  "history_process" : "jsnayl",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "hithhxferwf",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666166465568,
+  "history_end_time" : 1666166465568,
+  "history_notes" : null,
+  "history_process" : "jsnayl",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "a8n5s2vtwnb",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666166410224,
+  "history_end_time" : 1666166419925,
+  "history_notes" : null,
+  "history_process" : "jsnayl",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "x38nfiuaigd",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666164233037,
+  "history_end_time" : 1666164233037,
+  "history_notes" : null,
+  "history_process" : "jsnayl",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "7thd02dlqoz",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666163607240,
+  "history_end_time" : 1666163607240,
+  "history_notes" : null,
+  "history_process" : "jsnayl",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "w1w4ucz8yyt",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666137012923,
+  "history_end_time" : 1666137012923,
+  "history_notes" : null,
+  "history_process" : "jsnayl",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "1qtbf0yevqi",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666136593444,
+  "history_end_time" : 1666136593444,
+  "history_notes" : null,
+  "history_process" : "jsnayl",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "78e2nqs4jrf",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666136435736,
+  "history_end_time" : 1666136435736,
+  "history_notes" : null,
+  "history_process" : "jsnayl",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "9i8qpo08jmw",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666134110713,
+  "history_end_time" : 1666134110713,
+  "history_notes" : null,
+  "history_process" : "jsnayl",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "2c56b75dryk",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666134036865,
+  "history_end_time" : 1666134036865,
+  "history_notes" : null,
+  "history_process" : "jsnayl",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "sty7a9tiqex",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666134008916,
+  "history_end_time" : 1666134008916,
+  "history_notes" : null,
+  "history_process" : "jsnayl",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "apx6xs1y5x6",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666131993103,
+  "history_end_time" : 1666131993103,
+  "history_notes" : null,
+  "history_process" : "jsnayl",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "dw72v9eq8yn",
+  "history_input" : "# These are algorithm settings for the cloud filtering algorithm\nimage_collection = \"COPERNICUS/S2\"\n\n# Ranges from 0-1.Lower value will mask more pixels out.\n# Generally 0.1-0.3 works well with 0.2 being used most commonly\ncloudThresh = 0.2\n# Height of clouds to use to project cloud shadows\ncloudHeights = [200, 10000, 250]\n# Sum of IR bands to include as shadows within TDOM and the\n# shadow shift method (lower number masks out less)\nirSumThresh = 0.3\nndviThresh = -0.1\n# Pixels to reduce cloud mask and dark shadows by to reduce inclusion\n# of single-pixel comission errors\nerodePixels = 1.5\ndilationPixels = 3\n\n# images with less than this many cloud pixels will be used with normal\n# mosaicing (most recent on top)\ncloudFreeKeepThresh = 3\n\nBANDS = [\n    \"B1\",\n    \"B2\",\n    \"B3\",\n    \"B4\",\n    \"B5\",\n    \"B6\",\n    \"B7\",\n    \"B8\",\n    \"B8A\",\n    \"B9\",\n    \"B10\",\n    \"B11\",\n    \"B12\",\n]\n",
+  "history_output" : "",
+  "history_begin_time" : 1666118263210,
+  "history_end_time" : 1666118264704,
+  "history_notes" : null,
+  "history_process" : "jsnayl",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "wvqhy3v0wc4",
+  "history_input" : "# These are algorithm settings for the cloud filtering algorithm\nimage_collection = \"COPERNICUS/S2\"\n\n# Ranges from 0-1.Lower value will mask more pixels out.\n# Generally 0.1-0.3 works well with 0.2 being used most commonly\ncloudThresh = 0.2\n# Height of clouds to use to project cloud shadows\ncloudHeights = [200, 10000, 250]\n# Sum of IR bands to include as shadows within TDOM and the\n# shadow shift method (lower number masks out less)\nirSumThresh = 0.3\nndviThresh = -0.1\n# Pixels to reduce cloud mask and dark shadows by to reduce inclusion\n# of single-pixel comission errors\nerodePixels = 1.5\ndilationPixels = 3\n\n# images with less than this many cloud pixels will be used with normal\n# mosaicing (most recent on top)\ncloudFreeKeepThresh = 3\n\nBANDS = [\n    \"B1\",\n    \"B2\",\n    \"B3\",\n    \"B4\",\n    \"B5\",\n    \"B6\",\n    \"B7\",\n    \"B8\",\n    \"B8A\",\n    \"B9\",\n    \"B10\",\n    \"B11\",\n    \"B12\",\n]\n",
+  "history_output" : "",
+  "history_begin_time" : 1655909864651,
+  "history_end_time" : 1655909865508,
+  "history_notes" : null,
+  "history_process" : "jsnayl",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "fazupg1ym3j",
+  "history_input" : "# These are algorithm settings for the cloud filtering algorithm\nimage_collection = \"COPERNICUS/S2\"\n\n# Ranges from 0-1.Lower value will mask more pixels out.\n# Generally 0.1-0.3 works well with 0.2 being used most commonly\ncloudThresh = 0.2\n# Height of clouds to use to project cloud shadows\ncloudHeights = [200, 10000, 250]\n# Sum of IR bands to include as shadows within TDOM and the\n# shadow shift method (lower number masks out less)\nirSumThresh = 0.3\nndviThresh = -0.1\n# Pixels to reduce cloud mask and dark shadows by to reduce inclusion\n# of single-pixel comission errors\nerodePixels = 1.5\ndilationPixels = 3\n\n# images with less than this many cloud pixels will be used with normal\n# mosaicing (most recent on top)\ncloudFreeKeepThresh = 3\n\nBANDS = [\n    \"B1\",\n    \"B2\",\n    \"B3\",\n    \"B4\",\n    \"B5\",\n    \"B6\",\n    \"B7\",\n    \"B8\",\n    \"B8A\",\n    \"B9\",\n    \"B10\",\n    \"B11\",\n    \"B12\",\n]\n",
+  "history_output" : "",
+  "history_begin_time" : 1655908819914,
+  "history_end_time" : 1655908820104,
+  "history_notes" : null,
+  "history_process" : "jsnayl",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "whi1vh7m2h3",
+  "history_input" : "# These are algorithm settings for the cloud filtering algorithm\nimage_collection = \"COPERNICUS/S2\"\n\n# Ranges from 0-1.Lower value will mask more pixels out.\n# Generally 0.1-0.3 works well with 0.2 being used most commonly\ncloudThresh = 0.2\n# Height of clouds to use to project cloud shadows\ncloudHeights = [200, 10000, 250]\n# Sum of IR bands to include as shadows within TDOM and the\n# shadow shift method (lower number masks out less)\nirSumThresh = 0.3\nndviThresh = -0.1\n# Pixels to reduce cloud mask and dark shadows by to reduce inclusion\n# of single-pixel comission errors\nerodePixels = 1.5\ndilationPixels = 3\n\n# images with less than this many cloud pixels will be used with normal\n# mosaicing (most recent on top)\ncloudFreeKeepThresh = 3\n\nBANDS = [\n    \"B1\",\n    \"B2\",\n    \"B3\",\n    \"B4\",\n    \"B5\",\n    \"B6\",\n    \"B7\",\n    \"B8\",\n    \"B8A\",\n    \"B9\",\n    \"B10\",\n    \"B11\",\n    \"B12\",\n]\n",
+  "history_output" : "",
+  "history_begin_time" : 1655907422231,
+  "history_end_time" : 1655907422546,
+  "history_notes" : null,
+  "history_process" : "jsnayl",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "3467mlf3fk7",
+  "history_input" : "# These are algorithm settings for the cloud filtering algorithm\nimage_collection = \"COPERNICUS/S2\"\n\n# Ranges from 0-1.Lower value will mask more pixels out.\n# Generally 0.1-0.3 works well with 0.2 being used most commonly\ncloudThresh = 0.2\n# Height of clouds to use to project cloud shadows\ncloudHeights = [200, 10000, 250]\n# Sum of IR bands to include as shadows within TDOM and the\n# shadow shift method (lower number masks out less)\nirSumThresh = 0.3\nndviThresh = -0.1\n# Pixels to reduce cloud mask and dark shadows by to reduce inclusion\n# of single-pixel comission errors\nerodePixels = 1.5\ndilationPixels = 3\n\n# images with less than this many cloud pixels will be used with normal\n# mosaicing (most recent on top)\ncloudFreeKeepThresh = 3\n\nBANDS = [\n    \"B1\",\n    \"B2\",\n    \"B3\",\n    \"B4\",\n    \"B5\",\n    \"B6\",\n    \"B7\",\n    \"B8\",\n    \"B8A\",\n    \"B9\",\n    \"B10\",\n    \"B11\",\n    \"B12\",\n]\n",
+  "history_output" : "",
+  "history_begin_time" : 1655907391216,
+  "history_end_time" : 1655907403060,
+  "history_notes" : null,
+  "history_process" : "jsnayl",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "oq1k4srhg99",
+  "history_input" : "# These are algorithm settings for the cloud filtering algorithm\nimage_collection = \"COPERNICUS/S2\"\n\n# Ranges from 0-1.Lower value will mask more pixels out.\n# Generally 0.1-0.3 works well with 0.2 being used most commonly\ncloudThresh = 0.2\n# Height of clouds to use to project cloud shadows\ncloudHeights = [200, 10000, 250]\n# Sum of IR bands to include as shadows within TDOM and the\n# shadow shift method (lower number masks out less)\nirSumThresh = 0.3\nndviThresh = -0.1\n# Pixels to reduce cloud mask and dark shadows by to reduce inclusion\n# of single-pixel comission errors\nerodePixels = 1.5\ndilationPixels = 3\n\n# images with less than this many cloud pixels will be used with normal\n# mosaicing (most recent on top)\ncloudFreeKeepThresh = 3\n\nBANDS = [\n    \"B1\",\n    \"B2\",\n    \"B3\",\n    \"B4\",\n    \"B5\",\n    \"B6\",\n    \"B7\",\n    \"B8\",\n    \"B8A\",\n    \"B9\",\n    \"B10\",\n    \"B11\",\n    \"B12\",\n]\n",
+  "history_output" : "",
+  "history_begin_time" : 1655865839271,
+  "history_end_time" : 1655865858631,
+  "history_notes" : null,
+  "history_process" : "jsnayl",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "exgcx1j54k4",
+  "history_input" : "# These are algorithm settings for the cloud filtering algorithm\nimage_collection = \"COPERNICUS/S2\"\n\n# Ranges from 0-1.Lower value will mask more pixels out.\n# Generally 0.1-0.3 works well with 0.2 being used most commonly\ncloudThresh = 0.2\n# Height of clouds to use to project cloud shadows\ncloudHeights = [200, 10000, 250]\n# Sum of IR bands to include as shadows within TDOM and the\n# shadow shift method (lower number masks out less)\nirSumThresh = 0.3\nndviThresh = -0.1\n# Pixels to reduce cloud mask and dark shadows by to reduce inclusion\n# of single-pixel comission errors\nerodePixels = 1.5\ndilationPixels = 3\n\n# images with less than this many cloud pixels will be used with normal\n# mosaicing (most recent on top)\ncloudFreeKeepThresh = 3\n\nBANDS = [\n    \"B1\",\n    \"B2\",\n    \"B3\",\n    \"B4\",\n    \"B5\",\n    \"B6\",\n    \"B7\",\n    \"B8\",\n    \"B8A\",\n    \"B9\",\n    \"B10\",\n    \"B11\",\n    \"B12\",\n]\n",
+  "history_output" : "",
+  "history_begin_time" : 1655865073429,
+  "history_end_time" : 1655865074322,
+  "history_notes" : null,
+  "history_process" : "jsnayl",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "ih1ctiy9f3q",
+  "history_input" : "# These are algorithm settings for the cloud filtering algorithm\nimage_collection = \"COPERNICUS/S2\"\n\n# Ranges from 0-1.Lower value will mask more pixels out.\n# Generally 0.1-0.3 works well with 0.2 being used most commonly\ncloudThresh = 0.2\n# Height of clouds to use to project cloud shadows\ncloudHeights = [200, 10000, 250]\n# Sum of IR bands to include as shadows within TDOM and the\n# shadow shift method (lower number masks out less)\nirSumThresh = 0.3\nndviThresh = -0.1\n# Pixels to reduce cloud mask and dark shadows by to reduce inclusion\n# of single-pixel comission errors\nerodePixels = 1.5\ndilationPixels = 3\n\n# images with less than this many cloud pixels will be used with normal\n# mosaicing (most recent on top)\ncloudFreeKeepThresh = 3\n\nBANDS = [\n    \"B1\",\n    \"B2\",\n    \"B3\",\n    \"B4\",\n    \"B5\",\n    \"B6\",\n    \"B7\",\n    \"B8\",\n    \"B8A\",\n    \"B9\",\n    \"B10\",\n    \"B11\",\n    \"B12\",\n]\n",
+  "history_output" : "",
+  "history_begin_time" : 1647347425399,
+  "history_end_time" : 1647347425503,
+  "history_notes" : null,
+  "history_process" : "jsnayl",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "wv6ae25cms5",
+  "history_input" : "# These are algorithm settings for the cloud filtering algorithm\nimage_collection = \"COPERNICUS/S2\"\n\n# Ranges from 0-1.Lower value will mask more pixels out.\n# Generally 0.1-0.3 works well with 0.2 being used most commonly\ncloudThresh = 0.2\n# Height of clouds to use to project cloud shadows\ncloudHeights = [200, 10000, 250]\n# Sum of IR bands to include as shadows within TDOM and the\n# shadow shift method (lower number masks out less)\nirSumThresh = 0.3\nndviThresh = -0.1\n# Pixels to reduce cloud mask and dark shadows by to reduce inclusion\n# of single-pixel comission errors\nerodePixels = 1.5\ndilationPixels = 3\n\n# images with less than this many cloud pixels will be used with normal\n# mosaicing (most recent on top)\ncloudFreeKeepThresh = 3\n\nBANDS = [\n    \"B1\",\n    \"B2\",\n    \"B3\",\n    \"B4\",\n    \"B5\",\n    \"B6\",\n    \"B7\",\n    \"B8\",\n    \"B8A\",\n    \"B9\",\n    \"B10\",\n    \"B11\",\n    \"B12\",\n]\n",
+  "history_output" : "",
+  "history_begin_time" : 1647347333017,
+  "history_end_time" : 1647347333152,
+  "history_notes" : null,
+  "history_process" : "jsnayl",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "4p1b3hwffss",
+  "history_input" : "# These are algorithm settings for the cloud filtering algorithm\nimage_collection = \"COPERNICUS/S2\"\n\n# Ranges from 0-1.Lower value will mask more pixels out.\n# Generally 0.1-0.3 works well with 0.2 being used most commonly\ncloudThresh = 0.2\n# Height of clouds to use to project cloud shadows\ncloudHeights = [200, 10000, 250]\n# Sum of IR bands to include as shadows within TDOM and the\n# shadow shift method (lower number masks out less)\nirSumThresh = 0.3\nndviThresh = -0.1\n# Pixels to reduce cloud mask and dark shadows by to reduce inclusion\n# of single-pixel comission errors\nerodePixels = 1.5\ndilationPixels = 3\n\n# images with less than this many cloud pixels will be used with normal\n# mosaicing (most recent on top)\ncloudFreeKeepThresh = 3\n\nBANDS = [\n    \"B1\",\n    \"B2\",\n    \"B3\",\n    \"B4\",\n    \"B5\",\n    \"B6\",\n    \"B7\",\n    \"B8\",\n    \"B8A\",\n    \"B9\",\n    \"B10\",\n    \"B11\",\n    \"B12\",\n]\n",
+  "history_output" : "",
+  "history_begin_time" : 1647347263791,
+  "history_end_time" : 1647347263901,
+  "history_notes" : null,
+  "history_process" : "jsnayl",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "q8wlpf71wot",
+  "history_input" : "# These are algorithm settings for the cloud filtering algorithm\nimage_collection = \"COPERNICUS/S2\"\n\n# Ranges from 0-1.Lower value will mask more pixels out.\n# Generally 0.1-0.3 works well with 0.2 being used most commonly\ncloudThresh = 0.2\n# Height of clouds to use to project cloud shadows\ncloudHeights = [200, 10000, 250]\n# Sum of IR bands to include as shadows within TDOM and the\n# shadow shift method (lower number masks out less)\nirSumThresh = 0.3\nndviThresh = -0.1\n# Pixels to reduce cloud mask and dark shadows by to reduce inclusion\n# of single-pixel comission errors\nerodePixels = 1.5\ndilationPixels = 3\n\n# images with less than this many cloud pixels will be used with normal\n# mosaicing (most recent on top)\ncloudFreeKeepThresh = 3\n\nBANDS = [\n    \"B1\",\n    \"B2\",\n    \"B3\",\n    \"B4\",\n    \"B5\",\n    \"B6\",\n    \"B7\",\n    \"B8\",\n    \"B8A\",\n    \"B9\",\n    \"B10\",\n    \"B11\",\n    \"B12\",\n]\n",
+  "history_output" : "",
+  "history_begin_time" : 1647347130807,
+  "history_end_time" : 1647347130921,
+  "history_notes" : null,
+  "history_process" : "jsnayl",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "l0ort182med",
+  "history_input" : "# These are algorithm settings for the cloud filtering algorithm\nimage_collection = \"COPERNICUS/S2\"\n\n# Ranges from 0-1.Lower value will mask more pixels out.\n# Generally 0.1-0.3 works well with 0.2 being used most commonly\ncloudThresh = 0.2\n# Height of clouds to use to project cloud shadows\ncloudHeights = [200, 10000, 250]\n# Sum of IR bands to include as shadows within TDOM and the\n# shadow shift method (lower number masks out less)\nirSumThresh = 0.3\nndviThresh = -0.1\n# Pixels to reduce cloud mask and dark shadows by to reduce inclusion\n# of single-pixel comission errors\nerodePixels = 1.5\ndilationPixels = 3\n\n# images with less than this many cloud pixels will be used with normal\n# mosaicing (most recent on top)\ncloudFreeKeepThresh = 3\n\nBANDS = [\n    \"B1\",\n    \"B2\",\n    \"B3\",\n    \"B4\",\n    \"B5\",\n    \"B6\",\n    \"B7\",\n    \"B8\",\n    \"B8A\",\n    \"B9\",\n    \"B10\",\n    \"B11\",\n    \"B12\",\n]\n",
+  "history_output" : "",
+  "history_begin_time" : 1647346805714,
+  "history_end_time" : 1647346805842,
+  "history_notes" : null,
+  "history_process" : "jsnayl",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "uyxdy5vh2iq",
+  "history_input" : "# These are algorithm settings for the cloud filtering algorithm\nimage_collection = \"COPERNICUS/S2\"\n\n# Ranges from 0-1.Lower value will mask more pixels out.\n# Generally 0.1-0.3 works well with 0.2 being used most commonly\ncloudThresh = 0.2\n# Height of clouds to use to project cloud shadows\ncloudHeights = [200, 10000, 250]\n# Sum of IR bands to include as shadows within TDOM and the\n# shadow shift method (lower number masks out less)\nirSumThresh = 0.3\nndviThresh = -0.1\n# Pixels to reduce cloud mask and dark shadows by to reduce inclusion\n# of single-pixel comission errors\nerodePixels = 1.5\ndilationPixels = 3\n\n# images with less than this many cloud pixels will be used with normal\n# mosaicing (most recent on top)\ncloudFreeKeepThresh = 3\n\nBANDS = [\n    \"B1\",\n    \"B2\",\n    \"B3\",\n    \"B4\",\n    \"B5\",\n    \"B6\",\n    \"B7\",\n    \"B8\",\n    \"B8A\",\n    \"B9\",\n    \"B10\",\n    \"B11\",\n    \"B12\",\n]\n",
+  "history_output" : "",
+  "history_begin_time" : 1647346640571,
+  "history_end_time" : 1647346640731,
+  "history_notes" : null,
+  "history_process" : "jsnayl",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "cod7o6s0tt2",
+  "history_input" : "# These are algorithm settings for the cloud filtering algorithm\nimage_collection = \"COPERNICUS/S2\"\n\n# Ranges from 0-1.Lower value will mask more pixels out.\n# Generally 0.1-0.3 works well with 0.2 being used most commonly\ncloudThresh = 0.2\n# Height of clouds to use to project cloud shadows\ncloudHeights = [200, 10000, 250]\n# Sum of IR bands to include as shadows within TDOM and the\n# shadow shift method (lower number masks out less)\nirSumThresh = 0.3\nndviThresh = -0.1\n# Pixels to reduce cloud mask and dark shadows by to reduce inclusion\n# of single-pixel comission errors\nerodePixels = 1.5\ndilationPixels = 3\n\n# images with less than this many cloud pixels will be used with normal\n# mosaicing (most recent on top)\ncloudFreeKeepThresh = 3\n\nBANDS = [\n    \"B1\",\n    \"B2\",\n    \"B3\",\n    \"B4\",\n    \"B5\",\n    \"B6\",\n    \"B7\",\n    \"B8\",\n    \"B8A\",\n    \"B9\",\n    \"B10\",\n    \"B11\",\n    \"B12\",\n]\n",
+  "history_output" : "",
+  "history_begin_time" : 1647345836499,
+  "history_end_time" : 1647345836611,
+  "history_notes" : null,
+  "history_process" : "jsnayl",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "6748xft4la8",
+  "history_input" : "# These are algorithm settings for the cloud filtering algorithm\nimage_collection = \"COPERNICUS/S2\"\n\n# Ranges from 0-1.Lower value will mask more pixels out.\n# Generally 0.1-0.3 works well with 0.2 being used most commonly\ncloudThresh = 0.2\n# Height of clouds to use to project cloud shadows\ncloudHeights = [200, 10000, 250]\n# Sum of IR bands to include as shadows within TDOM and the\n# shadow shift method (lower number masks out less)\nirSumThresh = 0.3\nndviThresh = -0.1\n# Pixels to reduce cloud mask and dark shadows by to reduce inclusion\n# of single-pixel comission errors\nerodePixels = 1.5\ndilationPixels = 3\n\n# images with less than this many cloud pixels will be used with normal\n# mosaicing (most recent on top)\ncloudFreeKeepThresh = 3\n\nBANDS = [\n    \"B1\",\n    \"B2\",\n    \"B3\",\n    \"B4\",\n    \"B5\",\n    \"B6\",\n    \"B7\",\n    \"B8\",\n    \"B8A\",\n    \"B9\",\n    \"B10\",\n    \"B11\",\n    \"B12\",\n]\n",
+  "history_output" : "",
+  "history_begin_time" : 1647345651602,
+  "history_end_time" : 1647345651748,
+  "history_notes" : null,
+  "history_process" : "jsnayl",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "e8jg4xlx518",
+  "history_input" : "# These are algorithm settings for the cloud filtering algorithm\nimage_collection = \"COPERNICUS/S2\"\n\n# Ranges from 0-1.Lower value will mask more pixels out.\n# Generally 0.1-0.3 works well with 0.2 being used most commonly\ncloudThresh = 0.2\n# Height of clouds to use to project cloud shadows\ncloudHeights = [200, 10000, 250]\n# Sum of IR bands to include as shadows within TDOM and the\n# shadow shift method (lower number masks out less)\nirSumThresh = 0.3\nndviThresh = -0.1\n# Pixels to reduce cloud mask and dark shadows by to reduce inclusion\n# of single-pixel comission errors\nerodePixels = 1.5\ndilationPixels = 3\n\n# images with less than this many cloud pixels will be used with normal\n# mosaicing (most recent on top)\ncloudFreeKeepThresh = 3\n\nBANDS = [\n    \"B1\",\n    \"B2\",\n    \"B3\",\n    \"B4\",\n    \"B5\",\n    \"B6\",\n    \"B7\",\n    \"B8\",\n    \"B8A\",\n    \"B9\",\n    \"B10\",\n    \"B11\",\n    \"B12\",\n]\n",
+  "history_output" : "",
+  "history_begin_time" : 1647340108019,
+  "history_end_time" : 1647340108566,
+  "history_notes" : null,
+  "history_process" : "jsnayl",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "4d9gw65533w",
+  "history_input" : "# These are algorithm settings for the cloud filtering algorithm\nimage_collection = \"COPERNICUS/S2\"\n\n# Ranges from 0-1.Lower value will mask more pixels out.\n# Generally 0.1-0.3 works well with 0.2 being used most commonly\ncloudThresh = 0.2\n# Height of clouds to use to project cloud shadows\ncloudHeights = [200, 10000, 250]\n# Sum of IR bands to include as shadows within TDOM and the\n# shadow shift method (lower number masks out less)\nirSumThresh = 0.3\nndviThresh = -0.1\n# Pixels to reduce cloud mask and dark shadows by to reduce inclusion\n# of single-pixel comission errors\nerodePixels = 1.5\ndilationPixels = 3\n\n# images with less than this many cloud pixels will be used with normal\n# mosaicing (most recent on top)\ncloudFreeKeepThresh = 3\n\nBANDS = [\n    \"B1\",\n    \"B2\",\n    \"B3\",\n    \"B4\",\n    \"B5\",\n    \"B6\",\n    \"B7\",\n    \"B8\",\n    \"B8A\",\n    \"B9\",\n    \"B10\",\n    \"B11\",\n    \"B12\",\n]\n",
+  "history_output" : "",
+  "history_begin_time" : 1646147710178,
+  "history_end_time" : 1646147710303,
+  "history_notes" : null,
+  "history_process" : "jsnayl",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "nb6l7okcxtv",
+  "history_input" : "# These are algorithm settings for the cloud filtering algorithm\nimage_collection = \"COPERNICUS/S2\"\n\n# Ranges from 0-1.Lower value will mask more pixels out.\n# Generally 0.1-0.3 works well with 0.2 being used most commonly\ncloudThresh = 0.2\n# Height of clouds to use to project cloud shadows\ncloudHeights = [200, 10000, 250]\n# Sum of IR bands to include as shadows within TDOM and the\n# shadow shift method (lower number masks out less)\nirSumThresh = 0.3\nndviThresh = -0.1\n# Pixels to reduce cloud mask and dark shadows by to reduce inclusion\n# of single-pixel comission errors\nerodePixels = 1.5\ndilationPixels = 3\n\n# images with less than this many cloud pixels will be used with normal\n# mosaicing (most recent on top)\ncloudFreeKeepThresh = 3\n\nBANDS = [\n    \"B1\",\n    \"B2\",\n    \"B3\",\n    \"B4\",\n    \"B5\",\n    \"B6\",\n    \"B7\",\n    \"B8\",\n    \"B8A\",\n    \"B9\",\n    \"B10\",\n    \"B11\",\n    \"B12\",\n]\n",
+  "history_output" : "",
+  "history_begin_time" : 1646145421159,
+  "history_end_time" : 1646145421287,
+  "history_notes" : null,
+  "history_process" : "jsnayl",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "st2dvwd0v7b",
+  "history_input" : "# These are algorithm settings for the cloud filtering algorithm\nimage_collection = \"COPERNICUS/S2\"\n\n# Ranges from 0-1.Lower value will mask more pixels out.\n# Generally 0.1-0.3 works well with 0.2 being used most commonly\ncloudThresh = 0.2\n# Height of clouds to use to project cloud shadows\ncloudHeights = [200, 10000, 250]\n# Sum of IR bands to include as shadows within TDOM and the\n# shadow shift method (lower number masks out less)\nirSumThresh = 0.3\nndviThresh = -0.1\n# Pixels to reduce cloud mask and dark shadows by to reduce inclusion\n# of single-pixel comission errors\nerodePixels = 1.5\ndilationPixels = 3\n\n# images with less than this many cloud pixels will be used with normal\n# mosaicing (most recent on top)\ncloudFreeKeepThresh = 3\n\nBANDS = [\n    \"B1\",\n    \"B2\",\n    \"B3\",\n    \"B4\",\n    \"B5\",\n    \"B6\",\n    \"B7\",\n    \"B8\",\n    \"B8A\",\n    \"B9\",\n    \"B10\",\n    \"B11\",\n    \"B12\",\n]\n",
+  "history_output" : "",
+  "history_begin_time" : 1646145205381,
+  "history_end_time" : 1646145205491,
+  "history_notes" : null,
+  "history_process" : "jsnayl",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "s8hjorqqthx",
+  "history_input" : "# These are algorithm settings for the cloud filtering algorithm\nimage_collection = \"COPERNICUS/S2\"\n\n# Ranges from 0-1.Lower value will mask more pixels out.\n# Generally 0.1-0.3 works well with 0.2 being used most commonly\ncloudThresh = 0.2\n# Height of clouds to use to project cloud shadows\ncloudHeights = [200, 10000, 250]\n# Sum of IR bands to include as shadows within TDOM and the\n# shadow shift method (lower number masks out less)\nirSumThresh = 0.3\nndviThresh = -0.1\n# Pixels to reduce cloud mask and dark shadows by to reduce inclusion\n# of single-pixel comission errors\nerodePixels = 1.5\ndilationPixels = 3\n\n# images with less than this many cloud pixels will be used with normal\n# mosaicing (most recent on top)\ncloudFreeKeepThresh = 3\n\nBANDS = [\n    \"B1\",\n    \"B2\",\n    \"B3\",\n    \"B4\",\n    \"B5\",\n    \"B6\",\n    \"B7\",\n    \"B8\",\n    \"B8A\",\n    \"B9\",\n    \"B10\",\n    \"B11\",\n    \"B12\",\n]\n",
+  "history_output" : "",
+  "history_begin_time" : 1646144595795,
+  "history_end_time" : 1646144595890,
+  "history_notes" : null,
+  "history_process" : "jsnayl",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "9a9tnn62fma",
+  "history_input" : "# These are algorithm settings for the cloud filtering algorithm\nimage_collection = \"COPERNICUS/S2\"\n\n# Ranges from 0-1.Lower value will mask more pixels out.\n# Generally 0.1-0.3 works well with 0.2 being used most commonly\ncloudThresh = 0.2\n# Height of clouds to use to project cloud shadows\ncloudHeights = [200, 10000, 250]\n# Sum of IR bands to include as shadows within TDOM and the\n# shadow shift method (lower number masks out less)\nirSumThresh = 0.3\nndviThresh = -0.1\n# Pixels to reduce cloud mask and dark shadows by to reduce inclusion\n# of single-pixel comission errors\nerodePixels = 1.5\ndilationPixels = 3\n\n# images with less than this many cloud pixels will be used with normal\n# mosaicing (most recent on top)\ncloudFreeKeepThresh = 3\n\nBANDS = [\n    \"B1\",\n    \"B2\",\n    \"B3\",\n    \"B4\",\n    \"B5\",\n    \"B6\",\n    \"B7\",\n    \"B8\",\n    \"B8A\",\n    \"B9\",\n    \"B10\",\n    \"B11\",\n    \"B12\",\n]\n",
+  "history_output" : "",
+  "history_begin_time" : 1646144378743,
+  "history_end_time" : 1646144378871,
+  "history_notes" : null,
+  "history_process" : "jsnayl",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "uls5w3p2qe8",
+  "history_input" : "# These are algorithm settings for the cloud filtering algorithm\nimage_collection = \"COPERNICUS/S2\"\n\n# Ranges from 0-1.Lower value will mask more pixels out.\n# Generally 0.1-0.3 works well with 0.2 being used most commonly\ncloudThresh = 0.2\n# Height of clouds to use to project cloud shadows\ncloudHeights = [200, 10000, 250]\n# Sum of IR bands to include as shadows within TDOM and the\n# shadow shift method (lower number masks out less)\nirSumThresh = 0.3\nndviThresh = -0.1\n# Pixels to reduce cloud mask and dark shadows by to reduce inclusion\n# of single-pixel comission errors\nerodePixels = 1.5\ndilationPixels = 3\n\n# images with less than this many cloud pixels will be used with normal\n# mosaicing (most recent on top)\ncloudFreeKeepThresh = 3\n\nBANDS = [\n    \"B1\",\n    \"B2\",\n    \"B3\",\n    \"B4\",\n    \"B5\",\n    \"B6\",\n    \"B7\",\n    \"B8\",\n    \"B8A\",\n    \"B9\",\n    \"B10\",\n    \"B11\",\n    \"B12\",\n]\n",
+  "history_output" : "",
+  "history_begin_time" : 1646144303748,
+  "history_end_time" : 1646144303937,
+  "history_notes" : null,
+  "history_process" : "jsnayl",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "yw39dhhjxfl",
+  "history_input" : "# These are algorithm settings for the cloud filtering algorithm\nimage_collection = \"COPERNICUS/S2\"\n\n# Ranges from 0-1.Lower value will mask more pixels out.\n# Generally 0.1-0.3 works well with 0.2 being used most commonly\ncloudThresh = 0.2\n# Height of clouds to use to project cloud shadows\ncloudHeights = [200, 10000, 250]\n# Sum of IR bands to include as shadows within TDOM and the\n# shadow shift method (lower number masks out less)\nirSumThresh = 0.3\nndviThresh = -0.1\n# Pixels to reduce cloud mask and dark shadows by to reduce inclusion\n# of single-pixel comission errors\nerodePixels = 1.5\ndilationPixels = 3\n\n# images with less than this many cloud pixels will be used with normal\n# mosaicing (most recent on top)\ncloudFreeKeepThresh = 3\n\nBANDS = [\n    \"B1\",\n    \"B2\",\n    \"B3\",\n    \"B4\",\n    \"B5\",\n    \"B6\",\n    \"B7\",\n    \"B8\",\n    \"B8A\",\n    \"B9\",\n    \"B10\",\n    \"B11\",\n    \"B12\",\n]\n",
+  "history_output" : "",
+  "history_begin_time" : 1646143400229,
+  "history_end_time" : 1646143400327,
+  "history_notes" : null,
+  "history_process" : "jsnayl",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "bydgbpxtje9",
+  "history_input" : "# These are algorithm settings for the cloud filtering algorithm\nimage_collection = \"COPERNICUS/S2\"\n\n# Ranges from 0-1.Lower value will mask more pixels out.\n# Generally 0.1-0.3 works well with 0.2 being used most commonly\ncloudThresh = 0.2\n# Height of clouds to use to project cloud shadows\ncloudHeights = [200, 10000, 250]\n# Sum of IR bands to include as shadows within TDOM and the\n# shadow shift method (lower number masks out less)\nirSumThresh = 0.3\nndviThresh = -0.1\n# Pixels to reduce cloud mask and dark shadows by to reduce inclusion\n# of single-pixel comission errors\nerodePixels = 1.5\ndilationPixels = 3\n\n# images with less than this many cloud pixels will be used with normal\n# mosaicing (most recent on top)\ncloudFreeKeepThresh = 3\n\nBANDS = [\n    \"B1\",\n    \"B2\",\n    \"B3\",\n    \"B4\",\n    \"B5\",\n    \"B6\",\n    \"B7\",\n    \"B8\",\n    \"B8A\",\n    \"B9\",\n    \"B10\",\n    \"B11\",\n    \"B12\",\n]\n",
+  "history_output" : "",
+  "history_begin_time" : 1646143250457,
+  "history_end_time" : 1646143250536,
+  "history_notes" : null,
+  "history_process" : "jsnayl",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "sgjcpauugjw",
+  "history_input" : "# These are algorithm settings for the cloud filtering algorithm\nimage_collection = \"COPERNICUS/S2\"\n\n# Ranges from 0-1.Lower value will mask more pixels out.\n# Generally 0.1-0.3 works well with 0.2 being used most commonly\ncloudThresh = 0.2\n# Height of clouds to use to project cloud shadows\ncloudHeights = [200, 10000, 250]\n# Sum of IR bands to include as shadows within TDOM and the\n# shadow shift method (lower number masks out less)\nirSumThresh = 0.3\nndviThresh = -0.1\n# Pixels to reduce cloud mask and dark shadows by to reduce inclusion\n# of single-pixel comission errors\nerodePixels = 1.5\ndilationPixels = 3\n\n# images with less than this many cloud pixels will be used with normal\n# mosaicing (most recent on top)\ncloudFreeKeepThresh = 3\n\nBANDS = [\n    \"B1\",\n    \"B2\",\n    \"B3\",\n    \"B4\",\n    \"B5\",\n    \"B6\",\n    \"B7\",\n    \"B8\",\n    \"B8A\",\n    \"B9\",\n    \"B10\",\n    \"B11\",\n    \"B12\",\n]\n",
+  "history_output" : "",
+  "history_begin_time" : 1646143171641,
+  "history_end_time" : 1646143171793,
+  "history_notes" : null,
+  "history_process" : "jsnayl",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "1zku5zn5q7z",
+  "history_input" : "# These are algorithm settings for the cloud filtering algorithm\nimage_collection = \"COPERNICUS/S2\"\n\n# Ranges from 0-1.Lower value will mask more pixels out.\n# Generally 0.1-0.3 works well with 0.2 being used most commonly\ncloudThresh = 0.2\n# Height of clouds to use to project cloud shadows\ncloudHeights = [200, 10000, 250]\n# Sum of IR bands to include as shadows within TDOM and the\n# shadow shift method (lower number masks out less)\nirSumThresh = 0.3\nndviThresh = -0.1\n# Pixels to reduce cloud mask and dark shadows by to reduce inclusion\n# of single-pixel comission errors\nerodePixels = 1.5\ndilationPixels = 3\n\n# images with less than this many cloud pixels will be used with normal\n# mosaicing (most recent on top)\ncloudFreeKeepThresh = 3\n\nBANDS = [\n    \"B1\",\n    \"B2\",\n    \"B3\",\n    \"B4\",\n    \"B5\",\n    \"B6\",\n    \"B7\",\n    \"B8\",\n    \"B8A\",\n    \"B9\",\n    \"B10\",\n    \"B11\",\n    \"B12\",\n]\n",
+  "history_output" : "",
+  "history_begin_time" : 1646143135340,
+  "history_end_time" : 1646143135529,
+  "history_notes" : null,
+  "history_process" : "jsnayl",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "kn0h1tvrf3o",
+  "history_input" : "# These are algorithm settings for the cloud filtering algorithm\nimage_collection = \"COPERNICUS/S2\"\n\n# Ranges from 0-1.Lower value will mask more pixels out.\n# Generally 0.1-0.3 works well with 0.2 being used most commonly\ncloudThresh = 0.2\n# Height of clouds to use to project cloud shadows\ncloudHeights = [200, 10000, 250]\n# Sum of IR bands to include as shadows within TDOM and the\n# shadow shift method (lower number masks out less)\nirSumThresh = 0.3\nndviThresh = -0.1\n# Pixels to reduce cloud mask and dark shadows by to reduce inclusion\n# of single-pixel comission errors\nerodePixels = 1.5\ndilationPixels = 3\n\n# images with less than this many cloud pixels will be used with normal\n# mosaicing (most recent on top)\ncloudFreeKeepThresh = 3\n\nBANDS = [\n    \"B1\",\n    \"B2\",\n    \"B3\",\n    \"B4\",\n    \"B5\",\n    \"B6\",\n    \"B7\",\n    \"B8\",\n    \"B8A\",\n    \"B9\",\n    \"B10\",\n    \"B11\",\n    \"B12\",\n]\n",
+  "history_output" : "",
+  "history_begin_time" : 1646143106431,
+  "history_end_time" : 1646143106657,
+  "history_notes" : null,
+  "history_process" : "jsnayl",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "xqg8kz8ptht",
+  "history_input" : "# These are algorithm settings for the cloud filtering algorithm\nimage_collection = \"COPERNICUS/S2\"\n\n# Ranges from 0-1.Lower value will mask more pixels out.\n# Generally 0.1-0.3 works well with 0.2 being used most commonly\ncloudThresh = 0.2\n# Height of clouds to use to project cloud shadows\ncloudHeights = [200, 10000, 250]\n# Sum of IR bands to include as shadows within TDOM and the\n# shadow shift method (lower number masks out less)\nirSumThresh = 0.3\nndviThresh = -0.1\n# Pixels to reduce cloud mask and dark shadows by to reduce inclusion\n# of single-pixel comission errors\nerodePixels = 1.5\ndilationPixels = 3\n\n# images with less than this many cloud pixels will be used with normal\n# mosaicing (most recent on top)\ncloudFreeKeepThresh = 3\n\nBANDS = [\n    \"B1\",\n    \"B2\",\n    \"B3\",\n    \"B4\",\n    \"B5\",\n    \"B6\",\n    \"B7\",\n    \"B8\",\n    \"B8A\",\n    \"B9\",\n    \"B10\",\n    \"B11\",\n    \"B12\",\n]\n",
+  "history_output" : "",
+  "history_begin_time" : 1646139371447,
+  "history_end_time" : 1646139371546,
+  "history_notes" : null,
+  "history_process" : "jsnayl",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "2s5e0i9k23k",
+  "history_input" : "# These are algorithm settings for the cloud filtering algorithm\nimage_collection = \"COPERNICUS/S2\"\n\n# Ranges from 0-1.Lower value will mask more pixels out.\n# Generally 0.1-0.3 works well with 0.2 being used most commonly\ncloudThresh = 0.2\n# Height of clouds to use to project cloud shadows\ncloudHeights = [200, 10000, 250]\n# Sum of IR bands to include as shadows within TDOM and the\n# shadow shift method (lower number masks out less)\nirSumThresh = 0.3\nndviThresh = -0.1\n# Pixels to reduce cloud mask and dark shadows by to reduce inclusion\n# of single-pixel comission errors\nerodePixels = 1.5\ndilationPixels = 3\n\n# images with less than this many cloud pixels will be used with normal\n# mosaicing (most recent on top)\ncloudFreeKeepThresh = 3\n\nBANDS = [\n    \"B1\",\n    \"B2\",\n    \"B3\",\n    \"B4\",\n    \"B5\",\n    \"B6\",\n    \"B7\",\n    \"B8\",\n    \"B8A\",\n    \"B9\",\n    \"B10\",\n    \"B11\",\n    \"B12\",\n]\n",
+  "history_output" : "",
+  "history_begin_time" : 1646139280213,
+  "history_end_time" : 1646139280346,
+  "history_notes" : null,
+  "history_process" : "jsnayl",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "b3ju8racbjq",
+  "history_input" : "# These are algorithm settings for the cloud filtering algorithm\nimage_collection = \"COPERNICUS/S2\"\n\n# Ranges from 0-1.Lower value will mask more pixels out.\n# Generally 0.1-0.3 works well with 0.2 being used most commonly\ncloudThresh = 0.2\n# Height of clouds to use to project cloud shadows\ncloudHeights = [200, 10000, 250]\n# Sum of IR bands to include as shadows within TDOM and the\n# shadow shift method (lower number masks out less)\nirSumThresh = 0.3\nndviThresh = -0.1\n# Pixels to reduce cloud mask and dark shadows by to reduce inclusion\n# of single-pixel comission errors\nerodePixels = 1.5\ndilationPixels = 3\n\n# images with less than this many cloud pixels will be used with normal\n# mosaicing (most recent on top)\ncloudFreeKeepThresh = 3\n\nBANDS = [\n    \"B1\",\n    \"B2\",\n    \"B3\",\n    \"B4\",\n    \"B5\",\n    \"B6\",\n    \"B7\",\n    \"B8\",\n    \"B8A\",\n    \"B9\",\n    \"B10\",\n    \"B11\",\n    \"B12\",\n]\n",
+  "history_output" : "",
+  "history_begin_time" : 1646139238777,
+  "history_end_time" : 1646139238889,
+  "history_notes" : null,
+  "history_process" : "jsnayl",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "wtwvvpypnjd",
+  "history_input" : "# These are algorithm settings for the cloud filtering algorithm\nimage_collection = \"COPERNICUS/S2\"\n\n# Ranges from 0-1.Lower value will mask more pixels out.\n# Generally 0.1-0.3 works well with 0.2 being used most commonly\ncloudThresh = 0.2\n# Height of clouds to use to project cloud shadows\ncloudHeights = [200, 10000, 250]\n# Sum of IR bands to include as shadows within TDOM and the\n# shadow shift method (lower number masks out less)\nirSumThresh = 0.3\nndviThresh = -0.1\n# Pixels to reduce cloud mask and dark shadows by to reduce inclusion\n# of single-pixel comission errors\nerodePixels = 1.5\ndilationPixels = 3\n\n# images with less than this many cloud pixels will be used with normal\n# mosaicing (most recent on top)\ncloudFreeKeepThresh = 3\n\nBANDS = [\n    \"B1\",\n    \"B2\",\n    \"B3\",\n    \"B4\",\n    \"B5\",\n    \"B6\",\n    \"B7\",\n    \"B8\",\n    \"B8A\",\n    \"B9\",\n    \"B10\",\n    \"B11\",\n    \"B12\",\n]\n",
+  "history_output" : "",
+  "history_begin_time" : 1646139187084,
+  "history_end_time" : 1646139187208,
+  "history_notes" : null,
+  "history_process" : "jsnayl",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "xan5quk5pre",
+  "history_input" : "# These are algorithm settings for the cloud filtering algorithm\nimage_collection = \"COPERNICUS/S2\"\n\n# Ranges from 0-1.Lower value will mask more pixels out.\n# Generally 0.1-0.3 works well with 0.2 being used most commonly\ncloudThresh = 0.2\n# Height of clouds to use to project cloud shadows\ncloudHeights = [200, 10000, 250]\n# Sum of IR bands to include as shadows within TDOM and the\n# shadow shift method (lower number masks out less)\nirSumThresh = 0.3\nndviThresh = -0.1\n# Pixels to reduce cloud mask and dark shadows by to reduce inclusion\n# of single-pixel comission errors\nerodePixels = 1.5\ndilationPixels = 3\n\n# images with less than this many cloud pixels will be used with normal\n# mosaicing (most recent on top)\ncloudFreeKeepThresh = 3\n\nBANDS = [\n    \"B1\",\n    \"B2\",\n    \"B3\",\n    \"B4\",\n    \"B5\",\n    \"B6\",\n    \"B7\",\n    \"B8\",\n    \"B8A\",\n    \"B9\",\n    \"B10\",\n    \"B11\",\n    \"B12\",\n]\n",
+  "history_output" : "",
+  "history_begin_time" : 1646139148185,
+  "history_end_time" : 1646139148280,
+  "history_notes" : null,
+  "history_process" : "jsnayl",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "fkkzl7a7hsg",
+  "history_input" : "# These are algorithm settings for the cloud filtering algorithm\nimage_collection = \"COPERNICUS/S2\"\n\n# Ranges from 0-1.Lower value will mask more pixels out.\n# Generally 0.1-0.3 works well with 0.2 being used most commonly\ncloudThresh = 0.2\n# Height of clouds to use to project cloud shadows\ncloudHeights = [200, 10000, 250]\n# Sum of IR bands to include as shadows within TDOM and the\n# shadow shift method (lower number masks out less)\nirSumThresh = 0.3\nndviThresh = -0.1\n# Pixels to reduce cloud mask and dark shadows by to reduce inclusion\n# of single-pixel comission errors\nerodePixels = 1.5\ndilationPixels = 3\n\n# images with less than this many cloud pixels will be used with normal\n# mosaicing (most recent on top)\ncloudFreeKeepThresh = 3\n\nBANDS = [\n    \"B1\",\n    \"B2\",\n    \"B3\",\n    \"B4\",\n    \"B5\",\n    \"B6\",\n    \"B7\",\n    \"B8\",\n    \"B8A\",\n    \"B9\",\n    \"B10\",\n    \"B11\",\n    \"B12\",\n]\n",
+  "history_output" : "",
+  "history_begin_time" : 1646138493282,
+  "history_end_time" : 1646138493400,
+  "history_notes" : null,
+  "history_process" : "jsnayl",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "dlqk68vv36h",
+  "history_input" : "# These are algorithm settings for the cloud filtering algorithm\nimage_collection = \"COPERNICUS/S2\"\n\n# Ranges from 0-1.Lower value will mask more pixels out.\n# Generally 0.1-0.3 works well with 0.2 being used most commonly\ncloudThresh = 0.2\n# Height of clouds to use to project cloud shadows\ncloudHeights = [200, 10000, 250]\n# Sum of IR bands to include as shadows within TDOM and the\n# shadow shift method (lower number masks out less)\nirSumThresh = 0.3\nndviThresh = -0.1\n# Pixels to reduce cloud mask and dark shadows by to reduce inclusion\n# of single-pixel comission errors\nerodePixels = 1.5\ndilationPixels = 3\n\n# images with less than this many cloud pixels will be used with normal\n# mosaicing (most recent on top)\ncloudFreeKeepThresh = 3\n\nBANDS = [\n    \"B1\",\n    \"B2\",\n    \"B3\",\n    \"B4\",\n    \"B5\",\n    \"B6\",\n    \"B7\",\n    \"B8\",\n    \"B8A\",\n    \"B9\",\n    \"B10\",\n    \"B11\",\n    \"B12\",\n]\n",
+  "history_output" : "",
+  "history_begin_time" : 1646138441397,
+  "history_end_time" : 1646138441544,
+  "history_notes" : null,
+  "history_process" : "jsnayl",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "c2g1avz3jwa",
+  "history_input" : "# These are algorithm settings for the cloud filtering algorithm\nimage_collection = \"COPERNICUS/S2\"\n\n# Ranges from 0-1.Lower value will mask more pixels out.\n# Generally 0.1-0.3 works well with 0.2 being used most commonly\ncloudThresh = 0.2\n# Height of clouds to use to project cloud shadows\ncloudHeights = [200, 10000, 250]\n# Sum of IR bands to include as shadows within TDOM and the\n# shadow shift method (lower number masks out less)\nirSumThresh = 0.3\nndviThresh = -0.1\n# Pixels to reduce cloud mask and dark shadows by to reduce inclusion\n# of single-pixel comission errors\nerodePixels = 1.5\ndilationPixels = 3\n\n# images with less than this many cloud pixels will be used with normal\n# mosaicing (most recent on top)\ncloudFreeKeepThresh = 3\n\nBANDS = [\n    \"B1\",\n    \"B2\",\n    \"B3\",\n    \"B4\",\n    \"B5\",\n    \"B6\",\n    \"B7\",\n    \"B8\",\n    \"B8A\",\n    \"B9\",\n    \"B10\",\n    \"B11\",\n    \"B12\",\n]\n",
+  "history_output" : "",
+  "history_begin_time" : 1646138389668,
+  "history_end_time" : 1646138389796,
+  "history_notes" : null,
+  "history_process" : "jsnayl",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "wl0w1n5lks6",
+  "history_input" : "# These are algorithm settings for the cloud filtering algorithm\nimage_collection = \"COPERNICUS/S2\"\n\n# Ranges from 0-1.Lower value will mask more pixels out.\n# Generally 0.1-0.3 works well with 0.2 being used most commonly\ncloudThresh = 0.2\n# Height of clouds to use to project cloud shadows\ncloudHeights = [200, 10000, 250]\n# Sum of IR bands to include as shadows within TDOM and the\n# shadow shift method (lower number masks out less)\nirSumThresh = 0.3\nndviThresh = -0.1\n# Pixels to reduce cloud mask and dark shadows by to reduce inclusion\n# of single-pixel comission errors\nerodePixels = 1.5\ndilationPixels = 3\n\n# images with less than this many cloud pixels will be used with normal\n# mosaicing (most recent on top)\ncloudFreeKeepThresh = 3\n\nBANDS = [\n    \"B1\",\n    \"B2\",\n    \"B3\",\n    \"B4\",\n    \"B5\",\n    \"B6\",\n    \"B7\",\n    \"B8\",\n    \"B8A\",\n    \"B9\",\n    \"B10\",\n    \"B11\",\n    \"B12\",\n]\n",
+  "history_output" : "",
+  "history_begin_time" : 1646138267305,
+  "history_end_time" : 1646138267429,
+  "history_notes" : null,
+  "history_process" : "jsnayl",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "cmgm1qrz6vm",
+  "history_input" : "# These are algorithm settings for the cloud filtering algorithm\nimage_collection = \"COPERNICUS/S2\"\n\n# Ranges from 0-1.Lower value will mask more pixels out.\n# Generally 0.1-0.3 works well with 0.2 being used most commonly\ncloudThresh = 0.2\n# Height of clouds to use to project cloud shadows\ncloudHeights = [200, 10000, 250]\n# Sum of IR bands to include as shadows within TDOM and the\n# shadow shift method (lower number masks out less)\nirSumThresh = 0.3\nndviThresh = -0.1\n# Pixels to reduce cloud mask and dark shadows by to reduce inclusion\n# of single-pixel comission errors\nerodePixels = 1.5\ndilationPixels = 3\n\n# images with less than this many cloud pixels will be used with normal\n# mosaicing (most recent on top)\ncloudFreeKeepThresh = 3\n\nBANDS = [\n    \"B1\",\n    \"B2\",\n    \"B3\",\n    \"B4\",\n    \"B5\",\n    \"B6\",\n    \"B7\",\n    \"B8\",\n    \"B8A\",\n    \"B9\",\n    \"B10\",\n    \"B11\",\n    \"B12\",\n]\n",
+  "history_output" : "",
+  "history_begin_time" : 1646138169954,
+  "history_end_time" : 1646138170046,
+  "history_notes" : null,
+  "history_process" : "jsnayl",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "c299tk8z9hy",
+  "history_input" : "# These are algorithm settings for the cloud filtering algorithm\nimage_collection = \"COPERNICUS/S2\"\n\n# Ranges from 0-1.Lower value will mask more pixels out.\n# Generally 0.1-0.3 works well with 0.2 being used most commonly\ncloudThresh = 0.2\n# Height of clouds to use to project cloud shadows\ncloudHeights = [200, 10000, 250]\n# Sum of IR bands to include as shadows within TDOM and the\n# shadow shift method (lower number masks out less)\nirSumThresh = 0.3\nndviThresh = -0.1\n# Pixels to reduce cloud mask and dark shadows by to reduce inclusion\n# of single-pixel comission errors\nerodePixels = 1.5\ndilationPixels = 3\n\n# images with less than this many cloud pixels will be used with normal\n# mosaicing (most recent on top)\ncloudFreeKeepThresh = 3\n\nBANDS = [\n    \"B1\",\n    \"B2\",\n    \"B3\",\n    \"B4\",\n    \"B5\",\n    \"B6\",\n    \"B7\",\n    \"B8\",\n    \"B8A\",\n    \"B9\",\n    \"B10\",\n    \"B11\",\n    \"B12\",\n]\n",
+  "history_output" : "",
+  "history_begin_time" : 1646138090140,
+  "history_end_time" : 1646138090277,
+  "history_notes" : null,
+  "history_process" : "jsnayl",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "84auzf1iu3h",
+  "history_input" : "# These are algorithm settings for the cloud filtering algorithm\nimage_collection = \"COPERNICUS/S2\"\n\n# Ranges from 0-1.Lower value will mask more pixels out.\n# Generally 0.1-0.3 works well with 0.2 being used most commonly\ncloudThresh = 0.2\n# Height of clouds to use to project cloud shadows\ncloudHeights = [200, 10000, 250]\n# Sum of IR bands to include as shadows within TDOM and the\n# shadow shift method (lower number masks out less)\nirSumThresh = 0.3\nndviThresh = -0.1\n# Pixels to reduce cloud mask and dark shadows by to reduce inclusion\n# of single-pixel comission errors\nerodePixels = 1.5\ndilationPixels = 3\n\n# images with less than this many cloud pixels will be used with normal\n# mosaicing (most recent on top)\ncloudFreeKeepThresh = 3\n\nBANDS = [\n    \"B1\",\n    \"B2\",\n    \"B3\",\n    \"B4\",\n    \"B5\",\n    \"B6\",\n    \"B7\",\n    \"B8\",\n    \"B8A\",\n    \"B9\",\n    \"B10\",\n    \"B11\",\n    \"B12\",\n]\n",
+  "history_output" : "",
+  "history_begin_time" : 1646137773884,
+  "history_end_time" : 1646137774056,
+  "history_notes" : null,
+  "history_process" : "jsnayl",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "9n1sx7e7q00",
+  "history_input" : "# These are algorithm settings for the cloud filtering algorithm\nimage_collection = \"COPERNICUS/S2\"\n\n# Ranges from 0-1.Lower value will mask more pixels out.\n# Generally 0.1-0.3 works well with 0.2 being used most commonly\ncloudThresh = 0.2\n# Height of clouds to use to project cloud shadows\ncloudHeights = [200, 10000, 250]\n# Sum of IR bands to include as shadows within TDOM and the\n# shadow shift method (lower number masks out less)\nirSumThresh = 0.3\nndviThresh = -0.1\n# Pixels to reduce cloud mask and dark shadows by to reduce inclusion\n# of single-pixel comission errors\nerodePixels = 1.5\ndilationPixels = 3\n\n# images with less than this many cloud pixels will be used with normal\n# mosaicing (most recent on top)\ncloudFreeKeepThresh = 3\n\nBANDS = [\n    \"B1\",\n    \"B2\",\n    \"B3\",\n    \"B4\",\n    \"B5\",\n    \"B6\",\n    \"B7\",\n    \"B8\",\n    \"B8A\",\n    \"B9\",\n    \"B10\",\n    \"B11\",\n    \"B12\",\n]\n",
+  "history_output" : "",
+  "history_begin_time" : 1646137678321,
+  "history_end_time" : 1646137678563,
+  "history_notes" : null,
+  "history_process" : "jsnayl",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "nqwiqn9f16m",
+  "history_input" : "# These are algorithm settings for the cloud filtering algorithm\nimage_collection = \"COPERNICUS/S2\"\n\n# Ranges from 0-1.Lower value will mask more pixels out.\n# Generally 0.1-0.3 works well with 0.2 being used most commonly\ncloudThresh = 0.2\n# Height of clouds to use to project cloud shadows\ncloudHeights = [200, 10000, 250]\n# Sum of IR bands to include as shadows within TDOM and the\n# shadow shift method (lower number masks out less)\nirSumThresh = 0.3\nndviThresh = -0.1\n# Pixels to reduce cloud mask and dark shadows by to reduce inclusion\n# of single-pixel comission errors\nerodePixels = 1.5\ndilationPixels = 3\n\n# images with less than this many cloud pixels will be used with normal\n# mosaicing (most recent on top)\ncloudFreeKeepThresh = 3\n\nBANDS = [\n    \"B1\",\n    \"B2\",\n    \"B3\",\n    \"B4\",\n    \"B5\",\n    \"B6\",\n    \"B7\",\n    \"B8\",\n    \"B8A\",\n    \"B9\",\n    \"B10\",\n    \"B11\",\n    \"B12\",\n]\n",
+  "history_output" : "",
+  "history_begin_time" : 1646137566176,
+  "history_end_time" : 1646137566625,
+  "history_notes" : null,
+  "history_process" : "jsnayl",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "hl8owvme0pj",
+  "history_input" : "# These are algorithm settings for the cloud filtering algorithm\nimage_collection = \"COPERNICUS/S2\"\n\n# Ranges from 0-1.Lower value will mask more pixels out.\n# Generally 0.1-0.3 works well with 0.2 being used most commonly\ncloudThresh = 0.2\n# Height of clouds to use to project cloud shadows\ncloudHeights = [200, 10000, 250]\n# Sum of IR bands to include as shadows within TDOM and the\n# shadow shift method (lower number masks out less)\nirSumThresh = 0.3\nndviThresh = -0.1\n# Pixels to reduce cloud mask and dark shadows by to reduce inclusion\n# of single-pixel comission errors\nerodePixels = 1.5\ndilationPixels = 3\n\n# images with less than this many cloud pixels will be used with normal\n# mosaicing (most recent on top)\ncloudFreeKeepThresh = 3\n\nBANDS = [\n    \"B1\",\n    \"B2\",\n    \"B3\",\n    \"B4\",\n    \"B5\",\n    \"B6\",\n    \"B7\",\n    \"B8\",\n    \"B8A\",\n    \"B9\",\n    \"B10\",\n    \"B11\",\n    \"B12\",\n]\n",
+  "history_output" : "",
+  "history_begin_time" : 1646112824344,
+  "history_end_time" : 1646112824452,
+  "history_notes" : null,
+  "history_process" : "jsnayl",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "7gcvbfzmzmj",
+  "history_input" : "# These are algorithm settings for the cloud filtering algorithm\nimage_collection = \"COPERNICUS/S2\"\n\n# Ranges from 0-1.Lower value will mask more pixels out.\n# Generally 0.1-0.3 works well with 0.2 being used most commonly\ncloudThresh = 0.2\n# Height of clouds to use to project cloud shadows\ncloudHeights = [200, 10000, 250]\n# Sum of IR bands to include as shadows within TDOM and the\n# shadow shift method (lower number masks out less)\nirSumThresh = 0.3\nndviThresh = -0.1\n# Pixels to reduce cloud mask and dark shadows by to reduce inclusion\n# of single-pixel comission errors\nerodePixels = 1.5\ndilationPixels = 3\n\n# images with less than this many cloud pixels will be used with normal\n# mosaicing (most recent on top)\ncloudFreeKeepThresh = 3\n\nBANDS = [\n    \"B1\",\n    \"B2\",\n    \"B3\",\n    \"B4\",\n    \"B5\",\n    \"B6\",\n    \"B7\",\n    \"B8\",\n    \"B8A\",\n    \"B9\",\n    \"B10\",\n    \"B11\",\n    \"B12\",\n]\n",
+  "history_output" : "",
+  "history_begin_time" : 1646112717154,
+  "history_end_time" : 1646112717304,
+  "history_notes" : null,
+  "history_process" : "jsnayl",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "86l8cltdjia",
+  "history_input" : "# These are algorithm settings for the cloud filtering algorithm\nimage_collection = \"COPERNICUS/S2\"\n\n# Ranges from 0-1.Lower value will mask more pixels out.\n# Generally 0.1-0.3 works well with 0.2 being used most commonly\ncloudThresh = 0.2\n# Height of clouds to use to project cloud shadows\ncloudHeights = [200, 10000, 250]\n# Sum of IR bands to include as shadows within TDOM and the\n# shadow shift method (lower number masks out less)\nirSumThresh = 0.3\nndviThresh = -0.1\n# Pixels to reduce cloud mask and dark shadows by to reduce inclusion\n# of single-pixel comission errors\nerodePixels = 1.5\ndilationPixels = 3\n\n# images with less than this many cloud pixels will be used with normal\n# mosaicing (most recent on top)\ncloudFreeKeepThresh = 3\n\nBANDS = [\n    \"B1\",\n    \"B2\",\n    \"B3\",\n    \"B4\",\n    \"B5\",\n    \"B6\",\n    \"B7\",\n    \"B8\",\n    \"B8A\",\n    \"B9\",\n    \"B10\",\n    \"B11\",\n    \"B12\",\n]\n",
+  "history_output" : "",
+  "history_begin_time" : 1646112270562,
+  "history_end_time" : 1646112270718,
+  "history_notes" : null,
+  "history_process" : "jsnayl",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "e88auhgl5oh",
+  "history_input" : "# These are algorithm settings for the cloud filtering algorithm\nimage_collection = \"COPERNICUS/S2\"\n\n# Ranges from 0-1.Lower value will mask more pixels out.\n# Generally 0.1-0.3 works well with 0.2 being used most commonly\ncloudThresh = 0.2\n# Height of clouds to use to project cloud shadows\ncloudHeights = [200, 10000, 250]\n# Sum of IR bands to include as shadows within TDOM and the\n# shadow shift method (lower number masks out less)\nirSumThresh = 0.3\nndviThresh = -0.1\n# Pixels to reduce cloud mask and dark shadows by to reduce inclusion\n# of single-pixel comission errors\nerodePixels = 1.5\ndilationPixels = 3\n\n# images with less than this many cloud pixels will be used with normal\n# mosaicing (most recent on top)\ncloudFreeKeepThresh = 3\n\nBANDS = [\n    \"B1\",\n    \"B2\",\n    \"B3\",\n    \"B4\",\n    \"B5\",\n    \"B6\",\n    \"B7\",\n    \"B8\",\n    \"B8A\",\n    \"B9\",\n    \"B10\",\n    \"B11\",\n    \"B12\",\n]\n",
+  "history_output" : "",
+  "history_begin_time" : 1646112232617,
+  "history_end_time" : 1646112232754,
+  "history_notes" : null,
+  "history_process" : "jsnayl",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "0rfftbhhiw5",
+  "history_input" : "# These are algorithm settings for the cloud filtering algorithm\nimage_collection = \"COPERNICUS/S2\"\n\n# Ranges from 0-1.Lower value will mask more pixels out.\n# Generally 0.1-0.3 works well with 0.2 being used most commonly\ncloudThresh = 0.2\n# Height of clouds to use to project cloud shadows\ncloudHeights = [200, 10000, 250]\n# Sum of IR bands to include as shadows within TDOM and the\n# shadow shift method (lower number masks out less)\nirSumThresh = 0.3\nndviThresh = -0.1\n# Pixels to reduce cloud mask and dark shadows by to reduce inclusion\n# of single-pixel comission errors\nerodePixels = 1.5\ndilationPixels = 3\n\n# images with less than this many cloud pixels will be used with normal\n# mosaicing (most recent on top)\ncloudFreeKeepThresh = 3\n\nBANDS = [\n    \"B1\",\n    \"B2\",\n    \"B3\",\n    \"B4\",\n    \"B5\",\n    \"B6\",\n    \"B7\",\n    \"B8\",\n    \"B8A\",\n    \"B9\",\n    \"B10\",\n    \"B11\",\n    \"B12\",\n]\n",
+  "history_output" : "",
+  "history_begin_time" : 1646112128036,
+  "history_end_time" : 1646112128664,
+  "history_notes" : null,
+  "history_process" : "jsnayl",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "5po0tf4nab9",
+  "history_input" : "# These are algorithm settings for the cloud filtering algorithm\nimage_collection = \"COPERNICUS/S2\"\n\n# Ranges from 0-1.Lower value will mask more pixels out.\n# Generally 0.1-0.3 works well with 0.2 being used most commonly\ncloudThresh = 0.2\n# Height of clouds to use to project cloud shadows\ncloudHeights = [200, 10000, 250]\n# Sum of IR bands to include as shadows within TDOM and the\n# shadow shift method (lower number masks out less)\nirSumThresh = 0.3\nndviThresh = -0.1\n# Pixels to reduce cloud mask and dark shadows by to reduce inclusion\n# of single-pixel comission errors\nerodePixels = 1.5\ndilationPixels = 3\n\n# images with less than this many cloud pixels will be used with normal\n# mosaicing (most recent on top)\ncloudFreeKeepThresh = 3\n\nBANDS = [\n    \"B1\",\n    \"B2\",\n    \"B3\",\n    \"B4\",\n    \"B5\",\n    \"B6\",\n    \"B7\",\n    \"B8\",\n    \"B8A\",\n    \"B9\",\n    \"B10\",\n    \"B11\",\n    \"B12\",\n]\n",
+  "history_output" : "",
+  "history_begin_time" : 1645393369146,
+  "history_end_time" : 1645393369259,
+  "history_notes" : null,
+  "history_process" : "jsnayl",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "xzdln0or4ls",
+  "history_input" : "# These are algorithm settings for the cloud filtering algorithm\nimage_collection = \"COPERNICUS/S2\"\n\n# Ranges from 0-1.Lower value will mask more pixels out.\n# Generally 0.1-0.3 works well with 0.2 being used most commonly\ncloudThresh = 0.2\n# Height of clouds to use to project cloud shadows\ncloudHeights = [200, 10000, 250]\n# Sum of IR bands to include as shadows within TDOM and the\n# shadow shift method (lower number masks out less)\nirSumThresh = 0.3\nndviThresh = -0.1\n# Pixels to reduce cloud mask and dark shadows by to reduce inclusion\n# of single-pixel comission errors\nerodePixels = 1.5\ndilationPixels = 3\n\n# images with less than this many cloud pixels will be used with normal\n# mosaicing (most recent on top)\ncloudFreeKeepThresh = 3\n\nBANDS = [\n    \"B1\",\n    \"B2\",\n    \"B3\",\n    \"B4\",\n    \"B5\",\n    \"B6\",\n    \"B7\",\n    \"B8\",\n    \"B8A\",\n    \"B9\",\n    \"B10\",\n    \"B11\",\n    \"B12\",\n]\n",
+  "history_output" : "",
+  "history_begin_time" : 1645389125795,
+  "history_end_time" : 1645389125864,
+  "history_notes" : null,
+  "history_process" : "jsnayl",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "4si1v5el7zo",
+  "history_input" : "# These are algorithm settings for the cloud filtering algorithm\nimage_collection = \"COPERNICUS/S2\"\n\n# Ranges from 0-1.Lower value will mask more pixels out.\n# Generally 0.1-0.3 works well with 0.2 being used most commonly\ncloudThresh = 0.2\n# Height of clouds to use to project cloud shadows\ncloudHeights = [200, 10000, 250]\n# Sum of IR bands to include as shadows within TDOM and the\n# shadow shift method (lower number masks out less)\nirSumThresh = 0.3\nndviThresh = -0.1\n# Pixels to reduce cloud mask and dark shadows by to reduce inclusion\n# of single-pixel comission errors\nerodePixels = 1.5\ndilationPixels = 3\n\n# images with less than this many cloud pixels will be used with normal\n# mosaicing (most recent on top)\ncloudFreeKeepThresh = 3\n\nBANDS = [\n    \"B1\",\n    \"B2\",\n    \"B3\",\n    \"B4\",\n    \"B5\",\n    \"B6\",\n    \"B7\",\n    \"B8\",\n    \"B8A\",\n    \"B9\",\n    \"B10\",\n    \"B11\",\n    \"B12\",\n]\n",
+  "history_output" : "",
+  "history_begin_time" : 1645389114462,
+  "history_end_time" : 1645389114551,
+  "history_notes" : null,
+  "history_process" : "jsnayl",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "e1c0nlef0hj",
+  "history_input" : "# These are algorithm settings for the cloud filtering algorithm\nimage_collection = \"COPERNICUS/S2\"\n\n# Ranges from 0-1.Lower value will mask more pixels out.\n# Generally 0.1-0.3 works well with 0.2 being used most commonly\ncloudThresh = 0.2\n# Height of clouds to use to project cloud shadows\ncloudHeights = [200, 10000, 250]\n# Sum of IR bands to include as shadows within TDOM and the\n# shadow shift method (lower number masks out less)\nirSumThresh = 0.3\nndviThresh = -0.1\n# Pixels to reduce cloud mask and dark shadows by to reduce inclusion\n# of single-pixel comission errors\nerodePixels = 1.5\ndilationPixels = 3\n\n# images with less than this many cloud pixels will be used with normal\n# mosaicing (most recent on top)\ncloudFreeKeepThresh = 3\n\nBANDS = [\n    \"B1\",\n    \"B2\",\n    \"B3\",\n    \"B4\",\n    \"B5\",\n    \"B6\",\n    \"B7\",\n    \"B8\",\n    \"B8A\",\n    \"B9\",\n    \"B10\",\n    \"B11\",\n    \"B12\",\n]\n",
+  "history_output" : "",
+  "history_begin_time" : 1645388793153,
+  "history_end_time" : 1645388793237,
+  "history_notes" : null,
+  "history_process" : "jsnayl",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "afid0mdc0fn",
+  "history_input" : "# These are algorithm settings for the cloud filtering algorithm\nimage_collection = \"COPERNICUS/S2\"\n\n# Ranges from 0-1.Lower value will mask more pixels out.\n# Generally 0.1-0.3 works well with 0.2 being used most commonly\ncloudThresh = 0.2\n# Height of clouds to use to project cloud shadows\ncloudHeights = [200, 10000, 250]\n# Sum of IR bands to include as shadows within TDOM and the\n# shadow shift method (lower number masks out less)\nirSumThresh = 0.3\nndviThresh = -0.1\n# Pixels to reduce cloud mask and dark shadows by to reduce inclusion\n# of single-pixel comission errors\nerodePixels = 1.5\ndilationPixels = 3\n\n# images with less than this many cloud pixels will be used with normal\n# mosaicing (most recent on top)\ncloudFreeKeepThresh = 3\n\nBANDS = [\n    \"B1\",\n    \"B2\",\n    \"B3\",\n    \"B4\",\n    \"B5\",\n    \"B6\",\n    \"B7\",\n    \"B8\",\n    \"B8A\",\n    \"B9\",\n    \"B10\",\n    \"B11\",\n    \"B12\",\n]\n",
+  "history_output" : "",
+  "history_begin_time" : 1645232751001,
+  "history_end_time" : 1645232751069,
+  "history_notes" : null,
+  "history_process" : "jsnayl",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},]

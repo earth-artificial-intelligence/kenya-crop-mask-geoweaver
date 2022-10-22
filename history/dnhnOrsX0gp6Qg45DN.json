@@ -1,0 +1,361 @@
+[{
+  "history_id" : "2kx4e799zj2",
+  "history_input" : "import sys\nfrom pathlib import Path\nfrom datetime import date\nimport os\n\nsys.path.append(\"..\")\n\nfrom src_exporters_geowiki import *\nfrom src_exporters_sentinel_geowiki import *\nfrom src_exporters_sentinel_pv_kenya import *\nfrom src_exporters_sentinel_kenya_non_crop import *\nfrom src_exporters_sentinel_region import *\nfrom src_exporters_sentinel_utils import *\n\n\n\n\ndef export_geowiki():\n    if len(os.listdir('../data/raw/geowiki_landcover_2017')) == 0:\n        exporter = GeoWikiExporter(Path(\"../data\"))\n        exporter.export()\n\n\ndef export_geowiki_sentinel_ee():\n    if len(os.listdir('../data/raw/earth_engine_geowiki')) == 0:\n        exporter = GeoWikiSentinelExporter(Path(\"../data\"))\n        exporter.export_for_labels(\n            num_labelled_points=10, monitor=False, checkpoint=True)\n\n\ndef export_plant_village_sentinel_ee():\n    if len(os.listdir('../data/raw/earth_engine_plant_village_kenya')) == 0:\n        exporter = KenyaPVSentinelExporter(Path(\"../data\"))\n        exporter.export_for_labels(\n            num_labelled_points=10, monitor=False, checkpoint=True)\n\n\ndef export_kenya_non_crop():\n    if len(os.listdir('../data/raw/earth_engine_kenya_non_crop')) == 0:\n        exporter = KenyaNonCropSentinelExporter(Path(\"../data\"))\n        exporter.export_for_labels(\n            num_labelled_points=10, monitor=False, checkpoint=True)\n\n\ndef export_region():\n    if len(os.listdir('../data/raw/earth_engine_region_busia_partial_slow_cloudfree')) == 0:\n        exporter = RegionalExporter(Path(\"../data\"))\n        exporter.export_for_region(\n            region_name=\"Busia\",\n            end_date=date(2020, 9, 13),\n            num_timesteps=5,\n            monitor=False,\n            checkpoint=True,\n            metres_per_polygon=None,\n            fast=False,\n        )\n\n\nif __name__ == \"__main__\":\n    print(\"starting export_geowiki()...\")\n    export_geowiki()\n    print(\"Done export_geowiki()!\")\n    print(\"starting process_geowiki()...\")\n    #process_geowiki()\n    print(\"Done process_geowiki()!\")\n    print(\"starting export_geowiki_sentinel_ee()...this could take a while\")\n    export_geowiki_sentinel_ee()\n    print(\"Done export_geowiki_sentinel_ee()!\")\n    print(\"starting process_plantvillage()...\")\n    #process_plantvillage()\n    print(\"Done process_plantvillage()!\")\n    print(\"starting export_plant_village_sentinel_ee()...\")\n    export_plant_village_sentinel_ee()\n    print(\"Done export_plant_village_sentinel_ee()!\")\n    print(\"starting process_kenya_noncrop()...\")\n    #process_kenya_noncrop()\n    print(\"Done process_kenya_noncrop()!\")\n    print(\"starting export_kenya_non_crop()...\")\n    #export_kenya_non_crop()\n    print(\"Done export_kenya_non_crop()!\")\n    print(\"starting export_region()...\")\n    #export_region()\n    print(\"Done export_region()!\")\n",
+  "history_output" : "starting export_geowiki()...\nDone export_geowiki()!\nstarting process_geowiki()...\nDone process_geowiki()!\nstarting export_geowiki_sentinel_ee()...this could take a while\nDone export_geowiki_sentinel_ee()!\nstarting process_plantvillage()...\nDone process_plantvillage()!\nstarting export_plant_village_sentinel_ee()...\nDone export_plant_village_sentinel_ee()!\nstarting process_kenya_noncrop()...\nDone process_kenya_noncrop()!\nstarting export_kenya_non_crop()...\nDone export_kenya_non_crop()!\nstarting export_region()...\nDone export_region()!\n",
+  "history_begin_time" : 1666166410495,
+  "history_end_time" : 1666166419917,
+  "history_notes" : null,
+  "history_process" : "gpetwx",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "2o0hk3a687f",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666166410217,
+  "history_end_time" : 1666166419923,
+  "history_notes" : null,
+  "history_process" : "4q2yxd",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "x1yli0q1s9x",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666166410218,
+  "history_end_time" : 1666166419923,
+  "history_notes" : null,
+  "history_process" : "jonz77",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "7lvhpdgs9c6",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666166410221,
+  "history_end_time" : 1666166419924,
+  "history_notes" : null,
+  "history_process" : "dmf4zo",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "4o1r4f9w8mg",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666166410223,
+  "history_end_time" : 1666166419925,
+  "history_notes" : null,
+  "history_process" : "nph7xo",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "a8n5s2vtwnb",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666166410224,
+  "history_end_time" : 1666166419925,
+  "history_notes" : null,
+  "history_process" : "jsnayl",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "f4l4sy3kacj",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666166410227,
+  "history_end_time" : 1666166419925,
+  "history_notes" : null,
+  "history_process" : "yqt708",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "fpgokvf6swt",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666166410228,
+  "history_end_time" : 1666166419926,
+  "history_notes" : null,
+  "history_process" : "q5a232",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "decnqu0e7np",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666166410231,
+  "history_end_time" : 1666166419926,
+  "history_notes" : null,
+  "history_process" : "nt17bz",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "zc9ubvwpk8a",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666166410232,
+  "history_end_time" : 1666166419926,
+  "history_notes" : null,
+  "history_process" : "mw544v",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "0zehstwyhjr",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666166410233,
+  "history_end_time" : 1666166419926,
+  "history_notes" : null,
+  "history_process" : "vxuj3q",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "4czog1fkcam",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666166410235,
+  "history_end_time" : 1666166419927,
+  "history_notes" : null,
+  "history_process" : "nlb6f5",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "umyxm3g7g6f",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666166410237,
+  "history_end_time" : 1666166419927,
+  "history_notes" : null,
+  "history_process" : "i4s7l1",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "ugoowv0vowk",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666166410239,
+  "history_end_time" : 1666166419927,
+  "history_notes" : null,
+  "history_process" : "9c0ch9",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "lxl44vhwuxo",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666166410240,
+  "history_end_time" : 1666166419928,
+  "history_notes" : null,
+  "history_process" : "qdzo28",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "i4l6a3fbxjf",
+  "history_input" : "import sys\nfrom pathlib import Path\n\nsys.path.append(\"..\")\n\nfrom src_processors_geowiki import *\nfrom src_processors_kenya_non_crop import *\nfrom src_processors_pv_kenya import *\n\ndef process_geowiki():\n    processor = GeoWikiProcessor(Path(\"../data\"))\n    processor.process()\n\n\ndef process_plantvillage():\n    processor = KenyaPVProcessor(Path(\"../data\"))\n    processor.process()\n\n\ndef process_kenya_noncrop():\n    processor = KenyaNonCropProcessor(Path(\"../data\"))\n    processor.process()\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...process.py\")\n    process_geowiki()\n    process_plantvillage()\n    #process_kenya_noncrop()\n",
+  "history_output" : "/Users/jensen/virtualenvs/pythonProject/lib/python3.8/site-packages/geopandas/io/file.py:362: FutureWarning: pandas.Int64Index is deprecated and will be removed from pandas in a future version. Use pandas.Index with the appropriate dtype instead.\n  pd.Int64Index,\nStarting...process.py\n",
+  "history_begin_time" : 1666166413551,
+  "history_end_time" : 1666166419928,
+  "history_notes" : null,
+  "history_process" : "iticjd",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "k7j6g0htfor",
+  "history_input" : "import sys\nfrom pathlib import Path\n\nsys.path.append(\"..\")\n\nfrom src_engineer_geowiki import GeoWikiEngineer\nfrom src_engineer_pv_kenya import PVKenyaEngineer\nfrom src_engineer_kenya_non_crop import KenyaNonCropEngineer\n\n\ndef engineer_geowiki():\n    engineer = GeoWikiEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.2)\n\n\ndef engineer_kenya():\n    engineer = PVKenyaEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\ndef engineer_kenya_noncrop():\n    engineer = KenyaNonCropEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...engineer.py\")  \n    engineer_geowiki()\n    engineer_kenya()\n    #engineer_kenya_noncrop()",
+  "history_output" : "Starting...engineer.py\n  0%|          | 0/4 [00:00<?, ?it/s]\n100%|██████████| 4/4 [00:00<00:00, 1350.39it/s]\nNo normalizing dict calculated! Make sure to call update_normalizing_values\nNo normalizing dict calculated!\n  0%|          | 0/10 [00:00<?, ?it/s]\n100%|██████████| 10/10 [00:00<00:00, 12531.53it/s]\nNo normalizing dict calculated! Make sure to call update_normalizing_values\nNo normalizing dict calculated!\n",
+  "history_begin_time" : 1666166417268,
+  "history_end_time" : 1666166419933,
+  "history_notes" : null,
+  "history_process" : "3cars9",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "m887fl1vb21",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1666166419934,
+  "history_notes" : null,
+  "history_process" : "r5a5p5",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "pvsxgy7v6zy",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1666166419938,
+  "history_notes" : null,
+  "history_process" : "delykw",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "u839qa6cmwq",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1666166419942,
+  "history_notes" : null,
+  "history_process" : "q1j13t",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "a60rhfyyvn8",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666166410268,
+  "history_end_time" : 1666166419943,
+  "history_notes" : null,
+  "history_process" : "6nnond",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "qi283mpnr9b",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666166410271,
+  "history_end_time" : 1666166419944,
+  "history_notes" : null,
+  "history_process" : "m6v1cg",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "ayb7y3w5zn4",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666166410273,
+  "history_end_time" : 1666166419944,
+  "history_notes" : null,
+  "history_process" : "m9myzm",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "v82tz7l13io",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666166410274,
+  "history_end_time" : 1666166419944,
+  "history_notes" : null,
+  "history_process" : "jlyr32",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "v9o6gxztkjd",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666166410277,
+  "history_end_time" : 1666166419945,
+  "history_notes" : null,
+  "history_process" : "rus783",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "eawgwanqjyn",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666166410280,
+  "history_end_time" : 1666166419945,
+  "history_notes" : null,
+  "history_process" : "s024ve",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "bb21nm22faa",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666166410284,
+  "history_end_time" : 1666166419945,
+  "history_notes" : null,
+  "history_process" : "m3tvgo",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "0jmtp8wct1u",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666166410285,
+  "history_end_time" : 1666166419945,
+  "history_notes" : null,
+  "history_process" : "9x9elz",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "6iujyemxm3z",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666166410288,
+  "history_end_time" : 1666166419946,
+  "history_notes" : null,
+  "history_process" : "a3ucnn",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "09r4svn6mnp",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666166410290,
+  "history_end_time" : 1666166419946,
+  "history_notes" : null,
+  "history_process" : "t2liev",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "rhxr83yqpem",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666166410292,
+  "history_end_time" : 1666166419946,
+  "history_notes" : null,
+  "history_process" : "1whsg3",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "hyxueuzgvix",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666166410293,
+  "history_end_time" : 1666166419946,
+  "history_notes" : null,
+  "history_process" : "7jza5a",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "xtpyjudxt2x",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666166410294,
+  "history_end_time" : 1666166419946,
+  "history_notes" : null,
+  "history_process" : "9ardvx",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "gjgfqu214u4",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666166410295,
+  "history_end_time" : 1666166419946,
+  "history_notes" : null,
+  "history_process" : "o0vujj",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "vd8bfcbac20",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666166410296,
+  "history_end_time" : 1666166419947,
+  "history_notes" : null,
+  "history_process" : "bhdtil",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "qhc15vqth38",
+  "history_input" : "import torch\nimport numpy as np\nimport random\n\nfrom dataclasses import dataclass\n\n\ndef set_seed(seed: int = 42) -> None:\n    np.random.seed(seed)\n    torch.manual_seed(seed)\n    random.seed(seed)\n\n\n@dataclass\nclass BoundingBox:\n\n    min_lon: float\n    max_lon: float\n    min_lat: float\n    max_lat: float\n\n\nSTR2BB = {\n    \"Kenya\": BoundingBox(min_lon=33.501, max_lon=42.283, min_lat=-5.202, max_lat=6.002),\n    \"Busia\": BoundingBox(\n        min_lon=33.88389587402344,\n        min_lat=-0.04119872691853491,\n        max_lon=34.44007873535156,\n        max_lat=0.7779454563313616,\n    ),\n}\n",
+  "history_output" : "",
+  "history_begin_time" : 1666166410495,
+  "history_end_time" : 1666166419947,
+  "history_notes" : null,
+  "history_process" : "o5t3jb",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+}]

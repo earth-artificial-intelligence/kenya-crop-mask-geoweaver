@@ -1,0 +1,31 @@
+[{
+  "history_id" : "0fev3ivj93w",
+  "history_input" : "",
+  "history_output" : "",
+  "history_begin_time" : 1645232744407,
+  "history_end_time" : 1645232744569,
+  "history_notes" : null,
+  "history_process" : "q31oxu",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "8biltfa3j4e",
+  "history_input" : "",
+  "history_output" : "",
+  "history_begin_time" : 1645232387747,
+  "history_end_time" : 1645232387831,
+  "history_notes" : null,
+  "history_process" : "q31oxu",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "8t10p8v6w6d",
+  "history_input" : "",
+  "history_output" : "",
+  "history_begin_time" : 1644877987859,
+  "history_end_time" : 1644877987948,
+  "history_notes" : null,
+  "history_process" : "q31oxu",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},]

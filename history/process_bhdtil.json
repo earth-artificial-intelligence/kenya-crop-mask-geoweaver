@@ -1,0 +1,321 @@
+[{
+  "history_id" : "b7hj4sq1c8c",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666167825392,
+  "history_end_time" : 1666167825392,
+  "history_notes" : null,
+  "history_process" : "bhdtil",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "edfjo6yebk5",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666167772383,
+  "history_end_time" : 1666167772383,
+  "history_notes" : null,
+  "history_process" : "bhdtil",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "10xqlzrs0hk",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666166465615,
+  "history_end_time" : 1666166465615,
+  "history_notes" : null,
+  "history_process" : "bhdtil",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "vd8bfcbac20",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666166410296,
+  "history_end_time" : 1666166419947,
+  "history_notes" : null,
+  "history_process" : "bhdtil",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "5e0d70bpz21",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666164233105,
+  "history_end_time" : 1666164233105,
+  "history_notes" : null,
+  "history_process" : "bhdtil",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "ofcna5nx6bk",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666163607324,
+  "history_end_time" : 1666163607324,
+  "history_notes" : null,
+  "history_process" : "bhdtil",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "s0uq7bfw543",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666137012969,
+  "history_end_time" : 1666137012969,
+  "history_notes" : null,
+  "history_process" : "bhdtil",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "wav4elyo9lz",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666136593518,
+  "history_end_time" : 1666136593518,
+  "history_notes" : null,
+  "history_process" : "bhdtil",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "jr04o3cmbh9",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666136435994,
+  "history_end_time" : 1666136435994,
+  "history_notes" : null,
+  "history_process" : "bhdtil",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "m08vzk2qal1",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666134110813,
+  "history_end_time" : 1666134110813,
+  "history_notes" : null,
+  "history_process" : "bhdtil",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "jckofreb7ed",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666134036967,
+  "history_end_time" : 1666134036967,
+  "history_notes" : null,
+  "history_process" : "bhdtil",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "hv881l6d2ua",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666134009005,
+  "history_end_time" : 1666134009005,
+  "history_notes" : null,
+  "history_process" : "bhdtil",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "mye4u618zts",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666131993240,
+  "history_end_time" : 1666131993240,
+  "history_notes" : null,
+  "history_process" : "bhdtil",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "van71gv8gt6",
+  "history_input" : "from dataclasses import dataclass\nfrom datetime import datetime\nfrom pathlib import Path\nimport numpy as np\nimport xarray as xr\nimport pandas as pd\n\nfrom src_engineer_base import BaseEngineer\n\nfrom typing import cast, Dict, Optional, Tuple\n\n\n@dataclass\nclass TestInstance:\n    x: np.ndarray\n    lat: np.ndarray\n    lon: np.ndarray\n\n\ndef tif_to_np(\n    path_to_dataset: Path,\n    add_ndvi: bool,\n    add_ndwi: bool,\n    nan: float,\n    normalizing_dict: Optional[Dict[str, np.ndarray]],\n    days_per_timestep: int,\n) -> TestInstance:\n\n    _, start_date, _ = cast(\n        Tuple[str, datetime, datetime],\n        BaseEngineer.process_filename(path_to_dataset.name, include_extended_filenames=True),\n    )\n\n    x = BaseEngineer.load_tif(\n        path_to_dataset, days_per_timestep=days_per_timestep, start_date=start_date\n    )\n\n    lon, lat = np.meshgrid(x.x.values, x.y.values)\n    flat_lat, flat_lon = (\n        np.squeeze(lat.reshape(-1, 1), -1),\n        np.squeeze(lon.reshape(-1, 1), -1),\n    )\n\n    x_np = x.values\n    x_np = x_np.reshape(x_np.shape[0], x_np.shape[1], x_np.shape[2] * x_np.shape[3])\n    x_np = np.moveaxis(x_np, -1, 0)\n\n    if add_ndvi:\n        x_np = BaseEngineer.calculate_ndvi(x_np, num_dims=3)\n    if add_ndwi:\n        x_np = BaseEngineer.calculate_ndwi(x_np, num_dims=3)\n\n    x_np = BaseEngineer.maxed_nan_to_num(x_np, nan=nan)\n\n    if normalizing_dict is not None:\n        x_np = (x_np - normalizing_dict[\"mean\"]) / normalizing_dict[\"std\"]\n\n    return TestInstance(x=x_np, lat=flat_lat, lon=flat_lon)\n\n\ndef preds_to_xr(predictions: np.ndarray, lats: np.ndarray, lons: np.ndarray) -> xr.Dataset:\n\n    data_dict: Dict[str, np.ndarray] = {\"lat\": lats, \"lon\": lons}\n\n    for prediction_idx in range(predictions.shape[1]):\n        prediction_label = f\"prediction_{prediction_idx}\"\n        data_dict[prediction_label] = predictions[:, prediction_idx]\n\n    return pd.DataFrame(data=data_dict).set_index([\"lat\", \"lon\"]).to_xarray()\n",
+  "history_output" : "",
+  "history_begin_time" : 1666118276416,
+  "history_end_time" : 1666118277473,
+  "history_notes" : null,
+  "history_process" : "bhdtil",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "hyd61kmelwz",
+  "history_input" : "from dataclasses import dataclass\nfrom datetime import datetime\nfrom pathlib import Path\nimport numpy as np\nimport xarray as xr\nimport pandas as pd\n\nfrom src_engineer_base import BaseEngineer\n\nfrom typing import cast, Dict, Optional, Tuple\n\n\n@dataclass\nclass TestInstance:\n    x: np.ndarray\n    lat: np.ndarray\n    lon: np.ndarray\n\n\ndef tif_to_np(\n    path_to_dataset: Path,\n    add_ndvi: bool,\n    add_ndwi: bool,\n    nan: float,\n    normalizing_dict: Optional[Dict[str, np.ndarray]],\n    days_per_timestep: int,\n) -> TestInstance:\n\n    _, start_date, _ = cast(\n        Tuple[str, datetime, datetime],\n        BaseEngineer.process_filename(path_to_dataset.name, include_extended_filenames=True),\n    )\n\n    x = BaseEngineer.load_tif(\n        path_to_dataset, days_per_timestep=days_per_timestep, start_date=start_date\n    )\n\n    lon, lat = np.meshgrid(x.x.values, x.y.values)\n    flat_lat, flat_lon = (\n        np.squeeze(lat.reshape(-1, 1), -1),\n        np.squeeze(lon.reshape(-1, 1), -1),\n    )\n\n    x_np = x.values\n    x_np = x_np.reshape(x_np.shape[0], x_np.shape[1], x_np.shape[2] * x_np.shape[3])\n    x_np = np.moveaxis(x_np, -1, 0)\n\n    if add_ndvi:\n        x_np = BaseEngineer.calculate_ndvi(x_np, num_dims=3)\n    if add_ndwi:\n        x_np = BaseEngineer.calculate_ndwi(x_np, num_dims=3)\n\n    x_np = BaseEngineer.maxed_nan_to_num(x_np, nan=nan)\n\n    if normalizing_dict is not None:\n        x_np = (x_np - normalizing_dict[\"mean\"]) / normalizing_dict[\"std\"]\n\n    return TestInstance(x=x_np, lat=flat_lat, lon=flat_lon)\n\n\ndef preds_to_xr(predictions: np.ndarray, lats: np.ndarray, lons: np.ndarray) -> xr.Dataset:\n\n    data_dict: Dict[str, np.ndarray] = {\"lat\": lats, \"lon\": lons}\n\n    for prediction_idx in range(predictions.shape[1]):\n        prediction_label = f\"prediction_{prediction_idx}\"\n        data_dict[prediction_label] = predictions[:, prediction_idx]\n\n    return pd.DataFrame(data=data_dict).set_index([\"lat\", \"lon\"]).to_xarray()\n",
+  "history_output" : "",
+  "history_begin_time" : 1655909874253,
+  "history_end_time" : 1655909876485,
+  "history_notes" : null,
+  "history_process" : "bhdtil",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "3yafxae6loh",
+  "history_input" : "from dataclasses import dataclass\nfrom datetime import datetime\nfrom pathlib import Path\nimport numpy as np\nimport xarray as xr\nimport pandas as pd\n\nfrom src_engineer_base import BaseEngineer\n\nfrom typing import cast, Dict, Optional, Tuple\n\n\n@dataclass\nclass TestInstance:\n    x: np.ndarray\n    lat: np.ndarray\n    lon: np.ndarray\n\n\ndef tif_to_np(\n    path_to_dataset: Path,\n    add_ndvi: bool,\n    add_ndwi: bool,\n    nan: float,\n    normalizing_dict: Optional[Dict[str, np.ndarray]],\n    days_per_timestep: int,\n) -> TestInstance:\n\n    _, start_date, _ = cast(\n        Tuple[str, datetime, datetime],\n        BaseEngineer.process_filename(path_to_dataset.name, include_extended_filenames=True),\n    )\n\n    x = BaseEngineer.load_tif(\n        path_to_dataset, days_per_timestep=days_per_timestep, start_date=start_date\n    )\n\n    lon, lat = np.meshgrid(x.x.values, x.y.values)\n    flat_lat, flat_lon = (\n        np.squeeze(lat.reshape(-1, 1), -1),\n        np.squeeze(lon.reshape(-1, 1), -1),\n    )\n\n    x_np = x.values\n    x_np = x_np.reshape(x_np.shape[0], x_np.shape[1], x_np.shape[2] * x_np.shape[3])\n    x_np = np.moveaxis(x_np, -1, 0)\n\n    if add_ndvi:\n        x_np = BaseEngineer.calculate_ndvi(x_np, num_dims=3)\n    if add_ndwi:\n        x_np = BaseEngineer.calculate_ndwi(x_np, num_dims=3)\n\n    x_np = BaseEngineer.maxed_nan_to_num(x_np, nan=nan)\n\n    if normalizing_dict is not None:\n        x_np = (x_np - normalizing_dict[\"mean\"]) / normalizing_dict[\"std\"]\n\n    return TestInstance(x=x_np, lat=flat_lat, lon=flat_lon)\n\n\ndef preds_to_xr(predictions: np.ndarray, lats: np.ndarray, lons: np.ndarray) -> xr.Dataset:\n\n    data_dict: Dict[str, np.ndarray] = {\"lat\": lats, \"lon\": lons}\n\n    for prediction_idx in range(predictions.shape[1]):\n        prediction_label = f\"prediction_{prediction_idx}\"\n        data_dict[prediction_label] = predictions[:, prediction_idx]\n\n    return pd.DataFrame(data=data_dict).set_index([\"lat\", \"lon\"]).to_xarray()\n",
+  "history_output" : "",
+  "history_begin_time" : 1655908832245,
+  "history_end_time" : 1655908834298,
+  "history_notes" : null,
+  "history_process" : "bhdtil",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "vvz8k6g2kj3",
+  "history_input" : "from dataclasses import dataclass\nfrom datetime import datetime\nfrom pathlib import Path\nimport numpy as np\nimport xarray as xr\nimport pandas as pd\n\nfrom src_engineer_base import BaseEngineer\n\nfrom typing import cast, Dict, Optional, Tuple\n\n\n@dataclass\nclass TestInstance:\n    x: np.ndarray\n    lat: np.ndarray\n    lon: np.ndarray\n\n\ndef tif_to_np(\n    path_to_dataset: Path,\n    add_ndvi: bool,\n    add_ndwi: bool,\n    nan: float,\n    normalizing_dict: Optional[Dict[str, np.ndarray]],\n    days_per_timestep: int,\n) -> TestInstance:\n\n    _, start_date, _ = cast(\n        Tuple[str, datetime, datetime],\n        BaseEngineer.process_filename(path_to_dataset.name, include_extended_filenames=True),\n    )\n\n    x = BaseEngineer.load_tif(\n        path_to_dataset, days_per_timestep=days_per_timestep, start_date=start_date\n    )\n\n    lon, lat = np.meshgrid(x.x.values, x.y.values)\n    flat_lat, flat_lon = (\n        np.squeeze(lat.reshape(-1, 1), -1),\n        np.squeeze(lon.reshape(-1, 1), -1),\n    )\n\n    x_np = x.values\n    x_np = x_np.reshape(x_np.shape[0], x_np.shape[1], x_np.shape[2] * x_np.shape[3])\n    x_np = np.moveaxis(x_np, -1, 0)\n\n    if add_ndvi:\n        x_np = BaseEngineer.calculate_ndvi(x_np, num_dims=3)\n    if add_ndwi:\n        x_np = BaseEngineer.calculate_ndwi(x_np, num_dims=3)\n\n    x_np = BaseEngineer.maxed_nan_to_num(x_np, nan=nan)\n\n    if normalizing_dict is not None:\n        x_np = (x_np - normalizing_dict[\"mean\"]) / normalizing_dict[\"std\"]\n\n    return TestInstance(x=x_np, lat=flat_lat, lon=flat_lon)\n\n\ndef preds_to_xr(predictions: np.ndarray, lats: np.ndarray, lons: np.ndarray) -> xr.Dataset:\n\n    data_dict: Dict[str, np.ndarray] = {\"lat\": lats, \"lon\": lons}\n\n    for prediction_idx in range(predictions.shape[1]):\n        prediction_label = f\"prediction_{prediction_idx}\"\n        data_dict[prediction_label] = predictions[:, prediction_idx]\n\n    return pd.DataFrame(data=data_dict).set_index([\"lat\", \"lon\"]).to_xarray()\n",
+  "history_output" : "",
+  "history_begin_time" : 1655907430319,
+  "history_end_time" : 1655907432560,
+  "history_notes" : null,
+  "history_process" : "bhdtil",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "0or15c733fs",
+  "history_input" : "from dataclasses import dataclass\nfrom datetime import datetime\nfrom pathlib import Path\nimport numpy as np\nimport xarray as xr\nimport pandas as pd\n\nfrom src_engineer_base import BaseEngineer\n\nfrom typing import cast, Dict, Optional, Tuple\n\n\n@dataclass\nclass TestInstance:\n    x: np.ndarray\n    lat: np.ndarray\n    lon: np.ndarray\n\n\ndef tif_to_np(\n    path_to_dataset: Path,\n    add_ndvi: bool,\n    add_ndwi: bool,\n    nan: float,\n    normalizing_dict: Optional[Dict[str, np.ndarray]],\n    days_per_timestep: int,\n) -> TestInstance:\n\n    _, start_date, _ = cast(\n        Tuple[str, datetime, datetime],\n        BaseEngineer.process_filename(path_to_dataset.name, include_extended_filenames=True),\n    )\n\n    x = BaseEngineer.load_tif(\n        path_to_dataset, days_per_timestep=days_per_timestep, start_date=start_date\n    )\n\n    lon, lat = np.meshgrid(x.x.values, x.y.values)\n    flat_lat, flat_lon = (\n        np.squeeze(lat.reshape(-1, 1), -1),\n        np.squeeze(lon.reshape(-1, 1), -1),\n    )\n\n    x_np = x.values\n    x_np = x_np.reshape(x_np.shape[0], x_np.shape[1], x_np.shape[2] * x_np.shape[3])\n    x_np = np.moveaxis(x_np, -1, 0)\n\n    if add_ndvi:\n        x_np = BaseEngineer.calculate_ndvi(x_np, num_dims=3)\n    if add_ndwi:\n        x_np = BaseEngineer.calculate_ndwi(x_np, num_dims=3)\n\n    x_np = BaseEngineer.maxed_nan_to_num(x_np, nan=nan)\n\n    if normalizing_dict is not None:\n        x_np = (x_np - normalizing_dict[\"mean\"]) / normalizing_dict[\"std\"]\n\n    return TestInstance(x=x_np, lat=flat_lat, lon=flat_lon)\n\n\ndef preds_to_xr(predictions: np.ndarray, lats: np.ndarray, lons: np.ndarray) -> xr.Dataset:\n\n    data_dict: Dict[str, np.ndarray] = {\"lat\": lats, \"lon\": lons}\n\n    for prediction_idx in range(predictions.shape[1]):\n        prediction_label = f\"prediction_{prediction_idx}\"\n        data_dict[prediction_label] = predictions[:, prediction_idx]\n\n    return pd.DataFrame(data=data_dict).set_index([\"lat\", \"lon\"]).to_xarray()\n",
+  "history_output" : "Traceback (most recent call last):\n  File \"src_models_utils.py\", line 4, in <module>\n    import numpy as np\nModuleNotFoundError: No module named 'numpy'\n",
+  "history_begin_time" : 1655907397538,
+  "history_end_time" : 1655907403272,
+  "history_notes" : null,
+  "history_process" : "bhdtil",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "1zzrahhmn0w",
+  "history_input" : "from dataclasses import dataclass\nfrom datetime import datetime\nfrom pathlib import Path\nimport numpy as np\nimport xarray as xr\nimport pandas as pd\n\nfrom src_engineer_base import BaseEngineer\n\nfrom typing import cast, Dict, Optional, Tuple\n\n\n@dataclass\nclass TestInstance:\n    x: np.ndarray\n    lat: np.ndarray\n    lon: np.ndarray\n\n\ndef tif_to_np(\n    path_to_dataset: Path,\n    add_ndvi: bool,\n    add_ndwi: bool,\n    nan: float,\n    normalizing_dict: Optional[Dict[str, np.ndarray]],\n    days_per_timestep: int,\n) -> TestInstance:\n\n    _, start_date, _ = cast(\n        Tuple[str, datetime, datetime],\n        BaseEngineer.process_filename(path_to_dataset.name, include_extended_filenames=True),\n    )\n\n    x = BaseEngineer.load_tif(\n        path_to_dataset, days_per_timestep=days_per_timestep, start_date=start_date\n    )\n\n    lon, lat = np.meshgrid(x.x.values, x.y.values)\n    flat_lat, flat_lon = (\n        np.squeeze(lat.reshape(-1, 1), -1),\n        np.squeeze(lon.reshape(-1, 1), -1),\n    )\n\n    x_np = x.values\n    x_np = x_np.reshape(x_np.shape[0], x_np.shape[1], x_np.shape[2] * x_np.shape[3])\n    x_np = np.moveaxis(x_np, -1, 0)\n\n    if add_ndvi:\n        x_np = BaseEngineer.calculate_ndvi(x_np, num_dims=3)\n    if add_ndwi:\n        x_np = BaseEngineer.calculate_ndwi(x_np, num_dims=3)\n\n    x_np = BaseEngineer.maxed_nan_to_num(x_np, nan=nan)\n\n    if normalizing_dict is not None:\n        x_np = (x_np - normalizing_dict[\"mean\"]) / normalizing_dict[\"std\"]\n\n    return TestInstance(x=x_np, lat=flat_lat, lon=flat_lon)\n\n\ndef preds_to_xr(predictions: np.ndarray, lats: np.ndarray, lons: np.ndarray) -> xr.Dataset:\n\n    data_dict: Dict[str, np.ndarray] = {\"lat\": lats, \"lon\": lons}\n\n    for prediction_idx in range(predictions.shape[1]):\n        prediction_label = f\"prediction_{prediction_idx}\"\n        data_dict[prediction_label] = predictions[:, prediction_idx]\n\n    return pd.DataFrame(data=data_dict).set_index([\"lat\", \"lon\"]).to_xarray()\n",
+  "history_output" : "Traceback (most recent call last):\n  File \"src_models_utils.py\", line 4, in <module>\n    import numpy as np\nModuleNotFoundError: No module named 'numpy'\n",
+  "history_begin_time" : 1655865872588,
+  "history_end_time" : 1655865872768,
+  "history_notes" : null,
+  "history_process" : "bhdtil",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "b93nv24hyq7",
+  "history_input" : "from dataclasses import dataclass\nfrom datetime import datetime\nfrom pathlib import Path\nimport numpy as np\nimport xarray as xr\nimport pandas as pd\n\nfrom src_engineer_base import BaseEngineer\n\nfrom typing import cast, Dict, Optional, Tuple\n\n\n@dataclass\nclass TestInstance:\n    x: np.ndarray\n    lat: np.ndarray\n    lon: np.ndarray\n\n\ndef tif_to_np(\n    path_to_dataset: Path,\n    add_ndvi: bool,\n    add_ndwi: bool,\n    nan: float,\n    normalizing_dict: Optional[Dict[str, np.ndarray]],\n    days_per_timestep: int,\n) -> TestInstance:\n\n    _, start_date, _ = cast(\n        Tuple[str, datetime, datetime],\n        BaseEngineer.process_filename(path_to_dataset.name, include_extended_filenames=True),\n    )\n\n    x = BaseEngineer.load_tif(\n        path_to_dataset, days_per_timestep=days_per_timestep, start_date=start_date\n    )\n\n    lon, lat = np.meshgrid(x.x.values, x.y.values)\n    flat_lat, flat_lon = (\n        np.squeeze(lat.reshape(-1, 1), -1),\n        np.squeeze(lon.reshape(-1, 1), -1),\n    )\n\n    x_np = x.values\n    x_np = x_np.reshape(x_np.shape[0], x_np.shape[1], x_np.shape[2] * x_np.shape[3])\n    x_np = np.moveaxis(x_np, -1, 0)\n\n    if add_ndvi:\n        x_np = BaseEngineer.calculate_ndvi(x_np, num_dims=3)\n    if add_ndwi:\n        x_np = BaseEngineer.calculate_ndwi(x_np, num_dims=3)\n\n    x_np = BaseEngineer.maxed_nan_to_num(x_np, nan=nan)\n\n    if normalizing_dict is not None:\n        x_np = (x_np - normalizing_dict[\"mean\"]) / normalizing_dict[\"std\"]\n\n    return TestInstance(x=x_np, lat=flat_lat, lon=flat_lon)\n\n\ndef preds_to_xr(predictions: np.ndarray, lats: np.ndarray, lons: np.ndarray) -> xr.Dataset:\n\n    data_dict: Dict[str, np.ndarray] = {\"lat\": lats, \"lon\": lons}\n\n    for prediction_idx in range(predictions.shape[1]):\n        prediction_label = f\"prediction_{prediction_idx}\"\n        data_dict[prediction_label] = predictions[:, prediction_idx]\n\n    return pd.DataFrame(data=data_dict).set_index([\"lat\", \"lon\"]).to_xarray()\n",
+  "history_output" : "",
+  "history_begin_time" : 1655865086115,
+  "history_end_time" : 1655865088421,
+  "history_notes" : null,
+  "history_process" : "bhdtil",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "ikgkjcm1jkc",
+  "history_input" : "from dataclasses import dataclass\nfrom datetime import datetime\nfrom pathlib import Path\nimport numpy as np\nimport xarray as xr\nimport pandas as pd\n\nfrom src_engineer_base import BaseEngineer\n\nfrom typing import cast, Dict, Optional, Tuple\n\n\n@dataclass\nclass TestInstance:\n    x: np.ndarray\n    lat: np.ndarray\n    lon: np.ndarray\n\n\ndef tif_to_np(\n    path_to_dataset: Path,\n    add_ndvi: bool,\n    add_ndwi: bool,\n    nan: float,\n    normalizing_dict: Optional[Dict[str, np.ndarray]],\n    days_per_timestep: int,\n) -> TestInstance:\n\n    _, start_date, _ = cast(\n        Tuple[str, datetime, datetime],\n        BaseEngineer.process_filename(path_to_dataset.name, include_extended_filenames=True),\n    )\n\n    x = BaseEngineer.load_tif(\n        path_to_dataset, days_per_timestep=days_per_timestep, start_date=start_date\n    )\n\n    lon, lat = np.meshgrid(x.x.values, x.y.values)\n    flat_lat, flat_lon = (\n        np.squeeze(lat.reshape(-1, 1), -1),\n        np.squeeze(lon.reshape(-1, 1), -1),\n    )\n\n    x_np = x.values\n    x_np = x_np.reshape(x_np.shape[0], x_np.shape[1], x_np.shape[2] * x_np.shape[3])\n    x_np = np.moveaxis(x_np, -1, 0)\n\n    if add_ndvi:\n        x_np = BaseEngineer.calculate_ndvi(x_np, num_dims=3)\n    if add_ndwi:\n        x_np = BaseEngineer.calculate_ndwi(x_np, num_dims=3)\n\n    x_np = BaseEngineer.maxed_nan_to_num(x_np, nan=nan)\n\n    if normalizing_dict is not None:\n        x_np = (x_np - normalizing_dict[\"mean\"]) / normalizing_dict[\"std\"]\n\n    return TestInstance(x=x_np, lat=flat_lat, lon=flat_lon)\n\n\ndef preds_to_xr(predictions: np.ndarray, lats: np.ndarray, lons: np.ndarray) -> xr.Dataset:\n\n    data_dict: Dict[str, np.ndarray] = {\"lat\": lats, \"lon\": lons}\n\n    for prediction_idx in range(predictions.shape[1]):\n        prediction_label = f\"prediction_{prediction_idx}\"\n        data_dict[prediction_label] = predictions[:, prediction_idx]\n\n    return pd.DataFrame(data=data_dict).set_index([\"lat\", \"lon\"]).to_xarray()\n",
+  "history_output" : "",
+  "history_begin_time" : 1647347433061,
+  "history_end_time" : 1647347434848,
+  "history_notes" : null,
+  "history_process" : "bhdtil",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "pwb732pew79",
+  "history_input" : "from dataclasses import dataclass\nfrom datetime import datetime\nfrom pathlib import Path\nimport numpy as np\nimport xarray as xr\nimport pandas as pd\n\nfrom src_engineer_base import BaseEngineer\n\nfrom typing import cast, Dict, Optional, Tuple\n\n\n@dataclass\nclass TestInstance:\n    x: np.ndarray\n    lat: np.ndarray\n    lon: np.ndarray\n\n\ndef tif_to_np(\n    path_to_dataset: Path,\n    add_ndvi: bool,\n    add_ndwi: bool,\n    nan: float,\n    normalizing_dict: Optional[Dict[str, np.ndarray]],\n    days_per_timestep: int,\n) -> TestInstance:\n\n    _, start_date, _ = cast(\n        Tuple[str, datetime, datetime],\n        BaseEngineer.process_filename(path_to_dataset.name, include_extended_filenames=True),\n    )\n\n    x = BaseEngineer.load_tif(\n        path_to_dataset, days_per_timestep=days_per_timestep, start_date=start_date\n    )\n\n    lon, lat = np.meshgrid(x.x.values, x.y.values)\n    flat_lat, flat_lon = (\n        np.squeeze(lat.reshape(-1, 1), -1),\n        np.squeeze(lon.reshape(-1, 1), -1),\n    )\n\n    x_np = x.values\n    x_np = x_np.reshape(x_np.shape[0], x_np.shape[1], x_np.shape[2] * x_np.shape[3])\n    x_np = np.moveaxis(x_np, -1, 0)\n\n    if add_ndvi:\n        x_np = BaseEngineer.calculate_ndvi(x_np, num_dims=3)\n    if add_ndwi:\n        x_np = BaseEngineer.calculate_ndwi(x_np, num_dims=3)\n\n    x_np = BaseEngineer.maxed_nan_to_num(x_np, nan=nan)\n\n    if normalizing_dict is not None:\n        x_np = (x_np - normalizing_dict[\"mean\"]) / normalizing_dict[\"std\"]\n\n    return TestInstance(x=x_np, lat=flat_lat, lon=flat_lon)\n\n\ndef preds_to_xr(predictions: np.ndarray, lats: np.ndarray, lons: np.ndarray) -> xr.Dataset:\n\n    data_dict: Dict[str, np.ndarray] = {\"lat\": lats, \"lon\": lons}\n\n    for prediction_idx in range(predictions.shape[1]):\n        prediction_label = f\"prediction_{prediction_idx}\"\n        data_dict[prediction_label] = predictions[:, prediction_idx]\n\n    return pd.DataFrame(data=data_dict).set_index([\"lat\", \"lon\"]).to_xarray()\n",
+  "history_output" : "",
+  "history_begin_time" : 1647347340010,
+  "history_end_time" : 1647347342066,
+  "history_notes" : null,
+  "history_process" : "bhdtil",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "ap2t08zr3ec",
+  "history_input" : "from dataclasses import dataclass\nfrom datetime import datetime\nfrom pathlib import Path\nimport numpy as np\nimport xarray as xr\nimport pandas as pd\n\nfrom src_engineer_base import BaseEngineer\n\nfrom typing import cast, Dict, Optional, Tuple\n\n\n@dataclass\nclass TestInstance:\n    x: np.ndarray\n    lat: np.ndarray\n    lon: np.ndarray\n\n\ndef tif_to_np(\n    path_to_dataset: Path,\n    add_ndvi: bool,\n    add_ndwi: bool,\n    nan: float,\n    normalizing_dict: Optional[Dict[str, np.ndarray]],\n    days_per_timestep: int,\n) -> TestInstance:\n\n    _, start_date, _ = cast(\n        Tuple[str, datetime, datetime],\n        BaseEngineer.process_filename(path_to_dataset.name, include_extended_filenames=True),\n    )\n\n    x = BaseEngineer.load_tif(\n        path_to_dataset, days_per_timestep=days_per_timestep, start_date=start_date\n    )\n\n    lon, lat = np.meshgrid(x.x.values, x.y.values)\n    flat_lat, flat_lon = (\n        np.squeeze(lat.reshape(-1, 1), -1),\n        np.squeeze(lon.reshape(-1, 1), -1),\n    )\n\n    x_np = x.values\n    x_np = x_np.reshape(x_np.shape[0], x_np.shape[1], x_np.shape[2] * x_np.shape[3])\n    x_np = np.moveaxis(x_np, -1, 0)\n\n    if add_ndvi:\n        x_np = BaseEngineer.calculate_ndvi(x_np, num_dims=3)\n    if add_ndwi:\n        x_np = BaseEngineer.calculate_ndwi(x_np, num_dims=3)\n\n    x_np = BaseEngineer.maxed_nan_to_num(x_np, nan=nan)\n\n    if normalizing_dict is not None:\n        x_np = (x_np - normalizing_dict[\"mean\"]) / normalizing_dict[\"std\"]\n\n    return TestInstance(x=x_np, lat=flat_lat, lon=flat_lon)\n\n\ndef preds_to_xr(predictions: np.ndarray, lats: np.ndarray, lons: np.ndarray) -> xr.Dataset:\n\n    data_dict: Dict[str, np.ndarray] = {\"lat\": lats, \"lon\": lons}\n\n    for prediction_idx in range(predictions.shape[1]):\n        prediction_label = f\"prediction_{prediction_idx}\"\n        data_dict[prediction_label] = predictions[:, prediction_idx]\n\n    return pd.DataFrame(data=data_dict).set_index([\"lat\", \"lon\"]).to_xarray()\n",
+  "history_output" : "",
+  "history_begin_time" : 1647347272251,
+  "history_end_time" : 1647347272436,
+  "history_notes" : null,
+  "history_process" : "bhdtil",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "pte9gvuh56w",
+  "history_input" : "from dataclasses import dataclass\nfrom datetime import datetime\nfrom pathlib import Path\nimport numpy as np\nimport xarray as xr\nimport pandas as pd\n\nfrom src_engineer_base import BaseEngineer\n\nfrom typing import cast, Dict, Optional, Tuple\n\n\n@dataclass\nclass TestInstance:\n    x: np.ndarray\n    lat: np.ndarray\n    lon: np.ndarray\n\n\ndef tif_to_np(\n    path_to_dataset: Path,\n    add_ndvi: bool,\n    add_ndwi: bool,\n    nan: float,\n    normalizing_dict: Optional[Dict[str, np.ndarray]],\n    days_per_timestep: int,\n) -> TestInstance:\n\n    _, start_date, _ = cast(\n        Tuple[str, datetime, datetime],\n        BaseEngineer.process_filename(path_to_dataset.name, include_extended_filenames=True),\n    )\n\n    x = BaseEngineer.load_tif(\n        path_to_dataset, days_per_timestep=days_per_timestep, start_date=start_date\n    )\n\n    lon, lat = np.meshgrid(x.x.values, x.y.values)\n    flat_lat, flat_lon = (\n        np.squeeze(lat.reshape(-1, 1), -1),\n        np.squeeze(lon.reshape(-1, 1), -1),\n    )\n\n    x_np = x.values\n    x_np = x_np.reshape(x_np.shape[0], x_np.shape[1], x_np.shape[2] * x_np.shape[3])\n    x_np = np.moveaxis(x_np, -1, 0)\n\n    if add_ndvi:\n        x_np = BaseEngineer.calculate_ndvi(x_np, num_dims=3)\n    if add_ndwi:\n        x_np = BaseEngineer.calculate_ndwi(x_np, num_dims=3)\n\n    x_np = BaseEngineer.maxed_nan_to_num(x_np, nan=nan)\n\n    if normalizing_dict is not None:\n        x_np = (x_np - normalizing_dict[\"mean\"]) / normalizing_dict[\"std\"]\n\n    return TestInstance(x=x_np, lat=flat_lat, lon=flat_lon)\n\n\ndef preds_to_xr(predictions: np.ndarray, lats: np.ndarray, lons: np.ndarray) -> xr.Dataset:\n\n    data_dict: Dict[str, np.ndarray] = {\"lat\": lats, \"lon\": lons}\n\n    for prediction_idx in range(predictions.shape[1]):\n        prediction_label = f\"prediction_{prediction_idx}\"\n        data_dict[prediction_label] = predictions[:, prediction_idx]\n\n    return pd.DataFrame(data=data_dict).set_index([\"lat\", \"lon\"]).to_xarray()\n",
+  "history_output" : "",
+  "history_begin_time" : 1647347138751,
+  "history_end_time" : 1647347138889,
+  "history_notes" : null,
+  "history_process" : "bhdtil",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "5x61fsa1hse",
+  "history_input" : "from dataclasses import dataclass\nfrom datetime import datetime\nfrom pathlib import Path\nimport numpy as np\nimport xarray as xr\nimport pandas as pd\n\nfrom src_engineer_base import BaseEngineer\n\nfrom typing import cast, Dict, Optional, Tuple\n\n\n@dataclass\nclass TestInstance:\n    x: np.ndarray\n    lat: np.ndarray\n    lon: np.ndarray\n\n\ndef tif_to_np(\n    path_to_dataset: Path,\n    add_ndvi: bool,\n    add_ndwi: bool,\n    nan: float,\n    normalizing_dict: Optional[Dict[str, np.ndarray]],\n    days_per_timestep: int,\n) -> TestInstance:\n\n    _, start_date, _ = cast(\n        Tuple[str, datetime, datetime],\n        BaseEngineer.process_filename(path_to_dataset.name, include_extended_filenames=True),\n    )\n\n    x = BaseEngineer.load_tif(\n        path_to_dataset, days_per_timestep=days_per_timestep, start_date=start_date\n    )\n\n    lon, lat = np.meshgrid(x.x.values, x.y.values)\n    flat_lat, flat_lon = (\n        np.squeeze(lat.reshape(-1, 1), -1),\n        np.squeeze(lon.reshape(-1, 1), -1),\n    )\n\n    x_np = x.values\n    x_np = x_np.reshape(x_np.shape[0], x_np.shape[1], x_np.shape[2] * x_np.shape[3])\n    x_np = np.moveaxis(x_np, -1, 0)\n\n    if add_ndvi:\n        x_np = BaseEngineer.calculate_ndvi(x_np, num_dims=3)\n    if add_ndwi:\n        x_np = BaseEngineer.calculate_ndwi(x_np, num_dims=3)\n\n    x_np = BaseEngineer.maxed_nan_to_num(x_np, nan=nan)\n\n    if normalizing_dict is not None:\n        x_np = (x_np - normalizing_dict[\"mean\"]) / normalizing_dict[\"std\"]\n\n    return TestInstance(x=x_np, lat=flat_lat, lon=flat_lon)\n\n\ndef preds_to_xr(predictions: np.ndarray, lats: np.ndarray, lons: np.ndarray) -> xr.Dataset:\n\n    data_dict: Dict[str, np.ndarray] = {\"lat\": lats, \"lon\": lons}\n\n    for prediction_idx in range(predictions.shape[1]):\n        prediction_label = f\"prediction_{prediction_idx}\"\n        data_dict[prediction_label] = predictions[:, prediction_idx]\n\n    return pd.DataFrame(data=data_dict).set_index([\"lat\", \"lon\"]).to_xarray()\n",
+  "history_output" : "",
+  "history_begin_time" : 1647346823430,
+  "history_end_time" : 1647346824584,
+  "history_notes" : null,
+  "history_process" : "bhdtil",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "ifz2w5ddgms",
+  "history_input" : "from dataclasses import dataclass\nfrom datetime import datetime\nfrom pathlib import Path\nimport numpy as np\nimport xarray as xr\nimport pandas as pd\n\nfrom src_engineer_base import BaseEngineer\n\nfrom typing import cast, Dict, Optional, Tuple\n\n\n@dataclass\nclass TestInstance:\n    x: np.ndarray\n    lat: np.ndarray\n    lon: np.ndarray\n\n\ndef tif_to_np(\n    path_to_dataset: Path,\n    add_ndvi: bool,\n    add_ndwi: bool,\n    nan: float,\n    normalizing_dict: Optional[Dict[str, np.ndarray]],\n    days_per_timestep: int,\n) -> TestInstance:\n\n    _, start_date, _ = cast(\n        Tuple[str, datetime, datetime],\n        BaseEngineer.process_filename(path_to_dataset.name, include_extended_filenames=True),\n    )\n\n    x = BaseEngineer.load_tif(\n        path_to_dataset, days_per_timestep=days_per_timestep, start_date=start_date\n    )\n\n    lon, lat = np.meshgrid(x.x.values, x.y.values)\n    flat_lat, flat_lon = (\n        np.squeeze(lat.reshape(-1, 1), -1),\n        np.squeeze(lon.reshape(-1, 1), -1),\n    )\n\n    x_np = x.values\n    x_np = x_np.reshape(x_np.shape[0], x_np.shape[1], x_np.shape[2] * x_np.shape[3])\n    x_np = np.moveaxis(x_np, -1, 0)\n\n    if add_ndvi:\n        x_np = BaseEngineer.calculate_ndvi(x_np, num_dims=3)\n    if add_ndwi:\n        x_np = BaseEngineer.calculate_ndwi(x_np, num_dims=3)\n\n    x_np = BaseEngineer.maxed_nan_to_num(x_np, nan=nan)\n\n    if normalizing_dict is not None:\n        x_np = (x_np - normalizing_dict[\"mean\"]) / normalizing_dict[\"std\"]\n\n    return TestInstance(x=x_np, lat=flat_lat, lon=flat_lon)\n\n\ndef preds_to_xr(predictions: np.ndarray, lats: np.ndarray, lons: np.ndarray) -> xr.Dataset:\n\n    data_dict: Dict[str, np.ndarray] = {\"lat\": lats, \"lon\": lons}\n\n    for prediction_idx in range(predictions.shape[1]):\n        prediction_label = f\"prediction_{prediction_idx}\"\n        data_dict[prediction_label] = predictions[:, prediction_idx]\n\n    return pd.DataFrame(data=data_dict).set_index([\"lat\", \"lon\"]).to_xarray()\n",
+  "history_output" : "",
+  "history_begin_time" : 1647346647752,
+  "history_end_time" : 1647346648477,
+  "history_notes" : null,
+  "history_process" : "bhdtil",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "ffko4wdei1a",
+  "history_input" : "from dataclasses import dataclass\nfrom datetime import datetime\nfrom pathlib import Path\nimport numpy as np\nimport xarray as xr\nimport pandas as pd\n\nfrom src_engineer_base import BaseEngineer\n\nfrom typing import cast, Dict, Optional, Tuple\n\n\n@dataclass\nclass TestInstance:\n    x: np.ndarray\n    lat: np.ndarray\n    lon: np.ndarray\n\n\ndef tif_to_np(\n    path_to_dataset: Path,\n    add_ndvi: bool,\n    add_ndwi: bool,\n    nan: float,\n    normalizing_dict: Optional[Dict[str, np.ndarray]],\n    days_per_timestep: int,\n) -> TestInstance:\n\n    _, start_date, _ = cast(\n        Tuple[str, datetime, datetime],\n        BaseEngineer.process_filename(path_to_dataset.name, include_extended_filenames=True),\n    )\n\n    x = BaseEngineer.load_tif(\n        path_to_dataset, days_per_timestep=days_per_timestep, start_date=start_date\n    )\n\n    lon, lat = np.meshgrid(x.x.values, x.y.values)\n    flat_lat, flat_lon = (\n        np.squeeze(lat.reshape(-1, 1), -1),\n        np.squeeze(lon.reshape(-1, 1), -1),\n    )\n\n    x_np = x.values\n    x_np = x_np.reshape(x_np.shape[0], x_np.shape[1], x_np.shape[2] * x_np.shape[3])\n    x_np = np.moveaxis(x_np, -1, 0)\n\n    if add_ndvi:\n        x_np = BaseEngineer.calculate_ndvi(x_np, num_dims=3)\n    if add_ndwi:\n        x_np = BaseEngineer.calculate_ndwi(x_np, num_dims=3)\n\n    x_np = BaseEngineer.maxed_nan_to_num(x_np, nan=nan)\n\n    if normalizing_dict is not None:\n        x_np = (x_np - normalizing_dict[\"mean\"]) / normalizing_dict[\"std\"]\n\n    return TestInstance(x=x_np, lat=flat_lat, lon=flat_lon)\n\n\ndef preds_to_xr(predictions: np.ndarray, lats: np.ndarray, lons: np.ndarray) -> xr.Dataset:\n\n    data_dict: Dict[str, np.ndarray] = {\"lat\": lats, \"lon\": lons}\n\n    for prediction_idx in range(predictions.shape[1]):\n        prediction_label = f\"prediction_{prediction_idx}\"\n        data_dict[prediction_label] = predictions[:, prediction_idx]\n\n    return pd.DataFrame(data=data_dict).set_index([\"lat\", \"lon\"]).to_xarray()\n",
+  "history_output" : "",
+  "history_begin_time" : 1646138289590,
+  "history_end_time" : 1646138291899,
+  "history_notes" : null,
+  "history_process" : "bhdtil",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "vgmzixwmy86",
+  "history_input" : "from dataclasses import dataclass\nfrom datetime import datetime\nfrom pathlib import Path\nimport numpy as np\nimport xarray as xr\nimport pandas as pd\n\nfrom src_engineer_base import BaseEngineer\n\nfrom typing import cast, Dict, Optional, Tuple\n\n\n@dataclass\nclass TestInstance:\n    x: np.ndarray\n    lat: np.ndarray\n    lon: np.ndarray\n\n\ndef tif_to_np(\n    path_to_dataset: Path,\n    add_ndvi: bool,\n    add_ndwi: bool,\n    nan: float,\n    normalizing_dict: Optional[Dict[str, np.ndarray]],\n    days_per_timestep: int,\n) -> TestInstance:\n\n    _, start_date, _ = cast(\n        Tuple[str, datetime, datetime],\n        BaseEngineer.process_filename(path_to_dataset.name, include_extended_filenames=True),\n    )\n\n    x = BaseEngineer.load_tif(\n        path_to_dataset, days_per_timestep=days_per_timestep, start_date=start_date\n    )\n\n    lon, lat = np.meshgrid(x.x.values, x.y.values)\n    flat_lat, flat_lon = (\n        np.squeeze(lat.reshape(-1, 1), -1),\n        np.squeeze(lon.reshape(-1, 1), -1),\n    )\n\n    x_np = x.values\n    x_np = x_np.reshape(x_np.shape[0], x_np.shape[1], x_np.shape[2] * x_np.shape[3])\n    x_np = np.moveaxis(x_np, -1, 0)\n\n    if add_ndvi:\n        x_np = BaseEngineer.calculate_ndvi(x_np, num_dims=3)\n    if add_ndwi:\n        x_np = BaseEngineer.calculate_ndwi(x_np, num_dims=3)\n\n    x_np = BaseEngineer.maxed_nan_to_num(x_np, nan=nan)\n\n    if normalizing_dict is not None:\n        x_np = (x_np - normalizing_dict[\"mean\"]) / normalizing_dict[\"std\"]\n\n    return TestInstance(x=x_np, lat=flat_lat, lon=flat_lon)\n\n\ndef preds_to_xr(predictions: np.ndarray, lats: np.ndarray, lons: np.ndarray) -> xr.Dataset:\n\n    data_dict: Dict[str, np.ndarray] = {\"lat\": lats, \"lon\": lons}\n\n    for prediction_idx in range(predictions.shape[1]):\n        prediction_label = f\"prediction_{prediction_idx}\"\n        data_dict[prediction_label] = predictions[:, prediction_idx]\n\n    return pd.DataFrame(data=data_dict).set_index([\"lat\", \"lon\"]).to_xarray()\n",
+  "history_output" : "",
+  "history_begin_time" : 1646138178482,
+  "history_end_time" : 1646138179732,
+  "history_notes" : null,
+  "history_process" : "bhdtil",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "a7r3vh0aw2y",
+  "history_input" : "from dataclasses import dataclass\nfrom datetime import datetime\nfrom pathlib import Path\nimport numpy as np\nimport xarray as xr\nimport pandas as pd\n\nfrom src_engineer_base import BaseEngineer\n\nfrom typing import cast, Dict, Optional, Tuple\n\n\n@dataclass\nclass TestInstance:\n    x: np.ndarray\n    lat: np.ndarray\n    lon: np.ndarray\n\n\ndef tif_to_np(\n    path_to_dataset: Path,\n    add_ndvi: bool,\n    add_ndwi: bool,\n    nan: float,\n    normalizing_dict: Optional[Dict[str, np.ndarray]],\n    days_per_timestep: int,\n) -> TestInstance:\n\n    _, start_date, _ = cast(\n        Tuple[str, datetime, datetime],\n        BaseEngineer.process_filename(path_to_dataset.name, include_extended_filenames=True),\n    )\n\n    x = BaseEngineer.load_tif(\n        path_to_dataset, days_per_timestep=days_per_timestep, start_date=start_date\n    )\n\n    lon, lat = np.meshgrid(x.x.values, x.y.values)\n    flat_lat, flat_lon = (\n        np.squeeze(lat.reshape(-1, 1), -1),\n        np.squeeze(lon.reshape(-1, 1), -1),\n    )\n\n    x_np = x.values\n    x_np = x_np.reshape(x_np.shape[0], x_np.shape[1], x_np.shape[2] * x_np.shape[3])\n    x_np = np.moveaxis(x_np, -1, 0)\n\n    if add_ndvi:\n        x_np = BaseEngineer.calculate_ndvi(x_np, num_dims=3)\n    if add_ndwi:\n        x_np = BaseEngineer.calculate_ndwi(x_np, num_dims=3)\n\n    x_np = BaseEngineer.maxed_nan_to_num(x_np, nan=nan)\n\n    if normalizing_dict is not None:\n        x_np = (x_np - normalizing_dict[\"mean\"]) / normalizing_dict[\"std\"]\n\n    return TestInstance(x=x_np, lat=flat_lat, lon=flat_lon)\n\n\ndef preds_to_xr(predictions: np.ndarray, lats: np.ndarray, lons: np.ndarray) -> xr.Dataset:\n\n    data_dict: Dict[str, np.ndarray] = {\"lat\": lats, \"lon\": lons}\n\n    for prediction_idx in range(predictions.shape[1]):\n        prediction_label = f\"prediction_{prediction_idx}\"\n        data_dict[prediction_label] = predictions[:, prediction_idx]\n\n    return pd.DataFrame(data=data_dict).set_index([\"lat\", \"lon\"]).to_xarray()\n",
+  "history_output" : "",
+  "history_begin_time" : 1646138095712,
+  "history_end_time" : 1646138097650,
+  "history_notes" : null,
+  "history_process" : "bhdtil",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "3z0zm585xmh",
+  "history_input" : "from dataclasses import dataclass\nfrom datetime import datetime\nfrom pathlib import Path\nimport numpy as np\nimport xarray as xr\nimport pandas as pd\n\nfrom src_engineer_base import BaseEngineer\n\nfrom typing import cast, Dict, Optional, Tuple\n\n\n@dataclass\nclass TestInstance:\n    x: np.ndarray\n    lat: np.ndarray\n    lon: np.ndarray\n\n\ndef tif_to_np(\n    path_to_dataset: Path,\n    add_ndvi: bool,\n    add_ndwi: bool,\n    nan: float,\n    normalizing_dict: Optional[Dict[str, np.ndarray]],\n    days_per_timestep: int,\n) -> TestInstance:\n\n    _, start_date, _ = cast(\n        Tuple[str, datetime, datetime],\n        BaseEngineer.process_filename(path_to_dataset.name, include_extended_filenames=True),\n    )\n\n    x = BaseEngineer.load_tif(\n        path_to_dataset, days_per_timestep=days_per_timestep, start_date=start_date\n    )\n\n    lon, lat = np.meshgrid(x.x.values, x.y.values)\n    flat_lat, flat_lon = (\n        np.squeeze(lat.reshape(-1, 1), -1),\n        np.squeeze(lon.reshape(-1, 1), -1),\n    )\n\n    x_np = x.values\n    x_np = x_np.reshape(x_np.shape[0], x_np.shape[1], x_np.shape[2] * x_np.shape[3])\n    x_np = np.moveaxis(x_np, -1, 0)\n\n    if add_ndvi:\n        x_np = BaseEngineer.calculate_ndvi(x_np, num_dims=3)\n    if add_ndwi:\n        x_np = BaseEngineer.calculate_ndwi(x_np, num_dims=3)\n\n    x_np = BaseEngineer.maxed_nan_to_num(x_np, nan=nan)\n\n    if normalizing_dict is not None:\n        x_np = (x_np - normalizing_dict[\"mean\"]) / normalizing_dict[\"std\"]\n\n    return TestInstance(x=x_np, lat=flat_lat, lon=flat_lon)\n\n\ndef preds_to_xr(predictions: np.ndarray, lats: np.ndarray, lons: np.ndarray) -> xr.Dataset:\n\n    data_dict: Dict[str, np.ndarray] = {\"lat\": lats, \"lon\": lons}\n\n    for prediction_idx in range(predictions.shape[1]):\n        prediction_label = f\"prediction_{prediction_idx}\"\n        data_dict[prediction_label] = predictions[:, prediction_idx]\n\n    return pd.DataFrame(data=data_dict).set_index([\"lat\", \"lon\"]).to_xarray()\n",
+  "history_output" : "",
+  "history_begin_time" : 1646137783956,
+  "history_end_time" : 1646137785808,
+  "history_notes" : null,
+  "history_process" : "bhdtil",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "anjk970d3tj",
+  "history_input" : "from dataclasses import dataclass\nfrom datetime import datetime\nfrom pathlib import Path\nimport numpy as np\nimport xarray as xr\nimport pandas as pd\n\nfrom src_engineer_base import BaseEngineer\n\nfrom typing import cast, Dict, Optional, Tuple\n\n\n@dataclass\nclass TestInstance:\n    x: np.ndarray\n    lat: np.ndarray\n    lon: np.ndarray\n\n\ndef tif_to_np(\n    path_to_dataset: Path,\n    add_ndvi: bool,\n    add_ndwi: bool,\n    nan: float,\n    normalizing_dict: Optional[Dict[str, np.ndarray]],\n    days_per_timestep: int,\n) -> TestInstance:\n\n    _, start_date, _ = cast(\n        Tuple[str, datetime, datetime],\n        BaseEngineer.process_filename(path_to_dataset.name, include_extended_filenames=True),\n    )\n\n    x = BaseEngineer.load_tif(\n        path_to_dataset, days_per_timestep=days_per_timestep, start_date=start_date\n    )\n\n    lon, lat = np.meshgrid(x.x.values, x.y.values)\n    flat_lat, flat_lon = (\n        np.squeeze(lat.reshape(-1, 1), -1),\n        np.squeeze(lon.reshape(-1, 1), -1),\n    )\n\n    x_np = x.values\n    x_np = x_np.reshape(x_np.shape[0], x_np.shape[1], x_np.shape[2] * x_np.shape[3])\n    x_np = np.moveaxis(x_np, -1, 0)\n\n    if add_ndvi:\n        x_np = BaseEngineer.calculate_ndvi(x_np, num_dims=3)\n    if add_ndwi:\n        x_np = BaseEngineer.calculate_ndwi(x_np, num_dims=3)\n\n    x_np = BaseEngineer.maxed_nan_to_num(x_np, nan=nan)\n\n    if normalizing_dict is not None:\n        x_np = (x_np - normalizing_dict[\"mean\"]) / normalizing_dict[\"std\"]\n\n    return TestInstance(x=x_np, lat=flat_lat, lon=flat_lon)\n\n\ndef preds_to_xr(predictions: np.ndarray, lats: np.ndarray, lons: np.ndarray) -> xr.Dataset:\n\n    data_dict: Dict[str, np.ndarray] = {\"lat\": lats, \"lon\": lons}\n\n    for prediction_idx in range(predictions.shape[1]):\n        prediction_label = f\"prediction_{prediction_idx}\"\n        data_dict[prediction_label] = predictions[:, prediction_idx]\n\n    return pd.DataFrame(data=data_dict).set_index([\"lat\", \"lon\"]).to_xarray()\n",
+  "history_output" : "",
+  "history_begin_time" : 1646137683761,
+  "history_end_time" : 1646137683800,
+  "history_notes" : null,
+  "history_process" : "bhdtil",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "cz7t4l6zakd",
+  "history_input" : "from dataclasses import dataclass\nfrom datetime import datetime\nfrom pathlib import Path\nimport numpy as np\nimport xarray as xr\nimport pandas as pd\n\nfrom src_engineer_base import BaseEngineer\n\nfrom typing import cast, Dict, Optional, Tuple\n\n\n@dataclass\nclass TestInstance:\n    x: np.ndarray\n    lat: np.ndarray\n    lon: np.ndarray\n\n\ndef tif_to_np(\n    path_to_dataset: Path,\n    add_ndvi: bool,\n    add_ndwi: bool,\n    nan: float,\n    normalizing_dict: Optional[Dict[str, np.ndarray]],\n    days_per_timestep: int,\n) -> TestInstance:\n\n    _, start_date, _ = cast(\n        Tuple[str, datetime, datetime],\n        BaseEngineer.process_filename(path_to_dataset.name, include_extended_filenames=True),\n    )\n\n    x = BaseEngineer.load_tif(\n        path_to_dataset, days_per_timestep=days_per_timestep, start_date=start_date\n    )\n\n    lon, lat = np.meshgrid(x.x.values, x.y.values)\n    flat_lat, flat_lon = (\n        np.squeeze(lat.reshape(-1, 1), -1),\n        np.squeeze(lon.reshape(-1, 1), -1),\n    )\n\n    x_np = x.values\n    x_np = x_np.reshape(x_np.shape[0], x_np.shape[1], x_np.shape[2] * x_np.shape[3])\n    x_np = np.moveaxis(x_np, -1, 0)\n\n    if add_ndvi:\n        x_np = BaseEngineer.calculate_ndvi(x_np, num_dims=3)\n    if add_ndwi:\n        x_np = BaseEngineer.calculate_ndwi(x_np, num_dims=3)\n\n    x_np = BaseEngineer.maxed_nan_to_num(x_np, nan=nan)\n\n    if normalizing_dict is not None:\n        x_np = (x_np - normalizing_dict[\"mean\"]) / normalizing_dict[\"std\"]\n\n    return TestInstance(x=x_np, lat=flat_lat, lon=flat_lon)\n\n\ndef preds_to_xr(predictions: np.ndarray, lats: np.ndarray, lons: np.ndarray) -> xr.Dataset:\n\n    data_dict: Dict[str, np.ndarray] = {\"lat\": lats, \"lon\": lons}\n\n    for prediction_idx in range(predictions.shape[1]):\n        prediction_label = f\"prediction_{prediction_idx}\"\n        data_dict[prediction_label] = predictions[:, prediction_idx]\n\n    return pd.DataFrame(data=data_dict).set_index([\"lat\", \"lon\"]).to_xarray()\n",
+  "history_output" : "",
+  "history_begin_time" : 1646137572336,
+  "history_end_time" : 1646137574085,
+  "history_notes" : null,
+  "history_process" : "bhdtil",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},]

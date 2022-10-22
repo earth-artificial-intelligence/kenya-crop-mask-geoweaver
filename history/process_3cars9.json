@@ -1,0 +1,481 @@
+[{
+  "history_id" : "dfuvvfb5i69",
+  "history_input" : "import sys\nfrom pathlib import Path\n\nsys.path.append(\"..\")\n\nfrom src_engineer_geowiki import GeoWikiEngineer\nfrom src_engineer_pv_kenya import PVKenyaEngineer\nfrom src_engineer_kenya_non_crop import KenyaNonCropEngineer\n\n\ndef engineer_geowiki():\n    engineer = GeoWikiEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.2)\n\n\ndef engineer_kenya():\n    engineer = PVKenyaEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\ndef engineer_kenya_noncrop():\n    engineer = KenyaNonCropEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...engineer.py\")  \n    engineer_geowiki()\n    engineer_kenya()\n    #engineer_kenya_noncrop()",
+  "history_output" : "Starting...engineer.py\n  0%|          | 0/4 [00:00<?, ?it/s]\n100%|██████████| 4/4 [00:00<00:00, 1311.44it/s]\nNo normalizing dict calculated! Make sure to call update_normalizing_values\nNo normalizing dict calculated!\n  0%|          | 0/10 [00:00<?, ?it/s]\n100%|██████████| 10/10 [00:00<00:00, 11973.46it/s]\nNo normalizing dict calculated! Make sure to call update_normalizing_values\nNo normalizing dict calculated!\n",
+  "history_begin_time" : 1666167833610,
+  "history_end_time" : 1666167835435,
+  "history_notes" : null,
+  "history_process" : "3cars9",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "c1de6f0c74m",
+  "history_input" : "import sys\nfrom pathlib import Path\n\nsys.path.append(\"..\")\n\nfrom src_engineer_geowiki import GeoWikiEngineer\nfrom src_engineer_pv_kenya import PVKenyaEngineer\nfrom src_engineer_kenya_non_crop import KenyaNonCropEngineer\n\n\ndef engineer_geowiki():\n    engineer = GeoWikiEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.2)\n\n\ndef engineer_kenya():\n    engineer = PVKenyaEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\ndef engineer_kenya_noncrop():\n    engineer = KenyaNonCropEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...engineer.py\")  \n    engineer_geowiki()\n    engineer_kenya()\n    #engineer_kenya_noncrop()",
+  "history_output" : "Traceback (most recent call last):\n  File \"scripts_engineer.py\", line 6, in <module>\n    from src_engineer_geowiki import GeoWikiEngineer\n  File \"/Users/jensen/gw-workspace/c1de6f0c74m/src_engineer_geowiki.py\", line 5, in <module>\n    import xarray as xr\nModuleNotFoundError: No module named 'xarray'\n",
+  "history_begin_time" : 1666167777271,
+  "history_end_time" : 1666167777777,
+  "history_notes" : null,
+  "history_process" : "3cars9",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "2boyur65qc4",
+  "history_input" : "import sys\nfrom pathlib import Path\n\nsys.path.append(\"..\")\n\nfrom src_engineer_geowiki import GeoWikiEngineer\nfrom src_engineer_pv_kenya import PVKenyaEngineer\nfrom src_engineer_kenya_non_crop import KenyaNonCropEngineer\n\n\ndef engineer_geowiki():\n    engineer = GeoWikiEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.2)\n\n\ndef engineer_kenya():\n    engineer = PVKenyaEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\ndef engineer_kenya_noncrop():\n    engineer = KenyaNonCropEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...engineer.py\")  \n    engineer_geowiki()\n    engineer_kenya()\n    #engineer_kenya_noncrop()",
+  "history_output" : "Starting...engineer.py\n  0%|          | 0/4 [00:00<?, ?it/s]\n100%|██████████| 4/4 [00:00<00:00, 1538.49it/s]\nNo normalizing dict calculated! Make sure to call update_normalizing_values\nNo normalizing dict calculated!\n  0%|          | 0/10 [00:00<?, ?it/s]\n100%|██████████| 10/10 [00:00<00:00, 12706.16it/s]\nNo normalizing dict calculated! Make sure to call update_normalizing_values\nNo normalizing dict calculated!\n",
+  "history_begin_time" : 1666166472912,
+  "history_end_time" : 1666166474770,
+  "history_notes" : null,
+  "history_process" : "3cars9",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "k7j6g0htfor",
+  "history_input" : "import sys\nfrom pathlib import Path\n\nsys.path.append(\"..\")\n\nfrom src_engineer_geowiki import GeoWikiEngineer\nfrom src_engineer_pv_kenya import PVKenyaEngineer\nfrom src_engineer_kenya_non_crop import KenyaNonCropEngineer\n\n\ndef engineer_geowiki():\n    engineer = GeoWikiEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.2)\n\n\ndef engineer_kenya():\n    engineer = PVKenyaEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\ndef engineer_kenya_noncrop():\n    engineer = KenyaNonCropEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...engineer.py\")  \n    engineer_geowiki()\n    engineer_kenya()\n    #engineer_kenya_noncrop()",
+  "history_output" : "Starting...engineer.py\n  0%|          | 0/4 [00:00<?, ?it/s]\n100%|██████████| 4/4 [00:00<00:00, 1350.39it/s]\nNo normalizing dict calculated! Make sure to call update_normalizing_values\nNo normalizing dict calculated!\n  0%|          | 0/10 [00:00<?, ?it/s]\n100%|██████████| 10/10 [00:00<00:00, 12531.53it/s]\nNo normalizing dict calculated! Make sure to call update_normalizing_values\nNo normalizing dict calculated!\n",
+  "history_begin_time" : 1666166417268,
+  "history_end_time" : 1666166419933,
+  "history_notes" : null,
+  "history_process" : "3cars9",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "p0tr2un1dz1",
+  "history_input" : "import sys\nfrom pathlib import Path\n\nsys.path.append(\"..\")\n\nfrom src_engineer_geowiki import GeoWikiEngineer\nfrom src_engineer_pv_kenya import PVKenyaEngineer\nfrom src_engineer_kenya_non_crop import KenyaNonCropEngineer\n\n\ndef engineer_geowiki():\n    engineer = GeoWikiEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.2)\n\n\ndef engineer_kenya():\n    engineer = PVKenyaEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\ndef engineer_kenya_noncrop():\n    engineer = KenyaNonCropEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...engineer.py\")  \n    engineer_geowiki()\n    engineer_kenya()\n    #engineer_kenya_noncrop()",
+  "history_output" : "Starting...engineer.py\n  0%|          | 0/4 [00:00<?, ?it/s]\n100%|██████████| 4/4 [00:00<00:00, 1832.37it/s]\nNo normalizing dict calculated! Make sure to call update_normalizing_values\nNo normalizing dict calculated!\n  0%|          | 0/10 [00:00<?, ?it/s]\n100%|██████████| 10/10 [00:00<00:00, 13697.92it/s]\nNo normalizing dict calculated! Make sure to call update_normalizing_values\nNo normalizing dict calculated!\n",
+  "history_begin_time" : 1666164240373,
+  "history_end_time" : 1666164241742,
+  "history_notes" : null,
+  "history_process" : "3cars9",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "598pwpjs9ny",
+  "history_input" : "import sys\nfrom pathlib import Path\n\nsys.path.append(\"..\")\n\nfrom src_engineer_geowiki import GeoWikiEngineer\nfrom src_engineer_pv_kenya import PVKenyaEngineer\nfrom src_engineer_kenya_non_crop import KenyaNonCropEngineer\n\n\ndef engineer_geowiki():\n    engineer = GeoWikiEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.2)\n\n\ndef engineer_kenya():\n    engineer = PVKenyaEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\ndef engineer_kenya_noncrop():\n    engineer = KenyaNonCropEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...engineer.py\")  \n    engineer_geowiki()\n    engineer_kenya()\n    #engineer_kenya_noncrop()",
+  "history_output" : "Starting...engineer.py\n  0%|          | 0/4 [00:00<?, ?it/s]\n100%|██████████| 4/4 [00:00<00:00, 1552.01it/s]\nNo normalizing dict calculated! Make sure to call update_normalizing_values\nNo normalizing dict calculated!\n  0%|          | 0/10 [00:00<?, ?it/s]\n100%|██████████| 10/10 [00:00<00:00, 8070.63it/s]\nNo normalizing dict calculated! Make sure to call update_normalizing_values\nNo normalizing dict calculated!\n",
+  "history_begin_time" : 1666163615532,
+  "history_end_time" : 1666163617010,
+  "history_notes" : null,
+  "history_process" : "3cars9",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "9xkgj6uqsme",
+  "history_input" : "import sys\nfrom pathlib import Path\n\nsys.path.append(\"..\")\n\nfrom src_engineer_geowiki import GeoWikiEngineer\nfrom src_engineer_pv_kenya import PVKenyaEngineer\nfrom src_engineer_kenya_non_crop import KenyaNonCropEngineer\n\n\ndef engineer_geowiki():\n    engineer = GeoWikiEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.2)\n\n\ndef engineer_kenya():\n    engineer = PVKenyaEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\ndef engineer_kenya_noncrop():\n    engineer = KenyaNonCropEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...engineer.py\")  \n    engineer_geowiki()\n    engineer_kenya()\n    #engineer_kenya_noncrop()",
+  "history_output" : "Starting...engineer.py\n  0%|          | 0/4 [00:00<?, ?it/s]\n100%|██████████| 4/4 [00:00<00:00, 1895.73it/s]\nNo normalizing dict calculated! Make sure to call update_normalizing_values\nNo normalizing dict calculated!\n  0%|          | 0/10 [00:00<?, ?it/s]\n100%|██████████| 10/10 [00:00<00:00, 13774.40it/s]\nNo normalizing dict calculated! Make sure to call update_normalizing_values\nNo normalizing dict calculated!\n",
+  "history_begin_time" : 1666137021080,
+  "history_end_time" : 1666137022428,
+  "history_notes" : null,
+  "history_process" : "3cars9",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "4v9p877v69q",
+  "history_input" : "import sys\nfrom pathlib import Path\n\nsys.path.append(\"..\")\n\nfrom src_engineer_geowiki import GeoWikiEngineer\nfrom src_engineer_pv_kenya import PVKenyaEngineer\nfrom src_engineer_kenya_non_crop import KenyaNonCropEngineer\n\n\ndef engineer_geowiki():\n    engineer = GeoWikiEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.2)\n\n\ndef engineer_kenya():\n    engineer = PVKenyaEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\ndef engineer_kenya_noncrop():\n    engineer = KenyaNonCropEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...engineer.py\")  \n    engineer_geowiki()\n    engineer_kenya()\n    #engineer_kenya_noncrop()",
+  "history_output" : "Starting...engineer.py\n  0%|          | 0/4 [00:00<?, ?it/s]\n100%|██████████| 4/4 [00:00<00:00, 1856.30it/s]\nNo normalizing dict calculated! Make sure to call update_normalizing_values\nNo normalizing dict calculated!\n  0%|          | 0/10 [00:00<?, ?it/s]\n100%|██████████| 10/10 [00:00<00:00, 14493.10it/s]\nNo normalizing dict calculated! Make sure to call update_normalizing_values\nNo normalizing dict calculated!\n",
+  "history_begin_time" : 1666136600659,
+  "history_end_time" : 1666136601955,
+  "history_notes" : null,
+  "history_process" : "3cars9",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "cwkv0j424lc",
+  "history_input" : "import sys\nfrom pathlib import Path\n\nsys.path.append(\"..\")\n\nfrom src_engineer_geowiki import GeoWikiEngineer\nfrom src_engineer_pv_kenya import PVKenyaEngineer\nfrom src_engineer_kenya_non_crop import KenyaNonCropEngineer\n\n\ndef engineer_geowiki():\n    engineer = GeoWikiEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.2)\n\n\ndef engineer_kenya():\n    engineer = PVKenyaEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\ndef engineer_kenya_noncrop():\n    engineer = KenyaNonCropEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...engineer.py\")  \n    engineer_geowiki()\n    engineer_kenya()\n    #engineer_kenya_noncrop()",
+  "history_output" : "Starting...engineer.py\n  0%|          | 0/4 [00:00<?, ?it/s]\n100%|██████████| 4/4 [00:00<00:00, 1937.99it/s]\nNo normalizing dict calculated! Make sure to call update_normalizing_values\nNo normalizing dict calculated!\n  0%|          | 0/10 [00:00<?, ?it/s]\n100%|██████████| 10/10 [00:00<00:00, 12438.62it/s]\nNo normalizing dict calculated! Make sure to call update_normalizing_values\nNo normalizing dict calculated!\n",
+  "history_begin_time" : 1666136444120,
+  "history_end_time" : 1666136445492,
+  "history_notes" : null,
+  "history_process" : "3cars9",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "xn08box39jh",
+  "history_input" : "import sys\nfrom pathlib import Path\n\nsys.path.append(\"..\")\n\nfrom src_engineer_geowiki import GeoWikiEngineer\nfrom src_engineer_pv_kenya import PVKenyaEngineer\nfrom src_engineer_kenya_non_crop import KenyaNonCropEngineer\n\n\ndef engineer_geowiki():\n    engineer = GeoWikiEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.2)\n\n\ndef engineer_kenya():\n    engineer = PVKenyaEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\ndef engineer_kenya_noncrop():\n    engineer = KenyaNonCropEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...engineer.py\")  \n    engineer_geowiki()\n    engineer_kenya()\n    #engineer_kenya_noncrop()",
+  "history_output" : "Starting...engineer.py\n  0%|          | 0/4 [00:00<?, ?it/s]\n100%|██████████| 4/4 [00:00<00:00, 878.57it/s]\nNo normalizing dict calculated! Make sure to call update_normalizing_values\nNo normalizing dict calculated!\n  0%|          | 0/10 [00:00<?, ?it/s]\n100%|██████████| 10/10 [00:00<00:00, 12818.78it/s]\nNo normalizing dict calculated! Make sure to call update_normalizing_values\nNo normalizing dict calculated!\n",
+  "history_begin_time" : 1666134119600,
+  "history_end_time" : 1666134122348,
+  "history_notes" : null,
+  "history_process" : "3cars9",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "lz3f53eopwe",
+  "history_input" : "import sys\nfrom pathlib import Path\n\nsys.path.append(\"..\")\n\nfrom src_engineer_geowiki import GeoWikiEngineer\nfrom src_engineer_pv_kenya import PVKenyaEngineer\nfrom src_engineer_kenya_non_crop import KenyaNonCropEngineer\n\n\ndef engineer_geowiki():\n    engineer = GeoWikiEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.2)\n\n\ndef engineer_kenya():\n    engineer = PVKenyaEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\ndef engineer_kenya_noncrop():\n    engineer = KenyaNonCropEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...engineer.py\")  \n    engineer_geowiki()\n    engineer_kenya()\n    #engineer_kenya_noncrop()",
+  "history_output" : "Starting...engineer.py\n  0%|          | 0/4 [00:00<?, ?it/s]\n100%|██████████| 4/4 [00:00<00:00, 1442.46it/s]\nNo normalizing dict calculated! Make sure to call update_normalizing_values\nNo normalizing dict calculated!\n  0%|          | 0/10 [00:00<?, ?it/s]\n100%|██████████| 10/10 [00:00<00:00, 13512.58it/s]\nNo normalizing dict calculated! Make sure to call update_normalizing_values\nNo normalizing dict calculated!\n",
+  "history_begin_time" : 1666134046033,
+  "history_end_time" : 1666134048336,
+  "history_notes" : null,
+  "history_process" : "3cars9",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "qs9atqr1ypm",
+  "history_input" : "import sys\nfrom pathlib import Path\n\nsys.path.append(\"..\")\n\nfrom src_engineer_geowiki import GeoWikiEngineer\nfrom src_engineer_pv_kenya import PVKenyaEngineer\nfrom src_engineer_kenya_non_crop import KenyaNonCropEngineer\n\n\ndef engineer_geowiki():\n    engineer = GeoWikiEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.2)\n\n\ndef engineer_kenya():\n    engineer = PVKenyaEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\ndef engineer_kenya_noncrop():\n    engineer = KenyaNonCropEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...engineer.py\")  \n    engineer_geowiki()\n    engineer_kenya()\n    #engineer_kenya_noncrop()",
+  "history_output" : "Traceback (most recent call last):\n  File \"scripts_engineer.py\", line 6, in <module>\n    from src_engineer_geowiki import GeoWikiEngineer\n  File \"/Users/jensen/gw-workspace/qs9atqr1ypm/src_engineer_geowiki.py\", line 5, in <module>\n    import xarray as xr\nModuleNotFoundError: No module named 'xarray'\n",
+  "history_begin_time" : 1666134014114,
+  "history_end_time" : 1666134014530,
+  "history_notes" : null,
+  "history_process" : "3cars9",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "f5fEUKXTRX2Y",
+  "history_input" : "import sys\nfrom pathlib import Path\n\nsys.path.append(\"..\")\n\nfrom src_engineer_geowiki import GeoWikiEngineer\nfrom src_engineer_pv_kenya import PVKenyaEngineer\nfrom src_engineer_kenya_non_crop import KenyaNonCropEngineer\n\n\ndef engineer_geowiki():\n    engineer = GeoWikiEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.2)\n\n\ndef engineer_kenya():\n    engineer = PVKenyaEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\ndef engineer_kenya_noncrop():\n    engineer = KenyaNonCropEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...engineer.py\")  \n    engineer_geowiki()\n    engineer_kenya()\n    #engineer_kenya_noncrop()",
+  "history_output" : "Starting...engineer.py\n  0%|          | 0/4 [00:00<?, ?it/s]\n100%|██████████| 4/4 [00:00<00:00, 1143.25it/s]\nNo normalizing dict calculated! Make sure to call update_normalizing_values\nNo normalizing dict calculated!\n  0%|          | 0/10 [00:00<?, ?it/s]\n100%|██████████| 10/10 [00:00<00:00, 8122.20it/s]\nNo normalizing dict calculated! Make sure to call update_normalizing_values\nNo normalizing dict calculated!\n",
+  "history_begin_time" : 1666133995944,
+  "history_end_time" : 1666133998564,
+  "history_notes" : null,
+  "history_process" : "3cars9",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "ng0lv5sndwr",
+  "history_input" : "import sys\nfrom pathlib import Path\n\nsys.path.append(\"..\")\n\nfrom src_engineer_geowiki import GeoWikiEngineer\nfrom src_engineer_pv_kenya import PVKenyaEngineer\nfrom src_engineer_kenya_non_crop import KenyaNonCropEngineer\n\n\ndef engineer_geowiki():\n    engineer = GeoWikiEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.2)\n\n\ndef engineer_kenya():\n    engineer = PVKenyaEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\ndef engineer_kenya_noncrop():\n    engineer = KenyaNonCropEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...engineer.py\")  \n    engineer_geowiki()\n    engineer_kenya()\n    #engineer_kenya_noncrop()",
+  "history_output" : "Traceback (most recent call last):\n  File \"scripts_engineer.py\", line 6, in <module>\n    from src_engineer_geowiki import GeoWikiEngineer\n  File \"/Users/jensen/gw-workspace/ng0lv5sndwr/src_engineer_geowiki.py\", line 5, in <module>\n    import xarray as xr\nModuleNotFoundError: No module named 'xarray'\n",
+  "history_begin_time" : 1666131997255,
+  "history_end_time" : 1666131997719,
+  "history_notes" : null,
+  "history_process" : "3cars9",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "szychxszqrv",
+  "history_input" : "import sys\nfrom pathlib import Path\n\nsys.path.append(\"..\")\n\nfrom src_engineer_geowiki import GeoWikiEngineer\nfrom src_engineer_pv_kenya import PVKenyaEngineer\nfrom src_engineer_kenya_non_crop import KenyaNonCropEngineer\n\n\ndef engineer_geowiki():\n    engineer = GeoWikiEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.2)\n\n\ndef engineer_kenya():\n    engineer = PVKenyaEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\ndef engineer_kenya_noncrop():\n    engineer = KenyaNonCropEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...engineer.py\")  \n    engineer_geowiki()\n    engineer_kenya()\n    #engineer_kenya_noncrop()",
+  "history_output" : "",
+  "history_begin_time" : 1666118282570,
+  "history_end_time" : 1666118282776,
+  "history_notes" : null,
+  "history_process" : "3cars9",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "oliwm2it8mm",
+  "history_input" : "import sys\nfrom pathlib import Path\n\nsys.path.append(\"..\")\n\nfrom src_engineer_geowiki import GeoWikiEngineer\nfrom src_engineer_pv_kenya import PVKenyaEngineer\nfrom src_engineer_kenya_non_crop import KenyaNonCropEngineer\n\n\ndef engineer_geowiki():\n    engineer = GeoWikiEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.2)\n\n\ndef engineer_kenya():\n    engineer = PVKenyaEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\ndef engineer_kenya_noncrop():\n    engineer = KenyaNonCropEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...engineer.py\")  \n    engineer_geowiki()\n    engineer_kenya()\n    #engineer_kenya_noncrop()",
+  "history_output" : "  0%|          | 0/4 [00:00<?, ?it/s]\n100%|██████████| 4/4 [00:00<00:00, 600.04it/s]\n  0%|          | 0/10 [00:00<?, ?it/s]\n100%|██████████| 10/10 [00:00<00:00, 3150.77it/s]\nStarting...engineer.py\nNo normalizing dict calculated! Make sure to call update_normalizing_values\nNo normalizing dict calculated!\nNo normalizing dict calculated! Make sure to call update_normalizing_values\nNo normalizing dict calculated!\n",
+  "history_begin_time" : 1655909875525,
+  "history_end_time" : 1655909880559,
+  "history_notes" : null,
+  "history_process" : "3cars9",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "1nwp8i0okvk",
+  "history_input" : "import sys\nfrom pathlib import Path\n\nsys.path.append(\"..\")\n\nfrom src_engineer_geowiki import GeoWikiEngineer\nfrom src_engineer_pv_kenya import PVKenyaEngineer\nfrom src_engineer_kenya_non_crop import KenyaNonCropEngineer\n\n\ndef engineer_geowiki():\n    engineer = GeoWikiEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.2)\n\n\ndef engineer_kenya():\n    engineer = PVKenyaEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\ndef engineer_kenya_noncrop():\n    engineer = KenyaNonCropEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...engineer.py\")  \n    engineer_geowiki()\n    engineer_kenya()\n    #engineer_kenya_noncrop()",
+  "history_output" : "",
+  "history_begin_time" : 1655908828558,
+  "history_end_time" : 1655908828997,
+  "history_notes" : null,
+  "history_process" : "3cars9",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "ont6eh7rlxi",
+  "history_input" : "import sys\nfrom pathlib import Path\n\nsys.path.append(\"..\")\n\nfrom src_engineer_geowiki import GeoWikiEngineer\nfrom src_engineer_pv_kenya import PVKenyaEngineer\nfrom src_engineer_kenya_non_crop import KenyaNonCropEngineer\n\n\ndef engineer_geowiki():\n    engineer = GeoWikiEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.2)\n\n\ndef engineer_kenya():\n    engineer = PVKenyaEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\ndef engineer_kenya_noncrop():\n    engineer = KenyaNonCropEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...engineer.py\")  \n    engineer_geowiki()\n    engineer_kenya()\n    #engineer_kenya_noncrop()",
+  "history_output" : "Traceback (most recent call last):\n  File \"scripts_engineer.py\", line 7, in <module>\n    from src_engineer_pv_kenya import PVKenyaEngineer\n  File \"/Users/uhhmed/gw-workspace/ont6eh7rlxi/src_engineer_pv_kenya.py\", line 4, in <module>\n    import geopandas\n  File \"/opt/anaconda3/lib/python3.8/site-packages/geopandas/__init__.py\", line 1, in <module>\n    from geopandas._config import options  # noqa\n  File \"/opt/anaconda3/lib/python3.8/site-packages/geopandas/_config.py\", line 109, in <module>\n    default_value=_default_use_pygeos(),\n  File \"/opt/anaconda3/lib/python3.8/site-packages/geopandas/_config.py\", line 95, in _default_use_pygeos\n    import geopandas._compat as compat\n  File \"/opt/anaconda3/lib/python3.8/site-packages/geopandas/_compat.py\", line 9, in <module>\n    import pyproj\n  File \"/opt/anaconda3/lib/python3.8/site-packages/pyproj/__init__.py\", line 81, in <module>\n    from pyproj.crs import CRS  # noqa: F401\n  File \"/opt/anaconda3/lib/python3.8/site-packages/pyproj/crs/__init__.py\", line 16, in <module>\n    from pyproj.crs.crs import (  # noqa: F401  pylint: disable=unused-import\n  File \"/opt/anaconda3/lib/python3.8/site-packages/pyproj/crs/crs.py\", line 13, in <module>\n    from pyproj._crs import (\nImportError: cannot import name 'AuthorityMatchInfo' from 'pyproj._crs' (/opt/anaconda3/lib/python3.8/site-packages/pyproj/_crs.cpython-38-darwin.so)\n",
+  "history_begin_time" : 1655907435803,
+  "history_end_time" : 1655907441043,
+  "history_notes" : null,
+  "history_process" : "3cars9",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "b0stvaj7ddv",
+  "history_input" : "import sys\nfrom pathlib import Path\n\nsys.path.append(\"..\")\n\nfrom src_engineer_geowiki import GeoWikiEngineer\nfrom src_engineer_pv_kenya import PVKenyaEngineer\nfrom src_engineer_kenya_non_crop import KenyaNonCropEngineer\n\n\ndef engineer_geowiki():\n    engineer = GeoWikiEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.2)\n\n\ndef engineer_kenya():\n    engineer = PVKenyaEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\ndef engineer_kenya_noncrop():\n    engineer = KenyaNonCropEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...engineer.py\")  \n    engineer_geowiki()\n    engineer_kenya()\n    #engineer_kenya_noncrop()",
+  "history_output" : "Traceback (most recent call last):\n  File \"scripts_engineer.py\", line 6, in <module>\n    from src_engineer_geowiki import GeoWikiEngineer\n  File \"/Users/uhhmed/gw-workspace/b0stvaj7ddv/src_engineer_geowiki.py\", line 3, in <module>\n    import pandas as pd\nModuleNotFoundError: No module named 'pandas'\n",
+  "history_begin_time" : 1655907399816,
+  "history_end_time" : 1655907403092,
+  "history_notes" : null,
+  "history_process" : "3cars9",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "7lkt1znzios",
+  "history_input" : "import sys\nfrom pathlib import Path\n\nsys.path.append(\"..\")\n\nfrom src_engineer_geowiki import GeoWikiEngineer\nfrom src_engineer_pv_kenya import PVKenyaEngineer\nfrom src_engineer_kenya_non_crop import KenyaNonCropEngineer\n\n\ndef engineer_geowiki():\n    engineer = GeoWikiEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.2)\n\n\ndef engineer_kenya():\n    engineer = PVKenyaEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\ndef engineer_kenya_noncrop():\n    engineer = KenyaNonCropEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...engineer.py\")  \n    engineer_geowiki()\n    engineer_kenya()\n    #engineer_kenya_noncrop()",
+  "history_output" : "Traceback (most recent call last):\n  File \"scripts_engineer.py\", line 6, in <module>\n    from src_engineer_geowiki import GeoWikiEngineer\n  File \"/Users/uhhmed/gw-workspace/7lkt1znzios/src_engineer_geowiki.py\", line 3, in <module>\n    import pandas as pd\nModuleNotFoundError: No module named 'pandas'\n",
+  "history_begin_time" : 1655865864258,
+  "history_end_time" : 1655865864474,
+  "history_notes" : null,
+  "history_process" : "3cars9",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "ltgmdseorkb",
+  "history_input" : "import sys\nfrom pathlib import Path\n\nsys.path.append(\"..\")\n\nfrom src_engineer_geowiki import GeoWikiEngineer\nfrom src_engineer_pv_kenya import PVKenyaEngineer\nfrom src_engineer_kenya_non_crop import KenyaNonCropEngineer\n\n\ndef engineer_geowiki():\n    engineer = GeoWikiEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.2)\n\n\ndef engineer_kenya():\n    engineer = PVKenyaEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\ndef engineer_kenya_noncrop():\n    engineer = KenyaNonCropEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...engineer.py\")  \n    engineer_geowiki()\n    engineer_kenya()\n    #engineer_kenya_noncrop()",
+  "history_output" : "Traceback (most recent call last):\n  File \"scripts_engineer.py\", line 7, in <module>\n    from src_engineer_pv_kenya import PVKenyaEngineer\n  File \"/Users/uhhmed/gw-workspace/ltgmdseorkb/src_engineer_pv_kenya.py\", line 4, in <module>\n    import geopandas\n  File \"/opt/anaconda3/lib/python3.8/site-packages/geopandas/__init__.py\", line 1, in <module>\n    from geopandas._config import options  # noqa\n  File \"/opt/anaconda3/lib/python3.8/site-packages/geopandas/_config.py\", line 109, in <module>\n    default_value=_default_use_pygeos(),\n  File \"/opt/anaconda3/lib/python3.8/site-packages/geopandas/_config.py\", line 95, in _default_use_pygeos\n    import geopandas._compat as compat\n  File \"/opt/anaconda3/lib/python3.8/site-packages/geopandas/_compat.py\", line 9, in <module>\n    import pyproj\n  File \"/opt/anaconda3/lib/python3.8/site-packages/pyproj/__init__.py\", line 81, in <module>\n    from pyproj.crs import CRS  # noqa: F401\n  File \"/opt/anaconda3/lib/python3.8/site-packages/pyproj/crs/__init__.py\", line 16, in <module>\n    from pyproj.crs.crs import (  # noqa: F401  pylint: disable=unused-import\n  File \"/opt/anaconda3/lib/python3.8/site-packages/pyproj/crs/crs.py\", line 13, in <module>\n    from pyproj._crs import (\nImportError: cannot import name 'AuthorityMatchInfo' from 'pyproj._crs' (/opt/anaconda3/lib/python3.8/site-packages/pyproj/_crs.cpython-38-darwin.so)\n",
+  "history_begin_time" : 1655865091875,
+  "history_end_time" : 1655865095497,
+  "history_notes" : null,
+  "history_process" : "3cars9",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "dzjg5n12gkl",
+  "history_input" : "import sys\nfrom pathlib import Path\n\nsys.path.append(\"..\")\n\nfrom src_engineer_geowiki import GeoWikiEngineer\nfrom src_engineer_pv_kenya import PVKenyaEngineer\nfrom src_engineer_kenya_non_crop import KenyaNonCropEngineer\n\n\ndef engineer_geowiki():\n    engineer = GeoWikiEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.2)\n\n\ndef engineer_kenya():\n    engineer = PVKenyaEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\ndef engineer_kenya_noncrop():\n    engineer = KenyaNonCropEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...engineer.py\")  \n    engineer_geowiki()\n    engineer_kenya()\n    #engineer_kenya_noncrop()",
+  "history_output" : "  0%|          | 0/4 [00:00<?, ?it/s]\n100%|██████████| 4/4 [00:00<00:00, 1223.27it/s]\n  0%|          | 0/10 [00:00<?, ?it/s]\n100%|██████████| 10/10 [00:00<00:00, 7751.44it/s]\nStarting...engineer.py\nNo normalizing dict calculated! Make sure to call update_normalizing_values\nNo normalizing dict calculated!\nNo normalizing dict calculated! Make sure to call update_normalizing_values\nNo normalizing dict calculated!\n",
+  "history_begin_time" : 1647347433065,
+  "history_end_time" : 1647347436326,
+  "history_notes" : null,
+  "history_process" : "3cars9",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "db392k6fcjk",
+  "history_input" : "import sys\nfrom pathlib import Path\n\nsys.path.append(\"..\")\n\nfrom src_engineer_geowiki import GeoWikiEngineer\nfrom src_engineer_pv_kenya import PVKenyaEngineer\nfrom src_engineer_kenya_non_crop import KenyaNonCropEngineer\n\n\ndef engineer_geowiki():\n    engineer = GeoWikiEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.2)\n\n\ndef engineer_kenya():\n    engineer = PVKenyaEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\ndef engineer_kenya_noncrop():\n    engineer = KenyaNonCropEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...engineer.py\")  \n    engineer_geowiki()\n    engineer_kenya()\n    #engineer_kenya_noncrop()",
+  "history_output" : "  0%|          | 0/4 [00:00<?, ?it/s]\n100%|██████████| 4/4 [00:00<00:00, 1565.48it/s]\n  0%|          | 0/10 [00:00<?, ?it/s]\n100%|██████████| 10/10 [00:00<00:00, 11238.76it/s]\nStarting...engineer.py\nNo normalizing dict calculated! Make sure to call update_normalizing_values\nNo normalizing dict calculated!\nNo normalizing dict calculated! Make sure to call update_normalizing_values\nNo normalizing dict calculated!\n",
+  "history_begin_time" : 1647347343065,
+  "history_end_time" : 1647347346313,
+  "history_notes" : null,
+  "history_process" : "3cars9",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "o78s979jplr",
+  "history_input" : "import sys\nfrom pathlib import Path\n\nsys.path.append(\"..\")\n\nfrom src_engineer_geowiki import GeoWikiEngineer\nfrom src_engineer_pv_kenya import PVKenyaEngineer\nfrom src_engineer_kenya_non_crop import KenyaNonCropEngineer\n\n\ndef engineer_geowiki():\n    engineer = GeoWikiEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.2)\n\n\ndef engineer_kenya():\n    engineer = PVKenyaEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\ndef engineer_kenya_noncrop():\n    engineer = KenyaNonCropEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...engineer.py\")  \n    engineer_geowiki()\n    engineer_kenya()\n    #engineer_kenya_noncrop()",
+  "history_output" : "  0%|          | 0/4 [00:00<?, ?it/s]ERROR 1: PROJ: proj_identify: /opt/anaconda3/share/proj/proj.db lacks DATABASE.LAYOUT.VERSION.MAJOR / DATABASE.LAYOUT.VERSION.MINOR metadata. It comes from another PROJ installation.\n 25%|██▌       | 1/4 [00:00<00:01,  1.75it/s]ERROR 1: PROJ: proj_identify: /opt/anaconda3/share/proj/proj.db lacks DATABASE.LAYOUT.VERSION.MAJOR / DATABASE.LAYOUT.VERSION.MINOR metadata. It comes from another PROJ installation.\n 50%|█████     | 2/4 [00:00<00:00,  2.53it/s]ERROR 1: PROJ: proj_identify: /opt/anaconda3/share/proj/proj.db lacks DATABASE.LAYOUT.VERSION.MAJOR / DATABASE.LAYOUT.VERSION.MINOR metadata. It comes from another PROJ installation.\n 75%|███████▌  | 3/4 [00:01<00:00,  3.28it/s]ERROR 1: PROJ: proj_identify: /opt/anaconda3/share/proj/proj.db lacks DATABASE.LAYOUT.VERSION.MAJOR / DATABASE.LAYOUT.VERSION.MINOR metadata. It comes from another PROJ installation.\n100%|██████████| 4/4 [00:01<00:00,  3.67it/s]\n100%|██████████| 4/4 [00:01<00:00,  3.16it/s]\n  0%|          | 0/10 [00:00<?, ?it/s]ERROR 1: PROJ: proj_identify: /opt/anaconda3/share/proj/proj.db lacks DATABASE.LAYOUT.VERSION.MAJOR / DATABASE.LAYOUT.VERSION.MINOR metadata. It comes from another PROJ installation.\n 10%|█         | 1/10 [00:00<00:02,  4.40it/s]ERROR 1: PROJ: proj_identify: /opt/anaconda3/share/proj/proj.db lacks DATABASE.LAYOUT.VERSION.MAJOR / DATABASE.LAYOUT.VERSION.MINOR metadata. It comes from another PROJ installation.\n 20%|██        | 2/10 [00:00<00:01,  4.55it/s]ERROR 1: PROJ: proj_identify: /opt/anaconda3/share/proj/proj.db lacks DATABASE.LAYOUT.VERSION.MAJOR / DATABASE.LAYOUT.VERSION.MINOR metadata. It comes from another PROJ installation.\n 30%|███       | 3/10 [00:00<00:01,  4.39it/s]ERROR 1: PROJ: proj_identify: /opt/anaconda3/share/proj/proj.db lacks DATABASE.LAYOUT.VERSION.MAJOR / DATABASE.LAYOUT.VERSION.MINOR metadata. It comes from another PROJ installation.\n 40%|████      | 4/10 [00:00<00:01,  4.87it/s]ERROR 1: PROJ: proj_identify: /opt/anaconda3/share/proj/proj.db lacks DATABASE.LAYOUT.VERSION.MAJOR / DATABASE.LAYOUT.VERSION.MINOR metadata. It comes from another PROJ installation.\n 50%|█████     | 5/10 [00:01<00:00,  5.03it/s]ERROR 1: PROJ: proj_identify: /opt/anaconda3/share/proj/proj.db lacks DATABASE.LAYOUT.VERSION.MAJOR / DATABASE.LAYOUT.VERSION.MINOR metadata. It comes from another PROJ installation.\n 60%|██████    | 6/10 [00:01<00:00,  5.31it/s]ERROR 1: PROJ: proj_identify: /opt/anaconda3/share/proj/proj.db lacks DATABASE.LAYOUT.VERSION.MAJOR / DATABASE.LAYOUT.VERSION.MINOR metadata. It comes from another PROJ installation.\n 70%|███████   | 7/10 [00:01<00:00,  5.42it/s]ERROR 1: PROJ: proj_identify: /opt/anaconda3/share/proj/proj.db lacks DATABASE.LAYOUT.VERSION.MAJOR / DATABASE.LAYOUT.VERSION.MINOR metadata. It comes from another PROJ installation.\n 80%|████████  | 8/10 [00:01<00:00,  5.56it/s]ERROR 1: PROJ: proj_identify: /opt/anaconda3/share/proj/proj.db lacks DATABASE.LAYOUT.VERSION.MAJOR / DATABASE.LAYOUT.VERSION.MINOR metadata. It comes from another PROJ installation.\n 90%|█████████ | 9/10 [00:01<00:00,  4.98it/s]ERROR 1: PROJ: proj_identify: /opt/anaconda3/share/proj/proj.db lacks DATABASE.LAYOUT.VERSION.MAJOR / DATABASE.LAYOUT.VERSION.MINOR metadata. It comes from another PROJ installation.\n100%|██████████| 10/10 [00:02<00:00,  4.67it/s]\n100%|██████████| 10/10 [00:02<00:00,  4.90it/s]\nStarting...engineer.py\n",
+  "history_begin_time" : 1647347272565,
+  "history_end_time" : 1647347279230,
+  "history_notes" : null,
+  "history_process" : "3cars9",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "o6coc2p19jf",
+  "history_input" : "import sys\nfrom pathlib import Path\n\nsys.path.append(\"..\")\n\nfrom src_engineer_geowiki import GeoWikiEngineer\nfrom src_engineer_pv_kenya import PVKenyaEngineer\nfrom src_engineer_kenya_non_crop import KenyaNonCropEngineer\n\n\ndef engineer_geowiki():\n    engineer = GeoWikiEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.2)\n\n\ndef engineer_kenya():\n    engineer = PVKenyaEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\ndef engineer_kenya_noncrop():\n    engineer = KenyaNonCropEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...engineer.py\")  \n    engineer_geowiki()\n    engineer_kenya()\n    #engineer_kenya_noncrop()",
+  "history_output" : "",
+  "history_begin_time" : 1647347139240,
+  "history_end_time" : 1647347139805,
+  "history_notes" : null,
+  "history_process" : "3cars9",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "2j2s709vfxk",
+  "history_input" : "import sys\nfrom pathlib import Path\n\nsys.path.append(\"..\")\n\nfrom src_engineer_geowiki import GeoWikiEngineer\nfrom src_engineer_pv_kenya import PVKenyaEngineer\nfrom src_engineer_kenya_non_crop import KenyaNonCropEngineer\n\n\ndef engineer_geowiki():\n    engineer = GeoWikiEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.2)\n\n\ndef engineer_kenya():\n    engineer = PVKenyaEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\ndef engineer_kenya_noncrop():\n    engineer = KenyaNonCropEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...engineer.py\")  \n    engineer_geowiki()\n    engineer_kenya()\n    #engineer_kenya_noncrop()",
+  "history_output" : "  0%|          | 0/4 [00:00<?, ?it/s]\n100%|██████████| 4/4 [00:00<00:00, 1114.84it/s]\n  0%|          | 0/10 [00:00<?, ?it/s]\n100%|██████████| 10/10 [00:00<00:00, 11808.29it/s]\nStarting...engineer.py\nNo normalizing dict calculated! Make sure to call update_normalizing_values\nNo normalizing dict calculated!\nNo normalizing dict calculated! Make sure to call update_normalizing_values\nNo normalizing dict calculated!\n",
+  "history_begin_time" : 1647346812955,
+  "history_end_time" : 1647346816515,
+  "history_notes" : null,
+  "history_process" : "3cars9",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "mmw7ucpli37",
+  "history_input" : "import sys\nfrom pathlib import Path\n\nsys.path.append(\"..\")\n\nfrom src_engineer_geowiki import GeoWikiEngineer\nfrom src_engineer_pv_kenya import PVKenyaEngineer\nfrom src_engineer_kenya_non_crop import KenyaNonCropEngineer\n\n\ndef engineer_geowiki():\n    engineer = GeoWikiEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.2)\n\n\ndef engineer_kenya():\n    engineer = PVKenyaEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\ndef engineer_kenya_noncrop():\n    engineer = KenyaNonCropEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...engineer.py\")  \n    engineer_geowiki()\n    engineer_kenya()\n    #engineer_kenya_noncrop()",
+  "history_output" : "  0%|          | 0/4 [00:00<?, ?it/s]\n100%|██████████| 4/4 [00:00<00:00, 1286.50it/s]\n  0%|          | 0/10 [00:00<?, ?it/s]\n100%|██████████| 10/10 [00:00<00:00, 16416.06it/s]\nStarting...engineer.py\nNo normalizing dict calculated! Make sure to call update_normalizing_values\nNo normalizing dict calculated!\nNo normalizing dict calculated! Make sure to call update_normalizing_values\nNo normalizing dict calculated!\n",
+  "history_begin_time" : 1647346654218,
+  "history_end_time" : 1647346657656,
+  "history_notes" : null,
+  "history_process" : "3cars9",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "3tsmmyuoaml",
+  "history_input" : "import sys\nfrom pathlib import Path\n\nsys.path.append(\"..\")\n\nfrom src_engineer_geowiki import GeoWikiEngineer\nfrom src_engineer_pv_kenya import PVKenyaEngineer\nfrom src_engineer_kenya_non_crop import KenyaNonCropEngineer\n\n\ndef engineer_geowiki():\n    engineer = GeoWikiEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.2)\n\n\ndef engineer_kenya():\n    engineer = PVKenyaEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\ndef engineer_kenya_noncrop():\n    engineer = KenyaNonCropEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...engineer.py\")  \n    engineer_geowiki()\n    engineer_kenya()\n    #engineer_kenya_noncrop()",
+  "history_output" : "  0%|          | 0/4 [00:00<?, ?it/s]\n100%|██████████| 4/4 [00:00<00:00, 1346.38it/s]\n  0%|          | 0/10 [00:00<?, ?it/s]\n100%|██████████| 10/10 [00:00<00:00, 4433.26it/s]\nStarting...engineer.py\nNo normalizing dict calculated! Make sure to call update_normalizing_values\nNo normalizing dict calculated!\nNo normalizing dict calculated! Make sure to call update_normalizing_values\nNo normalizing dict calculated!\n",
+  "history_begin_time" : 1647345849641,
+  "history_end_time" : 1647345852781,
+  "history_notes" : null,
+  "history_process" : "3cars9",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "229y89lgubt",
+  "history_input" : "import sys\nfrom pathlib import Path\n\nsys.path.append(\"..\")\n\nfrom src_engineer_geowiki import GeoWikiEngineer\nfrom src_engineer_pv_kenya import PVKenyaEngineer\nfrom src_engineer_kenya_non_crop import KenyaNonCropEngineer\n\n\ndef engineer_geowiki():\n    engineer = GeoWikiEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.2)\n\n\ndef engineer_kenya():\n    engineer = PVKenyaEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\ndef engineer_kenya_noncrop():\n    engineer = KenyaNonCropEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...engineer.py\")  \n    engineer_geowiki()\n    engineer_kenya()\n    #engineer_kenya_noncrop()",
+  "history_output" : "",
+  "history_begin_time" : 1647345660318,
+  "history_end_time" : 1647345660869,
+  "history_notes" : null,
+  "history_process" : "3cars9",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "8xowc06q2qu",
+  "history_input" : "import sys\nfrom pathlib import Path\n\nsys.path.append(\"..\")\n\nfrom src_engineer_geowiki import GeoWikiEngineer\nfrom src_engineer_pv_kenya import PVKenyaEngineer\nfrom src_engineer_kenya_non_crop import KenyaNonCropEngineer\n\n\ndef engineer_geowiki():\n    engineer = GeoWikiEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.2)\n\n\ndef engineer_kenya():\n    engineer = PVKenyaEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\ndef engineer_kenya_noncrop():\n    engineer = KenyaNonCropEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...engineer.py\")  \n    engineer_geowiki()\n    engineer_kenya()\n    #engineer_kenya_noncrop()",
+  "history_output" : "  0%|          | 0/4 [00:00<?, ?it/s]\n100%|██████████| 4/4 [00:00<00:00, 1118.85it/s]\n  0%|          | 0/10 [00:00<?, ?it/s]\n100%|██████████| 10/10 [00:00<00:00, 4997.38it/s]\nStarting...engineer.py\nNo normalizing dict calculated! Make sure to call update_normalizing_values\nNo normalizing dict calculated!\nNo normalizing dict calculated! Make sure to call update_normalizing_values\nNo normalizing dict calculated!\n",
+  "history_begin_time" : 1647340127834,
+  "history_end_time" : 1647340131558,
+  "history_notes" : null,
+  "history_process" : "3cars9",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "fqhcmjdgszo",
+  "history_input" : "import sys\nfrom pathlib import Path\n\nsys.path.append(\"..\")\n\nfrom src_engineer_geowiki import GeoWikiEngineer\nfrom src_engineer_pv_kenya import PVKenyaEngineer\nfrom src_engineer_kenya_non_crop import KenyaNonCropEngineer\n\n\ndef engineer_geowiki():\n    engineer = GeoWikiEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.2)\n\n\ndef engineer_kenya():\n    engineer = PVKenyaEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\ndef engineer_kenya_noncrop():\n    engineer = KenyaNonCropEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...engineer.py\")  \n    engineer_geowiki()\n    engineer_kenya()\n    #engineer_kenya_noncrop()",
+  "history_output" : "",
+  "history_begin_time" : 1646147722607,
+  "history_end_time" : 1646147723193,
+  "history_notes" : null,
+  "history_process" : "3cars9",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "orsa89zlivy",
+  "history_input" : "import sys\nfrom pathlib import Path\n\nsys.path.append(\"..\")\n\nfrom src_engineer_geowiki import GeoWikiEngineer\nfrom src_engineer_pv_kenya import PVKenyaEngineer\nfrom src_engineer_kenya_non_crop import KenyaNonCropEngineer\n\n\ndef engineer_geowiki():\n    engineer = GeoWikiEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.2)\n\n\ndef engineer_kenya():\n    engineer = PVKenyaEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\ndef engineer_kenya_noncrop():\n    engineer = KenyaNonCropEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...engineer.py\")  \n    engineer_geowiki()\n    engineer_kenya()\n    #engineer_kenya_noncrop()",
+  "history_output" : "",
+  "history_begin_time" : 1646145430313,
+  "history_end_time" : 1646145431076,
+  "history_notes" : null,
+  "history_process" : "3cars9",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "0onm88r9brd",
+  "history_input" : "import sys\nfrom pathlib import Path\n\nsys.path.append(\"..\")\n\nfrom src_engineer_geowiki import GeoWikiEngineer\nfrom src_engineer_pv_kenya import PVKenyaEngineer\nfrom src_engineer_kenya_non_crop import KenyaNonCropEngineer\n\n\ndef engineer_geowiki():\n    engineer = GeoWikiEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.2)\n\n\ndef engineer_kenya():\n    engineer = PVKenyaEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\ndef engineer_kenya_noncrop():\n    engineer = KenyaNonCropEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...engineer.py\")  \n    engineer_geowiki()\n    engineer_kenya()\n    #engineer_kenya_noncrop()",
+  "history_output" : "  0%|          | 0/4 [00:00<?, ?it/s]\n100%|██████████| 4/4 [00:00<00:00, 1034.67it/s]\n  0%|          | 0/10 [00:00<?, ?it/s]\n100%|██████████| 10/10 [00:00<00:00, 8858.09it/s]\nStarting...engineer.py\nNo normalizing dict calculated! Make sure to call update_normalizing_values\nNo normalizing dict calculated!\nNo normalizing dict calculated! Make sure to call update_normalizing_values\nNo normalizing dict calculated!\n",
+  "history_begin_time" : 1646145211941,
+  "history_end_time" : 1646145216105,
+  "history_notes" : null,
+  "history_process" : "3cars9",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "ic0bu2z08n3",
+  "history_input" : "import sys\nfrom pathlib import Path\n\nsys.path.append(\"..\")\n\nfrom src_engineer_geowiki import GeoWikiEngineer\nfrom src_engineer_pv_kenya import PVKenyaEngineer\nfrom src_engineer_kenya_non_crop import KenyaNonCropEngineer\n\n\ndef engineer_geowiki():\n    engineer = GeoWikiEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.2)\n\n\ndef engineer_kenya():\n    engineer = PVKenyaEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\ndef engineer_kenya_noncrop():\n    engineer = KenyaNonCropEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...engineer.py\")  \n    engineer_geowiki()\n    engineer_kenya()\n    #engineer_kenya_noncrop()",
+  "history_output" : "  0%|          | 0/4 [00:00<?, ?it/s]\n100%|██████████| 4/4 [00:00<00:00, 1371.36it/s]\n  0%|          | 0/10 [00:00<?, ?it/s]\n100%|██████████| 10/10 [00:00<00:00, 9880.57it/s]\nStarting...engineer.py\nNo normalizing dict calculated! Make sure to call update_normalizing_values\nNo normalizing dict calculated!\nNo normalizing dict calculated! Make sure to call update_normalizing_values\nNo normalizing dict calculated!\n",
+  "history_begin_time" : 1646144604120,
+  "history_end_time" : 1646144607748,
+  "history_notes" : null,
+  "history_process" : "3cars9",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "ob7c7eg04e9",
+  "history_input" : "import sys\nfrom pathlib import Path\n\nsys.path.append(\"..\")\n\nfrom src_engineer_geowiki import GeoWikiEngineer\nfrom src_engineer_pv_kenya import PVKenyaEngineer\nfrom src_engineer_kenya_non_crop import KenyaNonCropEngineer\n\n\ndef engineer_geowiki():\n    engineer = GeoWikiEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.2)\n\n\ndef engineer_kenya():\n    engineer = PVKenyaEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\ndef engineer_kenya_noncrop():\n    engineer = KenyaNonCropEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...engineer.py\")  \n    engineer_geowiki()\n    engineer_kenya()\n    #engineer_kenya_noncrop()",
+  "history_output" : "",
+  "history_begin_time" : 1646144385857,
+  "history_end_time" : 1646144386114,
+  "history_notes" : null,
+  "history_process" : "3cars9",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "1uv3g6mzknz",
+  "history_input" : "import sys\nfrom pathlib import Path\n\nsys.path.append(\"..\")\n\nfrom src_engineer_geowiki import GeoWikiEngineer\nfrom src_engineer_pv_kenya import PVKenyaEngineer\nfrom src_engineer_kenya_non_crop import KenyaNonCropEngineer\n\n\ndef engineer_geowiki():\n    engineer = GeoWikiEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.2)\n\n\ndef engineer_kenya():\n    engineer = PVKenyaEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\ndef engineer_kenya_noncrop():\n    engineer = KenyaNonCropEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...engineer.py\")  \n    engineer_geowiki()\n    engineer_kenya()\n    #engineer_kenya_noncrop()",
+  "history_output" : "",
+  "history_begin_time" : 1646144313065,
+  "history_end_time" : 1646144313764,
+  "history_notes" : null,
+  "history_process" : "3cars9",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "a73jwgx3p8g",
+  "history_input" : "import sys\nfrom pathlib import Path\n\nsys.path.append(\"..\")\n\nfrom src_engineer_geowiki import GeoWikiEngineer\nfrom src_engineer_pv_kenya import PVKenyaEngineer\nfrom src_engineer_kenya_non_crop import KenyaNonCropEngineer\n\n\ndef engineer_geowiki():\n    engineer = GeoWikiEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.2)\n\n\ndef engineer_kenya():\n    engineer = PVKenyaEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\ndef engineer_kenya_noncrop():\n    engineer = KenyaNonCropEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...engineer.py\")  \n    engineer_geowiki()\n    engineer_kenya()\n    #engineer_kenya_noncrop()",
+  "history_output" : "  0%|          | 0/4 [00:00<?, ?it/s]\n100%|██████████| 4/4 [00:00<00:00, 1178.92it/s]\n  0%|          | 0/10 [00:00<?, ?it/s]\n100%|██████████| 10/10 [00:00<00:00, 16238.11it/s]\nStarting...engineer.py\nNo normalizing dict calculated! Make sure to call update_normalizing_values\nNo normalizing dict calculated!\nNo normalizing dict calculated! Make sure to call update_normalizing_values\nNo normalizing dict calculated!\n",
+  "history_begin_time" : 1646143412574,
+  "history_end_time" : 1646143415924,
+  "history_notes" : null,
+  "history_process" : "3cars9",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "1wgjohamwlt",
+  "history_input" : "import sys\nfrom pathlib import Path\n\nsys.path.append(\"..\")\n\nfrom src_engineer_geowiki import GeoWikiEngineer\nfrom src_engineer_pv_kenya import PVKenyaEngineer\nfrom src_engineer_kenya_non_crop import KenyaNonCropEngineer\n\n\ndef engineer_geowiki():\n    engineer = GeoWikiEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.2)\n\n\ndef engineer_kenya():\n    engineer = PVKenyaEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\ndef engineer_kenya_noncrop():\n    engineer = KenyaNonCropEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...engineer.py\")  \n    engineer_geowiki()\n    engineer_kenya()\n    #engineer_kenya_noncrop()",
+  "history_output" : "  0%|          | 0/4 [00:00<?, ?it/s]\n100%|██████████| 4/4 [00:00<00:00, 1172.00it/s]\n  0%|          | 0/10 [00:00<?, ?it/s]\n100%|██████████| 10/10 [00:00<00:00, 16723.70it/s]\nStarting...engineer.py\nNo normalizing dict calculated! Make sure to call update_normalizing_values\nNo normalizing dict calculated!\nNo normalizing dict calculated! Make sure to call update_normalizing_values\nNo normalizing dict calculated!\n",
+  "history_begin_time" : 1646143262661,
+  "history_end_time" : 1646143266050,
+  "history_notes" : null,
+  "history_process" : "3cars9",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "im6b1dde1jr",
+  "history_input" : "import sys\nfrom pathlib import Path\n\nsys.path.append(\"..\")\n\nfrom src_engineer_geowiki import GeoWikiEngineer\nfrom src_engineer_pv_kenya import PVKenyaEngineer\nfrom src_engineer_kenya_non_crop import KenyaNonCropEngineer\n\n\ndef engineer_geowiki():\n    engineer = GeoWikiEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.2)\n\n\ndef engineer_kenya():\n    engineer = PVKenyaEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\ndef engineer_kenya_noncrop():\n    engineer = KenyaNonCropEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...engineer.py\")  \n    engineer_geowiki()\n    engineer_kenya()\n    #engineer_kenya_noncrop()",
+  "history_output" : "  0%|          | 0/4 [00:00<?, ?it/s]\n100%|██████████| 4/4 [00:00<00:00, 1299.55it/s]\n  0%|          | 0/10 [00:00<?, ?it/s]\n100%|██████████| 10/10 [00:00<00:00, 11494.39it/s]\nStarting...engineer.py\nNo normalizing dict calculated! Make sure to call update_normalizing_values\nNo normalizing dict calculated!\nNo normalizing dict calculated! Make sure to call update_normalizing_values\nNo normalizing dict calculated!\n",
+  "history_begin_time" : 1646143186217,
+  "history_end_time" : 1646143189380,
+  "history_notes" : null,
+  "history_process" : "3cars9",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "737t40icf89",
+  "history_input" : "import sys\nfrom pathlib import Path\n\nsys.path.append(\"..\")\n\nfrom src_engineer_geowiki import GeoWikiEngineer\nfrom src_engineer_pv_kenya import PVKenyaEngineer\nfrom src_engineer_kenya_non_crop import KenyaNonCropEngineer\n\n\ndef engineer_geowiki():\n    engineer = GeoWikiEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.2)\n\n\ndef engineer_kenya():\n    engineer = PVKenyaEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\ndef engineer_kenya_noncrop():\n    engineer = KenyaNonCropEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...engineer.py\")  \n    engineer_geowiki()\n    engineer_kenya()\n    #engineer_kenya_noncrop()",
+  "history_output" : "  0%|          | 0/4 [00:00<?, ?it/s]\n100%|██████████| 4/4 [00:00<00:00, 1234.07it/s]\n  0%|          | 0/10 [00:00<?, ?it/s]\n 10%|█         | 1/10 [00:00<00:04,  1.90it/s]\n 20%|██        | 2/10 [00:00<00:02,  3.46it/s]\n 30%|███       | 3/10 [00:00<00:01,  4.56it/s]\n 40%|████      | 4/10 [00:00<00:01,  5.42it/s]\n 50%|█████     | 5/10 [00:01<00:00,  6.18it/s]\n 60%|██████    | 6/10 [00:01<00:00,  6.71it/s]\n 70%|███████   | 7/10 [00:01<00:00,  7.14it/s]\n 80%|████████  | 8/10 [00:01<00:00,  7.31it/s]\n 90%|█████████ | 9/10 [00:01<00:00,  7.39it/s]\n100%|██████████| 10/10 [00:01<00:00,  7.63it/s]\n100%|██████████| 10/10 [00:01<00:00,  6.00it/s]\nStarting...engineer.py\nNo normalizing dict calculated! Make sure to call update_normalizing_values\nNo normalizing dict calculated!\n",
+  "history_begin_time" : 1646143144331,
+  "history_end_time" : 1646143149744,
+  "history_notes" : null,
+  "history_process" : "3cars9",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "si38x6sgxn5",
+  "history_input" : "import sys\nfrom pathlib import Path\n\nsys.path.append(\"..\")\n\nfrom src_engineer_geowiki import GeoWikiEngineer\nfrom src_engineer_pv_kenya import PVKenyaEngineer\nfrom src_engineer_kenya_non_crop import KenyaNonCropEngineer\n\n\ndef engineer_geowiki():\n    engineer = GeoWikiEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.2)\n\n\ndef engineer_kenya():\n    engineer = PVKenyaEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\ndef engineer_kenya_noncrop():\n    engineer = KenyaNonCropEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...engineer.py\")  \n    engineer_geowiki()\n    engineer_kenya()\n    #engineer_kenya_noncrop()",
+  "history_output" : "  0%|          | 0/4 [00:00<?, ?it/s]\n100%|██████████| 4/4 [00:00<00:00, 1406.07it/s]\nStarting...engineer.py\nNo normalizing dict calculated! Make sure to call update_normalizing_values\nNo normalizing dict calculated!\nTraceback (most recent call last):\n  File \"scripts_engineer.py\", line 29, in <module>\n    engineer_kenya()\n  File \"scripts_engineer.py\", line 17, in engineer_kenya\n    engineer = PVKenyaEngineer(Path(\"../data\"))\n  File \"/Users/uhhmed/gw-workspace/yOxPUDcCRarlnoCog00omDG05F/src_engineer_base.py\", line 55, in __init__\n    self.labels = self.read_labels(data_folder)\n  File \"/Users/uhhmed/gw-workspace/yOxPUDcCRarlnoCog00omDG05F/src_engineer_pv_kenya.py\", line 23, in read_labels\n    assert pv_kenya.exists(), \"Kenya Plant Village processor must be run to load labels\"\nAssertionError: Kenya Plant Village processor must be run to load labels\n",
+  "history_begin_time" : 1646139289490,
+  "history_end_time" : 1646139293180,
+  "history_notes" : null,
+  "history_process" : "3cars9",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "ey8jmgt2sns",
+  "history_input" : "import sys\nfrom pathlib import Path\n\nsys.path.append(\"..\")\n\nfrom src_engineer_geowiki import GeoWikiEngineer\nfrom src_engineer_pv_kenya import PVKenyaEngineer\nfrom src_engineer_kenya_non_crop import KenyaNonCropEngineer\n\n\ndef engineer_geowiki():\n    engineer = GeoWikiEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.2)\n\n\ndef engineer_kenya():\n    engineer = PVKenyaEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\ndef engineer_kenya_noncrop():\n    engineer = KenyaNonCropEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...engineer.py\")  \n    engineer_geowiki()\n    engineer_kenya()\n    #engineer_kenya_noncrop()",
+  "history_output" : "  0%|          | 0/4 [00:00<?, ?it/s]\n100%|██████████| 4/4 [00:00<00:00, 1194.02it/s]\nStarting...engineer.py\nNo normalizing dict calculated! Make sure to call update_normalizing_values\nNo normalizing dict calculated!\nTraceback (most recent call last):\n  File \"scripts_engineer.py\", line 29, in <module>\n    engineer_kenya()\n  File \"scripts_engineer.py\", line 17, in engineer_kenya\n    engineer = PVKenyaEngineer(Path(\"../data\"))\n  File \"/Users/uhhmed/gw-workspace/t1Im8E7MLvTQo4z7YanDzLeOyX/src_engineer_base.py\", line 55, in __init__\n    self.labels = self.read_labels(data_folder)\n  File \"/Users/uhhmed/gw-workspace/t1Im8E7MLvTQo4z7YanDzLeOyX/src_engineer_pv_kenya.py\", line 23, in read_labels\n    assert pv_kenya.exists(), \"Kenya Plant Village processor must be run to load labels\"\nAssertionError: Kenya Plant Village processor must be run to load labels\n",
+  "history_begin_time" : 1646138274029,
+  "history_end_time" : 1646138279506,
+  "history_notes" : null,
+  "history_process" : "3cars9",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "6ibno46hwvn",
+  "history_input" : "import sys\nfrom pathlib import Path\n\nsys.path.append(\"..\")\n\nfrom src_engineer_geowiki import GeoWikiEngineer\nfrom src_engineer_pv_kenya import PVKenyaEngineer\nfrom src_engineer_kenya_non_crop import KenyaNonCropEngineer\n\n\ndef engineer_geowiki():\n    engineer = GeoWikiEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.2)\n\n\ndef engineer_kenya():\n    engineer = PVKenyaEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\ndef engineer_kenya_noncrop():\n    engineer = KenyaNonCropEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...engineer.py\")  \n    engineer_geowiki()\n    engineer_kenya()\n    #engineer_kenya_noncrop()",
+  "history_output" : "  0%|          | 0/4 [00:00<?, ?it/s]\n100%|██████████| 4/4 [00:00<00:00, 1163.07it/s]\nStarting...engineer.py\nNo normalizing dict calculated! Make sure to call update_normalizing_values\nNo normalizing dict calculated!\nTraceback (most recent call last):\n  File \"scripts_engineer.py\", line 29, in <module>\n    engineer_kenya()\n  File \"scripts_engineer.py\", line 17, in engineer_kenya\n    engineer = PVKenyaEngineer(Path(\"../data\"))\n  File \"/Users/uhhmed/gw-workspace/t1Im8E7MLvTQo4z7YanDzLeOyX/src_engineer_base.py\", line 55, in __init__\n    self.labels = self.read_labels(data_folder)\n  File \"/Users/uhhmed/gw-workspace/t1Im8E7MLvTQo4z7YanDzLeOyX/src_engineer_pv_kenya.py\", line 23, in read_labels\n    assert pv_kenya.exists(), \"Kenya Plant Village processor must be run to load labels\"\nAssertionError: Kenya Plant Village processor must be run to load labels\n",
+  "history_begin_time" : 1646138176078,
+  "history_end_time" : 1646138180143,
+  "history_notes" : null,
+  "history_process" : "3cars9",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "3xnmri51t67",
+  "history_input" : "import sys\nfrom pathlib import Path\n\nsys.path.append(\"..\")\n\nfrom src_engineer_geowiki import GeoWikiEngineer\nfrom src_engineer_pv_kenya import PVKenyaEngineer\nfrom src_engineer_kenya_non_crop import KenyaNonCropEngineer\n\n\ndef engineer_geowiki():\n    engineer = GeoWikiEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.2)\n\n\ndef engineer_kenya():\n    engineer = PVKenyaEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\ndef engineer_kenya_noncrop():\n    engineer = KenyaNonCropEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...engineer.py\")  \n    engineer_geowiki()\n    engineer_kenya()\n    #engineer_kenya_noncrop()",
+  "history_output" : "  0%|          | 0/4 [00:00<?, ?it/s]\n100%|██████████| 4/4 [00:00<00:00, 1146.45it/s]\nStarting...engineer.py\nNo normalizing dict calculated! Make sure to call update_normalizing_values\nNo normalizing dict calculated!\nTraceback (most recent call last):\n  File \"scripts_engineer.py\", line 29, in <module>\n    engineer_kenya()\n  File \"scripts_engineer.py\", line 17, in engineer_kenya\n    engineer = PVKenyaEngineer(Path(\"../data\"))\n  File \"/Users/uhhmed/gw-workspace/t1Im8E7MLvTQo4z7YanDzLeOyX/src_engineer_base.py\", line 55, in __init__\n    self.labels = self.read_labels(data_folder)\n  File \"/Users/uhhmed/gw-workspace/t1Im8E7MLvTQo4z7YanDzLeOyX/src_engineer_pv_kenya.py\", line 23, in read_labels\n    assert pv_kenya.exists(), \"Kenya Plant Village processor must be run to load labels\"\nAssertionError: Kenya Plant Village processor must be run to load labels\n",
+  "history_begin_time" : 1646138102336,
+  "history_end_time" : 1646138106614,
+  "history_notes" : null,
+  "history_process" : "3cars9",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "bst11fg23sv",
+  "history_input" : "import sys\nfrom pathlib import Path\n\nsys.path.append(\"..\")\n\nfrom src_engineer_geowiki import GeoWikiEngineer\nfrom src_engineer_pv_kenya import PVKenyaEngineer\nfrom src_engineer_kenya_non_crop import KenyaNonCropEngineer\n\n\ndef engineer_geowiki():\n    engineer = GeoWikiEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.2)\n\n\ndef engineer_kenya():\n    engineer = PVKenyaEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\ndef engineer_kenya_noncrop():\n    engineer = KenyaNonCropEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\nif __name__ == \"__main__\":\n    engineer_geowiki()\n    engineer_kenya()\n    engineer_kenya_noncrop()",
+  "history_output" : "  0%|          | 0/4 [00:00<?, ?it/s]\n100%|██████████| 4/4 [00:00<00:00, 844.60it/s]\nNo normalizing dict calculated! Make sure to call update_normalizing_values\nNo normalizing dict calculated!\nTraceback (most recent call last):\n  File \"scripts_engineer.py\", line 28, in <module>\n    engineer_kenya()\n  File \"scripts_engineer.py\", line 17, in engineer_kenya\n    engineer = PVKenyaEngineer(Path(\"../data\"))\n  File \"/Users/uhhmed/gw-workspace/t1Im8E7MLvTQo4z7YanDzLeOyX/src_engineer_base.py\", line 55, in __init__\n    self.labels = self.read_labels(data_folder)\n  File \"/Users/uhhmed/gw-workspace/t1Im8E7MLvTQo4z7YanDzLeOyX/src_engineer_pv_kenya.py\", line 23, in read_labels\n    assert pv_kenya.exists(), \"Kenya Plant Village processor must be run to load labels\"\nAssertionError: Kenya Plant Village processor must be run to load labels\n",
+  "history_begin_time" : 1646137786757,
+  "history_end_time" : 1646137791603,
+  "history_notes" : null,
+  "history_process" : "3cars9",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "j9svkndbjni",
+  "history_input" : "import sys\nfrom pathlib import Path\n\nsys.path.append(\"..\")\n\nfrom src_engineer_geowiki import GeoWikiEngineer\nfrom src_engineer_pv_kenya import PVKenyaEngineer\nfrom src_engineer_kenya_non_crop import KenyaNonCropEngineer\n\n\ndef engineer_geowiki():\n    engineer = GeoWikiEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.2)\n\n\ndef engineer_kenya():\n    engineer = PVKenyaEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\ndef engineer_kenya_noncrop():\n    engineer = KenyaNonCropEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\nif __name__ == \"__main__\":\n    engineer_geowiki()\n    engineer_kenya()\n    engineer_kenya_noncrop()",
+  "history_output" : "  0%|          | 0/4 [00:00<?, ?it/s]\n100%|██████████| 4/4 [00:00<00:00, 1069.57it/s]\nNo normalizing dict calculated! Make sure to call update_normalizing_values\nNo normalizing dict calculated!\nTraceback (most recent call last):\n  File \"scripts_engineer.py\", line 28, in <module>\n    engineer_kenya()\n  File \"scripts_engineer.py\", line 17, in engineer_kenya\n    engineer = PVKenyaEngineer(Path(\"../data\"))\n  File \"/Users/uhhmed/gw-workspace/t1Im8E7MLvTQo4z7YanDzLeOyX/src_engineer_base.py\", line 55, in __init__\n    self.labels = self.read_labels(data_folder)\n  File \"/Users/uhhmed/gw-workspace/t1Im8E7MLvTQo4z7YanDzLeOyX/src_engineer_pv_kenya.py\", line 23, in read_labels\n    assert pv_kenya.exists(), \"Kenya Plant Village processor must be run to load labels\"\nAssertionError: Kenya Plant Village processor must be run to load labels\n",
+  "history_begin_time" : 1646137690974,
+  "history_end_time" : 1646137694430,
+  "history_notes" : null,
+  "history_process" : "3cars9",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "9l6eck4wcc5",
+  "history_input" : "import sys\nfrom pathlib import Path\n\nsys.path.append(\"..\")\n\nfrom src_engineer_geowiki import GeoWikiEngineer\nfrom src_engineer_pv_kenya import PVKenyaEngineer\nfrom src_engineer_kenya_non_crop import KenyaNonCropEngineer\n\n\ndef engineer_geowiki():\n    engineer = GeoWikiEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.2)\n\n\ndef engineer_kenya():\n    engineer = PVKenyaEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\ndef engineer_kenya_noncrop():\n    engineer = KenyaNonCropEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\nif __name__ == \"__main__\":\n    engineer_geowiki()\n    engineer_kenya()\n    engineer_kenya_noncrop()",
+  "history_output" : "",
+  "history_begin_time" : 1646137579796,
+  "history_end_time" : 1646137580311,
+  "history_notes" : null,
+  "history_process" : "3cars9",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "MGirBjUrWdEn",
+  "history_input" : "import sys\nfrom pathlib import Path\n\nsys.path.append(\"..\")\n\nfrom src_engineer_geowiki import GeoWikiEngineer\nfrom src_engineer_pv_kenya import PVKenyaEngineer\nfrom src_engineer_kenya_non_crop import KenyaNonCropEngineer\n\n\ndef engineer_geowiki():\n    engineer = GeoWikiEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.2)\n\n\ndef engineer_kenya():\n    engineer = PVKenyaEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\ndef engineer_kenya_noncrop():\n    engineer = KenyaNonCropEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\nif __name__ == \"__main__\":\n    engineer_geowiki()\n    engineer_kenya()\n    engineer_kenya_noncrop()",
+  "history_output" : "  0%|          | 0/4 [00:00<?, ?it/s]\n 25%|██▌       | 1/4 [00:00<00:02,  1.34it/s]\n 50%|█████     | 2/4 [00:00<00:00,  2.55it/s]\n 75%|███████▌  | 3/4 [00:01<00:00,  3.71it/s]\n100%|██████████| 4/4 [00:01<00:00,  4.69it/s]\n100%|██████████| 4/4 [00:01<00:00,  3.51it/s]\nTraceback (most recent call last):\n  File \"scripts_engineer.py\", line 28, in <module>\n    engineer_kenya()\n  File \"scripts_engineer.py\", line 17, in engineer_kenya\n    engineer = PVKenyaEngineer(Path(\"../data\"))\n  File \"/Users/uhhmed/gw-workspace/t1Im8E7MLvTQo4z7YanDzLeOyX/src_engineer_base.py\", line 55, in __init__\n    self.labels = self.read_labels(data_folder)\n  File \"/Users/uhhmed/gw-workspace/t1Im8E7MLvTQo4z7YanDzLeOyX/src_engineer_pv_kenya.py\", line 23, in read_labels\n    assert pv_kenya.exists(), \"Kenya Plant Village processor must be run to load labels\"\nAssertionError: Kenya Plant Village processor must be run to load labels\n",
+  "history_begin_time" : 1646118834757,
+  "history_end_time" : 1646118840398,
+  "history_notes" : null,
+  "history_process" : "3cars9",
+  "host_id" : null,
+  "indicator" : "Done"
+},]

@@ -1,0 +1,641 @@
+[{
+  "history_id" : "82w78raa3xj",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666167825334,
+  "history_end_time" : 1666167825334,
+  "history_notes" : null,
+  "history_process" : "q5a232",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "0uwzowyjr3l",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666167772289,
+  "history_end_time" : 1666167772289,
+  "history_notes" : null,
+  "history_process" : "q5a232",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "bwviqzalgma",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666166465570,
+  "history_end_time" : 1666166465570,
+  "history_notes" : null,
+  "history_process" : "q5a232",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "fpgokvf6swt",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666166410228,
+  "history_end_time" : 1666166419926,
+  "history_notes" : null,
+  "history_process" : "q5a232",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "hflxjonh3w7",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666164233042,
+  "history_end_time" : 1666164233042,
+  "history_notes" : null,
+  "history_process" : "q5a232",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "0rbmujdks8n",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666163607244,
+  "history_end_time" : 1666163607244,
+  "history_notes" : null,
+  "history_process" : "q5a232",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "nqzwmpqmgro",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666137012924,
+  "history_end_time" : 1666137012924,
+  "history_notes" : null,
+  "history_process" : "q5a232",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "72cdaitjqcm",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666136593449,
+  "history_end_time" : 1666136593449,
+  "history_notes" : null,
+  "history_process" : "q5a232",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "av75guqn20a",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666136435738,
+  "history_end_time" : 1666136435738,
+  "history_notes" : null,
+  "history_process" : "q5a232",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "c3en6zx4cog",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666134110716,
+  "history_end_time" : 1666134110716,
+  "history_notes" : null,
+  "history_process" : "q5a232",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "4d9lwqquvig",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666134036868,
+  "history_end_time" : 1666134036868,
+  "history_notes" : null,
+  "history_process" : "q5a232",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "u82jxruldqm",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666134008921,
+  "history_end_time" : 1666134008921,
+  "history_notes" : null,
+  "history_process" : "q5a232",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "xjwcq3lkajj",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666131993110,
+  "history_end_time" : 1666131993110,
+  "history_notes" : null,
+  "history_process" : "q5a232",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "hu0mc38on38",
+  "history_input" : "r\"\"\"\nFunctions shared by both the fast and slow\ncloudfree algorithm\n\"\"\"\nimport ee\nfrom datetime import date\nfrom src_exporters_sentinel_cloudfree_constants import BANDS\n\nfrom typing import Union\n\n\ndef combine_bands(current, previous):\n    # Transforms an Image Collection with 1 band per Image into a single Image with items as bands\n    # Author: Jamie Vleeshouwer\n\n    # Rename the band\n    previous = ee.Image(previous)\n    current = current.select(BANDS)\n    # Append it to the result (Note: only return current item on first element/iteration)\n    return ee.Algorithms.If(\n        ee.Algorithms.IsEqual(previous, None), current, previous.addBands(ee.Image(current)),\n    )\n\n\ndef export(\n    image: ee.Image, region: ee.Geometry, filename: str, drive_folder: str, monitor: bool = False,\n) -> ee.batch.Export:\n\n    task = ee.batch.Export.image(\n        image.clip(region),\n        filename,\n        {\"scale\": 10, \"region\": region, \"maxPixels\": 1e13, \"driveFolder\": drive_folder},\n    )\n\n    try:\n        task.start()\n    except ee.ee_exception.EEException as e:\n        print(f\"Task not started! Got exception {e}\")\n        return task\n\n    if monitor:\n        monitor_task(task)\n\n    return task\n\n\ndef date_to_string(input_date: Union[date, str]) -> str:\n    if isinstance(input_date, str):\n        return input_date\n    else:\n        assert isinstance(input_date, date)\n        return input_date.strftime(\"%Y-%m-%d\")\n\n\ndef monitor_task(task: ee.batch.Export) -> None:\n\n    while task.status()[\"state\"] in [\"READY\", \"RUNNING\"]:\n        print(task.status())\n        # print(f\"Running: {task.status()['state']}\")\n\n\ndef rescale(img, exp, thresholds):\n    return (\n        img.expression(exp, {\"img\": img})\n        .subtract(thresholds[0])\n        .divide(thresholds[1] - thresholds[0])\n    )\n",
+  "history_output" : "",
+  "history_begin_time" : 1666118263203,
+  "history_end_time" : 1666118268466,
+  "history_notes" : null,
+  "history_process" : "q5a232",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "nvfotpdpomo",
+  "history_input" : "r\"\"\"\nFunctions shared by both the fast and slow\ncloudfree algorithm\n\"\"\"\nimport ee\nfrom datetime import date\nfrom src_exporters_sentinel_cloudfree_constants import BANDS\n\nfrom typing import Union\n\n\ndef combine_bands(current, previous):\n    # Transforms an Image Collection with 1 band per Image into a single Image with items as bands\n    # Author: Jamie Vleeshouwer\n\n    # Rename the band\n    previous = ee.Image(previous)\n    current = current.select(BANDS)\n    # Append it to the result (Note: only return current item on first element/iteration)\n    return ee.Algorithms.If(\n        ee.Algorithms.IsEqual(previous, None), current, previous.addBands(ee.Image(current)),\n    )\n\n\ndef export(\n    image: ee.Image, region: ee.Geometry, filename: str, drive_folder: str, monitor: bool = False,\n) -> ee.batch.Export:\n\n    task = ee.batch.Export.image(\n        image.clip(region),\n        filename,\n        {\"scale\": 10, \"region\": region, \"maxPixels\": 1e13, \"driveFolder\": drive_folder},\n    )\n\n    try:\n        task.start()\n    except ee.ee_exception.EEException as e:\n        print(f\"Task not started! Got exception {e}\")\n        return task\n\n    if monitor:\n        monitor_task(task)\n\n    return task\n\n\ndef date_to_string(input_date: Union[date, str]) -> str:\n    if isinstance(input_date, str):\n        return input_date\n    else:\n        assert isinstance(input_date, date)\n        return input_date.strftime(\"%Y-%m-%d\")\n\n\ndef monitor_task(task: ee.batch.Export) -> None:\n\n    while task.status()[\"state\"] in [\"READY\", \"RUNNING\"]:\n        print(task.status())\n        # print(f\"Running: {task.status()['state']}\")\n\n\ndef rescale(img, exp, thresholds):\n    return (\n        img.expression(exp, {\"img\": img})\n        .subtract(thresholds[0])\n        .divide(thresholds[1] - thresholds[0])\n    )\n",
+  "history_output" : "",
+  "history_begin_time" : 1655909864650,
+  "history_end_time" : 1655909867890,
+  "history_notes" : null,
+  "history_process" : "q5a232",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "h51p5k4q13d",
+  "history_input" : "r\"\"\"\nFunctions shared by both the fast and slow\ncloudfree algorithm\n\"\"\"\nimport ee\nfrom datetime import date\nfrom src_exporters_sentinel_cloudfree_constants import BANDS\n\nfrom typing import Union\n\n\ndef combine_bands(current, previous):\n    # Transforms an Image Collection with 1 band per Image into a single Image with items as bands\n    # Author: Jamie Vleeshouwer\n\n    # Rename the band\n    previous = ee.Image(previous)\n    current = current.select(BANDS)\n    # Append it to the result (Note: only return current item on first element/iteration)\n    return ee.Algorithms.If(\n        ee.Algorithms.IsEqual(previous, None), current, previous.addBands(ee.Image(current)),\n    )\n\n\ndef export(\n    image: ee.Image, region: ee.Geometry, filename: str, drive_folder: str, monitor: bool = False,\n) -> ee.batch.Export:\n\n    task = ee.batch.Export.image(\n        image.clip(region),\n        filename,\n        {\"scale\": 10, \"region\": region, \"maxPixels\": 1e13, \"driveFolder\": drive_folder},\n    )\n\n    try:\n        task.start()\n    except ee.ee_exception.EEException as e:\n        print(f\"Task not started! Got exception {e}\")\n        return task\n\n    if monitor:\n        monitor_task(task)\n\n    return task\n\n\ndef date_to_string(input_date: Union[date, str]) -> str:\n    if isinstance(input_date, str):\n        return input_date\n    else:\n        assert isinstance(input_date, date)\n        return input_date.strftime(\"%Y-%m-%d\")\n\n\ndef monitor_task(task: ee.batch.Export) -> None:\n\n    while task.status()[\"state\"] in [\"READY\", \"RUNNING\"]:\n        print(task.status())\n        # print(f\"Running: {task.status()['state']}\")\n\n\ndef rescale(img, exp, thresholds):\n    return (\n        img.expression(exp, {\"img\": img})\n        .subtract(thresholds[0])\n        .divide(thresholds[1] - thresholds[0])\n    )\n",
+  "history_output" : "",
+  "history_begin_time" : 1655908819448,
+  "history_end_time" : 1655908822368,
+  "history_notes" : null,
+  "history_process" : "q5a232",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "9rfkk314qp8",
+  "history_input" : "r\"\"\"\nFunctions shared by both the fast and slow\ncloudfree algorithm\n\"\"\"\nimport ee\nfrom datetime import date\nfrom src_exporters_sentinel_cloudfree_constants import BANDS\n\nfrom typing import Union\n\n\ndef combine_bands(current, previous):\n    # Transforms an Image Collection with 1 band per Image into a single Image with items as bands\n    # Author: Jamie Vleeshouwer\n\n    # Rename the band\n    previous = ee.Image(previous)\n    current = current.select(BANDS)\n    # Append it to the result (Note: only return current item on first element/iteration)\n    return ee.Algorithms.If(\n        ee.Algorithms.IsEqual(previous, None), current, previous.addBands(ee.Image(current)),\n    )\n\n\ndef export(\n    image: ee.Image, region: ee.Geometry, filename: str, drive_folder: str, monitor: bool = False,\n) -> ee.batch.Export:\n\n    task = ee.batch.Export.image(\n        image.clip(region),\n        filename,\n        {\"scale\": 10, \"region\": region, \"maxPixels\": 1e13, \"driveFolder\": drive_folder},\n    )\n\n    try:\n        task.start()\n    except ee.ee_exception.EEException as e:\n        print(f\"Task not started! Got exception {e}\")\n        return task\n\n    if monitor:\n        monitor_task(task)\n\n    return task\n\n\ndef date_to_string(input_date: Union[date, str]) -> str:\n    if isinstance(input_date, str):\n        return input_date\n    else:\n        assert isinstance(input_date, date)\n        return input_date.strftime(\"%Y-%m-%d\")\n\n\ndef monitor_task(task: ee.batch.Export) -> None:\n\n    while task.status()[\"state\"] in [\"READY\", \"RUNNING\"]:\n        print(task.status())\n        # print(f\"Running: {task.status()['state']}\")\n\n\ndef rescale(img, exp, thresholds):\n    return (\n        img.expression(exp, {\"img\": img})\n        .subtract(thresholds[0])\n        .divide(thresholds[1] - thresholds[0])\n    )\n",
+  "history_output" : "",
+  "history_begin_time" : 1655907422244,
+  "history_end_time" : 1655907425281,
+  "history_notes" : null,
+  "history_process" : "q5a232",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "sdppityj3ya",
+  "history_input" : "r\"\"\"\nFunctions shared by both the fast and slow\ncloudfree algorithm\n\"\"\"\nimport ee\nfrom datetime import date\nfrom src_exporters_sentinel_cloudfree_constants import BANDS\n\nfrom typing import Union\n\n\ndef combine_bands(current, previous):\n    # Transforms an Image Collection with 1 band per Image into a single Image with items as bands\n    # Author: Jamie Vleeshouwer\n\n    # Rename the band\n    previous = ee.Image(previous)\n    current = current.select(BANDS)\n    # Append it to the result (Note: only return current item on first element/iteration)\n    return ee.Algorithms.If(\n        ee.Algorithms.IsEqual(previous, None), current, previous.addBands(ee.Image(current)),\n    )\n\n\ndef export(\n    image: ee.Image, region: ee.Geometry, filename: str, drive_folder: str, monitor: bool = False,\n) -> ee.batch.Export:\n\n    task = ee.batch.Export.image(\n        image.clip(region),\n        filename,\n        {\"scale\": 10, \"region\": region, \"maxPixels\": 1e13, \"driveFolder\": drive_folder},\n    )\n\n    try:\n        task.start()\n    except ee.ee_exception.EEException as e:\n        print(f\"Task not started! Got exception {e}\")\n        return task\n\n    if monitor:\n        monitor_task(task)\n\n    return task\n\n\ndef date_to_string(input_date: Union[date, str]) -> str:\n    if isinstance(input_date, str):\n        return input_date\n    else:\n        assert isinstance(input_date, date)\n        return input_date.strftime(\"%Y-%m-%d\")\n\n\ndef monitor_task(task: ee.batch.Export) -> None:\n\n    while task.status()[\"state\"] in [\"READY\", \"RUNNING\"]:\n        print(task.status())\n        # print(f\"Running: {task.status()['state']}\")\n\n\ndef rescale(img, exp, thresholds):\n    return (\n        img.expression(exp, {\"img\": img})\n        .subtract(thresholds[0])\n        .divide(thresholds[1] - thresholds[0])\n    )\n",
+  "history_output" : "Traceback (most recent call last):\n  File \"src_exporters_sentinel_cloudfree_utils.py\", line 5, in <module>\n    import ee\nModuleNotFoundError: No module named 'ee'\n",
+  "history_begin_time" : 1655907391217,
+  "history_end_time" : 1655907403065,
+  "history_notes" : null,
+  "history_process" : "q5a232",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "xaibeihbpai",
+  "history_input" : "r\"\"\"\nFunctions shared by both the fast and slow\ncloudfree algorithm\n\"\"\"\nimport ee\nfrom datetime import date\nfrom src_exporters_sentinel_cloudfree_constants import BANDS\n\nfrom typing import Union\n\n\ndef combine_bands(current, previous):\n    # Transforms an Image Collection with 1 band per Image into a single Image with items as bands\n    # Author: Jamie Vleeshouwer\n\n    # Rename the band\n    previous = ee.Image(previous)\n    current = current.select(BANDS)\n    # Append it to the result (Note: only return current item on first element/iteration)\n    return ee.Algorithms.If(\n        ee.Algorithms.IsEqual(previous, None), current, previous.addBands(ee.Image(current)),\n    )\n\n\ndef export(\n    image: ee.Image, region: ee.Geometry, filename: str, drive_folder: str, monitor: bool = False,\n) -> ee.batch.Export:\n\n    task = ee.batch.Export.image(\n        image.clip(region),\n        filename,\n        {\"scale\": 10, \"region\": region, \"maxPixels\": 1e13, \"driveFolder\": drive_folder},\n    )\n\n    try:\n        task.start()\n    except ee.ee_exception.EEException as e:\n        print(f\"Task not started! Got exception {e}\")\n        return task\n\n    if monitor:\n        monitor_task(task)\n\n    return task\n\n\ndef date_to_string(input_date: Union[date, str]) -> str:\n    if isinstance(input_date, str):\n        return input_date\n    else:\n        assert isinstance(input_date, date)\n        return input_date.strftime(\"%Y-%m-%d\")\n\n\ndef monitor_task(task: ee.batch.Export) -> None:\n\n    while task.status()[\"state\"] in [\"READY\", \"RUNNING\"]:\n        print(task.status())\n        # print(f\"Running: {task.status()['state']}\")\n\n\ndef rescale(img, exp, thresholds):\n    return (\n        img.expression(exp, {\"img\": img})\n        .subtract(thresholds[0])\n        .divide(thresholds[1] - thresholds[0])\n    )\n",
+  "history_output" : "Traceback (most recent call last):\n  File \"src_exporters_sentinel_cloudfree_utils.py\", line 5, in <module>\n    import ee\nModuleNotFoundError: No module named 'ee'\n",
+  "history_begin_time" : 1655865839639,
+  "history_end_time" : 1655865858632,
+  "history_notes" : null,
+  "history_process" : "q5a232",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "15mbvk7uz15",
+  "history_input" : "r\"\"\"\nFunctions shared by both the fast and slow\ncloudfree algorithm\n\"\"\"\nimport ee\nfrom datetime import date\nfrom src_exporters_sentinel_cloudfree_constants import BANDS\n\nfrom typing import Union\n\n\ndef combine_bands(current, previous):\n    # Transforms an Image Collection with 1 band per Image into a single Image with items as bands\n    # Author: Jamie Vleeshouwer\n\n    # Rename the band\n    previous = ee.Image(previous)\n    current = current.select(BANDS)\n    # Append it to the result (Note: only return current item on first element/iteration)\n    return ee.Algorithms.If(\n        ee.Algorithms.IsEqual(previous, None), current, previous.addBands(ee.Image(current)),\n    )\n\n\ndef export(\n    image: ee.Image, region: ee.Geometry, filename: str, drive_folder: str, monitor: bool = False,\n) -> ee.batch.Export:\n\n    task = ee.batch.Export.image(\n        image.clip(region),\n        filename,\n        {\"scale\": 10, \"region\": region, \"maxPixels\": 1e13, \"driveFolder\": drive_folder},\n    )\n\n    try:\n        task.start()\n    except ee.ee_exception.EEException as e:\n        print(f\"Task not started! Got exception {e}\")\n        return task\n\n    if monitor:\n        monitor_task(task)\n\n    return task\n\n\ndef date_to_string(input_date: Union[date, str]) -> str:\n    if isinstance(input_date, str):\n        return input_date\n    else:\n        assert isinstance(input_date, date)\n        return input_date.strftime(\"%Y-%m-%d\")\n\n\ndef monitor_task(task: ee.batch.Export) -> None:\n\n    while task.status()[\"state\"] in [\"READY\", \"RUNNING\"]:\n        print(task.status())\n        # print(f\"Running: {task.status()['state']}\")\n\n\ndef rescale(img, exp, thresholds):\n    return (\n        img.expression(exp, {\"img\": img})\n        .subtract(thresholds[0])\n        .divide(thresholds[1] - thresholds[0])\n    )\n",
+  "history_output" : "",
+  "history_begin_time" : 1655865073429,
+  "history_end_time" : 1655865077197,
+  "history_notes" : null,
+  "history_process" : "q5a232",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "1ebzwnzwq8f",
+  "history_input" : "r\"\"\"\nFunctions shared by both the fast and slow\ncloudfree algorithm\n\"\"\"\nimport ee\nfrom datetime import date\nfrom src_exporters_sentinel_cloudfree_constants import BANDS\n\nfrom typing import Union\n\n\ndef combine_bands(current, previous):\n    # Transforms an Image Collection with 1 band per Image into a single Image with items as bands\n    # Author: Jamie Vleeshouwer\n\n    # Rename the band\n    previous = ee.Image(previous)\n    current = current.select(BANDS)\n    # Append it to the result (Note: only return current item on first element/iteration)\n    return ee.Algorithms.If(\n        ee.Algorithms.IsEqual(previous, None), current, previous.addBands(ee.Image(current)),\n    )\n\n\ndef export(\n    image: ee.Image, region: ee.Geometry, filename: str, drive_folder: str, monitor: bool = False,\n) -> ee.batch.Export:\n\n    task = ee.batch.Export.image(\n        image.clip(region),\n        filename,\n        {\"scale\": 10, \"region\": region, \"maxPixels\": 1e13, \"driveFolder\": drive_folder},\n    )\n\n    try:\n        task.start()\n    except ee.ee_exception.EEException as e:\n        print(f\"Task not started! Got exception {e}\")\n        return task\n\n    if monitor:\n        monitor_task(task)\n\n    return task\n\n\ndef date_to_string(input_date: Union[date, str]) -> str:\n    if isinstance(input_date, str):\n        return input_date\n    else:\n        assert isinstance(input_date, date)\n        return input_date.strftime(\"%Y-%m-%d\")\n\n\ndef monitor_task(task: ee.batch.Export) -> None:\n\n    while task.status()[\"state\"] in [\"READY\", \"RUNNING\"]:\n        print(task.status())\n        # print(f\"Running: {task.status()['state']}\")\n\n\ndef rescale(img, exp, thresholds):\n    return (\n        img.expression(exp, {\"img\": img})\n        .subtract(thresholds[0])\n        .divide(thresholds[1] - thresholds[0])\n    )\n",
+  "history_output" : "",
+  "history_begin_time" : 1647347425326,
+  "history_end_time" : 1647347426757,
+  "history_notes" : null,
+  "history_process" : "q5a232",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "ujrgq8wp3lx",
+  "history_input" : "r\"\"\"\nFunctions shared by both the fast and slow\ncloudfree algorithm\n\"\"\"\nimport ee\nfrom datetime import date\nfrom src_exporters_sentinel_cloudfree_constants import BANDS\n\nfrom typing import Union\n\n\ndef combine_bands(current, previous):\n    # Transforms an Image Collection with 1 band per Image into a single Image with items as bands\n    # Author: Jamie Vleeshouwer\n\n    # Rename the band\n    previous = ee.Image(previous)\n    current = current.select(BANDS)\n    # Append it to the result (Note: only return current item on first element/iteration)\n    return ee.Algorithms.If(\n        ee.Algorithms.IsEqual(previous, None), current, previous.addBands(ee.Image(current)),\n    )\n\n\ndef export(\n    image: ee.Image, region: ee.Geometry, filename: str, drive_folder: str, monitor: bool = False,\n) -> ee.batch.Export:\n\n    task = ee.batch.Export.image(\n        image.clip(region),\n        filename,\n        {\"scale\": 10, \"region\": region, \"maxPixels\": 1e13, \"driveFolder\": drive_folder},\n    )\n\n    try:\n        task.start()\n    except ee.ee_exception.EEException as e:\n        print(f\"Task not started! Got exception {e}\")\n        return task\n\n    if monitor:\n        monitor_task(task)\n\n    return task\n\n\ndef date_to_string(input_date: Union[date, str]) -> str:\n    if isinstance(input_date, str):\n        return input_date\n    else:\n        assert isinstance(input_date, date)\n        return input_date.strftime(\"%Y-%m-%d\")\n\n\ndef monitor_task(task: ee.batch.Export) -> None:\n\n    while task.status()[\"state\"] in [\"READY\", \"RUNNING\"]:\n        print(task.status())\n        # print(f\"Running: {task.status()['state']}\")\n\n\ndef rescale(img, exp, thresholds):\n    return (\n        img.expression(exp, {\"img\": img})\n        .subtract(thresholds[0])\n        .divide(thresholds[1] - thresholds[0])\n    )\n",
+  "history_output" : "",
+  "history_begin_time" : 1647347332689,
+  "history_end_time" : 1647347333981,
+  "history_notes" : null,
+  "history_process" : "q5a232",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "hevjfvpdw4n",
+  "history_input" : "r\"\"\"\nFunctions shared by both the fast and slow\ncloudfree algorithm\n\"\"\"\nimport ee\nfrom datetime import date\nfrom src_exporters_sentinel_cloudfree_constants import BANDS\n\nfrom typing import Union\n\n\ndef combine_bands(current, previous):\n    # Transforms an Image Collection with 1 band per Image into a single Image with items as bands\n    # Author: Jamie Vleeshouwer\n\n    # Rename the band\n    previous = ee.Image(previous)\n    current = current.select(BANDS)\n    # Append it to the result (Note: only return current item on first element/iteration)\n    return ee.Algorithms.If(\n        ee.Algorithms.IsEqual(previous, None), current, previous.addBands(ee.Image(current)),\n    )\n\n\ndef export(\n    image: ee.Image, region: ee.Geometry, filename: str, drive_folder: str, monitor: bool = False,\n) -> ee.batch.Export:\n\n    task = ee.batch.Export.image(\n        image.clip(region),\n        filename,\n        {\"scale\": 10, \"region\": region, \"maxPixels\": 1e13, \"driveFolder\": drive_folder},\n    )\n\n    try:\n        task.start()\n    except ee.ee_exception.EEException as e:\n        print(f\"Task not started! Got exception {e}\")\n        return task\n\n    if monitor:\n        monitor_task(task)\n\n    return task\n\n\ndef date_to_string(input_date: Union[date, str]) -> str:\n    if isinstance(input_date, str):\n        return input_date\n    else:\n        assert isinstance(input_date, date)\n        return input_date.strftime(\"%Y-%m-%d\")\n\n\ndef monitor_task(task: ee.batch.Export) -> None:\n\n    while task.status()[\"state\"] in [\"READY\", \"RUNNING\"]:\n        print(task.status())\n        # print(f\"Running: {task.status()['state']}\")\n\n\ndef rescale(img, exp, thresholds):\n    return (\n        img.expression(exp, {\"img\": img})\n        .subtract(thresholds[0])\n        .divide(thresholds[1] - thresholds[0])\n    )\n",
+  "history_output" : "",
+  "history_begin_time" : 1647347264158,
+  "history_end_time" : 1647347265417,
+  "history_notes" : null,
+  "history_process" : "q5a232",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "88g6z0veh4t",
+  "history_input" : "r\"\"\"\nFunctions shared by both the fast and slow\ncloudfree algorithm\n\"\"\"\nimport ee\nfrom datetime import date\nfrom src_exporters_sentinel_cloudfree_constants import BANDS\n\nfrom typing import Union\n\n\ndef combine_bands(current, previous):\n    # Transforms an Image Collection with 1 band per Image into a single Image with items as bands\n    # Author: Jamie Vleeshouwer\n\n    # Rename the band\n    previous = ee.Image(previous)\n    current = current.select(BANDS)\n    # Append it to the result (Note: only return current item on first element/iteration)\n    return ee.Algorithms.If(\n        ee.Algorithms.IsEqual(previous, None), current, previous.addBands(ee.Image(current)),\n    )\n\n\ndef export(\n    image: ee.Image, region: ee.Geometry, filename: str, drive_folder: str, monitor: bool = False,\n) -> ee.batch.Export:\n\n    task = ee.batch.Export.image(\n        image.clip(region),\n        filename,\n        {\"scale\": 10, \"region\": region, \"maxPixels\": 1e13, \"driveFolder\": drive_folder},\n    )\n\n    try:\n        task.start()\n    except ee.ee_exception.EEException as e:\n        print(f\"Task not started! Got exception {e}\")\n        return task\n\n    if monitor:\n        monitor_task(task)\n\n    return task\n\n\ndef date_to_string(input_date: Union[date, str]) -> str:\n    if isinstance(input_date, str):\n        return input_date\n    else:\n        assert isinstance(input_date, date)\n        return input_date.strftime(\"%Y-%m-%d\")\n\n\ndef monitor_task(task: ee.batch.Export) -> None:\n\n    while task.status()[\"state\"] in [\"READY\", \"RUNNING\"]:\n        print(task.status())\n        # print(f\"Running: {task.status()['state']}\")\n\n\ndef rescale(img, exp, thresholds):\n    return (\n        img.expression(exp, {\"img\": img})\n        .subtract(thresholds[0])\n        .divide(thresholds[1] - thresholds[0])\n    )\n",
+  "history_output" : "",
+  "history_begin_time" : 1647347130493,
+  "history_end_time" : 1647347132124,
+  "history_notes" : null,
+  "history_process" : "q5a232",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "4odpx318hnl",
+  "history_input" : "r\"\"\"\nFunctions shared by both the fast and slow\ncloudfree algorithm\n\"\"\"\nimport ee\nfrom datetime import date\nfrom src_exporters_sentinel_cloudfree_constants import BANDS\n\nfrom typing import Union\n\n\ndef combine_bands(current, previous):\n    # Transforms an Image Collection with 1 band per Image into a single Image with items as bands\n    # Author: Jamie Vleeshouwer\n\n    # Rename the band\n    previous = ee.Image(previous)\n    current = current.select(BANDS)\n    # Append it to the result (Note: only return current item on first element/iteration)\n    return ee.Algorithms.If(\n        ee.Algorithms.IsEqual(previous, None), current, previous.addBands(ee.Image(current)),\n    )\n\n\ndef export(\n    image: ee.Image, region: ee.Geometry, filename: str, drive_folder: str, monitor: bool = False,\n) -> ee.batch.Export:\n\n    task = ee.batch.Export.image(\n        image.clip(region),\n        filename,\n        {\"scale\": 10, \"region\": region, \"maxPixels\": 1e13, \"driveFolder\": drive_folder},\n    )\n\n    try:\n        task.start()\n    except ee.ee_exception.EEException as e:\n        print(f\"Task not started! Got exception {e}\")\n        return task\n\n    if monitor:\n        monitor_task(task)\n\n    return task\n\n\ndef date_to_string(input_date: Union[date, str]) -> str:\n    if isinstance(input_date, str):\n        return input_date\n    else:\n        assert isinstance(input_date, date)\n        return input_date.strftime(\"%Y-%m-%d\")\n\n\ndef monitor_task(task: ee.batch.Export) -> None:\n\n    while task.status()[\"state\"] in [\"READY\", \"RUNNING\"]:\n        print(task.status())\n        # print(f\"Running: {task.status()['state']}\")\n\n\ndef rescale(img, exp, thresholds):\n    return (\n        img.expression(exp, {\"img\": img})\n        .subtract(thresholds[0])\n        .divide(thresholds[1] - thresholds[0])\n    )\n",
+  "history_output" : "",
+  "history_begin_time" : 1647346805715,
+  "history_end_time" : 1647346805847,
+  "history_notes" : null,
+  "history_process" : "q5a232",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "owoimzegac3",
+  "history_input" : "r\"\"\"\nFunctions shared by both the fast and slow\ncloudfree algorithm\n\"\"\"\nimport ee\nfrom datetime import date\nfrom src_exporters_sentinel_cloudfree_constants import BANDS\n\nfrom typing import Union\n\n\ndef combine_bands(current, previous):\n    # Transforms an Image Collection with 1 band per Image into a single Image with items as bands\n    # Author: Jamie Vleeshouwer\n\n    # Rename the band\n    previous = ee.Image(previous)\n    current = current.select(BANDS)\n    # Append it to the result (Note: only return current item on first element/iteration)\n    return ee.Algorithms.If(\n        ee.Algorithms.IsEqual(previous, None), current, previous.addBands(ee.Image(current)),\n    )\n\n\ndef export(\n    image: ee.Image, region: ee.Geometry, filename: str, drive_folder: str, monitor: bool = False,\n) -> ee.batch.Export:\n\n    task = ee.batch.Export.image(\n        image.clip(region),\n        filename,\n        {\"scale\": 10, \"region\": region, \"maxPixels\": 1e13, \"driveFolder\": drive_folder},\n    )\n\n    try:\n        task.start()\n    except ee.ee_exception.EEException as e:\n        print(f\"Task not started! Got exception {e}\")\n        return task\n\n    if monitor:\n        monitor_task(task)\n\n    return task\n\n\ndef date_to_string(input_date: Union[date, str]) -> str:\n    if isinstance(input_date, str):\n        return input_date\n    else:\n        assert isinstance(input_date, date)\n        return input_date.strftime(\"%Y-%m-%d\")\n\n\ndef monitor_task(task: ee.batch.Export) -> None:\n\n    while task.status()[\"state\"] in [\"READY\", \"RUNNING\"]:\n        print(task.status())\n        # print(f\"Running: {task.status()['state']}\")\n\n\ndef rescale(img, exp, thresholds):\n    return (\n        img.expression(exp, {\"img\": img})\n        .subtract(thresholds[0])\n        .divide(thresholds[1] - thresholds[0])\n    )\n",
+  "history_output" : "",
+  "history_begin_time" : 1647346640574,
+  "history_end_time" : 1647346642169,
+  "history_notes" : null,
+  "history_process" : "q5a232",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "cte6t0dlq5n",
+  "history_input" : "r\"\"\"\nFunctions shared by both the fast and slow\ncloudfree algorithm\n\"\"\"\nimport ee\nfrom datetime import date\nfrom src_exporters_sentinel_cloudfree_constants import BANDS\n\nfrom typing import Union\n\n\ndef combine_bands(current, previous):\n    # Transforms an Image Collection with 1 band per Image into a single Image with items as bands\n    # Author: Jamie Vleeshouwer\n\n    # Rename the band\n    previous = ee.Image(previous)\n    current = current.select(BANDS)\n    # Append it to the result (Note: only return current item on first element/iteration)\n    return ee.Algorithms.If(\n        ee.Algorithms.IsEqual(previous, None), current, previous.addBands(ee.Image(current)),\n    )\n\n\ndef export(\n    image: ee.Image, region: ee.Geometry, filename: str, drive_folder: str, monitor: bool = False,\n) -> ee.batch.Export:\n\n    task = ee.batch.Export.image(\n        image.clip(region),\n        filename,\n        {\"scale\": 10, \"region\": region, \"maxPixels\": 1e13, \"driveFolder\": drive_folder},\n    )\n\n    try:\n        task.start()\n    except ee.ee_exception.EEException as e:\n        print(f\"Task not started! Got exception {e}\")\n        return task\n\n    if monitor:\n        monitor_task(task)\n\n    return task\n\n\ndef date_to_string(input_date: Union[date, str]) -> str:\n    if isinstance(input_date, str):\n        return input_date\n    else:\n        assert isinstance(input_date, date)\n        return input_date.strftime(\"%Y-%m-%d\")\n\n\ndef monitor_task(task: ee.batch.Export) -> None:\n\n    while task.status()[\"state\"] in [\"READY\", \"RUNNING\"]:\n        print(task.status())\n        # print(f\"Running: {task.status()['state']}\")\n\n\ndef rescale(img, exp, thresholds):\n    return (\n        img.expression(exp, {\"img\": img})\n        .subtract(thresholds[0])\n        .divide(thresholds[1] - thresholds[0])\n    )\n",
+  "history_output" : "",
+  "history_begin_time" : 1647345835925,
+  "history_end_time" : 1647345837685,
+  "history_notes" : null,
+  "history_process" : "q5a232",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "d75l3qxygvy",
+  "history_input" : "r\"\"\"\nFunctions shared by both the fast and slow\ncloudfree algorithm\n\"\"\"\nimport ee\nfrom datetime import date\nfrom src_exporters_sentinel_cloudfree_constants import BANDS\n\nfrom typing import Union\n\n\ndef combine_bands(current, previous):\n    # Transforms an Image Collection with 1 band per Image into a single Image with items as bands\n    # Author: Jamie Vleeshouwer\n\n    # Rename the band\n    previous = ee.Image(previous)\n    current = current.select(BANDS)\n    # Append it to the result (Note: only return current item on first element/iteration)\n    return ee.Algorithms.If(\n        ee.Algorithms.IsEqual(previous, None), current, previous.addBands(ee.Image(current)),\n    )\n\n\ndef export(\n    image: ee.Image, region: ee.Geometry, filename: str, drive_folder: str, monitor: bool = False,\n) -> ee.batch.Export:\n\n    task = ee.batch.Export.image(\n        image.clip(region),\n        filename,\n        {\"scale\": 10, \"region\": region, \"maxPixels\": 1e13, \"driveFolder\": drive_folder},\n    )\n\n    try:\n        task.start()\n    except ee.ee_exception.EEException as e:\n        print(f\"Task not started! Got exception {e}\")\n        return task\n\n    if monitor:\n        monitor_task(task)\n\n    return task\n\n\ndef date_to_string(input_date: Union[date, str]) -> str:\n    if isinstance(input_date, str):\n        return input_date\n    else:\n        assert isinstance(input_date, date)\n        return input_date.strftime(\"%Y-%m-%d\")\n\n\ndef monitor_task(task: ee.batch.Export) -> None:\n\n    while task.status()[\"state\"] in [\"READY\", \"RUNNING\"]:\n        print(task.status())\n        # print(f\"Running: {task.status()['state']}\")\n\n\ndef rescale(img, exp, thresholds):\n    return (\n        img.expression(exp, {\"img\": img})\n        .subtract(thresholds[0])\n        .divide(thresholds[1] - thresholds[0])\n    )\n",
+  "history_output" : "",
+  "history_begin_time" : 1647345651062,
+  "history_end_time" : 1647345653138,
+  "history_notes" : null,
+  "history_process" : "q5a232",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "o9upd7kmx4n",
+  "history_input" : "r\"\"\"\nFunctions shared by both the fast and slow\ncloudfree algorithm\n\"\"\"\nimport ee\nfrom datetime import date\nfrom src_exporters_sentinel_cloudfree_constants import BANDS\n\nfrom typing import Union\n\n\ndef combine_bands(current, previous):\n    # Transforms an Image Collection with 1 band per Image into a single Image with items as bands\n    # Author: Jamie Vleeshouwer\n\n    # Rename the band\n    previous = ee.Image(previous)\n    current = current.select(BANDS)\n    # Append it to the result (Note: only return current item on first element/iteration)\n    return ee.Algorithms.If(\n        ee.Algorithms.IsEqual(previous, None), current, previous.addBands(ee.Image(current)),\n    )\n\n\ndef export(\n    image: ee.Image, region: ee.Geometry, filename: str, drive_folder: str, monitor: bool = False,\n) -> ee.batch.Export:\n\n    task = ee.batch.Export.image(\n        image.clip(region),\n        filename,\n        {\"scale\": 10, \"region\": region, \"maxPixels\": 1e13, \"driveFolder\": drive_folder},\n    )\n\n    try:\n        task.start()\n    except ee.ee_exception.EEException as e:\n        print(f\"Task not started! Got exception {e}\")\n        return task\n\n    if monitor:\n        monitor_task(task)\n\n    return task\n\n\ndef date_to_string(input_date: Union[date, str]) -> str:\n    if isinstance(input_date, str):\n        return input_date\n    else:\n        assert isinstance(input_date, date)\n        return input_date.strftime(\"%Y-%m-%d\")\n\n\ndef monitor_task(task: ee.batch.Export) -> None:\n\n    while task.status()[\"state\"] in [\"READY\", \"RUNNING\"]:\n        print(task.status())\n        # print(f\"Running: {task.status()['state']}\")\n\n\ndef rescale(img, exp, thresholds):\n    return (\n        img.expression(exp, {\"img\": img})\n        .subtract(thresholds[0])\n        .divide(thresholds[1] - thresholds[0])\n    )\n",
+  "history_output" : "",
+  "history_begin_time" : 1647340108019,
+  "history_end_time" : 1647340110816,
+  "history_notes" : null,
+  "history_process" : "q5a232",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "qxms5ezq538",
+  "history_input" : "r\"\"\"\nFunctions shared by both the fast and slow\ncloudfree algorithm\n\"\"\"\nimport ee\nfrom datetime import date\nfrom src_exporters_sentinel_cloudfree_constants import BANDS\n\nfrom typing import Union\n\n\ndef combine_bands(current, previous):\n    # Transforms an Image Collection with 1 band per Image into a single Image with items as bands\n    # Author: Jamie Vleeshouwer\n\n    # Rename the band\n    previous = ee.Image(previous)\n    current = current.select(BANDS)\n    # Append it to the result (Note: only return current item on first element/iteration)\n    return ee.Algorithms.If(\n        ee.Algorithms.IsEqual(previous, None), current, previous.addBands(ee.Image(current)),\n    )\n\n\ndef export(\n    image: ee.Image, region: ee.Geometry, filename: str, drive_folder: str, monitor: bool = False,\n) -> ee.batch.Export:\n\n    task = ee.batch.Export.image(\n        image.clip(region),\n        filename,\n        {\"scale\": 10, \"region\": region, \"maxPixels\": 1e13, \"driveFolder\": drive_folder},\n    )\n\n    try:\n        task.start()\n    except ee.ee_exception.EEException as e:\n        print(f\"Task not started! Got exception {e}\")\n        return task\n\n    if monitor:\n        monitor_task(task)\n\n    return task\n\n\ndef date_to_string(input_date: Union[date, str]) -> str:\n    if isinstance(input_date, str):\n        return input_date\n    else:\n        assert isinstance(input_date, date)\n        return input_date.strftime(\"%Y-%m-%d\")\n\n\ndef monitor_task(task: ee.batch.Export) -> None:\n\n    while task.status()[\"state\"] in [\"READY\", \"RUNNING\"]:\n        print(task.status())\n        # print(f\"Running: {task.status()['state']}\")\n\n\ndef rescale(img, exp, thresholds):\n    return (\n        img.expression(exp, {\"img\": img})\n        .subtract(thresholds[0])\n        .divide(thresholds[1] - thresholds[0])\n    )\n",
+  "history_output" : "",
+  "history_begin_time" : 1646147709731,
+  "history_end_time" : 1646147712685,
+  "history_notes" : null,
+  "history_process" : "q5a232",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "q32jxmvi6ns",
+  "history_input" : "r\"\"\"\nFunctions shared by both the fast and slow\ncloudfree algorithm\n\"\"\"\nimport ee\nfrom datetime import date\nfrom src_exporters_sentinel_cloudfree_constants import BANDS\n\nfrom typing import Union\n\n\ndef combine_bands(current, previous):\n    # Transforms an Image Collection with 1 band per Image into a single Image with items as bands\n    # Author: Jamie Vleeshouwer\n\n    # Rename the band\n    previous = ee.Image(previous)\n    current = current.select(BANDS)\n    # Append it to the result (Note: only return current item on first element/iteration)\n    return ee.Algorithms.If(\n        ee.Algorithms.IsEqual(previous, None), current, previous.addBands(ee.Image(current)),\n    )\n\n\ndef export(\n    image: ee.Image, region: ee.Geometry, filename: str, drive_folder: str, monitor: bool = False,\n) -> ee.batch.Export:\n\n    task = ee.batch.Export.image(\n        image.clip(region),\n        filename,\n        {\"scale\": 10, \"region\": region, \"maxPixels\": 1e13, \"driveFolder\": drive_folder},\n    )\n\n    try:\n        task.start()\n    except ee.ee_exception.EEException as e:\n        print(f\"Task not started! Got exception {e}\")\n        return task\n\n    if monitor:\n        monitor_task(task)\n\n    return task\n\n\ndef date_to_string(input_date: Union[date, str]) -> str:\n    if isinstance(input_date, str):\n        return input_date\n    else:\n        assert isinstance(input_date, date)\n        return input_date.strftime(\"%Y-%m-%d\")\n\n\ndef monitor_task(task: ee.batch.Export) -> None:\n\n    while task.status()[\"state\"] in [\"READY\", \"RUNNING\"]:\n        print(task.status())\n        # print(f\"Running: {task.status()['state']}\")\n\n\ndef rescale(img, exp, thresholds):\n    return (\n        img.expression(exp, {\"img\": img})\n        .subtract(thresholds[0])\n        .divide(thresholds[1] - thresholds[0])\n    )\n",
+  "history_output" : "",
+  "history_begin_time" : 1646145421624,
+  "history_end_time" : 1646145422624,
+  "history_notes" : null,
+  "history_process" : "q5a232",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "wpsc5w81quf",
+  "history_input" : "r\"\"\"\nFunctions shared by both the fast and slow\ncloudfree algorithm\n\"\"\"\nimport ee\nfrom datetime import date\nfrom src_exporters_sentinel_cloudfree_constants import BANDS\n\nfrom typing import Union\n\n\ndef combine_bands(current, previous):\n    # Transforms an Image Collection with 1 band per Image into a single Image with items as bands\n    # Author: Jamie Vleeshouwer\n\n    # Rename the band\n    previous = ee.Image(previous)\n    current = current.select(BANDS)\n    # Append it to the result (Note: only return current item on first element/iteration)\n    return ee.Algorithms.If(\n        ee.Algorithms.IsEqual(previous, None), current, previous.addBands(ee.Image(current)),\n    )\n\n\ndef export(\n    image: ee.Image, region: ee.Geometry, filename: str, drive_folder: str, monitor: bool = False,\n) -> ee.batch.Export:\n\n    task = ee.batch.Export.image(\n        image.clip(region),\n        filename,\n        {\"scale\": 10, \"region\": region, \"maxPixels\": 1e13, \"driveFolder\": drive_folder},\n    )\n\n    try:\n        task.start()\n    except ee.ee_exception.EEException as e:\n        print(f\"Task not started! Got exception {e}\")\n        return task\n\n    if monitor:\n        monitor_task(task)\n\n    return task\n\n\ndef date_to_string(input_date: Union[date, str]) -> str:\n    if isinstance(input_date, str):\n        return input_date\n    else:\n        assert isinstance(input_date, date)\n        return input_date.strftime(\"%Y-%m-%d\")\n\n\ndef monitor_task(task: ee.batch.Export) -> None:\n\n    while task.status()[\"state\"] in [\"READY\", \"RUNNING\"]:\n        print(task.status())\n        # print(f\"Running: {task.status()['state']}\")\n\n\ndef rescale(img, exp, thresholds):\n    return (\n        img.expression(exp, {\"img\": img})\n        .subtract(thresholds[0])\n        .divide(thresholds[1] - thresholds[0])\n    )\n",
+  "history_output" : "",
+  "history_begin_time" : 1646145205381,
+  "history_end_time" : 1646145206806,
+  "history_notes" : null,
+  "history_process" : "q5a232",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "8tazilt6uxf",
+  "history_input" : "r\"\"\"\nFunctions shared by both the fast and slow\ncloudfree algorithm\n\"\"\"\nimport ee\nfrom datetime import date\nfrom src_exporters_sentinel_cloudfree_constants import BANDS\n\nfrom typing import Union\n\n\ndef combine_bands(current, previous):\n    # Transforms an Image Collection with 1 band per Image into a single Image with items as bands\n    # Author: Jamie Vleeshouwer\n\n    # Rename the band\n    previous = ee.Image(previous)\n    current = current.select(BANDS)\n    # Append it to the result (Note: only return current item on first element/iteration)\n    return ee.Algorithms.If(\n        ee.Algorithms.IsEqual(previous, None), current, previous.addBands(ee.Image(current)),\n    )\n\n\ndef export(\n    image: ee.Image, region: ee.Geometry, filename: str, drive_folder: str, monitor: bool = False,\n) -> ee.batch.Export:\n\n    task = ee.batch.Export.image(\n        image.clip(region),\n        filename,\n        {\"scale\": 10, \"region\": region, \"maxPixels\": 1e13, \"driveFolder\": drive_folder},\n    )\n\n    try:\n        task.start()\n    except ee.ee_exception.EEException as e:\n        print(f\"Task not started! Got exception {e}\")\n        return task\n\n    if monitor:\n        monitor_task(task)\n\n    return task\n\n\ndef date_to_string(input_date: Union[date, str]) -> str:\n    if isinstance(input_date, str):\n        return input_date\n    else:\n        assert isinstance(input_date, date)\n        return input_date.strftime(\"%Y-%m-%d\")\n\n\ndef monitor_task(task: ee.batch.Export) -> None:\n\n    while task.status()[\"state\"] in [\"READY\", \"RUNNING\"]:\n        print(task.status())\n        # print(f\"Running: {task.status()['state']}\")\n\n\ndef rescale(img, exp, thresholds):\n    return (\n        img.expression(exp, {\"img\": img})\n        .subtract(thresholds[0])\n        .divide(thresholds[1] - thresholds[0])\n    )\n",
+  "history_output" : "",
+  "history_begin_time" : 1646144595252,
+  "history_end_time" : 1646144596662,
+  "history_notes" : null,
+  "history_process" : "q5a232",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "ai6j87ru6g9",
+  "history_input" : "r\"\"\"\nFunctions shared by both the fast and slow\ncloudfree algorithm\n\"\"\"\nimport ee\nfrom datetime import date\nfrom src_exporters_sentinel_cloudfree_constants import BANDS\n\nfrom typing import Union\n\n\ndef combine_bands(current, previous):\n    # Transforms an Image Collection with 1 band per Image into a single Image with items as bands\n    # Author: Jamie Vleeshouwer\n\n    # Rename the band\n    previous = ee.Image(previous)\n    current = current.select(BANDS)\n    # Append it to the result (Note: only return current item on first element/iteration)\n    return ee.Algorithms.If(\n        ee.Algorithms.IsEqual(previous, None), current, previous.addBands(ee.Image(current)),\n    )\n\n\ndef export(\n    image: ee.Image, region: ee.Geometry, filename: str, drive_folder: str, monitor: bool = False,\n) -> ee.batch.Export:\n\n    task = ee.batch.Export.image(\n        image.clip(region),\n        filename,\n        {\"scale\": 10, \"region\": region, \"maxPixels\": 1e13, \"driveFolder\": drive_folder},\n    )\n\n    try:\n        task.start()\n    except ee.ee_exception.EEException as e:\n        print(f\"Task not started! Got exception {e}\")\n        return task\n\n    if monitor:\n        monitor_task(task)\n\n    return task\n\n\ndef date_to_string(input_date: Union[date, str]) -> str:\n    if isinstance(input_date, str):\n        return input_date\n    else:\n        assert isinstance(input_date, date)\n        return input_date.strftime(\"%Y-%m-%d\")\n\n\ndef monitor_task(task: ee.batch.Export) -> None:\n\n    while task.status()[\"state\"] in [\"READY\", \"RUNNING\"]:\n        print(task.status())\n        # print(f\"Running: {task.status()['state']}\")\n\n\ndef rescale(img, exp, thresholds):\n    return (\n        img.expression(exp, {\"img\": img})\n        .subtract(thresholds[0])\n        .divide(thresholds[1] - thresholds[0])\n    )\n",
+  "history_output" : "",
+  "history_begin_time" : 1646144378194,
+  "history_end_time" : 1646144379681,
+  "history_notes" : null,
+  "history_process" : "q5a232",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "pm9450b9f4k",
+  "history_input" : "r\"\"\"\nFunctions shared by both the fast and slow\ncloudfree algorithm\n\"\"\"\nimport ee\nfrom datetime import date\nfrom src_exporters_sentinel_cloudfree_constants import BANDS\n\nfrom typing import Union\n\n\ndef combine_bands(current, previous):\n    # Transforms an Image Collection with 1 band per Image into a single Image with items as bands\n    # Author: Jamie Vleeshouwer\n\n    # Rename the band\n    previous = ee.Image(previous)\n    current = current.select(BANDS)\n    # Append it to the result (Note: only return current item on first element/iteration)\n    return ee.Algorithms.If(\n        ee.Algorithms.IsEqual(previous, None), current, previous.addBands(ee.Image(current)),\n    )\n\n\ndef export(\n    image: ee.Image, region: ee.Geometry, filename: str, drive_folder: str, monitor: bool = False,\n) -> ee.batch.Export:\n\n    task = ee.batch.Export.image(\n        image.clip(region),\n        filename,\n        {\"scale\": 10, \"region\": region, \"maxPixels\": 1e13, \"driveFolder\": drive_folder},\n    )\n\n    try:\n        task.start()\n    except ee.ee_exception.EEException as e:\n        print(f\"Task not started! Got exception {e}\")\n        return task\n\n    if monitor:\n        monitor_task(task)\n\n    return task\n\n\ndef date_to_string(input_date: Union[date, str]) -> str:\n    if isinstance(input_date, str):\n        return input_date\n    else:\n        assert isinstance(input_date, date)\n        return input_date.strftime(\"%Y-%m-%d\")\n\n\ndef monitor_task(task: ee.batch.Export) -> None:\n\n    while task.status()[\"state\"] in [\"READY\", \"RUNNING\"]:\n        print(task.status())\n        # print(f\"Running: {task.status()['state']}\")\n\n\ndef rescale(img, exp, thresholds):\n    return (\n        img.expression(exp, {\"img\": img})\n        .subtract(thresholds[0])\n        .divide(thresholds[1] - thresholds[0])\n    )\n",
+  "history_output" : "",
+  "history_begin_time" : 1646144304378,
+  "history_end_time" : 1646144306321,
+  "history_notes" : null,
+  "history_process" : "q5a232",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "nbjzaozzroi",
+  "history_input" : "r\"\"\"\nFunctions shared by both the fast and slow\ncloudfree algorithm\n\"\"\"\nimport ee\nfrom datetime import date\nfrom src_exporters_sentinel_cloudfree_constants import BANDS\n\nfrom typing import Union\n\n\ndef combine_bands(current, previous):\n    # Transforms an Image Collection with 1 band per Image into a single Image with items as bands\n    # Author: Jamie Vleeshouwer\n\n    # Rename the band\n    previous = ee.Image(previous)\n    current = current.select(BANDS)\n    # Append it to the result (Note: only return current item on first element/iteration)\n    return ee.Algorithms.If(\n        ee.Algorithms.IsEqual(previous, None), current, previous.addBands(ee.Image(current)),\n    )\n\n\ndef export(\n    image: ee.Image, region: ee.Geometry, filename: str, drive_folder: str, monitor: bool = False,\n) -> ee.batch.Export:\n\n    task = ee.batch.Export.image(\n        image.clip(region),\n        filename,\n        {\"scale\": 10, \"region\": region, \"maxPixels\": 1e13, \"driveFolder\": drive_folder},\n    )\n\n    try:\n        task.start()\n    except ee.ee_exception.EEException as e:\n        print(f\"Task not started! Got exception {e}\")\n        return task\n\n    if monitor:\n        monitor_task(task)\n\n    return task\n\n\ndef date_to_string(input_date: Union[date, str]) -> str:\n    if isinstance(input_date, str):\n        return input_date\n    else:\n        assert isinstance(input_date, date)\n        return input_date.strftime(\"%Y-%m-%d\")\n\n\ndef monitor_task(task: ee.batch.Export) -> None:\n\n    while task.status()[\"state\"] in [\"READY\", \"RUNNING\"]:\n        print(task.status())\n        # print(f\"Running: {task.status()['state']}\")\n\n\ndef rescale(img, exp, thresholds):\n    return (\n        img.expression(exp, {\"img\": img})\n        .subtract(thresholds[0])\n        .divide(thresholds[1] - thresholds[0])\n    )\n",
+  "history_output" : "",
+  "history_begin_time" : 1646143400229,
+  "history_end_time" : 1646143400331,
+  "history_notes" : null,
+  "history_process" : "q5a232",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "ja4rzsvod4a",
+  "history_input" : "r\"\"\"\nFunctions shared by both the fast and slow\ncloudfree algorithm\n\"\"\"\nimport ee\nfrom datetime import date\nfrom src_exporters_sentinel_cloudfree_constants import BANDS\n\nfrom typing import Union\n\n\ndef combine_bands(current, previous):\n    # Transforms an Image Collection with 1 band per Image into a single Image with items as bands\n    # Author: Jamie Vleeshouwer\n\n    # Rename the band\n    previous = ee.Image(previous)\n    current = current.select(BANDS)\n    # Append it to the result (Note: only return current item on first element/iteration)\n    return ee.Algorithms.If(\n        ee.Algorithms.IsEqual(previous, None), current, previous.addBands(ee.Image(current)),\n    )\n\n\ndef export(\n    image: ee.Image, region: ee.Geometry, filename: str, drive_folder: str, monitor: bool = False,\n) -> ee.batch.Export:\n\n    task = ee.batch.Export.image(\n        image.clip(region),\n        filename,\n        {\"scale\": 10, \"region\": region, \"maxPixels\": 1e13, \"driveFolder\": drive_folder},\n    )\n\n    try:\n        task.start()\n    except ee.ee_exception.EEException as e:\n        print(f\"Task not started! Got exception {e}\")\n        return task\n\n    if monitor:\n        monitor_task(task)\n\n    return task\n\n\ndef date_to_string(input_date: Union[date, str]) -> str:\n    if isinstance(input_date, str):\n        return input_date\n    else:\n        assert isinstance(input_date, date)\n        return input_date.strftime(\"%Y-%m-%d\")\n\n\ndef monitor_task(task: ee.batch.Export) -> None:\n\n    while task.status()[\"state\"] in [\"READY\", \"RUNNING\"]:\n        print(task.status())\n        # print(f\"Running: {task.status()['state']}\")\n\n\ndef rescale(img, exp, thresholds):\n    return (\n        img.expression(exp, {\"img\": img})\n        .subtract(thresholds[0])\n        .divide(thresholds[1] - thresholds[0])\n    )\n",
+  "history_output" : "",
+  "history_begin_time" : 1646143250128,
+  "history_end_time" : 1646143251865,
+  "history_notes" : null,
+  "history_process" : "q5a232",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "6756zbt04f6",
+  "history_input" : "r\"\"\"\nFunctions shared by both the fast and slow\ncloudfree algorithm\n\"\"\"\nimport ee\nfrom datetime import date\nfrom src_exporters_sentinel_cloudfree_constants import BANDS\n\nfrom typing import Union\n\n\ndef combine_bands(current, previous):\n    # Transforms an Image Collection with 1 band per Image into a single Image with items as bands\n    # Author: Jamie Vleeshouwer\n\n    # Rename the band\n    previous = ee.Image(previous)\n    current = current.select(BANDS)\n    # Append it to the result (Note: only return current item on first element/iteration)\n    return ee.Algorithms.If(\n        ee.Algorithms.IsEqual(previous, None), current, previous.addBands(ee.Image(current)),\n    )\n\n\ndef export(\n    image: ee.Image, region: ee.Geometry, filename: str, drive_folder: str, monitor: bool = False,\n) -> ee.batch.Export:\n\n    task = ee.batch.Export.image(\n        image.clip(region),\n        filename,\n        {\"scale\": 10, \"region\": region, \"maxPixels\": 1e13, \"driveFolder\": drive_folder},\n    )\n\n    try:\n        task.start()\n    except ee.ee_exception.EEException as e:\n        print(f\"Task not started! Got exception {e}\")\n        return task\n\n    if monitor:\n        monitor_task(task)\n\n    return task\n\n\ndef date_to_string(input_date: Union[date, str]) -> str:\n    if isinstance(input_date, str):\n        return input_date\n    else:\n        assert isinstance(input_date, date)\n        return input_date.strftime(\"%Y-%m-%d\")\n\n\ndef monitor_task(task: ee.batch.Export) -> None:\n\n    while task.status()[\"state\"] in [\"READY\", \"RUNNING\"]:\n        print(task.status())\n        # print(f\"Running: {task.status()['state']}\")\n\n\ndef rescale(img, exp, thresholds):\n    return (\n        img.expression(exp, {\"img\": img})\n        .subtract(thresholds[0])\n        .divide(thresholds[1] - thresholds[0])\n    )\n",
+  "history_output" : "",
+  "history_begin_time" : 1646143171805,
+  "history_end_time" : 1646143173314,
+  "history_notes" : null,
+  "history_process" : "q5a232",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "y32uye921cc",
+  "history_input" : "r\"\"\"\nFunctions shared by both the fast and slow\ncloudfree algorithm\n\"\"\"\nimport ee\nfrom datetime import date\nfrom src_exporters_sentinel_cloudfree_constants import BANDS\n\nfrom typing import Union\n\n\ndef combine_bands(current, previous):\n    # Transforms an Image Collection with 1 band per Image into a single Image with items as bands\n    # Author: Jamie Vleeshouwer\n\n    # Rename the band\n    previous = ee.Image(previous)\n    current = current.select(BANDS)\n    # Append it to the result (Note: only return current item on first element/iteration)\n    return ee.Algorithms.If(\n        ee.Algorithms.IsEqual(previous, None), current, previous.addBands(ee.Image(current)),\n    )\n\n\ndef export(\n    image: ee.Image, region: ee.Geometry, filename: str, drive_folder: str, monitor: bool = False,\n) -> ee.batch.Export:\n\n    task = ee.batch.Export.image(\n        image.clip(region),\n        filename,\n        {\"scale\": 10, \"region\": region, \"maxPixels\": 1e13, \"driveFolder\": drive_folder},\n    )\n\n    try:\n        task.start()\n    except ee.ee_exception.EEException as e:\n        print(f\"Task not started! Got exception {e}\")\n        return task\n\n    if monitor:\n        monitor_task(task)\n\n    return task\n\n\ndef date_to_string(input_date: Union[date, str]) -> str:\n    if isinstance(input_date, str):\n        return input_date\n    else:\n        assert isinstance(input_date, date)\n        return input_date.strftime(\"%Y-%m-%d\")\n\n\ndef monitor_task(task: ee.batch.Export) -> None:\n\n    while task.status()[\"state\"] in [\"READY\", \"RUNNING\"]:\n        print(task.status())\n        # print(f\"Running: {task.status()['state']}\")\n\n\ndef rescale(img, exp, thresholds):\n    return (\n        img.expression(exp, {\"img\": img})\n        .subtract(thresholds[0])\n        .divide(thresholds[1] - thresholds[0])\n    )\n",
+  "history_output" : "",
+  "history_begin_time" : 1646143135442,
+  "history_end_time" : 1646143135531,
+  "history_notes" : null,
+  "history_process" : "q5a232",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "3w749m6bg2i",
+  "history_input" : "r\"\"\"\nFunctions shared by both the fast and slow\ncloudfree algorithm\n\"\"\"\nimport ee\nfrom datetime import date\nfrom src_exporters_sentinel_cloudfree_constants import BANDS\n\nfrom typing import Union\n\n\ndef combine_bands(current, previous):\n    # Transforms an Image Collection with 1 band per Image into a single Image with items as bands\n    # Author: Jamie Vleeshouwer\n\n    # Rename the band\n    previous = ee.Image(previous)\n    current = current.select(BANDS)\n    # Append it to the result (Note: only return current item on first element/iteration)\n    return ee.Algorithms.If(\n        ee.Algorithms.IsEqual(previous, None), current, previous.addBands(ee.Image(current)),\n    )\n\n\ndef export(\n    image: ee.Image, region: ee.Geometry, filename: str, drive_folder: str, monitor: bool = False,\n) -> ee.batch.Export:\n\n    task = ee.batch.Export.image(\n        image.clip(region),\n        filename,\n        {\"scale\": 10, \"region\": region, \"maxPixels\": 1e13, \"driveFolder\": drive_folder},\n    )\n\n    try:\n        task.start()\n    except ee.ee_exception.EEException as e:\n        print(f\"Task not started! Got exception {e}\")\n        return task\n\n    if monitor:\n        monitor_task(task)\n\n    return task\n\n\ndef date_to_string(input_date: Union[date, str]) -> str:\n    if isinstance(input_date, str):\n        return input_date\n    else:\n        assert isinstance(input_date, date)\n        return input_date.strftime(\"%Y-%m-%d\")\n\n\ndef monitor_task(task: ee.batch.Export) -> None:\n\n    while task.status()[\"state\"] in [\"READY\", \"RUNNING\"]:\n        print(task.status())\n        # print(f\"Running: {task.status()['state']}\")\n\n\ndef rescale(img, exp, thresholds):\n    return (\n        img.expression(exp, {\"img\": img})\n        .subtract(thresholds[0])\n        .divide(thresholds[1] - thresholds[0])\n    )\n",
+  "history_output" : "",
+  "history_begin_time" : 1646143107405,
+  "history_end_time" : 1646143108304,
+  "history_notes" : null,
+  "history_process" : "q5a232",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "4xw16fc3u3y",
+  "history_input" : "r\"\"\"\nFunctions shared by both the fast and slow\ncloudfree algorithm\n\"\"\"\nimport ee\nfrom datetime import date\nfrom src_exporters_sentinel_cloudfree_constants import BANDS\n\nfrom typing import Union\n\n\ndef combine_bands(current, previous):\n    # Transforms an Image Collection with 1 band per Image into a single Image with items as bands\n    # Author: Jamie Vleeshouwer\n\n    # Rename the band\n    previous = ee.Image(previous)\n    current = current.select(BANDS)\n    # Append it to the result (Note: only return current item on first element/iteration)\n    return ee.Algorithms.If(\n        ee.Algorithms.IsEqual(previous, None), current, previous.addBands(ee.Image(current)),\n    )\n\n\ndef export(\n    image: ee.Image, region: ee.Geometry, filename: str, drive_folder: str, monitor: bool = False,\n) -> ee.batch.Export:\n\n    task = ee.batch.Export.image(\n        image.clip(region),\n        filename,\n        {\"scale\": 10, \"region\": region, \"maxPixels\": 1e13, \"driveFolder\": drive_folder},\n    )\n\n    try:\n        task.start()\n    except ee.ee_exception.EEException as e:\n        print(f\"Task not started! Got exception {e}\")\n        return task\n\n    if monitor:\n        monitor_task(task)\n\n    return task\n\n\ndef date_to_string(input_date: Union[date, str]) -> str:\n    if isinstance(input_date, str):\n        return input_date\n    else:\n        assert isinstance(input_date, date)\n        return input_date.strftime(\"%Y-%m-%d\")\n\n\ndef monitor_task(task: ee.batch.Export) -> None:\n\n    while task.status()[\"state\"] in [\"READY\", \"RUNNING\"]:\n        print(task.status())\n        # print(f\"Running: {task.status()['state']}\")\n\n\ndef rescale(img, exp, thresholds):\n    return (\n        img.expression(exp, {\"img\": img})\n        .subtract(thresholds[0])\n        .divide(thresholds[1] - thresholds[0])\n    )\n",
+  "history_output" : "",
+  "history_begin_time" : 1646139371830,
+  "history_end_time" : 1646139373180,
+  "history_notes" : null,
+  "history_process" : "q5a232",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "fey2wd0hrk8",
+  "history_input" : "r\"\"\"\nFunctions shared by both the fast and slow\ncloudfree algorithm\n\"\"\"\nimport ee\nfrom datetime import date\nfrom src_exporters_sentinel_cloudfree_constants import BANDS\n\nfrom typing import Union\n\n\ndef combine_bands(current, previous):\n    # Transforms an Image Collection with 1 band per Image into a single Image with items as bands\n    # Author: Jamie Vleeshouwer\n\n    # Rename the band\n    previous = ee.Image(previous)\n    current = current.select(BANDS)\n    # Append it to the result (Note: only return current item on first element/iteration)\n    return ee.Algorithms.If(\n        ee.Algorithms.IsEqual(previous, None), current, previous.addBands(ee.Image(current)),\n    )\n\n\ndef export(\n    image: ee.Image, region: ee.Geometry, filename: str, drive_folder: str, monitor: bool = False,\n) -> ee.batch.Export:\n\n    task = ee.batch.Export.image(\n        image.clip(region),\n        filename,\n        {\"scale\": 10, \"region\": region, \"maxPixels\": 1e13, \"driveFolder\": drive_folder},\n    )\n\n    try:\n        task.start()\n    except ee.ee_exception.EEException as e:\n        print(f\"Task not started! Got exception {e}\")\n        return task\n\n    if monitor:\n        monitor_task(task)\n\n    return task\n\n\ndef date_to_string(input_date: Union[date, str]) -> str:\n    if isinstance(input_date, str):\n        return input_date\n    else:\n        assert isinstance(input_date, date)\n        return input_date.strftime(\"%Y-%m-%d\")\n\n\ndef monitor_task(task: ee.batch.Export) -> None:\n\n    while task.status()[\"state\"] in [\"READY\", \"RUNNING\"]:\n        print(task.status())\n        # print(f\"Running: {task.status()['state']}\")\n\n\ndef rescale(img, exp, thresholds):\n    return (\n        img.expression(exp, {\"img\": img})\n        .subtract(thresholds[0])\n        .divide(thresholds[1] - thresholds[0])\n    )\n",
+  "history_output" : "",
+  "history_begin_time" : 1646139280249,
+  "history_end_time" : 1646139280351,
+  "history_notes" : null,
+  "history_process" : "q5a232",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "2yjxy86tihf",
+  "history_input" : "r\"\"\"\nFunctions shared by both the fast and slow\ncloudfree algorithm\n\"\"\"\nimport ee\nfrom datetime import date\nfrom src_exporters_sentinel_cloudfree_constants import BANDS\n\nfrom typing import Union\n\n\ndef combine_bands(current, previous):\n    # Transforms an Image Collection with 1 band per Image into a single Image with items as bands\n    # Author: Jamie Vleeshouwer\n\n    # Rename the band\n    previous = ee.Image(previous)\n    current = current.select(BANDS)\n    # Append it to the result (Note: only return current item on first element/iteration)\n    return ee.Algorithms.If(\n        ee.Algorithms.IsEqual(previous, None), current, previous.addBands(ee.Image(current)),\n    )\n\n\ndef export(\n    image: ee.Image, region: ee.Geometry, filename: str, drive_folder: str, monitor: bool = False,\n) -> ee.batch.Export:\n\n    task = ee.batch.Export.image(\n        image.clip(region),\n        filename,\n        {\"scale\": 10, \"region\": region, \"maxPixels\": 1e13, \"driveFolder\": drive_folder},\n    )\n\n    try:\n        task.start()\n    except ee.ee_exception.EEException as e:\n        print(f\"Task not started! Got exception {e}\")\n        return task\n\n    if monitor:\n        monitor_task(task)\n\n    return task\n\n\ndef date_to_string(input_date: Union[date, str]) -> str:\n    if isinstance(input_date, str):\n        return input_date\n    else:\n        assert isinstance(input_date, date)\n        return input_date.strftime(\"%Y-%m-%d\")\n\n\ndef monitor_task(task: ee.batch.Export) -> None:\n\n    while task.status()[\"state\"] in [\"READY\", \"RUNNING\"]:\n        print(task.status())\n        # print(f\"Running: {task.status()['state']}\")\n\n\ndef rescale(img, exp, thresholds):\n    return (\n        img.expression(exp, {\"img\": img})\n        .subtract(thresholds[0])\n        .divide(thresholds[1] - thresholds[0])\n    )\n",
+  "history_output" : "",
+  "history_begin_time" : 1646139238800,
+  "history_end_time" : 1646139238895,
+  "history_notes" : null,
+  "history_process" : "q5a232",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "1btzw2gqdtr",
+  "history_input" : "r\"\"\"\nFunctions shared by both the fast and slow\ncloudfree algorithm\n\"\"\"\nimport ee\nfrom datetime import date\nfrom src_exporters_sentinel_cloudfree_constants import BANDS\n\nfrom typing import Union\n\n\ndef combine_bands(current, previous):\n    # Transforms an Image Collection with 1 band per Image into a single Image with items as bands\n    # Author: Jamie Vleeshouwer\n\n    # Rename the band\n    previous = ee.Image(previous)\n    current = current.select(BANDS)\n    # Append it to the result (Note: only return current item on first element/iteration)\n    return ee.Algorithms.If(\n        ee.Algorithms.IsEqual(previous, None), current, previous.addBands(ee.Image(current)),\n    )\n\n\ndef export(\n    image: ee.Image, region: ee.Geometry, filename: str, drive_folder: str, monitor: bool = False,\n) -> ee.batch.Export:\n\n    task = ee.batch.Export.image(\n        image.clip(region),\n        filename,\n        {\"scale\": 10, \"region\": region, \"maxPixels\": 1e13, \"driveFolder\": drive_folder},\n    )\n\n    try:\n        task.start()\n    except ee.ee_exception.EEException as e:\n        print(f\"Task not started! Got exception {e}\")\n        return task\n\n    if monitor:\n        monitor_task(task)\n\n    return task\n\n\ndef date_to_string(input_date: Union[date, str]) -> str:\n    if isinstance(input_date, str):\n        return input_date\n    else:\n        assert isinstance(input_date, date)\n        return input_date.strftime(\"%Y-%m-%d\")\n\n\ndef monitor_task(task: ee.batch.Export) -> None:\n\n    while task.status()[\"state\"] in [\"READY\", \"RUNNING\"]:\n        print(task.status())\n        # print(f\"Running: {task.status()['state']}\")\n\n\ndef rescale(img, exp, thresholds):\n    return (\n        img.expression(exp, {\"img\": img})\n        .subtract(thresholds[0])\n        .divide(thresholds[1] - thresholds[0])\n    )\n",
+  "history_output" : "",
+  "history_begin_time" : 1646139186725,
+  "history_end_time" : 1646139188020,
+  "history_notes" : null,
+  "history_process" : "q5a232",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "ssojrgsujgr",
+  "history_input" : "r\"\"\"\nFunctions shared by both the fast and slow\ncloudfree algorithm\n\"\"\"\nimport ee\nfrom datetime import date\nfrom src_exporters_sentinel_cloudfree_constants import BANDS\n\nfrom typing import Union\n\n\ndef combine_bands(current, previous):\n    # Transforms an Image Collection with 1 band per Image into a single Image with items as bands\n    # Author: Jamie Vleeshouwer\n\n    # Rename the band\n    previous = ee.Image(previous)\n    current = current.select(BANDS)\n    # Append it to the result (Note: only return current item on first element/iteration)\n    return ee.Algorithms.If(\n        ee.Algorithms.IsEqual(previous, None), current, previous.addBands(ee.Image(current)),\n    )\n\n\ndef export(\n    image: ee.Image, region: ee.Geometry, filename: str, drive_folder: str, monitor: bool = False,\n) -> ee.batch.Export:\n\n    task = ee.batch.Export.image(\n        image.clip(region),\n        filename,\n        {\"scale\": 10, \"region\": region, \"maxPixels\": 1e13, \"driveFolder\": drive_folder},\n    )\n\n    try:\n        task.start()\n    except ee.ee_exception.EEException as e:\n        print(f\"Task not started! Got exception {e}\")\n        return task\n\n    if monitor:\n        monitor_task(task)\n\n    return task\n\n\ndef date_to_string(input_date: Union[date, str]) -> str:\n    if isinstance(input_date, str):\n        return input_date\n    else:\n        assert isinstance(input_date, date)\n        return input_date.strftime(\"%Y-%m-%d\")\n\n\ndef monitor_task(task: ee.batch.Export) -> None:\n\n    while task.status()[\"state\"] in [\"READY\", \"RUNNING\"]:\n        print(task.status())\n        # print(f\"Running: {task.status()['state']}\")\n\n\ndef rescale(img, exp, thresholds):\n    return (\n        img.expression(exp, {\"img\": img})\n        .subtract(thresholds[0])\n        .divide(thresholds[1] - thresholds[0])\n    )\n",
+  "history_output" : "",
+  "history_begin_time" : 1646139148089,
+  "history_end_time" : 1646139149494,
+  "history_notes" : null,
+  "history_process" : "q5a232",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "jzb9v49wqtq",
+  "history_input" : "r\"\"\"\nFunctions shared by both the fast and slow\ncloudfree algorithm\n\"\"\"\nimport ee\nfrom datetime import date\nfrom src_exporters_sentinel_cloudfree_constants import BANDS\n\nfrom typing import Union\n\n\ndef combine_bands(current, previous):\n    # Transforms an Image Collection with 1 band per Image into a single Image with items as bands\n    # Author: Jamie Vleeshouwer\n\n    # Rename the band\n    previous = ee.Image(previous)\n    current = current.select(BANDS)\n    # Append it to the result (Note: only return current item on first element/iteration)\n    return ee.Algorithms.If(\n        ee.Algorithms.IsEqual(previous, None), current, previous.addBands(ee.Image(current)),\n    )\n\n\ndef export(\n    image: ee.Image, region: ee.Geometry, filename: str, drive_folder: str, monitor: bool = False,\n) -> ee.batch.Export:\n\n    task = ee.batch.Export.image(\n        image.clip(region),\n        filename,\n        {\"scale\": 10, \"region\": region, \"maxPixels\": 1e13, \"driveFolder\": drive_folder},\n    )\n\n    try:\n        task.start()\n    except ee.ee_exception.EEException as e:\n        print(f\"Task not started! Got exception {e}\")\n        return task\n\n    if monitor:\n        monitor_task(task)\n\n    return task\n\n\ndef date_to_string(input_date: Union[date, str]) -> str:\n    if isinstance(input_date, str):\n        return input_date\n    else:\n        assert isinstance(input_date, date)\n        return input_date.strftime(\"%Y-%m-%d\")\n\n\ndef monitor_task(task: ee.batch.Export) -> None:\n\n    while task.status()[\"state\"] in [\"READY\", \"RUNNING\"]:\n        print(task.status())\n        # print(f\"Running: {task.status()['state']}\")\n\n\ndef rescale(img, exp, thresholds):\n    return (\n        img.expression(exp, {\"img\": img})\n        .subtract(thresholds[0])\n        .divide(thresholds[1] - thresholds[0])\n    )\n",
+  "history_output" : "",
+  "history_begin_time" : 1646138493282,
+  "history_end_time" : 1646138494759,
+  "history_notes" : null,
+  "history_process" : "q5a232",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "9kg8w6zymvd",
+  "history_input" : "r\"\"\"\nFunctions shared by both the fast and slow\ncloudfree algorithm\n\"\"\"\nimport ee\nfrom datetime import date\nfrom src_exporters_sentinel_cloudfree_constants import BANDS\n\nfrom typing import Union\n\n\ndef combine_bands(current, previous):\n    # Transforms an Image Collection with 1 band per Image into a single Image with items as bands\n    # Author: Jamie Vleeshouwer\n\n    # Rename the band\n    previous = ee.Image(previous)\n    current = current.select(BANDS)\n    # Append it to the result (Note: only return current item on first element/iteration)\n    return ee.Algorithms.If(\n        ee.Algorithms.IsEqual(previous, None), current, previous.addBands(ee.Image(current)),\n    )\n\n\ndef export(\n    image: ee.Image, region: ee.Geometry, filename: str, drive_folder: str, monitor: bool = False,\n) -> ee.batch.Export:\n\n    task = ee.batch.Export.image(\n        image.clip(region),\n        filename,\n        {\"scale\": 10, \"region\": region, \"maxPixels\": 1e13, \"driveFolder\": drive_folder},\n    )\n\n    try:\n        task.start()\n    except ee.ee_exception.EEException as e:\n        print(f\"Task not started! Got exception {e}\")\n        return task\n\n    if monitor:\n        monitor_task(task)\n\n    return task\n\n\ndef date_to_string(input_date: Union[date, str]) -> str:\n    if isinstance(input_date, str):\n        return input_date\n    else:\n        assert isinstance(input_date, date)\n        return input_date.strftime(\"%Y-%m-%d\")\n\n\ndef monitor_task(task: ee.batch.Export) -> None:\n\n    while task.status()[\"state\"] in [\"READY\", \"RUNNING\"]:\n        print(task.status())\n        # print(f\"Running: {task.status()['state']}\")\n\n\ndef rescale(img, exp, thresholds):\n    return (\n        img.expression(exp, {\"img\": img})\n        .subtract(thresholds[0])\n        .divide(thresholds[1] - thresholds[0])\n    )\n",
+  "history_output" : "",
+  "history_begin_time" : 1646138441445,
+  "history_end_time" : 1646138441546,
+  "history_notes" : null,
+  "history_process" : "q5a232",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "qzpfcjq93oe",
+  "history_input" : "r\"\"\"\nFunctions shared by both the fast and slow\ncloudfree algorithm\n\"\"\"\nimport ee\nfrom datetime import date\nfrom src_exporters_sentinel_cloudfree_constants import BANDS\n\nfrom typing import Union\n\n\ndef combine_bands(current, previous):\n    # Transforms an Image Collection with 1 band per Image into a single Image with items as bands\n    # Author: Jamie Vleeshouwer\n\n    # Rename the band\n    previous = ee.Image(previous)\n    current = current.select(BANDS)\n    # Append it to the result (Note: only return current item on first element/iteration)\n    return ee.Algorithms.If(\n        ee.Algorithms.IsEqual(previous, None), current, previous.addBands(ee.Image(current)),\n    )\n\n\ndef export(\n    image: ee.Image, region: ee.Geometry, filename: str, drive_folder: str, monitor: bool = False,\n) -> ee.batch.Export:\n\n    task = ee.batch.Export.image(\n        image.clip(region),\n        filename,\n        {\"scale\": 10, \"region\": region, \"maxPixels\": 1e13, \"driveFolder\": drive_folder},\n    )\n\n    try:\n        task.start()\n    except ee.ee_exception.EEException as e:\n        print(f\"Task not started! Got exception {e}\")\n        return task\n\n    if monitor:\n        monitor_task(task)\n\n    return task\n\n\ndef date_to_string(input_date: Union[date, str]) -> str:\n    if isinstance(input_date, str):\n        return input_date\n    else:\n        assert isinstance(input_date, date)\n        return input_date.strftime(\"%Y-%m-%d\")\n\n\ndef monitor_task(task: ee.batch.Export) -> None:\n\n    while task.status()[\"state\"] in [\"READY\", \"RUNNING\"]:\n        print(task.status())\n        # print(f\"Running: {task.status()['state']}\")\n\n\ndef rescale(img, exp, thresholds):\n    return (\n        img.expression(exp, {\"img\": img})\n        .subtract(thresholds[0])\n        .divide(thresholds[1] - thresholds[0])\n    )\n",
+  "history_output" : "",
+  "history_begin_time" : 1646138389560,
+  "history_end_time" : 1646138391221,
+  "history_notes" : null,
+  "history_process" : "q5a232",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "3tw0zekhapj",
+  "history_input" : "r\"\"\"\nFunctions shared by both the fast and slow\ncloudfree algorithm\n\"\"\"\nimport ee\nfrom datetime import date\nfrom src_exporters_sentinel_cloudfree_constants import BANDS\n\nfrom typing import Union\n\n\ndef combine_bands(current, previous):\n    # Transforms an Image Collection with 1 band per Image into a single Image with items as bands\n    # Author: Jamie Vleeshouwer\n\n    # Rename the band\n    previous = ee.Image(previous)\n    current = current.select(BANDS)\n    # Append it to the result (Note: only return current item on first element/iteration)\n    return ee.Algorithms.If(\n        ee.Algorithms.IsEqual(previous, None), current, previous.addBands(ee.Image(current)),\n    )\n\n\ndef export(\n    image: ee.Image, region: ee.Geometry, filename: str, drive_folder: str, monitor: bool = False,\n) -> ee.batch.Export:\n\n    task = ee.batch.Export.image(\n        image.clip(region),\n        filename,\n        {\"scale\": 10, \"region\": region, \"maxPixels\": 1e13, \"driveFolder\": drive_folder},\n    )\n\n    try:\n        task.start()\n    except ee.ee_exception.EEException as e:\n        print(f\"Task not started! Got exception {e}\")\n        return task\n\n    if monitor:\n        monitor_task(task)\n\n    return task\n\n\ndef date_to_string(input_date: Union[date, str]) -> str:\n    if isinstance(input_date, str):\n        return input_date\n    else:\n        assert isinstance(input_date, date)\n        return input_date.strftime(\"%Y-%m-%d\")\n\n\ndef monitor_task(task: ee.batch.Export) -> None:\n\n    while task.status()[\"state\"] in [\"READY\", \"RUNNING\"]:\n        print(task.status())\n        # print(f\"Running: {task.status()['state']}\")\n\n\ndef rescale(img, exp, thresholds):\n    return (\n        img.expression(exp, {\"img\": img})\n        .subtract(thresholds[0])\n        .divide(thresholds[1] - thresholds[0])\n    )\n",
+  "history_output" : "",
+  "history_begin_time" : 1646138267574,
+  "history_end_time" : 1646138269284,
+  "history_notes" : null,
+  "history_process" : "q5a232",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "hjmaoyjre7w",
+  "history_input" : "r\"\"\"\nFunctions shared by both the fast and slow\ncloudfree algorithm\n\"\"\"\nimport ee\nfrom datetime import date\nfrom src_exporters_sentinel_cloudfree_constants import BANDS\n\nfrom typing import Union\n\n\ndef combine_bands(current, previous):\n    # Transforms an Image Collection with 1 band per Image into a single Image with items as bands\n    # Author: Jamie Vleeshouwer\n\n    # Rename the band\n    previous = ee.Image(previous)\n    current = current.select(BANDS)\n    # Append it to the result (Note: only return current item on first element/iteration)\n    return ee.Algorithms.If(\n        ee.Algorithms.IsEqual(previous, None), current, previous.addBands(ee.Image(current)),\n    )\n\n\ndef export(\n    image: ee.Image, region: ee.Geometry, filename: str, drive_folder: str, monitor: bool = False,\n) -> ee.batch.Export:\n\n    task = ee.batch.Export.image(\n        image.clip(region),\n        filename,\n        {\"scale\": 10, \"region\": region, \"maxPixels\": 1e13, \"driveFolder\": drive_folder},\n    )\n\n    try:\n        task.start()\n    except ee.ee_exception.EEException as e:\n        print(f\"Task not started! Got exception {e}\")\n        return task\n\n    if monitor:\n        monitor_task(task)\n\n    return task\n\n\ndef date_to_string(input_date: Union[date, str]) -> str:\n    if isinstance(input_date, str):\n        return input_date\n    else:\n        assert isinstance(input_date, date)\n        return input_date.strftime(\"%Y-%m-%d\")\n\n\ndef monitor_task(task: ee.batch.Export) -> None:\n\n    while task.status()[\"state\"] in [\"READY\", \"RUNNING\"]:\n        print(task.status())\n        # print(f\"Running: {task.status()['state']}\")\n\n\ndef rescale(img, exp, thresholds):\n    return (\n        img.expression(exp, {\"img\": img})\n        .subtract(thresholds[0])\n        .divide(thresholds[1] - thresholds[0])\n    )\n",
+  "history_output" : "",
+  "history_begin_time" : 1646138169518,
+  "history_end_time" : 1646138171170,
+  "history_notes" : null,
+  "history_process" : "q5a232",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "vhrb207gxy5",
+  "history_input" : "r\"\"\"\nFunctions shared by both the fast and slow\ncloudfree algorithm\n\"\"\"\nimport ee\nfrom datetime import date\nfrom src_exporters_sentinel_cloudfree_constants import BANDS\n\nfrom typing import Union\n\n\ndef combine_bands(current, previous):\n    # Transforms an Image Collection with 1 band per Image into a single Image with items as bands\n    # Author: Jamie Vleeshouwer\n\n    # Rename the band\n    previous = ee.Image(previous)\n    current = current.select(BANDS)\n    # Append it to the result (Note: only return current item on first element/iteration)\n    return ee.Algorithms.If(\n        ee.Algorithms.IsEqual(previous, None), current, previous.addBands(ee.Image(current)),\n    )\n\n\ndef export(\n    image: ee.Image, region: ee.Geometry, filename: str, drive_folder: str, monitor: bool = False,\n) -> ee.batch.Export:\n\n    task = ee.batch.Export.image(\n        image.clip(region),\n        filename,\n        {\"scale\": 10, \"region\": region, \"maxPixels\": 1e13, \"driveFolder\": drive_folder},\n    )\n\n    try:\n        task.start()\n    except ee.ee_exception.EEException as e:\n        print(f\"Task not started! Got exception {e}\")\n        return task\n\n    if monitor:\n        monitor_task(task)\n\n    return task\n\n\ndef date_to_string(input_date: Union[date, str]) -> str:\n    if isinstance(input_date, str):\n        return input_date\n    else:\n        assert isinstance(input_date, date)\n        return input_date.strftime(\"%Y-%m-%d\")\n\n\ndef monitor_task(task: ee.batch.Export) -> None:\n\n    while task.status()[\"state\"] in [\"READY\", \"RUNNING\"]:\n        print(task.status())\n        # print(f\"Running: {task.status()['state']}\")\n\n\ndef rescale(img, exp, thresholds):\n    return (\n        img.expression(exp, {\"img\": img})\n        .subtract(thresholds[0])\n        .divide(thresholds[1] - thresholds[0])\n    )\n",
+  "history_output" : "",
+  "history_begin_time" : 1646138089466,
+  "history_end_time" : 1646138091032,
+  "history_notes" : null,
+  "history_process" : "q5a232",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "sgt1bqi8kzd",
+  "history_input" : "r\"\"\"\nFunctions shared by both the fast and slow\ncloudfree algorithm\n\"\"\"\nimport ee\nfrom datetime import date\nfrom src_exporters_sentinel_cloudfree_constants import BANDS\n\nfrom typing import Union\n\n\ndef combine_bands(current, previous):\n    # Transforms an Image Collection with 1 band per Image into a single Image with items as bands\n    # Author: Jamie Vleeshouwer\n\n    # Rename the band\n    previous = ee.Image(previous)\n    current = current.select(BANDS)\n    # Append it to the result (Note: only return current item on first element/iteration)\n    return ee.Algorithms.If(\n        ee.Algorithms.IsEqual(previous, None), current, previous.addBands(ee.Image(current)),\n    )\n\n\ndef export(\n    image: ee.Image, region: ee.Geometry, filename: str, drive_folder: str, monitor: bool = False,\n) -> ee.batch.Export:\n\n    task = ee.batch.Export.image(\n        image.clip(region),\n        filename,\n        {\"scale\": 10, \"region\": region, \"maxPixels\": 1e13, \"driveFolder\": drive_folder},\n    )\n\n    try:\n        task.start()\n    except ee.ee_exception.EEException as e:\n        print(f\"Task not started! Got exception {e}\")\n        return task\n\n    if monitor:\n        monitor_task(task)\n\n    return task\n\n\ndef date_to_string(input_date: Union[date, str]) -> str:\n    if isinstance(input_date, str):\n        return input_date\n    else:\n        assert isinstance(input_date, date)\n        return input_date.strftime(\"%Y-%m-%d\")\n\n\ndef monitor_task(task: ee.batch.Export) -> None:\n\n    while task.status()[\"state\"] in [\"READY\", \"RUNNING\"]:\n        print(task.status())\n        # print(f\"Running: {task.status()['state']}\")\n\n\ndef rescale(img, exp, thresholds):\n    return (\n        img.expression(exp, {\"img\": img})\n        .subtract(thresholds[0])\n        .divide(thresholds[1] - thresholds[0])\n    )\n",
+  "history_output" : "",
+  "history_begin_time" : 1646137773884,
+  "history_end_time" : 1646137775735,
+  "history_notes" : null,
+  "history_process" : "q5a232",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "ovd2wemjvte",
+  "history_input" : "r\"\"\"\nFunctions shared by both the fast and slow\ncloudfree algorithm\n\"\"\"\nimport ee\nfrom datetime import date\nfrom src_exporters_sentinel_cloudfree_constants import BANDS\n\nfrom typing import Union\n\n\ndef combine_bands(current, previous):\n    # Transforms an Image Collection with 1 band per Image into a single Image with items as bands\n    # Author: Jamie Vleeshouwer\n\n    # Rename the band\n    previous = ee.Image(previous)\n    current = current.select(BANDS)\n    # Append it to the result (Note: only return current item on first element/iteration)\n    return ee.Algorithms.If(\n        ee.Algorithms.IsEqual(previous, None), current, previous.addBands(ee.Image(current)),\n    )\n\n\ndef export(\n    image: ee.Image, region: ee.Geometry, filename: str, drive_folder: str, monitor: bool = False,\n) -> ee.batch.Export:\n\n    task = ee.batch.Export.image(\n        image.clip(region),\n        filename,\n        {\"scale\": 10, \"region\": region, \"maxPixels\": 1e13, \"driveFolder\": drive_folder},\n    )\n\n    try:\n        task.start()\n    except ee.ee_exception.EEException as e:\n        print(f\"Task not started! Got exception {e}\")\n        return task\n\n    if monitor:\n        monitor_task(task)\n\n    return task\n\n\ndef date_to_string(input_date: Union[date, str]) -> str:\n    if isinstance(input_date, str):\n        return input_date\n    else:\n        assert isinstance(input_date, date)\n        return input_date.strftime(\"%Y-%m-%d\")\n\n\ndef monitor_task(task: ee.batch.Export) -> None:\n\n    while task.status()[\"state\"] in [\"READY\", \"RUNNING\"]:\n        print(task.status())\n        # print(f\"Running: {task.status()['state']}\")\n\n\ndef rescale(img, exp, thresholds):\n    return (\n        img.expression(exp, {\"img\": img})\n        .subtract(thresholds[0])\n        .divide(thresholds[1] - thresholds[0])\n    )\n",
+  "history_output" : "",
+  "history_begin_time" : 1646137678964,
+  "history_end_time" : 1646137680024,
+  "history_notes" : null,
+  "history_process" : "q5a232",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "0nibanbtvhc",
+  "history_input" : "r\"\"\"\nFunctions shared by both the fast and slow\ncloudfree algorithm\n\"\"\"\nimport ee\nfrom datetime import date\nfrom src_exporters_sentinel_cloudfree_constants import BANDS\n\nfrom typing import Union\n\n\ndef combine_bands(current, previous):\n    # Transforms an Image Collection with 1 band per Image into a single Image with items as bands\n    # Author: Jamie Vleeshouwer\n\n    # Rename the band\n    previous = ee.Image(previous)\n    current = current.select(BANDS)\n    # Append it to the result (Note: only return current item on first element/iteration)\n    return ee.Algorithms.If(\n        ee.Algorithms.IsEqual(previous, None), current, previous.addBands(ee.Image(current)),\n    )\n\n\ndef export(\n    image: ee.Image, region: ee.Geometry, filename: str, drive_folder: str, monitor: bool = False,\n) -> ee.batch.Export:\n\n    task = ee.batch.Export.image(\n        image.clip(region),\n        filename,\n        {\"scale\": 10, \"region\": region, \"maxPixels\": 1e13, \"driveFolder\": drive_folder},\n    )\n\n    try:\n        task.start()\n    except ee.ee_exception.EEException as e:\n        print(f\"Task not started! Got exception {e}\")\n        return task\n\n    if monitor:\n        monitor_task(task)\n\n    return task\n\n\ndef date_to_string(input_date: Union[date, str]) -> str:\n    if isinstance(input_date, str):\n        return input_date\n    else:\n        assert isinstance(input_date, date)\n        return input_date.strftime(\"%Y-%m-%d\")\n\n\ndef monitor_task(task: ee.batch.Export) -> None:\n\n    while task.status()[\"state\"] in [\"READY\", \"RUNNING\"]:\n        print(task.status())\n        # print(f\"Running: {task.status()['state']}\")\n\n\ndef rescale(img, exp, thresholds):\n    return (\n        img.expression(exp, {\"img\": img})\n        .subtract(thresholds[0])\n        .divide(thresholds[1] - thresholds[0])\n    )\n",
+  "history_output" : "",
+  "history_begin_time" : 1646137566177,
+  "history_end_time" : 1646137568545,
+  "history_notes" : null,
+  "history_process" : "q5a232",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "eur906afmn9",
+  "history_input" : "r\"\"\"\nFunctions shared by both the fast and slow\ncloudfree algorithm\n\"\"\"\nimport ee\nfrom datetime import date\nfrom src_exporters_sentinel_cloudfree_constants import BANDS\n\nfrom typing import Union\n\n\ndef combine_bands(current, previous):\n    # Transforms an Image Collection with 1 band per Image into a single Image with items as bands\n    # Author: Jamie Vleeshouwer\n\n    # Rename the band\n    previous = ee.Image(previous)\n    current = current.select(BANDS)\n    # Append it to the result (Note: only return current item on first element/iteration)\n    return ee.Algorithms.If(\n        ee.Algorithms.IsEqual(previous, None), current, previous.addBands(ee.Image(current)),\n    )\n\n\ndef export(\n    image: ee.Image, region: ee.Geometry, filename: str, drive_folder: str, monitor: bool = False,\n) -> ee.batch.Export:\n\n    task = ee.batch.Export.image(\n        image.clip(region),\n        filename,\n        {\"scale\": 10, \"region\": region, \"maxPixels\": 1e13, \"driveFolder\": drive_folder},\n    )\n\n    try:\n        task.start()\n    except ee.ee_exception.EEException as e:\n        print(f\"Task not started! Got exception {e}\")\n        return task\n\n    if monitor:\n        monitor_task(task)\n\n    return task\n\n\ndef date_to_string(input_date: Union[date, str]) -> str:\n    if isinstance(input_date, str):\n        return input_date\n    else:\n        assert isinstance(input_date, date)\n        return input_date.strftime(\"%Y-%m-%d\")\n\n\ndef monitor_task(task: ee.batch.Export) -> None:\n\n    while task.status()[\"state\"] in [\"READY\", \"RUNNING\"]:\n        print(task.status())\n        # print(f\"Running: {task.status()['state']}\")\n\n\ndef rescale(img, exp, thresholds):\n    return (\n        img.expression(exp, {\"img\": img})\n        .subtract(thresholds[0])\n        .divide(thresholds[1] - thresholds[0])\n    )\n",
+  "history_output" : "",
+  "history_begin_time" : 1646112824922,
+  "history_end_time" : 1646112826193,
+  "history_notes" : null,
+  "history_process" : "q5a232",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "q2yjmv4uiff",
+  "history_input" : "r\"\"\"\nFunctions shared by both the fast and slow\ncloudfree algorithm\n\"\"\"\nimport ee\nfrom datetime import date\nfrom src_exporters_sentinel_cloudfree_constants import BANDS\n\nfrom typing import Union\n\n\ndef combine_bands(current, previous):\n    # Transforms an Image Collection with 1 band per Image into a single Image with items as bands\n    # Author: Jamie Vleeshouwer\n\n    # Rename the band\n    previous = ee.Image(previous)\n    current = current.select(BANDS)\n    # Append it to the result (Note: only return current item on first element/iteration)\n    return ee.Algorithms.If(\n        ee.Algorithms.IsEqual(previous, None), current, previous.addBands(ee.Image(current)),\n    )\n\n\ndef export(\n    image: ee.Image, region: ee.Geometry, filename: str, drive_folder: str, monitor: bool = False,\n) -> ee.batch.Export:\n\n    task = ee.batch.Export.image(\n        image.clip(region),\n        filename,\n        {\"scale\": 10, \"region\": region, \"maxPixels\": 1e13, \"driveFolder\": drive_folder},\n    )\n\n    try:\n        task.start()\n    except ee.ee_exception.EEException as e:\n        print(f\"Task not started! Got exception {e}\")\n        return task\n\n    if monitor:\n        monitor_task(task)\n\n    return task\n\n\ndef date_to_string(input_date: Union[date, str]) -> str:\n    if isinstance(input_date, str):\n        return input_date\n    else:\n        assert isinstance(input_date, date)\n        return input_date.strftime(\"%Y-%m-%d\")\n\n\ndef monitor_task(task: ee.batch.Export) -> None:\n\n    while task.status()[\"state\"] in [\"READY\", \"RUNNING\"]:\n        print(task.status())\n        # print(f\"Running: {task.status()['state']}\")\n\n\ndef rescale(img, exp, thresholds):\n    return (\n        img.expression(exp, {\"img\": img})\n        .subtract(thresholds[0])\n        .divide(thresholds[1] - thresholds[0])\n    )\n",
+  "history_output" : "",
+  "history_begin_time" : 1646112717094,
+  "history_end_time" : 1646112719373,
+  "history_notes" : null,
+  "history_process" : "q5a232",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "5xequigvbym",
+  "history_input" : "r\"\"\"\nFunctions shared by both the fast and slow\ncloudfree algorithm\n\"\"\"\nimport ee\nfrom datetime import date\nfrom src_exporters_sentinel_cloudfree_constants import BANDS\n\nfrom typing import Union\n\n\ndef combine_bands(current, previous):\n    # Transforms an Image Collection with 1 band per Image into a single Image with items as bands\n    # Author: Jamie Vleeshouwer\n\n    # Rename the band\n    previous = ee.Image(previous)\n    current = current.select(BANDS)\n    # Append it to the result (Note: only return current item on first element/iteration)\n    return ee.Algorithms.If(\n        ee.Algorithms.IsEqual(previous, None), current, previous.addBands(ee.Image(current)),\n    )\n\n\ndef export(\n    image: ee.Image, region: ee.Geometry, filename: str, drive_folder: str, monitor: bool = False,\n) -> ee.batch.Export:\n\n    task = ee.batch.Export.image(\n        image.clip(region),\n        filename,\n        {\"scale\": 10, \"region\": region, \"maxPixels\": 1e13, \"driveFolder\": drive_folder},\n    )\n\n    try:\n        task.start()\n    except ee.ee_exception.EEException as e:\n        print(f\"Task not started! Got exception {e}\")\n        return task\n\n    if monitor:\n        monitor_task(task)\n\n    return task\n\n\ndef date_to_string(input_date: Union[date, str]) -> str:\n    if isinstance(input_date, str):\n        return input_date\n    else:\n        assert isinstance(input_date, date)\n        return input_date.strftime(\"%Y-%m-%d\")\n\n\ndef monitor_task(task: ee.batch.Export) -> None:\n\n    while task.status()[\"state\"] in [\"READY\", \"RUNNING\"]:\n        print(task.status())\n        # print(f\"Running: {task.status()['state']}\")\n\n\ndef rescale(img, exp, thresholds):\n    return (\n        img.expression(exp, {\"img\": img})\n        .subtract(thresholds[0])\n        .divide(thresholds[1] - thresholds[0])\n    )\n",
+  "history_output" : "",
+  "history_begin_time" : 1646112270423,
+  "history_end_time" : 1646112271815,
+  "history_notes" : null,
+  "history_process" : "q5a232",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "laho3jwu0v1",
+  "history_input" : "r\"\"\"\nFunctions shared by both the fast and slow\ncloudfree algorithm\n\"\"\"\nimport ee\nfrom datetime import date\nfrom src_exporters_sentinel_cloudfree_constants import BANDS\n\nfrom typing import Union\n\n\ndef combine_bands(current, previous):\n    # Transforms an Image Collection with 1 band per Image into a single Image with items as bands\n    # Author: Jamie Vleeshouwer\n\n    # Rename the band\n    previous = ee.Image(previous)\n    current = current.select(BANDS)\n    # Append it to the result (Note: only return current item on first element/iteration)\n    return ee.Algorithms.If(\n        ee.Algorithms.IsEqual(previous, None), current, previous.addBands(ee.Image(current)),\n    )\n\n\ndef export(\n    image: ee.Image, region: ee.Geometry, filename: str, drive_folder: str, monitor: bool = False,\n) -> ee.batch.Export:\n\n    task = ee.batch.Export.image(\n        image.clip(region),\n        filename,\n        {\"scale\": 10, \"region\": region, \"maxPixels\": 1e13, \"driveFolder\": drive_folder},\n    )\n\n    try:\n        task.start()\n    except ee.ee_exception.EEException as e:\n        print(f\"Task not started! Got exception {e}\")\n        return task\n\n    if monitor:\n        monitor_task(task)\n\n    return task\n\n\ndef date_to_string(input_date: Union[date, str]) -> str:\n    if isinstance(input_date, str):\n        return input_date\n    else:\n        assert isinstance(input_date, date)\n        return input_date.strftime(\"%Y-%m-%d\")\n\n\ndef monitor_task(task: ee.batch.Export) -> None:\n\n    while task.status()[\"state\"] in [\"READY\", \"RUNNING\"]:\n        print(task.status())\n        # print(f\"Running: {task.status()['state']}\")\n\n\ndef rescale(img, exp, thresholds):\n    return (\n        img.expression(exp, {\"img\": img})\n        .subtract(thresholds[0])\n        .divide(thresholds[1] - thresholds[0])\n    )\n",
+  "history_output" : "",
+  "history_begin_time" : 1646112231965,
+  "history_end_time" : 1646112233563,
+  "history_notes" : null,
+  "history_process" : "q5a232",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "ci72ypio1py",
+  "history_input" : "r\"\"\"\nFunctions shared by both the fast and slow\ncloudfree algorithm\n\"\"\"\nimport ee\nfrom datetime import date\nfrom src_exporters_sentinel_cloudfree_constants import BANDS\n\nfrom typing import Union\n\n\ndef combine_bands(current, previous):\n    # Transforms an Image Collection with 1 band per Image into a single Image with items as bands\n    # Author: Jamie Vleeshouwer\n\n    # Rename the band\n    previous = ee.Image(previous)\n    current = current.select(BANDS)\n    # Append it to the result (Note: only return current item on first element/iteration)\n    return ee.Algorithms.If(\n        ee.Algorithms.IsEqual(previous, None), current, previous.addBands(ee.Image(current)),\n    )\n\n\ndef export(\n    image: ee.Image, region: ee.Geometry, filename: str, drive_folder: str, monitor: bool = False,\n) -> ee.batch.Export:\n\n    task = ee.batch.Export.image(\n        image.clip(region),\n        filename,\n        {\"scale\": 10, \"region\": region, \"maxPixels\": 1e13, \"driveFolder\": drive_folder},\n    )\n\n    try:\n        task.start()\n    except ee.ee_exception.EEException as e:\n        print(f\"Task not started! Got exception {e}\")\n        return task\n\n    if monitor:\n        monitor_task(task)\n\n    return task\n\n\ndef date_to_string(input_date: Union[date, str]) -> str:\n    if isinstance(input_date, str):\n        return input_date\n    else:\n        assert isinstance(input_date, date)\n        return input_date.strftime(\"%Y-%m-%d\")\n\n\ndef monitor_task(task: ee.batch.Export) -> None:\n\n    while task.status()[\"state\"] in [\"READY\", \"RUNNING\"]:\n        print(task.status())\n        # print(f\"Running: {task.status()['state']}\")\n\n\ndef rescale(img, exp, thresholds):\n    return (\n        img.expression(exp, {\"img\": img})\n        .subtract(thresholds[0])\n        .divide(thresholds[1] - thresholds[0])\n    )\n",
+  "history_output" : "",
+  "history_begin_time" : 1646112128005,
+  "history_end_time" : 1646112131084,
+  "history_notes" : null,
+  "history_process" : "q5a232",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "npv2v3hddb8",
+  "history_input" : "r\"\"\"\nFunctions shared by both the fast and slow\ncloudfree algorithm\n\"\"\"\nimport ee\nfrom datetime import date\nfrom src_exporters_sentinel_cloudfree_constants import BANDS\n\nfrom typing import Union\n\n\ndef combine_bands(current, previous):\n    # Transforms an Image Collection with 1 band per Image into a single Image with items as bands\n    # Author: Jamie Vleeshouwer\n\n    # Rename the band\n    previous = ee.Image(previous)\n    current = current.select(BANDS)\n    # Append it to the result (Note: only return current item on first element/iteration)\n    return ee.Algorithms.If(\n        ee.Algorithms.IsEqual(previous, None), current, previous.addBands(ee.Image(current)),\n    )\n\n\ndef export(\n    image: ee.Image, region: ee.Geometry, filename: str, drive_folder: str, monitor: bool = False,\n) -> ee.batch.Export:\n\n    task = ee.batch.Export.image(\n        image.clip(region),\n        filename,\n        {\"scale\": 10, \"region\": region, \"maxPixels\": 1e13, \"driveFolder\": drive_folder},\n    )\n\n    try:\n        task.start()\n    except ee.ee_exception.EEException as e:\n        print(f\"Task not started! Got exception {e}\")\n        return task\n\n    if monitor:\n        monitor_task(task)\n\n    return task\n\n\ndef date_to_string(input_date: Union[date, str]) -> str:\n    if isinstance(input_date, str):\n        return input_date\n    else:\n        assert isinstance(input_date, date)\n        return input_date.strftime(\"%Y-%m-%d\")\n\n\ndef monitor_task(task: ee.batch.Export) -> None:\n\n    while task.status()[\"state\"] in [\"READY\", \"RUNNING\"]:\n        print(task.status())\n        # print(f\"Running: {task.status()['state']}\")\n\n\ndef rescale(img, exp, thresholds):\n    return (\n        img.expression(exp, {\"img\": img})\n        .subtract(thresholds[0])\n        .divide(thresholds[1] - thresholds[0])\n    )\n",
+  "history_output" : "",
+  "history_begin_time" : 1645393368826,
+  "history_end_time" : 1645393371506,
+  "history_notes" : null,
+  "history_process" : "q5a232",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "aej2m2zzcof",
+  "history_input" : "r\"\"\"\nFunctions shared by both the fast and slow\ncloudfree algorithm\n\"\"\"\nimport ee\nfrom datetime import date\nfrom src_exporters_sentinel_cloudfree_constants import BANDS\n\nfrom typing import Union\n\n\ndef combine_bands(current, previous):\n    # Transforms an Image Collection with 1 band per Image into a single Image with items as bands\n    # Author: Jamie Vleeshouwer\n\n    # Rename the band\n    previous = ee.Image(previous)\n    current = current.select(BANDS)\n    # Append it to the result (Note: only return current item on first element/iteration)\n    return ee.Algorithms.If(\n        ee.Algorithms.IsEqual(previous, None), current, previous.addBands(ee.Image(current)),\n    )\n\n\ndef export(\n    image: ee.Image, region: ee.Geometry, filename: str, drive_folder: str, monitor: bool = False,\n) -> ee.batch.Export:\n\n    task = ee.batch.Export.image(\n        image.clip(region),\n        filename,\n        {\"scale\": 10, \"region\": region, \"maxPixels\": 1e13, \"driveFolder\": drive_folder},\n    )\n\n    try:\n        task.start()\n    except ee.ee_exception.EEException as e:\n        print(f\"Task not started! Got exception {e}\")\n        return task\n\n    if monitor:\n        monitor_task(task)\n\n    return task\n\n\ndef date_to_string(input_date: Union[date, str]) -> str:\n    if isinstance(input_date, str):\n        return input_date\n    else:\n        assert isinstance(input_date, date)\n        return input_date.strftime(\"%Y-%m-%d\")\n\n\ndef monitor_task(task: ee.batch.Export) -> None:\n\n    while task.status()[\"state\"] in [\"READY\", \"RUNNING\"]:\n        print(task.status())\n        # print(f\"Running: {task.status()['state']}\")\n\n\ndef rescale(img, exp, thresholds):\n    return (\n        img.expression(exp, {\"img\": img})\n        .subtract(thresholds[0])\n        .divide(thresholds[1] - thresholds[0])\n    )\n",
+  "history_output" : "",
+  "history_begin_time" : 1645389121890,
+  "history_end_time" : 1645389122996,
+  "history_notes" : null,
+  "history_process" : "q5a232",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "d07eux0yw89",
+  "history_input" : "r\"\"\"\nFunctions shared by both the fast and slow\ncloudfree algorithm\n\"\"\"\nimport ee\nfrom datetime import date\nfrom src_exporters_sentinel_cloudfree_constants import BANDS\n\nfrom typing import Union\n\n\ndef combine_bands(current, previous):\n    # Transforms an Image Collection with 1 band per Image into a single Image with items as bands\n    # Author: Jamie Vleeshouwer\n\n    # Rename the band\n    previous = ee.Image(previous)\n    current = current.select(BANDS)\n    # Append it to the result (Note: only return current item on first element/iteration)\n    return ee.Algorithms.If(\n        ee.Algorithms.IsEqual(previous, None), current, previous.addBands(ee.Image(current)),\n    )\n\n\ndef export(\n    image: ee.Image, region: ee.Geometry, filename: str, drive_folder: str, monitor: bool = False,\n) -> ee.batch.Export:\n\n    task = ee.batch.Export.image(\n        image.clip(region),\n        filename,\n        {\"scale\": 10, \"region\": region, \"maxPixels\": 1e13, \"driveFolder\": drive_folder},\n    )\n\n    try:\n        task.start()\n    except ee.ee_exception.EEException as e:\n        print(f\"Task not started! Got exception {e}\")\n        return task\n\n    if monitor:\n        monitor_task(task)\n\n    return task\n\n\ndef date_to_string(input_date: Union[date, str]) -> str:\n    if isinstance(input_date, str):\n        return input_date\n    else:\n        assert isinstance(input_date, date)\n        return input_date.strftime(\"%Y-%m-%d\")\n\n\ndef monitor_task(task: ee.batch.Export) -> None:\n\n    while task.status()[\"state\"] in [\"READY\", \"RUNNING\"]:\n        print(task.status())\n        # print(f\"Running: {task.status()['state']}\")\n\n\ndef rescale(img, exp, thresholds):\n    return (\n        img.expression(exp, {\"img\": img})\n        .subtract(thresholds[0])\n        .divide(thresholds[1] - thresholds[0])\n    )\n",
+  "history_output" : "",
+  "history_begin_time" : 1645389110763,
+  "history_end_time" : 1645389111354,
+  "history_notes" : null,
+  "history_process" : "q5a232",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "jgqmk68yukq",
+  "history_input" : "r\"\"\"\nFunctions shared by both the fast and slow\ncloudfree algorithm\n\"\"\"\nimport ee\nfrom datetime import date\nfrom src_exporters_sentinel_cloudfree_constants import BANDS\n\nfrom typing import Union\n\n\ndef combine_bands(current, previous):\n    # Transforms an Image Collection with 1 band per Image into a single Image with items as bands\n    # Author: Jamie Vleeshouwer\n\n    # Rename the band\n    previous = ee.Image(previous)\n    current = current.select(BANDS)\n    # Append it to the result (Note: only return current item on first element/iteration)\n    return ee.Algorithms.If(\n        ee.Algorithms.IsEqual(previous, None), current, previous.addBands(ee.Image(current)),\n    )\n\n\ndef export(\n    image: ee.Image, region: ee.Geometry, filename: str, drive_folder: str, monitor: bool = False,\n) -> ee.batch.Export:\n\n    task = ee.batch.Export.image(\n        image.clip(region),\n        filename,\n        {\"scale\": 10, \"region\": region, \"maxPixels\": 1e13, \"driveFolder\": drive_folder},\n    )\n\n    try:\n        task.start()\n    except ee.ee_exception.EEException as e:\n        print(f\"Task not started! Got exception {e}\")\n        return task\n\n    if monitor:\n        monitor_task(task)\n\n    return task\n\n\ndef date_to_string(input_date: Union[date, str]) -> str:\n    if isinstance(input_date, str):\n        return input_date\n    else:\n        assert isinstance(input_date, date)\n        return input_date.strftime(\"%Y-%m-%d\")\n\n\ndef monitor_task(task: ee.batch.Export) -> None:\n\n    while task.status()[\"state\"] in [\"READY\", \"RUNNING\"]:\n        print(task.status())\n        # print(f\"Running: {task.status()['state']}\")\n\n\ndef rescale(img, exp, thresholds):\n    return (\n        img.expression(exp, {\"img\": img})\n        .subtract(thresholds[0])\n        .divide(thresholds[1] - thresholds[0])\n    )\n",
+  "history_output" : "",
+  "history_begin_time" : 1645388790192,
+  "history_end_time" : 1645388791130,
+  "history_notes" : null,
+  "history_process" : "q5a232",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "kco80wsvqbv",
+  "history_input" : "r\"\"\"\nFunctions shared by both the fast and slow\ncloudfree algorithm\n\"\"\"\nimport ee\nfrom datetime import date\nfrom src_exporters_sentinel_cloudfree_constants import BANDS\n\nfrom typing import Union\n\n\ndef combine_bands(current, previous):\n    # Transforms an Image Collection with 1 band per Image into a single Image with items as bands\n    # Author: Jamie Vleeshouwer\n\n    # Rename the band\n    previous = ee.Image(previous)\n    current = current.select(BANDS)\n    # Append it to the result (Note: only return current item on first element/iteration)\n    return ee.Algorithms.If(\n        ee.Algorithms.IsEqual(previous, None), current, previous.addBands(ee.Image(current)),\n    )\n\n\ndef export(\n    image: ee.Image, region: ee.Geometry, filename: str, drive_folder: str, monitor: bool = False,\n) -> ee.batch.Export:\n\n    task = ee.batch.Export.image(\n        image.clip(region),\n        filename,\n        {\"scale\": 10, \"region\": region, \"maxPixels\": 1e13, \"driveFolder\": drive_folder},\n    )\n\n    try:\n        task.start()\n    except ee.ee_exception.EEException as e:\n        print(f\"Task not started! Got exception {e}\")\n        return task\n\n    if monitor:\n        monitor_task(task)\n\n    return task\n\n\ndef date_to_string(input_date: Union[date, str]) -> str:\n    if isinstance(input_date, str):\n        return input_date\n    else:\n        assert isinstance(input_date, date)\n        return input_date.strftime(\"%Y-%m-%d\")\n\n\ndef monitor_task(task: ee.batch.Export) -> None:\n\n    while task.status()[\"state\"] in [\"READY\", \"RUNNING\"]:\n        print(task.status())\n        # print(f\"Running: {task.status()['state']}\")\n\n\ndef rescale(img, exp, thresholds):\n    return (\n        img.expression(exp, {\"img\": img})\n        .subtract(thresholds[0])\n        .divide(thresholds[1] - thresholds[0])\n    )\n",
+  "history_output" : "",
+  "history_begin_time" : 1645232750677,
+  "history_end_time" : 1645232751819,
+  "history_notes" : null,
+  "history_process" : "q5a232",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},]

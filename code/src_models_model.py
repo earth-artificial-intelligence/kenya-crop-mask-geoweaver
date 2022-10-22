@@ -59,10 +59,11 @@ class Model(pl.LightningModule):
         is equally represented in the training and validation dataset. Default = True
     """
 
-    def __init__(self, hparams: Namespace) -> None:
+    def __init__(self, hparams) -> None:
         super().__init__()
         set_seed()
-        self.hparams = hparams
+        print("Got hyper parameters: ", hparams)
+        self.hparams=hparams
 
         self.data_folder = Path(hparams.data_folder)
 
@@ -83,7 +84,7 @@ class Model(pl.LightningModule):
             print(
                 f"Predicting {num_output_timesteps} timesteps in the forecaster")
             self.forecaster = Forecaster(
-                num_bands=self.input_size, output_timesteps=num_output_timesteps, hparams=hparams,
+                num_bands=self.input_size, output_timesteps=num_output_timesteps, hparams=self.hparams,
             )
 
             self.forecaster_loss = F.smooth_l1_loss

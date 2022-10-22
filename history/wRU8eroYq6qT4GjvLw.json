@@ -1,0 +1,361 @@
+[{
+  "history_id" : "temeqo61x7l",
+  "history_input" : "import sys\nfrom pathlib import Path\nfrom datetime import date\nimport os\n\nsys.path.append(\"..\")\n\nfrom src_exporters_geowiki import *\nfrom src_exporters_sentinel_geowiki import *\nfrom src_exporters_sentinel_pv_kenya import *\nfrom src_exporters_sentinel_kenya_non_crop import *\nfrom src_exporters_sentinel_region import *\nfrom src_exporters_sentinel_utils import *\n\n\n\n\ndef export_geowiki():\n    if len(os.listdir('../data/raw/geowiki_landcover_2017')) == 0:\n        exporter = GeoWikiExporter(Path(\"../data\"))\n        exporter.export()\n\n\ndef export_geowiki_sentinel_ee():\n    if len(os.listdir('../data/raw/earth_engine_geowiki')) == 0:\n        exporter = GeoWikiSentinelExporter(Path(\"../data\"))\n        exporter.export_for_labels(\n            num_labelled_points=10, monitor=False, checkpoint=True)\n\n\ndef export_plant_village_sentinel_ee():\n    if len(os.listdir('../data/raw/earth_engine_plant_village_kenya')) == 0:\n        exporter = KenyaPVSentinelExporter(Path(\"../data\"))\n        exporter.export_for_labels(\n            num_labelled_points=10, monitor=False, checkpoint=True)\n\n\ndef export_kenya_non_crop():\n    if len(os.listdir('../data/raw/earth_engine_kenya_non_crop')) == 0:\n        exporter = KenyaNonCropSentinelExporter(Path(\"../data\"))\n        exporter.export_for_labels(\n            num_labelled_points=10, monitor=False, checkpoint=True)\n\n\ndef export_region():\n    if len(os.listdir('../data/raw/earth_engine_region_busia_partial_slow_cloudfree')) == 0:\n        exporter = RegionalExporter(Path(\"../data\"))\n        exporter.export_for_region(\n            region_name=\"Busia\",\n            end_date=date(2020, 9, 13),\n            num_timesteps=5,\n            monitor=False,\n            checkpoint=True,\n            metres_per_polygon=None,\n            fast=False,\n        )\n\n\nif __name__ == \"__main__\":\n    print(\"starting export_geowiki()...\")\n    export_geowiki()\n    print(\"Done export_geowiki()!\")\n    print(\"starting process_geowiki()...\")\n    #process_geowiki()\n    print(\"Done process_geowiki()!\")\n    print(\"starting export_geowiki_sentinel_ee()...this could take a while\")\n    export_geowiki_sentinel_ee()\n    print(\"Done export_geowiki_sentinel_ee()!\")\n    print(\"starting process_plantvillage()...\")\n    #process_plantvillage()\n    print(\"Done process_plantvillage()!\")\n    print(\"starting export_plant_village_sentinel_ee()...\")\n    export_plant_village_sentinel_ee()\n    print(\"Done export_plant_village_sentinel_ee()!\")\n    print(\"starting process_kenya_noncrop()...\")\n    #process_kenya_noncrop()\n    print(\"Done process_kenya_noncrop()!\")\n    print(\"starting export_kenya_non_crop()...\")\n    #export_kenya_non_crop()\n    print(\"Done export_kenya_non_crop()!\")\n    print(\"starting export_region()...\")\n    #export_region()\n    print(\"Done export_region()!\")\n",
+  "history_output" : "starting export_geowiki()...\nDone export_geowiki()!\nstarting process_geowiki()...\nDone process_geowiki()!\nstarting export_geowiki_sentinel_ee()...this could take a while\nDone export_geowiki_sentinel_ee()!\nstarting process_plantvillage()...\nDone process_plantvillage()!\nstarting export_plant_village_sentinel_ee()...\nDone export_plant_village_sentinel_ee()!\nstarting process_kenya_noncrop()...\nDone process_kenya_noncrop()!\nstarting export_kenya_non_crop()...\nDone export_kenya_non_crop()!\nstarting export_region()...\nDone export_region()!\n",
+  "history_begin_time" : 1666134037844,
+  "history_end_time" : 1666134041005,
+  "history_notes" : null,
+  "history_process" : "gpetwx",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "v27vrqtmze4",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666134036857,
+  "history_end_time" : 1666134036857,
+  "history_notes" : null,
+  "history_process" : "4q2yxd",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "jlwn9mmjpxi",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666134036858,
+  "history_end_time" : 1666134036858,
+  "history_notes" : null,
+  "history_process" : "jonz77",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "yh13yegvrqf",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666134036861,
+  "history_end_time" : 1666134036861,
+  "history_notes" : null,
+  "history_process" : "dmf4zo",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "vp5x0jshv2y",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666134036863,
+  "history_end_time" : 1666134036863,
+  "history_notes" : null,
+  "history_process" : "nph7xo",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "2c56b75dryk",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666134036865,
+  "history_end_time" : 1666134036865,
+  "history_notes" : null,
+  "history_process" : "jsnayl",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "23vt5n4ejw3",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666134036867,
+  "history_end_time" : 1666134036867,
+  "history_notes" : null,
+  "history_process" : "yqt708",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "4d9lwqquvig",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666134036868,
+  "history_end_time" : 1666134036868,
+  "history_notes" : null,
+  "history_process" : "q5a232",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "6xm1rx6762x",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666134036870,
+  "history_end_time" : 1666134036870,
+  "history_notes" : null,
+  "history_process" : "nt17bz",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "1bcqw0s6w14",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666134036872,
+  "history_end_time" : 1666134036872,
+  "history_notes" : null,
+  "history_process" : "o5t3jb",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "zvrjmgjcqom",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666134036873,
+  "history_end_time" : 1666134036873,
+  "history_notes" : null,
+  "history_process" : "mw544v",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "rql8ew4uqno",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666134036876,
+  "history_end_time" : 1666134036876,
+  "history_notes" : null,
+  "history_process" : "vxuj3q",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "tcdja2rgndp",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666134036878,
+  "history_end_time" : 1666134036878,
+  "history_notes" : null,
+  "history_process" : "nlb6f5",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "3sjqwytnquk",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666134036880,
+  "history_end_time" : 1666134036880,
+  "history_notes" : null,
+  "history_process" : "i4s7l1",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "hh0a8mz6ne1",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666134036881,
+  "history_end_time" : 1666134036881,
+  "history_notes" : null,
+  "history_process" : "9c0ch9",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "q3coqc51we2",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666134036884,
+  "history_end_time" : 1666134036884,
+  "history_notes" : null,
+  "history_process" : "qdzo28",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "jkyem9e60tw",
+  "history_input" : "import sys\nfrom pathlib import Path\n\nsys.path.append(\"..\")\n\nfrom src_processors_geowiki import *\nfrom src_processors_kenya_non_crop import *\nfrom src_processors_pv_kenya import *\n\ndef process_geowiki():\n    processor = GeoWikiProcessor(Path(\"../data\"))\n    processor.process()\n\n\ndef process_plantvillage():\n    processor = KenyaPVProcessor(Path(\"../data\"))\n    processor.process()\n\n\ndef process_kenya_noncrop():\n    processor = KenyaNonCropProcessor(Path(\"../data\"))\n    processor.process()\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...process.py\")\n    process_geowiki()\n    process_plantvillage()\n    #process_kenya_noncrop()\n",
+  "history_output" : "/Users/jensen/virtualenvs/pythonProject/lib/python3.8/site-packages/geopandas/io/file.py:362: FutureWarning: pandas.Int64Index is deprecated and will be removed from pandas in a future version. Use pandas.Index with the appropriate dtype instead.\n  pd.Int64Index,\nStarting...process.py\n",
+  "history_begin_time" : 1666134042660,
+  "history_end_time" : 1666134044779,
+  "history_notes" : null,
+  "history_process" : "iticjd",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "lz3f53eopwe",
+  "history_input" : "import sys\nfrom pathlib import Path\n\nsys.path.append(\"..\")\n\nfrom src_engineer_geowiki import GeoWikiEngineer\nfrom src_engineer_pv_kenya import PVKenyaEngineer\nfrom src_engineer_kenya_non_crop import KenyaNonCropEngineer\n\n\ndef engineer_geowiki():\n    engineer = GeoWikiEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.2)\n\n\ndef engineer_kenya():\n    engineer = PVKenyaEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\ndef engineer_kenya_noncrop():\n    engineer = KenyaNonCropEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...engineer.py\")  \n    engineer_geowiki()\n    engineer_kenya()\n    #engineer_kenya_noncrop()",
+  "history_output" : "Starting...engineer.py\n  0%|          | 0/4 [00:00<?, ?it/s]\n100%|██████████| 4/4 [00:00<00:00, 1442.46it/s]\nNo normalizing dict calculated! Make sure to call update_normalizing_values\nNo normalizing dict calculated!\n  0%|          | 0/10 [00:00<?, ?it/s]\n100%|██████████| 10/10 [00:00<00:00, 13512.58it/s]\nNo normalizing dict calculated! Make sure to call update_normalizing_values\nNo normalizing dict calculated!\n",
+  "history_begin_time" : 1666134046033,
+  "history_end_time" : 1666134048336,
+  "history_notes" : null,
+  "history_process" : "3cars9",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "fzpci0mjfo0",
+  "history_input" : "import sys\nfrom argparse import ArgumentParser\nfrom pathlib import Path\n\nsys.path.append(\"..\")\n\nfrom src_models_model import Model\nfrom src_models_train_funcs import train_model\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...model.py\")\n    parser = ArgumentParser()\n\n    parser.add_argument(\"--max_epochs\", type=int, default=1000)\n    parser.add_argument(\"--patience\", type=int, default=10)\n\n    model_args = Model.add_model_specific_args(parser).parse_args()\n    model = Model(model_args)\n\n    train_model(model, model_args)\n",
+  "history_output" : "Traceback (most recent call last):\n  File \"scripts_model.py\", line 7, in <module>\n    from src_models_model import Model\n  File \"/Users/jensen/gw-workspace/fzpci0mjfo0/src_models_model.py\", line 11, in <module>\n    import pytorch_lightning as pl\nModuleNotFoundError: No module named 'pytorch_lightning'\n",
+  "history_begin_time" : 1666134049823,
+  "history_end_time" : 1666134050967,
+  "history_notes" : null,
+  "history_process" : "r5a5p5",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "6kbawmgbl2l",
+  "history_input" : "from pathlib import Path\nimport sys\nimport os\n\nsys.path.append(\"..\")\n\nfrom src_models_model import Model\nfrom src_analysis import plot_results\n\n\ndef kenya_crop_type_mapper():\n    data_dir = \"../data\"\n\n    test_folder = Path(\"../data/raw/earth_engine_plant_village_kenya/\")\n    test_files = test_folder.glob(\"*.tif\")\n    print(test_files)\n\n    list_of_models = list(Path('../data/lightning_logs/').glob('version*/checkpoints/*.ckpt'))\n    latest_model_path = str(max(list_of_models, key=os.path.getctime))\n    print(f\"Using model {latest_model_path}\")\n\n    model = Model.load_from_checkpoint(latest_model_path)\n\n    for test_path in test_files:\n\n        save_dir = Path(data_dir) / \"Autoencoder\"\n        save_dir.mkdir(exist_ok=True)\n\n        print(f\"Running for {test_path}\")\n\n        savepath = save_dir / f\"preds_{test_path.name}\"\n        if savepath.exists():\n            print(\"File already generated. Skipping\")\n            continue\n\n        out_forecasted = model.predict(test_path, with_forecaster=True)\n        plot_results(out_forecasted, test_path, savepath=save_dir, prefix=\"forecasted_\")\n\n        out_normal = model.predict(test_path, with_forecaster=False)\n        plot_results(out_normal, test_path, savepath=save_dir, prefix=\"full_input_\")\n\n        out_forecasted.to_netcdf(save_dir / f\"preds_forecasted_{test_path.name}.nc\")\n        out_normal.to_netcdf(save_dir / f\"preds_normal_{test_path.name}.nc\")\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...predict.py\")\n    kenya_crop_type_mapper()\n",
+  "history_output" : "Traceback (most recent call last):\n  File \"scripts_predict.py\", line 7, in <module>\n    from src_models_model import Model\n  File \"/Users/jensen/gw-workspace/6kbawmgbl2l/src_models_model.py\", line 11, in <module>\n    import pytorch_lightning as pl\nModuleNotFoundError: No module named 'pytorch_lightning'\n",
+  "history_begin_time" : 1666134052370,
+  "history_end_time" : 1666134053513,
+  "history_notes" : null,
+  "history_process" : "delykw",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "zowxagjqkaa",
+  "history_input" : "import pytorch_lightning as pl\nfrom pathlib import Path\nfrom argparse import ArgumentParser\nimport os\n\nimport sys\n\nsys.path.append(\"..\")\nfrom src_models_model import Model\n\n\ndef get_checkpoint(data_folder: Path) -> str:\n\n    log_folder = data_folder / \"lightning_logs/\" \n    list_of_checkpoints = list(log_folder.glob('version*/checkpoints/*.ckpt'))\n    print(log_folder.absolute())\n    return str(max(list_of_checkpoints, key=os.path.getctime))\n\n\ndef test_model():\n    parser = ArgumentParser()\n\n    parser.add_argument(\"--version\", type=int, default=0)\n\n    args = parser.parse_args()\n\n    model_path = get_checkpoint(Path(\"../data\"))\n\n    print(f\"Using model {model_path}\")\n\t\n    model = Model.load_from_checkpoint(model_path)\n\n    trainer = pl.Trainer()\n    trainer.test(model)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...test.py\")\n    test_model()\n",
+  "history_output" : "Traceback (most recent call last):\n  File \"scripts_test.py\", line 1, in <module>\n    import pytorch_lightning as pl\nModuleNotFoundError: No module named 'pytorch_lightning'\n",
+  "history_begin_time" : 1666134055005,
+  "history_end_time" : 1666134055134,
+  "history_notes" : null,
+  "history_process" : "q1j13t",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "mnz749fk1to",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666134036920,
+  "history_end_time" : 1666134036920,
+  "history_notes" : null,
+  "history_process" : "6nnond",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "nrnwfy5bqz0",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666134036924,
+  "history_end_time" : 1666134036924,
+  "history_notes" : null,
+  "history_process" : "m6v1cg",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "tsx3m6nv7jk",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666134036925,
+  "history_end_time" : 1666134036925,
+  "history_notes" : null,
+  "history_process" : "m9myzm",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "3876pn8qfwk",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666134036928,
+  "history_end_time" : 1666134036928,
+  "history_notes" : null,
+  "history_process" : "jlyr32",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "5sstxydqngl",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666134036931,
+  "history_end_time" : 1666134036931,
+  "history_notes" : null,
+  "history_process" : "rus783",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "fuo710d0w4o",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666134036934,
+  "history_end_time" : 1666134036934,
+  "history_notes" : null,
+  "history_process" : "s024ve",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "rojbfpj7e97",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666134036938,
+  "history_end_time" : 1666134036938,
+  "history_notes" : null,
+  "history_process" : "m3tvgo",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "krwzzyjrpve",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666134036941,
+  "history_end_time" : 1666134036941,
+  "history_notes" : null,
+  "history_process" : "9x9elz",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "inqwi7irbje",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666134036943,
+  "history_end_time" : 1666134036943,
+  "history_notes" : null,
+  "history_process" : "a3ucnn",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "3smao7l4i32",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666134036946,
+  "history_end_time" : 1666134036946,
+  "history_notes" : null,
+  "history_process" : "t2liev",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "k9d9gfs5c22",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666134036949,
+  "history_end_time" : 1666134036949,
+  "history_notes" : null,
+  "history_process" : "1whsg3",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "lpje8hr4eib",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666134036954,
+  "history_end_time" : 1666134036954,
+  "history_notes" : null,
+  "history_process" : "7jza5a",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "ygu4uiijqh5",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666134036957,
+  "history_end_time" : 1666134036957,
+  "history_notes" : null,
+  "history_process" : "9ardvx",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "nwk7b6yyod5",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666134036962,
+  "history_end_time" : 1666134036962,
+  "history_notes" : null,
+  "history_process" : "o0vujj",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "jckofreb7ed",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666134036967,
+  "history_end_time" : 1666134036967,
+  "history_notes" : null,
+  "history_process" : "bhdtil",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+}]

@@ -1,0 +1,671 @@
+[{
+  "history_id" : "f44smm9m2l5",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666167825326,
+  "history_end_time" : 1666167825326,
+  "history_notes" : null,
+  "history_process" : "jonz77",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "o2dcvselw2l",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666167772278,
+  "history_end_time" : 1666167772278,
+  "history_notes" : null,
+  "history_process" : "jonz77",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "er5lk0jwjc1",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666166465566,
+  "history_end_time" : 1666166465566,
+  "history_notes" : null,
+  "history_process" : "jonz77",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "x1yli0q1s9x",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666166410218,
+  "history_end_time" : 1666166419923,
+  "history_notes" : null,
+  "history_process" : "jonz77",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "g9chxjdckhq",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666164233029,
+  "history_end_time" : 1666164233029,
+  "history_notes" : null,
+  "history_process" : "jonz77",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "vlb8rvg4kuv",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666163607236,
+  "history_end_time" : 1666163607236,
+  "history_notes" : null,
+  "history_process" : "jonz77",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "p0jzko0nnf9",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666137012919,
+  "history_end_time" : 1666137012919,
+  "history_notes" : null,
+  "history_process" : "jonz77",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "xwejslbzz72",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666136593437,
+  "history_end_time" : 1666136593437,
+  "history_notes" : null,
+  "history_process" : "jonz77",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "f2n7247knyu",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666136435734,
+  "history_end_time" : 1666136435734,
+  "history_notes" : null,
+  "history_process" : "jonz77",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "ukjz0u80kbu",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666134110710,
+  "history_end_time" : 1666134110710,
+  "history_notes" : null,
+  "history_process" : "jonz77",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "jlwn9mmjpxi",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666134036858,
+  "history_end_time" : 1666134036858,
+  "history_notes" : null,
+  "history_process" : "jonz77",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "iubmgqwnff0",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666134008910,
+  "history_end_time" : 1666134008910,
+  "history_notes" : null,
+  "history_process" : "jonz77",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "1fbb3vypye3",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666131993096,
+  "history_end_time" : 1666131993096,
+  "history_notes" : null,
+  "history_process" : "jonz77",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "c4x2ltptu1k",
+  "history_input" : "from pathlib import Path\nimport urllib.request\nimport zipfile\n\nfrom src_exporters_base import BaseExporter\n\n\nclass GeoWikiExporter(BaseExporter):\n    r\"\"\"\n    Download the GeoWiki labels\n    \"\"\"\n\n    dataset = \"geowiki_landcover_2017\"\n\n    download_urls = [\n        \"http://store.pangaea.de/Publications/See_2017/crop_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_exp.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all_2.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_exp.zip\",\n    ]\n\n    @staticmethod\n    def download_file(url: str, output_folder: Path, remove_zip: bool = True) -> None:\n\n        filename = url.split(\"/\")[-1]\n        output_path = output_folder / filename\n\n        if output_path.exists():\n            print(f\"{filename} already exists! Skipping\")\n            return None\n\n        print(f\"Downloading {url}\")\n        urllib.request.urlretrieve(url, output_path)\n\n        if filename.endswith(\"zip\"):\n\n            print(f\"Downloaded! Unzipping to {output_folder}\")\n            with zipfile.ZipFile(output_path, \"r\") as zip_file:\n                zip_file.extractall(output_folder)\n\n            if remove_zip:\n                print(\"Deleting zip file\")\n                (output_path).unlink()\n\n    def export(self, remove_zip: bool = False) -> None:\n        r\"\"\"\n        Download the GeoWiki labels\n        :param remove_zip: Whether to remove the zip file once it has been expanded\n        \"\"\"\n        for file_url in self.download_urls:\n            self.download_file(file_url, self.output_folder, remove_zip)\n",
+  "history_output" : "",
+  "history_begin_time" : 1666118274650,
+  "history_end_time" : 1666118274969,
+  "history_notes" : null,
+  "history_process" : "jonz77",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "j5e65bnbsgf",
+  "history_input" : "from pathlib import Path\nimport urllib.request\nimport zipfile\n\nfrom src_exporters_base import BaseExporter\n\n\nclass GeoWikiExporter(BaseExporter):\n    r\"\"\"\n    Download the GeoWiki labels\n    \"\"\"\n\n    dataset = \"geowiki_landcover_2017\"\n\n    download_urls = [\n        \"http://store.pangaea.de/Publications/See_2017/crop_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_exp.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all_2.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_exp.zip\",\n    ]\n\n    @staticmethod\n    def download_file(url: str, output_folder: Path, remove_zip: bool = True) -> None:\n\n        filename = url.split(\"/\")[-1]\n        output_path = output_folder / filename\n\n        if output_path.exists():\n            print(f\"{filename} already exists! Skipping\")\n            return None\n\n        print(f\"Downloading {url}\")\n        urllib.request.urlretrieve(url, output_path)\n\n        if filename.endswith(\"zip\"):\n\n            print(f\"Downloaded! Unzipping to {output_folder}\")\n            with zipfile.ZipFile(output_path, \"r\") as zip_file:\n                zip_file.extractall(output_folder)\n\n            if remove_zip:\n                print(\"Deleting zip file\")\n                (output_path).unlink()\n\n    def export(self, remove_zip: bool = False) -> None:\n        r\"\"\"\n        Download the GeoWiki labels\n        :param remove_zip: Whether to remove the zip file once it has been expanded\n        \"\"\"\n        for file_url in self.download_urls:\n            self.download_file(file_url, self.output_folder, remove_zip)\n",
+  "history_output" : "",
+  "history_begin_time" : 1655909872259,
+  "history_end_time" : 1655909872495,
+  "history_notes" : null,
+  "history_process" : "jonz77",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "xnymgao7w81",
+  "history_input" : "from pathlib import Path\nimport urllib.request\nimport zipfile\n\nfrom src_exporters_base import BaseExporter\n\n\nclass GeoWikiExporter(BaseExporter):\n    r\"\"\"\n    Download the GeoWiki labels\n    \"\"\"\n\n    dataset = \"geowiki_landcover_2017\"\n\n    download_urls = [\n        \"http://store.pangaea.de/Publications/See_2017/crop_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_exp.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all_2.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_exp.zip\",\n    ]\n\n    @staticmethod\n    def download_file(url: str, output_folder: Path, remove_zip: bool = True) -> None:\n\n        filename = url.split(\"/\")[-1]\n        output_path = output_folder / filename\n\n        if output_path.exists():\n            print(f\"{filename} already exists! Skipping\")\n            return None\n\n        print(f\"Downloading {url}\")\n        urllib.request.urlretrieve(url, output_path)\n\n        if filename.endswith(\"zip\"):\n\n            print(f\"Downloaded! Unzipping to {output_folder}\")\n            with zipfile.ZipFile(output_path, \"r\") as zip_file:\n                zip_file.extractall(output_folder)\n\n            if remove_zip:\n                print(\"Deleting zip file\")\n                (output_path).unlink()\n\n    def export(self, remove_zip: bool = False) -> None:\n        r\"\"\"\n        Download the GeoWiki labels\n        :param remove_zip: Whether to remove the zip file once it has been expanded\n        \"\"\"\n        for file_url in self.download_urls:\n            self.download_file(file_url, self.output_folder, remove_zip)\n",
+  "history_output" : "",
+  "history_begin_time" : 1655908826292,
+  "history_end_time" : 1655908826543,
+  "history_notes" : null,
+  "history_process" : "jonz77",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "1ixqf5jo18n",
+  "history_input" : "from pathlib import Path\nimport urllib.request\nimport zipfile\n\nfrom src_exporters_base import BaseExporter\n\n\nclass GeoWikiExporter(BaseExporter):\n    r\"\"\"\n    Download the GeoWiki labels\n    \"\"\"\n\n    dataset = \"geowiki_landcover_2017\"\n\n    download_urls = [\n        \"http://store.pangaea.de/Publications/See_2017/crop_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_exp.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all_2.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_exp.zip\",\n    ]\n\n    @staticmethod\n    def download_file(url: str, output_folder: Path, remove_zip: bool = True) -> None:\n\n        filename = url.split(\"/\")[-1]\n        output_path = output_folder / filename\n\n        if output_path.exists():\n            print(f\"{filename} already exists! Skipping\")\n            return None\n\n        print(f\"Downloading {url}\")\n        urllib.request.urlretrieve(url, output_path)\n\n        if filename.endswith(\"zip\"):\n\n            print(f\"Downloaded! Unzipping to {output_folder}\")\n            with zipfile.ZipFile(output_path, \"r\") as zip_file:\n                zip_file.extractall(output_folder)\n\n            if remove_zip:\n                print(\"Deleting zip file\")\n                (output_path).unlink()\n\n    def export(self, remove_zip: bool = False) -> None:\n        r\"\"\"\n        Download the GeoWiki labels\n        :param remove_zip: Whether to remove the zip file once it has been expanded\n        \"\"\"\n        for file_url in self.download_urls:\n            self.download_file(file_url, self.output_folder, remove_zip)\n",
+  "history_output" : "",
+  "history_begin_time" : 1655907426588,
+  "history_end_time" : 1655907426813,
+  "history_notes" : null,
+  "history_process" : "jonz77",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "gsykjglqpvx",
+  "history_input" : "from pathlib import Path\nimport urllib.request\nimport zipfile\n\nfrom src_exporters_base import BaseExporter\n\n\nclass GeoWikiExporter(BaseExporter):\n    r\"\"\"\n    Download the GeoWiki labels\n    \"\"\"\n\n    dataset = \"geowiki_landcover_2017\"\n\n    download_urls = [\n        \"http://store.pangaea.de/Publications/See_2017/crop_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_exp.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all_2.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_exp.zip\",\n    ]\n\n    @staticmethod\n    def download_file(url: str, output_folder: Path, remove_zip: bool = True) -> None:\n\n        filename = url.split(\"/\")[-1]\n        output_path = output_folder / filename\n\n        if output_path.exists():\n            print(f\"{filename} already exists! Skipping\")\n            return None\n\n        print(f\"Downloading {url}\")\n        urllib.request.urlretrieve(url, output_path)\n\n        if filename.endswith(\"zip\"):\n\n            print(f\"Downloaded! Unzipping to {output_folder}\")\n            with zipfile.ZipFile(output_path, \"r\") as zip_file:\n                zip_file.extractall(output_folder)\n\n            if remove_zip:\n                print(\"Deleting zip file\")\n                (output_path).unlink()\n\n    def export(self, remove_zip: bool = False) -> None:\n        r\"\"\"\n        Download the GeoWiki labels\n        :param remove_zip: Whether to remove the zip file once it has been expanded\n        \"\"\"\n        for file_url in self.download_urls:\n            self.download_file(file_url, self.output_folder, remove_zip)\n",
+  "history_output" : "",
+  "history_begin_time" : 1655907393957,
+  "history_end_time" : 1655907403031,
+  "history_notes" : null,
+  "history_process" : "jonz77",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "abcrx999okx",
+  "history_input" : "from pathlib import Path\nimport urllib.request\nimport zipfile\n\nfrom src_exporters_base import BaseExporter\n\n\nclass GeoWikiExporter(BaseExporter):\n    r\"\"\"\n    Download the GeoWiki labels\n    \"\"\"\n\n    dataset = \"geowiki_landcover_2017\"\n\n    download_urls = [\n        \"http://store.pangaea.de/Publications/See_2017/crop_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_exp.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all_2.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_exp.zip\",\n    ]\n\n    @staticmethod\n    def download_file(url: str, output_folder: Path, remove_zip: bool = True) -> None:\n\n        filename = url.split(\"/\")[-1]\n        output_path = output_folder / filename\n\n        if output_path.exists():\n            print(f\"{filename} already exists! Skipping\")\n            return None\n\n        print(f\"Downloading {url}\")\n        urllib.request.urlretrieve(url, output_path)\n\n        if filename.endswith(\"zip\"):\n\n            print(f\"Downloaded! Unzipping to {output_folder}\")\n            with zipfile.ZipFile(output_path, \"r\") as zip_file:\n                zip_file.extractall(output_folder)\n\n            if remove_zip:\n                print(\"Deleting zip file\")\n                (output_path).unlink()\n\n    def export(self, remove_zip: bool = False) -> None:\n        r\"\"\"\n        Download the GeoWiki labels\n        :param remove_zip: Whether to remove the zip file once it has been expanded\n        \"\"\"\n        for file_url in self.download_urls:\n            self.download_file(file_url, self.output_folder, remove_zip)\n",
+  "history_output" : "",
+  "history_begin_time" : 1655865861820,
+  "history_end_time" : 1655865862096,
+  "history_notes" : null,
+  "history_process" : "jonz77",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "qidpq77577k",
+  "history_input" : "from pathlib import Path\nimport urllib.request\nimport zipfile\n\nfrom src_exporters_base import BaseExporter\n\n\nclass GeoWikiExporter(BaseExporter):\n    r\"\"\"\n    Download the GeoWiki labels\n    \"\"\"\n\n    dataset = \"geowiki_landcover_2017\"\n\n    download_urls = [\n        \"http://store.pangaea.de/Publications/See_2017/crop_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_exp.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all_2.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_exp.zip\",\n    ]\n\n    @staticmethod\n    def download_file(url: str, output_folder: Path, remove_zip: bool = True) -> None:\n\n        filename = url.split(\"/\")[-1]\n        output_path = output_folder / filename\n\n        if output_path.exists():\n            print(f\"{filename} already exists! Skipping\")\n            return None\n\n        print(f\"Downloading {url}\")\n        urllib.request.urlretrieve(url, output_path)\n\n        if filename.endswith(\"zip\"):\n\n            print(f\"Downloaded! Unzipping to {output_folder}\")\n            with zipfile.ZipFile(output_path, \"r\") as zip_file:\n                zip_file.extractall(output_folder)\n\n            if remove_zip:\n                print(\"Deleting zip file\")\n                (output_path).unlink()\n\n    def export(self, remove_zip: bool = False) -> None:\n        r\"\"\"\n        Download the GeoWiki labels\n        :param remove_zip: Whether to remove the zip file once it has been expanded\n        \"\"\"\n        for file_url in self.download_urls:\n            self.download_file(file_url, self.output_folder, remove_zip)\n",
+  "history_output" : "",
+  "history_begin_time" : 1655865088019,
+  "history_end_time" : 1655865088346,
+  "history_notes" : null,
+  "history_process" : "jonz77",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "g3kk7t498qk",
+  "history_input" : "from pathlib import Path\nimport urllib.request\nimport zipfile\n\nfrom src_exporters_base import BaseExporter\n\n\nclass GeoWikiExporter(BaseExporter):\n    r\"\"\"\n    Download the GeoWiki labels\n    \"\"\"\n\n    dataset = \"geowiki_landcover_2017\"\n\n    download_urls = [\n        \"http://store.pangaea.de/Publications/See_2017/crop_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_exp.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all_2.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_exp.zip\",\n    ]\n\n    @staticmethod\n    def download_file(url: str, output_folder: Path, remove_zip: bool = True) -> None:\n\n        filename = url.split(\"/\")[-1]\n        output_path = output_folder / filename\n\n        if output_path.exists():\n            print(f\"{filename} already exists! Skipping\")\n            return None\n\n        print(f\"Downloading {url}\")\n        urllib.request.urlretrieve(url, output_path)\n\n        if filename.endswith(\"zip\"):\n\n            print(f\"Downloaded! Unzipping to {output_folder}\")\n            with zipfile.ZipFile(output_path, \"r\") as zip_file:\n                zip_file.extractall(output_folder)\n\n            if remove_zip:\n                print(\"Deleting zip file\")\n                (output_path).unlink()\n\n    def export(self, remove_zip: bool = False) -> None:\n        r\"\"\"\n        Download the GeoWiki labels\n        :param remove_zip: Whether to remove the zip file once it has been expanded\n        \"\"\"\n        for file_url in self.download_urls:\n            self.download_file(file_url, self.output_folder, remove_zip)\n",
+  "history_output" : "",
+  "history_begin_time" : 1647347429839,
+  "history_end_time" : 1647347429970,
+  "history_notes" : null,
+  "history_process" : "jonz77",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "nyg0piyr84n",
+  "history_input" : "from pathlib import Path\nimport urllib.request\nimport zipfile\n\nfrom src_exporters_base import BaseExporter\n\n\nclass GeoWikiExporter(BaseExporter):\n    r\"\"\"\n    Download the GeoWiki labels\n    \"\"\"\n\n    dataset = \"geowiki_landcover_2017\"\n\n    download_urls = [\n        \"http://store.pangaea.de/Publications/See_2017/crop_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_exp.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all_2.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_exp.zip\",\n    ]\n\n    @staticmethod\n    def download_file(url: str, output_folder: Path, remove_zip: bool = True) -> None:\n\n        filename = url.split(\"/\")[-1]\n        output_path = output_folder / filename\n\n        if output_path.exists():\n            print(f\"{filename} already exists! Skipping\")\n            return None\n\n        print(f\"Downloading {url}\")\n        urllib.request.urlretrieve(url, output_path)\n\n        if filename.endswith(\"zip\"):\n\n            print(f\"Downloaded! Unzipping to {output_folder}\")\n            with zipfile.ZipFile(output_path, \"r\") as zip_file:\n                zip_file.extractall(output_folder)\n\n            if remove_zip:\n                print(\"Deleting zip file\")\n                (output_path).unlink()\n\n    def export(self, remove_zip: bool = False) -> None:\n        r\"\"\"\n        Download the GeoWiki labels\n        :param remove_zip: Whether to remove the zip file once it has been expanded\n        \"\"\"\n        for file_url in self.download_urls:\n            self.download_file(file_url, self.output_folder, remove_zip)\n",
+  "history_output" : "",
+  "history_begin_time" : 1647347335160,
+  "history_end_time" : 1647347335302,
+  "history_notes" : null,
+  "history_process" : "jonz77",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "muatjxzrpis",
+  "history_input" : "from pathlib import Path\nimport urllib.request\nimport zipfile\n\nfrom src_exporters_base import BaseExporter\n\n\nclass GeoWikiExporter(BaseExporter):\n    r\"\"\"\n    Download the GeoWiki labels\n    \"\"\"\n\n    dataset = \"geowiki_landcover_2017\"\n\n    download_urls = [\n        \"http://store.pangaea.de/Publications/See_2017/crop_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_exp.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all_2.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_exp.zip\",\n    ]\n\n    @staticmethod\n    def download_file(url: str, output_folder: Path, remove_zip: bool = True) -> None:\n\n        filename = url.split(\"/\")[-1]\n        output_path = output_folder / filename\n\n        if output_path.exists():\n            print(f\"{filename} already exists! Skipping\")\n            return None\n\n        print(f\"Downloading {url}\")\n        urllib.request.urlretrieve(url, output_path)\n\n        if filename.endswith(\"zip\"):\n\n            print(f\"Downloaded! Unzipping to {output_folder}\")\n            with zipfile.ZipFile(output_path, \"r\") as zip_file:\n                zip_file.extractall(output_folder)\n\n            if remove_zip:\n                print(\"Deleting zip file\")\n                (output_path).unlink()\n\n    def export(self, remove_zip: bool = False) -> None:\n        r\"\"\"\n        Download the GeoWiki labels\n        :param remove_zip: Whether to remove the zip file once it has been expanded\n        \"\"\"\n        for file_url in self.download_urls:\n            self.download_file(file_url, self.output_folder, remove_zip)\n",
+  "history_output" : "",
+  "history_begin_time" : 1647347269113,
+  "history_end_time" : 1647347269244,
+  "history_notes" : null,
+  "history_process" : "jonz77",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "bhgfqf9kbuc",
+  "history_input" : "from pathlib import Path\nimport urllib.request\nimport zipfile\n\nfrom src_exporters_base import BaseExporter\n\n\nclass GeoWikiExporter(BaseExporter):\n    r\"\"\"\n    Download the GeoWiki labels\n    \"\"\"\n\n    dataset = \"geowiki_landcover_2017\"\n\n    download_urls = [\n        \"http://store.pangaea.de/Publications/See_2017/crop_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_exp.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all_2.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_exp.zip\",\n    ]\n\n    @staticmethod\n    def download_file(url: str, output_folder: Path, remove_zip: bool = True) -> None:\n\n        filename = url.split(\"/\")[-1]\n        output_path = output_folder / filename\n\n        if output_path.exists():\n            print(f\"{filename} already exists! Skipping\")\n            return None\n\n        print(f\"Downloading {url}\")\n        urllib.request.urlretrieve(url, output_path)\n\n        if filename.endswith(\"zip\"):\n\n            print(f\"Downloaded! Unzipping to {output_folder}\")\n            with zipfile.ZipFile(output_path, \"r\") as zip_file:\n                zip_file.extractall(output_folder)\n\n            if remove_zip:\n                print(\"Deleting zip file\")\n                (output_path).unlink()\n\n    def export(self, remove_zip: bool = False) -> None:\n        r\"\"\"\n        Download the GeoWiki labels\n        :param remove_zip: Whether to remove the zip file once it has been expanded\n        \"\"\"\n        for file_url in self.download_urls:\n            self.download_file(file_url, self.output_folder, remove_zip)\n",
+  "history_output" : "",
+  "history_begin_time" : 1647347135572,
+  "history_end_time" : 1647347135734,
+  "history_notes" : null,
+  "history_process" : "jonz77",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "w9pgkdw090d",
+  "history_input" : "from pathlib import Path\nimport urllib.request\nimport zipfile\n\nfrom src_exporters_base import BaseExporter\n\n\nclass GeoWikiExporter(BaseExporter):\n    r\"\"\"\n    Download the GeoWiki labels\n    \"\"\"\n\n    dataset = \"geowiki_landcover_2017\"\n\n    download_urls = [\n        \"http://store.pangaea.de/Publications/See_2017/crop_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_exp.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all_2.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_exp.zip\",\n    ]\n\n    @staticmethod\n    def download_file(url: str, output_folder: Path, remove_zip: bool = True) -> None:\n\n        filename = url.split(\"/\")[-1]\n        output_path = output_folder / filename\n\n        if output_path.exists():\n            print(f\"{filename} already exists! Skipping\")\n            return None\n\n        print(f\"Downloading {url}\")\n        urllib.request.urlretrieve(url, output_path)\n\n        if filename.endswith(\"zip\"):\n\n            print(f\"Downloaded! Unzipping to {output_folder}\")\n            with zipfile.ZipFile(output_path, \"r\") as zip_file:\n                zip_file.extractall(output_folder)\n\n            if remove_zip:\n                print(\"Deleting zip file\")\n                (output_path).unlink()\n\n    def export(self, remove_zip: bool = False) -> None:\n        r\"\"\"\n        Download the GeoWiki labels\n        :param remove_zip: Whether to remove the zip file once it has been expanded\n        \"\"\"\n        for file_url in self.download_urls:\n            self.download_file(file_url, self.output_folder, remove_zip)\n",
+  "history_output" : "",
+  "history_begin_time" : 1647346811803,
+  "history_end_time" : 1647346812011,
+  "history_notes" : null,
+  "history_process" : "jonz77",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "r4ewrrdrmac",
+  "history_input" : "from pathlib import Path\nimport urllib.request\nimport zipfile\n\nfrom src_exporters_base import BaseExporter\n\n\nclass GeoWikiExporter(BaseExporter):\n    r\"\"\"\n    Download the GeoWiki labels\n    \"\"\"\n\n    dataset = \"geowiki_landcover_2017\"\n\n    download_urls = [\n        \"http://store.pangaea.de/Publications/See_2017/crop_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_exp.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all_2.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_exp.zip\",\n    ]\n\n    @staticmethod\n    def download_file(url: str, output_folder: Path, remove_zip: bool = True) -> None:\n\n        filename = url.split(\"/\")[-1]\n        output_path = output_folder / filename\n\n        if output_path.exists():\n            print(f\"{filename} already exists! Skipping\")\n            return None\n\n        print(f\"Downloading {url}\")\n        urllib.request.urlretrieve(url, output_path)\n\n        if filename.endswith(\"zip\"):\n\n            print(f\"Downloaded! Unzipping to {output_folder}\")\n            with zipfile.ZipFile(output_path, \"r\") as zip_file:\n                zip_file.extractall(output_folder)\n\n            if remove_zip:\n                print(\"Deleting zip file\")\n                (output_path).unlink()\n\n    def export(self, remove_zip: bool = False) -> None:\n        r\"\"\"\n        Download the GeoWiki labels\n        :param remove_zip: Whether to remove the zip file once it has been expanded\n        \"\"\"\n        for file_url in self.download_urls:\n            self.download_file(file_url, self.output_folder, remove_zip)\n",
+  "history_output" : "",
+  "history_begin_time" : 1647346643744,
+  "history_end_time" : 1647346643902,
+  "history_notes" : null,
+  "history_process" : "jonz77",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "505t6gz6nrk",
+  "history_input" : "from pathlib import Path\nimport urllib.request\nimport zipfile\n\nfrom src_exporters_base import BaseExporter\n\n\nclass GeoWikiExporter(BaseExporter):\n    r\"\"\"\n    Download the GeoWiki labels\n    \"\"\"\n\n    dataset = \"geowiki_landcover_2017\"\n\n    download_urls = [\n        \"http://store.pangaea.de/Publications/See_2017/crop_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_exp.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all_2.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_exp.zip\",\n    ]\n\n    @staticmethod\n    def download_file(url: str, output_folder: Path, remove_zip: bool = True) -> None:\n\n        filename = url.split(\"/\")[-1]\n        output_path = output_folder / filename\n\n        if output_path.exists():\n            print(f\"{filename} already exists! Skipping\")\n            return None\n\n        print(f\"Downloading {url}\")\n        urllib.request.urlretrieve(url, output_path)\n\n        if filename.endswith(\"zip\"):\n\n            print(f\"Downloaded! Unzipping to {output_folder}\")\n            with zipfile.ZipFile(output_path, \"r\") as zip_file:\n                zip_file.extractall(output_folder)\n\n            if remove_zip:\n                print(\"Deleting zip file\")\n                (output_path).unlink()\n\n    def export(self, remove_zip: bool = False) -> None:\n        r\"\"\"\n        Download the GeoWiki labels\n        :param remove_zip: Whether to remove the zip file once it has been expanded\n        \"\"\"\n        for file_url in self.download_urls:\n            self.download_file(file_url, self.output_folder, remove_zip)\n",
+  "history_output" : "",
+  "history_begin_time" : 1647345838709,
+  "history_end_time" : 1647345838811,
+  "history_notes" : null,
+  "history_process" : "jonz77",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "yo61ygjla8t",
+  "history_input" : "from pathlib import Path\nimport urllib.request\nimport zipfile\n\nfrom src_exporters_base import BaseExporter\n\n\nclass GeoWikiExporter(BaseExporter):\n    r\"\"\"\n    Download the GeoWiki labels\n    \"\"\"\n\n    dataset = \"geowiki_landcover_2017\"\n\n    download_urls = [\n        \"http://store.pangaea.de/Publications/See_2017/crop_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_exp.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all_2.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_exp.zip\",\n    ]\n\n    @staticmethod\n    def download_file(url: str, output_folder: Path, remove_zip: bool = True) -> None:\n\n        filename = url.split(\"/\")[-1]\n        output_path = output_folder / filename\n\n        if output_path.exists():\n            print(f\"{filename} already exists! Skipping\")\n            return None\n\n        print(f\"Downloading {url}\")\n        urllib.request.urlretrieve(url, output_path)\n\n        if filename.endswith(\"zip\"):\n\n            print(f\"Downloaded! Unzipping to {output_folder}\")\n            with zipfile.ZipFile(output_path, \"r\") as zip_file:\n                zip_file.extractall(output_folder)\n\n            if remove_zip:\n                print(\"Deleting zip file\")\n                (output_path).unlink()\n\n    def export(self, remove_zip: bool = False) -> None:\n        r\"\"\"\n        Download the GeoWiki labels\n        :param remove_zip: Whether to remove the zip file once it has been expanded\n        \"\"\"\n        for file_url in self.download_urls:\n            self.download_file(file_url, self.output_folder, remove_zip)\n",
+  "history_output" : "",
+  "history_begin_time" : 1647345656441,
+  "history_end_time" : 1647345656544,
+  "history_notes" : null,
+  "history_process" : "jonz77",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "jxhhov0zl6j",
+  "history_input" : "from pathlib import Path\nimport urllib.request\nimport zipfile\n\nfrom src_exporters_base import BaseExporter\n\n\nclass GeoWikiExporter(BaseExporter):\n    r\"\"\"\n    Download the GeoWiki labels\n    \"\"\"\n\n    dataset = \"geowiki_landcover_2017\"\n\n    download_urls = [\n        \"http://store.pangaea.de/Publications/See_2017/crop_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_exp.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all_2.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_exp.zip\",\n    ]\n\n    @staticmethod\n    def download_file(url: str, output_folder: Path, remove_zip: bool = True) -> None:\n\n        filename = url.split(\"/\")[-1]\n        output_path = output_folder / filename\n\n        if output_path.exists():\n            print(f\"{filename} already exists! Skipping\")\n            return None\n\n        print(f\"Downloading {url}\")\n        urllib.request.urlretrieve(url, output_path)\n\n        if filename.endswith(\"zip\"):\n\n            print(f\"Downloaded! Unzipping to {output_folder}\")\n            with zipfile.ZipFile(output_path, \"r\") as zip_file:\n                zip_file.extractall(output_folder)\n\n            if remove_zip:\n                print(\"Deleting zip file\")\n                (output_path).unlink()\n\n    def export(self, remove_zip: bool = False) -> None:\n        r\"\"\"\n        Download the GeoWiki labels\n        :param remove_zip: Whether to remove the zip file once it has been expanded\n        \"\"\"\n        for file_url in self.download_urls:\n            self.download_file(file_url, self.output_folder, remove_zip)\n",
+  "history_output" : "",
+  "history_begin_time" : 1647340123576,
+  "history_end_time" : 1647340123817,
+  "history_notes" : null,
+  "history_process" : "jonz77",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "t63ilt6okpo",
+  "history_input" : "from pathlib import Path\nimport urllib.request\nimport zipfile\n\nfrom src_exporters_base import BaseExporter\n\n\nclass GeoWikiExporter(BaseExporter):\n    r\"\"\"\n    Download the GeoWiki labels\n    \"\"\"\n\n    dataset = \"geowiki_landcover_2017\"\n\n    download_urls = [\n        \"http://store.pangaea.de/Publications/See_2017/crop_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_exp.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all_2.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_exp.zip\",\n    ]\n\n    @staticmethod\n    def download_file(url: str, output_folder: Path, remove_zip: bool = True) -> None:\n\n        filename = url.split(\"/\")[-1]\n        output_path = output_folder / filename\n\n        if output_path.exists():\n            print(f\"{filename} already exists! Skipping\")\n            return None\n\n        print(f\"Downloading {url}\")\n        urllib.request.urlretrieve(url, output_path)\n\n        if filename.endswith(\"zip\"):\n\n            print(f\"Downloaded! Unzipping to {output_folder}\")\n            with zipfile.ZipFile(output_path, \"r\") as zip_file:\n                zip_file.extractall(output_folder)\n\n            if remove_zip:\n                print(\"Deleting zip file\")\n                (output_path).unlink()\n\n    def export(self, remove_zip: bool = False) -> None:\n        r\"\"\"\n        Download the GeoWiki labels\n        :param remove_zip: Whether to remove the zip file once it has been expanded\n        \"\"\"\n        for file_url in self.download_urls:\n            self.download_file(file_url, self.output_folder, remove_zip)\n",
+  "history_output" : "",
+  "history_begin_time" : 1646147713319,
+  "history_end_time" : 1646147713495,
+  "history_notes" : null,
+  "history_process" : "jonz77",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "qd98iegt4pz",
+  "history_input" : "from pathlib import Path\nimport urllib.request\nimport zipfile\n\nfrom src_exporters_base import BaseExporter\n\n\nclass GeoWikiExporter(BaseExporter):\n    r\"\"\"\n    Download the GeoWiki labels\n    \"\"\"\n\n    dataset = \"geowiki_landcover_2017\"\n\n    download_urls = [\n        \"http://store.pangaea.de/Publications/See_2017/crop_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_exp.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all_2.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_exp.zip\",\n    ]\n\n    @staticmethod\n    def download_file(url: str, output_folder: Path, remove_zip: bool = True) -> None:\n\n        filename = url.split(\"/\")[-1]\n        output_path = output_folder / filename\n\n        if output_path.exists():\n            print(f\"{filename} already exists! Skipping\")\n            return None\n\n        print(f\"Downloading {url}\")\n        urllib.request.urlretrieve(url, output_path)\n\n        if filename.endswith(\"zip\"):\n\n            print(f\"Downloaded! Unzipping to {output_folder}\")\n            with zipfile.ZipFile(output_path, \"r\") as zip_file:\n                zip_file.extractall(output_folder)\n\n            if remove_zip:\n                print(\"Deleting zip file\")\n                (output_path).unlink()\n\n    def export(self, remove_zip: bool = False) -> None:\n        r\"\"\"\n        Download the GeoWiki labels\n        :param remove_zip: Whether to remove the zip file once it has been expanded\n        \"\"\"\n        for file_url in self.download_urls:\n            self.download_file(file_url, self.output_folder, remove_zip)\n",
+  "history_output" : "",
+  "history_begin_time" : 1646145426205,
+  "history_end_time" : 1646145426358,
+  "history_notes" : null,
+  "history_process" : "jonz77",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "k3ulhfrjucc",
+  "history_input" : "from pathlib import Path\nimport urllib.request\nimport zipfile\n\nfrom src_exporters_base import BaseExporter\n\n\nclass GeoWikiExporter(BaseExporter):\n    r\"\"\"\n    Download the GeoWiki labels\n    \"\"\"\n\n    dataset = \"geowiki_landcover_2017\"\n\n    download_urls = [\n        \"http://store.pangaea.de/Publications/See_2017/crop_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_exp.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all_2.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_exp.zip\",\n    ]\n\n    @staticmethod\n    def download_file(url: str, output_folder: Path, remove_zip: bool = True) -> None:\n\n        filename = url.split(\"/\")[-1]\n        output_path = output_folder / filename\n\n        if output_path.exists():\n            print(f\"{filename} already exists! Skipping\")\n            return None\n\n        print(f\"Downloading {url}\")\n        urllib.request.urlretrieve(url, output_path)\n\n        if filename.endswith(\"zip\"):\n\n            print(f\"Downloaded! Unzipping to {output_folder}\")\n            with zipfile.ZipFile(output_path, \"r\") as zip_file:\n                zip_file.extractall(output_folder)\n\n            if remove_zip:\n                print(\"Deleting zip file\")\n                (output_path).unlink()\n\n    def export(self, remove_zip: bool = False) -> None:\n        r\"\"\"\n        Download the GeoWiki labels\n        :param remove_zip: Whether to remove the zip file once it has been expanded\n        \"\"\"\n        for file_url in self.download_urls:\n            self.download_file(file_url, self.output_folder, remove_zip)\n",
+  "history_output" : "",
+  "history_begin_time" : 1646145210081,
+  "history_end_time" : 1646145210235,
+  "history_notes" : null,
+  "history_process" : "jonz77",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "ros6t5zl985",
+  "history_input" : "from pathlib import Path\nimport urllib.request\nimport zipfile\n\nfrom src_exporters_base import BaseExporter\n\n\nclass GeoWikiExporter(BaseExporter):\n    r\"\"\"\n    Download the GeoWiki labels\n    \"\"\"\n\n    dataset = \"geowiki_landcover_2017\"\n\n    download_urls = [\n        \"http://store.pangaea.de/Publications/See_2017/crop_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_exp.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all_2.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_exp.zip\",\n    ]\n\n    @staticmethod\n    def download_file(url: str, output_folder: Path, remove_zip: bool = True) -> None:\n\n        filename = url.split(\"/\")[-1]\n        output_path = output_folder / filename\n\n        if output_path.exists():\n            print(f\"{filename} already exists! Skipping\")\n            return None\n\n        print(f\"Downloading {url}\")\n        urllib.request.urlretrieve(url, output_path)\n\n        if filename.endswith(\"zip\"):\n\n            print(f\"Downloaded! Unzipping to {output_folder}\")\n            with zipfile.ZipFile(output_path, \"r\") as zip_file:\n                zip_file.extractall(output_folder)\n\n            if remove_zip:\n                print(\"Deleting zip file\")\n                (output_path).unlink()\n\n    def export(self, remove_zip: bool = False) -> None:\n        r\"\"\"\n        Download the GeoWiki labels\n        :param remove_zip: Whether to remove the zip file once it has been expanded\n        \"\"\"\n        for file_url in self.download_urls:\n            self.download_file(file_url, self.output_folder, remove_zip)\n",
+  "history_output" : "",
+  "history_begin_time" : 1646144600035,
+  "history_end_time" : 1646144600161,
+  "history_notes" : null,
+  "history_process" : "jonz77",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "w2kxddy818q",
+  "history_input" : "from pathlib import Path\nimport urllib.request\nimport zipfile\n\nfrom src_exporters_base import BaseExporter\n\n\nclass GeoWikiExporter(BaseExporter):\n    r\"\"\"\n    Download the GeoWiki labels\n    \"\"\"\n\n    dataset = \"geowiki_landcover_2017\"\n\n    download_urls = [\n        \"http://store.pangaea.de/Publications/See_2017/crop_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_exp.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all_2.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_exp.zip\",\n    ]\n\n    @staticmethod\n    def download_file(url: str, output_folder: Path, remove_zip: bool = True) -> None:\n\n        filename = url.split(\"/\")[-1]\n        output_path = output_folder / filename\n\n        if output_path.exists():\n            print(f\"{filename} already exists! Skipping\")\n            return None\n\n        print(f\"Downloading {url}\")\n        urllib.request.urlretrieve(url, output_path)\n\n        if filename.endswith(\"zip\"):\n\n            print(f\"Downloaded! Unzipping to {output_folder}\")\n            with zipfile.ZipFile(output_path, \"r\") as zip_file:\n                zip_file.extractall(output_folder)\n\n            if remove_zip:\n                print(\"Deleting zip file\")\n                (output_path).unlink()\n\n    def export(self, remove_zip: bool = False) -> None:\n        r\"\"\"\n        Download the GeoWiki labels\n        :param remove_zip: Whether to remove the zip file once it has been expanded\n        \"\"\"\n        for file_url in self.download_urls:\n            self.download_file(file_url, self.output_folder, remove_zip)\n",
+  "history_output" : "",
+  "history_begin_time" : 1646144382965,
+  "history_end_time" : 1646144383024,
+  "history_notes" : null,
+  "history_process" : "jonz77",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "3hny7pxef45",
+  "history_input" : "from pathlib import Path\nimport urllib.request\nimport zipfile\n\nfrom src_exporters_base import BaseExporter\n\n\nclass GeoWikiExporter(BaseExporter):\n    r\"\"\"\n    Download the GeoWiki labels\n    \"\"\"\n\n    dataset = \"geowiki_landcover_2017\"\n\n    download_urls = [\n        \"http://store.pangaea.de/Publications/See_2017/crop_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_exp.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all_2.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_exp.zip\",\n    ]\n\n    @staticmethod\n    def download_file(url: str, output_folder: Path, remove_zip: bool = True) -> None:\n\n        filename = url.split(\"/\")[-1]\n        output_path = output_folder / filename\n\n        if output_path.exists():\n            print(f\"{filename} already exists! Skipping\")\n            return None\n\n        print(f\"Downloading {url}\")\n        urllib.request.urlretrieve(url, output_path)\n\n        if filename.endswith(\"zip\"):\n\n            print(f\"Downloaded! Unzipping to {output_folder}\")\n            with zipfile.ZipFile(output_path, \"r\") as zip_file:\n                zip_file.extractall(output_folder)\n\n            if remove_zip:\n                print(\"Deleting zip file\")\n                (output_path).unlink()\n\n    def export(self, remove_zip: bool = False) -> None:\n        r\"\"\"\n        Download the GeoWiki labels\n        :param remove_zip: Whether to remove the zip file once it has been expanded\n        \"\"\"\n        for file_url in self.download_urls:\n            self.download_file(file_url, self.output_folder, remove_zip)\n",
+  "history_output" : "",
+  "history_begin_time" : 1646144309544,
+  "history_end_time" : 1646144309669,
+  "history_notes" : null,
+  "history_process" : "jonz77",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "61cqidumikl",
+  "history_input" : "from pathlib import Path\nimport urllib.request\nimport zipfile\n\nfrom src_exporters_base import BaseExporter\n\n\nclass GeoWikiExporter(BaseExporter):\n    r\"\"\"\n    Download the GeoWiki labels\n    \"\"\"\n\n    dataset = \"geowiki_landcover_2017\"\n\n    download_urls = [\n        \"http://store.pangaea.de/Publications/See_2017/crop_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_exp.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all_2.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_exp.zip\",\n    ]\n\n    @staticmethod\n    def download_file(url: str, output_folder: Path, remove_zip: bool = True) -> None:\n\n        filename = url.split(\"/\")[-1]\n        output_path = output_folder / filename\n\n        if output_path.exists():\n            print(f\"{filename} already exists! Skipping\")\n            return None\n\n        print(f\"Downloading {url}\")\n        urllib.request.urlretrieve(url, output_path)\n\n        if filename.endswith(\"zip\"):\n\n            print(f\"Downloaded! Unzipping to {output_folder}\")\n            with zipfile.ZipFile(output_path, \"r\") as zip_file:\n                zip_file.extractall(output_folder)\n\n            if remove_zip:\n                print(\"Deleting zip file\")\n                (output_path).unlink()\n\n    def export(self, remove_zip: bool = False) -> None:\n        r\"\"\"\n        Download the GeoWiki labels\n        :param remove_zip: Whether to remove the zip file once it has been expanded\n        \"\"\"\n        for file_url in self.download_urls:\n            self.download_file(file_url, self.output_folder, remove_zip)\n",
+  "history_output" : "",
+  "history_begin_time" : 1646143406597,
+  "history_end_time" : 1646143406788,
+  "history_notes" : null,
+  "history_process" : "jonz77",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "9wwkkt3g78y",
+  "history_input" : "from pathlib import Path\nimport urllib.request\nimport zipfile\n\nfrom src_exporters_base import BaseExporter\n\n\nclass GeoWikiExporter(BaseExporter):\n    r\"\"\"\n    Download the GeoWiki labels\n    \"\"\"\n\n    dataset = \"geowiki_landcover_2017\"\n\n    download_urls = [\n        \"http://store.pangaea.de/Publications/See_2017/crop_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_exp.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all_2.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_exp.zip\",\n    ]\n\n    @staticmethod\n    def download_file(url: str, output_folder: Path, remove_zip: bool = True) -> None:\n\n        filename = url.split(\"/\")[-1]\n        output_path = output_folder / filename\n\n        if output_path.exists():\n            print(f\"{filename} already exists! Skipping\")\n            return None\n\n        print(f\"Downloading {url}\")\n        urllib.request.urlretrieve(url, output_path)\n\n        if filename.endswith(\"zip\"):\n\n            print(f\"Downloaded! Unzipping to {output_folder}\")\n            with zipfile.ZipFile(output_path, \"r\") as zip_file:\n                zip_file.extractall(output_folder)\n\n            if remove_zip:\n                print(\"Deleting zip file\")\n                (output_path).unlink()\n\n    def export(self, remove_zip: bool = False) -> None:\n        r\"\"\"\n        Download the GeoWiki labels\n        :param remove_zip: Whether to remove the zip file once it has been expanded\n        \"\"\"\n        for file_url in self.download_urls:\n            self.download_file(file_url, self.output_folder, remove_zip)\n",
+  "history_output" : "",
+  "history_begin_time" : 1646143255028,
+  "history_end_time" : 1646143255177,
+  "history_notes" : null,
+  "history_process" : "jonz77",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "xmakc0lhug0",
+  "history_input" : "from pathlib import Path\nimport urllib.request\nimport zipfile\n\nfrom src_exporters_base import BaseExporter\n\n\nclass GeoWikiExporter(BaseExporter):\n    r\"\"\"\n    Download the GeoWiki labels\n    \"\"\"\n\n    dataset = \"geowiki_landcover_2017\"\n\n    download_urls = [\n        \"http://store.pangaea.de/Publications/See_2017/crop_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_exp.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all_2.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_exp.zip\",\n    ]\n\n    @staticmethod\n    def download_file(url: str, output_folder: Path, remove_zip: bool = True) -> None:\n\n        filename = url.split(\"/\")[-1]\n        output_path = output_folder / filename\n\n        if output_path.exists():\n            print(f\"{filename} already exists! Skipping\")\n            return None\n\n        print(f\"Downloading {url}\")\n        urllib.request.urlretrieve(url, output_path)\n\n        if filename.endswith(\"zip\"):\n\n            print(f\"Downloaded! Unzipping to {output_folder}\")\n            with zipfile.ZipFile(output_path, \"r\") as zip_file:\n                zip_file.extractall(output_folder)\n\n            if remove_zip:\n                print(\"Deleting zip file\")\n                (output_path).unlink()\n\n    def export(self, remove_zip: bool = False) -> None:\n        r\"\"\"\n        Download the GeoWiki labels\n        :param remove_zip: Whether to remove the zip file once it has been expanded\n        \"\"\"\n        for file_url in self.download_urls:\n            self.download_file(file_url, self.output_folder, remove_zip)\n",
+  "history_output" : "",
+  "history_begin_time" : 1646143176382,
+  "history_end_time" : 1646143176556,
+  "history_notes" : null,
+  "history_process" : "jonz77",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "90j23xngb53",
+  "history_input" : "from pathlib import Path\nimport urllib.request\nimport zipfile\n\nfrom src_exporters_base import BaseExporter\n\n\nclass GeoWikiExporter(BaseExporter):\n    r\"\"\"\n    Download the GeoWiki labels\n    \"\"\"\n\n    dataset = \"geowiki_landcover_2017\"\n\n    download_urls = [\n        \"http://store.pangaea.de/Publications/See_2017/crop_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_exp.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all_2.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_exp.zip\",\n    ]\n\n    @staticmethod\n    def download_file(url: str, output_folder: Path, remove_zip: bool = True) -> None:\n\n        filename = url.split(\"/\")[-1]\n        output_path = output_folder / filename\n\n        if output_path.exists():\n            print(f\"{filename} already exists! Skipping\")\n            return None\n\n        print(f\"Downloading {url}\")\n        urllib.request.urlretrieve(url, output_path)\n\n        if filename.endswith(\"zip\"):\n\n            print(f\"Downloaded! Unzipping to {output_folder}\")\n            with zipfile.ZipFile(output_path, \"r\") as zip_file:\n                zip_file.extractall(output_folder)\n\n            if remove_zip:\n                print(\"Deleting zip file\")\n                (output_path).unlink()\n\n    def export(self, remove_zip: bool = False) -> None:\n        r\"\"\"\n        Download the GeoWiki labels\n        :param remove_zip: Whether to remove the zip file once it has been expanded\n        \"\"\"\n        for file_url in self.download_urls:\n            self.download_file(file_url, self.output_folder, remove_zip)\n",
+  "history_output" : "",
+  "history_begin_time" : 1646143140389,
+  "history_end_time" : 1646143140530,
+  "history_notes" : null,
+  "history_process" : "jonz77",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "333tlzm09fc",
+  "history_input" : "from pathlib import Path\nimport urllib.request\nimport zipfile\n\nfrom src_exporters_base import BaseExporter\n\n\nclass GeoWikiExporter(BaseExporter):\n    r\"\"\"\n    Download the GeoWiki labels\n    \"\"\"\n\n    dataset = \"geowiki_landcover_2017\"\n\n    download_urls = [\n        \"http://store.pangaea.de/Publications/See_2017/crop_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_exp.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all_2.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_exp.zip\",\n    ]\n\n    @staticmethod\n    def download_file(url: str, output_folder: Path, remove_zip: bool = True) -> None:\n\n        filename = url.split(\"/\")[-1]\n        output_path = output_folder / filename\n\n        if output_path.exists():\n            print(f\"{filename} already exists! Skipping\")\n            return None\n\n        print(f\"Downloading {url}\")\n        urllib.request.urlretrieve(url, output_path)\n\n        if filename.endswith(\"zip\"):\n\n            print(f\"Downloaded! Unzipping to {output_folder}\")\n            with zipfile.ZipFile(output_path, \"r\") as zip_file:\n                zip_file.extractall(output_folder)\n\n            if remove_zip:\n                print(\"Deleting zip file\")\n                (output_path).unlink()\n\n    def export(self, remove_zip: bool = False) -> None:\n        r\"\"\"\n        Download the GeoWiki labels\n        :param remove_zip: Whether to remove the zip file once it has been expanded\n        \"\"\"\n        for file_url in self.download_urls:\n            self.download_file(file_url, self.output_folder, remove_zip)\n",
+  "history_output" : "",
+  "history_begin_time" : 1646143108670,
+  "history_end_time" : 1646143108803,
+  "history_notes" : null,
+  "history_process" : "jonz77",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "pb1m6z36byq",
+  "history_input" : "from pathlib import Path\nimport urllib.request\nimport zipfile\n\nfrom src_exporters_base import BaseExporter\n\n\nclass GeoWikiExporter(BaseExporter):\n    r\"\"\"\n    Download the GeoWiki labels\n    \"\"\"\n\n    dataset = \"geowiki_landcover_2017\"\n\n    download_urls = [\n        \"http://store.pangaea.de/Publications/See_2017/crop_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_exp.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all_2.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_exp.zip\",\n    ]\n\n    @staticmethod\n    def download_file(url: str, output_folder: Path, remove_zip: bool = True) -> None:\n\n        filename = url.split(\"/\")[-1]\n        output_path = output_folder / filename\n\n        if output_path.exists():\n            print(f\"{filename} already exists! Skipping\")\n            return None\n\n        print(f\"Downloading {url}\")\n        urllib.request.urlretrieve(url, output_path)\n\n        if filename.endswith(\"zip\"):\n\n            print(f\"Downloaded! Unzipping to {output_folder}\")\n            with zipfile.ZipFile(output_path, \"r\") as zip_file:\n                zip_file.extractall(output_folder)\n\n            if remove_zip:\n                print(\"Deleting zip file\")\n                (output_path).unlink()\n\n    def export(self, remove_zip: bool = False) -> None:\n        r\"\"\"\n        Download the GeoWiki labels\n        :param remove_zip: Whether to remove the zip file once it has been expanded\n        \"\"\"\n        for file_url in self.download_urls:\n            self.download_file(file_url, self.output_folder, remove_zip)\n",
+  "history_output" : "",
+  "history_begin_time" : 1646139375675,
+  "history_end_time" : 1646139375777,
+  "history_notes" : null,
+  "history_process" : "jonz77",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "9g9csss70en",
+  "history_input" : "from pathlib import Path\nimport urllib.request\nimport zipfile\n\nfrom src_exporters_base import BaseExporter\n\n\nclass GeoWikiExporter(BaseExporter):\n    r\"\"\"\n    Download the GeoWiki labels\n    \"\"\"\n\n    dataset = \"geowiki_landcover_2017\"\n\n    download_urls = [\n        \"http://store.pangaea.de/Publications/See_2017/crop_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_exp.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all_2.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_exp.zip\",\n    ]\n\n    @staticmethod\n    def download_file(url: str, output_folder: Path, remove_zip: bool = True) -> None:\n\n        filename = url.split(\"/\")[-1]\n        output_path = output_folder / filename\n\n        if output_path.exists():\n            print(f\"{filename} already exists! Skipping\")\n            return None\n\n        print(f\"Downloading {url}\")\n        urllib.request.urlretrieve(url, output_path)\n\n        if filename.endswith(\"zip\"):\n\n            print(f\"Downloaded! Unzipping to {output_folder}\")\n            with zipfile.ZipFile(output_path, \"r\") as zip_file:\n                zip_file.extractall(output_folder)\n\n            if remove_zip:\n                print(\"Deleting zip file\")\n                (output_path).unlink()\n\n    def export(self, remove_zip: bool = False) -> None:\n        r\"\"\"\n        Download the GeoWiki labels\n        :param remove_zip: Whether to remove the zip file once it has been expanded\n        \"\"\"\n        for file_url in self.download_urls:\n            self.download_file(file_url, self.output_folder, remove_zip)\n",
+  "history_output" : "",
+  "history_begin_time" : 1646139284965,
+  "history_end_time" : 1646139285099,
+  "history_notes" : null,
+  "history_process" : "jonz77",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "k8x58qs4zqt",
+  "history_input" : "from pathlib import Path\nimport urllib.request\nimport zipfile\n\nfrom src_exporters_base import BaseExporter\n\n\nclass GeoWikiExporter(BaseExporter):\n    r\"\"\"\n    Download the GeoWiki labels\n    \"\"\"\n\n    dataset = \"geowiki_landcover_2017\"\n\n    download_urls = [\n        \"http://store.pangaea.de/Publications/See_2017/crop_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_exp.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all_2.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_exp.zip\",\n    ]\n\n    @staticmethod\n    def download_file(url: str, output_folder: Path, remove_zip: bool = True) -> None:\n\n        filename = url.split(\"/\")[-1]\n        output_path = output_folder / filename\n\n        if output_path.exists():\n            print(f\"{filename} already exists! Skipping\")\n            return None\n\n        print(f\"Downloading {url}\")\n        urllib.request.urlretrieve(url, output_path)\n\n        if filename.endswith(\"zip\"):\n\n            print(f\"Downloaded! Unzipping to {output_folder}\")\n            with zipfile.ZipFile(output_path, \"r\") as zip_file:\n                zip_file.extractall(output_folder)\n\n            if remove_zip:\n                print(\"Deleting zip file\")\n                (output_path).unlink()\n\n    def export(self, remove_zip: bool = False) -> None:\n        r\"\"\"\n        Download the GeoWiki labels\n        :param remove_zip: Whether to remove the zip file once it has been expanded\n        \"\"\"\n        for file_url in self.download_urls:\n            self.download_file(file_url, self.output_folder, remove_zip)\n",
+  "history_output" : "",
+  "history_begin_time" : 1646139243348,
+  "history_end_time" : 1646139243511,
+  "history_notes" : null,
+  "history_process" : "jonz77",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "pxqrt2ly39b",
+  "history_input" : "from pathlib import Path\nimport urllib.request\nimport zipfile\n\nfrom src_exporters_base import BaseExporter\n\n\nclass GeoWikiExporter(BaseExporter):\n    r\"\"\"\n    Download the GeoWiki labels\n    \"\"\"\n\n    dataset = \"geowiki_landcover_2017\"\n\n    download_urls = [\n        \"http://store.pangaea.de/Publications/See_2017/crop_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_exp.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all_2.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_exp.zip\",\n    ]\n\n    @staticmethod\n    def download_file(url: str, output_folder: Path, remove_zip: bool = True) -> None:\n\n        filename = url.split(\"/\")[-1]\n        output_path = output_folder / filename\n\n        if output_path.exists():\n            print(f\"{filename} already exists! Skipping\")\n            return None\n\n        print(f\"Downloading {url}\")\n        urllib.request.urlretrieve(url, output_path)\n\n        if filename.endswith(\"zip\"):\n\n            print(f\"Downloaded! Unzipping to {output_folder}\")\n            with zipfile.ZipFile(output_path, \"r\") as zip_file:\n                zip_file.extractall(output_folder)\n\n            if remove_zip:\n                print(\"Deleting zip file\")\n                (output_path).unlink()\n\n    def export(self, remove_zip: bool = False) -> None:\n        r\"\"\"\n        Download the GeoWiki labels\n        :param remove_zip: Whether to remove the zip file once it has been expanded\n        \"\"\"\n        for file_url in self.download_urls:\n            self.download_file(file_url, self.output_folder, remove_zip)\n",
+  "history_output" : "",
+  "history_begin_time" : 1646139191305,
+  "history_end_time" : 1646139191379,
+  "history_notes" : null,
+  "history_process" : "jonz77",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "7o2cox31adz",
+  "history_input" : "from pathlib import Path\nimport urllib.request\nimport zipfile\n\nfrom src_exporters_base import BaseExporter\n\n\nclass GeoWikiExporter(BaseExporter):\n    r\"\"\"\n    Download the GeoWiki labels\n    \"\"\"\n\n    dataset = \"geowiki_landcover_2017\"\n\n    download_urls = [\n        \"http://store.pangaea.de/Publications/See_2017/crop_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_exp.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all_2.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_exp.zip\",\n    ]\n\n    @staticmethod\n    def download_file(url: str, output_folder: Path, remove_zip: bool = True) -> None:\n\n        filename = url.split(\"/\")[-1]\n        output_path = output_folder / filename\n\n        if output_path.exists():\n            print(f\"{filename} already exists! Skipping\")\n            return None\n\n        print(f\"Downloading {url}\")\n        urllib.request.urlretrieve(url, output_path)\n\n        if filename.endswith(\"zip\"):\n\n            print(f\"Downloaded! Unzipping to {output_folder}\")\n            with zipfile.ZipFile(output_path, \"r\") as zip_file:\n                zip_file.extractall(output_folder)\n\n            if remove_zip:\n                print(\"Deleting zip file\")\n                (output_path).unlink()\n\n    def export(self, remove_zip: bool = False) -> None:\n        r\"\"\"\n        Download the GeoWiki labels\n        :param remove_zip: Whether to remove the zip file once it has been expanded\n        \"\"\"\n        for file_url in self.download_urls:\n            self.download_file(file_url, self.output_folder, remove_zip)\n",
+  "history_output" : "",
+  "history_begin_time" : 1646139157842,
+  "history_end_time" : 1646139158008,
+  "history_notes" : null,
+  "history_process" : "jonz77",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "eik1vj0ue72",
+  "history_input" : "from pathlib import Path\nimport urllib.request\nimport zipfile\n\nfrom src_exporters_base import BaseExporter\n\n\nclass GeoWikiExporter(BaseExporter):\n    r\"\"\"\n    Download the GeoWiki labels\n    \"\"\"\n\n    dataset = \"geowiki_landcover_2017\"\n\n    download_urls = [\n        \"http://store.pangaea.de/Publications/See_2017/crop_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_exp.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all_2.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_exp.zip\",\n    ]\n\n    @staticmethod\n    def download_file(url: str, output_folder: Path, remove_zip: bool = True) -> None:\n\n        filename = url.split(\"/\")[-1]\n        output_path = output_folder / filename\n\n        if output_path.exists():\n            print(f\"{filename} already exists! Skipping\")\n            return None\n\n        print(f\"Downloading {url}\")\n        urllib.request.urlretrieve(url, output_path)\n\n        if filename.endswith(\"zip\"):\n\n            print(f\"Downloaded! Unzipping to {output_folder}\")\n            with zipfile.ZipFile(output_path, \"r\") as zip_file:\n                zip_file.extractall(output_folder)\n\n            if remove_zip:\n                print(\"Deleting zip file\")\n                (output_path).unlink()\n\n    def export(self, remove_zip: bool = False) -> None:\n        r\"\"\"\n        Download the GeoWiki labels\n        :param remove_zip: Whether to remove the zip file once it has been expanded\n        \"\"\"\n        for file_url in self.download_urls:\n            self.download_file(file_url, self.output_folder, remove_zip)\n",
+  "history_output" : "",
+  "history_begin_time" : 1646138501274,
+  "history_end_time" : 1646138501425,
+  "history_notes" : null,
+  "history_process" : "jonz77",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "9dqmro8u8ji",
+  "history_input" : "from pathlib import Path\nimport urllib.request\nimport zipfile\n\nfrom src_exporters_base import BaseExporter\n\n\nclass GeoWikiExporter(BaseExporter):\n    r\"\"\"\n    Download the GeoWiki labels\n    \"\"\"\n\n    dataset = \"geowiki_landcover_2017\"\n\n    download_urls = [\n        \"http://store.pangaea.de/Publications/See_2017/crop_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_exp.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all_2.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_exp.zip\",\n    ]\n\n    @staticmethod\n    def download_file(url: str, output_folder: Path, remove_zip: bool = True) -> None:\n\n        filename = url.split(\"/\")[-1]\n        output_path = output_folder / filename\n\n        if output_path.exists():\n            print(f\"{filename} already exists! Skipping\")\n            return None\n\n        print(f\"Downloading {url}\")\n        urllib.request.urlretrieve(url, output_path)\n\n        if filename.endswith(\"zip\"):\n\n            print(f\"Downloaded! Unzipping to {output_folder}\")\n            with zipfile.ZipFile(output_path, \"r\") as zip_file:\n                zip_file.extractall(output_folder)\n\n            if remove_zip:\n                print(\"Deleting zip file\")\n                (output_path).unlink()\n\n    def export(self, remove_zip: bool = False) -> None:\n        r\"\"\"\n        Download the GeoWiki labels\n        :param remove_zip: Whether to remove the zip file once it has been expanded\n        \"\"\"\n        for file_url in self.download_urls:\n            self.download_file(file_url, self.output_folder, remove_zip)\n",
+  "history_output" : "",
+  "history_begin_time" : 1646138449746,
+  "history_end_time" : 1646138449909,
+  "history_notes" : null,
+  "history_process" : "jonz77",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "zwiydkabc7q",
+  "history_input" : "from pathlib import Path\nimport urllib.request\nimport zipfile\n\nfrom src_exporters_base import BaseExporter\n\n\nclass GeoWikiExporter(BaseExporter):\n    r\"\"\"\n    Download the GeoWiki labels\n    \"\"\"\n\n    dataset = \"geowiki_landcover_2017\"\n\n    download_urls = [\n        \"http://store.pangaea.de/Publications/See_2017/crop_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_exp.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all_2.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_exp.zip\",\n    ]\n\n    @staticmethod\n    def download_file(url: str, output_folder: Path, remove_zip: bool = True) -> None:\n\n        filename = url.split(\"/\")[-1]\n        output_path = output_folder / filename\n\n        if output_path.exists():\n            print(f\"{filename} already exists! Skipping\")\n            return None\n\n        print(f\"Downloading {url}\")\n        urllib.request.urlretrieve(url, output_path)\n\n        if filename.endswith(\"zip\"):\n\n            print(f\"Downloaded! Unzipping to {output_folder}\")\n            with zipfile.ZipFile(output_path, \"r\") as zip_file:\n                zip_file.extractall(output_folder)\n\n            if remove_zip:\n                print(\"Deleting zip file\")\n                (output_path).unlink()\n\n    def export(self, remove_zip: bool = False) -> None:\n        r\"\"\"\n        Download the GeoWiki labels\n        :param remove_zip: Whether to remove the zip file once it has been expanded\n        \"\"\"\n        for file_url in self.download_urls:\n            self.download_file(file_url, self.output_folder, remove_zip)\n",
+  "history_output" : "",
+  "history_begin_time" : 1646138400498,
+  "history_end_time" : 1646138400659,
+  "history_notes" : null,
+  "history_process" : "jonz77",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "9vxvnu03mgy",
+  "history_input" : "from pathlib import Path\nimport urllib.request\nimport zipfile\n\nfrom src_exporters_base import BaseExporter\n\n\nclass GeoWikiExporter(BaseExporter):\n    r\"\"\"\n    Download the GeoWiki labels\n    \"\"\"\n\n    dataset = \"geowiki_landcover_2017\"\n\n    download_urls = [\n        \"http://store.pangaea.de/Publications/See_2017/crop_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_exp.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all_2.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_exp.zip\",\n    ]\n\n    @staticmethod\n    def download_file(url: str, output_folder: Path, remove_zip: bool = True) -> None:\n\n        filename = url.split(\"/\")[-1]\n        output_path = output_folder / filename\n\n        if output_path.exists():\n            print(f\"{filename} already exists! Skipping\")\n            return None\n\n        print(f\"Downloading {url}\")\n        urllib.request.urlretrieve(url, output_path)\n\n        if filename.endswith(\"zip\"):\n\n            print(f\"Downloaded! Unzipping to {output_folder}\")\n            with zipfile.ZipFile(output_path, \"r\") as zip_file:\n                zip_file.extractall(output_folder)\n\n            if remove_zip:\n                print(\"Deleting zip file\")\n                (output_path).unlink()\n\n    def export(self, remove_zip: bool = False) -> None:\n        r\"\"\"\n        Download the GeoWiki labels\n        :param remove_zip: Whether to remove the zip file once it has been expanded\n        \"\"\"\n        for file_url in self.download_urls:\n            self.download_file(file_url, self.output_folder, remove_zip)\n",
+  "history_output" : "",
+  "history_begin_time" : 1646138277038,
+  "history_end_time" : 1646138277334,
+  "history_notes" : null,
+  "history_process" : "jonz77",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "dajokl8o45o",
+  "history_input" : "from pathlib import Path\nimport urllib.request\nimport zipfile\n\nfrom src_exporters_base import BaseExporter\n\n\nclass GeoWikiExporter(BaseExporter):\n    r\"\"\"\n    Download the GeoWiki labels\n    \"\"\"\n\n    dataset = \"geowiki_landcover_2017\"\n\n    download_urls = [\n        \"http://store.pangaea.de/Publications/See_2017/crop_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_exp.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all_2.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_exp.zip\",\n    ]\n\n    @staticmethod\n    def download_file(url: str, output_folder: Path, remove_zip: bool = True) -> None:\n\n        filename = url.split(\"/\")[-1]\n        output_path = output_folder / filename\n\n        if output_path.exists():\n            print(f\"{filename} already exists! Skipping\")\n            return None\n\n        print(f\"Downloading {url}\")\n        urllib.request.urlretrieve(url, output_path)\n\n        if filename.endswith(\"zip\"):\n\n            print(f\"Downloaded! Unzipping to {output_folder}\")\n            with zipfile.ZipFile(output_path, \"r\") as zip_file:\n                zip_file.extractall(output_folder)\n\n            if remove_zip:\n                print(\"Deleting zip file\")\n                (output_path).unlink()\n\n    def export(self, remove_zip: bool = False) -> None:\n        r\"\"\"\n        Download the GeoWiki labels\n        :param remove_zip: Whether to remove the zip file once it has been expanded\n        \"\"\"\n        for file_url in self.download_urls:\n            self.download_file(file_url, self.output_folder, remove_zip)\n",
+  "history_output" : "",
+  "history_begin_time" : 1646138188860,
+  "history_end_time" : 1646138189003,
+  "history_notes" : null,
+  "history_process" : "jonz77",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "48bt75a6qv8",
+  "history_input" : "from pathlib import Path\nimport urllib.request\nimport zipfile\n\nfrom src_exporters_base import BaseExporter\n\n\nclass GeoWikiExporter(BaseExporter):\n    r\"\"\"\n    Download the GeoWiki labels\n    \"\"\"\n\n    dataset = \"geowiki_landcover_2017\"\n\n    download_urls = [\n        \"http://store.pangaea.de/Publications/See_2017/crop_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_exp.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all_2.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_exp.zip\",\n    ]\n\n    @staticmethod\n    def download_file(url: str, output_folder: Path, remove_zip: bool = True) -> None:\n\n        filename = url.split(\"/\")[-1]\n        output_path = output_folder / filename\n\n        if output_path.exists():\n            print(f\"{filename} already exists! Skipping\")\n            return None\n\n        print(f\"Downloading {url}\")\n        urllib.request.urlretrieve(url, output_path)\n\n        if filename.endswith(\"zip\"):\n\n            print(f\"Downloaded! Unzipping to {output_folder}\")\n            with zipfile.ZipFile(output_path, \"r\") as zip_file:\n                zip_file.extractall(output_folder)\n\n            if remove_zip:\n                print(\"Deleting zip file\")\n                (output_path).unlink()\n\n    def export(self, remove_zip: bool = False) -> None:\n        r\"\"\"\n        Download the GeoWiki labels\n        :param remove_zip: Whether to remove the zip file once it has been expanded\n        \"\"\"\n        for file_url in self.download_urls:\n            self.download_file(file_url, self.output_folder, remove_zip)\n",
+  "history_output" : "",
+  "history_begin_time" : 1646138095823,
+  "history_end_time" : 1646138096002,
+  "history_notes" : null,
+  "history_process" : "jonz77",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "20de86cqna5",
+  "history_input" : "from pathlib import Path\nimport urllib.request\nimport zipfile\n\nfrom src_exporters_base import BaseExporter\n\n\nclass GeoWikiExporter(BaseExporter):\n    r\"\"\"\n    Download the GeoWiki labels\n    \"\"\"\n\n    dataset = \"geowiki_landcover_2017\"\n\n    download_urls = [\n        \"http://store.pangaea.de/Publications/See_2017/crop_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_exp.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all_2.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_exp.zip\",\n    ]\n\n    @staticmethod\n    def download_file(url: str, output_folder: Path, remove_zip: bool = True) -> None:\n\n        filename = url.split(\"/\")[-1]\n        output_path = output_folder / filename\n\n        if output_path.exists():\n            print(f\"{filename} already exists! Skipping\")\n            return None\n\n        print(f\"Downloading {url}\")\n        urllib.request.urlretrieve(url, output_path)\n\n        if filename.endswith(\"zip\"):\n\n            print(f\"Downloaded! Unzipping to {output_folder}\")\n            with zipfile.ZipFile(output_path, \"r\") as zip_file:\n                zip_file.extractall(output_folder)\n\n            if remove_zip:\n                print(\"Deleting zip file\")\n                (output_path).unlink()\n\n    def export(self, remove_zip: bool = False) -> None:\n        r\"\"\"\n        Download the GeoWiki labels\n        :param remove_zip: Whether to remove the zip file once it has been expanded\n        \"\"\"\n        for file_url in self.download_urls:\n            self.download_file(file_url, self.output_folder, remove_zip)\n",
+  "history_output" : "",
+  "history_begin_time" : 1646137781490,
+  "history_end_time" : 1646137781728,
+  "history_notes" : null,
+  "history_process" : "jonz77",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "587egdq7zko",
+  "history_input" : "from pathlib import Path\nimport urllib.request\nimport zipfile\n\nfrom src_exporters_base import BaseExporter\n\n\nclass GeoWikiExporter(BaseExporter):\n    r\"\"\"\n    Download the GeoWiki labels\n    \"\"\"\n\n    dataset = \"geowiki_landcover_2017\"\n\n    download_urls = [\n        \"http://store.pangaea.de/Publications/See_2017/crop_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_exp.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all_2.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_exp.zip\",\n    ]\n\n    @staticmethod\n    def download_file(url: str, output_folder: Path, remove_zip: bool = True) -> None:\n\n        filename = url.split(\"/\")[-1]\n        output_path = output_folder / filename\n\n        if output_path.exists():\n            print(f\"{filename} already exists! Skipping\")\n            return None\n\n        print(f\"Downloading {url}\")\n        urllib.request.urlretrieve(url, output_path)\n\n        if filename.endswith(\"zip\"):\n\n            print(f\"Downloaded! Unzipping to {output_folder}\")\n            with zipfile.ZipFile(output_path, \"r\") as zip_file:\n                zip_file.extractall(output_folder)\n\n            if remove_zip:\n                print(\"Deleting zip file\")\n                (output_path).unlink()\n\n    def export(self, remove_zip: bool = False) -> None:\n        r\"\"\"\n        Download the GeoWiki labels\n        :param remove_zip: Whether to remove the zip file once it has been expanded\n        \"\"\"\n        for file_url in self.download_urls:\n            self.download_file(file_url, self.output_folder, remove_zip)\n",
+  "history_output" : "",
+  "history_begin_time" : 1646137684194,
+  "history_end_time" : 1646137684352,
+  "history_notes" : null,
+  "history_process" : "jonz77",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "28y792wepyk",
+  "history_input" : "from pathlib import Path\nimport urllib.request\nimport zipfile\n\nfrom src_exporters_base import BaseExporter\n\n\nclass GeoWikiExporter(BaseExporter):\n    r\"\"\"\n    Download the GeoWiki labels\n    \"\"\"\n\n    dataset = \"geowiki_landcover_2017\"\n\n    download_urls = [\n        \"http://store.pangaea.de/Publications/See_2017/crop_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_exp.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all_2.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_exp.zip\",\n    ]\n\n    @staticmethod\n    def download_file(url: str, output_folder: Path, remove_zip: bool = True) -> None:\n\n        filename = url.split(\"/\")[-1]\n        output_path = output_folder / filename\n\n        if output_path.exists():\n            print(f\"{filename} already exists! Skipping\")\n            return None\n\n        print(f\"Downloading {url}\")\n        urllib.request.urlretrieve(url, output_path)\n\n        if filename.endswith(\"zip\"):\n\n            print(f\"Downloaded! Unzipping to {output_folder}\")\n            with zipfile.ZipFile(output_path, \"r\") as zip_file:\n                zip_file.extractall(output_folder)\n\n            if remove_zip:\n                print(\"Deleting zip file\")\n                (output_path).unlink()\n\n    def export(self, remove_zip: bool = False) -> None:\n        r\"\"\"\n        Download the GeoWiki labels\n        :param remove_zip: Whether to remove the zip file once it has been expanded\n        \"\"\"\n        for file_url in self.download_urls:\n            self.download_file(file_url, self.output_folder, remove_zip)\n",
+  "history_output" : "",
+  "history_begin_time" : 1646137574113,
+  "history_end_time" : 1646137574291,
+  "history_notes" : null,
+  "history_process" : "jonz77",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "no71a7z8231",
+  "history_input" : "from pathlib import Path\nimport urllib.request\nimport zipfile\n\nfrom src_exporters_base import BaseExporter\n\n\nclass GeoWikiExporter(BaseExporter):\n    r\"\"\"\n    Download the GeoWiki labels\n    \"\"\"\n\n    dataset = \"geowiki_landcover_2017\"\n\n    download_urls = [\n        \"http://store.pangaea.de/Publications/See_2017/crop_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_exp.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all_2.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_exp.zip\",\n    ]\n\n    @staticmethod\n    def download_file(url: str, output_folder: Path, remove_zip: bool = True) -> None:\n\n        filename = url.split(\"/\")[-1]\n        output_path = output_folder / filename\n\n        if output_path.exists():\n            print(f\"{filename} already exists! Skipping\")\n            return None\n\n        print(f\"Downloading {url}\")\n        urllib.request.urlretrieve(url, output_path)\n\n        if filename.endswith(\"zip\"):\n\n            print(f\"Downloaded! Unzipping to {output_folder}\")\n            with zipfile.ZipFile(output_path, \"r\") as zip_file:\n                zip_file.extractall(output_folder)\n\n            if remove_zip:\n                print(\"Deleting zip file\")\n                (output_path).unlink()\n\n    def export(self, remove_zip: bool = False) -> None:\n        r\"\"\"\n        Download the GeoWiki labels\n        :param remove_zip: Whether to remove the zip file once it has been expanded\n        \"\"\"\n        for file_url in self.download_urls:\n            self.download_file(file_url, self.output_folder, remove_zip)\n",
+  "history_output" : "",
+  "history_begin_time" : 1646112831768,
+  "history_end_time" : 1646112831926,
+  "history_notes" : null,
+  "history_process" : "jonz77",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "w7hqj22e2r0",
+  "history_input" : "from pathlib import Path\nimport urllib.request\nimport zipfile\n\nfrom src_exporters_base import BaseExporter\n\n\nclass GeoWikiExporter(BaseExporter):\n    r\"\"\"\n    Download the GeoWiki labels\n    \"\"\"\n\n    dataset = \"geowiki_landcover_2017\"\n\n    download_urls = [\n        \"http://store.pangaea.de/Publications/See_2017/crop_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_exp.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all_2.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_exp.zip\",\n    ]\n\n    @staticmethod\n    def download_file(url: str, output_folder: Path, remove_zip: bool = True) -> None:\n\n        filename = url.split(\"/\")[-1]\n        output_path = output_folder / filename\n\n        if output_path.exists():\n            print(f\"{filename} already exists! Skipping\")\n            return None\n\n        print(f\"Downloading {url}\")\n        urllib.request.urlretrieve(url, output_path)\n\n        if filename.endswith(\"zip\"):\n\n            print(f\"Downloaded! Unzipping to {output_folder}\")\n            with zipfile.ZipFile(output_path, \"r\") as zip_file:\n                zip_file.extractall(output_folder)\n\n            if remove_zip:\n                print(\"Deleting zip file\")\n                (output_path).unlink()\n\n    def export(self, remove_zip: bool = False) -> None:\n        r\"\"\"\n        Download the GeoWiki labels\n        :param remove_zip: Whether to remove the zip file once it has been expanded\n        \"\"\"\n        for file_url in self.download_urls:\n            self.download_file(file_url, self.output_folder, remove_zip)\n",
+  "history_output" : "",
+  "history_begin_time" : 1646112722389,
+  "history_end_time" : 1646112722693,
+  "history_notes" : null,
+  "history_process" : "jonz77",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "666507mgf6o",
+  "history_input" : "from pathlib import Path\nimport urllib.request\nimport zipfile\n\nfrom src_exporters_base import BaseExporter\n\n\nclass GeoWikiExporter(BaseExporter):\n    r\"\"\"\n    Download the GeoWiki labels\n    \"\"\"\n\n    dataset = \"geowiki_landcover_2017\"\n\n    download_urls = [\n        \"http://store.pangaea.de/Publications/See_2017/crop_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_exp.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all_2.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_exp.zip\",\n    ]\n\n    @staticmethod\n    def download_file(url: str, output_folder: Path, remove_zip: bool = True) -> None:\n\n        filename = url.split(\"/\")[-1]\n        output_path = output_folder / filename\n\n        if output_path.exists():\n            print(f\"{filename} already exists! Skipping\")\n            return None\n\n        print(f\"Downloading {url}\")\n        urllib.request.urlretrieve(url, output_path)\n\n        if filename.endswith(\"zip\"):\n\n            print(f\"Downloaded! Unzipping to {output_folder}\")\n            with zipfile.ZipFile(output_path, \"r\") as zip_file:\n                zip_file.extractall(output_folder)\n\n            if remove_zip:\n                print(\"Deleting zip file\")\n                (output_path).unlink()\n\n    def export(self, remove_zip: bool = False) -> None:\n        r\"\"\"\n        Download the GeoWiki labels\n        :param remove_zip: Whether to remove the zip file once it has been expanded\n        \"\"\"\n        for file_url in self.download_urls:\n            self.download_file(file_url, self.output_folder, remove_zip)\n",
+  "history_output" : "",
+  "history_begin_time" : 1646112276461,
+  "history_end_time" : 1646112276651,
+  "history_notes" : null,
+  "history_process" : "jonz77",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "0m9eyux3j5d",
+  "history_input" : "from pathlib import Path\nimport urllib.request\nimport zipfile\n\nfrom src_exporters_base import BaseExporter\n\n\nclass GeoWikiExporter(BaseExporter):\n    r\"\"\"\n    Download the GeoWiki labels\n    \"\"\"\n\n    dataset = \"geowiki_landcover_2017\"\n\n    download_urls = [\n        \"http://store.pangaea.de/Publications/See_2017/crop_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_exp.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all_2.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_exp.zip\",\n    ]\n\n    @staticmethod\n    def download_file(url: str, output_folder: Path, remove_zip: bool = True) -> None:\n\n        filename = url.split(\"/\")[-1]\n        output_path = output_folder / filename\n\n        if output_path.exists():\n            print(f\"{filename} already exists! Skipping\")\n            return None\n\n        print(f\"Downloading {url}\")\n        urllib.request.urlretrieve(url, output_path)\n\n        if filename.endswith(\"zip\"):\n\n            print(f\"Downloaded! Unzipping to {output_folder}\")\n            with zipfile.ZipFile(output_path, \"r\") as zip_file:\n                zip_file.extractall(output_folder)\n\n            if remove_zip:\n                print(\"Deleting zip file\")\n                (output_path).unlink()\n\n    def export(self, remove_zip: bool = False) -> None:\n        r\"\"\"\n        Download the GeoWiki labels\n        :param remove_zip: Whether to remove the zip file once it has been expanded\n        \"\"\"\n        for file_url in self.download_urls:\n            self.download_file(file_url, self.output_folder, remove_zip)\n",
+  "history_output" : "",
+  "history_begin_time" : 1646112239351,
+  "history_end_time" : 1646112239493,
+  "history_notes" : null,
+  "history_process" : "jonz77",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "pcgdgzeh7nz",
+  "history_input" : "from pathlib import Path\nimport urllib.request\nimport zipfile\n\nfrom src_exporters_base import BaseExporter\n\n\nclass GeoWikiExporter(BaseExporter):\n    r\"\"\"\n    Download the GeoWiki labels\n    \"\"\"\n\n    dataset = \"geowiki_landcover_2017\"\n\n    download_urls = [\n        \"http://store.pangaea.de/Publications/See_2017/crop_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_exp.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all_2.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_exp.zip\",\n    ]\n\n    @staticmethod\n    def download_file(url: str, output_folder: Path, remove_zip: bool = True) -> None:\n\n        filename = url.split(\"/\")[-1]\n        output_path = output_folder / filename\n\n        if output_path.exists():\n            print(f\"{filename} already exists! Skipping\")\n            return None\n\n        print(f\"Downloading {url}\")\n        urllib.request.urlretrieve(url, output_path)\n\n        if filename.endswith(\"zip\"):\n\n            print(f\"Downloaded! Unzipping to {output_folder}\")\n            with zipfile.ZipFile(output_path, \"r\") as zip_file:\n                zip_file.extractall(output_folder)\n\n            if remove_zip:\n                print(\"Deleting zip file\")\n                (output_path).unlink()\n\n    def export(self, remove_zip: bool = False) -> None:\n        r\"\"\"\n        Download the GeoWiki labels\n        :param remove_zip: Whether to remove the zip file once it has been expanded\n        \"\"\"\n        for file_url in self.download_urls:\n            self.download_file(file_url, self.output_folder, remove_zip)\n",
+  "history_output" : "",
+  "history_begin_time" : 1646112139732,
+  "history_end_time" : 1646112139891,
+  "history_notes" : null,
+  "history_process" : "jonz77",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "1qtmze3zc1c",
+  "history_input" : "from pathlib import Path\nimport urllib.request\nimport zipfile\n\nfrom src_exporters_base import BaseExporter\n\n\nclass GeoWikiExporter(BaseExporter):\n    r\"\"\"\n    Download the GeoWiki labels\n    \"\"\"\n\n    dataset = \"geowiki_landcover_2017\"\n\n    download_urls = [\n        \"http://store.pangaea.de/Publications/See_2017/crop_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_exp.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all_2.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_exp.zip\",\n    ]\n\n    @staticmethod\n    def download_file(url: str, output_folder: Path, remove_zip: bool = True) -> None:\n\n        filename = url.split(\"/\")[-1]\n        output_path = output_folder / filename\n\n        if output_path.exists():\n            print(f\"{filename} already exists! Skipping\")\n            return None\n\n        print(f\"Downloading {url}\")\n        urllib.request.urlretrieve(url, output_path)\n\n        if filename.endswith(\"zip\"):\n\n            print(f\"Downloaded! Unzipping to {output_folder}\")\n            with zipfile.ZipFile(output_path, \"r\") as zip_file:\n                zip_file.extractall(output_folder)\n\n            if remove_zip:\n                print(\"Deleting zip file\")\n                (output_path).unlink()\n\n    def export(self, remove_zip: bool = False) -> None:\n        r\"\"\"\n        Download the GeoWiki labels\n        :param remove_zip: Whether to remove the zip file once it has been expanded\n        \"\"\"\n        for file_url in self.download_urls:\n            self.download_file(file_url, self.output_folder, remove_zip)\n",
+  "history_output" : "",
+  "history_begin_time" : 1645393669019,
+  "history_end_time" : 1645393669177,
+  "history_notes" : null,
+  "history_process" : "jonz77",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "iwv3igjnfru",
+  "history_input" : "from pathlib import Path\nimport urllib.request\nimport zipfile\n\nfrom src_exporters_base import BaseExporter\n\n\nclass GeoWikiExporter(BaseExporter):\n    r\"\"\"\n    Download the GeoWiki labels\n    \"\"\"\n\n    dataset = \"geowiki_landcover_2017\"\n\n    download_urls = [\n        \"http://store.pangaea.de/Publications/See_2017/crop_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_exp.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all_2.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_exp.zip\",\n    ]\n\n    @staticmethod\n    def download_file(url: str, output_folder: Path, remove_zip: bool = True) -> None:\n\n        filename = url.split(\"/\")[-1]\n        output_path = output_folder / filename\n\n        if output_path.exists():\n            print(f\"{filename} already exists! Skipping\")\n            return None\n\n        print(f\"Downloading {url}\")\n        urllib.request.urlretrieve(url, output_path)\n\n        if filename.endswith(\"zip\"):\n\n            print(f\"Downloaded! Unzipping to {output_folder}\")\n            with zipfile.ZipFile(output_path, \"r\") as zip_file:\n                zip_file.extractall(output_folder)\n\n            if remove_zip:\n                print(\"Deleting zip file\")\n                (output_path).unlink()\n\n    def export(self, remove_zip: bool = False) -> None:\n        r\"\"\"\n        Download the GeoWiki labels\n        :param remove_zip: Whether to remove the zip file once it has been expanded\n        \"\"\"\n        for file_url in self.download_urls:\n            self.download_file(file_url, self.output_folder, remove_zip)\n",
+  "history_output" : "",
+  "history_begin_time" : 1645389119452,
+  "history_end_time" : 1645389119699,
+  "history_notes" : null,
+  "history_process" : "jonz77",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "3031oviqgai",
+  "history_input" : "from pathlib import Path\nimport urllib.request\nimport zipfile\n\nfrom src_exporters_base import BaseExporter\n\n\nclass GeoWikiExporter(BaseExporter):\n    r\"\"\"\n    Download the GeoWiki labels\n    \"\"\"\n\n    dataset = \"geowiki_landcover_2017\"\n\n    download_urls = [\n        \"http://store.pangaea.de/Publications/See_2017/crop_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_exp.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all_2.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_exp.zip\",\n    ]\n\n    @staticmethod\n    def download_file(url: str, output_folder: Path, remove_zip: bool = True) -> None:\n\n        filename = url.split(\"/\")[-1]\n        output_path = output_folder / filename\n\n        if output_path.exists():\n            print(f\"{filename} already exists! Skipping\")\n            return None\n\n        print(f\"Downloading {url}\")\n        urllib.request.urlretrieve(url, output_path)\n\n        if filename.endswith(\"zip\"):\n\n            print(f\"Downloaded! Unzipping to {output_folder}\")\n            with zipfile.ZipFile(output_path, \"r\") as zip_file:\n                zip_file.extractall(output_folder)\n\n            if remove_zip:\n                print(\"Deleting zip file\")\n                (output_path).unlink()\n\n    def export(self, remove_zip: bool = False) -> None:\n        r\"\"\"\n        Download the GeoWiki labels\n        :param remove_zip: Whether to remove the zip file once it has been expanded\n        \"\"\"\n        for file_url in self.download_urls:\n            self.download_file(file_url, self.output_folder, remove_zip)\n",
+  "history_output" : "",
+  "history_begin_time" : 1645389107532,
+  "history_end_time" : 1645389107743,
+  "history_notes" : null,
+  "history_process" : "jonz77",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "f7w5ehm8cq1",
+  "history_input" : "from pathlib import Path\nimport urllib.request\nimport zipfile\n\nfrom src_exporters_base import BaseExporter\n\n\nclass GeoWikiExporter(BaseExporter):\n    r\"\"\"\n    Download the GeoWiki labels\n    \"\"\"\n\n    dataset = \"geowiki_landcover_2017\"\n\n    download_urls = [\n        \"http://store.pangaea.de/Publications/See_2017/crop_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_exp.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all_2.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_exp.zip\",\n    ]\n\n    @staticmethod\n    def download_file(url: str, output_folder: Path, remove_zip: bool = True) -> None:\n\n        filename = url.split(\"/\")[-1]\n        output_path = output_folder / filename\n\n        if output_path.exists():\n            print(f\"{filename} already exists! Skipping\")\n            return None\n\n        print(f\"Downloading {url}\")\n        urllib.request.urlretrieve(url, output_path)\n\n        if filename.endswith(\"zip\"):\n\n            print(f\"Downloaded! Unzipping to {output_folder}\")\n            with zipfile.ZipFile(output_path, \"r\") as zip_file:\n                zip_file.extractall(output_folder)\n\n            if remove_zip:\n                print(\"Deleting zip file\")\n                (output_path).unlink()\n\n    def export(self, remove_zip: bool = False) -> None:\n        r\"\"\"\n        Download the GeoWiki labels\n        :param remove_zip: Whether to remove the zip file once it has been expanded\n        \"\"\"\n        for file_url in self.download_urls:\n            self.download_file(file_url, self.output_folder, remove_zip)\n",
+  "history_output" : "",
+  "history_begin_time" : 1645388787936,
+  "history_end_time" : 1645388788175,
+  "history_notes" : null,
+  "history_process" : "jonz77",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "bfl7fhll5py",
+  "history_input" : "from pathlib import Path\nimport urllib.request\nimport zipfile\n\nfrom src_exporters_base import BaseExporter\n\n\nclass GeoWikiExporter(BaseExporter):\n    r\"\"\"\n    Download the GeoWiki labels\n    \"\"\"\n\n    dataset = \"geowiki_landcover_2017\"\n\n    download_urls = [\n        \"http://store.pangaea.de/Publications/See_2017/crop_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_exp.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all_2.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_exp.zip\",\n    ]\n\n    @staticmethod\n    def download_file(url: str, output_folder: Path, remove_zip: bool = True) -> None:\n\n        filename = url.split(\"/\")[-1]\n        output_path = output_folder / filename\n\n        if output_path.exists():\n            print(f\"{filename} already exists! Skipping\")\n            return None\n\n        print(f\"Downloading {url}\")\n        urllib.request.urlretrieve(url, output_path)\n\n        if filename.endswith(\"zip\"):\n\n            print(f\"Downloaded! Unzipping to {output_folder}\")\n            with zipfile.ZipFile(output_path, \"r\") as zip_file:\n                zip_file.extractall(output_folder)\n\n            if remove_zip:\n                print(\"Deleting zip file\")\n                (output_path).unlink()\n\n    def export(self, remove_zip: bool = False) -> None:\n        r\"\"\"\n        Download the GeoWiki labels\n        :param remove_zip: Whether to remove the zip file once it has been expanded\n        \"\"\"\n        for file_url in self.download_urls:\n            self.download_file(file_url, self.output_folder, remove_zip)\n",
+  "history_output" : "",
+  "history_begin_time" : 1645232744277,
+  "history_end_time" : 1645232744694,
+  "history_notes" : null,
+  "history_process" : "jonz77",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "jgviex1lowr",
+  "history_input" : "from pathlib import Path\nimport urllib.request\nimport zipfile\n\nfrom src_exporters_base import BaseExporter\n\n\nclass GeoWikiExporter(BaseExporter):\n    r\"\"\"\n    Download the GeoWiki labels\n    \"\"\"\n\n    dataset = \"geowiki_landcover_2017\"\n\n    download_urls = [\n        \"http://store.pangaea.de/Publications/See_2017/crop_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_exp.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all_2.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_exp.zip\",\n    ]\n\n    @staticmethod\n    def download_file(url: str, output_folder: Path, remove_zip: bool = True) -> None:\n\n        filename = url.split(\"/\")[-1]\n        output_path = output_folder / filename\n\n        if output_path.exists():\n            print(f\"{filename} already exists! Skipping\")\n            return None\n\n        print(f\"Downloading {url}\")\n        urllib.request.urlretrieve(url, output_path)\n\n        if filename.endswith(\"zip\"):\n\n            print(f\"Downloaded! Unzipping to {output_folder}\")\n            with zipfile.ZipFile(output_path, \"r\") as zip_file:\n                zip_file.extractall(output_folder)\n\n            if remove_zip:\n                print(\"Deleting zip file\")\n                (output_path).unlink()\n\n    def export(self, remove_zip: bool = False) -> None:\n        r\"\"\"\n        Download the GeoWiki labels\n        :param remove_zip: Whether to remove the zip file once it has been expanded\n        \"\"\"\n        for file_url in self.download_urls:\n            self.download_file(file_url, self.output_folder, remove_zip)\n",
+  "history_output" : "",
+  "history_begin_time" : 1645232742122,
+  "history_end_time" : 1645232742384,
+  "history_notes" : null,
+  "history_process" : "jonz77",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "ta1MMu13ldga",
+  "history_input" : "# Write first python in Geoweaverfrom pathlib import Path\nimport urllib.request\nimport zipfile\n\nfrom src_exporters_base import BaseExporter\n\n\nclass GeoWikiExporter(BaseExporter):\n    r\"\"\"\n    Download the GeoWiki labels\n    \"\"\"\n\n    dataset = \"geowiki_landcover_2017\"\n\n    download_urls = [\n        \"http://store.pangaea.de/Publications/See_2017/crop_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_exp.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all_2.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_exp.zip\",\n    ]\n\n    @staticmethod\n    def download_file(url: str, output_folder: Path, remove_zip: bool = True) -> None:\n\n        filename = url.split(\"/\")[-1]\n        output_path = output_folder / filename\n\n        if output_path.exists():\n            print(f\"{filename} already exists! Skipping\")\n            return None\n\n        print(f\"Downloading {url}\")\n        urllib.request.urlretrieve(url, output_path)\n\n        if filename.endswith(\"zip\"):\n\n            print(f\"Downloaded! Unzipping to {output_folder}\")\n            with zipfile.ZipFile(output_path, \"r\") as zip_file:\n                zip_file.extractall(output_folder)\n\n            if remove_zip:\n                print(\"Deleting zip file\")\n                (output_path).unlink()\n\n    def export(self, remove_zip: bool = False) -> None:\n        r\"\"\"\n        Download the GeoWiki labels\n        :param remove_zip: Whether to remove the zip file once it has been expanded\n        \"\"\"\n        for file_url in self.download_urls:\n            self.download_file(file_url, self.output_folder, remove_zip)\n",
+  "history_output" : "Traceback (most recent call last):\n  File \"src_exporters_geowiki.py\", line 8, in <module>\n    class GeoWikiExporter(BaseExporter):\n  File \"src_exporters_geowiki.py\", line 26, in GeoWikiExporter\n    def download_file(url: str, output_folder: Path, remove_zip: bool = True) -> None:\nNameError: name 'Path' is not defined\n",
+  "history_begin_time" : 1645228829862,
+  "history_end_time" : 1645228829972,
+  "history_notes" : null,
+  "history_process" : "jonz77",
+  "host_id" : null,
+  "indicator" : "Done"
+},{
+  "history_id" : "G83ru7ql2OMX",
+  "history_input" : "# Write first python in Geoweaverfrom pathlib import Path\nimport urllib.request\nimport zipfile\n\nfrom src_exporters_base import BaseExporter\n\n\nclass GeoWikiExporter(BaseExporter):\n    r\"\"\"\n    Download the GeoWiki labels\n    \"\"\"\n\n    dataset = \"geowiki_landcover_2017\"\n\n    download_urls = [\n        \"http://store.pangaea.de/Publications/See_2017/crop_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/crop_exp.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_all_2.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_con.zip\",\n        \"http://store.pangaea.de/Publications/See_2017/loc_exp.zip\",\n    ]\n\n    @staticmethod\n    def download_file(url: str, output_folder: Path, remove_zip: bool = True) -> None:\n\n        filename = url.split(\"/\")[-1]\n        output_path = output_folder / filename\n\n        if output_path.exists():\n            print(f\"{filename} already exists! Skipping\")\n            return None\n\n        print(f\"Downloading {url}\")\n        urllib.request.urlretrieve(url, output_path)\n\n        if filename.endswith(\"zip\"):\n\n            print(f\"Downloaded! Unzipping to {output_folder}\")\n            with zipfile.ZipFile(output_path, \"r\") as zip_file:\n                zip_file.extractall(output_folder)\n\n            if remove_zip:\n                print(\"Deleting zip file\")\n                (output_path).unlink()\n\n    def export(self, remove_zip: bool = False) -> None:\n        r\"\"\"\n        Download the GeoWiki labels\n        :param remove_zip: Whether to remove the zip file once it has been expanded\n        \"\"\"\n        for file_url in self.download_urls:\n            self.download_file(file_url, self.output_folder, remove_zip)\n",
+  "history_output" : "Traceback (most recent call last):\n  File \"src_exporters_geowiki.py\", line 8, in <module>\n    class GeoWikiExporter(BaseExporter):\n  File \"src_exporters_geowiki.py\", line 26, in GeoWikiExporter\n    def download_file(url: str, output_folder: Path, remove_zip: bool = True) -> None:\nNameError: name 'Path' is not defined\n",
+  "history_begin_time" : 1645228797239,
+  "history_end_time" : 1645228797355,
+  "history_notes" : null,
+  "history_process" : "jonz77",
+  "host_id" : null,
+  "indicator" : "Done"
+},]

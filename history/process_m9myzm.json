@@ -1,0 +1,641 @@
+[{
+  "history_id" : "6lhqus0zvfz",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666167825369,
+  "history_end_time" : 1666167825369,
+  "history_notes" : null,
+  "history_process" : "m9myzm",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "r70m3y8l3f0",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666167772347,
+  "history_end_time" : 1666167772347,
+  "history_notes" : null,
+  "history_process" : "m9myzm",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "0fz1s86ezek",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666166465601,
+  "history_end_time" : 1666166465601,
+  "history_notes" : null,
+  "history_process" : "m9myzm",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "ayb7y3w5zn4",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666166410273,
+  "history_end_time" : 1666166419944,
+  "history_notes" : null,
+  "history_process" : "m9myzm",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "3cf24trs1yr",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666164233088,
+  "history_end_time" : 1666164233088,
+  "history_notes" : null,
+  "history_process" : "m9myzm",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "9v43sk0dlgf",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666163607300,
+  "history_end_time" : 1666163607300,
+  "history_notes" : null,
+  "history_process" : "m9myzm",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "yx8oknccej9",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666137012949,
+  "history_end_time" : 1666137012949,
+  "history_notes" : null,
+  "history_process" : "m9myzm",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "zsoc2sj29ac",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666136593506,
+  "history_end_time" : 1666136593506,
+  "history_notes" : null,
+  "history_process" : "m9myzm",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "yu5bz3neeuq",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666136435794,
+  "history_end_time" : 1666136435794,
+  "history_notes" : null,
+  "history_process" : "m9myzm",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "p2w4lxvn4ns",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666134110772,
+  "history_end_time" : 1666134110772,
+  "history_notes" : null,
+  "history_process" : "m9myzm",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "tsx3m6nv7jk",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666134036925,
+  "history_end_time" : 1666134036925,
+  "history_notes" : null,
+  "history_process" : "m9myzm",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "4321eofvbd8",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666134008979,
+  "history_end_time" : 1666134008979,
+  "history_notes" : null,
+  "history_process" : "m9myzm",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "18cqr3namep",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666131993201,
+  "history_end_time" : 1666131993201,
+  "history_notes" : null,
+  "history_process" : "m9myzm",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "j45tggog637",
+  "history_input" : "import geopandas\nimport pandas as pd\nimport numpy as np\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaPVProcessor(BaseProcessor):\n    dataset = \"plant_village_kenya\"\n\n    def process(self) -> None:\n\n        subfolders = [f\"ref_african_crops_kenya_01_labels_0{i}\" for i in [0, 1, 2]]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for subfolder in subfolders:\n            df = geopandas.read_file(\n                self.raw_folder / \"ref_african_crops_kenya_01_labels\" / subfolder / \"labels.geojson\"\n            )\n            df = df.rename(\n                columns={\n                    \"Latitude\": \"lat\",\n                    \"Longitude\": \"lon\",\n                    \"Planting Date\": \"planting_date\",\n                    \"Estimated Harvest Date\": \"harvest_date\",\n                    \"Crop1\": \"label\",\n                    \"Survey Date\": \"collection_date\",\n                }\n            )\n            df[\"planting_date\"] = pd.to_datetime(df[\"planting_date\"]).dt.to_pydatetime()\n            df[\"harvest_date\"] = pd.to_datetime(df[\"harvest_date\"]).dt.to_pydatetime()\n            df[\"collection_date\"] = pd.to_datetime(df[\"collection_date\"]).dt.to_pydatetime()\n            df[\"is_crop\"] = np.where((df[\"label\"] == \"Fallowland\"), 0, 1)\n            df = df.to_crs(\"EPSG:4326\")\n            dfs.append(df)\n\n        df = pd.concat(dfs)\n        df = df.reset_index(drop=True)\n        df[\"index\"] = df.index\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1666118291852,
+  "history_end_time" : 1666118292882,
+  "history_notes" : null,
+  "history_process" : "m9myzm",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "9co08zp6sna",
+  "history_input" : "import geopandas\nimport pandas as pd\nimport numpy as np\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaPVProcessor(BaseProcessor):\n    dataset = \"plant_village_kenya\"\n\n    def process(self) -> None:\n\n        subfolders = [f\"ref_african_crops_kenya_01_labels_0{i}\" for i in [0, 1, 2]]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for subfolder in subfolders:\n            df = geopandas.read_file(\n                self.raw_folder / \"ref_african_crops_kenya_01_labels\" / subfolder / \"labels.geojson\"\n            )\n            df = df.rename(\n                columns={\n                    \"Latitude\": \"lat\",\n                    \"Longitude\": \"lon\",\n                    \"Planting Date\": \"planting_date\",\n                    \"Estimated Harvest Date\": \"harvest_date\",\n                    \"Crop1\": \"label\",\n                    \"Survey Date\": \"collection_date\",\n                }\n            )\n            df[\"planting_date\"] = pd.to_datetime(df[\"planting_date\"]).dt.to_pydatetime()\n            df[\"harvest_date\"] = pd.to_datetime(df[\"harvest_date\"]).dt.to_pydatetime()\n            df[\"collection_date\"] = pd.to_datetime(df[\"collection_date\"]).dt.to_pydatetime()\n            df[\"is_crop\"] = np.where((df[\"label\"] == \"Fallowland\"), 0, 1)\n            df = df.to_crs(\"EPSG:4326\")\n            dfs.append(df)\n\n        df = pd.concat(dfs)\n        df = df.reset_index(drop=True)\n        df[\"index\"] = df.index\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1655909889274,
+  "history_end_time" : 1655909890684,
+  "history_notes" : null,
+  "history_process" : "m9myzm",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "zc5n2b1t566",
+  "history_input" : "import geopandas\nimport pandas as pd\nimport numpy as np\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaPVProcessor(BaseProcessor):\n    dataset = \"plant_village_kenya\"\n\n    def process(self) -> None:\n\n        subfolders = [f\"ref_african_crops_kenya_01_labels_0{i}\" for i in [0, 1, 2]]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for subfolder in subfolders:\n            df = geopandas.read_file(\n                self.raw_folder / \"ref_african_crops_kenya_01_labels\" / subfolder / \"labels.geojson\"\n            )\n            df = df.rename(\n                columns={\n                    \"Latitude\": \"lat\",\n                    \"Longitude\": \"lon\",\n                    \"Planting Date\": \"planting_date\",\n                    \"Estimated Harvest Date\": \"harvest_date\",\n                    \"Crop1\": \"label\",\n                    \"Survey Date\": \"collection_date\",\n                }\n            )\n            df[\"planting_date\"] = pd.to_datetime(df[\"planting_date\"]).dt.to_pydatetime()\n            df[\"harvest_date\"] = pd.to_datetime(df[\"harvest_date\"]).dt.to_pydatetime()\n            df[\"collection_date\"] = pd.to_datetime(df[\"collection_date\"]).dt.to_pydatetime()\n            df[\"is_crop\"] = np.where((df[\"label\"] == \"Fallowland\"), 0, 1)\n            df = df.to_crs(\"EPSG:4326\")\n            dfs.append(df)\n\n        df = pd.concat(dfs)\n        df = df.reset_index(drop=True)\n        df[\"index\"] = df.index\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "Traceback (most recent call last):\n  File \"src_processors_pv_kenya.py\", line 1, in <module>\n    import geopandas\n  File \"/opt/anaconda3/lib/python3.8/site-packages/geopandas/__init__.py\", line 1, in <module>\n    from geopandas._config import options  # noqa\n  File \"/opt/anaconda3/lib/python3.8/site-packages/geopandas/_config.py\", line 109, in <module>\n    default_value=_default_use_pygeos(),\n  File \"/opt/anaconda3/lib/python3.8/site-packages/geopandas/_config.py\", line 95, in _default_use_pygeos\n    import geopandas._compat as compat\n  File \"/opt/anaconda3/lib/python3.8/site-packages/geopandas/_compat.py\", line 227, in <module>\n    PYPROJ_LT_3 = LooseVersion(pyproj.__version__) < LooseVersion(\"3\")\nAttributeError: module 'pyproj' has no attribute '__version__'\n",
+  "history_begin_time" : 1655908842498,
+  "history_end_time" : 1655908843305,
+  "history_notes" : null,
+  "history_process" : "m9myzm",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "gl0zs8yjfgm",
+  "history_input" : "import geopandas\nimport pandas as pd\nimport numpy as np\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaPVProcessor(BaseProcessor):\n    dataset = \"plant_village_kenya\"\n\n    def process(self) -> None:\n\n        subfolders = [f\"ref_african_crops_kenya_01_labels_0{i}\" for i in [0, 1, 2]]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for subfolder in subfolders:\n            df = geopandas.read_file(\n                self.raw_folder / \"ref_african_crops_kenya_01_labels\" / subfolder / \"labels.geojson\"\n            )\n            df = df.rename(\n                columns={\n                    \"Latitude\": \"lat\",\n                    \"Longitude\": \"lon\",\n                    \"Planting Date\": \"planting_date\",\n                    \"Estimated Harvest Date\": \"harvest_date\",\n                    \"Crop1\": \"label\",\n                    \"Survey Date\": \"collection_date\",\n                }\n            )\n            df[\"planting_date\"] = pd.to_datetime(df[\"planting_date\"]).dt.to_pydatetime()\n            df[\"harvest_date\"] = pd.to_datetime(df[\"harvest_date\"]).dt.to_pydatetime()\n            df[\"collection_date\"] = pd.to_datetime(df[\"collection_date\"]).dt.to_pydatetime()\n            df[\"is_crop\"] = np.where((df[\"label\"] == \"Fallowland\"), 0, 1)\n            df = df.to_crs(\"EPSG:4326\")\n            dfs.append(df)\n\n        df = pd.concat(dfs)\n        df = df.reset_index(drop=True)\n        df[\"index\"] = df.index\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "Traceback (most recent call last):\n  File \"src_processors_pv_kenya.py\", line 1, in <module>\n    import geopandas\n  File \"/opt/anaconda3/lib/python3.8/site-packages/geopandas/__init__.py\", line 1, in <module>\n    from geopandas._config import options  # noqa\n  File \"/opt/anaconda3/lib/python3.8/site-packages/geopandas/_config.py\", line 109, in <module>\n    default_value=_default_use_pygeos(),\n  File \"/opt/anaconda3/lib/python3.8/site-packages/geopandas/_config.py\", line 95, in _default_use_pygeos\n    import geopandas._compat as compat\n  File \"/opt/anaconda3/lib/python3.8/site-packages/geopandas/_compat.py\", line 9, in <module>\n    import pyproj\n  File \"/opt/anaconda3/lib/python3.8/site-packages/pyproj/__init__.py\", line 81, in <module>\n    from pyproj.crs import CRS  # noqa: F401\n  File \"/opt/anaconda3/lib/python3.8/site-packages/pyproj/crs/__init__.py\", line 16, in <module>\n    from pyproj.crs.crs import (  # noqa: F401  pylint: disable=unused-import\n  File \"/opt/anaconda3/lib/python3.8/site-packages/pyproj/crs/crs.py\", line 13, in <module>\n    from pyproj._crs import (\nImportError: cannot import name 'AuthorityMatchInfo' from 'pyproj._crs' (/opt/anaconda3/lib/python3.8/site-packages/pyproj/_crs.cpython-38-darwin.so)\n",
+  "history_begin_time" : 1655907437090,
+  "history_end_time" : 1655907438422,
+  "history_notes" : null,
+  "history_process" : "m9myzm",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "snkxgmdz3aj",
+  "history_input" : "import geopandas\nimport pandas as pd\nimport numpy as np\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaPVProcessor(BaseProcessor):\n    dataset = \"plant_village_kenya\"\n\n    def process(self) -> None:\n\n        subfolders = [f\"ref_african_crops_kenya_01_labels_0{i}\" for i in [0, 1, 2]]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for subfolder in subfolders:\n            df = geopandas.read_file(\n                self.raw_folder / \"ref_african_crops_kenya_01_labels\" / subfolder / \"labels.geojson\"\n            )\n            df = df.rename(\n                columns={\n                    \"Latitude\": \"lat\",\n                    \"Longitude\": \"lon\",\n                    \"Planting Date\": \"planting_date\",\n                    \"Estimated Harvest Date\": \"harvest_date\",\n                    \"Crop1\": \"label\",\n                    \"Survey Date\": \"collection_date\",\n                }\n            )\n            df[\"planting_date\"] = pd.to_datetime(df[\"planting_date\"]).dt.to_pydatetime()\n            df[\"harvest_date\"] = pd.to_datetime(df[\"harvest_date\"]).dt.to_pydatetime()\n            df[\"collection_date\"] = pd.to_datetime(df[\"collection_date\"]).dt.to_pydatetime()\n            df[\"is_crop\"] = np.where((df[\"label\"] == \"Fallowland\"), 0, 1)\n            df = df.to_crs(\"EPSG:4326\")\n            dfs.append(df)\n\n        df = pd.concat(dfs)\n        df = df.reset_index(drop=True)\n        df[\"index\"] = df.index\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "Traceback (most recent call last):\n  File \"src_processors_pv_kenya.py\", line 1, in <module>\n    import geopandas\nModuleNotFoundError: No module named 'geopandas'\n",
+  "history_begin_time" : 1655865870859,
+  "history_end_time" : 1655865870997,
+  "history_notes" : null,
+  "history_process" : "m9myzm",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "p4kqrl7yd4t",
+  "history_input" : "import geopandas\nimport pandas as pd\nimport numpy as np\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaPVProcessor(BaseProcessor):\n    dataset = \"plant_village_kenya\"\n\n    def process(self) -> None:\n\n        subfolders = [f\"ref_african_crops_kenya_01_labels_0{i}\" for i in [0, 1, 2]]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for subfolder in subfolders:\n            df = geopandas.read_file(\n                self.raw_folder / \"ref_african_crops_kenya_01_labels\" / subfolder / \"labels.geojson\"\n            )\n            df = df.rename(\n                columns={\n                    \"Latitude\": \"lat\",\n                    \"Longitude\": \"lon\",\n                    \"Planting Date\": \"planting_date\",\n                    \"Estimated Harvest Date\": \"harvest_date\",\n                    \"Crop1\": \"label\",\n                    \"Survey Date\": \"collection_date\",\n                }\n            )\n            df[\"planting_date\"] = pd.to_datetime(df[\"planting_date\"]).dt.to_pydatetime()\n            df[\"harvest_date\"] = pd.to_datetime(df[\"harvest_date\"]).dt.to_pydatetime()\n            df[\"collection_date\"] = pd.to_datetime(df[\"collection_date\"]).dt.to_pydatetime()\n            df[\"is_crop\"] = np.where((df[\"label\"] == \"Fallowland\"), 0, 1)\n            df = df.to_crs(\"EPSG:4326\")\n            dfs.append(df)\n\n        df = pd.concat(dfs)\n        df = df.reset_index(drop=True)\n        df[\"index\"] = df.index\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "Traceback (most recent call last):\n  File \"src_processors_pv_kenya.py\", line 1, in <module>\n    import geopandas\n  File \"/opt/anaconda3/lib/python3.8/site-packages/geopandas/__init__.py\", line 1, in <module>\n    from geopandas._config import options  # noqa\n  File \"/opt/anaconda3/lib/python3.8/site-packages/geopandas/_config.py\", line 109, in <module>\n    default_value=_default_use_pygeos(),\n  File \"/opt/anaconda3/lib/python3.8/site-packages/geopandas/_config.py\", line 95, in _default_use_pygeos\n    import geopandas._compat as compat\n  File \"/opt/anaconda3/lib/python3.8/site-packages/geopandas/_compat.py\", line 9, in <module>\n    import pyproj\n  File \"/opt/anaconda3/lib/python3.8/site-packages/pyproj/__init__.py\", line 81, in <module>\n    from pyproj.crs import CRS  # noqa: F401\n  File \"/opt/anaconda3/lib/python3.8/site-packages/pyproj/crs/__init__.py\", line 16, in <module>\n    from pyproj.crs.crs import (  # noqa: F401  pylint: disable=unused-import\n  File \"/opt/anaconda3/lib/python3.8/site-packages/pyproj/crs/crs.py\", line 13, in <module>\n    from pyproj._crs import (\nImportError: cannot import name 'AuthorityMatchInfo' from 'pyproj._crs' (/opt/anaconda3/lib/python3.8/site-packages/pyproj/_crs.cpython-38-darwin.so)\n",
+  "history_begin_time" : 1655865092467,
+  "history_end_time" : 1655865093376,
+  "history_notes" : null,
+  "history_process" : "m9myzm",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "zyjhnyi43c5",
+  "history_input" : "import geopandas\nimport pandas as pd\nimport numpy as np\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaPVProcessor(BaseProcessor):\n    dataset = \"plant_village_kenya\"\n\n    def process(self) -> None:\n\n        subfolders = [f\"ref_african_crops_kenya_01_labels_0{i}\" for i in [0, 1, 2]]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for subfolder in subfolders:\n            df = geopandas.read_file(\n                self.raw_folder / \"ref_african_crops_kenya_01_labels\" / subfolder / \"labels.geojson\"\n            )\n            df = df.rename(\n                columns={\n                    \"Latitude\": \"lat\",\n                    \"Longitude\": \"lon\",\n                    \"Planting Date\": \"planting_date\",\n                    \"Estimated Harvest Date\": \"harvest_date\",\n                    \"Crop1\": \"label\",\n                    \"Survey Date\": \"collection_date\",\n                }\n            )\n            df[\"planting_date\"] = pd.to_datetime(df[\"planting_date\"]).dt.to_pydatetime()\n            df[\"harvest_date\"] = pd.to_datetime(df[\"harvest_date\"]).dt.to_pydatetime()\n            df[\"collection_date\"] = pd.to_datetime(df[\"collection_date\"]).dt.to_pydatetime()\n            df[\"is_crop\"] = np.where((df[\"label\"] == \"Fallowland\"), 0, 1)\n            df = df.to_crs(\"EPSG:4326\")\n            dfs.append(df)\n\n        df = pd.concat(dfs)\n        df = df.reset_index(drop=True)\n        df[\"index\"] = df.index\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1647347441865,
+  "history_end_time" : 1647347442858,
+  "history_notes" : null,
+  "history_process" : "m9myzm",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "6cgid81cf4h",
+  "history_input" : "import geopandas\nimport pandas as pd\nimport numpy as np\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaPVProcessor(BaseProcessor):\n    dataset = \"plant_village_kenya\"\n\n    def process(self) -> None:\n\n        subfolders = [f\"ref_african_crops_kenya_01_labels_0{i}\" for i in [0, 1, 2]]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for subfolder in subfolders:\n            df = geopandas.read_file(\n                self.raw_folder / \"ref_african_crops_kenya_01_labels\" / subfolder / \"labels.geojson\"\n            )\n            df = df.rename(\n                columns={\n                    \"Latitude\": \"lat\",\n                    \"Longitude\": \"lon\",\n                    \"Planting Date\": \"planting_date\",\n                    \"Estimated Harvest Date\": \"harvest_date\",\n                    \"Crop1\": \"label\",\n                    \"Survey Date\": \"collection_date\",\n                }\n            )\n            df[\"planting_date\"] = pd.to_datetime(df[\"planting_date\"]).dt.to_pydatetime()\n            df[\"harvest_date\"] = pd.to_datetime(df[\"harvest_date\"]).dt.to_pydatetime()\n            df[\"collection_date\"] = pd.to_datetime(df[\"collection_date\"]).dt.to_pydatetime()\n            df[\"is_crop\"] = np.where((df[\"label\"] == \"Fallowland\"), 0, 1)\n            df = df.to_crs(\"EPSG:4326\")\n            dfs.append(df)\n\n        df = pd.concat(dfs)\n        df = df.reset_index(drop=True)\n        df[\"index\"] = df.index\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1647347345974,
+  "history_end_time" : 1647347346324,
+  "history_notes" : null,
+  "history_process" : "m9myzm",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "64qufrp79r6",
+  "history_input" : "import geopandas\nimport pandas as pd\nimport numpy as np\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaPVProcessor(BaseProcessor):\n    dataset = \"plant_village_kenya\"\n\n    def process(self) -> None:\n\n        subfolders = [f\"ref_african_crops_kenya_01_labels_0{i}\" for i in [0, 1, 2]]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for subfolder in subfolders:\n            df = geopandas.read_file(\n                self.raw_folder / \"ref_african_crops_kenya_01_labels\" / subfolder / \"labels.geojson\"\n            )\n            df = df.rename(\n                columns={\n                    \"Latitude\": \"lat\",\n                    \"Longitude\": \"lon\",\n                    \"Planting Date\": \"planting_date\",\n                    \"Estimated Harvest Date\": \"harvest_date\",\n                    \"Crop1\": \"label\",\n                    \"Survey Date\": \"collection_date\",\n                }\n            )\n            df[\"planting_date\"] = pd.to_datetime(df[\"planting_date\"]).dt.to_pydatetime()\n            df[\"harvest_date\"] = pd.to_datetime(df[\"harvest_date\"]).dt.to_pydatetime()\n            df[\"collection_date\"] = pd.to_datetime(df[\"collection_date\"]).dt.to_pydatetime()\n            df[\"is_crop\"] = np.where((df[\"label\"] == \"Fallowland\"), 0, 1)\n            df = df.to_crs(\"EPSG:4326\")\n            dfs.append(df)\n\n        df = pd.concat(dfs)\n        df = df.reset_index(drop=True)\n        df[\"index\"] = df.index\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1647347278536,
+  "history_end_time" : 1647347279264,
+  "history_notes" : null,
+  "history_process" : "m9myzm",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "xela27qzi8g",
+  "history_input" : "import geopandas\nimport pandas as pd\nimport numpy as np\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaPVProcessor(BaseProcessor):\n    dataset = \"plant_village_kenya\"\n\n    def process(self) -> None:\n\n        subfolders = [f\"ref_african_crops_kenya_01_labels_0{i}\" for i in [0, 1, 2]]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for subfolder in subfolders:\n            df = geopandas.read_file(\n                self.raw_folder / \"ref_african_crops_kenya_01_labels\" / subfolder / \"labels.geojson\"\n            )\n            df = df.rename(\n                columns={\n                    \"Latitude\": \"lat\",\n                    \"Longitude\": \"lon\",\n                    \"Planting Date\": \"planting_date\",\n                    \"Estimated Harvest Date\": \"harvest_date\",\n                    \"Crop1\": \"label\",\n                    \"Survey Date\": \"collection_date\",\n                }\n            )\n            df[\"planting_date\"] = pd.to_datetime(df[\"planting_date\"]).dt.to_pydatetime()\n            df[\"harvest_date\"] = pd.to_datetime(df[\"harvest_date\"]).dt.to_pydatetime()\n            df[\"collection_date\"] = pd.to_datetime(df[\"collection_date\"]).dt.to_pydatetime()\n            df[\"is_crop\"] = np.where((df[\"label\"] == \"Fallowland\"), 0, 1)\n            df = df.to_crs(\"EPSG:4326\")\n            dfs.append(df)\n\n        df = pd.concat(dfs)\n        df = df.reset_index(drop=True)\n        df[\"index\"] = df.index\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1647347144708,
+  "history_end_time" : 1647347145758,
+  "history_notes" : null,
+  "history_process" : "m9myzm",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "ye3u6k3mch1",
+  "history_input" : "import geopandas\nimport pandas as pd\nimport numpy as np\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaPVProcessor(BaseProcessor):\n    dataset = \"plant_village_kenya\"\n\n    def process(self) -> None:\n\n        subfolders = [f\"ref_african_crops_kenya_01_labels_0{i}\" for i in [0, 1, 2]]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for subfolder in subfolders:\n            df = geopandas.read_file(\n                self.raw_folder / \"ref_african_crops_kenya_01_labels\" / subfolder / \"labels.geojson\"\n            )\n            df = df.rename(\n                columns={\n                    \"Latitude\": \"lat\",\n                    \"Longitude\": \"lon\",\n                    \"Planting Date\": \"planting_date\",\n                    \"Estimated Harvest Date\": \"harvest_date\",\n                    \"Crop1\": \"label\",\n                    \"Survey Date\": \"collection_date\",\n                }\n            )\n            df[\"planting_date\"] = pd.to_datetime(df[\"planting_date\"]).dt.to_pydatetime()\n            df[\"harvest_date\"] = pd.to_datetime(df[\"harvest_date\"]).dt.to_pydatetime()\n            df[\"collection_date\"] = pd.to_datetime(df[\"collection_date\"]).dt.to_pydatetime()\n            df[\"is_crop\"] = np.where((df[\"label\"] == \"Fallowland\"), 0, 1)\n            df = df.to_crs(\"EPSG:4326\")\n            dfs.append(df)\n\n        df = pd.concat(dfs)\n        df = df.reset_index(drop=True)\n        df[\"index\"] = df.index\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1647346814178,
+  "history_end_time" : 1647346815320,
+  "history_notes" : null,
+  "history_process" : "m9myzm",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "qq7m75hnt7f",
+  "history_input" : "import geopandas\nimport pandas as pd\nimport numpy as np\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaPVProcessor(BaseProcessor):\n    dataset = \"plant_village_kenya\"\n\n    def process(self) -> None:\n\n        subfolders = [f\"ref_african_crops_kenya_01_labels_0{i}\" for i in [0, 1, 2]]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for subfolder in subfolders:\n            df = geopandas.read_file(\n                self.raw_folder / \"ref_african_crops_kenya_01_labels\" / subfolder / \"labels.geojson\"\n            )\n            df = df.rename(\n                columns={\n                    \"Latitude\": \"lat\",\n                    \"Longitude\": \"lon\",\n                    \"Planting Date\": \"planting_date\",\n                    \"Estimated Harvest Date\": \"harvest_date\",\n                    \"Crop1\": \"label\",\n                    \"Survey Date\": \"collection_date\",\n                }\n            )\n            df[\"planting_date\"] = pd.to_datetime(df[\"planting_date\"]).dt.to_pydatetime()\n            df[\"harvest_date\"] = pd.to_datetime(df[\"harvest_date\"]).dt.to_pydatetime()\n            df[\"collection_date\"] = pd.to_datetime(df[\"collection_date\"]).dt.to_pydatetime()\n            df[\"is_crop\"] = np.where((df[\"label\"] == \"Fallowland\"), 0, 1)\n            df = df.to_crs(\"EPSG:4326\")\n            dfs.append(df)\n\n        df = pd.concat(dfs)\n        df = df.reset_index(drop=True)\n        df[\"index\"] = df.index\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1647346653950,
+  "history_end_time" : 1647346655259,
+  "history_notes" : null,
+  "history_process" : "m9myzm",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "ybiz8k97an4",
+  "history_input" : "import geopandas\nimport pandas as pd\nimport numpy as np\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaPVProcessor(BaseProcessor):\n    dataset = \"plant_village_kenya\"\n\n    def process(self) -> None:\n\n        subfolders = [f\"ref_african_crops_kenya_01_labels_0{i}\" for i in [0, 1, 2]]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for subfolder in subfolders:\n            df = geopandas.read_file(\n                self.raw_folder / \"ref_african_crops_kenya_01_labels\" / subfolder / \"labels.geojson\"\n            )\n            df = df.rename(\n                columns={\n                    \"Latitude\": \"lat\",\n                    \"Longitude\": \"lon\",\n                    \"Planting Date\": \"planting_date\",\n                    \"Estimated Harvest Date\": \"harvest_date\",\n                    \"Crop1\": \"label\",\n                    \"Survey Date\": \"collection_date\",\n                }\n            )\n            df[\"planting_date\"] = pd.to_datetime(df[\"planting_date\"]).dt.to_pydatetime()\n            df[\"harvest_date\"] = pd.to_datetime(df[\"harvest_date\"]).dt.to_pydatetime()\n            df[\"collection_date\"] = pd.to_datetime(df[\"collection_date\"]).dt.to_pydatetime()\n            df[\"is_crop\"] = np.where((df[\"label\"] == \"Fallowland\"), 0, 1)\n            df = df.to_crs(\"EPSG:4326\")\n            dfs.append(df)\n\n        df = pd.concat(dfs)\n        df = df.reset_index(drop=True)\n        df[\"index\"] = df.index\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1647345848964,
+  "history_end_time" : 1647345849961,
+  "history_notes" : null,
+  "history_process" : "m9myzm",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "aw31lo59qc5",
+  "history_input" : "import geopandas\nimport pandas as pd\nimport numpy as np\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaPVProcessor(BaseProcessor):\n    dataset = \"plant_village_kenya\"\n\n    def process(self) -> None:\n\n        subfolders = [f\"ref_african_crops_kenya_01_labels_0{i}\" for i in [0, 1, 2]]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for subfolder in subfolders:\n            df = geopandas.read_file(\n                self.raw_folder / \"ref_african_crops_kenya_01_labels\" / subfolder / \"labels.geojson\"\n            )\n            df = df.rename(\n                columns={\n                    \"Latitude\": \"lat\",\n                    \"Longitude\": \"lon\",\n                    \"Planting Date\": \"planting_date\",\n                    \"Estimated Harvest Date\": \"harvest_date\",\n                    \"Crop1\": \"label\",\n                    \"Survey Date\": \"collection_date\",\n                }\n            )\n            df[\"planting_date\"] = pd.to_datetime(df[\"planting_date\"]).dt.to_pydatetime()\n            df[\"harvest_date\"] = pd.to_datetime(df[\"harvest_date\"]).dt.to_pydatetime()\n            df[\"collection_date\"] = pd.to_datetime(df[\"collection_date\"]).dt.to_pydatetime()\n            df[\"is_crop\"] = np.where((df[\"label\"] == \"Fallowland\"), 0, 1)\n            df = df.to_crs(\"EPSG:4326\")\n            dfs.append(df)\n\n        df = pd.concat(dfs)\n        df = df.reset_index(drop=True)\n        df[\"index\"] = df.index\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1647345841939,
+  "history_end_time" : 1647345843247,
+  "history_notes" : null,
+  "history_process" : "m9myzm",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "pm7xqta8cla",
+  "history_input" : "import geopandas\nimport pandas as pd\nimport numpy as np\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaPVProcessor(BaseProcessor):\n    dataset = \"plant_village_kenya\"\n\n    def process(self) -> None:\n\n        subfolders = [f\"ref_african_crops_kenya_01_labels_0{i}\" for i in [0, 1, 2]]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for subfolder in subfolders:\n            df = geopandas.read_file(\n                self.raw_folder / \"ref_african_crops_kenya_01_labels\" / subfolder / \"labels.geojson\"\n            )\n            df = df.rename(\n                columns={\n                    \"Latitude\": \"lat\",\n                    \"Longitude\": \"lon\",\n                    \"Planting Date\": \"planting_date\",\n                    \"Estimated Harvest Date\": \"harvest_date\",\n                    \"Crop1\": \"label\",\n                    \"Survey Date\": \"collection_date\",\n                }\n            )\n            df[\"planting_date\"] = pd.to_datetime(df[\"planting_date\"]).dt.to_pydatetime()\n            df[\"harvest_date\"] = pd.to_datetime(df[\"harvest_date\"]).dt.to_pydatetime()\n            df[\"collection_date\"] = pd.to_datetime(df[\"collection_date\"]).dt.to_pydatetime()\n            df[\"is_crop\"] = np.where((df[\"label\"] == \"Fallowland\"), 0, 1)\n            df = df.to_crs(\"EPSG:4326\")\n            dfs.append(df)\n\n        df = pd.concat(dfs)\n        df = df.reset_index(drop=True)\n        df[\"index\"] = df.index\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1647345666605,
+  "history_end_time" : 1647345667963,
+  "history_notes" : null,
+  "history_process" : "m9myzm",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "2ucxrpy12jo",
+  "history_input" : "import geopandas\nimport pandas as pd\nimport numpy as np\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaPVProcessor(BaseProcessor):\n    dataset = \"plant_village_kenya\"\n\n    def process(self) -> None:\n\n        subfolders = [f\"ref_african_crops_kenya_01_labels_0{i}\" for i in [0, 1, 2]]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for subfolder in subfolders:\n            df = geopandas.read_file(\n                self.raw_folder / \"ref_african_crops_kenya_01_labels\" / subfolder / \"labels.geojson\"\n            )\n            df = df.rename(\n                columns={\n                    \"Latitude\": \"lat\",\n                    \"Longitude\": \"lon\",\n                    \"Planting Date\": \"planting_date\",\n                    \"Estimated Harvest Date\": \"harvest_date\",\n                    \"Crop1\": \"label\",\n                    \"Survey Date\": \"collection_date\",\n                }\n            )\n            df[\"planting_date\"] = pd.to_datetime(df[\"planting_date\"]).dt.to_pydatetime()\n            df[\"harvest_date\"] = pd.to_datetime(df[\"harvest_date\"]).dt.to_pydatetime()\n            df[\"collection_date\"] = pd.to_datetime(df[\"collection_date\"]).dt.to_pydatetime()\n            df[\"is_crop\"] = np.where((df[\"label\"] == \"Fallowland\"), 0, 1)\n            df = df.to_crs(\"EPSG:4326\")\n            dfs.append(df)\n\n        df = pd.concat(dfs)\n        df = df.reset_index(drop=True)\n        df[\"index\"] = df.index\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1647345658559,
+  "history_end_time" : 1647345659303,
+  "history_notes" : null,
+  "history_process" : "m9myzm",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "2ftxu35x26x",
+  "history_input" : "import geopandas\nimport pandas as pd\nimport numpy as np\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaPVProcessor(BaseProcessor):\n    dataset = \"plant_village_kenya\"\n\n    def process(self) -> None:\n\n        subfolders = [f\"ref_african_crops_kenya_01_labels_0{i}\" for i in [0, 1, 2]]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for subfolder in subfolders:\n            df = geopandas.read_file(\n                self.raw_folder / \"ref_african_crops_kenya_01_labels\" / subfolder / \"labels.geojson\"\n            )\n            df = df.rename(\n                columns={\n                    \"Latitude\": \"lat\",\n                    \"Longitude\": \"lon\",\n                    \"Planting Date\": \"planting_date\",\n                    \"Estimated Harvest Date\": \"harvest_date\",\n                    \"Crop1\": \"label\",\n                    \"Survey Date\": \"collection_date\",\n                }\n            )\n            df[\"planting_date\"] = pd.to_datetime(df[\"planting_date\"]).dt.to_pydatetime()\n            df[\"harvest_date\"] = pd.to_datetime(df[\"harvest_date\"]).dt.to_pydatetime()\n            df[\"collection_date\"] = pd.to_datetime(df[\"collection_date\"]).dt.to_pydatetime()\n            df[\"is_crop\"] = np.where((df[\"label\"] == \"Fallowland\"), 0, 1)\n            df = df.to_crs(\"EPSG:4326\")\n            dfs.append(df)\n\n        df = pd.concat(dfs)\n        df = df.reset_index(drop=True)\n        df[\"index\"] = df.index\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1647340130013,
+  "history_end_time" : 1647340131005,
+  "history_notes" : null,
+  "history_process" : "m9myzm",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "z0uc8c31hc4",
+  "history_input" : "import geopandas\nimport pandas as pd\nimport numpy as np\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaPVProcessor(BaseProcessor):\n    dataset = \"plant_village_kenya\"\n\n    def process(self) -> None:\n\n        subfolders = [f\"ref_african_crops_kenya_01_labels_0{i}\" for i in [0, 1, 2]]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for subfolder in subfolders:\n            df = geopandas.read_file(\n                self.raw_folder / \"ref_african_crops_kenya_01_labels\" / subfolder / \"labels.geojson\"\n            )\n            df = df.rename(\n                columns={\n                    \"Latitude\": \"lat\",\n                    \"Longitude\": \"lon\",\n                    \"Planting Date\": \"planting_date\",\n                    \"Estimated Harvest Date\": \"harvest_date\",\n                    \"Crop1\": \"label\",\n                    \"Survey Date\": \"collection_date\",\n                }\n            )\n            df[\"planting_date\"] = pd.to_datetime(df[\"planting_date\"]).dt.to_pydatetime()\n            df[\"harvest_date\"] = pd.to_datetime(df[\"harvest_date\"]).dt.to_pydatetime()\n            df[\"collection_date\"] = pd.to_datetime(df[\"collection_date\"]).dt.to_pydatetime()\n            df[\"is_crop\"] = np.where((df[\"label\"] == \"Fallowland\"), 0, 1)\n            df = df.to_crs(\"EPSG:4326\")\n            dfs.append(df)\n\n        df = pd.concat(dfs)\n        df = df.reset_index(drop=True)\n        df[\"index\"] = df.index\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1647340128331,
+  "history_end_time" : 1647340129455,
+  "history_notes" : null,
+  "history_process" : "m9myzm",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "p0q4kdrc6sb",
+  "history_input" : "import geopandas\nimport pandas as pd\nimport numpy as np\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaPVProcessor(BaseProcessor):\n    dataset = \"plant_village_kenya\"\n\n    def process(self) -> None:\n\n        subfolders = [f\"ref_african_crops_kenya_01_labels_0{i}\" for i in [0, 1, 2]]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for subfolder in subfolders:\n            df = geopandas.read_file(\n                self.raw_folder / \"ref_african_crops_kenya_01_labels\" / subfolder / \"labels.geojson\"\n            )\n            df = df.rename(\n                columns={\n                    \"Latitude\": \"lat\",\n                    \"Longitude\": \"lon\",\n                    \"Planting Date\": \"planting_date\",\n                    \"Estimated Harvest Date\": \"harvest_date\",\n                    \"Crop1\": \"label\",\n                    \"Survey Date\": \"collection_date\",\n                }\n            )\n            df[\"planting_date\"] = pd.to_datetime(df[\"planting_date\"]).dt.to_pydatetime()\n            df[\"harvest_date\"] = pd.to_datetime(df[\"harvest_date\"]).dt.to_pydatetime()\n            df[\"collection_date\"] = pd.to_datetime(df[\"collection_date\"]).dt.to_pydatetime()\n            df[\"is_crop\"] = np.where((df[\"label\"] == \"Fallowland\"), 0, 1)\n            df = df.to_crs(\"EPSG:4326\")\n            dfs.append(df)\n\n        df = pd.concat(dfs)\n        df = df.reset_index(drop=True)\n        df[\"index\"] = df.index\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1646147727961,
+  "history_end_time" : 1646147730105,
+  "history_notes" : null,
+  "history_process" : "m9myzm",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "dbqucsnduod",
+  "history_input" : "import geopandas\nimport pandas as pd\nimport numpy as np\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaPVProcessor(BaseProcessor):\n    dataset = \"plant_village_kenya\"\n\n    def process(self) -> None:\n\n        subfolders = [f\"ref_african_crops_kenya_01_labels_0{i}\" for i in [0, 1, 2]]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for subfolder in subfolders:\n            df = geopandas.read_file(\n                self.raw_folder / \"ref_african_crops_kenya_01_labels\" / subfolder / \"labels.geojson\"\n            )\n            df = df.rename(\n                columns={\n                    \"Latitude\": \"lat\",\n                    \"Longitude\": \"lon\",\n                    \"Planting Date\": \"planting_date\",\n                    \"Estimated Harvest Date\": \"harvest_date\",\n                    \"Crop1\": \"label\",\n                    \"Survey Date\": \"collection_date\",\n                }\n            )\n            df[\"planting_date\"] = pd.to_datetime(df[\"planting_date\"]).dt.to_pydatetime()\n            df[\"harvest_date\"] = pd.to_datetime(df[\"harvest_date\"]).dt.to_pydatetime()\n            df[\"collection_date\"] = pd.to_datetime(df[\"collection_date\"]).dt.to_pydatetime()\n            df[\"is_crop\"] = np.where((df[\"label\"] == \"Fallowland\"), 0, 1)\n            df = df.to_crs(\"EPSG:4326\")\n            dfs.append(df)\n\n        df = pd.concat(dfs)\n        df = df.reset_index(drop=True)\n        df[\"index\"] = df.index\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1646147717931,
+  "history_end_time" : 1646147719649,
+  "history_notes" : null,
+  "history_process" : "m9myzm",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "446pw7x6gfi",
+  "history_input" : "import geopandas\nimport pandas as pd\nimport numpy as np\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaPVProcessor(BaseProcessor):\n    dataset = \"plant_village_kenya\"\n\n    def process(self) -> None:\n\n        subfolders = [f\"ref_african_crops_kenya_01_labels_0{i}\" for i in [0, 1, 2]]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for subfolder in subfolders:\n            df = geopandas.read_file(\n                self.raw_folder / \"ref_african_crops_kenya_01_labels\" / subfolder / \"labels.geojson\"\n            )\n            df = df.rename(\n                columns={\n                    \"Latitude\": \"lat\",\n                    \"Longitude\": \"lon\",\n                    \"Planting Date\": \"planting_date\",\n                    \"Estimated Harvest Date\": \"harvest_date\",\n                    \"Crop1\": \"label\",\n                    \"Survey Date\": \"collection_date\",\n                }\n            )\n            df[\"planting_date\"] = pd.to_datetime(df[\"planting_date\"]).dt.to_pydatetime()\n            df[\"harvest_date\"] = pd.to_datetime(df[\"harvest_date\"]).dt.to_pydatetime()\n            df[\"collection_date\"] = pd.to_datetime(df[\"collection_date\"]).dt.to_pydatetime()\n            df[\"is_crop\"] = np.where((df[\"label\"] == \"Fallowland\"), 0, 1)\n            df = df.to_crs(\"EPSG:4326\")\n            dfs.append(df)\n\n        df = pd.concat(dfs)\n        df = df.reset_index(drop=True)\n        df[\"index\"] = df.index\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1646145430109,
+  "history_end_time" : 1646145430286,
+  "history_notes" : null,
+  "history_process" : "m9myzm",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "tepywt6ap96",
+  "history_input" : "import geopandas\nimport pandas as pd\nimport numpy as np\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaPVProcessor(BaseProcessor):\n    dataset = \"plant_village_kenya\"\n\n    def process(self) -> None:\n\n        subfolders = [f\"ref_african_crops_kenya_01_labels_0{i}\" for i in [0, 1, 2]]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for subfolder in subfolders:\n            df = geopandas.read_file(\n                self.raw_folder / \"ref_african_crops_kenya_01_labels\" / subfolder / \"labels.geojson\"\n            )\n            df = df.rename(\n                columns={\n                    \"Latitude\": \"lat\",\n                    \"Longitude\": \"lon\",\n                    \"Planting Date\": \"planting_date\",\n                    \"Estimated Harvest Date\": \"harvest_date\",\n                    \"Crop1\": \"label\",\n                    \"Survey Date\": \"collection_date\",\n                }\n            )\n            df[\"planting_date\"] = pd.to_datetime(df[\"planting_date\"]).dt.to_pydatetime()\n            df[\"harvest_date\"] = pd.to_datetime(df[\"harvest_date\"]).dt.to_pydatetime()\n            df[\"collection_date\"] = pd.to_datetime(df[\"collection_date\"]).dt.to_pydatetime()\n            df[\"is_crop\"] = np.where((df[\"label\"] == \"Fallowland\"), 0, 1)\n            df = df.to_crs(\"EPSG:4326\")\n            dfs.append(df)\n\n        df = pd.concat(dfs)\n        df = df.reset_index(drop=True)\n        df[\"index\"] = df.index\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1646145212244,
+  "history_end_time" : 1646145213545,
+  "history_notes" : null,
+  "history_process" : "m9myzm",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "eiiqlpr665a",
+  "history_input" : "import geopandas\nimport pandas as pd\nimport numpy as np\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaPVProcessor(BaseProcessor):\n    dataset = \"plant_village_kenya\"\n\n    def process(self) -> None:\n\n        subfolders = [f\"ref_african_crops_kenya_01_labels_0{i}\" for i in [0, 1, 2]]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for subfolder in subfolders:\n            df = geopandas.read_file(\n                self.raw_folder / \"ref_african_crops_kenya_01_labels\" / subfolder / \"labels.geojson\"\n            )\n            df = df.rename(\n                columns={\n                    \"Latitude\": \"lat\",\n                    \"Longitude\": \"lon\",\n                    \"Planting Date\": \"planting_date\",\n                    \"Estimated Harvest Date\": \"harvest_date\",\n                    \"Crop1\": \"label\",\n                    \"Survey Date\": \"collection_date\",\n                }\n            )\n            df[\"planting_date\"] = pd.to_datetime(df[\"planting_date\"]).dt.to_pydatetime()\n            df[\"harvest_date\"] = pd.to_datetime(df[\"harvest_date\"]).dt.to_pydatetime()\n            df[\"collection_date\"] = pd.to_datetime(df[\"collection_date\"]).dt.to_pydatetime()\n            df[\"is_crop\"] = np.where((df[\"label\"] == \"Fallowland\"), 0, 1)\n            df = df.to_crs(\"EPSG:4326\")\n            dfs.append(df)\n\n        df = pd.concat(dfs)\n        df = df.reset_index(drop=True)\n        df[\"index\"] = df.index\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1646144601773,
+  "history_end_time" : 1646144602114,
+  "history_notes" : null,
+  "history_process" : "m9myzm",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "c1oabylk671",
+  "history_input" : "import geopandas\nimport pandas as pd\nimport numpy as np\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaPVProcessor(BaseProcessor):\n    dataset = \"plant_village_kenya\"\n\n    def process(self) -> None:\n\n        subfolders = [f\"ref_african_crops_kenya_01_labels_0{i}\" for i in [0, 1, 2]]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for subfolder in subfolders:\n            df = geopandas.read_file(\n                self.raw_folder / \"ref_african_crops_kenya_01_labels\" / subfolder / \"labels.geojson\"\n            )\n            df = df.rename(\n                columns={\n                    \"Latitude\": \"lat\",\n                    \"Longitude\": \"lon\",\n                    \"Planting Date\": \"planting_date\",\n                    \"Estimated Harvest Date\": \"harvest_date\",\n                    \"Crop1\": \"label\",\n                    \"Survey Date\": \"collection_date\",\n                }\n            )\n            df[\"planting_date\"] = pd.to_datetime(df[\"planting_date\"]).dt.to_pydatetime()\n            df[\"harvest_date\"] = pd.to_datetime(df[\"harvest_date\"]).dt.to_pydatetime()\n            df[\"collection_date\"] = pd.to_datetime(df[\"collection_date\"]).dt.to_pydatetime()\n            df[\"is_crop\"] = np.where((df[\"label\"] == \"Fallowland\"), 0, 1)\n            df = df.to_crs(\"EPSG:4326\")\n            dfs.append(df)\n\n        df = pd.concat(dfs)\n        df = df.reset_index(drop=True)\n        df[\"index\"] = df.index\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1646144385035,
+  "history_end_time" : 1646144385822,
+  "history_notes" : null,
+  "history_process" : "m9myzm",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "oeuo2zrroxj",
+  "history_input" : "import geopandas\nimport pandas as pd\nimport numpy as np\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaPVProcessor(BaseProcessor):\n    dataset = \"plant_village_kenya\"\n\n    def process(self) -> None:\n\n        subfolders = [f\"ref_african_crops_kenya_01_labels_0{i}\" for i in [0, 1, 2]]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for subfolder in subfolders:\n            df = geopandas.read_file(\n                self.raw_folder / \"ref_african_crops_kenya_01_labels\" / subfolder / \"labels.geojson\"\n            )\n            df = df.rename(\n                columns={\n                    \"Latitude\": \"lat\",\n                    \"Longitude\": \"lon\",\n                    \"Planting Date\": \"planting_date\",\n                    \"Estimated Harvest Date\": \"harvest_date\",\n                    \"Crop1\": \"label\",\n                    \"Survey Date\": \"collection_date\",\n                }\n            )\n            df[\"planting_date\"] = pd.to_datetime(df[\"planting_date\"]).dt.to_pydatetime()\n            df[\"harvest_date\"] = pd.to_datetime(df[\"harvest_date\"]).dt.to_pydatetime()\n            df[\"collection_date\"] = pd.to_datetime(df[\"collection_date\"]).dt.to_pydatetime()\n            df[\"is_crop\"] = np.where((df[\"label\"] == \"Fallowland\"), 0, 1)\n            df = df.to_crs(\"EPSG:4326\")\n            dfs.append(df)\n\n        df = pd.concat(dfs)\n        df = df.reset_index(drop=True)\n        df[\"index\"] = df.index\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1646144311677,
+  "history_end_time" : 1646144312058,
+  "history_notes" : null,
+  "history_process" : "m9myzm",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "jrg6rmwrbl7",
+  "history_input" : "import geopandas\nimport pandas as pd\nimport numpy as np\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaPVProcessor(BaseProcessor):\n    dataset = \"plant_village_kenya\"\n\n    def process(self) -> None:\n\n        subfolders = [f\"ref_african_crops_kenya_01_labels_0{i}\" for i in [0, 1, 2]]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for subfolder in subfolders:\n            df = geopandas.read_file(\n                self.raw_folder / \"ref_african_crops_kenya_01_labels\" / subfolder / \"labels.geojson\"\n            )\n            df = df.rename(\n                columns={\n                    \"Latitude\": \"lat\",\n                    \"Longitude\": \"lon\",\n                    \"Planting Date\": \"planting_date\",\n                    \"Estimated Harvest Date\": \"harvest_date\",\n                    \"Crop1\": \"label\",\n                    \"Survey Date\": \"collection_date\",\n                }\n            )\n            df[\"planting_date\"] = pd.to_datetime(df[\"planting_date\"]).dt.to_pydatetime()\n            df[\"harvest_date\"] = pd.to_datetime(df[\"harvest_date\"]).dt.to_pydatetime()\n            df[\"collection_date\"] = pd.to_datetime(df[\"collection_date\"]).dt.to_pydatetime()\n            df[\"is_crop\"] = np.where((df[\"label\"] == \"Fallowland\"), 0, 1)\n            df = df.to_crs(\"EPSG:4326\")\n            dfs.append(df)\n\n        df = pd.concat(dfs)\n        df = df.reset_index(drop=True)\n        df[\"index\"] = df.index\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1646143407392,
+  "history_end_time" : 1646143408530,
+  "history_notes" : null,
+  "history_process" : "m9myzm",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "31g9ej9m6q7",
+  "history_input" : "import geopandas\nimport pandas as pd\nimport numpy as np\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaPVProcessor(BaseProcessor):\n    dataset = \"plant_village_kenya\"\n\n    def process(self) -> None:\n\n        subfolders = [f\"ref_african_crops_kenya_01_labels_0{i}\" for i in [0, 1, 2]]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for subfolder in subfolders:\n            df = geopandas.read_file(\n                self.raw_folder / \"ref_african_crops_kenya_01_labels\" / subfolder / \"labels.geojson\"\n            )\n            df = df.rename(\n                columns={\n                    \"Latitude\": \"lat\",\n                    \"Longitude\": \"lon\",\n                    \"Planting Date\": \"planting_date\",\n                    \"Estimated Harvest Date\": \"harvest_date\",\n                    \"Crop1\": \"label\",\n                    \"Survey Date\": \"collection_date\",\n                }\n            )\n            df[\"planting_date\"] = pd.to_datetime(df[\"planting_date\"]).dt.to_pydatetime()\n            df[\"harvest_date\"] = pd.to_datetime(df[\"harvest_date\"]).dt.to_pydatetime()\n            df[\"collection_date\"] = pd.to_datetime(df[\"collection_date\"]).dt.to_pydatetime()\n            df[\"is_crop\"] = np.where((df[\"label\"] == \"Fallowland\"), 0, 1)\n            df = df.to_crs(\"EPSG:4326\")\n            dfs.append(df)\n\n        df = pd.concat(dfs)\n        df = df.reset_index(drop=True)\n        df[\"index\"] = df.index\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1646143258350,
+  "history_end_time" : 1646143258830,
+  "history_notes" : null,
+  "history_process" : "m9myzm",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "keyaj5upkcb",
+  "history_input" : "import geopandas\nimport pandas as pd\nimport numpy as np\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaPVProcessor(BaseProcessor):\n    dataset = \"plant_village_kenya\"\n\n    def process(self) -> None:\n\n        subfolders = [f\"ref_african_crops_kenya_01_labels_0{i}\" for i in [0, 1, 2]]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for subfolder in subfolders:\n            df = geopandas.read_file(\n                self.raw_folder / \"ref_african_crops_kenya_01_labels\" / subfolder / \"labels.geojson\"\n            )\n            df = df.rename(\n                columns={\n                    \"Latitude\": \"lat\",\n                    \"Longitude\": \"lon\",\n                    \"Planting Date\": \"planting_date\",\n                    \"Estimated Harvest Date\": \"harvest_date\",\n                    \"Crop1\": \"label\",\n                    \"Survey Date\": \"collection_date\",\n                }\n            )\n            df[\"planting_date\"] = pd.to_datetime(df[\"planting_date\"]).dt.to_pydatetime()\n            df[\"harvest_date\"] = pd.to_datetime(df[\"harvest_date\"]).dt.to_pydatetime()\n            df[\"collection_date\"] = pd.to_datetime(df[\"collection_date\"]).dt.to_pydatetime()\n            df[\"is_crop\"] = np.where((df[\"label\"] == \"Fallowland\"), 0, 1)\n            df = df.to_crs(\"EPSG:4326\")\n            dfs.append(df)\n\n        df = pd.concat(dfs)\n        df = df.reset_index(drop=True)\n        df[\"index\"] = df.index\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1646143181820,
+  "history_end_time" : 1646143182879,
+  "history_notes" : null,
+  "history_process" : "m9myzm",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "nr0aq6hjq7k",
+  "history_input" : "import geopandas\nimport pandas as pd\nimport numpy as np\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaPVProcessor(BaseProcessor):\n    dataset = \"plant_village_kenya\"\n\n    def process(self) -> None:\n\n        subfolders = [f\"ref_african_crops_kenya_01_labels_0{i}\" for i in [0, 1, 2]]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for subfolder in subfolders:\n            df = geopandas.read_file(\n                self.raw_folder / \"ref_african_crops_kenya_01_labels\" / subfolder / \"labels.geojson\"\n            )\n            df = df.rename(\n                columns={\n                    \"Latitude\": \"lat\",\n                    \"Longitude\": \"lon\",\n                    \"Planting Date\": \"planting_date\",\n                    \"Estimated Harvest Date\": \"harvest_date\",\n                    \"Crop1\": \"label\",\n                    \"Survey Date\": \"collection_date\",\n                }\n            )\n            df[\"planting_date\"] = pd.to_datetime(df[\"planting_date\"]).dt.to_pydatetime()\n            df[\"harvest_date\"] = pd.to_datetime(df[\"harvest_date\"]).dt.to_pydatetime()\n            df[\"collection_date\"] = pd.to_datetime(df[\"collection_date\"]).dt.to_pydatetime()\n            df[\"is_crop\"] = np.where((df[\"label\"] == \"Fallowland\"), 0, 1)\n            df = df.to_crs(\"EPSG:4326\")\n            dfs.append(df)\n\n        df = pd.concat(dfs)\n        df = df.reset_index(drop=True)\n        df[\"index\"] = df.index\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1646143142409,
+  "history_end_time" : 1646143143323,
+  "history_notes" : null,
+  "history_process" : "m9myzm",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "9c5iw8w1mjj",
+  "history_input" : "import geopandas\nimport pandas as pd\nimport numpy as np\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaPVProcessor(BaseProcessor):\n    dataset = \"plant_village_kenya\"\n\n    def process(self) -> None:\n\n        subfolders = [f\"ref_african_crops_kenya_01_labels_0{i}\" for i in [0, 1, 2]]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for subfolder in subfolders:\n            df = geopandas.read_file(\n                self.raw_folder / \"ref_african_crops_kenya_01_labels\" / subfolder / \"labels.geojson\"\n            )\n            df = df.rename(\n                columns={\n                    \"Latitude\": \"lat\",\n                    \"Longitude\": \"lon\",\n                    \"Planting Date\": \"planting_date\",\n                    \"Estimated Harvest Date\": \"harvest_date\",\n                    \"Crop1\": \"label\",\n                    \"Survey Date\": \"collection_date\",\n                }\n            )\n            df[\"planting_date\"] = pd.to_datetime(df[\"planting_date\"]).dt.to_pydatetime()\n            df[\"harvest_date\"] = pd.to_datetime(df[\"harvest_date\"]).dt.to_pydatetime()\n            df[\"collection_date\"] = pd.to_datetime(df[\"collection_date\"]).dt.to_pydatetime()\n            df[\"is_crop\"] = np.where((df[\"label\"] == \"Fallowland\"), 0, 1)\n            df = df.to_crs(\"EPSG:4326\")\n            dfs.append(df)\n\n        df = pd.concat(dfs)\n        df = df.reset_index(drop=True)\n        df[\"index\"] = df.index\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1646143118081,
+  "history_end_time" : 1646143119082,
+  "history_notes" : null,
+  "history_process" : "m9myzm",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "vsc54zz714s",
+  "history_input" : "import geopandas\nimport pandas as pd\nimport numpy as np\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaPVProcessor(BaseProcessor):\n    dataset = \"plant_village_kenya\"\n\n    def process(self) -> None:\n\n        subfolders = [f\"ref_african_crops_kenya_01_labels_0{i}\" for i in [0, 1, 2]]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for subfolder in subfolders:\n            df = geopandas.read_file(\n                self.raw_folder / \"ref_african_crops_kenya_01_labels\" / subfolder / \"labels.geojson\"\n            )\n            df = df.rename(\n                columns={\n                    \"Latitude\": \"lat\",\n                    \"Longitude\": \"lon\",\n                    \"Planting Date\": \"planting_date\",\n                    \"Estimated Harvest Date\": \"harvest_date\",\n                    \"Crop1\": \"label\",\n                    \"Survey Date\": \"collection_date\",\n                }\n            )\n            df[\"planting_date\"] = pd.to_datetime(df[\"planting_date\"]).dt.to_pydatetime()\n            df[\"harvest_date\"] = pd.to_datetime(df[\"harvest_date\"]).dt.to_pydatetime()\n            df[\"collection_date\"] = pd.to_datetime(df[\"collection_date\"]).dt.to_pydatetime()\n            df[\"is_crop\"] = np.where((df[\"label\"] == \"Fallowland\"), 0, 1)\n            df = df.to_crs(\"EPSG:4326\")\n            dfs.append(df)\n\n        df = pd.concat(dfs)\n        df = df.reset_index(drop=True)\n        df[\"index\"] = df.index\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1646139379309,
+  "history_end_time" : 1646139379801,
+  "history_notes" : null,
+  "history_process" : "m9myzm",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "ecdlz2v4jaw",
+  "history_input" : "import geopandas\nimport pandas as pd\nimport numpy as np\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaPVProcessor(BaseProcessor):\n    dataset = \"plant_village_kenya\"\n\n    def process(self) -> None:\n\n        subfolders = [f\"ref_african_crops_kenya_01_labels_0{i}\" for i in [0, 1, 2]]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for subfolder in subfolders:\n            df = geopandas.read_file(\n                self.raw_folder / \"ref_african_crops_kenya_01_labels\" / subfolder / \"labels.geojson\"\n            )\n            df = df.rename(\n                columns={\n                    \"Latitude\": \"lat\",\n                    \"Longitude\": \"lon\",\n                    \"Planting Date\": \"planting_date\",\n                    \"Estimated Harvest Date\": \"harvest_date\",\n                    \"Crop1\": \"label\",\n                    \"Survey Date\": \"collection_date\",\n                }\n            )\n            df[\"planting_date\"] = pd.to_datetime(df[\"planting_date\"]).dt.to_pydatetime()\n            df[\"harvest_date\"] = pd.to_datetime(df[\"harvest_date\"]).dt.to_pydatetime()\n            df[\"collection_date\"] = pd.to_datetime(df[\"collection_date\"]).dt.to_pydatetime()\n            df[\"is_crop\"] = np.where((df[\"label\"] == \"Fallowland\"), 0, 1)\n            df = df.to_crs(\"EPSG:4326\")\n            dfs.append(df)\n\n        df = pd.concat(dfs)\n        df = df.reset_index(drop=True)\n        df[\"index\"] = df.index\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1646139291440,
+  "history_end_time" : 1646139292575,
+  "history_notes" : null,
+  "history_process" : "m9myzm",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "iy78qrjm6ns",
+  "history_input" : "import geopandas\nimport pandas as pd\nimport numpy as np\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaPVProcessor(BaseProcessor):\n    dataset = \"plant_village_kenya\"\n\n    def process(self) -> None:\n\n        subfolders = [f\"ref_african_crops_kenya_01_labels_0{i}\" for i in [0, 1, 2]]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for subfolder in subfolders:\n            df = geopandas.read_file(\n                self.raw_folder / \"ref_african_crops_kenya_01_labels\" / subfolder / \"labels.geojson\"\n            )\n            df = df.rename(\n                columns={\n                    \"Latitude\": \"lat\",\n                    \"Longitude\": \"lon\",\n                    \"Planting Date\": \"planting_date\",\n                    \"Estimated Harvest Date\": \"harvest_date\",\n                    \"Crop1\": \"label\",\n                    \"Survey Date\": \"collection_date\",\n                }\n            )\n            df[\"planting_date\"] = pd.to_datetime(df[\"planting_date\"]).dt.to_pydatetime()\n            df[\"harvest_date\"] = pd.to_datetime(df[\"harvest_date\"]).dt.to_pydatetime()\n            df[\"collection_date\"] = pd.to_datetime(df[\"collection_date\"]).dt.to_pydatetime()\n            df[\"is_crop\"] = np.where((df[\"label\"] == \"Fallowland\"), 0, 1)\n            df = df.to_crs(\"EPSG:4326\")\n            dfs.append(df)\n\n        df = pd.concat(dfs)\n        df = df.reset_index(drop=True)\n        df[\"index\"] = df.index\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1646139247710,
+  "history_end_time" : 1646139248761,
+  "history_notes" : null,
+  "history_process" : "m9myzm",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "o0xzfbmfxl4",
+  "history_input" : "import geopandas\nimport pandas as pd\nimport numpy as np\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaPVProcessor(BaseProcessor):\n    dataset = \"plant_village_kenya\"\n\n    def process(self) -> None:\n\n        subfolders = [f\"ref_african_crops_kenya_01_labels_0{i}\" for i in [0, 1, 2]]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for subfolder in subfolders:\n            df = geopandas.read_file(\n                self.raw_folder / \"ref_african_crops_kenya_01_labels\" / subfolder / \"labels.geojson\"\n            )\n            df = df.rename(\n                columns={\n                    \"Latitude\": \"lat\",\n                    \"Longitude\": \"lon\",\n                    \"Planting Date\": \"planting_date\",\n                    \"Estimated Harvest Date\": \"harvest_date\",\n                    \"Crop1\": \"label\",\n                    \"Survey Date\": \"collection_date\",\n                }\n            )\n            df[\"planting_date\"] = pd.to_datetime(df[\"planting_date\"]).dt.to_pydatetime()\n            df[\"harvest_date\"] = pd.to_datetime(df[\"harvest_date\"]).dt.to_pydatetime()\n            df[\"collection_date\"] = pd.to_datetime(df[\"collection_date\"]).dt.to_pydatetime()\n            df[\"is_crop\"] = np.where((df[\"label\"] == \"Fallowland\"), 0, 1)\n            df = df.to_crs(\"EPSG:4326\")\n            dfs.append(df)\n\n        df = pd.concat(dfs)\n        df = df.reset_index(drop=True)\n        df[\"index\"] = df.index\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1646139197522,
+  "history_end_time" : 1646139198653,
+  "history_notes" : null,
+  "history_process" : "m9myzm",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "yj4ilitozgi",
+  "history_input" : "import geopandas\nimport pandas as pd\nimport numpy as np\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaPVProcessor(BaseProcessor):\n    dataset = \"plant_village_kenya\"\n\n    def process(self) -> None:\n\n        subfolders = [f\"ref_african_crops_kenya_01_labels_0{i}\" for i in [0, 1, 2]]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for subfolder in subfolders:\n            df = geopandas.read_file(\n                self.raw_folder / \"ref_african_crops_kenya_01_labels\" / subfolder / \"labels.geojson\"\n            )\n            df = df.rename(\n                columns={\n                    \"Latitude\": \"lat\",\n                    \"Longitude\": \"lon\",\n                    \"Planting Date\": \"planting_date\",\n                    \"Estimated Harvest Date\": \"harvest_date\",\n                    \"Crop1\": \"label\",\n                    \"Survey Date\": \"collection_date\",\n                }\n            )\n            df[\"planting_date\"] = pd.to_datetime(df[\"planting_date\"]).dt.to_pydatetime()\n            df[\"harvest_date\"] = pd.to_datetime(df[\"harvest_date\"]).dt.to_pydatetime()\n            df[\"collection_date\"] = pd.to_datetime(df[\"collection_date\"]).dt.to_pydatetime()\n            df[\"is_crop\"] = np.where((df[\"label\"] == \"Fallowland\"), 0, 1)\n            df = df.to_crs(\"EPSG:4326\")\n            dfs.append(df)\n\n        df = pd.concat(dfs)\n        df = df.reset_index(drop=True)\n        df[\"index\"] = df.index\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1646139160018,
+  "history_end_time" : 1646139160998,
+  "history_notes" : null,
+  "history_process" : "m9myzm",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "bcsqzbhws16",
+  "history_input" : "import geopandas\nimport pandas as pd\nimport numpy as np\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaPVProcessor(BaseProcessor):\n    dataset = \"plant_village_kenya\"\n\n    def process(self) -> None:\n\n        subfolders = [f\"ref_african_crops_kenya_01_labels_0{i}\" for i in [0, 1, 2]]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for subfolder in subfolders:\n            df = geopandas.read_file(\n                self.raw_folder / \"ref_african_crops_kenya_01_labels\" / subfolder / \"labels.geojson\"\n            )\n            df = df.rename(\n                columns={\n                    \"Latitude\": \"lat\",\n                    \"Longitude\": \"lon\",\n                    \"Planting Date\": \"planting_date\",\n                    \"Estimated Harvest Date\": \"harvest_date\",\n                    \"Crop1\": \"label\",\n                    \"Survey Date\": \"collection_date\",\n                }\n            )\n            df[\"planting_date\"] = pd.to_datetime(df[\"planting_date\"]).dt.to_pydatetime()\n            df[\"harvest_date\"] = pd.to_datetime(df[\"harvest_date\"]).dt.to_pydatetime()\n            df[\"collection_date\"] = pd.to_datetime(df[\"collection_date\"]).dt.to_pydatetime()\n            df[\"is_crop\"] = np.where((df[\"label\"] == \"Fallowland\"), 0, 1)\n            df = df.to_crs(\"EPSG:4326\")\n            dfs.append(df)\n\n        df = pd.concat(dfs)\n        df = df.reset_index(drop=True)\n        df[\"index\"] = df.index\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1646138503436,
+  "history_end_time" : 1646138504709,
+  "history_notes" : null,
+  "history_process" : "m9myzm",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "o3rwn0nk6m1",
+  "history_input" : "import geopandas\nimport pandas as pd\nimport numpy as np\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaPVProcessor(BaseProcessor):\n    dataset = \"plant_village_kenya\"\n\n    def process(self) -> None:\n\n        subfolders = [f\"ref_african_crops_kenya_01_labels_0{i}\" for i in [0, 1, 2]]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for subfolder in subfolders:\n            df = geopandas.read_file(\n                self.raw_folder / \"ref_african_crops_kenya_01_labels\" / subfolder / \"labels.geojson\"\n            )\n            df = df.rename(\n                columns={\n                    \"Latitude\": \"lat\",\n                    \"Longitude\": \"lon\",\n                    \"Planting Date\": \"planting_date\",\n                    \"Estimated Harvest Date\": \"harvest_date\",\n                    \"Crop1\": \"label\",\n                    \"Survey Date\": \"collection_date\",\n                }\n            )\n            df[\"planting_date\"] = pd.to_datetime(df[\"planting_date\"]).dt.to_pydatetime()\n            df[\"harvest_date\"] = pd.to_datetime(df[\"harvest_date\"]).dt.to_pydatetime()\n            df[\"collection_date\"] = pd.to_datetime(df[\"collection_date\"]).dt.to_pydatetime()\n            df[\"is_crop\"] = np.where((df[\"label\"] == \"Fallowland\"), 0, 1)\n            df = df.to_crs(\"EPSG:4326\")\n            dfs.append(df)\n\n        df = pd.concat(dfs)\n        df = df.reset_index(drop=True)\n        df[\"index\"] = df.index\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1646138451104,
+  "history_end_time" : 1646138451158,
+  "history_notes" : null,
+  "history_process" : "m9myzm",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "80rpgcxb560",
+  "history_input" : "import geopandas\nimport pandas as pd\nimport numpy as np\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaPVProcessor(BaseProcessor):\n    dataset = \"plant_village_kenya\"\n\n    def process(self) -> None:\n\n        subfolders = [f\"ref_african_crops_kenya_01_labels_0{i}\" for i in [0, 1, 2]]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for subfolder in subfolders:\n            df = geopandas.read_file(\n                self.raw_folder / \"ref_african_crops_kenya_01_labels\" / subfolder / \"labels.geojson\"\n            )\n            df = df.rename(\n                columns={\n                    \"Latitude\": \"lat\",\n                    \"Longitude\": \"lon\",\n                    \"Planting Date\": \"planting_date\",\n                    \"Estimated Harvest Date\": \"harvest_date\",\n                    \"Crop1\": \"label\",\n                    \"Survey Date\": \"collection_date\",\n                }\n            )\n            df[\"planting_date\"] = pd.to_datetime(df[\"planting_date\"]).dt.to_pydatetime()\n            df[\"harvest_date\"] = pd.to_datetime(df[\"harvest_date\"]).dt.to_pydatetime()\n            df[\"collection_date\"] = pd.to_datetime(df[\"collection_date\"]).dt.to_pydatetime()\n            df[\"is_crop\"] = np.where((df[\"label\"] == \"Fallowland\"), 0, 1)\n            df = df.to_crs(\"EPSG:4326\")\n            dfs.append(df)\n\n        df = pd.concat(dfs)\n        df = df.reset_index(drop=True)\n        df[\"index\"] = df.index\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1646138396353,
+  "history_end_time" : 1646138397316,
+  "history_notes" : null,
+  "history_process" : "m9myzm",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "bmwrd0298zd",
+  "history_input" : "import geopandas\nimport pandas as pd\nimport numpy as np\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaPVProcessor(BaseProcessor):\n    dataset = \"plant_village_kenya\"\n\n    def process(self) -> None:\n\n        subfolders = [f\"ref_african_crops_kenya_01_labels_0{i}\" for i in [0, 1, 2]]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for subfolder in subfolders:\n            df = geopandas.read_file(\n                self.raw_folder / \"ref_african_crops_kenya_01_labels\" / subfolder / \"labels.geojson\"\n            )\n            df = df.rename(\n                columns={\n                    \"Latitude\": \"lat\",\n                    \"Longitude\": \"lon\",\n                    \"Planting Date\": \"planting_date\",\n                    \"Estimated Harvest Date\": \"harvest_date\",\n                    \"Crop1\": \"label\",\n                    \"Survey Date\": \"collection_date\",\n                }\n            )\n            df[\"planting_date\"] = pd.to_datetime(df[\"planting_date\"]).dt.to_pydatetime()\n            df[\"harvest_date\"] = pd.to_datetime(df[\"harvest_date\"]).dt.to_pydatetime()\n            df[\"collection_date\"] = pd.to_datetime(df[\"collection_date\"]).dt.to_pydatetime()\n            df[\"is_crop\"] = np.where((df[\"label\"] == \"Fallowland\"), 0, 1)\n            df = df.to_crs(\"EPSG:4326\")\n            dfs.append(df)\n\n        df = pd.concat(dfs)\n        df = df.reset_index(drop=True)\n        df[\"index\"] = df.index\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1646138274187,
+  "history_end_time" : 1646138276016,
+  "history_notes" : null,
+  "history_process" : "m9myzm",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "wsz7ugwsc17",
+  "history_input" : "import geopandas\nimport pandas as pd\nimport numpy as np\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaPVProcessor(BaseProcessor):\n    dataset = \"plant_village_kenya\"\n\n    def process(self) -> None:\n\n        subfolders = [f\"ref_african_crops_kenya_01_labels_0{i}\" for i in [0, 1, 2]]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for subfolder in subfolders:\n            df = geopandas.read_file(\n                self.raw_folder / \"ref_african_crops_kenya_01_labels\" / subfolder / \"labels.geojson\"\n            )\n            df = df.rename(\n                columns={\n                    \"Latitude\": \"lat\",\n                    \"Longitude\": \"lon\",\n                    \"Planting Date\": \"planting_date\",\n                    \"Estimated Harvest Date\": \"harvest_date\",\n                    \"Crop1\": \"label\",\n                    \"Survey Date\": \"collection_date\",\n                }\n            )\n            df[\"planting_date\"] = pd.to_datetime(df[\"planting_date\"]).dt.to_pydatetime()\n            df[\"harvest_date\"] = pd.to_datetime(df[\"harvest_date\"]).dt.to_pydatetime()\n            df[\"collection_date\"] = pd.to_datetime(df[\"collection_date\"]).dt.to_pydatetime()\n            df[\"is_crop\"] = np.where((df[\"label\"] == \"Fallowland\"), 0, 1)\n            df = df.to_crs(\"EPSG:4326\")\n            dfs.append(df)\n\n        df = pd.concat(dfs)\n        df = df.reset_index(drop=True)\n        df[\"index\"] = df.index\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1646138178454,
+  "history_end_time" : 1646138179720,
+  "history_notes" : null,
+  "history_process" : "m9myzm",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "cqgrhnol9u0",
+  "history_input" : "import geopandas\nimport pandas as pd\nimport numpy as np\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaPVProcessor(BaseProcessor):\n    dataset = \"plant_village_kenya\"\n\n    def process(self) -> None:\n\n        subfolders = [f\"ref_african_crops_kenya_01_labels_0{i}\" for i in [0, 1, 2]]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for subfolder in subfolders:\n            df = geopandas.read_file(\n                self.raw_folder / \"ref_african_crops_kenya_01_labels\" / subfolder / \"labels.geojson\"\n            )\n            df = df.rename(\n                columns={\n                    \"Latitude\": \"lat\",\n                    \"Longitude\": \"lon\",\n                    \"Planting Date\": \"planting_date\",\n                    \"Estimated Harvest Date\": \"harvest_date\",\n                    \"Crop1\": \"label\",\n                    \"Survey Date\": \"collection_date\",\n                }\n            )\n            df[\"planting_date\"] = pd.to_datetime(df[\"planting_date\"]).dt.to_pydatetime()\n            df[\"harvest_date\"] = pd.to_datetime(df[\"harvest_date\"]).dt.to_pydatetime()\n            df[\"collection_date\"] = pd.to_datetime(df[\"collection_date\"]).dt.to_pydatetime()\n            df[\"is_crop\"] = np.where((df[\"label\"] == \"Fallowland\"), 0, 1)\n            df = df.to_crs(\"EPSG:4326\")\n            dfs.append(df)\n\n        df = pd.concat(dfs)\n        df = df.reset_index(drop=True)\n        df[\"index\"] = df.index\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1646138098672,
+  "history_end_time" : 1646138099541,
+  "history_notes" : null,
+  "history_process" : "m9myzm",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "zc8wq4nljuo",
+  "history_input" : "import geopandas\nimport pandas as pd\nimport numpy as np\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaPVProcessor(BaseProcessor):\n    dataset = \"plant_village_kenya\"\n\n    def process(self) -> None:\n\n        subfolders = [f\"ref_african_crops_kenya_01_labels_0{i}\" for i in [0, 1, 2]]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for subfolder in subfolders:\n            df = geopandas.read_file(\n                self.raw_folder / \"ref_african_crops_kenya_01_labels\" / subfolder / \"labels.geojson\"\n            )\n            df = df.rename(\n                columns={\n                    \"Latitude\": \"lat\",\n                    \"Longitude\": \"lon\",\n                    \"Planting Date\": \"planting_date\",\n                    \"Estimated Harvest Date\": \"harvest_date\",\n                    \"Crop1\": \"label\",\n                    \"Survey Date\": \"collection_date\",\n                }\n            )\n            df[\"planting_date\"] = pd.to_datetime(df[\"planting_date\"]).dt.to_pydatetime()\n            df[\"harvest_date\"] = pd.to_datetime(df[\"harvest_date\"]).dt.to_pydatetime()\n            df[\"collection_date\"] = pd.to_datetime(df[\"collection_date\"]).dt.to_pydatetime()\n            df[\"is_crop\"] = np.where((df[\"label\"] == \"Fallowland\"), 0, 1)\n            df = df.to_crs(\"EPSG:4326\")\n            dfs.append(df)\n\n        df = pd.concat(dfs)\n        df = df.reset_index(drop=True)\n        df[\"index\"] = df.index\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1646137790247,
+  "history_end_time" : 1646137791618,
+  "history_notes" : null,
+  "history_process" : "m9myzm",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "dzav14lmj98",
+  "history_input" : "import geopandas\nimport pandas as pd\nimport numpy as np\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaPVProcessor(BaseProcessor):\n    dataset = \"plant_village_kenya\"\n\n    def process(self) -> None:\n\n        subfolders = [f\"ref_african_crops_kenya_01_labels_0{i}\" for i in [0, 1, 2]]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for subfolder in subfolders:\n            df = geopandas.read_file(\n                self.raw_folder / \"ref_african_crops_kenya_01_labels\" / subfolder / \"labels.geojson\"\n            )\n            df = df.rename(\n                columns={\n                    \"Latitude\": \"lat\",\n                    \"Longitude\": \"lon\",\n                    \"Planting Date\": \"planting_date\",\n                    \"Estimated Harvest Date\": \"harvest_date\",\n                    \"Crop1\": \"label\",\n                    \"Survey Date\": \"collection_date\",\n                }\n            )\n            df[\"planting_date\"] = pd.to_datetime(df[\"planting_date\"]).dt.to_pydatetime()\n            df[\"harvest_date\"] = pd.to_datetime(df[\"harvest_date\"]).dt.to_pydatetime()\n            df[\"collection_date\"] = pd.to_datetime(df[\"collection_date\"]).dt.to_pydatetime()\n            df[\"is_crop\"] = np.where((df[\"label\"] == \"Fallowland\"), 0, 1)\n            df = df.to_crs(\"EPSG:4326\")\n            dfs.append(df)\n\n        df = pd.concat(dfs)\n        df = df.reset_index(drop=True)\n        df[\"index\"] = df.index\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1646137687465,
+  "history_end_time" : 1646137688655,
+  "history_notes" : null,
+  "history_process" : "m9myzm",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "9bzwr7eerxe",
+  "history_input" : "import geopandas\nimport pandas as pd\nimport numpy as np\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaPVProcessor(BaseProcessor):\n    dataset = \"plant_village_kenya\"\n\n    def process(self) -> None:\n\n        subfolders = [f\"ref_african_crops_kenya_01_labels_0{i}\" for i in [0, 1, 2]]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for subfolder in subfolders:\n            df = geopandas.read_file(\n                self.raw_folder / \"ref_african_crops_kenya_01_labels\" / subfolder / \"labels.geojson\"\n            )\n            df = df.rename(\n                columns={\n                    \"Latitude\": \"lat\",\n                    \"Longitude\": \"lon\",\n                    \"Planting Date\": \"planting_date\",\n                    \"Estimated Harvest Date\": \"harvest_date\",\n                    \"Crop1\": \"label\",\n                    \"Survey Date\": \"collection_date\",\n                }\n            )\n            df[\"planting_date\"] = pd.to_datetime(df[\"planting_date\"]).dt.to_pydatetime()\n            df[\"harvest_date\"] = pd.to_datetime(df[\"harvest_date\"]).dt.to_pydatetime()\n            df[\"collection_date\"] = pd.to_datetime(df[\"collection_date\"]).dt.to_pydatetime()\n            df[\"is_crop\"] = np.where((df[\"label\"] == \"Fallowland\"), 0, 1)\n            df = df.to_crs(\"EPSG:4326\")\n            dfs.append(df)\n\n        df = pd.concat(dfs)\n        df = df.reset_index(drop=True)\n        df[\"index\"] = df.index\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1646137576304,
+  "history_end_time" : 1646137576680,
+  "history_notes" : null,
+  "history_process" : "m9myzm",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "zv1tlacllj7",
+  "history_input" : "import geopandas\nimport pandas as pd\nimport numpy as np\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaPVProcessor(BaseProcessor):\n    dataset = \"plant_village_kenya\"\n\n    def process(self) -> None:\n\n        subfolders = [f\"ref_african_crops_kenya_01_labels_0{i}\" for i in [0, 1, 2]]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for subfolder in subfolders:\n            df = geopandas.read_file(\n                self.raw_folder / \"ref_african_crops_kenya_01_labels\" / subfolder / \"labels.geojson\"\n            )\n            df = df.rename(\n                columns={\n                    \"Latitude\": \"lat\",\n                    \"Longitude\": \"lon\",\n                    \"Planting Date\": \"planting_date\",\n                    \"Estimated Harvest Date\": \"harvest_date\",\n                    \"Crop1\": \"label\",\n                    \"Survey Date\": \"collection_date\",\n                }\n            )\n            df[\"planting_date\"] = pd.to_datetime(df[\"planting_date\"]).dt.to_pydatetime()\n            df[\"harvest_date\"] = pd.to_datetime(df[\"harvest_date\"]).dt.to_pydatetime()\n            df[\"collection_date\"] = pd.to_datetime(df[\"collection_date\"]).dt.to_pydatetime()\n            df[\"is_crop\"] = np.where((df[\"label\"] == \"Fallowland\"), 0, 1)\n            df = df.to_crs(\"EPSG:4326\")\n            dfs.append(df)\n\n        df = pd.concat(dfs)\n        df = df.reset_index(drop=True)\n        df[\"index\"] = df.index\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1646112839072,
+  "history_end_time" : 1646112840208,
+  "history_notes" : null,
+  "history_process" : "m9myzm",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "h2z8wr1mri2",
+  "history_input" : "import geopandas\nimport pandas as pd\nimport numpy as np\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaPVProcessor(BaseProcessor):\n    dataset = \"plant_village_kenya\"\n\n    def process(self) -> None:\n\n        subfolders = [f\"ref_african_crops_kenya_01_labels_0{i}\" for i in [0, 1, 2]]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for subfolder in subfolders:\n            df = geopandas.read_file(\n                self.raw_folder / \"ref_african_crops_kenya_01_labels\" / subfolder / \"labels.geojson\"\n            )\n            df = df.rename(\n                columns={\n                    \"Latitude\": \"lat\",\n                    \"Longitude\": \"lon\",\n                    \"Planting Date\": \"planting_date\",\n                    \"Estimated Harvest Date\": \"harvest_date\",\n                    \"Crop1\": \"label\",\n                    \"Survey Date\": \"collection_date\",\n                }\n            )\n            df[\"planting_date\"] = pd.to_datetime(df[\"planting_date\"]).dt.to_pydatetime()\n            df[\"harvest_date\"] = pd.to_datetime(df[\"harvest_date\"]).dt.to_pydatetime()\n            df[\"collection_date\"] = pd.to_datetime(df[\"collection_date\"]).dt.to_pydatetime()\n            df[\"is_crop\"] = np.where((df[\"label\"] == \"Fallowland\"), 0, 1)\n            df = df.to_crs(\"EPSG:4326\")\n            dfs.append(df)\n\n        df = pd.concat(dfs)\n        df = df.reset_index(drop=True)\n        df[\"index\"] = df.index\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1646112723706,
+  "history_end_time" : 1646112723791,
+  "history_notes" : null,
+  "history_process" : "m9myzm",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "p1s47ykk16y",
+  "history_input" : "import geopandas\nimport pandas as pd\nimport numpy as np\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaPVProcessor(BaseProcessor):\n    dataset = \"plant_village_kenya\"\n\n    def process(self) -> None:\n\n        subfolders = [f\"ref_african_crops_kenya_01_labels_0{i}\" for i in [0, 1, 2]]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for subfolder in subfolders:\n            df = geopandas.read_file(\n                self.raw_folder / \"ref_african_crops_kenya_01_labels\" / subfolder / \"labels.geojson\"\n            )\n            df = df.rename(\n                columns={\n                    \"Latitude\": \"lat\",\n                    \"Longitude\": \"lon\",\n                    \"Planting Date\": \"planting_date\",\n                    \"Estimated Harvest Date\": \"harvest_date\",\n                    \"Crop1\": \"label\",\n                    \"Survey Date\": \"collection_date\",\n                }\n            )\n            df[\"planting_date\"] = pd.to_datetime(df[\"planting_date\"]).dt.to_pydatetime()\n            df[\"harvest_date\"] = pd.to_datetime(df[\"harvest_date\"]).dt.to_pydatetime()\n            df[\"collection_date\"] = pd.to_datetime(df[\"collection_date\"]).dt.to_pydatetime()\n            df[\"is_crop\"] = np.where((df[\"label\"] == \"Fallowland\"), 0, 1)\n            df = df.to_crs(\"EPSG:4326\")\n            dfs.append(df)\n\n        df = pd.concat(dfs)\n        df = df.reset_index(drop=True)\n        df[\"index\"] = df.index\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1646112282925,
+  "history_end_time" : 1646112284035,
+  "history_notes" : null,
+  "history_process" : "m9myzm",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "r67zo5228kc",
+  "history_input" : "import geopandas\nimport pandas as pd\nimport numpy as np\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaPVProcessor(BaseProcessor):\n    dataset = \"plant_village_kenya\"\n\n    def process(self) -> None:\n\n        subfolders = [f\"ref_african_crops_kenya_01_labels_0{i}\" for i in [0, 1, 2]]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for subfolder in subfolders:\n            df = geopandas.read_file(\n                self.raw_folder / \"ref_african_crops_kenya_01_labels\" / subfolder / \"labels.geojson\"\n            )\n            df = df.rename(\n                columns={\n                    \"Latitude\": \"lat\",\n                    \"Longitude\": \"lon\",\n                    \"Planting Date\": \"planting_date\",\n                    \"Estimated Harvest Date\": \"harvest_date\",\n                    \"Crop1\": \"label\",\n                    \"Survey Date\": \"collection_date\",\n                }\n            )\n            df[\"planting_date\"] = pd.to_datetime(df[\"planting_date\"]).dt.to_pydatetime()\n            df[\"harvest_date\"] = pd.to_datetime(df[\"harvest_date\"]).dt.to_pydatetime()\n            df[\"collection_date\"] = pd.to_datetime(df[\"collection_date\"]).dt.to_pydatetime()\n            df[\"is_crop\"] = np.where((df[\"label\"] == \"Fallowland\"), 0, 1)\n            df = df.to_crs(\"EPSG:4326\")\n            dfs.append(df)\n\n        df = pd.concat(dfs)\n        df = df.reset_index(drop=True)\n        df[\"index\"] = df.index\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1646112243079,
+  "history_end_time" : 1646112243550,
+  "history_notes" : null,
+  "history_process" : "m9myzm",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "2weeyrqiqx6",
+  "history_input" : "import geopandas\nimport pandas as pd\nimport numpy as np\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaPVProcessor(BaseProcessor):\n    dataset = \"plant_village_kenya\"\n\n    def process(self) -> None:\n\n        subfolders = [f\"ref_african_crops_kenya_01_labels_0{i}\" for i in [0, 1, 2]]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for subfolder in subfolders:\n            df = geopandas.read_file(\n                self.raw_folder / \"ref_african_crops_kenya_01_labels\" / subfolder / \"labels.geojson\"\n            )\n            df = df.rename(\n                columns={\n                    \"Latitude\": \"lat\",\n                    \"Longitude\": \"lon\",\n                    \"Planting Date\": \"planting_date\",\n                    \"Estimated Harvest Date\": \"harvest_date\",\n                    \"Crop1\": \"label\",\n                    \"Survey Date\": \"collection_date\",\n                }\n            )\n            df[\"planting_date\"] = pd.to_datetime(df[\"planting_date\"]).dt.to_pydatetime()\n            df[\"harvest_date\"] = pd.to_datetime(df[\"harvest_date\"]).dt.to_pydatetime()\n            df[\"collection_date\"] = pd.to_datetime(df[\"collection_date\"]).dt.to_pydatetime()\n            df[\"is_crop\"] = np.where((df[\"label\"] == \"Fallowland\"), 0, 1)\n            df = df.to_crs(\"EPSG:4326\")\n            dfs.append(df)\n\n        df = pd.concat(dfs)\n        df = df.reset_index(drop=True)\n        df[\"index\"] = df.index\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1646112141906,
+  "history_end_time" : 1646112142696,
+  "history_notes" : null,
+  "history_process" : "m9myzm",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "1qop76tj1yw",
+  "history_input" : "import geopandas\nimport pandas as pd\nimport numpy as np\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaPVProcessor(BaseProcessor):\n    dataset = \"plant_village_kenya\"\n\n    def process(self) -> None:\n\n        subfolders = [f\"ref_african_crops_kenya_01_labels_0{i}\" for i in [0, 1, 2]]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for subfolder in subfolders:\n            df = geopandas.read_file(\n                self.raw_folder / \"ref_african_crops_kenya_01_labels\" / subfolder / \"labels.geojson\"\n            )\n            df = df.rename(\n                columns={\n                    \"Latitude\": \"lat\",\n                    \"Longitude\": \"lon\",\n                    \"Planting Date\": \"planting_date\",\n                    \"Estimated Harvest Date\": \"harvest_date\",\n                    \"Crop1\": \"label\",\n                    \"Survey Date\": \"collection_date\",\n                }\n            )\n            df[\"planting_date\"] = pd.to_datetime(df[\"planting_date\"]).dt.to_pydatetime()\n            df[\"harvest_date\"] = pd.to_datetime(df[\"harvest_date\"]).dt.to_pydatetime()\n            df[\"collection_date\"] = pd.to_datetime(df[\"collection_date\"]).dt.to_pydatetime()\n            df[\"is_crop\"] = np.where((df[\"label\"] == \"Fallowland\"), 0, 1)\n            df = df.to_crs(\"EPSG:4326\")\n            dfs.append(df)\n\n        df = pd.concat(dfs)\n        df = df.reset_index(drop=True)\n        df[\"index\"] = df.index\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1645393376691,
+  "history_end_time" : 1645393378524,
+  "history_notes" : null,
+  "history_process" : "m9myzm",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "bz44orjnnq2",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : null,
+  "history_end_time" : 1655907403125,
+  "history_notes" : null,
+  "history_process" : "m9myzm",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},]

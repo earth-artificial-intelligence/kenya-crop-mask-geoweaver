@@ -1,0 +1,841 @@
+[{
+  "history_id" : "l15a34ibnwq",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666167825378,
+  "history_end_time" : 1666167825378,
+  "history_notes" : null,
+  "history_process" : "9x9elz",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "uij15v4ebgy",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666167772363,
+  "history_end_time" : 1666167772363,
+  "history_notes" : null,
+  "history_process" : "9x9elz",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "urkcox1ws76",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666166465608,
+  "history_end_time" : 1666166465608,
+  "history_notes" : null,
+  "history_process" : "9x9elz",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "0jmtp8wct1u",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666166410285,
+  "history_end_time" : 1666166419945,
+  "history_notes" : null,
+  "history_process" : "9x9elz",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "ur46qssg7hw",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666164233096,
+  "history_end_time" : 1666164233096,
+  "history_notes" : null,
+  "history_process" : "9x9elz",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "i2pqqb1t2ub",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666163607310,
+  "history_end_time" : 1666163607310,
+  "history_notes" : null,
+  "history_process" : "9x9elz",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "j2dyj9vszfk",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666137012955,
+  "history_end_time" : 1666137012955,
+  "history_notes" : null,
+  "history_process" : "9x9elz",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "h816az0s4zl",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666136593512,
+  "history_end_time" : 1666136593512,
+  "history_notes" : null,
+  "history_process" : "9x9elz",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "j6n41u7u09m",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666136435829,
+  "history_end_time" : 1666136435829,
+  "history_notes" : null,
+  "history_process" : "9x9elz",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "3d38emp92gd",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666134110787,
+  "history_end_time" : 1666134110787,
+  "history_notes" : null,
+  "history_process" : "9x9elz",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "krwzzyjrpve",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666134036941,
+  "history_end_time" : 1666134036941,
+  "history_notes" : null,
+  "history_process" : "9x9elz",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "mtfqoe1d1wy",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666134008991,
+  "history_end_time" : 1666134008991,
+  "history_notes" : null,
+  "history_process" : "9x9elz",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "w25uy5sa9ii",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666131993219,
+  "history_end_time" : 1666131993219,
+  "history_notes" : null,
+  "history_process" : "9x9elz",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "q6fcc57jzte",
+  "history_input" : "import geopandas\nfrom pathlib import Path\nimport pandas as pd\nfrom pyproj import Transformer\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaNonCropProcessor(BaseProcessor):\n\n    dataset = \"kenya_non_crop\"\n\n    @staticmethod\n    def process_set(filepath: Path, latlon: bool, reversed: bool) -> geopandas.GeoDataFrame:\n        df = geopandas.read_file(filepath)\n\n        x, y = df.geometry.centroid.x.values, df.geometry.centroid.y.values\n\n        if reversed:\n            x, y = y, x\n\n        if not latlon:\n\n            transformer = Transformer.from_crs(crs_from=32636, crs_to=4326)\n\n            lat, lon = transformer.transform(xx=x, yy=y)\n            df[\"lat\"] = lat\n            df[\"lon\"] = lon\n        else:\n            df[\"lat\"] = x\n            df[\"lon\"] = y\n\n        df[\"index\"] = df.index\n\n        return df\n\n    def process(self) -> None:\n\n        filepaths = [\n            (self.raw_folder / \"noncrop_labels_v2\", False, False),\n            (self.raw_folder / \"noncrop_labels_set2\", False, False),\n            (self.raw_folder / \"2019_gepro_noncrop\", True, True),\n            (self.raw_folder / \"noncrop_water_kenya_gt\", True, True),\n            (self.raw_folder / \"noncrop_kenya_gt\", True, True),\n        ]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for filepath, is_latlon, is_reversed in filepaths:\n            dfs.append(self.process_set(filepath, is_latlon, is_reversed))\n\n        df = pd.concat(dfs)\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1666118290656,
+  "history_end_time" : 1666118292871,
+  "history_notes" : null,
+  "history_process" : "9x9elz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "fmqsx4udr0n",
+  "history_input" : "import geopandas\nfrom pathlib import Path\nimport pandas as pd\nfrom pyproj import Transformer\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaNonCropProcessor(BaseProcessor):\n\n    dataset = \"kenya_non_crop\"\n\n    @staticmethod\n    def process_set(filepath: Path, latlon: bool, reversed: bool) -> geopandas.GeoDataFrame:\n        df = geopandas.read_file(filepath)\n\n        x, y = df.geometry.centroid.x.values, df.geometry.centroid.y.values\n\n        if reversed:\n            x, y = y, x\n\n        if not latlon:\n\n            transformer = Transformer.from_crs(crs_from=32636, crs_to=4326)\n\n            lat, lon = transformer.transform(xx=x, yy=y)\n            df[\"lat\"] = lat\n            df[\"lon\"] = lon\n        else:\n            df[\"lat\"] = x\n            df[\"lon\"] = y\n\n        df[\"index\"] = df.index\n\n        return df\n\n    def process(self) -> None:\n\n        filepaths = [\n            (self.raw_folder / \"noncrop_labels_v2\", False, False),\n            (self.raw_folder / \"noncrop_labels_set2\", False, False),\n            (self.raw_folder / \"2019_gepro_noncrop\", True, True),\n            (self.raw_folder / \"noncrop_water_kenya_gt\", True, True),\n            (self.raw_folder / \"noncrop_kenya_gt\", True, True),\n        ]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for filepath, is_latlon, is_reversed in filepaths:\n            dfs.append(self.process_set(filepath, is_latlon, is_reversed))\n\n        df = pd.concat(dfs)\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1655909877527,
+  "history_end_time" : 1655909877821,
+  "history_notes" : null,
+  "history_process" : "9x9elz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "pyvmrr2sawh",
+  "history_input" : "import geopandas\nfrom pathlib import Path\nimport pandas as pd\nfrom pyproj import Transformer\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaNonCropProcessor(BaseProcessor):\n\n    dataset = \"kenya_non_crop\"\n\n    @staticmethod\n    def process_set(filepath: Path, latlon: bool, reversed: bool) -> geopandas.GeoDataFrame:\n        df = geopandas.read_file(filepath)\n\n        x, y = df.geometry.centroid.x.values, df.geometry.centroid.y.values\n\n        if reversed:\n            x, y = y, x\n\n        if not latlon:\n\n            transformer = Transformer.from_crs(crs_from=32636, crs_to=4326)\n\n            lat, lon = transformer.transform(xx=x, yy=y)\n            df[\"lat\"] = lat\n            df[\"lon\"] = lon\n        else:\n            df[\"lat\"] = x\n            df[\"lon\"] = y\n\n        df[\"index\"] = df.index\n\n        return df\n\n    def process(self) -> None:\n\n        filepaths = [\n            (self.raw_folder / \"noncrop_labels_v2\", False, False),\n            (self.raw_folder / \"noncrop_labels_set2\", False, False),\n            (self.raw_folder / \"2019_gepro_noncrop\", True, True),\n            (self.raw_folder / \"noncrop_water_kenya_gt\", True, True),\n            (self.raw_folder / \"noncrop_kenya_gt\", True, True),\n        ]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for filepath, is_latlon, is_reversed in filepaths:\n            dfs.append(self.process_set(filepath, is_latlon, is_reversed))\n\n        df = pd.concat(dfs)\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "Traceback (most recent call last):\n  File \"src_processors_kenya_non_crop.py\", line 1, in <module>\n    import geopandas\n  File \"/opt/anaconda3/lib/python3.8/site-packages/geopandas/__init__.py\", line 1, in <module>\n    from geopandas._config import options  # noqa\n  File \"/opt/anaconda3/lib/python3.8/site-packages/geopandas/_config.py\", line 109, in <module>\n    default_value=_default_use_pygeos(),\n  File \"/opt/anaconda3/lib/python3.8/site-packages/geopandas/_config.py\", line 95, in _default_use_pygeos\n    import geopandas._compat as compat\n  File \"/opt/anaconda3/lib/python3.8/site-packages/geopandas/_compat.py\", line 227, in <module>\n    PYPROJ_LT_3 = LooseVersion(pyproj.__version__) < LooseVersion(\"3\")\nAttributeError: module 'pyproj' has no attribute '__version__'\n",
+  "history_begin_time" : 1655908831476,
+  "history_end_time" : 1655908832188,
+  "history_notes" : null,
+  "history_process" : "9x9elz",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "ej75ckt3f3q",
+  "history_input" : "import geopandas\nfrom pathlib import Path\nimport pandas as pd\nfrom pyproj import Transformer\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaNonCropProcessor(BaseProcessor):\n\n    dataset = \"kenya_non_crop\"\n\n    @staticmethod\n    def process_set(filepath: Path, latlon: bool, reversed: bool) -> geopandas.GeoDataFrame:\n        df = geopandas.read_file(filepath)\n\n        x, y = df.geometry.centroid.x.values, df.geometry.centroid.y.values\n\n        if reversed:\n            x, y = y, x\n\n        if not latlon:\n\n            transformer = Transformer.from_crs(crs_from=32636, crs_to=4326)\n\n            lat, lon = transformer.transform(xx=x, yy=y)\n            df[\"lat\"] = lat\n            df[\"lon\"] = lon\n        else:\n            df[\"lat\"] = x\n            df[\"lon\"] = y\n\n        df[\"index\"] = df.index\n\n        return df\n\n    def process(self) -> None:\n\n        filepaths = [\n            (self.raw_folder / \"noncrop_labels_v2\", False, False),\n            (self.raw_folder / \"noncrop_labels_set2\", False, False),\n            (self.raw_folder / \"2019_gepro_noncrop\", True, True),\n            (self.raw_folder / \"noncrop_water_kenya_gt\", True, True),\n            (self.raw_folder / \"noncrop_kenya_gt\", True, True),\n        ]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for filepath, is_latlon, is_reversed in filepaths:\n            dfs.append(self.process_set(filepath, is_latlon, is_reversed))\n\n        df = pd.concat(dfs)\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1655907440242,
+  "history_end_time" : 1655907441055,
+  "history_notes" : null,
+  "history_process" : "9x9elz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "3h8sst91yp0",
+  "history_input" : null,
+  "history_output" : null,
+  "history_begin_time" : 1655907402979,
+  "history_end_time" : 1655907403242,
+  "history_notes" : null,
+  "history_process" : "9x9elz",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "esxzuuayj4r",
+  "history_input" : "import geopandas\nfrom pathlib import Path\nimport pandas as pd\nfrom pyproj import Transformer\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaNonCropProcessor(BaseProcessor):\n\n    dataset = \"kenya_non_crop\"\n\n    @staticmethod\n    def process_set(filepath: Path, latlon: bool, reversed: bool) -> geopandas.GeoDataFrame:\n        df = geopandas.read_file(filepath)\n\n        x, y = df.geometry.centroid.x.values, df.geometry.centroid.y.values\n\n        if reversed:\n            x, y = y, x\n\n        if not latlon:\n\n            transformer = Transformer.from_crs(crs_from=32636, crs_to=4326)\n\n            lat, lon = transformer.transform(xx=x, yy=y)\n            df[\"lat\"] = lat\n            df[\"lon\"] = lon\n        else:\n            df[\"lat\"] = x\n            df[\"lon\"] = y\n\n        df[\"index\"] = df.index\n\n        return df\n\n    def process(self) -> None:\n\n        filepaths = [\n            (self.raw_folder / \"noncrop_labels_v2\", False, False),\n            (self.raw_folder / \"noncrop_labels_set2\", False, False),\n            (self.raw_folder / \"2019_gepro_noncrop\", True, True),\n            (self.raw_folder / \"noncrop_water_kenya_gt\", True, True),\n            (self.raw_folder / \"noncrop_kenya_gt\", True, True),\n        ]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for filepath, is_latlon, is_reversed in filepaths:\n            dfs.append(self.process_set(filepath, is_latlon, is_reversed))\n\n        df = pd.concat(dfs)\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "Traceback (most recent call last):\n  File \"src_processors_kenya_non_crop.py\", line 1, in <module>\n    import geopandas\nModuleNotFoundError: No module named 'geopandas'\n",
+  "history_begin_time" : 1655865872850,
+  "history_end_time" : 1655865873010,
+  "history_notes" : null,
+  "history_process" : "9x9elz",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "owz26nj3qtg",
+  "history_input" : "import geopandas\nfrom pathlib import Path\nimport pandas as pd\nfrom pyproj import Transformer\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaNonCropProcessor(BaseProcessor):\n\n    dataset = \"kenya_non_crop\"\n\n    @staticmethod\n    def process_set(filepath: Path, latlon: bool, reversed: bool) -> geopandas.GeoDataFrame:\n        df = geopandas.read_file(filepath)\n\n        x, y = df.geometry.centroid.x.values, df.geometry.centroid.y.values\n\n        if reversed:\n            x, y = y, x\n\n        if not latlon:\n\n            transformer = Transformer.from_crs(crs_from=32636, crs_to=4326)\n\n            lat, lon = transformer.transform(xx=x, yy=y)\n            df[\"lat\"] = lat\n            df[\"lon\"] = lon\n        else:\n            df[\"lat\"] = x\n            df[\"lon\"] = y\n\n        df[\"index\"] = df.index\n\n        return df\n\n    def process(self) -> None:\n\n        filepaths = [\n            (self.raw_folder / \"noncrop_labels_v2\", False, False),\n            (self.raw_folder / \"noncrop_labels_set2\", False, False),\n            (self.raw_folder / \"2019_gepro_noncrop\", True, True),\n            (self.raw_folder / \"noncrop_water_kenya_gt\", True, True),\n            (self.raw_folder / \"noncrop_kenya_gt\", True, True),\n        ]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for filepath, is_latlon, is_reversed in filepaths:\n            dfs.append(self.process_set(filepath, is_latlon, is_reversed))\n\n        df = pd.concat(dfs)\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1655865095331,
+  "history_end_time" : 1655865095504,
+  "history_notes" : null,
+  "history_process" : "9x9elz",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "1icvi0l44mq",
+  "history_input" : "import geopandas\nfrom pathlib import Path\nimport pandas as pd\nfrom pyproj import Transformer\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaNonCropProcessor(BaseProcessor):\n\n    dataset = \"kenya_non_crop\"\n\n    @staticmethod\n    def process_set(filepath: Path, latlon: bool, reversed: bool) -> geopandas.GeoDataFrame:\n        df = geopandas.read_file(filepath)\n\n        x, y = df.geometry.centroid.x.values, df.geometry.centroid.y.values\n\n        if reversed:\n            x, y = y, x\n\n        if not latlon:\n\n            transformer = Transformer.from_crs(crs_from=32636, crs_to=4326)\n\n            lat, lon = transformer.transform(xx=x, yy=y)\n            df[\"lat\"] = lat\n            df[\"lon\"] = lon\n        else:\n            df[\"lat\"] = x\n            df[\"lon\"] = y\n\n        df[\"index\"] = df.index\n\n        return df\n\n    def process(self) -> None:\n\n        filepaths = [\n            (self.raw_folder / \"noncrop_labels_v2\", False, False),\n            (self.raw_folder / \"noncrop_labels_set2\", False, False),\n            (self.raw_folder / \"2019_gepro_noncrop\", True, True),\n            (self.raw_folder / \"noncrop_water_kenya_gt\", True, True),\n            (self.raw_folder / \"noncrop_kenya_gt\", True, True),\n        ]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for filepath, is_latlon, is_reversed in filepaths:\n            dfs.append(self.process_set(filepath, is_latlon, is_reversed))\n\n        df = pd.concat(dfs)\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1647347441179,
+  "history_end_time" : 1647347441490,
+  "history_notes" : null,
+  "history_process" : "9x9elz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "vafgakop8vd",
+  "history_input" : "import geopandas\nfrom pathlib import Path\nimport pandas as pd\nfrom pyproj import Transformer\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaNonCropProcessor(BaseProcessor):\n\n    dataset = \"kenya_non_crop\"\n\n    @staticmethod\n    def process_set(filepath: Path, latlon: bool, reversed: bool) -> geopandas.GeoDataFrame:\n        df = geopandas.read_file(filepath)\n\n        x, y = df.geometry.centroid.x.values, df.geometry.centroid.y.values\n\n        if reversed:\n            x, y = y, x\n\n        if not latlon:\n\n            transformer = Transformer.from_crs(crs_from=32636, crs_to=4326)\n\n            lat, lon = transformer.transform(xx=x, yy=y)\n            df[\"lat\"] = lat\n            df[\"lon\"] = lon\n        else:\n            df[\"lat\"] = x\n            df[\"lon\"] = y\n\n        df[\"index\"] = df.index\n\n        return df\n\n    def process(self) -> None:\n\n        filepaths = [\n            (self.raw_folder / \"noncrop_labels_v2\", False, False),\n            (self.raw_folder / \"noncrop_labels_set2\", False, False),\n            (self.raw_folder / \"2019_gepro_noncrop\", True, True),\n            (self.raw_folder / \"noncrop_water_kenya_gt\", True, True),\n            (self.raw_folder / \"noncrop_kenya_gt\", True, True),\n        ]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for filepath, is_latlon, is_reversed in filepaths:\n            dfs.append(self.process_set(filepath, is_latlon, is_reversed))\n\n        df = pd.concat(dfs)\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1647347344080,
+  "history_end_time" : 1647347345070,
+  "history_notes" : null,
+  "history_process" : "9x9elz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "q1hewzlauwb",
+  "history_input" : "import geopandas\nfrom pathlib import Path\nimport pandas as pd\nfrom pyproj import Transformer\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaNonCropProcessor(BaseProcessor):\n\n    dataset = \"kenya_non_crop\"\n\n    @staticmethod\n    def process_set(filepath: Path, latlon: bool, reversed: bool) -> geopandas.GeoDataFrame:\n        df = geopandas.read_file(filepath)\n\n        x, y = df.geometry.centroid.x.values, df.geometry.centroid.y.values\n\n        if reversed:\n            x, y = y, x\n\n        if not latlon:\n\n            transformer = Transformer.from_crs(crs_from=32636, crs_to=4326)\n\n            lat, lon = transformer.transform(xx=x, yy=y)\n            df[\"lat\"] = lat\n            df[\"lon\"] = lon\n        else:\n            df[\"lat\"] = x\n            df[\"lon\"] = y\n\n        df[\"index\"] = df.index\n\n        return df\n\n    def process(self) -> None:\n\n        filepaths = [\n            (self.raw_folder / \"noncrop_labels_v2\", False, False),\n            (self.raw_folder / \"noncrop_labels_set2\", False, False),\n            (self.raw_folder / \"2019_gepro_noncrop\", True, True),\n            (self.raw_folder / \"noncrop_water_kenya_gt\", True, True),\n            (self.raw_folder / \"noncrop_kenya_gt\", True, True),\n        ]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for filepath, is_latlon, is_reversed in filepaths:\n            dfs.append(self.process_set(filepath, is_latlon, is_reversed))\n\n        df = pd.concat(dfs)\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1647347278491,
+  "history_end_time" : 1647347279712,
+  "history_notes" : null,
+  "history_process" : "9x9elz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "qj5srqr1ln9",
+  "history_input" : "import geopandas\nfrom pathlib import Path\nimport pandas as pd\nfrom pyproj import Transformer\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaNonCropProcessor(BaseProcessor):\n\n    dataset = \"kenya_non_crop\"\n\n    @staticmethod\n    def process_set(filepath: Path, latlon: bool, reversed: bool) -> geopandas.GeoDataFrame:\n        df = geopandas.read_file(filepath)\n\n        x, y = df.geometry.centroid.x.values, df.geometry.centroid.y.values\n\n        if reversed:\n            x, y = y, x\n\n        if not latlon:\n\n            transformer = Transformer.from_crs(crs_from=32636, crs_to=4326)\n\n            lat, lon = transformer.transform(xx=x, yy=y)\n            df[\"lat\"] = lat\n            df[\"lon\"] = lon\n        else:\n            df[\"lat\"] = x\n            df[\"lon\"] = y\n\n        df[\"index\"] = df.index\n\n        return df\n\n    def process(self) -> None:\n\n        filepaths = [\n            (self.raw_folder / \"noncrop_labels_v2\", False, False),\n            (self.raw_folder / \"noncrop_labels_set2\", False, False),\n            (self.raw_folder / \"2019_gepro_noncrop\", True, True),\n            (self.raw_folder / \"noncrop_water_kenya_gt\", True, True),\n            (self.raw_folder / \"noncrop_kenya_gt\", True, True),\n        ]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for filepath, is_latlon, is_reversed in filepaths:\n            dfs.append(self.process_set(filepath, is_latlon, is_reversed))\n\n        df = pd.concat(dfs)\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1647347150856,
+  "history_end_time" : 1647347151861,
+  "history_notes" : null,
+  "history_process" : "9x9elz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "ptjle2i8ed3",
+  "history_input" : "import geopandas\nfrom pathlib import Path\nimport pandas as pd\nfrom pyproj import Transformer\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaNonCropProcessor(BaseProcessor):\n\n    dataset = \"kenya_non_crop\"\n\n    @staticmethod\n    def process_set(filepath: Path, latlon: bool, reversed: bool) -> geopandas.GeoDataFrame:\n        df = geopandas.read_file(filepath)\n\n        x, y = df.geometry.centroid.x.values, df.geometry.centroid.y.values\n\n        if reversed:\n            x, y = y, x\n\n        if not latlon:\n\n            transformer = Transformer.from_crs(crs_from=32636, crs_to=4326)\n\n            lat, lon = transformer.transform(xx=x, yy=y)\n            df[\"lat\"] = lat\n            df[\"lon\"] = lon\n        else:\n            df[\"lat\"] = x\n            df[\"lon\"] = y\n\n        df[\"index\"] = df.index\n\n        return df\n\n    def process(self) -> None:\n\n        filepaths = [\n            (self.raw_folder / \"noncrop_labels_v2\", False, False),\n            (self.raw_folder / \"noncrop_labels_set2\", False, False),\n            (self.raw_folder / \"2019_gepro_noncrop\", True, True),\n            (self.raw_folder / \"noncrop_water_kenya_gt\", True, True),\n            (self.raw_folder / \"noncrop_kenya_gt\", True, True),\n        ]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for filepath, is_latlon, is_reversed in filepaths:\n            dfs.append(self.process_set(filepath, is_latlon, is_reversed))\n\n        df = pd.concat(dfs)\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1647346824592,
+  "history_end_time" : 1647346825932,
+  "history_notes" : null,
+  "history_process" : "9x9elz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "qdks338i8od",
+  "history_input" : "import geopandas\nfrom pathlib import Path\nimport pandas as pd\nfrom pyproj import Transformer\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaNonCropProcessor(BaseProcessor):\n\n    dataset = \"kenya_non_crop\"\n\n    @staticmethod\n    def process_set(filepath: Path, latlon: bool, reversed: bool) -> geopandas.GeoDataFrame:\n        df = geopandas.read_file(filepath)\n\n        x, y = df.geometry.centroid.x.values, df.geometry.centroid.y.values\n\n        if reversed:\n            x, y = y, x\n\n        if not latlon:\n\n            transformer = Transformer.from_crs(crs_from=32636, crs_to=4326)\n\n            lat, lon = transformer.transform(xx=x, yy=y)\n            df[\"lat\"] = lat\n            df[\"lon\"] = lon\n        else:\n            df[\"lat\"] = x\n            df[\"lon\"] = y\n\n        df[\"index\"] = df.index\n\n        return df\n\n    def process(self) -> None:\n\n        filepaths = [\n            (self.raw_folder / \"noncrop_labels_v2\", False, False),\n            (self.raw_folder / \"noncrop_labels_set2\", False, False),\n            (self.raw_folder / \"2019_gepro_noncrop\", True, True),\n            (self.raw_folder / \"noncrop_water_kenya_gt\", True, True),\n            (self.raw_folder / \"noncrop_kenya_gt\", True, True),\n        ]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for filepath, is_latlon, is_reversed in filepaths:\n            dfs.append(self.process_set(filepath, is_latlon, is_reversed))\n\n        df = pd.concat(dfs)\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1647346654741,
+  "history_end_time" : 1647346655265,
+  "history_notes" : null,
+  "history_process" : "9x9elz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "qczcayohbq2",
+  "history_input" : "import geopandas\nfrom pathlib import Path\nimport pandas as pd\nfrom pyproj import Transformer\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaNonCropProcessor(BaseProcessor):\n\n    dataset = \"kenya_non_crop\"\n\n    @staticmethod\n    def process_set(filepath: Path, latlon: bool, reversed: bool) -> geopandas.GeoDataFrame:\n        df = geopandas.read_file(filepath)\n\n        x, y = df.geometry.centroid.x.values, df.geometry.centroid.y.values\n\n        if reversed:\n            x, y = y, x\n\n        if not latlon:\n\n            transformer = Transformer.from_crs(crs_from=32636, crs_to=4326)\n\n            lat, lon = transformer.transform(xx=x, yy=y)\n            df[\"lat\"] = lat\n            df[\"lon\"] = lon\n        else:\n            df[\"lat\"] = x\n            df[\"lon\"] = y\n\n        df[\"index\"] = df.index\n\n        return df\n\n    def process(self) -> None:\n\n        filepaths = [\n            (self.raw_folder / \"noncrop_labels_v2\", False, False),\n            (self.raw_folder / \"noncrop_labels_set2\", False, False),\n            (self.raw_folder / \"2019_gepro_noncrop\", True, True),\n            (self.raw_folder / \"noncrop_water_kenya_gt\", True, True),\n            (self.raw_folder / \"noncrop_kenya_gt\", True, True),\n        ]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for filepath, is_latlon, is_reversed in filepaths:\n            dfs.append(self.process_set(filepath, is_latlon, is_reversed))\n\n        df = pd.concat(dfs)\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1647345845478,
+  "history_end_time" : 1647345846622,
+  "history_notes" : null,
+  "history_process" : "9x9elz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "9mqz5qivdub",
+  "history_input" : "import geopandas\nfrom pathlib import Path\nimport pandas as pd\nfrom pyproj import Transformer\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaNonCropProcessor(BaseProcessor):\n\n    dataset = \"kenya_non_crop\"\n\n    @staticmethod\n    def process_set(filepath: Path, latlon: bool, reversed: bool) -> geopandas.GeoDataFrame:\n        df = geopandas.read_file(filepath)\n\n        x, y = df.geometry.centroid.x.values, df.geometry.centroid.y.values\n\n        if reversed:\n            x, y = y, x\n\n        if not latlon:\n\n            transformer = Transformer.from_crs(crs_from=32636, crs_to=4326)\n\n            lat, lon = transformer.transform(xx=x, yy=y)\n            df[\"lat\"] = lat\n            df[\"lon\"] = lon\n        else:\n            df[\"lat\"] = x\n            df[\"lon\"] = y\n\n        df[\"index\"] = df.index\n\n        return df\n\n    def process(self) -> None:\n\n        filepaths = [\n            (self.raw_folder / \"noncrop_labels_v2\", False, False),\n            (self.raw_folder / \"noncrop_labels_set2\", False, False),\n            (self.raw_folder / \"2019_gepro_noncrop\", True, True),\n            (self.raw_folder / \"noncrop_water_kenya_gt\", True, True),\n            (self.raw_folder / \"noncrop_kenya_gt\", True, True),\n        ]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for filepath, is_latlon, is_reversed in filepaths:\n            dfs.append(self.process_set(filepath, is_latlon, is_reversed))\n\n        df = pd.concat(dfs)\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1647345666746,
+  "history_end_time" : 1647345668033,
+  "history_notes" : null,
+  "history_process" : "9x9elz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "t3lwb5mkudb",
+  "history_input" : "import geopandas\nfrom pathlib import Path\nimport pandas as pd\nfrom pyproj import Transformer\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaNonCropProcessor(BaseProcessor):\n\n    dataset = \"kenya_non_crop\"\n\n    @staticmethod\n    def process_set(filepath: Path, latlon: bool, reversed: bool) -> geopandas.GeoDataFrame:\n        df = geopandas.read_file(filepath)\n\n        x, y = df.geometry.centroid.x.values, df.geometry.centroid.y.values\n\n        if reversed:\n            x, y = y, x\n\n        if not latlon:\n\n            transformer = Transformer.from_crs(crs_from=32636, crs_to=4326)\n\n            lat, lon = transformer.transform(xx=x, yy=y)\n            df[\"lat\"] = lat\n            df[\"lon\"] = lon\n        else:\n            df[\"lat\"] = x\n            df[\"lon\"] = y\n\n        df[\"index\"] = df.index\n\n        return df\n\n    def process(self) -> None:\n\n        filepaths = [\n            (self.raw_folder / \"noncrop_labels_v2\", False, False),\n            (self.raw_folder / \"noncrop_labels_set2\", False, False),\n            (self.raw_folder / \"2019_gepro_noncrop\", True, True),\n            (self.raw_folder / \"noncrop_water_kenya_gt\", True, True),\n            (self.raw_folder / \"noncrop_kenya_gt\", True, True),\n        ]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for filepath, is_latlon, is_reversed in filepaths:\n            dfs.append(self.process_set(filepath, is_latlon, is_reversed))\n\n        df = pd.concat(dfs)\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1647340112875,
+  "history_end_time" : 1647340114274,
+  "history_notes" : null,
+  "history_process" : "9x9elz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "pkvpqxjeapl",
+  "history_input" : "import geopandas\nfrom pathlib import Path\nimport pandas as pd\nfrom pyproj import Transformer\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaNonCropProcessor(BaseProcessor):\n\n    dataset = \"kenya_non_crop\"\n\n    @staticmethod\n    def process_set(filepath: Path, latlon: bool, reversed: bool) -> geopandas.GeoDataFrame:\n        df = geopandas.read_file(filepath)\n\n        x, y = df.geometry.centroid.x.values, df.geometry.centroid.y.values\n\n        if reversed:\n            x, y = y, x\n\n        if not latlon:\n\n            transformer = Transformer.from_crs(crs_from=32636, crs_to=4326)\n\n            lat, lon = transformer.transform(xx=x, yy=y)\n            df[\"lat\"] = lat\n            df[\"lon\"] = lon\n        else:\n            df[\"lat\"] = x\n            df[\"lon\"] = y\n\n        df[\"index\"] = df.index\n\n        return df\n\n    def process(self) -> None:\n\n        filepaths = [\n            (self.raw_folder / \"noncrop_labels_v2\", False, False),\n            (self.raw_folder / \"noncrop_labels_set2\", False, False),\n            (self.raw_folder / \"2019_gepro_noncrop\", True, True),\n            (self.raw_folder / \"noncrop_water_kenya_gt\", True, True),\n            (self.raw_folder / \"noncrop_kenya_gt\", True, True),\n        ]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for filepath, is_latlon, is_reversed in filepaths:\n            dfs.append(self.process_set(filepath, is_latlon, is_reversed))\n\n        df = pd.concat(dfs)\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1646147726406,
+  "history_end_time" : 1646147727906,
+  "history_notes" : null,
+  "history_process" : "9x9elz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "psop67ge9hq",
+  "history_input" : "import geopandas\nfrom pathlib import Path\nimport pandas as pd\nfrom pyproj import Transformer\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaNonCropProcessor(BaseProcessor):\n\n    dataset = \"kenya_non_crop\"\n\n    @staticmethod\n    def process_set(filepath: Path, latlon: bool, reversed: bool) -> geopandas.GeoDataFrame:\n        df = geopandas.read_file(filepath)\n\n        x, y = df.geometry.centroid.x.values, df.geometry.centroid.y.values\n\n        if reversed:\n            x, y = y, x\n\n        if not latlon:\n\n            transformer = Transformer.from_crs(crs_from=32636, crs_to=4326)\n\n            lat, lon = transformer.transform(xx=x, yy=y)\n            df[\"lat\"] = lat\n            df[\"lon\"] = lon\n        else:\n            df[\"lat\"] = x\n            df[\"lon\"] = y\n\n        df[\"index\"] = df.index\n\n        return df\n\n    def process(self) -> None:\n\n        filepaths = [\n            (self.raw_folder / \"noncrop_labels_v2\", False, False),\n            (self.raw_folder / \"noncrop_labels_set2\", False, False),\n            (self.raw_folder / \"2019_gepro_noncrop\", True, True),\n            (self.raw_folder / \"noncrop_water_kenya_gt\", True, True),\n            (self.raw_folder / \"noncrop_kenya_gt\", True, True),\n        ]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for filepath, is_latlon, is_reversed in filepaths:\n            dfs.append(self.process_set(filepath, is_latlon, is_reversed))\n\n        df = pd.concat(dfs)\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1646145424919,
+  "history_end_time" : 1646145426131,
+  "history_notes" : null,
+  "history_process" : "9x9elz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "5b1x2nbgg0g",
+  "history_input" : "import geopandas\nfrom pathlib import Path\nimport pandas as pd\nfrom pyproj import Transformer\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaNonCropProcessor(BaseProcessor):\n\n    dataset = \"kenya_non_crop\"\n\n    @staticmethod\n    def process_set(filepath: Path, latlon: bool, reversed: bool) -> geopandas.GeoDataFrame:\n        df = geopandas.read_file(filepath)\n\n        x, y = df.geometry.centroid.x.values, df.geometry.centroid.y.values\n\n        if reversed:\n            x, y = y, x\n\n        if not latlon:\n\n            transformer = Transformer.from_crs(crs_from=32636, crs_to=4326)\n\n            lat, lon = transformer.transform(xx=x, yy=y)\n            df[\"lat\"] = lat\n            df[\"lon\"] = lon\n        else:\n            df[\"lat\"] = x\n            df[\"lon\"] = y\n\n        df[\"index\"] = df.index\n\n        return df\n\n    def process(self) -> None:\n\n        filepaths = [\n            (self.raw_folder / \"noncrop_labels_v2\", False, False),\n            (self.raw_folder / \"noncrop_labels_set2\", False, False),\n            (self.raw_folder / \"2019_gepro_noncrop\", True, True),\n            (self.raw_folder / \"noncrop_water_kenya_gt\", True, True),\n            (self.raw_folder / \"noncrop_kenya_gt\", True, True),\n        ]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for filepath, is_latlon, is_reversed in filepaths:\n            dfs.append(self.process_set(filepath, is_latlon, is_reversed))\n\n        df = pd.concat(dfs)\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1646145217128,
+  "history_end_time" : 1646145218404,
+  "history_notes" : null,
+  "history_process" : "9x9elz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "zjt6vdak1mk",
+  "history_input" : "import geopandas\nfrom pathlib import Path\nimport pandas as pd\nfrom pyproj import Transformer\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaNonCropProcessor(BaseProcessor):\n\n    dataset = \"kenya_non_crop\"\n\n    @staticmethod\n    def process_set(filepath: Path, latlon: bool, reversed: bool) -> geopandas.GeoDataFrame:\n        df = geopandas.read_file(filepath)\n\n        x, y = df.geometry.centroid.x.values, df.geometry.centroid.y.values\n\n        if reversed:\n            x, y = y, x\n\n        if not latlon:\n\n            transformer = Transformer.from_crs(crs_from=32636, crs_to=4326)\n\n            lat, lon = transformer.transform(xx=x, yy=y)\n            df[\"lat\"] = lat\n            df[\"lon\"] = lon\n        else:\n            df[\"lat\"] = x\n            df[\"lon\"] = y\n\n        df[\"index\"] = df.index\n\n        return df\n\n    def process(self) -> None:\n\n        filepaths = [\n            (self.raw_folder / \"noncrop_labels_v2\", False, False),\n            (self.raw_folder / \"noncrop_labels_set2\", False, False),\n            (self.raw_folder / \"2019_gepro_noncrop\", True, True),\n            (self.raw_folder / \"noncrop_water_kenya_gt\", True, True),\n            (self.raw_folder / \"noncrop_kenya_gt\", True, True),\n        ]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for filepath, is_latlon, is_reversed in filepaths:\n            dfs.append(self.process_set(filepath, is_latlon, is_reversed))\n\n        df = pd.concat(dfs)\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1646144605086,
+  "history_end_time" : 1646144606237,
+  "history_notes" : null,
+  "history_process" : "9x9elz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "snjj514pmva",
+  "history_input" : "import geopandas\nfrom pathlib import Path\nimport pandas as pd\nfrom pyproj import Transformer\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaNonCropProcessor(BaseProcessor):\n\n    dataset = \"kenya_non_crop\"\n\n    @staticmethod\n    def process_set(filepath: Path, latlon: bool, reversed: bool) -> geopandas.GeoDataFrame:\n        df = geopandas.read_file(filepath)\n\n        x, y = df.geometry.centroid.x.values, df.geometry.centroid.y.values\n\n        if reversed:\n            x, y = y, x\n\n        if not latlon:\n\n            transformer = Transformer.from_crs(crs_from=32636, crs_to=4326)\n\n            lat, lon = transformer.transform(xx=x, yy=y)\n            df[\"lat\"] = lat\n            df[\"lon\"] = lon\n        else:\n            df[\"lat\"] = x\n            df[\"lon\"] = y\n\n        df[\"index\"] = df.index\n\n        return df\n\n    def process(self) -> None:\n\n        filepaths = [\n            (self.raw_folder / \"noncrop_labels_v2\", False, False),\n            (self.raw_folder / \"noncrop_labels_set2\", False, False),\n            (self.raw_folder / \"2019_gepro_noncrop\", True, True),\n            (self.raw_folder / \"noncrop_water_kenya_gt\", True, True),\n            (self.raw_folder / \"noncrop_kenya_gt\", True, True),\n        ]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for filepath, is_latlon, is_reversed in filepaths:\n            dfs.append(self.process_set(filepath, is_latlon, is_reversed))\n\n        df = pd.concat(dfs)\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1646144390463,
+  "history_end_time" : 1646144391661,
+  "history_notes" : null,
+  "history_process" : "9x9elz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "c32hvrf5mqr",
+  "history_input" : "import geopandas\nfrom pathlib import Path\nimport pandas as pd\nfrom pyproj import Transformer\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaNonCropProcessor(BaseProcessor):\n\n    dataset = \"kenya_non_crop\"\n\n    @staticmethod\n    def process_set(filepath: Path, latlon: bool, reversed: bool) -> geopandas.GeoDataFrame:\n        df = geopandas.read_file(filepath)\n\n        x, y = df.geometry.centroid.x.values, df.geometry.centroid.y.values\n\n        if reversed:\n            x, y = y, x\n\n        if not latlon:\n\n            transformer = Transformer.from_crs(crs_from=32636, crs_to=4326)\n\n            lat, lon = transformer.transform(xx=x, yy=y)\n            df[\"lat\"] = lat\n            df[\"lon\"] = lon\n        else:\n            df[\"lat\"] = x\n            df[\"lon\"] = y\n\n        df[\"index\"] = df.index\n\n        return df\n\n    def process(self) -> None:\n\n        filepaths = [\n            (self.raw_folder / \"noncrop_labels_v2\", False, False),\n            (self.raw_folder / \"noncrop_labels_set2\", False, False),\n            (self.raw_folder / \"2019_gepro_noncrop\", True, True),\n            (self.raw_folder / \"noncrop_water_kenya_gt\", True, True),\n            (self.raw_folder / \"noncrop_kenya_gt\", True, True),\n        ]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for filepath, is_latlon, is_reversed in filepaths:\n            dfs.append(self.process_set(filepath, is_latlon, is_reversed))\n\n        df = pd.concat(dfs)\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1646144317245,
+  "history_end_time" : 1646144317462,
+  "history_notes" : null,
+  "history_process" : "9x9elz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "mgbof41xirt",
+  "history_input" : "import geopandas\nfrom pathlib import Path\nimport pandas as pd\nfrom pyproj import Transformer\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaNonCropProcessor(BaseProcessor):\n\n    dataset = \"kenya_non_crop\"\n\n    @staticmethod\n    def process_set(filepath: Path, latlon: bool, reversed: bool) -> geopandas.GeoDataFrame:\n        df = geopandas.read_file(filepath)\n\n        x, y = df.geometry.centroid.x.values, df.geometry.centroid.y.values\n\n        if reversed:\n            x, y = y, x\n\n        if not latlon:\n\n            transformer = Transformer.from_crs(crs_from=32636, crs_to=4326)\n\n            lat, lon = transformer.transform(xx=x, yy=y)\n            df[\"lat\"] = lat\n            df[\"lon\"] = lon\n        else:\n            df[\"lat\"] = x\n            df[\"lon\"] = y\n\n        df[\"index\"] = df.index\n\n        return df\n\n    def process(self) -> None:\n\n        filepaths = [\n            (self.raw_folder / \"noncrop_labels_v2\", False, False),\n            (self.raw_folder / \"noncrop_labels_set2\", False, False),\n            (self.raw_folder / \"2019_gepro_noncrop\", True, True),\n            (self.raw_folder / \"noncrop_water_kenya_gt\", True, True),\n            (self.raw_folder / \"noncrop_kenya_gt\", True, True),\n        ]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for filepath, is_latlon, is_reversed in filepaths:\n            dfs.append(self.process_set(filepath, is_latlon, is_reversed))\n\n        df = pd.concat(dfs)\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1646143403468,
+  "history_end_time" : 1646143405259,
+  "history_notes" : null,
+  "history_process" : "9x9elz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "4o9rmo0cm15",
+  "history_input" : "import geopandas\nfrom pathlib import Path\nimport pandas as pd\nfrom pyproj import Transformer\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaNonCropProcessor(BaseProcessor):\n\n    dataset = \"kenya_non_crop\"\n\n    @staticmethod\n    def process_set(filepath: Path, latlon: bool, reversed: bool) -> geopandas.GeoDataFrame:\n        df = geopandas.read_file(filepath)\n\n        x, y = df.geometry.centroid.x.values, df.geometry.centroid.y.values\n\n        if reversed:\n            x, y = y, x\n\n        if not latlon:\n\n            transformer = Transformer.from_crs(crs_from=32636, crs_to=4326)\n\n            lat, lon = transformer.transform(xx=x, yy=y)\n            df[\"lat\"] = lat\n            df[\"lon\"] = lon\n        else:\n            df[\"lat\"] = x\n            df[\"lon\"] = y\n\n        df[\"index\"] = df.index\n\n        return df\n\n    def process(self) -> None:\n\n        filepaths = [\n            (self.raw_folder / \"noncrop_labels_v2\", False, False),\n            (self.raw_folder / \"noncrop_labels_set2\", False, False),\n            (self.raw_folder / \"2019_gepro_noncrop\", True, True),\n            (self.raw_folder / \"noncrop_water_kenya_gt\", True, True),\n            (self.raw_folder / \"noncrop_kenya_gt\", True, True),\n        ]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for filepath, is_latlon, is_reversed in filepaths:\n            dfs.append(self.process_set(filepath, is_latlon, is_reversed))\n\n        df = pd.concat(dfs)\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1646143254211,
+  "history_end_time" : 1646143255337,
+  "history_notes" : null,
+  "history_process" : "9x9elz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "ttot7ogg9nb",
+  "history_input" : "import geopandas\nfrom pathlib import Path\nimport pandas as pd\nfrom pyproj import Transformer\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaNonCropProcessor(BaseProcessor):\n\n    dataset = \"kenya_non_crop\"\n\n    @staticmethod\n    def process_set(filepath: Path, latlon: bool, reversed: bool) -> geopandas.GeoDataFrame:\n        df = geopandas.read_file(filepath)\n\n        x, y = df.geometry.centroid.x.values, df.geometry.centroid.y.values\n\n        if reversed:\n            x, y = y, x\n\n        if not latlon:\n\n            transformer = Transformer.from_crs(crs_from=32636, crs_to=4326)\n\n            lat, lon = transformer.transform(xx=x, yy=y)\n            df[\"lat\"] = lat\n            df[\"lon\"] = lon\n        else:\n            df[\"lat\"] = x\n            df[\"lon\"] = y\n\n        df[\"index\"] = df.index\n\n        return df\n\n    def process(self) -> None:\n\n        filepaths = [\n            (self.raw_folder / \"noncrop_labels_v2\", False, False),\n            (self.raw_folder / \"noncrop_labels_set2\", False, False),\n            (self.raw_folder / \"2019_gepro_noncrop\", True, True),\n            (self.raw_folder / \"noncrop_water_kenya_gt\", True, True),\n            (self.raw_folder / \"noncrop_kenya_gt\", True, True),\n        ]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for filepath, is_latlon, is_reversed in filepaths:\n            dfs.append(self.process_set(filepath, is_latlon, is_reversed))\n\n        df = pd.concat(dfs)\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1646143175394,
+  "history_end_time" : 1646143176614,
+  "history_notes" : null,
+  "history_process" : "9x9elz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "s5m4rx8wdrz",
+  "history_input" : "import geopandas\nfrom pathlib import Path\nimport pandas as pd\nfrom pyproj import Transformer\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaNonCropProcessor(BaseProcessor):\n\n    dataset = \"kenya_non_crop\"\n\n    @staticmethod\n    def process_set(filepath: Path, latlon: bool, reversed: bool) -> geopandas.GeoDataFrame:\n        df = geopandas.read_file(filepath)\n\n        x, y = df.geometry.centroid.x.values, df.geometry.centroid.y.values\n\n        if reversed:\n            x, y = y, x\n\n        if not latlon:\n\n            transformer = Transformer.from_crs(crs_from=32636, crs_to=4326)\n\n            lat, lon = transformer.transform(xx=x, yy=y)\n            df[\"lat\"] = lat\n            df[\"lon\"] = lon\n        else:\n            df[\"lat\"] = x\n            df[\"lon\"] = y\n\n        df[\"index\"] = df.index\n\n        return df\n\n    def process(self) -> None:\n\n        filepaths = [\n            (self.raw_folder / \"noncrop_labels_v2\", False, False),\n            (self.raw_folder / \"noncrop_labels_set2\", False, False),\n            (self.raw_folder / \"2019_gepro_noncrop\", True, True),\n            (self.raw_folder / \"noncrop_water_kenya_gt\", True, True),\n            (self.raw_folder / \"noncrop_kenya_gt\", True, True),\n        ]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for filepath, is_latlon, is_reversed in filepaths:\n            dfs.append(self.process_set(filepath, is_latlon, is_reversed))\n\n        df = pd.concat(dfs)\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1646143138759,
+  "history_end_time" : 1646143139414,
+  "history_notes" : null,
+  "history_process" : "9x9elz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "ej4nyeqdjjh",
+  "history_input" : "import geopandas\nfrom pathlib import Path\nimport pandas as pd\nfrom pyproj import Transformer\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaNonCropProcessor(BaseProcessor):\n\n    dataset = \"kenya_non_crop\"\n\n    @staticmethod\n    def process_set(filepath: Path, latlon: bool, reversed: bool) -> geopandas.GeoDataFrame:\n        df = geopandas.read_file(filepath)\n\n        x, y = df.geometry.centroid.x.values, df.geometry.centroid.y.values\n\n        if reversed:\n            x, y = y, x\n\n        if not latlon:\n\n            transformer = Transformer.from_crs(crs_from=32636, crs_to=4326)\n\n            lat, lon = transformer.transform(xx=x, yy=y)\n            df[\"lat\"] = lat\n            df[\"lon\"] = lon\n        else:\n            df[\"lat\"] = x\n            df[\"lon\"] = y\n\n        df[\"index\"] = df.index\n\n        return df\n\n    def process(self) -> None:\n\n        filepaths = [\n            (self.raw_folder / \"noncrop_labels_v2\", False, False),\n            (self.raw_folder / \"noncrop_labels_set2\", False, False),\n            (self.raw_folder / \"2019_gepro_noncrop\", True, True),\n            (self.raw_folder / \"noncrop_water_kenya_gt\", True, True),\n            (self.raw_folder / \"noncrop_kenya_gt\", True, True),\n        ]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for filepath, is_latlon, is_reversed in filepaths:\n            dfs.append(self.process_set(filepath, is_latlon, is_reversed))\n\n        df = pd.concat(dfs)\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1646143115145,
+  "history_end_time" : 1646143116341,
+  "history_notes" : null,
+  "history_process" : "9x9elz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "4c1mxlakby8",
+  "history_input" : "import geopandas\nfrom pathlib import Path\nimport pandas as pd\nfrom pyproj import Transformer\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaNonCropProcessor(BaseProcessor):\n\n    dataset = \"kenya_non_crop\"\n\n    @staticmethod\n    def process_set(filepath: Path, latlon: bool, reversed: bool) -> geopandas.GeoDataFrame:\n        df = geopandas.read_file(filepath)\n\n        x, y = df.geometry.centroid.x.values, df.geometry.centroid.y.values\n\n        if reversed:\n            x, y = y, x\n\n        if not latlon:\n\n            transformer = Transformer.from_crs(crs_from=32636, crs_to=4326)\n\n            lat, lon = transformer.transform(xx=x, yy=y)\n            df[\"lat\"] = lat\n            df[\"lon\"] = lon\n        else:\n            df[\"lat\"] = x\n            df[\"lon\"] = y\n\n        df[\"index\"] = df.index\n\n        return df\n\n    def process(self) -> None:\n\n        filepaths = [\n            (self.raw_folder / \"noncrop_labels_v2\", False, False),\n            (self.raw_folder / \"noncrop_labels_set2\", False, False),\n            (self.raw_folder / \"2019_gepro_noncrop\", True, True),\n            (self.raw_folder / \"noncrop_water_kenya_gt\", True, True),\n            (self.raw_folder / \"noncrop_kenya_gt\", True, True),\n        ]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for filepath, is_latlon, is_reversed in filepaths:\n            dfs.append(self.process_set(filepath, is_latlon, is_reversed))\n\n        df = pd.concat(dfs)\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1646139375192,
+  "history_end_time" : 1646139376376,
+  "history_notes" : null,
+  "history_process" : "9x9elz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "q0mw85zwpuw",
+  "history_input" : "import geopandas\nfrom pathlib import Path\nimport pandas as pd\nfrom pyproj import Transformer\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaNonCropProcessor(BaseProcessor):\n\n    dataset = \"kenya_non_crop\"\n\n    @staticmethod\n    def process_set(filepath: Path, latlon: bool, reversed: bool) -> geopandas.GeoDataFrame:\n        df = geopandas.read_file(filepath)\n\n        x, y = df.geometry.centroid.x.values, df.geometry.centroid.y.values\n\n        if reversed:\n            x, y = y, x\n\n        if not latlon:\n\n            transformer = Transformer.from_crs(crs_from=32636, crs_to=4326)\n\n            lat, lon = transformer.transform(xx=x, yy=y)\n            df[\"lat\"] = lat\n            df[\"lon\"] = lon\n        else:\n            df[\"lat\"] = x\n            df[\"lon\"] = y\n\n        df[\"index\"] = df.index\n\n        return df\n\n    def process(self) -> None:\n\n        filepaths = [\n            (self.raw_folder / \"noncrop_labels_v2\", False, False),\n            (self.raw_folder / \"noncrop_labels_set2\", False, False),\n            (self.raw_folder / \"2019_gepro_noncrop\", True, True),\n            (self.raw_folder / \"noncrop_water_kenya_gt\", True, True),\n            (self.raw_folder / \"noncrop_kenya_gt\", True, True),\n        ]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for filepath, is_latlon, is_reversed in filepaths:\n            dfs.append(self.process_set(filepath, is_latlon, is_reversed))\n\n        df = pd.concat(dfs)\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1646139283316,
+  "history_end_time" : 1646139284380,
+  "history_notes" : null,
+  "history_process" : "9x9elz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "4nvaf3fajo7",
+  "history_input" : "import geopandas\nfrom pathlib import Path\nimport pandas as pd\nfrom pyproj import Transformer\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaNonCropProcessor(BaseProcessor):\n\n    dataset = \"kenya_non_crop\"\n\n    @staticmethod\n    def process_set(filepath: Path, latlon: bool, reversed: bool) -> geopandas.GeoDataFrame:\n        df = geopandas.read_file(filepath)\n\n        x, y = df.geometry.centroid.x.values, df.geometry.centroid.y.values\n\n        if reversed:\n            x, y = y, x\n\n        if not latlon:\n\n            transformer = Transformer.from_crs(crs_from=32636, crs_to=4326)\n\n            lat, lon = transformer.transform(xx=x, yy=y)\n            df[\"lat\"] = lat\n            df[\"lon\"] = lon\n        else:\n            df[\"lat\"] = x\n            df[\"lon\"] = y\n\n        df[\"index\"] = df.index\n\n        return df\n\n    def process(self) -> None:\n\n        filepaths = [\n            (self.raw_folder / \"noncrop_labels_v2\", False, False),\n            (self.raw_folder / \"noncrop_labels_set2\", False, False),\n            (self.raw_folder / \"2019_gepro_noncrop\", True, True),\n            (self.raw_folder / \"noncrop_water_kenya_gt\", True, True),\n            (self.raw_folder / \"noncrop_kenya_gt\", True, True),\n        ]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for filepath, is_latlon, is_reversed in filepaths:\n            dfs.append(self.process_set(filepath, is_latlon, is_reversed))\n\n        df = pd.concat(dfs)\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1646139242370,
+  "history_end_time" : 1646139243586,
+  "history_notes" : null,
+  "history_process" : "9x9elz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "e4vtsurif6u",
+  "history_input" : "import geopandas\nfrom pathlib import Path\nimport pandas as pd\nfrom pyproj import Transformer\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaNonCropProcessor(BaseProcessor):\n\n    dataset = \"kenya_non_crop\"\n\n    @staticmethod\n    def process_set(filepath: Path, latlon: bool, reversed: bool) -> geopandas.GeoDataFrame:\n        df = geopandas.read_file(filepath)\n\n        x, y = df.geometry.centroid.x.values, df.geometry.centroid.y.values\n\n        if reversed:\n            x, y = y, x\n\n        if not latlon:\n\n            transformer = Transformer.from_crs(crs_from=32636, crs_to=4326)\n\n            lat, lon = transformer.transform(xx=x, yy=y)\n            df[\"lat\"] = lat\n            df[\"lon\"] = lon\n        else:\n            df[\"lat\"] = x\n            df[\"lon\"] = y\n\n        df[\"index\"] = df.index\n\n        return df\n\n    def process(self) -> None:\n\n        filepaths = [\n            (self.raw_folder / \"noncrop_labels_v2\", False, False),\n            (self.raw_folder / \"noncrop_labels_set2\", False, False),\n            (self.raw_folder / \"2019_gepro_noncrop\", True, True),\n            (self.raw_folder / \"noncrop_water_kenya_gt\", True, True),\n            (self.raw_folder / \"noncrop_kenya_gt\", True, True),\n        ]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for filepath, is_latlon, is_reversed in filepaths:\n            dfs.append(self.process_set(filepath, is_latlon, is_reversed))\n\n        df = pd.concat(dfs)\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1646139195554,
+  "history_end_time" : 1646139196815,
+  "history_notes" : null,
+  "history_process" : "9x9elz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "dkn3hil663e",
+  "history_input" : "import geopandas\nfrom pathlib import Path\nimport pandas as pd\nfrom pyproj import Transformer\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaNonCropProcessor(BaseProcessor):\n\n    dataset = \"kenya_non_crop\"\n\n    @staticmethod\n    def process_set(filepath: Path, latlon: bool, reversed: bool) -> geopandas.GeoDataFrame:\n        df = geopandas.read_file(filepath)\n\n        x, y = df.geometry.centroid.x.values, df.geometry.centroid.y.values\n\n        if reversed:\n            x, y = y, x\n\n        if not latlon:\n\n            transformer = Transformer.from_crs(crs_from=32636, crs_to=4326)\n\n            lat, lon = transformer.transform(xx=x, yy=y)\n            df[\"lat\"] = lat\n            df[\"lon\"] = lon\n        else:\n            df[\"lat\"] = x\n            df[\"lon\"] = y\n\n        df[\"index\"] = df.index\n\n        return df\n\n    def process(self) -> None:\n\n        filepaths = [\n            (self.raw_folder / \"noncrop_labels_v2\", False, False),\n            (self.raw_folder / \"noncrop_labels_set2\", False, False),\n            (self.raw_folder / \"2019_gepro_noncrop\", True, True),\n            (self.raw_folder / \"noncrop_water_kenya_gt\", True, True),\n            (self.raw_folder / \"noncrop_kenya_gt\", True, True),\n        ]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for filepath, is_latlon, is_reversed in filepaths:\n            dfs.append(self.process_set(filepath, is_latlon, is_reversed))\n\n        df = pd.concat(dfs)\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1646139157410,
+  "history_end_time" : 1646139158590,
+  "history_notes" : null,
+  "history_process" : "9x9elz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "5mdhqd42llu",
+  "history_input" : "import geopandas\nfrom pathlib import Path\nimport pandas as pd\nfrom pyproj import Transformer\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaNonCropProcessor(BaseProcessor):\n\n    dataset = \"kenya_non_crop\"\n\n    @staticmethod\n    def process_set(filepath: Path, latlon: bool, reversed: bool) -> geopandas.GeoDataFrame:\n        df = geopandas.read_file(filepath)\n\n        x, y = df.geometry.centroid.x.values, df.geometry.centroid.y.values\n\n        if reversed:\n            x, y = y, x\n\n        if not latlon:\n\n            transformer = Transformer.from_crs(crs_from=32636, crs_to=4326)\n\n            lat, lon = transformer.transform(xx=x, yy=y)\n            df[\"lat\"] = lat\n            df[\"lon\"] = lon\n        else:\n            df[\"lat\"] = x\n            df[\"lon\"] = y\n\n        df[\"index\"] = df.index\n\n        return df\n\n    def process(self) -> None:\n\n        filepaths = [\n            (self.raw_folder / \"noncrop_labels_v2\", False, False),\n            (self.raw_folder / \"noncrop_labels_set2\", False, False),\n            (self.raw_folder / \"2019_gepro_noncrop\", True, True),\n            (self.raw_folder / \"noncrop_water_kenya_gt\", True, True),\n            (self.raw_folder / \"noncrop_kenya_gt\", True, True),\n        ]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for filepath, is_latlon, is_reversed in filepaths:\n            dfs.append(self.process_set(filepath, is_latlon, is_reversed))\n\n        df = pd.concat(dfs)\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1646138496762,
+  "history_end_time" : 1646138497976,
+  "history_notes" : null,
+  "history_process" : "9x9elz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "wlr7229jknu",
+  "history_input" : "import geopandas\nfrom pathlib import Path\nimport pandas as pd\nfrom pyproj import Transformer\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaNonCropProcessor(BaseProcessor):\n\n    dataset = \"kenya_non_crop\"\n\n    @staticmethod\n    def process_set(filepath: Path, latlon: bool, reversed: bool) -> geopandas.GeoDataFrame:\n        df = geopandas.read_file(filepath)\n\n        x, y = df.geometry.centroid.x.values, df.geometry.centroid.y.values\n\n        if reversed:\n            x, y = y, x\n\n        if not latlon:\n\n            transformer = Transformer.from_crs(crs_from=32636, crs_to=4326)\n\n            lat, lon = transformer.transform(xx=x, yy=y)\n            df[\"lat\"] = lat\n            df[\"lon\"] = lon\n        else:\n            df[\"lat\"] = x\n            df[\"lon\"] = y\n\n        df[\"index\"] = df.index\n\n        return df\n\n    def process(self) -> None:\n\n        filepaths = [\n            (self.raw_folder / \"noncrop_labels_v2\", False, False),\n            (self.raw_folder / \"noncrop_labels_set2\", False, False),\n            (self.raw_folder / \"2019_gepro_noncrop\", True, True),\n            (self.raw_folder / \"noncrop_water_kenya_gt\", True, True),\n            (self.raw_folder / \"noncrop_kenya_gt\", True, True),\n        ]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for filepath, is_latlon, is_reversed in filepaths:\n            dfs.append(self.process_set(filepath, is_latlon, is_reversed))\n\n        df = pd.concat(dfs)\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1646138448515,
+  "history_end_time" : 1646138448738,
+  "history_notes" : null,
+  "history_process" : "9x9elz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "dtugozzupyo",
+  "history_input" : "import geopandas\nfrom pathlib import Path\nimport pandas as pd\nfrom pyproj import Transformer\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaNonCropProcessor(BaseProcessor):\n\n    dataset = \"kenya_non_crop\"\n\n    @staticmethod\n    def process_set(filepath: Path, latlon: bool, reversed: bool) -> geopandas.GeoDataFrame:\n        df = geopandas.read_file(filepath)\n\n        x, y = df.geometry.centroid.x.values, df.geometry.centroid.y.values\n\n        if reversed:\n            x, y = y, x\n\n        if not latlon:\n\n            transformer = Transformer.from_crs(crs_from=32636, crs_to=4326)\n\n            lat, lon = transformer.transform(xx=x, yy=y)\n            df[\"lat\"] = lat\n            df[\"lon\"] = lon\n        else:\n            df[\"lat\"] = x\n            df[\"lon\"] = y\n\n        df[\"index\"] = df.index\n\n        return df\n\n    def process(self) -> None:\n\n        filepaths = [\n            (self.raw_folder / \"noncrop_labels_v2\", False, False),\n            (self.raw_folder / \"noncrop_labels_set2\", False, False),\n            (self.raw_folder / \"2019_gepro_noncrop\", True, True),\n            (self.raw_folder / \"noncrop_water_kenya_gt\", True, True),\n            (self.raw_folder / \"noncrop_kenya_gt\", True, True),\n        ]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for filepath, is_latlon, is_reversed in filepaths:\n            dfs.append(self.process_set(filepath, is_latlon, is_reversed))\n\n        df = pd.concat(dfs)\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1646138400687,
+  "history_end_time" : 1646138401506,
+  "history_notes" : null,
+  "history_process" : "9x9elz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "2keqe9nz3nd",
+  "history_input" : "import geopandas\nfrom pathlib import Path\nimport pandas as pd\nfrom pyproj import Transformer\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaNonCropProcessor(BaseProcessor):\n\n    dataset = \"kenya_non_crop\"\n\n    @staticmethod\n    def process_set(filepath: Path, latlon: bool, reversed: bool) -> geopandas.GeoDataFrame:\n        df = geopandas.read_file(filepath)\n\n        x, y = df.geometry.centroid.x.values, df.geometry.centroid.y.values\n\n        if reversed:\n            x, y = y, x\n\n        if not latlon:\n\n            transformer = Transformer.from_crs(crs_from=32636, crs_to=4326)\n\n            lat, lon = transformer.transform(xx=x, yy=y)\n            df[\"lat\"] = lat\n            df[\"lon\"] = lon\n        else:\n            df[\"lat\"] = x\n            df[\"lon\"] = y\n\n        df[\"index\"] = df.index\n\n        return df\n\n    def process(self) -> None:\n\n        filepaths = [\n            (self.raw_folder / \"noncrop_labels_v2\", False, False),\n            (self.raw_folder / \"noncrop_labels_set2\", False, False),\n            (self.raw_folder / \"2019_gepro_noncrop\", True, True),\n            (self.raw_folder / \"noncrop_water_kenya_gt\", True, True),\n            (self.raw_folder / \"noncrop_kenya_gt\", True, True),\n        ]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for filepath, is_latlon, is_reversed in filepaths:\n            dfs.append(self.process_set(filepath, is_latlon, is_reversed))\n\n        df = pd.concat(dfs)\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1646138398324,
+  "history_end_time" : 1646138398489,
+  "history_notes" : null,
+  "history_process" : "9x9elz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "jpnqqdu4l8m",
+  "history_input" : "import geopandas\nfrom pathlib import Path\nimport pandas as pd\nfrom pyproj import Transformer\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaNonCropProcessor(BaseProcessor):\n\n    dataset = \"kenya_non_crop\"\n\n    @staticmethod\n    def process_set(filepath: Path, latlon: bool, reversed: bool) -> geopandas.GeoDataFrame:\n        df = geopandas.read_file(filepath)\n\n        x, y = df.geometry.centroid.x.values, df.geometry.centroid.y.values\n\n        if reversed:\n            x, y = y, x\n\n        if not latlon:\n\n            transformer = Transformer.from_crs(crs_from=32636, crs_to=4326)\n\n            lat, lon = transformer.transform(xx=x, yy=y)\n            df[\"lat\"] = lat\n            df[\"lon\"] = lon\n        else:\n            df[\"lat\"] = x\n            df[\"lon\"] = y\n\n        df[\"index\"] = df.index\n\n        return df\n\n    def process(self) -> None:\n\n        filepaths = [\n            (self.raw_folder / \"noncrop_labels_v2\", False, False),\n            (self.raw_folder / \"noncrop_labels_set2\", False, False),\n            (self.raw_folder / \"2019_gepro_noncrop\", True, True),\n            (self.raw_folder / \"noncrop_water_kenya_gt\", True, True),\n            (self.raw_folder / \"noncrop_kenya_gt\", True, True),\n        ]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for filepath, is_latlon, is_reversed in filepaths:\n            dfs.append(self.process_set(filepath, is_latlon, is_reversed))\n\n        df = pd.concat(dfs)\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1646138393206,
+  "history_end_time" : 1646138394342,
+  "history_notes" : null,
+  "history_process" : "9x9elz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "qqs3nreo6dg",
+  "history_input" : "import geopandas\nfrom pathlib import Path\nimport pandas as pd\nfrom pyproj import Transformer\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaNonCropProcessor(BaseProcessor):\n\n    dataset = \"kenya_non_crop\"\n\n    @staticmethod\n    def process_set(filepath: Path, latlon: bool, reversed: bool) -> geopandas.GeoDataFrame:\n        df = geopandas.read_file(filepath)\n\n        x, y = df.geometry.centroid.x.values, df.geometry.centroid.y.values\n\n        if reversed:\n            x, y = y, x\n\n        if not latlon:\n\n            transformer = Transformer.from_crs(crs_from=32636, crs_to=4326)\n\n            lat, lon = transformer.transform(xx=x, yy=y)\n            df[\"lat\"] = lat\n            df[\"lon\"] = lon\n        else:\n            df[\"lat\"] = x\n            df[\"lon\"] = y\n\n        df[\"index\"] = df.index\n\n        return df\n\n    def process(self) -> None:\n\n        filepaths = [\n            (self.raw_folder / \"noncrop_labels_v2\", False, False),\n            (self.raw_folder / \"noncrop_labels_set2\", False, False),\n            (self.raw_folder / \"2019_gepro_noncrop\", True, True),\n            (self.raw_folder / \"noncrop_water_kenya_gt\", True, True),\n            (self.raw_folder / \"noncrop_kenya_gt\", True, True),\n        ]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for filepath, is_latlon, is_reversed in filepaths:\n            dfs.append(self.process_set(filepath, is_latlon, is_reversed))\n\n        df = pd.concat(dfs)\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1646138283143,
+  "history_end_time" : 1646138284814,
+  "history_notes" : null,
+  "history_process" : "9x9elz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "tn320bzc0fv",
+  "history_input" : "import geopandas\nfrom pathlib import Path\nimport pandas as pd\nfrom pyproj import Transformer\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaNonCropProcessor(BaseProcessor):\n\n    dataset = \"kenya_non_crop\"\n\n    @staticmethod\n    def process_set(filepath: Path, latlon: bool, reversed: bool) -> geopandas.GeoDataFrame:\n        df = geopandas.read_file(filepath)\n\n        x, y = df.geometry.centroid.x.values, df.geometry.centroid.y.values\n\n        if reversed:\n            x, y = y, x\n\n        if not latlon:\n\n            transformer = Transformer.from_crs(crs_from=32636, crs_to=4326)\n\n            lat, lon = transformer.transform(xx=x, yy=y)\n            df[\"lat\"] = lat\n            df[\"lon\"] = lon\n        else:\n            df[\"lat\"] = x\n            df[\"lon\"] = y\n\n        df[\"index\"] = df.index\n\n        return df\n\n    def process(self) -> None:\n\n        filepaths = [\n            (self.raw_folder / \"noncrop_labels_v2\", False, False),\n            (self.raw_folder / \"noncrop_labels_set2\", False, False),\n            (self.raw_folder / \"2019_gepro_noncrop\", True, True),\n            (self.raw_folder / \"noncrop_water_kenya_gt\", True, True),\n            (self.raw_folder / \"noncrop_kenya_gt\", True, True),\n        ]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for filepath, is_latlon, is_reversed in filepaths:\n            dfs.append(self.process_set(filepath, is_latlon, is_reversed))\n\n        df = pd.concat(dfs)\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1646138275175,
+  "history_end_time" : 1646138276027,
+  "history_notes" : null,
+  "history_process" : "9x9elz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "qaonbjycd7p",
+  "history_input" : "import geopandas\nfrom pathlib import Path\nimport pandas as pd\nfrom pyproj import Transformer\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaNonCropProcessor(BaseProcessor):\n\n    dataset = \"kenya_non_crop\"\n\n    @staticmethod\n    def process_set(filepath: Path, latlon: bool, reversed: bool) -> geopandas.GeoDataFrame:\n        df = geopandas.read_file(filepath)\n\n        x, y = df.geometry.centroid.x.values, df.geometry.centroid.y.values\n\n        if reversed:\n            x, y = y, x\n\n        if not latlon:\n\n            transformer = Transformer.from_crs(crs_from=32636, crs_to=4326)\n\n            lat, lon = transformer.transform(xx=x, yy=y)\n            df[\"lat\"] = lat\n            df[\"lon\"] = lon\n        else:\n            df[\"lat\"] = x\n            df[\"lon\"] = y\n\n        df[\"index\"] = df.index\n\n        return df\n\n    def process(self) -> None:\n\n        filepaths = [\n            (self.raw_folder / \"noncrop_labels_v2\", False, False),\n            (self.raw_folder / \"noncrop_labels_set2\", False, False),\n            (self.raw_folder / \"2019_gepro_noncrop\", True, True),\n            (self.raw_folder / \"noncrop_water_kenya_gt\", True, True),\n            (self.raw_folder / \"noncrop_kenya_gt\", True, True),\n        ]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for filepath, is_latlon, is_reversed in filepaths:\n            dfs.append(self.process_set(filepath, is_latlon, is_reversed))\n\n        df = pd.concat(dfs)\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1646138271292,
+  "history_end_time" : 1646138271783,
+  "history_notes" : null,
+  "history_process" : "9x9elz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "ey2zemgz1rp",
+  "history_input" : "import geopandas\nfrom pathlib import Path\nimport pandas as pd\nfrom pyproj import Transformer\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaNonCropProcessor(BaseProcessor):\n\n    dataset = \"kenya_non_crop\"\n\n    @staticmethod\n    def process_set(filepath: Path, latlon: bool, reversed: bool) -> geopandas.GeoDataFrame:\n        df = geopandas.read_file(filepath)\n\n        x, y = df.geometry.centroid.x.values, df.geometry.centroid.y.values\n\n        if reversed:\n            x, y = y, x\n\n        if not latlon:\n\n            transformer = Transformer.from_crs(crs_from=32636, crs_to=4326)\n\n            lat, lon = transformer.transform(xx=x, yy=y)\n            df[\"lat\"] = lat\n            df[\"lon\"] = lon\n        else:\n            df[\"lat\"] = x\n            df[\"lon\"] = y\n\n        df[\"index\"] = df.index\n\n        return df\n\n    def process(self) -> None:\n\n        filepaths = [\n            (self.raw_folder / \"noncrop_labels_v2\", False, False),\n            (self.raw_folder / \"noncrop_labels_set2\", False, False),\n            (self.raw_folder / \"2019_gepro_noncrop\", True, True),\n            (self.raw_folder / \"noncrop_water_kenya_gt\", True, True),\n            (self.raw_folder / \"noncrop_kenya_gt\", True, True),\n        ]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for filepath, is_latlon, is_reversed in filepaths:\n            dfs.append(self.process_set(filepath, is_latlon, is_reversed))\n\n        df = pd.concat(dfs)\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1646138185816,
+  "history_end_time" : 1646138187179,
+  "history_notes" : null,
+  "history_process" : "9x9elz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "e68uxsihwbt",
+  "history_input" : "import geopandas\nfrom pathlib import Path\nimport pandas as pd\nfrom pyproj import Transformer\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaNonCropProcessor(BaseProcessor):\n\n    dataset = \"kenya_non_crop\"\n\n    @staticmethod\n    def process_set(filepath: Path, latlon: bool, reversed: bool) -> geopandas.GeoDataFrame:\n        df = geopandas.read_file(filepath)\n\n        x, y = df.geometry.centroid.x.values, df.geometry.centroid.y.values\n\n        if reversed:\n            x, y = y, x\n\n        if not latlon:\n\n            transformer = Transformer.from_crs(crs_from=32636, crs_to=4326)\n\n            lat, lon = transformer.transform(xx=x, yy=y)\n            df[\"lat\"] = lat\n            df[\"lon\"] = lon\n        else:\n            df[\"lat\"] = x\n            df[\"lon\"] = y\n\n        df[\"index\"] = df.index\n\n        return df\n\n    def process(self) -> None:\n\n        filepaths = [\n            (self.raw_folder / \"noncrop_labels_v2\", False, False),\n            (self.raw_folder / \"noncrop_labels_set2\", False, False),\n            (self.raw_folder / \"2019_gepro_noncrop\", True, True),\n            (self.raw_folder / \"noncrop_water_kenya_gt\", True, True),\n            (self.raw_folder / \"noncrop_kenya_gt\", True, True),\n        ]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for filepath, is_latlon, is_reversed in filepaths:\n            dfs.append(self.process_set(filepath, is_latlon, is_reversed))\n\n        df = pd.concat(dfs)\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1646138184071,
+  "history_end_time" : 1646138184973,
+  "history_notes" : null,
+  "history_process" : "9x9elz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "doue4ji3m5i",
+  "history_input" : "import geopandas\nfrom pathlib import Path\nimport pandas as pd\nfrom pyproj import Transformer\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaNonCropProcessor(BaseProcessor):\n\n    dataset = \"kenya_non_crop\"\n\n    @staticmethod\n    def process_set(filepath: Path, latlon: bool, reversed: bool) -> geopandas.GeoDataFrame:\n        df = geopandas.read_file(filepath)\n\n        x, y = df.geometry.centroid.x.values, df.geometry.centroid.y.values\n\n        if reversed:\n            x, y = y, x\n\n        if not latlon:\n\n            transformer = Transformer.from_crs(crs_from=32636, crs_to=4326)\n\n            lat, lon = transformer.transform(xx=x, yy=y)\n            df[\"lat\"] = lat\n            df[\"lon\"] = lon\n        else:\n            df[\"lat\"] = x\n            df[\"lon\"] = y\n\n        df[\"index\"] = df.index\n\n        return df\n\n    def process(self) -> None:\n\n        filepaths = [\n            (self.raw_folder / \"noncrop_labels_v2\", False, False),\n            (self.raw_folder / \"noncrop_labels_set2\", False, False),\n            (self.raw_folder / \"2019_gepro_noncrop\", True, True),\n            (self.raw_folder / \"noncrop_water_kenya_gt\", True, True),\n            (self.raw_folder / \"noncrop_kenya_gt\", True, True),\n        ]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for filepath, is_latlon, is_reversed in filepaths:\n            dfs.append(self.process_set(filepath, is_latlon, is_reversed))\n\n        df = pd.concat(dfs)\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1646138176210,
+  "history_end_time" : 1646138177466,
+  "history_notes" : null,
+  "history_process" : "9x9elz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "enppsbj03ov",
+  "history_input" : "import geopandas\nfrom pathlib import Path\nimport pandas as pd\nfrom pyproj import Transformer\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaNonCropProcessor(BaseProcessor):\n\n    dataset = \"kenya_non_crop\"\n\n    @staticmethod\n    def process_set(filepath: Path, latlon: bool, reversed: bool) -> geopandas.GeoDataFrame:\n        df = geopandas.read_file(filepath)\n\n        x, y = df.geometry.centroid.x.values, df.geometry.centroid.y.values\n\n        if reversed:\n            x, y = y, x\n\n        if not latlon:\n\n            transformer = Transformer.from_crs(crs_from=32636, crs_to=4326)\n\n            lat, lon = transformer.transform(xx=x, yy=y)\n            df[\"lat\"] = lat\n            df[\"lon\"] = lon\n        else:\n            df[\"lat\"] = x\n            df[\"lon\"] = y\n\n        df[\"index\"] = df.index\n\n        return df\n\n    def process(self) -> None:\n\n        filepaths = [\n            (self.raw_folder / \"noncrop_labels_v2\", False, False),\n            (self.raw_folder / \"noncrop_labels_set2\", False, False),\n            (self.raw_folder / \"2019_gepro_noncrop\", True, True),\n            (self.raw_folder / \"noncrop_water_kenya_gt\", True, True),\n            (self.raw_folder / \"noncrop_kenya_gt\", True, True),\n        ]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for filepath, is_latlon, is_reversed in filepaths:\n            dfs.append(self.process_set(filepath, is_latlon, is_reversed))\n\n        df = pd.concat(dfs)\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1646138105373,
+  "history_end_time" : 1646138106638,
+  "history_notes" : null,
+  "history_process" : "9x9elz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "bq348szz7t0",
+  "history_input" : "import geopandas\nfrom pathlib import Path\nimport pandas as pd\nfrom pyproj import Transformer\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaNonCropProcessor(BaseProcessor):\n\n    dataset = \"kenya_non_crop\"\n\n    @staticmethod\n    def process_set(filepath: Path, latlon: bool, reversed: bool) -> geopandas.GeoDataFrame:\n        df = geopandas.read_file(filepath)\n\n        x, y = df.geometry.centroid.x.values, df.geometry.centroid.y.values\n\n        if reversed:\n            x, y = y, x\n\n        if not latlon:\n\n            transformer = Transformer.from_crs(crs_from=32636, crs_to=4326)\n\n            lat, lon = transformer.transform(xx=x, yy=y)\n            df[\"lat\"] = lat\n            df[\"lon\"] = lon\n        else:\n            df[\"lat\"] = x\n            df[\"lon\"] = y\n\n        df[\"index\"] = df.index\n\n        return df\n\n    def process(self) -> None:\n\n        filepaths = [\n            (self.raw_folder / \"noncrop_labels_v2\", False, False),\n            (self.raw_folder / \"noncrop_labels_set2\", False, False),\n            (self.raw_folder / \"2019_gepro_noncrop\", True, True),\n            (self.raw_folder / \"noncrop_water_kenya_gt\", True, True),\n            (self.raw_folder / \"noncrop_kenya_gt\", True, True),\n        ]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for filepath, is_latlon, is_reversed in filepaths:\n            dfs.append(self.process_set(filepath, is_latlon, is_reversed))\n\n        df = pd.concat(dfs)\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1646138102302,
+  "history_end_time" : 1646138103745,
+  "history_notes" : null,
+  "history_process" : "9x9elz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "gio6z3gvr76",
+  "history_input" : "import geopandas\nfrom pathlib import Path\nimport pandas as pd\nfrom pyproj import Transformer\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaNonCropProcessor(BaseProcessor):\n\n    dataset = \"kenya_non_crop\"\n\n    @staticmethod\n    def process_set(filepath: Path, latlon: bool, reversed: bool) -> geopandas.GeoDataFrame:\n        df = geopandas.read_file(filepath)\n\n        x, y = df.geometry.centroid.x.values, df.geometry.centroid.y.values\n\n        if reversed:\n            x, y = y, x\n\n        if not latlon:\n\n            transformer = Transformer.from_crs(crs_from=32636, crs_to=4326)\n\n            lat, lon = transformer.transform(xx=x, yy=y)\n            df[\"lat\"] = lat\n            df[\"lon\"] = lon\n        else:\n            df[\"lat\"] = x\n            df[\"lon\"] = y\n\n        df[\"index\"] = df.index\n\n        return df\n\n    def process(self) -> None:\n\n        filepaths = [\n            (self.raw_folder / \"noncrop_labels_v2\", False, False),\n            (self.raw_folder / \"noncrop_labels_set2\", False, False),\n            (self.raw_folder / \"2019_gepro_noncrop\", True, True),\n            (self.raw_folder / \"noncrop_water_kenya_gt\", True, True),\n            (self.raw_folder / \"noncrop_kenya_gt\", True, True),\n        ]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for filepath, is_latlon, is_reversed in filepaths:\n            dfs.append(self.process_set(filepath, is_latlon, is_reversed))\n\n        df = pd.concat(dfs)\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1646138093043,
+  "history_end_time" : 1646138094246,
+  "history_notes" : null,
+  "history_process" : "9x9elz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "ga422v6k324",
+  "history_input" : "import geopandas\nfrom pathlib import Path\nimport pandas as pd\nfrom pyproj import Transformer\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaNonCropProcessor(BaseProcessor):\n\n    dataset = \"kenya_non_crop\"\n\n    @staticmethod\n    def process_set(filepath: Path, latlon: bool, reversed: bool) -> geopandas.GeoDataFrame:\n        df = geopandas.read_file(filepath)\n\n        x, y = df.geometry.centroid.x.values, df.geometry.centroid.y.values\n\n        if reversed:\n            x, y = y, x\n\n        if not latlon:\n\n            transformer = Transformer.from_crs(crs_from=32636, crs_to=4326)\n\n            lat, lon = transformer.transform(xx=x, yy=y)\n            df[\"lat\"] = lat\n            df[\"lon\"] = lon\n        else:\n            df[\"lat\"] = x\n            df[\"lon\"] = y\n\n        df[\"index\"] = df.index\n\n        return df\n\n    def process(self) -> None:\n\n        filepaths = [\n            (self.raw_folder / \"noncrop_labels_v2\", False, False),\n            (self.raw_folder / \"noncrop_labels_set2\", False, False),\n            (self.raw_folder / \"2019_gepro_noncrop\", True, True),\n            (self.raw_folder / \"noncrop_water_kenya_gt\", True, True),\n            (self.raw_folder / \"noncrop_kenya_gt\", True, True),\n        ]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for filepath, is_latlon, is_reversed in filepaths:\n            dfs.append(self.process_set(filepath, is_latlon, is_reversed))\n\n        df = pd.concat(dfs)\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1646137787724,
+  "history_end_time" : 1646137788241,
+  "history_notes" : null,
+  "history_process" : "9x9elz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "0pfoqkl5oye",
+  "history_input" : "import geopandas\nfrom pathlib import Path\nimport pandas as pd\nfrom pyproj import Transformer\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaNonCropProcessor(BaseProcessor):\n\n    dataset = \"kenya_non_crop\"\n\n    @staticmethod\n    def process_set(filepath: Path, latlon: bool, reversed: bool) -> geopandas.GeoDataFrame:\n        df = geopandas.read_file(filepath)\n\n        x, y = df.geometry.centroid.x.values, df.geometry.centroid.y.values\n\n        if reversed:\n            x, y = y, x\n\n        if not latlon:\n\n            transformer = Transformer.from_crs(crs_from=32636, crs_to=4326)\n\n            lat, lon = transformer.transform(xx=x, yy=y)\n            df[\"lat\"] = lat\n            df[\"lon\"] = lon\n        else:\n            df[\"lat\"] = x\n            df[\"lon\"] = y\n\n        df[\"index\"] = df.index\n\n        return df\n\n    def process(self) -> None:\n\n        filepaths = [\n            (self.raw_folder / \"noncrop_labels_v2\", False, False),\n            (self.raw_folder / \"noncrop_labels_set2\", False, False),\n            (self.raw_folder / \"2019_gepro_noncrop\", True, True),\n            (self.raw_folder / \"noncrop_water_kenya_gt\", True, True),\n            (self.raw_folder / \"noncrop_kenya_gt\", True, True),\n        ]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for filepath, is_latlon, is_reversed in filepaths:\n            dfs.append(self.process_set(filepath, is_latlon, is_reversed))\n\n        df = pd.concat(dfs)\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1646137786615,
+  "history_end_time" : 1646137788234,
+  "history_notes" : null,
+  "history_process" : "9x9elz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "idmlvfgbi0x",
+  "history_input" : "import geopandas\nfrom pathlib import Path\nimport pandas as pd\nfrom pyproj import Transformer\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaNonCropProcessor(BaseProcessor):\n\n    dataset = \"kenya_non_crop\"\n\n    @staticmethod\n    def process_set(filepath: Path, latlon: bool, reversed: bool) -> geopandas.GeoDataFrame:\n        df = geopandas.read_file(filepath)\n\n        x, y = df.geometry.centroid.x.values, df.geometry.centroid.y.values\n\n        if reversed:\n            x, y = y, x\n\n        if not latlon:\n\n            transformer = Transformer.from_crs(crs_from=32636, crs_to=4326)\n\n            lat, lon = transformer.transform(xx=x, yy=y)\n            df[\"lat\"] = lat\n            df[\"lon\"] = lon\n        else:\n            df[\"lat\"] = x\n            df[\"lon\"] = y\n\n        df[\"index\"] = df.index\n\n        return df\n\n    def process(self) -> None:\n\n        filepaths = [\n            (self.raw_folder / \"noncrop_labels_v2\", False, False),\n            (self.raw_folder / \"noncrop_labels_set2\", False, False),\n            (self.raw_folder / \"2019_gepro_noncrop\", True, True),\n            (self.raw_folder / \"noncrop_water_kenya_gt\", True, True),\n            (self.raw_folder / \"noncrop_kenya_gt\", True, True),\n        ]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for filepath, is_latlon, is_reversed in filepaths:\n            dfs.append(self.process_set(filepath, is_latlon, is_reversed))\n\n        df = pd.concat(dfs)\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1646137777742,
+  "history_end_time" : 1646137778311,
+  "history_notes" : null,
+  "history_process" : "9x9elz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "jy5vpr179hu",
+  "history_input" : "import geopandas\nfrom pathlib import Path\nimport pandas as pd\nfrom pyproj import Transformer\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaNonCropProcessor(BaseProcessor):\n\n    dataset = \"kenya_non_crop\"\n\n    @staticmethod\n    def process_set(filepath: Path, latlon: bool, reversed: bool) -> geopandas.GeoDataFrame:\n        df = geopandas.read_file(filepath)\n\n        x, y = df.geometry.centroid.x.values, df.geometry.centroid.y.values\n\n        if reversed:\n            x, y = y, x\n\n        if not latlon:\n\n            transformer = Transformer.from_crs(crs_from=32636, crs_to=4326)\n\n            lat, lon = transformer.transform(xx=x, yy=y)\n            df[\"lat\"] = lat\n            df[\"lon\"] = lon\n        else:\n            df[\"lat\"] = x\n            df[\"lon\"] = y\n\n        df[\"index\"] = df.index\n\n        return df\n\n    def process(self) -> None:\n\n        filepaths = [\n            (self.raw_folder / \"noncrop_labels_v2\", False, False),\n            (self.raw_folder / \"noncrop_labels_set2\", False, False),\n            (self.raw_folder / \"2019_gepro_noncrop\", True, True),\n            (self.raw_folder / \"noncrop_water_kenya_gt\", True, True),\n            (self.raw_folder / \"noncrop_kenya_gt\", True, True),\n        ]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for filepath, is_latlon, is_reversed in filepaths:\n            dfs.append(self.process_set(filepath, is_latlon, is_reversed))\n\n        df = pd.concat(dfs)\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1646137690669,
+  "history_end_time" : 1646137691809,
+  "history_notes" : null,
+  "history_process" : "9x9elz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "5e875339oco",
+  "history_input" : "import geopandas\nfrom pathlib import Path\nimport pandas as pd\nfrom pyproj import Transformer\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaNonCropProcessor(BaseProcessor):\n\n    dataset = \"kenya_non_crop\"\n\n    @staticmethod\n    def process_set(filepath: Path, latlon: bool, reversed: bool) -> geopandas.GeoDataFrame:\n        df = geopandas.read_file(filepath)\n\n        x, y = df.geometry.centroid.x.values, df.geometry.centroid.y.values\n\n        if reversed:\n            x, y = y, x\n\n        if not latlon:\n\n            transformer = Transformer.from_crs(crs_from=32636, crs_to=4326)\n\n            lat, lon = transformer.transform(xx=x, yy=y)\n            df[\"lat\"] = lat\n            df[\"lon\"] = lon\n        else:\n            df[\"lat\"] = x\n            df[\"lon\"] = y\n\n        df[\"index\"] = df.index\n\n        return df\n\n    def process(self) -> None:\n\n        filepaths = [\n            (self.raw_folder / \"noncrop_labels_v2\", False, False),\n            (self.raw_folder / \"noncrop_labels_set2\", False, False),\n            (self.raw_folder / \"2019_gepro_noncrop\", True, True),\n            (self.raw_folder / \"noncrop_water_kenya_gt\", True, True),\n            (self.raw_folder / \"noncrop_kenya_gt\", True, True),\n        ]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for filepath, is_latlon, is_reversed in filepaths:\n            dfs.append(self.process_set(filepath, is_latlon, is_reversed))\n\n        df = pd.concat(dfs)\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1646137688993,
+  "history_end_time" : 1646137690189,
+  "history_notes" : null,
+  "history_process" : "9x9elz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "2j5yt94qsld",
+  "history_input" : "import geopandas\nfrom pathlib import Path\nimport pandas as pd\nfrom pyproj import Transformer\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaNonCropProcessor(BaseProcessor):\n\n    dataset = \"kenya_non_crop\"\n\n    @staticmethod\n    def process_set(filepath: Path, latlon: bool, reversed: bool) -> geopandas.GeoDataFrame:\n        df = geopandas.read_file(filepath)\n\n        x, y = df.geometry.centroid.x.values, df.geometry.centroid.y.values\n\n        if reversed:\n            x, y = y, x\n\n        if not latlon:\n\n            transformer = Transformer.from_crs(crs_from=32636, crs_to=4326)\n\n            lat, lon = transformer.transform(xx=x, yy=y)\n            df[\"lat\"] = lat\n            df[\"lon\"] = lon\n        else:\n            df[\"lat\"] = x\n            df[\"lon\"] = y\n\n        df[\"index\"] = df.index\n\n        return df\n\n    def process(self) -> None:\n\n        filepaths = [\n            (self.raw_folder / \"noncrop_labels_v2\", False, False),\n            (self.raw_folder / \"noncrop_labels_set2\", False, False),\n            (self.raw_folder / \"2019_gepro_noncrop\", True, True),\n            (self.raw_folder / \"noncrop_water_kenya_gt\", True, True),\n            (self.raw_folder / \"noncrop_kenya_gt\", True, True),\n        ]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for filepath, is_latlon, is_reversed in filepaths:\n            dfs.append(self.process_set(filepath, is_latlon, is_reversed))\n\n        df = pd.concat(dfs)\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1646137682093,
+  "history_end_time" : 1646137682186,
+  "history_notes" : null,
+  "history_process" : "9x9elz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "ygr1zizltyn",
+  "history_input" : "import geopandas\nfrom pathlib import Path\nimport pandas as pd\nfrom pyproj import Transformer\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaNonCropProcessor(BaseProcessor):\n\n    dataset = \"kenya_non_crop\"\n\n    @staticmethod\n    def process_set(filepath: Path, latlon: bool, reversed: bool) -> geopandas.GeoDataFrame:\n        df = geopandas.read_file(filepath)\n\n        x, y = df.geometry.centroid.x.values, df.geometry.centroid.y.values\n\n        if reversed:\n            x, y = y, x\n\n        if not latlon:\n\n            transformer = Transformer.from_crs(crs_from=32636, crs_to=4326)\n\n            lat, lon = transformer.transform(xx=x, yy=y)\n            df[\"lat\"] = lat\n            df[\"lon\"] = lon\n        else:\n            df[\"lat\"] = x\n            df[\"lon\"] = y\n\n        df[\"index\"] = df.index\n\n        return df\n\n    def process(self) -> None:\n\n        filepaths = [\n            (self.raw_folder / \"noncrop_labels_v2\", False, False),\n            (self.raw_folder / \"noncrop_labels_set2\", False, False),\n            (self.raw_folder / \"2019_gepro_noncrop\", True, True),\n            (self.raw_folder / \"noncrop_water_kenya_gt\", True, True),\n            (self.raw_folder / \"noncrop_kenya_gt\", True, True),\n        ]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for filepath, is_latlon, is_reversed in filepaths:\n            dfs.append(self.process_set(filepath, is_latlon, is_reversed))\n\n        df = pd.concat(dfs)\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1646137579469,
+  "history_end_time" : 1646137580614,
+  "history_notes" : null,
+  "history_process" : "9x9elz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "sz4qd9zz35p",
+  "history_input" : "import geopandas\nfrom pathlib import Path\nimport pandas as pd\nfrom pyproj import Transformer\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaNonCropProcessor(BaseProcessor):\n\n    dataset = \"kenya_non_crop\"\n\n    @staticmethod\n    def process_set(filepath: Path, latlon: bool, reversed: bool) -> geopandas.GeoDataFrame:\n        df = geopandas.read_file(filepath)\n\n        x, y = df.geometry.centroid.x.values, df.geometry.centroid.y.values\n\n        if reversed:\n            x, y = y, x\n\n        if not latlon:\n\n            transformer = Transformer.from_crs(crs_from=32636, crs_to=4326)\n\n            lat, lon = transformer.transform(xx=x, yy=y)\n            df[\"lat\"] = lat\n            df[\"lon\"] = lon\n        else:\n            df[\"lat\"] = x\n            df[\"lon\"] = y\n\n        df[\"index\"] = df.index\n\n        return df\n\n    def process(self) -> None:\n\n        filepaths = [\n            (self.raw_folder / \"noncrop_labels_v2\", False, False),\n            (self.raw_folder / \"noncrop_labels_set2\", False, False),\n            (self.raw_folder / \"2019_gepro_noncrop\", True, True),\n            (self.raw_folder / \"noncrop_water_kenya_gt\", True, True),\n            (self.raw_folder / \"noncrop_kenya_gt\", True, True),\n        ]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for filepath, is_latlon, is_reversed in filepaths:\n            dfs.append(self.process_set(filepath, is_latlon, is_reversed))\n\n        df = pd.concat(dfs)\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1646137577687,
+  "history_end_time" : 1646137578784,
+  "history_notes" : null,
+  "history_process" : "9x9elz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "23psmo2aizq",
+  "history_input" : "import geopandas\nfrom pathlib import Path\nimport pandas as pd\nfrom pyproj import Transformer\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaNonCropProcessor(BaseProcessor):\n\n    dataset = \"kenya_non_crop\"\n\n    @staticmethod\n    def process_set(filepath: Path, latlon: bool, reversed: bool) -> geopandas.GeoDataFrame:\n        df = geopandas.read_file(filepath)\n\n        x, y = df.geometry.centroid.x.values, df.geometry.centroid.y.values\n\n        if reversed:\n            x, y = y, x\n\n        if not latlon:\n\n            transformer = Transformer.from_crs(crs_from=32636, crs_to=4326)\n\n            lat, lon = transformer.transform(xx=x, yy=y)\n            df[\"lat\"] = lat\n            df[\"lon\"] = lon\n        else:\n            df[\"lat\"] = x\n            df[\"lon\"] = y\n\n        df[\"index\"] = df.index\n\n        return df\n\n    def process(self) -> None:\n\n        filepaths = [\n            (self.raw_folder / \"noncrop_labels_v2\", False, False),\n            (self.raw_folder / \"noncrop_labels_set2\", False, False),\n            (self.raw_folder / \"2019_gepro_noncrop\", True, True),\n            (self.raw_folder / \"noncrop_water_kenya_gt\", True, True),\n            (self.raw_folder / \"noncrop_kenya_gt\", True, True),\n        ]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for filepath, is_latlon, is_reversed in filepaths:\n            dfs.append(self.process_set(filepath, is_latlon, is_reversed))\n\n        df = pd.concat(dfs)\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1646137570560,
+  "history_end_time" : 1646137571105,
+  "history_notes" : null,
+  "history_process" : "9x9elz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "mzedkiltxmp",
+  "history_input" : "import geopandas\nfrom pathlib import Path\nimport pandas as pd\nfrom pyproj import Transformer\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaNonCropProcessor(BaseProcessor):\n\n    dataset = \"kenya_non_crop\"\n\n    @staticmethod\n    def process_set(filepath: Path, latlon: bool, reversed: bool) -> geopandas.GeoDataFrame:\n        df = geopandas.read_file(filepath)\n\n        x, y = df.geometry.centroid.x.values, df.geometry.centroid.y.values\n\n        if reversed:\n            x, y = y, x\n\n        if not latlon:\n\n            transformer = Transformer.from_crs(crs_from=32636, crs_to=4326)\n\n            lat, lon = transformer.transform(xx=x, yy=y)\n            df[\"lat\"] = lat\n            df[\"lon\"] = lon\n        else:\n            df[\"lat\"] = x\n            df[\"lon\"] = y\n\n        df[\"index\"] = df.index\n\n        return df\n\n    def process(self) -> None:\n\n        filepaths = [\n            (self.raw_folder / \"noncrop_labels_v2\", False, False),\n            (self.raw_folder / \"noncrop_labels_set2\", False, False),\n            (self.raw_folder / \"2019_gepro_noncrop\", True, True),\n            (self.raw_folder / \"noncrop_water_kenya_gt\", True, True),\n            (self.raw_folder / \"noncrop_kenya_gt\", True, True),\n        ]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for filepath, is_latlon, is_reversed in filepaths:\n            dfs.append(self.process_set(filepath, is_latlon, is_reversed))\n\n        df = pd.concat(dfs)\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1646112838303,
+  "history_end_time" : 1646112839589,
+  "history_notes" : null,
+  "history_process" : "9x9elz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "m3e7o2a2zo9",
+  "history_input" : "import geopandas\nfrom pathlib import Path\nimport pandas as pd\nfrom pyproj import Transformer\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaNonCropProcessor(BaseProcessor):\n\n    dataset = \"kenya_non_crop\"\n\n    @staticmethod\n    def process_set(filepath: Path, latlon: bool, reversed: bool) -> geopandas.GeoDataFrame:\n        df = geopandas.read_file(filepath)\n\n        x, y = df.geometry.centroid.x.values, df.geometry.centroid.y.values\n\n        if reversed:\n            x, y = y, x\n\n        if not latlon:\n\n            transformer = Transformer.from_crs(crs_from=32636, crs_to=4326)\n\n            lat, lon = transformer.transform(xx=x, yy=y)\n            df[\"lat\"] = lat\n            df[\"lon\"] = lon\n        else:\n            df[\"lat\"] = x\n            df[\"lon\"] = y\n\n        df[\"index\"] = df.index\n\n        return df\n\n    def process(self) -> None:\n\n        filepaths = [\n            (self.raw_folder / \"noncrop_labels_v2\", False, False),\n            (self.raw_folder / \"noncrop_labels_set2\", False, False),\n            (self.raw_folder / \"2019_gepro_noncrop\", True, True),\n            (self.raw_folder / \"noncrop_water_kenya_gt\", True, True),\n            (self.raw_folder / \"noncrop_kenya_gt\", True, True),\n        ]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for filepath, is_latlon, is_reversed in filepaths:\n            dfs.append(self.process_set(filepath, is_latlon, is_reversed))\n\n        df = pd.concat(dfs)\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1646112838294,
+  "history_end_time" : 1646112839594,
+  "history_notes" : null,
+  "history_process" : "9x9elz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "q29unohdzxn",
+  "history_input" : "import geopandas\nfrom pathlib import Path\nimport pandas as pd\nfrom pyproj import Transformer\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaNonCropProcessor(BaseProcessor):\n\n    dataset = \"kenya_non_crop\"\n\n    @staticmethod\n    def process_set(filepath: Path, latlon: bool, reversed: bool) -> geopandas.GeoDataFrame:\n        df = geopandas.read_file(filepath)\n\n        x, y = df.geometry.centroid.x.values, df.geometry.centroid.y.values\n\n        if reversed:\n            x, y = y, x\n\n        if not latlon:\n\n            transformer = Transformer.from_crs(crs_from=32636, crs_to=4326)\n\n            lat, lon = transformer.transform(xx=x, yy=y)\n            df[\"lat\"] = lat\n            df[\"lon\"] = lon\n        else:\n            df[\"lat\"] = x\n            df[\"lon\"] = y\n\n        df[\"index\"] = df.index\n\n        return df\n\n    def process(self) -> None:\n\n        filepaths = [\n            (self.raw_folder / \"noncrop_labels_v2\", False, False),\n            (self.raw_folder / \"noncrop_labels_set2\", False, False),\n            (self.raw_folder / \"2019_gepro_noncrop\", True, True),\n            (self.raw_folder / \"noncrop_water_kenya_gt\", True, True),\n            (self.raw_folder / \"noncrop_kenya_gt\", True, True),\n        ]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for filepath, is_latlon, is_reversed in filepaths:\n            dfs.append(self.process_set(filepath, is_latlon, is_reversed))\n\n        df = pd.concat(dfs)\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1646112829211,
+  "history_end_time" : 1646112830416,
+  "history_notes" : null,
+  "history_process" : "9x9elz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "vcde0grv57q",
+  "history_input" : "import geopandas\nfrom pathlib import Path\nimport pandas as pd\nfrom pyproj import Transformer\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaNonCropProcessor(BaseProcessor):\n\n    dataset = \"kenya_non_crop\"\n\n    @staticmethod\n    def process_set(filepath: Path, latlon: bool, reversed: bool) -> geopandas.GeoDataFrame:\n        df = geopandas.read_file(filepath)\n\n        x, y = df.geometry.centroid.x.values, df.geometry.centroid.y.values\n\n        if reversed:\n            x, y = y, x\n\n        if not latlon:\n\n            transformer = Transformer.from_crs(crs_from=32636, crs_to=4326)\n\n            lat, lon = transformer.transform(xx=x, yy=y)\n            df[\"lat\"] = lat\n            df[\"lon\"] = lon\n        else:\n            df[\"lat\"] = x\n            df[\"lon\"] = y\n\n        df[\"index\"] = df.index\n\n        return df\n\n    def process(self) -> None:\n\n        filepaths = [\n            (self.raw_folder / \"noncrop_labels_v2\", False, False),\n            (self.raw_folder / \"noncrop_labels_set2\", False, False),\n            (self.raw_folder / \"2019_gepro_noncrop\", True, True),\n            (self.raw_folder / \"noncrop_water_kenya_gt\", True, True),\n            (self.raw_folder / \"noncrop_kenya_gt\", True, True),\n        ]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for filepath, is_latlon, is_reversed in filepaths:\n            dfs.append(self.process_set(filepath, is_latlon, is_reversed))\n\n        df = pd.concat(dfs)\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1646112730626,
+  "history_end_time" : 1646112731007,
+  "history_notes" : null,
+  "history_process" : "9x9elz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "szw1k8kdhsw",
+  "history_input" : "import geopandas\nfrom pathlib import Path\nimport pandas as pd\nfrom pyproj import Transformer\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaNonCropProcessor(BaseProcessor):\n\n    dataset = \"kenya_non_crop\"\n\n    @staticmethod\n    def process_set(filepath: Path, latlon: bool, reversed: bool) -> geopandas.GeoDataFrame:\n        df = geopandas.read_file(filepath)\n\n        x, y = df.geometry.centroid.x.values, df.geometry.centroid.y.values\n\n        if reversed:\n            x, y = y, x\n\n        if not latlon:\n\n            transformer = Transformer.from_crs(crs_from=32636, crs_to=4326)\n\n            lat, lon = transformer.transform(xx=x, yy=y)\n            df[\"lat\"] = lat\n            df[\"lon\"] = lon\n        else:\n            df[\"lat\"] = x\n            df[\"lon\"] = y\n\n        df[\"index\"] = df.index\n\n        return df\n\n    def process(self) -> None:\n\n        filepaths = [\n            (self.raw_folder / \"noncrop_labels_v2\", False, False),\n            (self.raw_folder / \"noncrop_labels_set2\", False, False),\n            (self.raw_folder / \"2019_gepro_noncrop\", True, True),\n            (self.raw_folder / \"noncrop_water_kenya_gt\", True, True),\n            (self.raw_folder / \"noncrop_kenya_gt\", True, True),\n        ]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for filepath, is_latlon, is_reversed in filepaths:\n            dfs.append(self.process_set(filepath, is_latlon, is_reversed))\n\n        df = pd.concat(dfs)\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1646112729893,
+  "history_end_time" : 1646112731003,
+  "history_notes" : null,
+  "history_process" : "9x9elz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "wz79ikeg3rp",
+  "history_input" : "import geopandas\nfrom pathlib import Path\nimport pandas as pd\nfrom pyproj import Transformer\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaNonCropProcessor(BaseProcessor):\n\n    dataset = \"kenya_non_crop\"\n\n    @staticmethod\n    def process_set(filepath: Path, latlon: bool, reversed: bool) -> geopandas.GeoDataFrame:\n        df = geopandas.read_file(filepath)\n\n        x, y = df.geometry.centroid.x.values, df.geometry.centroid.y.values\n\n        if reversed:\n            x, y = y, x\n\n        if not latlon:\n\n            transformer = Transformer.from_crs(crs_from=32636, crs_to=4326)\n\n            lat, lon = transformer.transform(xx=x, yy=y)\n            df[\"lat\"] = lat\n            df[\"lon\"] = lon\n        else:\n            df[\"lat\"] = x\n            df[\"lon\"] = y\n\n        df[\"index\"] = df.index\n\n        return df\n\n    def process(self) -> None:\n\n        filepaths = [\n            (self.raw_folder / \"noncrop_labels_v2\", False, False),\n            (self.raw_folder / \"noncrop_labels_set2\", False, False),\n            (self.raw_folder / \"2019_gepro_noncrop\", True, True),\n            (self.raw_folder / \"noncrop_water_kenya_gt\", True, True),\n            (self.raw_folder / \"noncrop_kenya_gt\", True, True),\n        ]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for filepath, is_latlon, is_reversed in filepaths:\n            dfs.append(self.process_set(filepath, is_latlon, is_reversed))\n\n        df = pd.concat(dfs)\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1646112729320,
+  "history_end_time" : 1646112729620,
+  "history_notes" : null,
+  "history_process" : "9x9elz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "vnaih88pjs7",
+  "history_input" : "import geopandas\nfrom pathlib import Path\nimport pandas as pd\nfrom pyproj import Transformer\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaNonCropProcessor(BaseProcessor):\n\n    dataset = \"kenya_non_crop\"\n\n    @staticmethod\n    def process_set(filepath: Path, latlon: bool, reversed: bool) -> geopandas.GeoDataFrame:\n        df = geopandas.read_file(filepath)\n\n        x, y = df.geometry.centroid.x.values, df.geometry.centroid.y.values\n\n        if reversed:\n            x, y = y, x\n\n        if not latlon:\n\n            transformer = Transformer.from_crs(crs_from=32636, crs_to=4326)\n\n            lat, lon = transformer.transform(xx=x, yy=y)\n            df[\"lat\"] = lat\n            df[\"lon\"] = lon\n        else:\n            df[\"lat\"] = x\n            df[\"lon\"] = y\n\n        df[\"index\"] = df.index\n\n        return df\n\n    def process(self) -> None:\n\n        filepaths = [\n            (self.raw_folder / \"noncrop_labels_v2\", False, False),\n            (self.raw_folder / \"noncrop_labels_set2\", False, False),\n            (self.raw_folder / \"2019_gepro_noncrop\", True, True),\n            (self.raw_folder / \"noncrop_water_kenya_gt\", True, True),\n            (self.raw_folder / \"noncrop_kenya_gt\", True, True),\n        ]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for filepath, is_latlon, is_reversed in filepaths:\n            dfs.append(self.process_set(filepath, is_latlon, is_reversed))\n\n        df = pd.concat(dfs)\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1646112280881,
+  "history_end_time" : 1646112280921,
+  "history_notes" : null,
+  "history_process" : "9x9elz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "qmp5miqflpf",
+  "history_input" : "import geopandas\nfrom pathlib import Path\nimport pandas as pd\nfrom pyproj import Transformer\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaNonCropProcessor(BaseProcessor):\n\n    dataset = \"kenya_non_crop\"\n\n    @staticmethod\n    def process_set(filepath: Path, latlon: bool, reversed: bool) -> geopandas.GeoDataFrame:\n        df = geopandas.read_file(filepath)\n\n        x, y = df.geometry.centroid.x.values, df.geometry.centroid.y.values\n\n        if reversed:\n            x, y = y, x\n\n        if not latlon:\n\n            transformer = Transformer.from_crs(crs_from=32636, crs_to=4326)\n\n            lat, lon = transformer.transform(xx=x, yy=y)\n            df[\"lat\"] = lat\n            df[\"lon\"] = lon\n        else:\n            df[\"lat\"] = x\n            df[\"lon\"] = y\n\n        df[\"index\"] = df.index\n\n        return df\n\n    def process(self) -> None:\n\n        filepaths = [\n            (self.raw_folder / \"noncrop_labels_v2\", False, False),\n            (self.raw_folder / \"noncrop_labels_set2\", False, False),\n            (self.raw_folder / \"2019_gepro_noncrop\", True, True),\n            (self.raw_folder / \"noncrop_water_kenya_gt\", True, True),\n            (self.raw_folder / \"noncrop_kenya_gt\", True, True),\n        ]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for filepath, is_latlon, is_reversed in filepaths:\n            dfs.append(self.process_set(filepath, is_latlon, is_reversed))\n\n        df = pd.concat(dfs)\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1646112279888,
+  "history_end_time" : 1646112280917,
+  "history_notes" : null,
+  "history_process" : "9x9elz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "rqplmr806f1",
+  "history_input" : "import geopandas\nfrom pathlib import Path\nimport pandas as pd\nfrom pyproj import Transformer\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaNonCropProcessor(BaseProcessor):\n\n    dataset = \"kenya_non_crop\"\n\n    @staticmethod\n    def process_set(filepath: Path, latlon: bool, reversed: bool) -> geopandas.GeoDataFrame:\n        df = geopandas.read_file(filepath)\n\n        x, y = df.geometry.centroid.x.values, df.geometry.centroid.y.values\n\n        if reversed:\n            x, y = y, x\n\n        if not latlon:\n\n            transformer = Transformer.from_crs(crs_from=32636, crs_to=4326)\n\n            lat, lon = transformer.transform(xx=x, yy=y)\n            df[\"lat\"] = lat\n            df[\"lon\"] = lon\n        else:\n            df[\"lat\"] = x\n            df[\"lon\"] = y\n\n        df[\"index\"] = df.index\n\n        return df\n\n    def process(self) -> None:\n\n        filepaths = [\n            (self.raw_folder / \"noncrop_labels_v2\", False, False),\n            (self.raw_folder / \"noncrop_labels_set2\", False, False),\n            (self.raw_folder / \"2019_gepro_noncrop\", True, True),\n            (self.raw_folder / \"noncrop_water_kenya_gt\", True, True),\n            (self.raw_folder / \"noncrop_kenya_gt\", True, True),\n        ]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for filepath, is_latlon, is_reversed in filepaths:\n            dfs.append(self.process_set(filepath, is_latlon, is_reversed))\n\n        df = pd.concat(dfs)\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1646112278443,
+  "history_end_time" : 1646112279550,
+  "history_notes" : null,
+  "history_process" : "9x9elz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "jmumvcy55za",
+  "history_input" : "import geopandas\nfrom pathlib import Path\nimport pandas as pd\nfrom pyproj import Transformer\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaNonCropProcessor(BaseProcessor):\n\n    dataset = \"kenya_non_crop\"\n\n    @staticmethod\n    def process_set(filepath: Path, latlon: bool, reversed: bool) -> geopandas.GeoDataFrame:\n        df = geopandas.read_file(filepath)\n\n        x, y = df.geometry.centroid.x.values, df.geometry.centroid.y.values\n\n        if reversed:\n            x, y = y, x\n\n        if not latlon:\n\n            transformer = Transformer.from_crs(crs_from=32636, crs_to=4326)\n\n            lat, lon = transformer.transform(xx=x, yy=y)\n            df[\"lat\"] = lat\n            df[\"lon\"] = lon\n        else:\n            df[\"lat\"] = x\n            df[\"lon\"] = y\n\n        df[\"index\"] = df.index\n\n        return df\n\n    def process(self) -> None:\n\n        filepaths = [\n            (self.raw_folder / \"noncrop_labels_v2\", False, False),\n            (self.raw_folder / \"noncrop_labels_set2\", False, False),\n            (self.raw_folder / \"2019_gepro_noncrop\", True, True),\n            (self.raw_folder / \"noncrop_water_kenya_gt\", True, True),\n            (self.raw_folder / \"noncrop_kenya_gt\", True, True),\n        ]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for filepath, is_latlon, is_reversed in filepaths:\n            dfs.append(self.process_set(filepath, is_latlon, is_reversed))\n\n        df = pd.concat(dfs)\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1646112246401,
+  "history_end_time" : 1646112247398,
+  "history_notes" : null,
+  "history_process" : "9x9elz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "c6j97vmhctk",
+  "history_input" : "import geopandas\nfrom pathlib import Path\nimport pandas as pd\nfrom pyproj import Transformer\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaNonCropProcessor(BaseProcessor):\n\n    dataset = \"kenya_non_crop\"\n\n    @staticmethod\n    def process_set(filepath: Path, latlon: bool, reversed: bool) -> geopandas.GeoDataFrame:\n        df = geopandas.read_file(filepath)\n\n        x, y = df.geometry.centroid.x.values, df.geometry.centroid.y.values\n\n        if reversed:\n            x, y = y, x\n\n        if not latlon:\n\n            transformer = Transformer.from_crs(crs_from=32636, crs_to=4326)\n\n            lat, lon = transformer.transform(xx=x, yy=y)\n            df[\"lat\"] = lat\n            df[\"lon\"] = lon\n        else:\n            df[\"lat\"] = x\n            df[\"lon\"] = y\n\n        df[\"index\"] = df.index\n\n        return df\n\n    def process(self) -> None:\n\n        filepaths = [\n            (self.raw_folder / \"noncrop_labels_v2\", False, False),\n            (self.raw_folder / \"noncrop_labels_set2\", False, False),\n            (self.raw_folder / \"2019_gepro_noncrop\", True, True),\n            (self.raw_folder / \"noncrop_water_kenya_gt\", True, True),\n            (self.raw_folder / \"noncrop_kenya_gt\", True, True),\n        ]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for filepath, is_latlon, is_reversed in filepaths:\n            dfs.append(self.process_set(filepath, is_latlon, is_reversed))\n\n        df = pd.concat(dfs)\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1646112244560,
+  "history_end_time" : 1646112245554,
+  "history_notes" : null,
+  "history_process" : "9x9elz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "9nxscn6ci03",
+  "history_input" : "import geopandas\nfrom pathlib import Path\nimport pandas as pd\nfrom pyproj import Transformer\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaNonCropProcessor(BaseProcessor):\n\n    dataset = \"kenya_non_crop\"\n\n    @staticmethod\n    def process_set(filepath: Path, latlon: bool, reversed: bool) -> geopandas.GeoDataFrame:\n        df = geopandas.read_file(filepath)\n\n        x, y = df.geometry.centroid.x.values, df.geometry.centroid.y.values\n\n        if reversed:\n            x, y = y, x\n\n        if not latlon:\n\n            transformer = Transformer.from_crs(crs_from=32636, crs_to=4326)\n\n            lat, lon = transformer.transform(xx=x, yy=y)\n            df[\"lat\"] = lat\n            df[\"lon\"] = lon\n        else:\n            df[\"lat\"] = x\n            df[\"lon\"] = y\n\n        df[\"index\"] = df.index\n\n        return df\n\n    def process(self) -> None:\n\n        filepaths = [\n            (self.raw_folder / \"noncrop_labels_v2\", False, False),\n            (self.raw_folder / \"noncrop_labels_set2\", False, False),\n            (self.raw_folder / \"2019_gepro_noncrop\", True, True),\n            (self.raw_folder / \"noncrop_water_kenya_gt\", True, True),\n            (self.raw_folder / \"noncrop_kenya_gt\", True, True),\n        ]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for filepath, is_latlon, is_reversed in filepaths:\n            dfs.append(self.process_set(filepath, is_latlon, is_reversed))\n\n        df = pd.concat(dfs)\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1646112236047,
+  "history_end_time" : 1646112236193,
+  "history_notes" : null,
+  "history_process" : "9x9elz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "jctrp4rt6z6",
+  "history_input" : "import geopandas\nfrom pathlib import Path\nimport pandas as pd\nfrom pyproj import Transformer\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaNonCropProcessor(BaseProcessor):\n\n    dataset = \"kenya_non_crop\"\n\n    @staticmethod\n    def process_set(filepath: Path, latlon: bool, reversed: bool) -> geopandas.GeoDataFrame:\n        df = geopandas.read_file(filepath)\n\n        x, y = df.geometry.centroid.x.values, df.geometry.centroid.y.values\n\n        if reversed:\n            x, y = y, x\n\n        if not latlon:\n\n            transformer = Transformer.from_crs(crs_from=32636, crs_to=4326)\n\n            lat, lon = transformer.transform(xx=x, yy=y)\n            df[\"lat\"] = lat\n            df[\"lon\"] = lon\n        else:\n            df[\"lat\"] = x\n            df[\"lon\"] = y\n\n        df[\"index\"] = df.index\n\n        return df\n\n    def process(self) -> None:\n\n        filepaths = [\n            (self.raw_folder / \"noncrop_labels_v2\", False, False),\n            (self.raw_folder / \"noncrop_labels_set2\", False, False),\n            (self.raw_folder / \"2019_gepro_noncrop\", True, True),\n            (self.raw_folder / \"noncrop_water_kenya_gt\", True, True),\n            (self.raw_folder / \"noncrop_kenya_gt\", True, True),\n        ]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for filepath, is_latlon, is_reversed in filepaths:\n            dfs.append(self.process_set(filepath, is_latlon, is_reversed))\n\n        df = pd.concat(dfs)\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1646112141906,
+  "history_end_time" : 1646112143112,
+  "history_notes" : null,
+  "history_process" : "9x9elz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "srd1j0khrj1",
+  "history_input" : "import geopandas\nfrom pathlib import Path\nimport pandas as pd\nfrom pyproj import Transformer\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaNonCropProcessor(BaseProcessor):\n\n    dataset = \"kenya_non_crop\"\n\n    @staticmethod\n    def process_set(filepath: Path, latlon: bool, reversed: bool) -> geopandas.GeoDataFrame:\n        df = geopandas.read_file(filepath)\n\n        x, y = df.geometry.centroid.x.values, df.geometry.centroid.y.values\n\n        if reversed:\n            x, y = y, x\n\n        if not latlon:\n\n            transformer = Transformer.from_crs(crs_from=32636, crs_to=4326)\n\n            lat, lon = transformer.transform(xx=x, yy=y)\n            df[\"lat\"] = lat\n            df[\"lon\"] = lon\n        else:\n            df[\"lat\"] = x\n            df[\"lon\"] = y\n\n        df[\"index\"] = df.index\n\n        return df\n\n    def process(self) -> None:\n\n        filepaths = [\n            (self.raw_folder / \"noncrop_labels_v2\", False, False),\n            (self.raw_folder / \"noncrop_labels_set2\", False, False),\n            (self.raw_folder / \"2019_gepro_noncrop\", True, True),\n            (self.raw_folder / \"noncrop_water_kenya_gt\", True, True),\n            (self.raw_folder / \"noncrop_kenya_gt\", True, True),\n        ]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for filepath, is_latlon, is_reversed in filepaths:\n            dfs.append(self.process_set(filepath, is_latlon, is_reversed))\n\n        df = pd.concat(dfs)\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1646112141363,
+  "history_end_time" : 1646112141803,
+  "history_notes" : null,
+  "history_process" : "9x9elz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "iggka96wj1l",
+  "history_input" : "import geopandas\nfrom pathlib import Path\nimport pandas as pd\nfrom pyproj import Transformer\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaNonCropProcessor(BaseProcessor):\n\n    dataset = \"kenya_non_crop\"\n\n    @staticmethod\n    def process_set(filepath: Path, latlon: bool, reversed: bool) -> geopandas.GeoDataFrame:\n        df = geopandas.read_file(filepath)\n\n        x, y = df.geometry.centroid.x.values, df.geometry.centroid.y.values\n\n        if reversed:\n            x, y = y, x\n\n        if not latlon:\n\n            transformer = Transformer.from_crs(crs_from=32636, crs_to=4326)\n\n            lat, lon = transformer.transform(xx=x, yy=y)\n            df[\"lat\"] = lat\n            df[\"lon\"] = lon\n        else:\n            df[\"lat\"] = x\n            df[\"lon\"] = y\n\n        df[\"index\"] = df.index\n\n        return df\n\n    def process(self) -> None:\n\n        filepaths = [\n            (self.raw_folder / \"noncrop_labels_v2\", False, False),\n            (self.raw_folder / \"noncrop_labels_set2\", False, False),\n            (self.raw_folder / \"2019_gepro_noncrop\", True, True),\n            (self.raw_folder / \"noncrop_water_kenya_gt\", True, True),\n            (self.raw_folder / \"noncrop_kenya_gt\", True, True),\n        ]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for filepath, is_latlon, is_reversed in filepaths:\n            dfs.append(self.process_set(filepath, is_latlon, is_reversed))\n\n        df = pd.concat(dfs)\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1646112133092,
+  "history_end_time" : 1646112133559,
+  "history_notes" : null,
+  "history_process" : "9x9elz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "8kbnptfxnzb",
+  "history_input" : "import geopandas\nfrom pathlib import Path\nimport pandas as pd\nfrom pyproj import Transformer\n\nfrom src_processors_base import BaseProcessor\n\nfrom typing import List\n\n\nclass KenyaNonCropProcessor(BaseProcessor):\n\n    dataset = \"kenya_non_crop\"\n\n    @staticmethod\n    def process_set(filepath: Path, latlon: bool, reversed: bool) -> geopandas.GeoDataFrame:\n        df = geopandas.read_file(filepath)\n\n        x, y = df.geometry.centroid.x.values, df.geometry.centroid.y.values\n\n        if reversed:\n            x, y = y, x\n\n        if not latlon:\n\n            transformer = Transformer.from_crs(crs_from=32636, crs_to=4326)\n\n            lat, lon = transformer.transform(xx=x, yy=y)\n            df[\"lat\"] = lat\n            df[\"lon\"] = lon\n        else:\n            df[\"lat\"] = x\n            df[\"lon\"] = y\n\n        df[\"index\"] = df.index\n\n        return df\n\n    def process(self) -> None:\n\n        filepaths = [\n            (self.raw_folder / \"noncrop_labels_v2\", False, False),\n            (self.raw_folder / \"noncrop_labels_set2\", False, False),\n            (self.raw_folder / \"2019_gepro_noncrop\", True, True),\n            (self.raw_folder / \"noncrop_water_kenya_gt\", True, True),\n            (self.raw_folder / \"noncrop_kenya_gt\", True, True),\n        ]\n\n        dfs: List[geopandas.GeoDataFrame] = []\n        for filepath, is_latlon, is_reversed in filepaths:\n            dfs.append(self.process_set(filepath, is_latlon, is_reversed))\n\n        df = pd.concat(dfs)\n        df.to_file(self.output_folder / \"data.geojson\", driver=\"GeoJSON\")\n",
+  "history_output" : "",
+  "history_begin_time" : 1645393374526,
+  "history_end_time" : 1645393374685,
+  "history_notes" : null,
+  "history_process" : "9x9elz",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},]

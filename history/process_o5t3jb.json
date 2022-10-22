@@ -1,0 +1,641 @@
+[{
+  "history_id" : "cormpo78zph",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666167825394,
+  "history_end_time" : 1666167825394,
+  "history_notes" : null,
+  "history_process" : "o5t3jb",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "fhyi07caxsa",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666167772385,
+  "history_end_time" : 1666167772385,
+  "history_notes" : null,
+  "history_process" : "o5t3jb",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "2n0gsdmn1iq",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666166465617,
+  "history_end_time" : 1666166465617,
+  "history_notes" : null,
+  "history_process" : "o5t3jb",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "qhc15vqth38",
+  "history_input" : "import torch\nimport numpy as np\nimport random\n\nfrom dataclasses import dataclass\n\n\ndef set_seed(seed: int = 42) -> None:\n    np.random.seed(seed)\n    torch.manual_seed(seed)\n    random.seed(seed)\n\n\n@dataclass\nclass BoundingBox:\n\n    min_lon: float\n    max_lon: float\n    min_lat: float\n    max_lat: float\n\n\nSTR2BB = {\n    \"Kenya\": BoundingBox(min_lon=33.501, max_lon=42.283, min_lat=-5.202, max_lat=6.002),\n    \"Busia\": BoundingBox(\n        min_lon=33.88389587402344,\n        min_lat=-0.04119872691853491,\n        max_lon=34.44007873535156,\n        max_lat=0.7779454563313616,\n    ),\n}\n",
+  "history_output" : "",
+  "history_begin_time" : 1666166410495,
+  "history_end_time" : 1666166419947,
+  "history_notes" : null,
+  "history_process" : "o5t3jb",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "jlr2ngacmn1",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666164233046,
+  "history_end_time" : 1666164233046,
+  "history_notes" : null,
+  "history_process" : "o5t3jb",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "ealw1bfa04e",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666163607247,
+  "history_end_time" : 1666163607247,
+  "history_notes" : null,
+  "history_process" : "o5t3jb",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "itd84bp8sx5",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666137012925,
+  "history_end_time" : 1666137012925,
+  "history_notes" : null,
+  "history_process" : "o5t3jb",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "r30oepyl0ct",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666136593458,
+  "history_end_time" : 1666136593458,
+  "history_notes" : null,
+  "history_process" : "o5t3jb",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "q9ei8mgez6n",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666136435741,
+  "history_end_time" : 1666136435741,
+  "history_notes" : null,
+  "history_process" : "o5t3jb",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "42lsrvr0uso",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666134110720,
+  "history_end_time" : 1666134110720,
+  "history_notes" : null,
+  "history_process" : "o5t3jb",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "1bcqw0s6w14",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666134036872,
+  "history_end_time" : 1666134036872,
+  "history_notes" : null,
+  "history_process" : "o5t3jb",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "om3u7g35h84",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666134008924,
+  "history_end_time" : 1666134008924,
+  "history_notes" : null,
+  "history_process" : "o5t3jb",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "lz6b27v9mvq",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666131993116,
+  "history_end_time" : 1666131993116,
+  "history_notes" : null,
+  "history_process" : "o5t3jb",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "qxb1f2qqff5",
+  "history_input" : "import torch\nimport numpy as np\nimport random\n\nfrom dataclasses import dataclass\n\n\ndef set_seed(seed: int = 42) -> None:\n    np.random.seed(seed)\n    torch.manual_seed(seed)\n    random.seed(seed)\n\n\n@dataclass\nclass BoundingBox:\n\n    min_lon: float\n    max_lon: float\n    min_lat: float\n    max_lat: float\n\n\nSTR2BB = {\n    \"Kenya\": BoundingBox(min_lon=33.501, max_lon=42.283, min_lat=-5.202, max_lat=6.002),\n    \"Busia\": BoundingBox(\n        min_lon=33.88389587402344,\n        min_lat=-0.04119872691853491,\n        max_lon=34.44007873535156,\n        max_lat=0.7779454563313616,\n    ),\n}\n",
+  "history_output" : "",
+  "history_begin_time" : 1666118270517,
+  "history_end_time" : 1666118272623,
+  "history_notes" : null,
+  "history_process" : "o5t3jb",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "eg8ia9agkbf",
+  "history_input" : "import torch\nimport numpy as np\nimport random\n\nfrom dataclasses import dataclass\n\n\ndef set_seed(seed: int = 42) -> None:\n    np.random.seed(seed)\n    torch.manual_seed(seed)\n    random.seed(seed)\n\n\n@dataclass\nclass BoundingBox:\n\n    min_lon: float\n    max_lon: float\n    min_lat: float\n    max_lat: float\n\n\nSTR2BB = {\n    \"Kenya\": BoundingBox(min_lon=33.501, max_lon=42.283, min_lat=-5.202, max_lat=6.002),\n    \"Busia\": BoundingBox(\n        min_lon=33.88389587402344,\n        min_lat=-0.04119872691853491,\n        max_lon=34.44007873535156,\n        max_lat=0.7779454563313616,\n    ),\n}\n",
+  "history_output" : "",
+  "history_begin_time" : 1655909867551,
+  "history_end_time" : 1655909867901,
+  "history_notes" : null,
+  "history_process" : "o5t3jb",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "3ixxdemcqn7",
+  "history_input" : "import torch\nimport numpy as np\nimport random\n\nfrom dataclasses import dataclass\n\n\ndef set_seed(seed: int = 42) -> None:\n    np.random.seed(seed)\n    torch.manual_seed(seed)\n    random.seed(seed)\n\n\n@dataclass\nclass BoundingBox:\n\n    min_lon: float\n    max_lon: float\n    min_lat: float\n    max_lat: float\n\n\nSTR2BB = {\n    \"Kenya\": BoundingBox(min_lon=33.501, max_lon=42.283, min_lat=-5.202, max_lat=6.002),\n    \"Busia\": BoundingBox(\n        min_lon=33.88389587402344,\n        min_lat=-0.04119872691853491,\n        max_lon=34.44007873535156,\n        max_lat=0.7779454563313616,\n    ),\n}\n",
+  "history_output" : "",
+  "history_begin_time" : 1655908824380,
+  "history_end_time" : 1655908824546,
+  "history_notes" : null,
+  "history_process" : "o5t3jb",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "uvaj24ahni4",
+  "history_input" : "import torch\nimport numpy as np\nimport random\n\nfrom dataclasses import dataclass\n\n\ndef set_seed(seed: int = 42) -> None:\n    np.random.seed(seed)\n    torch.manual_seed(seed)\n    random.seed(seed)\n\n\n@dataclass\nclass BoundingBox:\n\n    min_lon: float\n    max_lon: float\n    min_lat: float\n    max_lat: float\n\n\nSTR2BB = {\n    \"Kenya\": BoundingBox(min_lon=33.501, max_lon=42.283, min_lat=-5.202, max_lat=6.002),\n    \"Busia\": BoundingBox(\n        min_lon=33.88389587402344,\n        min_lat=-0.04119872691853491,\n        max_lon=34.44007873535156,\n        max_lat=0.7779454563313616,\n    ),\n}\n",
+  "history_output" : "",
+  "history_begin_time" : 1655907434324,
+  "history_end_time" : 1655907435214,
+  "history_notes" : null,
+  "history_process" : "o5t3jb",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "e9nnag49lhc",
+  "history_input" : "import torch\nimport numpy as np\nimport random\n\nfrom dataclasses import dataclass\n\n\ndef set_seed(seed: int = 42) -> None:\n    np.random.seed(seed)\n    torch.manual_seed(seed)\n    random.seed(seed)\n\n\n@dataclass\nclass BoundingBox:\n\n    min_lon: float\n    max_lon: float\n    min_lat: float\n    max_lat: float\n\n\nSTR2BB = {\n    \"Kenya\": BoundingBox(min_lon=33.501, max_lon=42.283, min_lat=-5.202, max_lat=6.002),\n    \"Busia\": BoundingBox(\n        min_lon=33.88389587402344,\n        min_lat=-0.04119872691853491,\n        max_lon=34.44007873535156,\n        max_lat=0.7779454563313616,\n    ),\n}\n",
+  "history_output" : "",
+  "history_begin_time" : 1655907399616,
+  "history_end_time" : 1655907403069,
+  "history_notes" : null,
+  "history_process" : "o5t3jb",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "swrtwp3f9lf",
+  "history_input" : "import torch\nimport numpy as np\nimport random\n\nfrom dataclasses import dataclass\n\n\ndef set_seed(seed: int = 42) -> None:\n    np.random.seed(seed)\n    torch.manual_seed(seed)\n    random.seed(seed)\n\n\n@dataclass\nclass BoundingBox:\n\n    min_lon: float\n    max_lon: float\n    min_lat: float\n    max_lat: float\n\n\nSTR2BB = {\n    \"Kenya\": BoundingBox(min_lon=33.501, max_lon=42.283, min_lat=-5.202, max_lat=6.002),\n    \"Busia\": BoundingBox(\n        min_lon=33.88389587402344,\n        min_lat=-0.04119872691853491,\n        max_lon=34.44007873535156,\n        max_lat=0.7779454563313616,\n    ),\n}\n",
+  "history_output" : "Traceback (most recent call last):\n  File \"src_utils.py\", line 1, in <module>\n    import torch\nModuleNotFoundError: No module named 'torch'\n",
+  "history_begin_time" : 1655865860648,
+  "history_end_time" : 1655865860821,
+  "history_notes" : null,
+  "history_process" : "o5t3jb",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "yyo41pvgs9z",
+  "history_input" : "import torch\nimport numpy as np\nimport random\n\nfrom dataclasses import dataclass\n\n\ndef set_seed(seed: int = 42) -> None:\n    np.random.seed(seed)\n    torch.manual_seed(seed)\n    random.seed(seed)\n\n\n@dataclass\nclass BoundingBox:\n\n    min_lon: float\n    max_lon: float\n    min_lat: float\n    max_lat: float\n\n\nSTR2BB = {\n    \"Kenya\": BoundingBox(min_lon=33.501, max_lon=42.283, min_lat=-5.202, max_lat=6.002),\n    \"Busia\": BoundingBox(\n        min_lon=33.88389587402344,\n        min_lat=-0.04119872691853491,\n        max_lon=34.44007873535156,\n        max_lat=0.7779454563313616,\n    ),\n}\n",
+  "history_output" : "",
+  "history_begin_time" : 1655865078364,
+  "history_end_time" : 1655865086001,
+  "history_notes" : null,
+  "history_process" : "o5t3jb",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "f7w9m7n801a",
+  "history_input" : "import torch\nimport numpy as np\nimport random\n\nfrom dataclasses import dataclass\n\n\ndef set_seed(seed: int = 42) -> None:\n    np.random.seed(seed)\n    torch.manual_seed(seed)\n    random.seed(seed)\n\n\n@dataclass\nclass BoundingBox:\n\n    min_lon: float\n    max_lon: float\n    min_lat: float\n    max_lat: float\n\n\nSTR2BB = {\n    \"Kenya\": BoundingBox(min_lon=33.501, max_lon=42.283, min_lat=-5.202, max_lat=6.002),\n    \"Busia\": BoundingBox(\n        min_lon=33.88389587402344,\n        min_lat=-0.04119872691853491,\n        max_lon=34.44007873535156,\n        max_lat=0.7779454563313616,\n    ),\n}\n",
+  "history_output" : "",
+  "history_begin_time" : 1647347427769,
+  "history_end_time" : 1647347428302,
+  "history_notes" : null,
+  "history_process" : "o5t3jb",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "ibn04hm45ar",
+  "history_input" : "import torch\nimport numpy as np\nimport random\n\nfrom dataclasses import dataclass\n\n\ndef set_seed(seed: int = 42) -> None:\n    np.random.seed(seed)\n    torch.manual_seed(seed)\n    random.seed(seed)\n\n\n@dataclass\nclass BoundingBox:\n\n    min_lon: float\n    max_lon: float\n    min_lat: float\n    max_lat: float\n\n\nSTR2BB = {\n    \"Kenya\": BoundingBox(min_lon=33.501, max_lon=42.283, min_lat=-5.202, max_lat=6.002),\n    \"Busia\": BoundingBox(\n        min_lon=33.88389587402344,\n        min_lat=-0.04119872691853491,\n        max_lon=34.44007873535156,\n        max_lat=0.7779454563313616,\n    ),\n}\n",
+  "history_output" : "",
+  "history_begin_time" : 1647347342073,
+  "history_end_time" : 1647347342619,
+  "history_notes" : null,
+  "history_process" : "o5t3jb",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "8ekerf7p3vd",
+  "history_input" : "import torch\nimport numpy as np\nimport random\n\nfrom dataclasses import dataclass\n\n\ndef set_seed(seed: int = 42) -> None:\n    np.random.seed(seed)\n    torch.manual_seed(seed)\n    random.seed(seed)\n\n\n@dataclass\nclass BoundingBox:\n\n    min_lon: float\n    max_lon: float\n    min_lat: float\n    max_lat: float\n\n\nSTR2BB = {\n    \"Kenya\": BoundingBox(min_lon=33.501, max_lon=42.283, min_lat=-5.202, max_lat=6.002),\n    \"Busia\": BoundingBox(\n        min_lon=33.88389587402344,\n        min_lat=-0.04119872691853491,\n        max_lon=34.44007873535156,\n        max_lat=0.7779454563313616,\n    ),\n}\n",
+  "history_output" : "",
+  "history_begin_time" : 1647347266425,
+  "history_end_time" : 1647347267103,
+  "history_notes" : null,
+  "history_process" : "o5t3jb",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "70a3322qff9",
+  "history_input" : "import torch\nimport numpy as np\nimport random\n\nfrom dataclasses import dataclass\n\n\ndef set_seed(seed: int = 42) -> None:\n    np.random.seed(seed)\n    torch.manual_seed(seed)\n    random.seed(seed)\n\n\n@dataclass\nclass BoundingBox:\n\n    min_lon: float\n    max_lon: float\n    min_lat: float\n    max_lat: float\n\n\nSTR2BB = {\n    \"Kenya\": BoundingBox(min_lon=33.501, max_lon=42.283, min_lat=-5.202, max_lat=6.002),\n    \"Busia\": BoundingBox(\n        min_lon=33.88389587402344,\n        min_lat=-0.04119872691853491,\n        max_lon=34.44007873535156,\n        max_lat=0.7779454563313616,\n    ),\n}\n",
+  "history_output" : "",
+  "history_begin_time" : 1647347133133,
+  "history_end_time" : 1647347133949,
+  "history_notes" : null,
+  "history_process" : "o5t3jb",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "5x0jaye36go",
+  "history_input" : "import torch\nimport numpy as np\nimport random\n\nfrom dataclasses import dataclass\n\n\ndef set_seed(seed: int = 42) -> None:\n    np.random.seed(seed)\n    torch.manual_seed(seed)\n    random.seed(seed)\n\n\n@dataclass\nclass BoundingBox:\n\n    min_lon: float\n    max_lon: float\n    min_lat: float\n    max_lat: float\n\n\nSTR2BB = {\n    \"Kenya\": BoundingBox(min_lon=33.501, max_lon=42.283, min_lat=-5.202, max_lat=6.002),\n    \"Busia\": BoundingBox(\n        min_lon=33.88389587402344,\n        min_lat=-0.04119872691853491,\n        max_lon=34.44007873535156,\n        max_lat=0.7779454563313616,\n    ),\n}\n",
+  "history_output" : "",
+  "history_begin_time" : 1647346808856,
+  "history_end_time" : 1647346809790,
+  "history_notes" : null,
+  "history_process" : "o5t3jb",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "0jk8zonqy1e",
+  "history_input" : "import torch\nimport numpy as np\nimport random\n\nfrom dataclasses import dataclass\n\n\ndef set_seed(seed: int = 42) -> None:\n    np.random.seed(seed)\n    torch.manual_seed(seed)\n    random.seed(seed)\n\n\n@dataclass\nclass BoundingBox:\n\n    min_lon: float\n    max_lon: float\n    min_lat: float\n    max_lat: float\n\n\nSTR2BB = {\n    \"Kenya\": BoundingBox(min_lon=33.501, max_lon=42.283, min_lat=-5.202, max_lat=6.002),\n    \"Busia\": BoundingBox(\n        min_lon=33.88389587402344,\n        min_lat=-0.04119872691853491,\n        max_lon=34.44007873535156,\n        max_lat=0.7779454563313616,\n    ),\n}\n",
+  "history_output" : "",
+  "history_begin_time" : 1647346650482,
+  "history_end_time" : 1647346650943,
+  "history_notes" : null,
+  "history_process" : "o5t3jb",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "owf4mzsc1jp",
+  "history_input" : "import torch\nimport numpy as np\nimport random\n\nfrom dataclasses import dataclass\n\n\ndef set_seed(seed: int = 42) -> None:\n    np.random.seed(seed)\n    torch.manual_seed(seed)\n    random.seed(seed)\n\n\n@dataclass\nclass BoundingBox:\n\n    min_lon: float\n    max_lon: float\n    min_lat: float\n    max_lat: float\n\n\nSTR2BB = {\n    \"Kenya\": BoundingBox(min_lon=33.501, max_lon=42.283, min_lat=-5.202, max_lat=6.002),\n    \"Busia\": BoundingBox(\n        min_lon=33.88389587402344,\n        min_lat=-0.04119872691853491,\n        max_lon=34.44007873535156,\n        max_lat=0.7779454563313616,\n    ),\n}\n",
+  "history_output" : "",
+  "history_begin_time" : 1647345839697,
+  "history_end_time" : 1647345840500,
+  "history_notes" : null,
+  "history_process" : "o5t3jb",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "zq597w0avj0",
+  "history_input" : "import torch\nimport numpy as np\nimport random\n\nfrom dataclasses import dataclass\n\n\ndef set_seed(seed: int = 42) -> None:\n    np.random.seed(seed)\n    torch.manual_seed(seed)\n    random.seed(seed)\n\n\n@dataclass\nclass BoundingBox:\n\n    min_lon: float\n    max_lon: float\n    min_lat: float\n    max_lat: float\n\n\nSTR2BB = {\n    \"Kenya\": BoundingBox(min_lon=33.501, max_lon=42.283, min_lat=-5.202, max_lat=6.002),\n    \"Busia\": BoundingBox(\n        min_lon=33.88389587402344,\n        min_lat=-0.04119872691853491,\n        max_lon=34.44007873535156,\n        max_lat=0.7779454563313616,\n    ),\n}\n",
+  "history_output" : "",
+  "history_begin_time" : 1647345655156,
+  "history_end_time" : 1647345655775,
+  "history_notes" : null,
+  "history_process" : "o5t3jb",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "zdgbhafzgqu",
+  "history_input" : "import torch\nimport numpy as np\nimport random\n\nfrom dataclasses import dataclass\n\n\ndef set_seed(seed: int = 42) -> None:\n    np.random.seed(seed)\n    torch.manual_seed(seed)\n    random.seed(seed)\n\n\n@dataclass\nclass BoundingBox:\n\n    min_lon: float\n    max_lon: float\n    min_lat: float\n    max_lat: float\n\n\nSTR2BB = {\n    \"Kenya\": BoundingBox(min_lon=33.501, max_lon=42.283, min_lat=-5.202, max_lat=6.002),\n    \"Busia\": BoundingBox(\n        min_lon=33.88389587402344,\n        min_lat=-0.04119872691853491,\n        max_lon=34.44007873535156,\n        max_lat=0.7779454563313616,\n    ),\n}\n",
+  "history_output" : "",
+  "history_begin_time" : 1647340112687,
+  "history_end_time" : 1647340121661,
+  "history_notes" : null,
+  "history_process" : "o5t3jb",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "kkzfr4550c3",
+  "history_input" : "import torch\nimport numpy as np\nimport random\n\nfrom dataclasses import dataclass\n\n\ndef set_seed(seed: int = 42) -> None:\n    np.random.seed(seed)\n    torch.manual_seed(seed)\n    random.seed(seed)\n\n\n@dataclass\nclass BoundingBox:\n\n    min_lon: float\n    max_lon: float\n    min_lat: float\n    max_lat: float\n\n\nSTR2BB = {\n    \"Kenya\": BoundingBox(min_lon=33.501, max_lon=42.283, min_lat=-5.202, max_lat=6.002),\n    \"Busia\": BoundingBox(\n        min_lon=33.88389587402344,\n        min_lat=-0.04119872691853491,\n        max_lon=34.44007873535156,\n        max_lat=0.7779454563313616,\n    ),\n}\n",
+  "history_output" : "",
+  "history_begin_time" : 1646147714692,
+  "history_end_time" : 1646147716908,
+  "history_notes" : null,
+  "history_process" : "o5t3jb",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "4gfjjq2up4r",
+  "history_input" : "import torch\nimport numpy as np\nimport random\n\nfrom dataclasses import dataclass\n\n\ndef set_seed(seed: int = 42) -> None:\n    np.random.seed(seed)\n    torch.manual_seed(seed)\n    random.seed(seed)\n\n\n@dataclass\nclass BoundingBox:\n\n    min_lon: float\n    max_lon: float\n    min_lat: float\n    max_lat: float\n\n\nSTR2BB = {\n    \"Kenya\": BoundingBox(min_lon=33.501, max_lon=42.283, min_lat=-5.202, max_lat=6.002),\n    \"Busia\": BoundingBox(\n        min_lon=33.88389587402344,\n        min_lat=-0.04119872691853491,\n        max_lon=34.44007873535156,\n        max_lat=0.7779454563313616,\n    ),\n}\n",
+  "history_output" : "",
+  "history_begin_time" : 1646145423630,
+  "history_end_time" : 1646145424197,
+  "history_notes" : null,
+  "history_process" : "o5t3jb",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "5h4eyqeyfbn",
+  "history_input" : "import torch\nimport numpy as np\nimport random\n\nfrom dataclasses import dataclass\n\n\ndef set_seed(seed: int = 42) -> None:\n    np.random.seed(seed)\n    torch.manual_seed(seed)\n    random.seed(seed)\n\n\n@dataclass\nclass BoundingBox:\n\n    min_lon: float\n    max_lon: float\n    min_lat: float\n    max_lat: float\n\n\nSTR2BB = {\n    \"Kenya\": BoundingBox(min_lon=33.501, max_lon=42.283, min_lat=-5.202, max_lat=6.002),\n    \"Busia\": BoundingBox(\n        min_lon=33.88389587402344,\n        min_lat=-0.04119872691853491,\n        max_lon=34.44007873535156,\n        max_lat=0.7779454563313616,\n    ),\n}\n",
+  "history_output" : "",
+  "history_begin_time" : 1646145208818,
+  "history_end_time" : 1646145209075,
+  "history_notes" : null,
+  "history_process" : "o5t3jb",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "ldq0sop7dmz",
+  "history_input" : "import torch\nimport numpy as np\nimport random\n\nfrom dataclasses import dataclass\n\n\ndef set_seed(seed: int = 42) -> None:\n    np.random.seed(seed)\n    torch.manual_seed(seed)\n    random.seed(seed)\n\n\n@dataclass\nclass BoundingBox:\n\n    min_lon: float\n    max_lon: float\n    min_lat: float\n    max_lat: float\n\n\nSTR2BB = {\n    \"Kenya\": BoundingBox(min_lon=33.501, max_lon=42.283, min_lat=-5.202, max_lat=6.002),\n    \"Busia\": BoundingBox(\n        min_lon=33.88389587402344,\n        min_lat=-0.04119872691853491,\n        max_lon=34.44007873535156,\n        max_lat=0.7779454563313616,\n    ),\n}\n",
+  "history_output" : "",
+  "history_begin_time" : 1646144598599,
+  "history_end_time" : 1646144599350,
+  "history_notes" : null,
+  "history_process" : "o5t3jb",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "dps5vqsbehx",
+  "history_input" : "import torch\nimport numpy as np\nimport random\n\nfrom dataclasses import dataclass\n\n\ndef set_seed(seed: int = 42) -> None:\n    np.random.seed(seed)\n    torch.manual_seed(seed)\n    random.seed(seed)\n\n\n@dataclass\nclass BoundingBox:\n\n    min_lon: float\n    max_lon: float\n    min_lat: float\n    max_lat: float\n\n\nSTR2BB = {\n    \"Kenya\": BoundingBox(min_lon=33.501, max_lon=42.283, min_lat=-5.202, max_lat=6.002),\n    \"Busia\": BoundingBox(\n        min_lon=33.88389587402344,\n        min_lat=-0.04119872691853491,\n        max_lon=34.44007873535156,\n        max_lat=0.7779454563313616,\n    ),\n}\n",
+  "history_output" : "",
+  "history_begin_time" : 1646144381462,
+  "history_end_time" : 1646144382055,
+  "history_notes" : null,
+  "history_process" : "o5t3jb",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "5nmvx0wxovg",
+  "history_input" : "import torch\nimport numpy as np\nimport random\n\nfrom dataclasses import dataclass\n\n\ndef set_seed(seed: int = 42) -> None:\n    np.random.seed(seed)\n    torch.manual_seed(seed)\n    random.seed(seed)\n\n\n@dataclass\nclass BoundingBox:\n\n    min_lon: float\n    max_lon: float\n    min_lat: float\n    max_lat: float\n\n\nSTR2BB = {\n    \"Kenya\": BoundingBox(min_lon=33.501, max_lon=42.283, min_lat=-5.202, max_lat=6.002),\n    \"Busia\": BoundingBox(\n        min_lon=33.88389587402344,\n        min_lat=-0.04119872691853491,\n        max_lon=34.44007873535156,\n        max_lat=0.7779454563313616,\n    ),\n}\n",
+  "history_output" : "",
+  "history_begin_time" : 1646144308334,
+  "history_end_time" : 1646144308535,
+  "history_notes" : null,
+  "history_process" : "o5t3jb",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "tbbe0atlanh",
+  "history_input" : "import torch\nimport numpy as np\nimport random\n\nfrom dataclasses import dataclass\n\n\ndef set_seed(seed: int = 42) -> None:\n    np.random.seed(seed)\n    torch.manual_seed(seed)\n    random.seed(seed)\n\n\n@dataclass\nclass BoundingBox:\n\n    min_lon: float\n    max_lon: float\n    min_lat: float\n    max_lat: float\n\n\nSTR2BB = {\n    \"Kenya\": BoundingBox(min_lon=33.501, max_lon=42.283, min_lat=-5.202, max_lat=6.002),\n    \"Busia\": BoundingBox(\n        min_lon=33.88389587402344,\n        min_lat=-0.04119872691853491,\n        max_lon=34.44007873535156,\n        max_lat=0.7779454563313616,\n    ),\n}\n",
+  "history_output" : "",
+  "history_begin_time" : 1646143402342,
+  "history_end_time" : 1646143402459,
+  "history_notes" : null,
+  "history_process" : "o5t3jb",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "syifvaifci1",
+  "history_input" : "import torch\nimport numpy as np\nimport random\n\nfrom dataclasses import dataclass\n\n\ndef set_seed(seed: int = 42) -> None:\n    np.random.seed(seed)\n    torch.manual_seed(seed)\n    random.seed(seed)\n\n\n@dataclass\nclass BoundingBox:\n\n    min_lon: float\n    max_lon: float\n    min_lat: float\n    max_lat: float\n\n\nSTR2BB = {\n    \"Kenya\": BoundingBox(min_lon=33.501, max_lon=42.283, min_lat=-5.202, max_lat=6.002),\n    \"Busia\": BoundingBox(\n        min_lon=33.88389587402344,\n        min_lat=-0.04119872691853491,\n        max_lon=34.44007873535156,\n        max_lat=0.7779454563313616,\n    ),\n}\n",
+  "history_output" : "",
+  "history_begin_time" : 1646143252879,
+  "history_end_time" : 1646143253587,
+  "history_notes" : null,
+  "history_process" : "o5t3jb",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "uts15dtydoa",
+  "history_input" : "import torch\nimport numpy as np\nimport random\n\nfrom dataclasses import dataclass\n\n\ndef set_seed(seed: int = 42) -> None:\n    np.random.seed(seed)\n    torch.manual_seed(seed)\n    random.seed(seed)\n\n\n@dataclass\nclass BoundingBox:\n\n    min_lon: float\n    max_lon: float\n    min_lat: float\n    max_lat: float\n\n\nSTR2BB = {\n    \"Kenya\": BoundingBox(min_lon=33.501, max_lon=42.283, min_lat=-5.202, max_lat=6.002),\n    \"Busia\": BoundingBox(\n        min_lon=33.88389587402344,\n        min_lat=-0.04119872691853491,\n        max_lon=34.44007873535156,\n        max_lat=0.7779454563313616,\n    ),\n}\n",
+  "history_output" : "",
+  "history_begin_time" : 1646143174329,
+  "history_end_time" : 1646143174938,
+  "history_notes" : null,
+  "history_process" : "o5t3jb",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "w8shxoqeyrr",
+  "history_input" : "import torch\nimport numpy as np\nimport random\n\nfrom dataclasses import dataclass\n\n\ndef set_seed(seed: int = 42) -> None:\n    np.random.seed(seed)\n    torch.manual_seed(seed)\n    random.seed(seed)\n\n\n@dataclass\nclass BoundingBox:\n\n    min_lon: float\n    max_lon: float\n    min_lat: float\n    max_lat: float\n\n\nSTR2BB = {\n    \"Kenya\": BoundingBox(min_lon=33.501, max_lon=42.283, min_lat=-5.202, max_lat=6.002),\n    \"Busia\": BoundingBox(\n        min_lon=33.88389587402344,\n        min_lat=-0.04119872691853491,\n        max_lon=34.44007873535156,\n        max_lat=0.7779454563313616,\n    ),\n}\n",
+  "history_output" : "",
+  "history_begin_time" : 1646143138543,
+  "history_end_time" : 1646143139406,
+  "history_notes" : null,
+  "history_process" : "o5t3jb",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "h75myjvtuy2",
+  "history_input" : "import torch\nimport numpy as np\nimport random\n\nfrom dataclasses import dataclass\n\n\ndef set_seed(seed: int = 42) -> None:\n    np.random.seed(seed)\n    torch.manual_seed(seed)\n    random.seed(seed)\n\n\n@dataclass\nclass BoundingBox:\n\n    min_lon: float\n    max_lon: float\n    min_lat: float\n    max_lat: float\n\n\nSTR2BB = {\n    \"Kenya\": BoundingBox(min_lon=33.501, max_lon=42.283, min_lat=-5.202, max_lat=6.002),\n    \"Busia\": BoundingBox(\n        min_lon=33.88389587402344,\n        min_lat=-0.04119872691853491,\n        max_lon=34.44007873535156,\n        max_lat=0.7779454563313616,\n    ),\n}\n",
+  "history_output" : "",
+  "history_begin_time" : 1646143109813,
+  "history_end_time" : 1646143111054,
+  "history_notes" : null,
+  "history_process" : "o5t3jb",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "wx3zffm1z1w",
+  "history_input" : "import torch\nimport numpy as np\nimport random\n\nfrom dataclasses import dataclass\n\n\ndef set_seed(seed: int = 42) -> None:\n    np.random.seed(seed)\n    torch.manual_seed(seed)\n    random.seed(seed)\n\n\n@dataclass\nclass BoundingBox:\n\n    min_lon: float\n    max_lon: float\n    min_lat: float\n    max_lat: float\n\n\nSTR2BB = {\n    \"Kenya\": BoundingBox(min_lon=33.501, max_lon=42.283, min_lat=-5.202, max_lat=6.002),\n    \"Busia\": BoundingBox(\n        min_lon=33.88389587402344,\n        min_lat=-0.04119872691853491,\n        max_lon=34.44007873535156,\n        max_lat=0.7779454563313616,\n    ),\n}\n",
+  "history_output" : "",
+  "history_begin_time" : 1646139374178,
+  "history_end_time" : 1646139374662,
+  "history_notes" : null,
+  "history_process" : "o5t3jb",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "l0fhlfp86bs",
+  "history_input" : "import torch\nimport numpy as np\nimport random\n\nfrom dataclasses import dataclass\n\n\ndef set_seed(seed: int = 42) -> None:\n    np.random.seed(seed)\n    torch.manual_seed(seed)\n    random.seed(seed)\n\n\n@dataclass\nclass BoundingBox:\n\n    min_lon: float\n    max_lon: float\n    min_lat: float\n    max_lat: float\n\n\nSTR2BB = {\n    \"Kenya\": BoundingBox(min_lon=33.501, max_lon=42.283, min_lat=-5.202, max_lat=6.002),\n    \"Busia\": BoundingBox(\n        min_lon=33.88389587402344,\n        min_lat=-0.04119872691853491,\n        max_lon=34.44007873535156,\n        max_lat=0.7779454563313616,\n    ),\n}\n",
+  "history_output" : "",
+  "history_begin_time" : 1646139282355,
+  "history_end_time" : 1646139282953,
+  "history_notes" : null,
+  "history_process" : "o5t3jb",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "tp98jig4l8r",
+  "history_input" : "import torch\nimport numpy as np\nimport random\n\nfrom dataclasses import dataclass\n\n\ndef set_seed(seed: int = 42) -> None:\n    np.random.seed(seed)\n    torch.manual_seed(seed)\n    random.seed(seed)\n\n\n@dataclass\nclass BoundingBox:\n\n    min_lon: float\n    max_lon: float\n    min_lat: float\n    max_lat: float\n\n\nSTR2BB = {\n    \"Kenya\": BoundingBox(min_lon=33.501, max_lon=42.283, min_lat=-5.202, max_lat=6.002),\n    \"Busia\": BoundingBox(\n        min_lon=33.88389587402344,\n        min_lat=-0.04119872691853491,\n        max_lon=34.44007873535156,\n        max_lat=0.7779454563313616,\n    ),\n}\n",
+  "history_output" : "",
+  "history_begin_time" : 1646139241905,
+  "history_end_time" : 1646139242753,
+  "history_notes" : null,
+  "history_process" : "o5t3jb",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "zee3b9wx88p",
+  "history_input" : "import torch\nimport numpy as np\nimport random\n\nfrom dataclasses import dataclass\n\n\ndef set_seed(seed: int = 42) -> None:\n    np.random.seed(seed)\n    torch.manual_seed(seed)\n    random.seed(seed)\n\n\n@dataclass\nclass BoundingBox:\n\n    min_lon: float\n    max_lon: float\n    min_lat: float\n    max_lat: float\n\n\nSTR2BB = {\n    \"Kenya\": BoundingBox(min_lon=33.501, max_lon=42.283, min_lat=-5.202, max_lat=6.002),\n    \"Busia\": BoundingBox(\n        min_lon=33.88389587402344,\n        min_lat=-0.04119872691853491,\n        max_lon=34.44007873535156,\n        max_lat=0.7779454563313616,\n    ),\n}\n",
+  "history_output" : "",
+  "history_begin_time" : 1646139190029,
+  "history_end_time" : 1646139190697,
+  "history_notes" : null,
+  "history_process" : "o5t3jb",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "tdrpajfrf39",
+  "history_input" : "import torch\nimport numpy as np\nimport random\n\nfrom dataclasses import dataclass\n\n\ndef set_seed(seed: int = 42) -> None:\n    np.random.seed(seed)\n    torch.manual_seed(seed)\n    random.seed(seed)\n\n\n@dataclass\nclass BoundingBox:\n\n    min_lon: float\n    max_lon: float\n    min_lat: float\n    max_lat: float\n\n\nSTR2BB = {\n    \"Kenya\": BoundingBox(min_lon=33.501, max_lon=42.283, min_lat=-5.202, max_lat=6.002),\n    \"Busia\": BoundingBox(\n        min_lon=33.88389587402344,\n        min_lat=-0.04119872691853491,\n        max_lon=34.44007873535156,\n        max_lat=0.7779454563313616,\n    ),\n}\n",
+  "history_output" : "",
+  "history_begin_time" : 1646139151363,
+  "history_end_time" : 1646139152083,
+  "history_notes" : null,
+  "history_process" : "o5t3jb",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "wo6a31xm92b",
+  "history_input" : "import torch\nimport numpy as np\nimport random\n\nfrom dataclasses import dataclass\n\n\ndef set_seed(seed: int = 42) -> None:\n    np.random.seed(seed)\n    torch.manual_seed(seed)\n    random.seed(seed)\n\n\n@dataclass\nclass BoundingBox:\n\n    min_lon: float\n    max_lon: float\n    min_lat: float\n    max_lat: float\n\n\nSTR2BB = {\n    \"Kenya\": BoundingBox(min_lon=33.501, max_lon=42.283, min_lat=-5.202, max_lat=6.002),\n    \"Busia\": BoundingBox(\n        min_lon=33.88389587402344,\n        min_lat=-0.04119872691853491,\n        max_lon=34.44007873535156,\n        max_lat=0.7779454563313616,\n    ),\n}\n",
+  "history_output" : "",
+  "history_begin_time" : 1646138496409,
+  "history_end_time" : 1646138496458,
+  "history_notes" : null,
+  "history_process" : "o5t3jb",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "s56ojhcjojb",
+  "history_input" : "import torch\nimport numpy as np\nimport random\n\nfrom dataclasses import dataclass\n\n\ndef set_seed(seed: int = 42) -> None:\n    np.random.seed(seed)\n    torch.manual_seed(seed)\n    random.seed(seed)\n\n\n@dataclass\nclass BoundingBox:\n\n    min_lon: float\n    max_lon: float\n    min_lat: float\n    max_lat: float\n\n\nSTR2BB = {\n    \"Kenya\": BoundingBox(min_lon=33.501, max_lon=42.283, min_lat=-5.202, max_lat=6.002),\n    \"Busia\": BoundingBox(\n        min_lon=33.88389587402344,\n        min_lat=-0.04119872691853491,\n        max_lon=34.44007873535156,\n        max_lat=0.7779454563313616,\n    ),\n}\n",
+  "history_output" : "",
+  "history_begin_time" : 1646138443554,
+  "history_end_time" : 1646138443600,
+  "history_notes" : null,
+  "history_process" : "o5t3jb",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "le2ajekjc8d",
+  "history_input" : "import torch\nimport numpy as np\nimport random\n\nfrom dataclasses import dataclass\n\n\ndef set_seed(seed: int = 42) -> None:\n    np.random.seed(seed)\n    torch.manual_seed(seed)\n    random.seed(seed)\n\n\n@dataclass\nclass BoundingBox:\n\n    min_lon: float\n    max_lon: float\n    min_lat: float\n    max_lat: float\n\n\nSTR2BB = {\n    \"Kenya\": BoundingBox(min_lon=33.501, max_lon=42.283, min_lat=-5.202, max_lat=6.002),\n    \"Busia\": BoundingBox(\n        min_lon=33.88389587402344,\n        min_lat=-0.04119872691853491,\n        max_lon=34.44007873535156,\n        max_lat=0.7779454563313616,\n    ),\n}\n",
+  "history_output" : "",
+  "history_begin_time" : 1646138392811,
+  "history_end_time" : 1646138393669,
+  "history_notes" : null,
+  "history_process" : "o5t3jb",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "fwwozy4vaen",
+  "history_input" : "import torch\nimport numpy as np\nimport random\n\nfrom dataclasses import dataclass\n\n\ndef set_seed(seed: int = 42) -> None:\n    np.random.seed(seed)\n    torch.manual_seed(seed)\n    random.seed(seed)\n\n\n@dataclass\nclass BoundingBox:\n\n    min_lon: float\n    max_lon: float\n    min_lat: float\n    max_lat: float\n\n\nSTR2BB = {\n    \"Kenya\": BoundingBox(min_lon=33.501, max_lon=42.283, min_lat=-5.202, max_lat=6.002),\n    \"Busia\": BoundingBox(\n        min_lon=33.88389587402344,\n        min_lat=-0.04119872691853491,\n        max_lon=34.44007873535156,\n        max_lat=0.7779454563313616,\n    ),\n}\n",
+  "history_output" : "",
+  "history_begin_time" : 1646138270445,
+  "history_end_time" : 1646138271777,
+  "history_notes" : null,
+  "history_process" : "o5t3jb",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "mow6uxudh7y",
+  "history_input" : "import torch\nimport numpy as np\nimport random\n\nfrom dataclasses import dataclass\n\n\ndef set_seed(seed: int = 42) -> None:\n    np.random.seed(seed)\n    torch.manual_seed(seed)\n    random.seed(seed)\n\n\n@dataclass\nclass BoundingBox:\n\n    min_lon: float\n    max_lon: float\n    min_lat: float\n    max_lat: float\n\n\nSTR2BB = {\n    \"Kenya\": BoundingBox(min_lon=33.501, max_lon=42.283, min_lat=-5.202, max_lat=6.002),\n    \"Busia\": BoundingBox(\n        min_lon=33.88389587402344,\n        min_lat=-0.04119872691853491,\n        max_lon=34.44007873535156,\n        max_lat=0.7779454563313616,\n    ),\n}\n",
+  "history_output" : "",
+  "history_begin_time" : 1646138172183,
+  "history_end_time" : 1646138172726,
+  "history_notes" : null,
+  "history_process" : "o5t3jb",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "c8qway1n6fl",
+  "history_input" : "import torch\nimport numpy as np\nimport random\n\nfrom dataclasses import dataclass\n\n\ndef set_seed(seed: int = 42) -> None:\n    np.random.seed(seed)\n    torch.manual_seed(seed)\n    random.seed(seed)\n\n\n@dataclass\nclass BoundingBox:\n\n    min_lon: float\n    max_lon: float\n    min_lat: float\n    max_lat: float\n\n\nSTR2BB = {\n    \"Kenya\": BoundingBox(min_lon=33.501, max_lon=42.283, min_lat=-5.202, max_lat=6.002),\n    \"Busia\": BoundingBox(\n        min_lon=33.88389587402344,\n        min_lat=-0.04119872691853491,\n        max_lon=34.44007873535156,\n        max_lat=0.7779454563313616,\n    ),\n}\n",
+  "history_output" : "",
+  "history_begin_time" : 1646138092285,
+  "history_end_time" : 1646138092699,
+  "history_notes" : null,
+  "history_process" : "o5t3jb",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "pcfhck4ciga",
+  "history_input" : "import torch\nimport numpy as np\nimport random\n\nfrom dataclasses import dataclass\n\n\ndef set_seed(seed: int = 42) -> None:\n    np.random.seed(seed)\n    torch.manual_seed(seed)\n    random.seed(seed)\n\n\n@dataclass\nclass BoundingBox:\n\n    min_lon: float\n    max_lon: float\n    min_lat: float\n    max_lat: float\n\n\nSTR2BB = {\n    \"Kenya\": BoundingBox(min_lon=33.501, max_lon=42.283, min_lat=-5.202, max_lat=6.002),\n    \"Busia\": BoundingBox(\n        min_lon=33.88389587402344,\n        min_lat=-0.04119872691853491,\n        max_lon=34.44007873535156,\n        max_lat=0.7779454563313616,\n    ),\n}\n",
+  "history_output" : "",
+  "history_begin_time" : 1646137777068,
+  "history_end_time" : 1646137777734,
+  "history_notes" : null,
+  "history_process" : "o5t3jb",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "3vepuuqs2ci",
+  "history_input" : "import torch\nimport numpy as np\nimport random\n\nfrom dataclasses import dataclass\n\n\ndef set_seed(seed: int = 42) -> None:\n    np.random.seed(seed)\n    torch.manual_seed(seed)\n    random.seed(seed)\n\n\n@dataclass\nclass BoundingBox:\n\n    min_lon: float\n    max_lon: float\n    min_lat: float\n    max_lat: float\n\n\nSTR2BB = {\n    \"Kenya\": BoundingBox(min_lon=33.501, max_lon=42.283, min_lat=-5.202, max_lat=6.002),\n    \"Busia\": BoundingBox(\n        min_lon=33.88389587402344,\n        min_lat=-0.04119872691853491,\n        max_lon=34.44007873535156,\n        max_lat=0.7779454563313616,\n    ),\n}\n",
+  "history_output" : "",
+  "history_begin_time" : 1646137681033,
+  "history_end_time" : 1646137681749,
+  "history_notes" : null,
+  "history_process" : "o5t3jb",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "eoptz2jox27",
+  "history_input" : "import torch\nimport numpy as np\nimport random\n\nfrom dataclasses import dataclass\n\n\ndef set_seed(seed: int = 42) -> None:\n    np.random.seed(seed)\n    torch.manual_seed(seed)\n    random.seed(seed)\n\n\n@dataclass\nclass BoundingBox:\n\n    min_lon: float\n    max_lon: float\n    min_lat: float\n    max_lat: float\n\n\nSTR2BB = {\n    \"Kenya\": BoundingBox(min_lon=33.501, max_lon=42.283, min_lat=-5.202, max_lat=6.002),\n    \"Busia\": BoundingBox(\n        min_lon=33.88389587402344,\n        min_lat=-0.04119872691853491,\n        max_lon=34.44007873535156,\n        max_lat=0.7779454563313616,\n    ),\n}\n",
+  "history_output" : "",
+  "history_begin_time" : 1646137569652,
+  "history_end_time" : 1646137570328,
+  "history_notes" : null,
+  "history_process" : "o5t3jb",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "e6tlt5w8ej5",
+  "history_input" : "import torch\nimport numpy as np\nimport random\n\nfrom dataclasses import dataclass\n\n\ndef set_seed(seed: int = 42) -> None:\n    np.random.seed(seed)\n    torch.manual_seed(seed)\n    random.seed(seed)\n\n\n@dataclass\nclass BoundingBox:\n\n    min_lon: float\n    max_lon: float\n    min_lat: float\n    max_lat: float\n\n\nSTR2BB = {\n    \"Kenya\": BoundingBox(min_lon=33.501, max_lon=42.283, min_lat=-5.202, max_lat=6.002),\n    \"Busia\": BoundingBox(\n        min_lon=33.88389587402344,\n        min_lat=-0.04119872691853491,\n        max_lon=34.44007873535156,\n        max_lat=0.7779454563313616,\n    ),\n}\n",
+  "history_output" : "",
+  "history_begin_time" : 1646112828202,
+  "history_end_time" : 1646112828829,
+  "history_notes" : null,
+  "history_process" : "o5t3jb",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "hw4ia5yyyyi",
+  "history_input" : "import torch\nimport numpy as np\nimport random\n\nfrom dataclasses import dataclass\n\n\ndef set_seed(seed: int = 42) -> None:\n    np.random.seed(seed)\n    torch.manual_seed(seed)\n    random.seed(seed)\n\n\n@dataclass\nclass BoundingBox:\n\n    min_lon: float\n    max_lon: float\n    min_lat: float\n    max_lat: float\n\n\nSTR2BB = {\n    \"Kenya\": BoundingBox(min_lon=33.501, max_lon=42.283, min_lat=-5.202, max_lat=6.002),\n    \"Busia\": BoundingBox(\n        min_lon=33.88389587402344,\n        min_lat=-0.04119872691853491,\n        max_lon=34.44007873535156,\n        max_lat=0.7779454563313616,\n    ),\n}\n",
+  "history_output" : "",
+  "history_begin_time" : 1646112720384,
+  "history_end_time" : 1646112721316,
+  "history_notes" : null,
+  "history_process" : "o5t3jb",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "nygzitlr7g9",
+  "history_input" : "import torch\nimport numpy as np\nimport random\n\nfrom dataclasses import dataclass\n\n\ndef set_seed(seed: int = 42) -> None:\n    np.random.seed(seed)\n    torch.manual_seed(seed)\n    random.seed(seed)\n\n\n@dataclass\nclass BoundingBox:\n\n    min_lon: float\n    max_lon: float\n    min_lat: float\n    max_lat: float\n\n\nSTR2BB = {\n    \"Kenya\": BoundingBox(min_lon=33.501, max_lon=42.283, min_lat=-5.202, max_lat=6.002),\n    \"Busia\": BoundingBox(\n        min_lon=33.88389587402344,\n        min_lat=-0.04119872691853491,\n        max_lon=34.44007873535156,\n        max_lat=0.7779454563313616,\n    ),\n}\n",
+  "history_output" : "",
+  "history_begin_time" : 1646112273732,
+  "history_end_time" : 1646112274449,
+  "history_notes" : null,
+  "history_process" : "o5t3jb",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "vrd678g4kgs",
+  "history_input" : "import torch\nimport numpy as np\nimport random\n\nfrom dataclasses import dataclass\n\n\ndef set_seed(seed: int = 42) -> None:\n    np.random.seed(seed)\n    torch.manual_seed(seed)\n    random.seed(seed)\n\n\n@dataclass\nclass BoundingBox:\n\n    min_lon: float\n    max_lon: float\n    min_lat: float\n    max_lat: float\n\n\nSTR2BB = {\n    \"Kenya\": BoundingBox(min_lon=33.501, max_lon=42.283, min_lat=-5.202, max_lat=6.002),\n    \"Busia\": BoundingBox(\n        min_lon=33.88389587402344,\n        min_lat=-0.04119872691853491,\n        max_lon=34.44007873535156,\n        max_lat=0.7779454563313616,\n    ),\n}\n",
+  "history_output" : "",
+  "history_begin_time" : 1646112235573,
+  "history_end_time" : 1646112236478,
+  "history_notes" : null,
+  "history_process" : "o5t3jb",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "vvcom3womp6",
+  "history_input" : "import torch\nimport numpy as np\nimport random\n\nfrom dataclasses import dataclass\n\n\ndef set_seed(seed: int = 42) -> None:\n    np.random.seed(seed)\n    torch.manual_seed(seed)\n    random.seed(seed)\n\n\n@dataclass\nclass BoundingBox:\n\n    min_lon: float\n    max_lon: float\n    min_lat: float\n    max_lat: float\n\n\nSTR2BB = {\n    \"Kenya\": BoundingBox(min_lon=33.501, max_lon=42.283, min_lat=-5.202, max_lat=6.002),\n    \"Busia\": BoundingBox(\n        min_lon=33.88389587402344,\n        min_lat=-0.04119872691853491,\n        max_lon=34.44007873535156,\n        max_lat=0.7779454563313616,\n    ),\n}\n",
+  "history_output" : "",
+  "history_begin_time" : 1646112132694,
+  "history_end_time" : 1646112133552,
+  "history_notes" : null,
+  "history_process" : "o5t3jb",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "5mglq1c4m5l",
+  "history_input" : "import torch\nimport numpy as np\nimport random\n\nfrom dataclasses import dataclass\n\n\ndef set_seed(seed: int = 42) -> None:\n    np.random.seed(seed)\n    torch.manual_seed(seed)\n    random.seed(seed)\n\n\n@dataclass\nclass BoundingBox:\n\n    min_lon: float\n    max_lon: float\n    min_lat: float\n    max_lat: float\n\n\nSTR2BB = {\n    \"Kenya\": BoundingBox(min_lon=33.501, max_lon=42.283, min_lat=-5.202, max_lat=6.002),\n    \"Busia\": BoundingBox(\n        min_lon=33.88389587402344,\n        min_lat=-0.04119872691853491,\n        max_lon=34.44007873535156,\n        max_lat=0.7779454563313616,\n    ),\n}\n",
+  "history_output" : "",
+  "history_begin_time" : 1645393373516,
+  "history_end_time" : 1645393374683,
+  "history_notes" : null,
+  "history_process" : "o5t3jb",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "czkc2p4hhjg",
+  "history_input" : "import torch\nimport numpy as np\nimport random\n\nfrom dataclasses import dataclass\n\n\ndef set_seed(seed: int = 42) -> None:\n    np.random.seed(seed)\n    torch.manual_seed(seed)\n    random.seed(seed)\n\n\n@dataclass\nclass BoundingBox:\n\n    min_lon: float\n    max_lon: float\n    min_lat: float\n    max_lat: float\n\n\nSTR2BB = {\n    \"Kenya\": BoundingBox(min_lon=33.501, max_lon=42.283, min_lat=-5.202, max_lat=6.002),\n    \"Busia\": BoundingBox(\n        min_lon=33.88389587402344,\n        min_lat=-0.04119872691853491,\n        max_lon=34.44007873535156,\n        max_lat=0.7779454563313616,\n    ),\n}\n",
+  "history_output" : "",
+  "history_begin_time" : 1645389125012,
+  "history_end_time" : 1645389125705,
+  "history_notes" : null,
+  "history_process" : "o5t3jb",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "3ri2qlcvap6",
+  "history_input" : "import torch\nimport numpy as np\nimport random\n\nfrom dataclasses import dataclass\n\n\ndef set_seed(seed: int = 42) -> None:\n    np.random.seed(seed)\n    torch.manual_seed(seed)\n    random.seed(seed)\n\n\n@dataclass\nclass BoundingBox:\n\n    min_lon: float\n    max_lon: float\n    min_lat: float\n    max_lat: float\n\n\nSTR2BB = {\n    \"Kenya\": BoundingBox(min_lon=33.501, max_lon=42.283, min_lat=-5.202, max_lat=6.002),\n    \"Busia\": BoundingBox(\n        min_lon=33.88389587402344,\n        min_lat=-0.04119872691853491,\n        max_lon=34.44007873535156,\n        max_lat=0.7779454563313616,\n    ),\n}\n",
+  "history_output" : "",
+  "history_begin_time" : 1645389114458,
+  "history_end_time" : 1645389115148,
+  "history_notes" : null,
+  "history_process" : "o5t3jb",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "2e971wsr98p",
+  "history_input" : "import torch\nimport numpy as np\nimport random\n\nfrom dataclasses import dataclass\n\n\ndef set_seed(seed: int = 42) -> None:\n    np.random.seed(seed)\n    torch.manual_seed(seed)\n    random.seed(seed)\n\n\n@dataclass\nclass BoundingBox:\n\n    min_lon: float\n    max_lon: float\n    min_lat: float\n    max_lat: float\n\n\nSTR2BB = {\n    \"Kenya\": BoundingBox(min_lon=33.501, max_lon=42.283, min_lat=-5.202, max_lat=6.002),\n    \"Busia\": BoundingBox(\n        min_lon=33.88389587402344,\n        min_lat=-0.04119872691853491,\n        max_lon=34.44007873535156,\n        max_lat=0.7779454563313616,\n    ),\n}\n",
+  "history_output" : "",
+  "history_begin_time" : 1645388795219,
+  "history_end_time" : 1645388795740,
+  "history_notes" : null,
+  "history_process" : "o5t3jb",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "fe94wxfne56",
+  "history_input" : "import torch\nimport numpy as np\nimport random\n\nfrom dataclasses import dataclass\n\n\ndef set_seed(seed: int = 42) -> None:\n    np.random.seed(seed)\n    torch.manual_seed(seed)\n    random.seed(seed)\n\n\n@dataclass\nclass BoundingBox:\n\n    min_lon: float\n    max_lon: float\n    min_lat: float\n    max_lat: float\n\n\nSTR2BB = {\n    \"Kenya\": BoundingBox(min_lon=33.501, max_lon=42.283, min_lat=-5.202, max_lat=6.002),\n    \"Busia\": BoundingBox(\n        min_lon=33.88389587402344,\n        min_lat=-0.04119872691853491,\n        max_lon=34.44007873535156,\n        max_lat=0.7779454563313616,\n    ),\n}\n",
+  "history_output" : "",
+  "history_begin_time" : 1645232747716,
+  "history_end_time" : 1645232747942,
+  "history_notes" : null,
+  "history_process" : "o5t3jb",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},]

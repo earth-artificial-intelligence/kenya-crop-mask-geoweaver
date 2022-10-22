@@ -1,0 +1,361 @@
+[{
+  "history_id" : "bdhwk1h6ksn",
+  "history_input" : "import sys\nfrom pathlib import Path\nfrom datetime import date\nimport os\n\nsys.path.append(\"..\")\n\nfrom src_exporters_geowiki import *\nfrom src_exporters_sentinel_geowiki import *\nfrom src_exporters_sentinel_pv_kenya import *\nfrom src_exporters_sentinel_kenya_non_crop import *\nfrom src_exporters_sentinel_region import *\nfrom src_exporters_sentinel_utils import *\n\n\n\n\ndef export_geowiki():\n    if len(os.listdir('../data/raw/geowiki_landcover_2017')) == 0:\n        exporter = GeoWikiExporter(Path(\"../data\"))\n        exporter.export()\n\n\ndef export_geowiki_sentinel_ee():\n    if len(os.listdir('../data/raw/earth_engine_geowiki')) == 0:\n        exporter = GeoWikiSentinelExporter(Path(\"../data\"))\n        exporter.export_for_labels(\n            num_labelled_points=10, monitor=False, checkpoint=True)\n\n\ndef export_plant_village_sentinel_ee():\n    if len(os.listdir('../data/raw/earth_engine_plant_village_kenya')) == 0:\n        exporter = KenyaPVSentinelExporter(Path(\"../data\"))\n        exporter.export_for_labels(\n            num_labelled_points=10, monitor=False, checkpoint=True)\n\n\ndef export_kenya_non_crop():\n    if len(os.listdir('../data/raw/earth_engine_kenya_non_crop')) == 0:\n        exporter = KenyaNonCropSentinelExporter(Path(\"../data\"))\n        exporter.export_for_labels(\n            num_labelled_points=10, monitor=False, checkpoint=True)\n\n\ndef export_region():\n    if len(os.listdir('../data/raw/earth_engine_region_busia_partial_slow_cloudfree')) == 0:\n        exporter = RegionalExporter(Path(\"../data\"))\n        exporter.export_for_region(\n            region_name=\"Busia\",\n            end_date=date(2020, 9, 13),\n            num_timesteps=5,\n            monitor=False,\n            checkpoint=True,\n            metres_per_polygon=None,\n            fast=False,\n        )\n\n\nif __name__ == \"__main__\":\n    print(\"starting export_geowiki()...\")\n    export_geowiki()\n    print(\"Done export_geowiki()!\")\n    print(\"starting process_geowiki()...\")\n    #process_geowiki()\n    print(\"Done process_geowiki()!\")\n    print(\"starting export_geowiki_sentinel_ee()...this could take a while\")\n    export_geowiki_sentinel_ee()\n    print(\"Done export_geowiki_sentinel_ee()!\")\n    print(\"starting process_plantvillage()...\")\n    #process_plantvillage()\n    print(\"Done process_plantvillage()!\")\n    print(\"starting export_plant_village_sentinel_ee()...\")\n    export_plant_village_sentinel_ee()\n    print(\"Done export_plant_village_sentinel_ee()!\")\n    print(\"starting process_kenya_noncrop()...\")\n    #process_kenya_noncrop()\n    print(\"Done process_kenya_noncrop()!\")\n    print(\"starting export_kenya_non_crop()...\")\n    #export_kenya_non_crop()\n    print(\"Done export_kenya_non_crop()!\")\n    print(\"starting export_region()...\")\n    #export_region()\n    print(\"Done export_region()!\")\n",
+  "history_output" : "Traceback (most recent call last):\n  File \"scripts_export.py\", line 9, in <module>\n    from src_exporters_sentinel_geowiki import *\n  File \"/Users/jensen/gw-workspace/bdhwk1h6ksn/src_exporters_sentinel_geowiki.py\", line 2, in <module>\n    import xarray as xr\nModuleNotFoundError: No module named 'xarray'\n",
+  "history_begin_time" : 1666131993410,
+  "history_end_time" : 1666131994216,
+  "history_notes" : null,
+  "history_process" : "gpetwx",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "o8zz2f2hxwd",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666131993088,
+  "history_end_time" : 1666131993088,
+  "history_notes" : null,
+  "history_process" : "4q2yxd",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "1fbb3vypye3",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666131993096,
+  "history_end_time" : 1666131993096,
+  "history_notes" : null,
+  "history_process" : "jonz77",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "t4d9vcsud4u",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666131993099,
+  "history_end_time" : 1666131993099,
+  "history_notes" : null,
+  "history_process" : "dmf4zo",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "orbdc0plvkw",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666131993100,
+  "history_end_time" : 1666131993100,
+  "history_notes" : null,
+  "history_process" : "nph7xo",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "apx6xs1y5x6",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666131993103,
+  "history_end_time" : 1666131993103,
+  "history_notes" : null,
+  "history_process" : "jsnayl",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "bcsc8kell7b",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666131993105,
+  "history_end_time" : 1666131993105,
+  "history_notes" : null,
+  "history_process" : "yqt708",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "xjwcq3lkajj",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666131993110,
+  "history_end_time" : 1666131993110,
+  "history_notes" : null,
+  "history_process" : "q5a232",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "o1oq5qp91c3",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666131993112,
+  "history_end_time" : 1666131993112,
+  "history_notes" : null,
+  "history_process" : "nt17bz",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "lz6b27v9mvq",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666131993116,
+  "history_end_time" : 1666131993116,
+  "history_notes" : null,
+  "history_process" : "o5t3jb",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "ovfmw20d814",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666131993119,
+  "history_end_time" : 1666131993119,
+  "history_notes" : null,
+  "history_process" : "mw544v",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "qrf50jbrx3w",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666131993121,
+  "history_end_time" : 1666131993121,
+  "history_notes" : null,
+  "history_process" : "vxuj3q",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "np37azp12ps",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666131993123,
+  "history_end_time" : 1666131993123,
+  "history_notes" : null,
+  "history_process" : "nlb6f5",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "n0wuwkk91yg",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666131993129,
+  "history_end_time" : 1666131993129,
+  "history_notes" : null,
+  "history_process" : "i4s7l1",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "l0vjxn6f4fo",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666131993136,
+  "history_end_time" : 1666131993136,
+  "history_notes" : null,
+  "history_process" : "9c0ch9",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "o6vktjnw4gu",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666131993139,
+  "history_end_time" : 1666131993139,
+  "history_notes" : null,
+  "history_process" : "qdzo28",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "i04smwfegcw",
+  "history_input" : "import sys\nfrom pathlib import Path\n\nsys.path.append(\"..\")\n\nfrom src_processors_geowiki import *\nfrom src_processors_kenya_non_crop import *\nfrom src_processors_pv_kenya import *\n\ndef process_geowiki():\n    processor = GeoWikiProcessor(Path(\"../data\"))\n    processor.process()\n\n\ndef process_plantvillage():\n    processor = KenyaPVProcessor(Path(\"../data\"))\n    processor.process()\n\n\ndef process_kenya_noncrop():\n    processor = KenyaNonCropProcessor(Path(\"../data\"))\n    processor.process()\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...process.py\")\n    process_geowiki()\n    process_plantvillage()\n    #process_kenya_noncrop()\n",
+  "history_output" : "Traceback (most recent call last):\n  File \"scripts_process.py\", line 6, in <module>\n    from src_processors_geowiki import *\n  File \"/Users/jensen/gw-workspace/i04smwfegcw/src_processors_geowiki.py\", line 3, in <module>\n    from src_processors_base import BaseProcessor\n  File \"/Users/jensen/gw-workspace/i04smwfegcw/src_processors_base.py\", line 2, in <module>\n    from src_utils import set_seed\n  File \"/Users/jensen/gw-workspace/i04smwfegcw/src_utils.py\", line 1, in <module>\n    import torch\nModuleNotFoundError: No module named 'torch'\n",
+  "history_begin_time" : 1666131995417,
+  "history_end_time" : 1666131995900,
+  "history_notes" : null,
+  "history_process" : "iticjd",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "ng0lv5sndwr",
+  "history_input" : "import sys\nfrom pathlib import Path\n\nsys.path.append(\"..\")\n\nfrom src_engineer_geowiki import GeoWikiEngineer\nfrom src_engineer_pv_kenya import PVKenyaEngineer\nfrom src_engineer_kenya_non_crop import KenyaNonCropEngineer\n\n\ndef engineer_geowiki():\n    engineer = GeoWikiEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.2)\n\n\ndef engineer_kenya():\n    engineer = PVKenyaEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\ndef engineer_kenya_noncrop():\n    engineer = KenyaNonCropEngineer(Path(\"../data\"))\n    engineer.engineer(val_set_size=0.1, test_set_size=0.1)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...engineer.py\")  \n    engineer_geowiki()\n    engineer_kenya()\n    #engineer_kenya_noncrop()",
+  "history_output" : "Traceback (most recent call last):\n  File \"scripts_engineer.py\", line 6, in <module>\n    from src_engineer_geowiki import GeoWikiEngineer\n  File \"/Users/jensen/gw-workspace/ng0lv5sndwr/src_engineer_geowiki.py\", line 5, in <module>\n    import xarray as xr\nModuleNotFoundError: No module named 'xarray'\n",
+  "history_begin_time" : 1666131997255,
+  "history_end_time" : 1666131997719,
+  "history_notes" : null,
+  "history_process" : "3cars9",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "sgngyzw333y",
+  "history_input" : "import sys\nfrom argparse import ArgumentParser\nfrom pathlib import Path\n\nsys.path.append(\"..\")\n\nfrom src_models_model import Model\nfrom src_models_train_funcs import train_model\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...model.py\")\n    parser = ArgumentParser()\n\n    parser.add_argument(\"--max_epochs\", type=int, default=1000)\n    parser.add_argument(\"--patience\", type=int, default=10)\n\n    model_args = Model.add_model_specific_args(parser).parse_args()\n    model = Model(model_args)\n\n    train_model(model, model_args)\n",
+  "history_output" : "Traceback (most recent call last):\n  File \"scripts_model.py\", line 7, in <module>\n    from src_models_model import Model\n  File \"/Users/jensen/gw-workspace/sgngyzw333y/src_models_model.py\", line 4, in <module>\n    import xarray as xr\nModuleNotFoundError: No module named 'xarray'\n",
+  "history_begin_time" : 1666131998931,
+  "history_end_time" : 1666131999188,
+  "history_notes" : null,
+  "history_process" : "r5a5p5",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "pqtd91vlb98",
+  "history_input" : "from pathlib import Path\nimport sys\nimport os\n\nsys.path.append(\"..\")\n\nfrom src_models_model import Model\nfrom src_analysis import plot_results\n\n\ndef kenya_crop_type_mapper():\n    data_dir = \"../data\"\n\n    test_folder = Path(\"../data/raw/earth_engine_plant_village_kenya/\")\n    test_files = test_folder.glob(\"*.tif\")\n    print(test_files)\n\n    list_of_models = list(Path('../data/lightning_logs/').glob('version*/checkpoints/*.ckpt'))\n    latest_model_path = str(max(list_of_models, key=os.path.getctime))\n    print(f\"Using model {latest_model_path}\")\n\n    model = Model.load_from_checkpoint(latest_model_path)\n\n    for test_path in test_files:\n\n        save_dir = Path(data_dir) / \"Autoencoder\"\n        save_dir.mkdir(exist_ok=True)\n\n        print(f\"Running for {test_path}\")\n\n        savepath = save_dir / f\"preds_{test_path.name}\"\n        if savepath.exists():\n            print(\"File already generated. Skipping\")\n            continue\n\n        out_forecasted = model.predict(test_path, with_forecaster=True)\n        plot_results(out_forecasted, test_path, savepath=save_dir, prefix=\"forecasted_\")\n\n        out_normal = model.predict(test_path, with_forecaster=False)\n        plot_results(out_normal, test_path, savepath=save_dir, prefix=\"full_input_\")\n\n        out_forecasted.to_netcdf(save_dir / f\"preds_forecasted_{test_path.name}.nc\")\n        out_normal.to_netcdf(save_dir / f\"preds_normal_{test_path.name}.nc\")\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...predict.py\")\n    kenya_crop_type_mapper()\n",
+  "history_output" : "Traceback (most recent call last):\n  File \"scripts_predict.py\", line 7, in <module>\n    from src_models_model import Model\n  File \"/Users/jensen/gw-workspace/pqtd91vlb98/src_models_model.py\", line 4, in <module>\n    import xarray as xr\nModuleNotFoundError: No module named 'xarray'\n",
+  "history_begin_time" : 1666132000759,
+  "history_end_time" : 1666132001011,
+  "history_notes" : null,
+  "history_process" : "delykw",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "o26gyuzlwm5",
+  "history_input" : "import pytorch_lightning as pl\nfrom pathlib import Path\nfrom argparse import ArgumentParser\nimport os\n\nimport sys\n\nsys.path.append(\"..\")\nfrom src_models_model import Model\n\n\ndef get_checkpoint(data_folder: Path) -> str:\n\n    log_folder = data_folder / \"lightning_logs/\" \n    list_of_checkpoints = list(log_folder.glob('version*/checkpoints/*.ckpt'))\n    print(log_folder.absolute())\n    return str(max(list_of_checkpoints, key=os.path.getctime))\n\n\ndef test_model():\n    parser = ArgumentParser()\n\n    parser.add_argument(\"--version\", type=int, default=0)\n\n    args = parser.parse_args()\n\n    model_path = get_checkpoint(Path(\"../data\"))\n\n    print(f\"Using model {model_path}\")\n\t\n    model = Model.load_from_checkpoint(model_path)\n\n    trainer = pl.Trainer()\n    trainer.test(model)\n\n\nif __name__ == \"__main__\":\n    print(\"Starting...test.py\")\n    test_model()\n",
+  "history_output" : "Traceback (most recent call last):\n  File \"scripts_test.py\", line 1, in <module>\n    import pytorch_lightning as pl\nModuleNotFoundError: No module named 'pytorch_lightning'\n",
+  "history_begin_time" : 1666132002220,
+  "history_end_time" : 1666132002409,
+  "history_notes" : null,
+  "history_process" : "q1j13t",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "9sx3xohju6z",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666131993188,
+  "history_end_time" : 1666131993188,
+  "history_notes" : null,
+  "history_process" : "6nnond",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "tl06zdo9gyj",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666131993196,
+  "history_end_time" : 1666131993196,
+  "history_notes" : null,
+  "history_process" : "m6v1cg",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "18cqr3namep",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666131993201,
+  "history_end_time" : 1666131993201,
+  "history_notes" : null,
+  "history_process" : "m9myzm",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "dfgcvnx08vs",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666131993206,
+  "history_end_time" : 1666131993206,
+  "history_notes" : null,
+  "history_process" : "jlyr32",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "99r9hc0l3hd",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666131993210,
+  "history_end_time" : 1666131993210,
+  "history_notes" : null,
+  "history_process" : "rus783",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "y8j7wahsxcg",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666131993213,
+  "history_end_time" : 1666131993213,
+  "history_notes" : null,
+  "history_process" : "s024ve",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "7efi23nqpq2",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666131993214,
+  "history_end_time" : 1666131993214,
+  "history_notes" : null,
+  "history_process" : "m3tvgo",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "w25uy5sa9ii",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666131993219,
+  "history_end_time" : 1666131993219,
+  "history_notes" : null,
+  "history_process" : "9x9elz",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "v4x9o8ct496",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666131993221,
+  "history_end_time" : 1666131993221,
+  "history_notes" : null,
+  "history_process" : "a3ucnn",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "nftdi8t5oby",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666131993225,
+  "history_end_time" : 1666131993225,
+  "history_notes" : null,
+  "history_process" : "t2liev",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "d1x2uay3lk2",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666131993227,
+  "history_end_time" : 1666131993227,
+  "history_notes" : null,
+  "history_process" : "1whsg3",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "phicqda8pqw",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666131993231,
+  "history_end_time" : 1666131993231,
+  "history_notes" : null,
+  "history_process" : "7jza5a",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "yw05gs5lpl4",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666131993233,
+  "history_end_time" : 1666131993233,
+  "history_notes" : null,
+  "history_process" : "9ardvx",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "m3k78ds9fu4",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666131993236,
+  "history_end_time" : 1666131993236,
+  "history_notes" : null,
+  "history_process" : "o0vujj",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "mye4u618zts",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666131993240,
+  "history_end_time" : 1666131993240,
+  "history_notes" : null,
+  "history_process" : "bhdtil",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+}]

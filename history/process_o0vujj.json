@@ -1,0 +1,321 @@
+[{
+  "history_id" : "kkcidfrnfgj",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666167825390,
+  "history_end_time" : 1666167825390,
+  "history_notes" : null,
+  "history_process" : "o0vujj",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "2mq41cd3cke",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666167772379,
+  "history_end_time" : 1666167772379,
+  "history_notes" : null,
+  "history_process" : "o0vujj",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "c4wzu2w62zu",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666166465614,
+  "history_end_time" : 1666166465614,
+  "history_notes" : null,
+  "history_process" : "o0vujj",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "gjgfqu214u4",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666166410295,
+  "history_end_time" : 1666166419946,
+  "history_notes" : null,
+  "history_process" : "o0vujj",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "7zato1oglj7",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666164233104,
+  "history_end_time" : 1666164233104,
+  "history_notes" : null,
+  "history_process" : "o0vujj",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "4g1j57ebwqk",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666163607322,
+  "history_end_time" : 1666163607322,
+  "history_notes" : null,
+  "history_process" : "o0vujj",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "xciatb198kl",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666137012968,
+  "history_end_time" : 1666137012968,
+  "history_notes" : null,
+  "history_process" : "o0vujj",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "83tm2y460el",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666136593518,
+  "history_end_time" : 1666136593518,
+  "history_notes" : null,
+  "history_process" : "o0vujj",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "tt2go4m9od9",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666136435932,
+  "history_end_time" : 1666136435932,
+  "history_notes" : null,
+  "history_process" : "o0vujj",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "ldqr3shf7wa",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666134110812,
+  "history_end_time" : 1666134110812,
+  "history_notes" : null,
+  "history_process" : "o0vujj",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "nwk7b6yyod5",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666134036962,
+  "history_end_time" : 1666134036962,
+  "history_notes" : null,
+  "history_process" : "o0vujj",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "kg56q2zftyw",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666134009003,
+  "history_end_time" : 1666134009003,
+  "history_notes" : null,
+  "history_process" : "o0vujj",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "m3k78ds9fu4",
+  "history_input" : "No code saved",
+  "history_output" : "Skipped",
+  "history_begin_time" : 1666131993236,
+  "history_end_time" : 1666131993236,
+  "history_notes" : null,
+  "history_process" : "o0vujj",
+  "host_id" : "100001",
+  "indicator" : "Skipped"
+},{
+  "history_id" : "wojaaiawtbb",
+  "history_input" : "from argparse import Namespace\n\nimport pytorch_lightning as pl\nfrom pytorch_lightning.callbacks import EarlyStopping\n\n\ndef train_model(model: pl.LightningModule, hparams: Namespace) -> pl.LightningModule:\n    early_stop_callback = EarlyStopping(\n        monitor=\"val_loss\", min_delta=0.00, patience=hparams.patience, verbose=True, mode=\"min\",\n    )\n    trainer = pl.Trainer(\n        default_save_path=hparams.data_folder,\n        max_epochs=hparams.max_epochs,\n        early_stop_callback=early_stop_callback,\n    )\n    trainer.fit(model)\n\n    return model\n",
+  "history_output" : "",
+  "history_begin_time" : 1666118272929,
+  "history_end_time" : 1666118277461,
+  "history_notes" : null,
+  "history_process" : "o0vujj",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "541dj4qex6v",
+  "history_input" : "from argparse import Namespace\n\nimport pytorch_lightning as pl\nfrom pytorch_lightning.callbacks import EarlyStopping\n\n\ndef train_model(model: pl.LightningModule, hparams: Namespace) -> pl.LightningModule:\n    early_stop_callback = EarlyStopping(\n        monitor=\"val_loss\", min_delta=0.00, patience=hparams.patience, verbose=True, mode=\"min\",\n    )\n    trainer = pl.Trainer(\n        default_save_path=hparams.data_folder,\n        max_epochs=hparams.max_epochs,\n        early_stop_callback=early_stop_callback,\n    )\n    trainer.fit(model)\n\n    return model\n",
+  "history_output" : "",
+  "history_begin_time" : 1655909869923,
+  "history_end_time" : 1655909873558,
+  "history_notes" : null,
+  "history_process" : "o0vujj",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "uqxfd9lpoqc",
+  "history_input" : "from argparse import Namespace\n\nimport pytorch_lightning as pl\nfrom pytorch_lightning.callbacks import EarlyStopping\n\n\ndef train_model(model: pl.LightningModule, hparams: Namespace) -> pl.LightningModule:\n    early_stop_callback = EarlyStopping(\n        monitor=\"val_loss\", min_delta=0.00, patience=hparams.patience, verbose=True, mode=\"min\",\n    )\n    trainer = pl.Trainer(\n        default_save_path=hparams.data_folder,\n        max_epochs=hparams.max_epochs,\n        early_stop_callback=early_stop_callback,\n    )\n    trainer.fit(model)\n\n    return model\n",
+  "history_output" : "",
+  "history_begin_time" : 1655908841942,
+  "history_end_time" : 1655908844799,
+  "history_notes" : null,
+  "history_process" : "o0vujj",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "z71pc5kqajg",
+  "history_input" : "from argparse import Namespace\n\nimport pytorch_lightning as pl\nfrom pytorch_lightning.callbacks import EarlyStopping\n\n\ndef train_model(model: pl.LightningModule, hparams: Namespace) -> pl.LightningModule:\n    early_stop_callback = EarlyStopping(\n        monitor=\"val_loss\", min_delta=0.00, patience=hparams.patience, verbose=True, mode=\"min\",\n    )\n    trainer = pl.Trainer(\n        default_save_path=hparams.data_folder,\n        max_epochs=hparams.max_epochs,\n        early_stop_callback=early_stop_callback,\n    )\n    trainer.fit(model)\n\n    return model\n",
+  "history_output" : "",
+  "history_begin_time" : 1655907428319,
+  "history_end_time" : 1655907432309,
+  "history_notes" : null,
+  "history_process" : "o0vujj",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "zjjsunsvl4l",
+  "history_input" : "from argparse import Namespace\n\nimport pytorch_lightning as pl\nfrom pytorch_lightning.callbacks import EarlyStopping\n\n\ndef train_model(model: pl.LightningModule, hparams: Namespace) -> pl.LightningModule:\n    early_stop_callback = EarlyStopping(\n        monitor=\"val_loss\", min_delta=0.00, patience=hparams.patience, verbose=True, mode=\"min\",\n    )\n    trainer = pl.Trainer(\n        default_save_path=hparams.data_folder,\n        max_epochs=hparams.max_epochs,\n        early_stop_callback=early_stop_callback,\n    )\n    trainer.fit(model)\n\n    return model\n",
+  "history_output" : "Traceback (most recent call last):\n  File \"src_models_train_funcs.py\", line 3, in <module>\n    import pytorch_lightning as pl\nModuleNotFoundError: No module named 'pytorch_lightning'\n",
+  "history_begin_time" : 1655907396240,
+  "history_end_time" : 1655907403270,
+  "history_notes" : null,
+  "history_process" : "o0vujj",
+  "host_id" : "100001",
+  "indicator" : "Stopped"
+},{
+  "history_id" : "9xymrn3onaj",
+  "history_input" : "from argparse import Namespace\n\nimport pytorch_lightning as pl\nfrom pytorch_lightning.callbacks import EarlyStopping\n\n\ndef train_model(model: pl.LightningModule, hparams: Namespace) -> pl.LightningModule:\n    early_stop_callback = EarlyStopping(\n        monitor=\"val_loss\", min_delta=0.00, patience=hparams.patience, verbose=True, mode=\"min\",\n    )\n    trainer = pl.Trainer(\n        default_save_path=hparams.data_folder,\n        max_epochs=hparams.max_epochs,\n        early_stop_callback=early_stop_callback,\n    )\n    trainer.fit(model)\n\n    return model\n",
+  "history_output" : "Traceback (most recent call last):\n  File \"src_models_train_funcs.py\", line 3, in <module>\n    import pytorch_lightning as pl\nModuleNotFoundError: No module named 'pytorch_lightning'\n",
+  "history_begin_time" : 1655865870672,
+  "history_end_time" : 1655865870836,
+  "history_notes" : null,
+  "history_process" : "o0vujj",
+  "host_id" : "100001",
+  "indicator" : "Failed"
+},{
+  "history_id" : "k5uvr7r4l5o",
+  "history_input" : "from argparse import Namespace\n\nimport pytorch_lightning as pl\nfrom pytorch_lightning.callbacks import EarlyStopping\n\n\ndef train_model(model: pl.LightningModule, hparams: Namespace) -> pl.LightningModule:\n    early_stop_callback = EarlyStopping(\n        monitor=\"val_loss\", min_delta=0.00, patience=hparams.patience, verbose=True, mode=\"min\",\n    )\n    trainer = pl.Trainer(\n        default_save_path=hparams.data_folder,\n        max_epochs=hparams.max_epochs,\n        early_stop_callback=early_stop_callback,\n    )\n    trainer.fit(model)\n\n    return model\n",
+  "history_output" : "",
+  "history_begin_time" : 1655865081233,
+  "history_end_time" : 1655865088853,
+  "history_notes" : null,
+  "history_process" : "o0vujj",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "8x9ynz483o0",
+  "history_input" : "from argparse import Namespace\n\nimport pytorch_lightning as pl\nfrom pytorch_lightning.callbacks import EarlyStopping\n\n\ndef train_model(model: pl.LightningModule, hparams: Namespace) -> pl.LightningModule:\n    early_stop_callback = EarlyStopping(\n        monitor=\"val_loss\", min_delta=0.00, patience=hparams.patience, verbose=True, mode=\"min\",\n    )\n    trainer = pl.Trainer(\n        default_save_path=hparams.data_folder,\n        max_epochs=hparams.max_epochs,\n        early_stop_callback=early_stop_callback,\n    )\n    trainer.fit(model)\n\n    return model\n",
+  "history_output" : "",
+  "history_begin_time" : 1647347431726,
+  "history_end_time" : 1647347433907,
+  "history_notes" : null,
+  "history_process" : "o0vujj",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "d40sti90x98",
+  "history_input" : "from argparse import Namespace\n\nimport pytorch_lightning as pl\nfrom pytorch_lightning.callbacks import EarlyStopping\n\n\ndef train_model(model: pl.LightningModule, hparams: Namespace) -> pl.LightningModule:\n    early_stop_callback = EarlyStopping(\n        monitor=\"val_loss\", min_delta=0.00, patience=hparams.patience, verbose=True, mode=\"min\",\n    )\n    trainer = pl.Trainer(\n        default_save_path=hparams.data_folder,\n        max_epochs=hparams.max_epochs,\n        early_stop_callback=early_stop_callback,\n    )\n    trainer.fit(model)\n\n    return model\n",
+  "history_output" : "",
+  "history_begin_time" : 1647347337283,
+  "history_end_time" : 1647347339499,
+  "history_notes" : null,
+  "history_process" : "o0vujj",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "gwxfzm9n1sd",
+  "history_input" : "from argparse import Namespace\n\nimport pytorch_lightning as pl\nfrom pytorch_lightning.callbacks import EarlyStopping\n\n\ndef train_model(model: pl.LightningModule, hparams: Namespace) -> pl.LightningModule:\n    early_stop_callback = EarlyStopping(\n        monitor=\"val_loss\", min_delta=0.00, patience=hparams.patience, verbose=True, mode=\"min\",\n    )\n    trainer = pl.Trainer(\n        default_save_path=hparams.data_folder,\n        max_epochs=hparams.max_epochs,\n        early_stop_callback=early_stop_callback,\n    )\n    trainer.fit(model)\n\n    return model\n",
+  "history_output" : "",
+  "history_begin_time" : 1647347270251,
+  "history_end_time" : 1647347272432,
+  "history_notes" : null,
+  "history_process" : "o0vujj",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "3cqz48mj8ao",
+  "history_input" : "from argparse import Namespace\n\nimport pytorch_lightning as pl\nfrom pytorch_lightning.callbacks import EarlyStopping\n\n\ndef train_model(model: pl.LightningModule, hparams: Namespace) -> pl.LightningModule:\n    early_stop_callback = EarlyStopping(\n        monitor=\"val_loss\", min_delta=0.00, patience=hparams.patience, verbose=True, mode=\"min\",\n    )\n    trainer = pl.Trainer(\n        default_save_path=hparams.data_folder,\n        max_epochs=hparams.max_epochs,\n        early_stop_callback=early_stop_callback,\n    )\n    trainer.fit(model)\n\n    return model\n",
+  "history_output" : "",
+  "history_begin_time" : 1647347137141,
+  "history_end_time" : 1647347139799,
+  "history_notes" : null,
+  "history_process" : "o0vujj",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "ycmcin38sug",
+  "history_input" : "from argparse import Namespace\n\nimport pytorch_lightning as pl\nfrom pytorch_lightning.callbacks import EarlyStopping\n\n\ndef train_model(model: pl.LightningModule, hparams: Namespace) -> pl.LightningModule:\n    early_stop_callback = EarlyStopping(\n        monitor=\"val_loss\", min_delta=0.00, patience=hparams.patience, verbose=True, mode=\"min\",\n    )\n    trainer = pl.Trainer(\n        default_save_path=hparams.data_folder,\n        max_epochs=hparams.max_epochs,\n        early_stop_callback=early_stop_callback,\n    )\n    trainer.fit(model)\n\n    return model\n",
+  "history_output" : "",
+  "history_begin_time" : 1647346810666,
+  "history_end_time" : 1647346813165,
+  "history_notes" : null,
+  "history_process" : "o0vujj",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "4zqzac3atyz",
+  "history_input" : "from argparse import Namespace\n\nimport pytorch_lightning as pl\nfrom pytorch_lightning.callbacks import EarlyStopping\n\n\ndef train_model(model: pl.LightningModule, hparams: Namespace) -> pl.LightningModule:\n    early_stop_callback = EarlyStopping(\n        monitor=\"val_loss\", min_delta=0.00, patience=hparams.patience, verbose=True, mode=\"min\",\n    )\n    trainer = pl.Trainer(\n        default_save_path=hparams.data_folder,\n        max_epochs=hparams.max_epochs,\n        early_stop_callback=early_stop_callback,\n    )\n    trainer.fit(model)\n\n    return model\n",
+  "history_output" : "",
+  "history_begin_time" : 1647346645862,
+  "history_end_time" : 1647346648469,
+  "history_notes" : null,
+  "history_process" : "o0vujj",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "310sttsywa8",
+  "history_input" : "from argparse import Namespace\n\nimport pytorch_lightning as pl\nfrom pytorch_lightning.callbacks import EarlyStopping\n\n\ndef train_model(model: pl.LightningModule, hparams: Namespace) -> pl.LightningModule:\n    early_stop_callback = EarlyStopping(\n        monitor=\"val_loss\", min_delta=0.00, patience=hparams.patience, verbose=True, mode=\"min\",\n    )\n    trainer = pl.Trainer(\n        default_save_path=hparams.data_folder,\n        max_epochs=hparams.max_epochs,\n        early_stop_callback=early_stop_callback,\n    )\n    trainer.fit(model)\n\n    return model\n",
+  "history_output" : "",
+  "history_begin_time" : 1646138303673,
+  "history_end_time" : 1646138305789,
+  "history_notes" : null,
+  "history_process" : "o0vujj",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "mbghwrh7u2i",
+  "history_input" : "from argparse import Namespace\n\nimport pytorch_lightning as pl\nfrom pytorch_lightning.callbacks import EarlyStopping\n\n\ndef train_model(model: pl.LightningModule, hparams: Namespace) -> pl.LightningModule:\n    early_stop_callback = EarlyStopping(\n        monitor=\"val_loss\", min_delta=0.00, patience=hparams.patience, verbose=True, mode=\"min\",\n    )\n    trainer = pl.Trainer(\n        default_save_path=hparams.data_folder,\n        max_epochs=hparams.max_epochs,\n        early_stop_callback=early_stop_callback,\n    )\n    trainer.fit(model)\n\n    return model\n",
+  "history_output" : "",
+  "history_begin_time" : 1646138203556,
+  "history_end_time" : 1646138204133,
+  "history_notes" : null,
+  "history_process" : "o0vujj",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "5rxgvnpcfz3",
+  "history_input" : "from argparse import Namespace\n\nimport pytorch_lightning as pl\nfrom pytorch_lightning.callbacks import EarlyStopping\n\n\ndef train_model(model: pl.LightningModule, hparams: Namespace) -> pl.LightningModule:\n    early_stop_callback = EarlyStopping(\n        monitor=\"val_loss\", min_delta=0.00, patience=hparams.patience, verbose=True, mode=\"min\",\n    )\n    trainer = pl.Trainer(\n        default_save_path=hparams.data_folder,\n        max_epochs=hparams.max_epochs,\n        early_stop_callback=early_stop_callback,\n    )\n    trainer.fit(model)\n\n    return model\n",
+  "history_output" : "",
+  "history_begin_time" : 1646138112626,
+  "history_end_time" : 1646138114949,
+  "history_notes" : null,
+  "history_process" : "o0vujj",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "1x8xizcgmou",
+  "history_input" : "from argparse import Namespace\n\nimport pytorch_lightning as pl\nfrom pytorch_lightning.callbacks import EarlyStopping\n\n\ndef train_model(model: pl.LightningModule, hparams: Namespace) -> pl.LightningModule:\n    early_stop_callback = EarlyStopping(\n        monitor=\"val_loss\", min_delta=0.00, patience=hparams.patience, verbose=True, mode=\"min\",\n    )\n    trainer = pl.Trainer(\n        default_save_path=hparams.data_folder,\n        max_epochs=hparams.max_epochs,\n        early_stop_callback=early_stop_callback,\n    )\n    trainer.fit(model)\n\n    return model\n",
+  "history_output" : "",
+  "history_begin_time" : 1646137796902,
+  "history_end_time" : 1646137797534,
+  "history_notes" : null,
+  "history_process" : "o0vujj",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "2ivejwrjnq2",
+  "history_input" : "from argparse import Namespace\n\nimport pytorch_lightning as pl\nfrom pytorch_lightning.callbacks import EarlyStopping\n\n\ndef train_model(model: pl.LightningModule, hparams: Namespace) -> pl.LightningModule:\n    early_stop_callback = EarlyStopping(\n        monitor=\"val_loss\", min_delta=0.00, patience=hparams.patience, verbose=True, mode=\"min\",\n    )\n    trainer = pl.Trainer(\n        default_save_path=hparams.data_folder,\n        max_epochs=hparams.max_epochs,\n        early_stop_callback=early_stop_callback,\n    )\n    trainer.fit(model)\n\n    return model\n",
+  "history_output" : "",
+  "history_begin_time" : 1646137709866,
+  "history_end_time" : 1646137711879,
+  "history_notes" : null,
+  "history_process" : "o0vujj",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},{
+  "history_id" : "szsny0vmzvc",
+  "history_input" : "from argparse import Namespace\n\nimport pytorch_lightning as pl\nfrom pytorch_lightning.callbacks import EarlyStopping\n\n\ndef train_model(model: pl.LightningModule, hparams: Namespace) -> pl.LightningModule:\n    early_stop_callback = EarlyStopping(\n        monitor=\"val_loss\", min_delta=0.00, patience=hparams.patience, verbose=True, mode=\"min\",\n    )\n    trainer = pl.Trainer(\n        default_save_path=hparams.data_folder,\n        max_epochs=hparams.max_epochs,\n        early_stop_callback=early_stop_callback,\n    )\n    trainer.fit(model)\n\n    return model\n",
+  "history_output" : "",
+  "history_begin_time" : 1646137599095,
+  "history_end_time" : 1646137599740,
+  "history_notes" : null,
+  "history_process" : "o0vujj",
+  "host_id" : "100001",
+  "indicator" : "Done"
+},]
